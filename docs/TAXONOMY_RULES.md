@@ -1,2 +1,227 @@
-# Taxonomy Rules
-Structure and logic of the genre taxonomy.
+# TAXONOMY RULES
+Music Genre Taxonomy System
+
+This document defines the structural rules governing the genre taxonomy.
+
+The taxonomy represents the musical knowledge base of the system and is
+used by the classifier and playlist generation pipeline.
+
+--------------------------------------------------
+1. TAXONOMY PURPOSE
+--------------------------------------------------
+
+The taxonomy defines the structure used to organize musical genres.
+
+Its purpose is to:
+
+- represent relationships between genres
+- guide song classification
+- ensure playlist coherence
+
+The taxonomy must prioritize musical coherence over completeness.
+
+--------------------------------------------------
+2. ROOT STRUCTURE
+--------------------------------------------------
+
+The taxonomy must have a single root node.
+
+Example:
+
+Music
+
+All genres must descend from this root.
+
+--------------------------------------------------
+3. HIERARCHY DEFINITION
+--------------------------------------------------
+
+Hierarchy is defined by indentation.
+
+Example:
+
+Music
+  Rock
+    Alternative Rock
+      Indie Rock
+      Grunge
+
+Each indentation level represents a deeper specialization.
+
+--------------------------------------------------
+4. LEAF NODE RULE
+--------------------------------------------------
+
+Songs may only be classified into leaf nodes.
+
+Leaf nodes are nodes that do not have children.
+
+Example:
+
+Music
+  Rock
+    Alternative Rock
+      Indie Rock
+      Grunge
+
+Only:
+
+- Indie Rock
+- Grunge
+
+are valid classification targets.
+
+--------------------------------------------------
+5. SIBLING GENRE RULE
+--------------------------------------------------
+
+Genres that share the same parent must represent
+musically distinguishable styles.
+
+Sibling genres must not be so similar that they
+produce indistinguishable playlists.
+
+If sibling genres cannot be clearly distinguished,
+they should be merged.
+
+--------------------------------------------------
+6. PLAYLIST COHESION RULE
+--------------------------------------------------
+
+The taxonomy must prioritize playlist coherence.
+
+If a node generates playlists that sound inconsistent,
+the taxonomy must be adjusted.
+
+Possible actions:
+
+- merge sibling genres
+- move nodes to a different parent
+- split genres when necessary
+
+--------------------------------------------------
+7. NODE DEPTH POLICY
+--------------------------------------------------
+
+The taxonomy should maintain a moderate depth.
+
+Typical depth:
+
+3–5 levels.
+
+Overly deep hierarchies should be avoided unless
+they represent meaningful musical distinctions.
+
+--------------------------------------------------
+8. EXPANSION RULE
+--------------------------------------------------
+
+A node may be expanded when the number of songs
+assigned to it exceeds the expansion threshold.
+
+Expansion threshold:
+
+45 songs.
+
+When expansion occurs, the node becomes a parent
+and its songs must be redistributed among subgenres.
+
+--------------------------------------------------
+9. GENERAL NODE POLICY
+--------------------------------------------------
+
+A node may contain a General subnode when
+existing subgenres do not fully cover the parent genre.
+
+Example:
+
+Hard Rock
+  Glam Metal
+  Arena Rock
+  Hard Rock (General)
+
+General nodes must:
+
+- be explicitly defined
+- not replace proper genre creation
+- be used only when necessary
+
+--------------------------------------------------
+10. ATOMIC GENRE RULE
+--------------------------------------------------
+
+Some genres should not be subdivided further.
+
+These genres are considered atomic.
+
+Atomic genres represent styles where further
+subdivision would create artificial distinctions.
+
+--------------------------------------------------
+11. LATIN BRANCH STRUCTURE
+--------------------------------------------------
+
+Latin music exists in a dedicated branch.
+
+Example:
+
+Music
+  Latin
+    Latin Rock
+    Latin Pop
+    Regional Latin
+
+Genres under Latin represent styles belonging
+to Latin musical traditions.
+
+Songs classified as Latin must use this branch.
+
+--------------------------------------------------
+12. GENRE NAMING RULE
+--------------------------------------------------
+
+Genre names must follow these rules:
+
+- Title Case
+- Clear musical meaning
+- No abbreviations unless widely accepted
+
+Avoid vague or descriptive labels.
+
+Example of invalid names:
+
+- Latin Style
+- Misc Genres
+- Mixed Music
+
+--------------------------------------------------
+13. TAXONOMY MODIFICATION POLICY
+--------------------------------------------------
+
+Taxonomy modifications must be made manually.
+
+The system cannot automatically modify the taxonomy.
+
+The system may only:
+
+- suggest new nodes
+- report inconsistencies
+- propose structural improvements
+
+All changes must be approved by the user.
+
+--------------------------------------------------
+14. TAXONOMY VALIDATION
+--------------------------------------------------
+
+Before a release the taxonomy must be validated.
+
+Validation checks include:
+
+- sibling genre similarity
+- redundant nodes
+- overly deep hierarchies
+- playlist cohesion problems
+
+--------------------------------------------------
+END TAXONOMY RULES
