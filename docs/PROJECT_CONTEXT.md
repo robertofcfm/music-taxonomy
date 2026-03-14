@@ -5,19 +5,13 @@ Music Genre Taxonomy System
 1. PROJECT PURPOSE
 --------------------------------------------------
 
-This project builds a structured music genre taxonomy
-and a classification system capable of assigning
-accurate genres to songs.
+This project aims to build a structured music genre
+taxonomy together with a classification system capable
+of assigning accurate genres to songs.
 
 The taxonomy is designed not only for classification
 but also to generate coherent playlists based on
 genre hierarchy.
-
-The system must prioritize:
-
-• musical coherence  
-• clear genre identity  
-• meaningful genre hierarchy  
 
 The final goal is to allow navigation through genres
 in a way that produces musically consistent playlists.
@@ -26,224 +20,80 @@ in a way that produces musically consistent playlists.
 2. CORE OBJECTIVE
 --------------------------------------------------
 
-The objective of the project is to create a system that:
+The system aims to:
 
-• classifies songs into precise musical genres  
-• maintains a structured genre taxonomy  
-• generates genre-based playlists with musical coherence  
-• evolves the taxonomy when new genres are discovered  
+• classify songs into meaningful musical genres  
+• maintain a coherent genre taxonomy  
+• generate genre-based playlists  
+• evolve the taxonomy as the catalog grows  
 
-The taxonomy represents the musical knowledge base
-used by the system.
-
---------------------------------------------------
-3. SYSTEM COMPONENTS
---------------------------------------------------
-
-The system consists of three major components.
+The taxonomy acts as the musical knowledge base
+of the system.
 
 --------------------------------------------------
-GENRE TAXONOMY (PHASE 1)
+3. SYSTEM ARCHITECTURE
 --------------------------------------------------
 
-Defines the structure of musical genres.
+The system is composed of three major subsystems.
 
-Responsibilities:
+PHASE 1 — TAXONOMY DESIGN
 
-• maintain the genre hierarchy  
-• define valid leaf nodes for classification  
-• ensure sibling genres are musically distinct  
-• maintain playlist coherence  
+Defines the genre hierarchy.
 
-The taxonomy is manually controlled by the project owner.
+The taxonomy determines the valid genres that may
+be assigned during classification.
 
-The system may only:
-
-• analyze  
-• validate  
-• suggest improvements  
-
-Automatic modification of the taxonomy is NOT allowed.
-
---------------------------------------------------
-SONG GENRE IDENTIFICATION (PHASE 2)
---------------------------------------------------
+PHASE 2 — SONG GENRE IDENTIFICATION
 
 Determines which genres a song belongs to.
 
-Responsibilities:
+This process analyzes the musical characteristics
+of each song and assigns appropriate genres.
 
-• analyze songs  
-• assign one or more genres  
-• ensure assignments follow taxonomy rules  
-• detect missing genres  
+PHASE 3 — DATASET-DRIVEN TREE GENERATION
 
-Rules:
-
-A genre must only be assigned when the song truly
-belongs to that genre.
-
-Minor influences must NOT be considered.
-
-Example:
-
-If a song briefly includes rap elements but is not
-structurally rap music, it must NOT be classified as rap.
-
-Songs may belong to multiple genres when musically valid.
+Uses the classified catalog to generate a listening
+tree that organizes songs into navigable genre nodes.
 
 --------------------------------------------------
-DYNAMIC GENRE TREE GENERATION (PHASE 3)
+4. PLAYLIST NAVIGATION CONCEPT
 --------------------------------------------------
 
-Builds a listening tree based on real catalog content.
+The taxonomy is designed to support navigation
+through musical styles.
 
-Rule:
+Users should be able to move through the hierarchy
+to find playlists that match a particular mood or
+musical style.
 
-A genre node becomes expandable when it contains:
-
-45 songs
-
-When this happens:
-
-• the node becomes a parent  
-• songs are redistributed into subgenres  
-
-This allows the tree to evolve organically based on
-the real music catalog.
+Each node of the taxonomy may correspond to a
+playlist containing songs belonging to that genre.
 
 --------------------------------------------------
-4. LATIN MUSIC STRATEGY
+5. TAXONOMY EVOLUTION
 --------------------------------------------------
 
-Latin music is handled as a separate branch.
+The taxonomy is expected to evolve as the catalog grows.
 
-When a song is identified as Latin:
+New genres may be discovered during classification.
 
-its genres must be selected exclusively from the
-Latin subtree.
-
-This prevents mixing Latin and non-Latin genre contexts
-that often have different musical characteristics.
-
-Example:
-
-Latin
-  Regional Mexicano
-  Cumbia
-  Vallenato
+When this happens the taxonomy may be expanded
+after manual review.
 
 --------------------------------------------------
-5. SPECIAL NODE TYPES
+6. TAXONOMY GOVERNANCE
 --------------------------------------------------
 
-The system supports special taxonomy nodes.
+The taxonomy is governed manually by the project owner.
 
-NORMAL
+The system may:
 
-Standard genre node.
+• analyze the taxonomy  
+• validate the taxonomy  
+• suggest improvements  
 
-CLONE
-
-A clone node references another canonical node.
-It allows the same genre to appear in multiple
-locations without duplicating the subtree.
-
-Clone nodes:
-
-• cannot have children  
-• act as navigation portals  
-• share the songs of the canonical node  
-
-GENERAL
-
-Fallback node used when a song belongs to a parent
-genre but not to any defined subgenre.
-
-Example:
-
-Hard Rock
-  Glam Metal
-  Arena Rock
-  Hard Rock (General)
-
-ATOMIC
-
-A terminal node that should not be expanded further
-because the genre is already specific enough.
+But structural changes must always be reviewed
+before being applied.
 
 --------------------------------------------------
-6. TAXONOMY EXPANSION
---------------------------------------------------
-
-The taxonomy may evolve when new genres are discovered.
-
-Expansion occurs when:
-
-• a song cannot be assigned to an existing genre
-
-The system must report this situation as a **fatal error**
-and propose the missing genre.
-
-Only the project owner decides whether to add it.
-
---------------------------------------------------
-7. FATAL ERROR CONDITIONS
---------------------------------------------------
-
-The system must stop execution when:
-
-• a song cannot be assigned to any genre  
-• a required genre does not exist in the taxonomy  
-• taxonomy files are inconsistent  
-• required system documents are missing  
-
-Fatal errors must include detailed diagnostics.
-
---------------------------------------------------
-8. TAXONOMY TEMPLATE PRINCIPLE
---------------------------------------------------
-
-The taxonomy template is stored in:
-
-taxonomy/genre_tree_master.md
-
-This file contains the editable genre hierarchy.
-
-It uses indentation to define the tree structure.
-
-Numeric codes are generated automatically
-in the operational representation.
-
-The template must never contain codes.
-
---------------------------------------------------
-9. OPERATIONAL TAXONOMY
---------------------------------------------------
-
-The operational taxonomy used by scripts is stored in:
-
-taxonomy/genre_tree_operational.csv
-
-This file contains:
-
-• genre codes  
-• parent relationships  
-• node type  
-• canonical references  
-
-It is generated from the master taxonomy.
-
---------------------------------------------------
-10. PROJECT PHILOSOPHY
---------------------------------------------------
-
-The system prioritizes musical clarity over automation.
-
-Key principle:
-
-The taxonomy represents musical knowledge
-and must remain human-controlled.
-
-Automation may help analyze and classify music,
-but the taxonomy itself must remain curated.
+END PROJECT CONTEXT
