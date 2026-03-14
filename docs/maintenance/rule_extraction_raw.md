@@ -44,26 +44,6 @@ RULE 008
 The classifier must read the taxonomy before classification.
 
 ---
-RULE 009
-
-The taxonomy defines the only valid genres for classification.
-
----
-RULE 010
-
-The classifier must never invent genres.
-
----
-RULE 011
-
-If a required genre is missing the system must produce a fatal error.
-
----
-RULE 012
-
-Fatal errors must stop the process and report the cause.
-
----
 RULE 013
 
 The taxonomy must be hierarchical.
@@ -87,11 +67,6 @@ The taxonomy must prioritize musical coherence.
 RULE 017
 
 Genres must represent musical styles rather than vague descriptors.
-
----
-RULE 018
-
-A song may belong to multiple genres if justified musically.
 
 ---
 RULE 019
@@ -122,16 +97,6 @@ The taxonomy must be human editable.
 RULE 024
 
 The operational tree must be machine readable.
-
----
-RULE 025
-
-The classifier must normalize genre names.
-
----
-RULE 026
-
-Genre aliases must map to canonical taxonomy genres.
 
 ---
 RULE 027
