@@ -1,336 +1,284 @@
 # PROJECT FILE INDEX
 Music Genre Taxonomy System
 
-This document describes every file used in the project
-and its role within the system.
-
-The goal is to provide a clear reference so that
-rules and information are always placed in the correct
-document.
-
 --------------------------------------------------
-PROJECT STRUCTURE
+1. PURPOSE
 --------------------------------------------------
 
-music-taxonomy/
+This document defines the role of every file in the
+Music Genre Taxonomy System repository.
 
-data/        → normalization data  
-taxonomy/    → taxonomy definition  
-catalog/     → song catalog and classification results  
-scripts/     → automation tools  
-reports/     → validation reports  
-docs/        → documentation and system rules  
+Its purpose is to:
+
+• explain the repository structure  
+• define where documentation belongs  
+• prevent documentation drift  
+• guide reconstruction and maintenance processes  
+
+All project documentation must follow the structure
+defined in this index.
 
 --------------------------------------------------
-DATA DIRECTORY
+2. REPOSITORY STRUCTURE
+--------------------------------------------------
+
+The repository is organized into several logical areas.
+
+catalog/
+data/
+taxonomy/
+scripts/
+reports/
+docs/
+
+Each directory contains a specific type of data
+or documentation.
+
+--------------------------------------------------
+3. CATALOG FILES
+--------------------------------------------------
+
+catalog/songs_raw.csv
+
+Input catalog containing songs to classify.
+
+Typical fields include:
+
+title  
+artist
+
+--------------------------------------------------
+
+catalog/songs_with_genres.csv
+
+Output file produced by the classification system.
+
+Stores the genres assigned to each song.
+
+--------------------------------------------------
+4. DATA FILES
 --------------------------------------------------
 
 data/genre_alias.csv
 
-Purpose
+Alias mapping used to normalize genre names.
 
-Stores alias mappings for genre normalization.
-
-This file allows the classifier to convert alternative
-genre names into the canonical taxonomy name.
-
-Example
-
-alt rock → Alternative Rock  
-synthpop → Synth Pop  
-
-Edited manually.
+Allows the classifier to match alternate genre labels
+to canonical taxonomy genres.
 
 --------------------------------------------------
-TAXONOMY DIRECTORY
+5. TAXONOMY FILES
 --------------------------------------------------
 
 taxonomy/genre_tree_master.md
 
-Editable taxonomy template.
+Human-editable taxonomy template.
 
-Characteristics
+Defines the genre hierarchy using indentation.
 
-• hierarchy defined by indentation  
-• no numeric codes  
-• manually maintained  
+Only the project owner modifies this file.
 
-This is the authoritative genre taxonomy.
-
-IMPORTANT
-
-This file must NEVER be modified automatically.
-
----
+--------------------------------------------------
 
 taxonomy/genre_tree_operational.csv
 
-Operational representation of the taxonomy.
+Machine-readable representation of the taxonomy.
 
-Contains
+Generated from the master taxonomy and used
+by scripts and classification tools.
 
-• genre codes  
-• parent relationships  
-• node types  
-• canonical references  
-
-Generated from the master taxonomy.
-
-Used by scripts and classifiers.
-
----
+--------------------------------------------------
 
 taxonomy/taxonomy_version.md
 
 Stores the current taxonomy version.
 
-Purpose
-
-Ensures compatibility between
+Used to verify compatibility between:
 
 • taxonomy structure  
 • classification results  
-• generated trees  
+• generated genre trees  
 
 --------------------------------------------------
-CATALOG DIRECTORY
+6. SCRIPT FILES
 --------------------------------------------------
 
-catalog/songs_raw.csv
+scripts/build_tree.py
 
-Input catalog.
+Generates the dynamic listening tree
+based on classified song data.
 
-Contains the list of songs that must be classified.
-
-Structure
-
-title,artist
-
-Example
-
-Bohemian Rhapsody,Queen
-
----
-
-catalog/songs_with_genres.csv
-
-Classification output.
-
-Structure
-
-title,artist,genres,taxonomy_version
-
-Contains only successfully classified songs.
-
---------------------------------------------------
-SCRIPTS DIRECTORY
 --------------------------------------------------
 
 scripts/classify_songs.py
 
-Song classification engine.
+Performs song genre classification.
 
-Responsibilities
+Reads:
 
-• read songs_raw.csv  
-• classify songs using taxonomy  
-• validate rules  
-• produce songs_with_genres.csv  
+catalog/songs_raw.csv
 
----
+Writes:
 
-scripts/build_tree.py
+catalog/songs_with_genres.csv
 
-Builds the dynamic listening tree.
-
-Used in Phase 3.
-
-The tree expands when nodes exceed the threshold
-number of songs.
-
----
+--------------------------------------------------
 
 scripts/validate_tree.py
 
-Validates taxonomy structure.
-
-Checks
-
-• parent-child relationships  
-• node types  
-• taxonomy consistency  
+Validates taxonomy structure and checks
+for structural issues.
 
 --------------------------------------------------
-REPORTS DIRECTORY
+7. REPORT FILES
+--------------------------------------------------
+
+reports/taxonomy_improvement_report.csv
+
+Contains suggestions for improving the taxonomy.
+
 --------------------------------------------------
 
 reports/taxonomy_issues.csv
 
-Stores detected taxonomy problems.
+Stores detected taxonomy problems such as:
 
-Examples
-
+• ambiguous nodes  
 • missing genres  
-• ambiguous siblings  
-• invalid hierarchy  
-
----
-
-reports/taxonomy_improvement_report.csv
-
-Stores recommendations for improving taxonomy.
-
-Examples
-
-• possible merges  
-• missing subgenres  
-• structural improvements  
+• classification conflicts  
 
 --------------------------------------------------
-DOCUMENTATION DIRECTORY
+8. DOCUMENTATION STRUCTURE
 --------------------------------------------------
 
-docs/PROJECT_CONTEXT.md
+All documentation is organized under the docs directory.
 
-High level description of the project.
+docs/
 
-Explains
+system/  
+taxonomy/  
+project/  
+maintenance/  
+releases/
 
-• system philosophy  
-• system architecture  
-• main concepts  
+Each folder serves a specific documentation purpose.
 
----
+--------------------------------------------------
+9. SYSTEM DOCUMENTATION
+--------------------------------------------------
 
-docs/PROJECT_BOOTSTRAP.md
+docs/system/SYSTEM_OVERVIEW.md
 
-Defines how the system must initialize a working
-session.
+High-level description of the system architecture.
 
-Ensures that required documents and taxonomy files
-are loaded before performing operations.
+--------------------------------------------------
 
----
+docs/system/SYSTEM_CONTRACT.md
 
-docs/PROJECT_FILE_INDEX.md
+Defines mandatory rules governing system behavior.
 
-This document.
+--------------------------------------------------
+10. TAXONOMY DOCUMENTATION
+--------------------------------------------------
 
-Defines the role of each file in the project.
+docs/taxonomy/TAXONOMY_RULES.md
 
-Used during reconstruction to determine
-the correct destination for rules.
+Defines the structure and behavior of the taxonomy.
 
----
+--------------------------------------------------
 
-docs/PROJECT_MEMORY.md
+docs/taxonomy/TAXONOMY_CHANGE_POLICY.md
 
-Records key design decisions made during the
-development of the project.
+Defines the rules for modifying the taxonomy.
 
-Used to preserve reasoning behind architecture
-choices.
+--------------------------------------------------
 
----
+docs/taxonomy/TAXONOMY_DEPTH_POLICY.md
 
-docs/PROJECT_STATE.md
+Defines rules governing taxonomy expansion.
 
-Stores the current operational status of the
-project.
+--------------------------------------------------
 
-May include
+docs/taxonomy/TAXONOMY_NAMING_CONVENTION.md
 
-• progress information  
-• active taxonomy version  
-• pending tasks  
+Defines naming conventions for genres.
 
----
+--------------------------------------------------
 
-docs/PROJECT_CHECKPOINT_*.md
-
-Snapshots of the project state.
-
-Used to restore context after long periods
-without working on the project.
-
----
-
-docs/PHASE1_FINAL_CHECKLIST.md
-
-Checklist used to validate completion of
-taxonomy design.
-
----
-
-docs/SYSTEM_CONTRACT.md
-
-Defines mandatory system rules that must always
-be respected by all tools.
-
----
-
-docs/TAXONOMY_RULES.md
-
-Core rules governing taxonomy structure.
-
----
-
-docs/TAXONOMY_CHANGE_POLICY.md
-
-Defines how the taxonomy may evolve.
-
----
-
-docs/TAXONOMY_DEPTH_POLICY.md
-
-Defines minimum depth requirements for branches.
-
----
-
-docs/TAXONOMY_NAMING_CONVENTION.md
-
-Defines naming rules for genres.
-
----
-
-docs/TAXONOMY_QUALITY_CHECKLIST.md
+docs/taxonomy/TAXONOMY_QUALITY_CHECKLIST.md
 
 Checklist used to validate taxonomy quality.
 
 --------------------------------------------------
-FILE EDITING PRINCIPLE
+11. PROJECT DOCUMENTATION
 --------------------------------------------------
 
-Files fall into three categories
+docs/project/PROJECT_CONTEXT.md
 
-MANUAL FILES
-
-Edited only by the project owner
-
-• genre_tree_master.md  
-• taxonomy rules documents  
-• documentation  
-
-GENERATED FILES
-
-Created automatically by scripts
-
-• genre_tree_operational.csv  
-• classification results  
-
-REPORT FILES
-
-Generated by validation processes
-
-• taxonomy_issues.csv  
-• improvement reports  
+Describes the conceptual goals of the project.
 
 --------------------------------------------------
-MASTER RULE
+
+docs/project/PROJECT_STATE.md
+
+Stores the current operational state of the project.
+
 --------------------------------------------------
 
-Rules must always be stored in the document that
-corresponds to their scope.
+docs/project/PROJECT_MEMORY.md
 
-The PROJECT_FILE_INDEX must be consulted before
-moving or adding rules to any document.
+Stores design decisions and historical context.
+
+--------------------------------------------------
+
+docs/project/PROJECT_FILE_INDEX.md
+
+Defines the documentation structure of the repository.
+
+--------------------------------------------------
+12. MAINTENANCE DOCUMENTATION
+--------------------------------------------------
+
+docs/maintenance/PROJECT_BOOTSTRAP.md
+
+Defines how a new session should initialize
+the project context.
+
+--------------------------------------------------
+
+docs/maintenance/REPOSITORY_RECONSTRUCTION_PROTOCOL.md
+
+Defines the protocol used to reconstruct project
+knowledge from the development conversation.
+
+--------------------------------------------------
+
+docs/maintenance/PROJECT_OPERATING_MODEL.md
+
+Explains the operational model of the system and
+the separation between taxonomy design,
+song classification, and tree generation.
+
+--------------------------------------------------
+
+docs/maintenance/PROJECT_CHECKPOINT_001.md
+
+Snapshot of the reconstructed project architecture.
+
+--------------------------------------------------
+
+docs/maintenance/PHASE1_FINAL_CHECKLIST.md
+
+Checklist confirming Phase 1 completion.
+
+--------------------------------------------------
+13. RELEASE DOCUMENTATION
+--------------------------------------------------
+
+docs/releases/RELEASE_NOTES_v1.0.md
+
+Release notes describing the first stable
+version of the repository.
+
+--------------------------------------------------
+END DOCUMENT
