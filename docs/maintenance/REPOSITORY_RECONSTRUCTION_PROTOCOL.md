@@ -5,63 +5,163 @@ Music Genre Taxonomy System
 PURPOSE
 --------------------------------------------------
 
-This protocol defines the strict procedure used to
-reconstruct project knowledge from the development
-conversation and reconcile it with the current
-repository state.
+This protocol defines the procedure used to
+reconstruct and reconcile project knowledge
+with the current repository state.
 
-The objective is to ensure that:
+The objective is to progressively integrate
+rules extracted from development discussions
+into their correct repository locations.
 
-• no information from the conversation is lost  
-• repository files contain the correct knowledge  
-• misplaced rules are moved to their correct files  
-• incomplete documentation is completed  
+The reconstruction process ensures that:
 
-The protocol must be executed iteratively.
+• repository documentation remains consistent
+• rules are placed in their correct files
+• duplicated or misplaced rules are removed
+• extracted rules are progressively integrated
+• repository knowledge becomes canonical
 
---------------------------------------------------
-GENERAL PRINCIPLES
---------------------------------------------------
-
-The following rules are mandatory during execution.
-
-1. The repository ZIP must always be treated as the
-single source of truth for file contents.
-
-2. The conversation must only be used to recover
-missing information.
-
-3. No content may be invented.
-
-4. The content of a file must always be read from
-the ZIP before any analysis occurs.
-
-5. If the file content is not read, the iteration
-is considered invalid.
-
-6. If a change is applied, the modified file must
-be shown in full.
-
-7. If no change is required, the file must be
-marked as completed.
+The protocol operates iteratively.
 
 --------------------------------------------------
-PREPARATION STEP
+CORE PRINCIPLE
 --------------------------------------------------
 
-Before starting iterations:
+The repository ZIP file is the single source
+of truth for the project state.
 
-1. Load the ZIP repository.
-2. Read the file:
+Every iteration must begin by loading the ZIP.
+
+No file content may be assumed from memory
+or from previous iterations.
+
+--------------------------------------------------
+KEY FILES
+--------------------------------------------------
+
+The reconstruction process relies on three
+primary reference files.
 
 docs/project/PROJECT_FILE_INDEX.md
 
-This file defines the function of every repository
-file and must be used to determine valid destinations
-for rules.
+Defines the function and responsibility of
+every file in the repository.
+
+Used to determine the correct destination
+for any rule.
 
 --------------------------------------------------
-ITERATION PROCEDURE
+
+docs/global/GLOBAL_RULES.md
+
+Defines system-wide rules that affect
+multiple components of the repository.
+
+If a rule applies to more than one subsystem,
+it must be placed here.
+
+If the correct destination of a rule is
+uncertain, the rule must temporarily be
+placed in GLOBAL_RULES.md.
+
+--------------------------------------------------
+
+docs/maintenance/rule_extraction_raw.md
+
+Contains rules extracted from development
+conversations that have not yet been fully
+integrated into the repository.
+
+This file acts as a temporary rule backlog.
+
+During reconstruction this file will
+gradually shrink as rules are implemented.
+
+--------------------------------------------------
+GENERAL RULES
+--------------------------------------------------
+
+The following constraints are mandatory.
+
+1. The ZIP must be loaded at the beginning
+   of every iteration.
+
+2. No file may be modified without first
+   reading its content from the ZIP.
+
+3. No repository content may be invented.
+
+4. Rules must never be duplicated.
+
+5. If a rule applies to multiple files,
+   it must be placed in GLOBAL_RULES.md.
+
+6. If a rule applies to only one file,
+   it must be placed in that file.
+
+7. If the correct destination is unclear,
+   the rule must be placed in GLOBAL_RULES.md.
+
+8. Each iteration may modify:
+
+   • one source file
+   • one destination file (if rules move)
+
+9. If any file is modified, the next
+   iteration must start by loading the ZIP again.
+
+10. When a file is modified, the full file
+    content must be shown.
+
+--------------------------------------------------
+INITIALIZATION
+--------------------------------------------------
+
+Before the first iteration begins:
+
+1. Load the repository ZIP.
+
+2. Read:
+
+docs/project/PROJECT_FILE_INDEX.md
+
+to understand repository structure.
+
+3. Read:
+
+docs/global/GLOBAL_RULES.md
+
+to identify existing system rules.
+
+4. Read:
+
+docs/maintenance/rule_extraction_raw.md
+
+to identify rules that still need to be
+integrated into the repository.
+
+--------------------------------------------------
+FILE PROCESSING ORDER
+--------------------------------------------------
+
+To reduce complexity early in the process,
+files should be processed from smallest
+to largest whenever possible.
+
+Recommended priority order:
+
+1. Small data files
+2. CSV files
+3. Short documentation files
+4. Medium documentation files
+5. Scripts
+6. Large documentation files
+
+This approach allows simple files to be
+verified quickly and reduces early complexity.
+
+--------------------------------------------------
+ITERATION STRUCTURE
 --------------------------------------------------
 
 Each iteration processes exactly one file.
@@ -70,157 +170,199 @@ Each iteration processes exactly one file.
 STEP 1 — LOAD ZIP
 --------------------------------------------------
 
-Load the latest ZIP version of the repository.
+Load the latest repository ZIP.
 
-The ZIP must contain the current state of the project.
+The ZIP represents the authoritative
+repository state.
+
+This step must occur at the start of
+every iteration.
 
 --------------------------------------------------
-STEP 2 — SELECT SOURCE FILE
+STEP 2 — SELECT TARGET FILE
 --------------------------------------------------
 
-Select a file that has not yet been marked as completed.
+Select a repository file to inspect.
 
-Completed files must be skipped.
+Files should be selected according to the
+FILE PROCESSING ORDER defined above.
 
-If a file was modified in the previous iteration,
-it must return to the end of the processing queue.
+Prefer the smallest files first.
+
+If a file was modified in the previous
+iteration, it must be moved to the end
+of the processing queue.
 
 --------------------------------------------------
 STEP 3 — READ FILE CONTENT
 --------------------------------------------------
 
-Read the exact content of the file from the ZIP.
+Read the file content from the ZIP.
 
-The content must be treated as the authoritative version.
+This content must be treated as the
+authoritative version of the file.
 
-To reduce conversation size, the content should only be
-shown if:
+The file content should only be shown
+in the conversation if:
 
-• the file will be modified  
-• the file contains misplaced rules  
-• the file appears incomplete  
+• the file will be modified
+• misplaced rules are detected
+• missing rules are identified
 
-Otherwise a short confirmation is sufficient.
-
-Example:
-
-File read successfully  
-No structural issues detected
+Otherwise a brief confirmation is sufficient.
 
 --------------------------------------------------
 STEP 4 — VALIDATE CONTENT LOCATION
 --------------------------------------------------
 
-Analyze whether the content belongs to the file
-according to PROJECT_FILE_INDEX.md.
+Analyze whether the content in the file
+belongs to that file according to
+PROJECT_FILE_INDEX.md.
 
-If rules are found that belong to another file:
+If rules appear that belong elsewhere:
 
 • mark them as misplaced
 • identify the correct destination file
 
-Do NOT move the rule yet.
+The rule must not be moved yet.
 
 --------------------------------------------------
-STEP 5 — CONVERSATION SCAN
+STEP 5 — SCAN RAW RULES
 --------------------------------------------------
 
-Search the conversation for information that belongs
-to the file being processed.
+Scan:
 
-Only include information that:
+docs/maintenance/rule_extraction_raw.md
 
-• clearly belongs to this file
-• is missing from the current file
+Identify rules that belong to the
+currently inspected file.
 
-Do not duplicate information already present.
+A rule belongs to a file if:
+
+• it describes behavior of that component
+• it defines constraints of that file
+• PROJECT_FILE_INDEX indicates that
+  the file owns that responsibility
 
 --------------------------------------------------
 STEP 6 — DETERMINE ACTION
 --------------------------------------------------
 
-Three possible outcomes exist.
+Four outcomes are possible.
 
 --------------------------------------------------
-CASE A — NO CHANGES REQUIRED
+CASE A — FILE IS CORRECT
 --------------------------------------------------
 
-If the file content is correct and complete:
+The file contains correct information and
+no missing rules.
 
-Mark the file as completed.
+Action:
 
-Output should be minimal.
+Mark the file as verified.
+
+--------------------------------------------------
+CASE B — RULES ARE MISPLACED
+--------------------------------------------------
+
+Rules appear in the file that belong
+to another file.
+
+Action:
+
+1. Remove rules from the source file.
+2. Add rules to the correct destination file.
+
+Both files must be shown in full.
+
+--------------------------------------------------
+CASE C — FILE IS INCOMPLETE
+--------------------------------------------------
+
+Relevant rules exist in
+rule_extraction_raw.md
+but are not present in the file.
+
+Action:
+
+Generate a full corrected version
+of the file including the new rules.
+
+--------------------------------------------------
+CASE D — RULE ALREADY IMPLEMENTED
+--------------------------------------------------
+
+A rule in rule_extraction_raw.md
+already exists in the correct file.
+
+Action:
+
+No modification required.
+
+The rule may be removed from
+rule_extraction_raw.md.
+
+--------------------------------------------------
+STEP 7 — UPDATE RULE BACKLOG
+--------------------------------------------------
+
+If rules were implemented or confirmed
+as already implemented:
+
+Generate an updated version of:
+
+docs/maintenance/rule_extraction_raw.md
+
+The updated version must:
+
+• remove resolved rules
+• retain unresolved rules
+• preserve ordering where possible
+
+The full updated file must be shown.
+
+--------------------------------------------------
+STEP 8 — UPDATE FILE STATUS
+--------------------------------------------------
+
+File state must be updated.
+
+If the file changed:
+
+move it to the end of the queue.
+
+If the file did not change:
+
+mark it as verified.
+
+--------------------------------------------------
+STEP 9 — PROGRESS REPORT
+--------------------------------------------------
+
+Display a compact progress summary.
 
 Example:
 
-File verified  
-No changes required
+Files processed: 5 / 38
+Files verified: 3
+Files modified: 2
+Remaining files: 33
 
 --------------------------------------------------
-CASE B — CONTENT MUST BE MOVED
+INVALID ITERATIONS
 --------------------------------------------------
 
-If rules are misplaced:
+The following errors invalidate an iteration:
 
-Show two files:
+• ZIP not loaded
+• file not read from ZIP
+• rule destination not determined
+• modified file not shown in full
+• rule duplicated across files
 
-1) Source file (after removing misplaced rules)
-
-2) Destination file (after adding the rules)
-
-If the destination file already contains the rule:
-
-• do not duplicate it
-• only remove it from the source
+If an iteration becomes invalid,
+it must be repeated from STEP 1.
 
 --------------------------------------------------
-CASE C — FILE INCOMPLETE
---------------------------------------------------
-
-If the file lacks important information found in
-the conversation:
-
-Generate the full corrected version of the file.
-
-The full content must be shown.
-
---------------------------------------------------
-STEP 7 — UPDATE FILE STATUS
---------------------------------------------------
-
-File status must be updated.
-
-Rules:
-
-If file unchanged → mark as completed  
-If file modified → move to end of queue
-
---------------------------------------------------
-STEP 8 — PROGRESS REPORT
---------------------------------------------------
-
-To minimize conversation size, only display a
-compact summary.
-
-Example:
-
-Files processed: 12 / 39  
-Completed files: 7  
-Files remaining: 32
-
---------------------------------------------------
-IMPORTANT CONSTRAINTS
---------------------------------------------------
-
-The following errors invalidate the iteration:
-
-• not reading the file from the ZIP  
-• generating content without verifying the file  
-• moving rules without identifying the destination  
-• failing to show the full file after modification  
-
-If any of these occur, the iteration must be repeated.
-
---------------------------------------------------
-END PROTOCOL
+END OF PROTOCOL
 --------------------------------------------------
