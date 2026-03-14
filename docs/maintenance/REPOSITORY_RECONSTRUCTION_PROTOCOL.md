@@ -1,219 +1,226 @@
-# PROJECT RECONSTRUCTION PROTOCOL
+# REPOSITORY RECONSTRUCTION PROTOCOL
 Music Genre Taxonomy System
 
 --------------------------------------------------
-1. PURPOSE
+PURPOSE
 --------------------------------------------------
 
-This document defines the official protocol used to reconstruct,
-validate, and recover project knowledge extracted from the
-development conversation.
+This protocol defines the strict procedure used to
+reconstruct project knowledge from the development
+conversation and reconcile it with the current
+repository state.
 
-The purpose of this protocol is to guarantee that:
+The objective is to ensure that:
 
-• no rules are lost during reconstruction  
-• no information from the conversation disappears  
-• project documentation remains consistent  
-• each document contains only the information that belongs to it  
+• no information from the conversation is lost  
+• repository files contain the correct knowledge  
+• misplaced rules are moved to their correct files  
+• incomplete documentation is completed  
 
-This protocol must be followed when reviewing project files.
-
---------------------------------------------------
-2. WHEN THIS PROTOCOL IS USED
---------------------------------------------------
-
-This protocol is used during the knowledge reconstruction phase.
-
-The goal of this phase is to recover all relevant information
-from the development conversation and integrate it into the
-project documentation.
-
-This process continues until all project files have been
-validated and completed.
+The protocol must be executed iteratively.
 
 --------------------------------------------------
-3. SOURCE OF TRUTH
+GENERAL PRINCIPLES
 --------------------------------------------------
 
-During reconstruction there are two sources of information:
+The following rules are mandatory during execution.
 
-1. The project repository (ZIP structure)
-2. The development conversation
+1. The repository ZIP must always be treated as the
+single source of truth for file contents.
 
-The conversation must be scanned in every iteration to recover
-knowledge that may not yet exist in the project files.
+2. The conversation must only be used to recover
+missing information.
 
---------------------------------------------------
-4. ZIP LOADING RULE
---------------------------------------------------
+3. No content may be invented.
 
-The project ZIP file is only reloaded when the previous iteration
-introduced changes to any file.
+4. The content of a file must always be read from
+the ZIP before any analysis occurs.
 
-If the previous iteration produced no modifications,
-the same ZIP state must be reused.
+5. If the file content is not read, the iteration
+is considered invalid.
 
-This prevents unnecessary reloads and ensures consistency
-during file analysis.
+6. If a change is applied, the modified file must
+be shown in full.
 
---------------------------------------------------
-5. FILE SELECTION RULE
---------------------------------------------------
-
-Each iteration processes exactly one source file.
-
-A file may be selected if:
-
-• it has not been processed yet
-• it previously required modification
-• it contains incomplete documentation
-
-Files already marked as completed must be skipped.
+7. If no change is required, the file must be
+marked as completed.
 
 --------------------------------------------------
-6. ITERATION PROCEDURE
+PREPARATION STEP
 --------------------------------------------------
 
-Every iteration must follow the exact procedure below.
+Before starting iterations:
 
-STEP 1 — Load ZIP structure
+1. Load the ZIP repository.
+2. Read the file:
 
-Read the project directory structure to identify all files.
+docs/project/PROJECT_FILE_INDEX.md
 
-STEP 2 — Select source file
+This file defines the function of every repository
+file and must be used to determine valid destinations
+for rules.
 
-Choose a file that has not yet been finalized.
+--------------------------------------------------
+ITERATION PROCEDURE
+--------------------------------------------------
 
-STEP 3 — Read file contents
+Each iteration processes exactly one file.
 
-Load the complete content of the source file without modifying it.
+--------------------------------------------------
+STEP 1 — LOAD ZIP
+--------------------------------------------------
 
-STEP 4 — Validate misplaced content
+Load the latest ZIP version of the repository.
 
-Check if the file contains rules, definitions,
-or documentation that belong to another file.
+The ZIP must contain the current state of the project.
 
-STEP 5 — Identify destination file
+--------------------------------------------------
+STEP 2 — SELECT SOURCE FILE
+--------------------------------------------------
 
-If misplaced content is detected:
+Select a file that has not yet been marked as completed.
 
+Completed files must be skipped.
+
+If a file was modified in the previous iteration,
+it must return to the end of the processing queue.
+
+--------------------------------------------------
+STEP 3 — READ FILE CONTENT
+--------------------------------------------------
+
+Read the exact content of the file from the ZIP.
+
+The content must be treated as the authoritative version.
+
+To reduce conversation size, the content should only be
+shown if:
+
+• the file will be modified  
+• the file contains misplaced rules  
+• the file appears incomplete  
+
+Otherwise a short confirmation is sufficient.
+
+Example:
+
+File read successfully  
+No structural issues detected
+
+--------------------------------------------------
+STEP 4 — VALIDATE CONTENT LOCATION
+--------------------------------------------------
+
+Analyze whether the content belongs to the file
+according to PROJECT_FILE_INDEX.md.
+
+If rules are found that belong to another file:
+
+• mark them as misplaced
 • identify the correct destination file
-• verify whether the rule already exists there
 
-STEP 6 — Destination verification
-
-Two outcomes are possible.
-
-CASE A — Rule already exists in destination
-
-Action:
-
-• remove the rule from the source file
-• do not modify the destination file
-
-CASE B — Rule missing from destination
-
-Action:
-
-• remove the rule from the source file
-• add the rule to the destination file
-
-Both the corrected source and destination files must be shown.
-
-STEP 7 — Conversation scan
-
-The entire development conversation must be scanned to detect
-information relevant to the source file.
-
-This includes:
-
-• architectural decisions
-• system strategies
-• design explanations
-• rules previously described but not documented
-• project philosophies
-
-If relevant information is found, it must be added to the file.
-
-STEP 8 — Incomplete document validation
-
-If the file lacks information necessary for its purpose,
-missing content must be reconstructed using conversation context.
-
-STEP 9 — Generate final file
-
-The full corrected version of the file must be displayed.
-
-Partial patches are not allowed.
-
-The entire file must be shown.
-
-STEP 10 — Update processing state
-
-Two outcomes are possible.
-
-CASE A — File modified
-
-The file returns to the end of the processing queue.
-
-CASE B — File unchanged
-
-The file is marked as completed.
+Do NOT move the rule yet.
 
 --------------------------------------------------
-7. PROCESSING QUEUE RULE
+STEP 5 — CONVERSATION SCAN
 --------------------------------------------------
 
-The reconstruction process operates using a queue.
+Search the conversation for information that belongs
+to the file being processed.
+
+Only include information that:
+
+• clearly belongs to this file
+• is missing from the current file
+
+Do not duplicate information already present.
+
+--------------------------------------------------
+STEP 6 — DETERMINE ACTION
+--------------------------------------------------
+
+Three possible outcomes exist.
+
+--------------------------------------------------
+CASE A — NO CHANGES REQUIRED
+--------------------------------------------------
+
+If the file content is correct and complete:
+
+Mark the file as completed.
+
+Output should be minimal.
+
+Example:
+
+File verified  
+No changes required
+
+--------------------------------------------------
+CASE B — CONTENT MUST BE MOVED
+--------------------------------------------------
+
+If rules are misplaced:
+
+Show two files:
+
+1) Source file (after removing misplaced rules)
+
+2) Destination file (after adding the rules)
+
+If the destination file already contains the rule:
+
+• do not duplicate it
+• only remove it from the source
+
+--------------------------------------------------
+CASE C — FILE INCOMPLETE
+--------------------------------------------------
+
+If the file lacks important information found in
+the conversation:
+
+Generate the full corrected version of the file.
+
+The full content must be shown.
+
+--------------------------------------------------
+STEP 7 — UPDATE FILE STATUS
+--------------------------------------------------
+
+File status must be updated.
 
 Rules:
 
-• files modified during an iteration move to the end of the queue
-• completed files are removed from the queue
-• the process continues until all files are completed
+If file unchanged → mark as completed  
+If file modified → move to end of queue
 
 --------------------------------------------------
-8. CONVERSATION KNOWLEDGE RECOVERY
+STEP 8 — PROGRESS REPORT
 --------------------------------------------------
 
-The conversation may contain critical knowledge not yet stored
-in project files.
+To minimize conversation size, only display a
+compact summary.
 
-Examples include:
+Example:
 
-• taxonomy design reasoning
-• playlist coherence philosophy
-• Latin branch strategy
-• node type definitions
-• classification criteria
-• system design decisions
-
-This knowledge must be extracted and integrated
-into the appropriate documentation.
+Files processed: 12 / 39  
+Completed files: 7  
+Files remaining: 32
 
 --------------------------------------------------
-9. INFORMATION LOSS PREVENTION
+IMPORTANT CONSTRAINTS
 --------------------------------------------------
 
-Before removing any rule from a file,
-the protocol must verify that the rule already exists
-in the correct destination file.
+The following errors invalidate the iteration:
 
-This guarantees that no rules are lost during cleanup.
+• not reading the file from the ZIP  
+• generating content without verifying the file  
+• moving rules without identifying the destination  
+• failing to show the full file after modification  
 
---------------------------------------------------
-10. FINALIZATION CRITERIA
---------------------------------------------------
-
-The reconstruction phase is complete when:
-
-• every project file has been processed
-• no misplaced rules remain
-• all documentation is complete
-• the taxonomy rules are fully preserved
-
-At that point the repository represents a
-stable checkpoint of the project knowledge.
+If any of these occur, the iteration must be repeated.
 
 --------------------------------------------------
-END DOCUMENT
+END PROTOCOL
+--------------------------------------------------
