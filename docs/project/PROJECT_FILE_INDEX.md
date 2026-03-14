@@ -155,6 +155,7 @@ All documentation is organized under the docs directory.
 
 docs/
 
+global/  
 system/  
 taxonomy/  
 project/  
@@ -164,7 +165,58 @@ releases/
 Each folder serves a specific documentation purpose.
 
 --------------------------------------------------
-9. SYSTEM DOCUMENTATION
+9. GLOBAL DOCUMENTATION
+--------------------------------------------------
+
+docs/global/GLOBAL_RULES.md
+
+Defines system-wide rules that apply to multiple
+components of the repository.
+
+This file acts as the canonical location for rules
+that affect more than one subsystem.
+
+Examples include rules that affect:
+
+• taxonomy behavior  
+• classification logic  
+• validation procedures  
+• repository constraints  
+
+--------------------------------------------------
+
+RULE PLACEMENT PRINCIPLE
+
+If a rule applies to only one file or subsystem,
+it should be placed in that specific file.
+
+If a rule applies to multiple files or subsystems,
+it must be placed in:
+
+docs/global/GLOBAL_RULES.md
+
+Other documents may reference the rule but should
+not duplicate it.
+
+--------------------------------------------------
+
+RULE LOADING PRINCIPLE
+
+Whenever repository rules are evaluated
+(for example during reconstruction or validation),
+the following files must always be loaded:
+
+1. docs/global/GLOBAL_RULES.md  
+2. docs/maintenance/rule_extraction_raw.md  
+
+GLOBAL_RULES.md contains canonical rules.
+
+rule_extraction_raw.md contains rules extracted
+from development conversations that have not yet
+been integrated into the repository.
+
+--------------------------------------------------
+10. SYSTEM DOCUMENTATION
 --------------------------------------------------
 
 docs/system/SYSTEM_OVERVIEW.md
@@ -178,7 +230,7 @@ docs/system/SYSTEM_CONTRACT.md
 Defines mandatory rules governing system behavior.
 
 --------------------------------------------------
-10. TAXONOMY DOCUMENTATION
+11. TAXONOMY DOCUMENTATION
 --------------------------------------------------
 
 docs/taxonomy/TAXONOMY_RULES.md
@@ -210,7 +262,7 @@ docs/taxonomy/TAXONOMY_QUALITY_CHECKLIST.md
 Checklist used to validate taxonomy quality.
 
 --------------------------------------------------
-11. PROJECT DOCUMENTATION
+12. PROJECT DOCUMENTATION
 --------------------------------------------------
 
 docs/project/PROJECT_CONTEXT.md
@@ -236,7 +288,7 @@ docs/project/PROJECT_FILE_INDEX.md
 Defines the documentation structure of the repository.
 
 --------------------------------------------------
-12. MAINTENANCE DOCUMENTATION
+13. MAINTENANCE DOCUMENTATION
 --------------------------------------------------
 
 docs/maintenance/PROJECT_BOOTSTRAP.md
@@ -272,7 +324,7 @@ docs/maintenance/PHASE1_FINAL_CHECKLIST.md
 Checklist confirming Phase 1 completion.
 
 --------------------------------------------------
-13. RELEASE DOCUMENTATION
+14. RELEASE DOCUMENTATION
 --------------------------------------------------
 
 docs/releases/RELEASE_NOTES_v1.0.md
