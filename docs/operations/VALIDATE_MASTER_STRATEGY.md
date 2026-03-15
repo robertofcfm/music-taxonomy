@@ -28,7 +28,7 @@ Propietario del proyecto
 
 Estado:
 
-v0.2 — Matriz de aplicabilidad definida. Conjunto de reglas pendiente.
+v0.4 — Trazabilidad por archivo de conocimiento definida.
 
 Última actualización:
 
@@ -70,6 +70,12 @@ Un error fatal:
 
 No existen advertencias para violaciones de gobernanza.
 Una regla se cumple o el proceso falla.
+
+Excepción explícita:
+
+Hallazgos etiquetados como WARNING o SUGGESTION solo aplican
+a recomendaciones de calidad o semántica que no constituyen
+incumplimiento de una obligación normativa.
 
 --------------------------------------------------
 ENFOQUE DE VALIDACIÓN
@@ -225,24 +231,196 @@ Los documentos REFERENTIAL no deben usarse como fuente de reglas.
 CONJUNTO DE REGLAS DE VALIDACIÓN
 --------------------------------------------------
 
-ESTADO: DEFINICIÓN PENDIENTE
+ESTADO: DEFINIDO
 
-Cada regla deberá definirse con:
+Formato obligatorio de regla:
 
 - RULE_ID
-- SOURCE
 - LAYER (1 o 2)
 - SEVERITY (FATAL o WARNING)
 - DESCRIPTION
 - CHECK
 
-No se permite inventar reglas fuera del corpus de gobernanza.
+Modelo de trazabilidad:
+
+- La gobernanza se usa como base de conocimiento normativa.
+- La trazabilidad se gestiona por archivo fuente, no por regla individual.
+- Cada regla MVET referencia un bloque funcional del proceso.
+
+Bloques funcionales y trazabilidad por archivo:
+
+- FB-01 Estructura base del árbol
+  Archivos fuente:
+  - docs/governance/SYSTEM_CONTRACT.md
+  - docs/governance/TAXONOMY_RULES.md
+
+- FB-02 Convenciones de nombrado
+  Archivos fuente:
+  - docs/governance/TAXONOMY_NAMING_CONVENTION.md
+
+- FB-03 Profundidad y equilibrio
+  Archivos fuente:
+  - docs/governance/TAXONOMY_DEPTH_POLICY.md
+  - docs/governance/TAXONOMY_RULES.md
+
+- FB-04 Inmutabilidad y seguridad del maestro
+  Archivos fuente:
+  - docs/governance/GLOBAL_RULES.md
+  - docs/governance/SYSTEM_CONTRACT.md
+
+- FB-05 Calidad semántica musical
+  Archivos fuente:
+  - docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+  - docs/governance/TAXONOMY_RULES.md
+
+- FB-06 Gestión de cambio y release
+  Archivos fuente:
+  - docs/governance/TAXONOMY_CHANGE_POLICY.md
+  - docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+
+Regla de diseño del set:
+
+- No se permite inventar reglas fuera del corpus de gobernanza.
+- Toda violación de regla de gobernanza obligatoria es FATAL.
+- WARNING/SUGGESTION solo pueden usarse para recomendaciones
+  no normativas (de calidad o semántica), incluso si su fuente
+  documental pertenece al corpus de gobernanza.
+
+Catálogo inicial de reglas del proceso:
+
+CAPA 1 — Reglas deterministas (script)
+
+- MVET-L1-001
+  FB: FB-01
+  SEVERITY: FATAL
+  DESCRIPTION: Debe existir un nodo raíz único.
+  CHECK: Conteo de raíces = 1.
+
+- MVET-L1-002
+  FB: FB-01
+  SEVERITY: FATAL
+  DESCRIPTION: La jerarquía debe ser válida por indentación.
+  CHECK: Parser de árbol sin saltos de nivel inválidos ni nodos huérfanos.
+
+- MVET-L1-003
+  FB: FB-02
+  SEVERITY: FATAL
+  DESCRIPTION: Nombres de género únicos (excepto clone permitido).
+  CHECK: Duplicados bloqueados cuando no exista justificación clone.
+
+- MVET-L1-004
+  FB: FB-02
+  SEVERITY: FATAL
+  DESCRIPTION: Formato de nombrado válido (Title Case y patrón General).
+  CHECK: Regex de formato y validación de sufijo "(General)".
+
+- MVET-L1-005
+  FB: FB-01
+  SEVERITY: FATAL
+  DESCRIPTION: Nodos General no autogenerados y correctamente definidos.
+  CHECK: Presencia explícita y ubicación bajo padre correspondiente.
+
+- MVET-L1-006
+  FB: FB-01
+  SEVERITY: FATAL
+  DESCRIPTION: Restricciones de nodo clone.
+  CHECK: Clone sin hijos y con referencia canónica válida.
+
+- MVET-L1-007
+  FB: FB-03
+  SEVERITY: WARNING
+  DESCRIPTION: Profundidad recomendada del árbol.
+  CHECK: Reportar ramas fuera del rango recomendado 3–5 niveles.
+
+- MVET-L1-008
+  FB: FB-04
+  SEVERITY: FATAL
+  DESCRIPTION: Inmutabilidad del archivo maestro.
+  CHECK: El proceso no modifica taxonomy/genre_tree_master.md.
+
+- MVET-L1-009
+  FB: FB-02
+  SEVERITY: FATAL
+  DESCRIPTION: Términos ambiguos prohibidos en nombres de nodo.
+  CHECK: Lista de prohibidos y variantes normalizadas.
+
+- MVET-L1-010
+  FB: FB-04
+  SEVERITY: FATAL
+  DESCRIPTION: Separación de dominio Latin en reglas estructurales declaradas.
+  CHECK: Rama Latin presente y sin contradicciones de estructura base.
+
+CAPA 2 — Reglas semánticas (IA)
+
+- MVET-L2-001
+  FB: FB-05
+  SEVERITY: WARNING
+  DESCRIPTION: Distinción musical entre géneros hermanos.
+  CHECK: Evaluación comparativa y evidencia por par de hermanos conflictivos.
+
+- MVET-L2-002
+  FB: FB-05
+  SEVERITY: WARNING
+  DESCRIPTION: Riesgos de cohesión de playlists por estructura.
+  CHECK: Identificación de nodos con mezcla estilística potencial.
+
+- MVET-L2-003
+  FB: FB-05
+  SEVERITY: WARNING
+  DESCRIPTION: Redundancia entre nodos.
+  CHECK: Detección de géneros potencialmente equivalentes.
+
+- MVET-L2-004
+  FB: FB-05
+  SEVERITY: WARNING
+  DESCRIPTION: Sobre-fragmentación estructural.
+  CHECK: Detección de subramas excesivas sin valor musical claro.
+
+- MVET-L2-005
+  FB: FB-05
+  SEVERITY: WARNING
+  DESCRIPTION: Candidatos a género atómico.
+  CHECK: Nodos donde subdividir deterioraría coherencia.
+
+- MVET-L2-006
+  FB: FB-06
+  SEVERITY: WARNING
+  DESCRIPTION: Candidatos de reubicación estructural.
+  CHECK: Propuesta de reubicación con evidencia musical.
+
+- MVET-L2-007
+  FB: FB-06
+  SEVERITY: WARNING
+  DESCRIPTION: Candidatos de fusión de nodos hermanos.
+  CHECK: Evidencia de solapamiento alto entre hermanos.
+
+- MVET-L2-008
+  FB: FB-04
+  SEVERITY: FATAL
+  DESCRIPTION: Violación semántica de separación Latin y no-Latin.
+  CHECK: Hallazgo explícito de mezcla de dominios incompatibles.
+
+Reglas condicionales (activas en post-cambio y pre-release):
+
+- MVET-C-001
+  FB: FB-06
+  LAYER: 2
+  SEVERITY: WARNING
+  DESCRIPTION: Revisión global de cambios estructurales recientes.
+  CHECK: Confirmación de revisión integral de efectos colaterales.
+
+- MVET-C-002
+  FB: FB-06
+  LAYER: 1 y 2
+  SEVERITY: FATAL
+  DESCRIPTION: Bloqueo de release por issues estructurales no resueltos.
+  CHECK: Cualquier issue abierto de severidad fatal bloquea el gate.
 
 --------------------------------------------------
 REQUISITOS DEL PROMPT DE IA
 --------------------------------------------------
 
-ESTADO: DEFINICIÓN PENDIENTE
+ESTADO: DEFINIDO
 
 El prompt de IA para Capa 2 debe incluir:
 
@@ -257,11 +435,33 @@ El prompt de IA para Capa 2 debe incluir:
 La estructura del prompt debe ser determinista.
 El contenido variable se limita al input taxonómico.
 
+Contrato de salida obligatorio de Capa 2:
+
+- Formato JSON válido, sin texto fuera del JSON.
+- Cada hallazgo debe incluir:
+  - rule_id
+  - severity (FATAL | WARNING | SUGGESTION)
+  - node_path
+  - evidence
+  - recommendation
+  - confidence (0.00-1.00)
+- Debe incluir resumen final:
+  - total_fatal
+  - total_warning
+  - total_suggestion
+  - decision_recommendation (PASS | PASS_WITH_WARNINGS | FAIL)
+
+Reglas de seguridad del prompt:
+
+- Prohibido proponer edición automática del archivo maestro.
+- Prohibido crear reglas no presentes en el corpus de gobernanza.
+- Prohibido ocultar incertidumbre: debe reportarse en confidence.
+
 --------------------------------------------------
 SALIDA Y GATE DE CALIDAD
 --------------------------------------------------
 
-ESTADO: DEFINICIÓN PENDIENTE
+ESTADO: DEFINIDO
 
 El proceso genera un único reporte de validación.
 
@@ -270,6 +470,21 @@ Decisión de gate de calidad:
 - PASS: sin violaciones.
 - PASS WITH WARNINGS: sin violaciones fatales; hallazgos no fatales documentados.
 - FAIL: una o más violaciones fatales; proceso bloqueado.
+
+Criterio de decisión automático:
+
+- FAIL:
+  - Si existe al menos 1 FATAL en Capa 1.
+  - Si existe al menos 1 FATAL en Capa 2.
+
+- PASS WITH WARNINGS:
+  - Sin FATAL.
+  - Al menos 1 WARNING o SUGGESTION.
+
+- PASS:
+  - Sin FATAL.
+  - Sin WARNING.
+  - Sin SUGGESTION crítica pendiente.
 
 El reporte debe registrar:
 
@@ -280,6 +495,12 @@ El reporte debe registrar:
 - resultado y hallazgos de Capa 2
 - decisión final del gate de calidad
 - hash o checksum del archivo validado
+
+Artefactos de salida mínimos del proceso:
+
+- reports/validate_master_report.json
+- reports/validate_master_report.md
+- reports/validate_master_run_metadata.json
 
 --------------------------------------------------
 TRAZABILIDAD
@@ -306,12 +527,26 @@ Actualmente es un marcador de posición.
 Este archivo implementará la Capa 1 cuando el conjunto
 de reglas esté finalizado y la matriz de aplicabilidad completa.
 
-La implementación no debe iniciar hasta que el conjunto de reglas
-quede finalizado en este documento.
+La implementación de Capa 1 puede iniciar.
+
+La implementación de Capa 2 debe iniciar solo después de fijar
+la plantilla final del prompt y validar su esquema JSON de salida.
 
 --------------------------------------------------
 HISTORIAL DE REVISIONES
 --------------------------------------------------
+
+v0.4 — 2026-03-15
+- Se cambió el modelo de trazabilidad: de SOURCE por regla a trazabilidad por archivo.
+- Se definieron bloques funcionales (FB-01 a FB-06) como puente entre reglas y documentos.
+- La gobernanza quedó explicitada como base de conocimiento normativa.
+
+v0.3 — 2026-03-15
+- Conjunto de reglas MVET definido (Capa 1, Capa 2 y condicionales).
+- Contrato de prompt de IA definido con esquema de salida obligatorio.
+- Gate de calidad definido con criterio automático de decisión.
+- Artefactos de salida del proceso definidos.
+- Implementación de Capa 1 desbloqueada.
 
 v0.2 — 2026-03-15
 - Matriz de aplicabilidad documental completada.
