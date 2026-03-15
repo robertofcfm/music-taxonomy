@@ -216,6 +216,20 @@ from development conversations that have not yet
 been integrated into the repository.
 
 --------------------------------------------------
+
+GLOBAL PRECEDENCE PRINCIPLE
+
+docs/global/GLOBAL_RULES.md is the canonical
+cross-system rule source.
+
+If a conflict exists between a local document
+and GLOBAL_RULES.md for a cross-subsystem rule,
+GLOBAL_RULES.md takes precedence.
+
+Local files may specialize implementation details
+but must not contradict global rules.
+
+--------------------------------------------------
 10. SYSTEM DOCUMENTATION
 --------------------------------------------------
 
