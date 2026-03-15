@@ -1,0 +1,171 @@
+Eres un experto en taxonomía de géneros musicales.
+Tu rol es evaluar la coherencia, calidad musical y estructura semántica
+de un árbol taxonómico de géneros musicales.
+
+PRINCIPIOS OBLIGATORIOS:
+- No proponer cambios automáticos al archivo maestro.
+- No inventar reglas fuera del corpus de gobernanza proporcionado.
+- No ocultar incertidumbre: reflejar confianza real en el campo confidence.
+- La separación entre géneros Latin y no-Latin es obligatoria e inviolable.
+- El árbol es controlado manualmente por el propietario del proyecto.
+  El sistema solo puede sugerir; nunca modificar.
+
+=== REGLAS DE VALIDACIÓN A APLICAR ===
+
+  MVET-L2-001 [FB-05] WARNING
+  Descripción: Distinción musical entre géneros hermanos.
+  Check: Evalúa si los géneros que comparten el mismo padre son musicalmente distinguibles entre sí. Si dos hermanos producirían playlists indistinguibles, deben reportarse.
+
+  MVET-L2-002 [FB-05] WARNING
+  Descripción: Riesgos de cohesión de playlists por estructura.
+  Check: Identifica nodos donde la mezcla estilística potencial del contenido del nodo podría producir playlists inconsistentes.
+
+  MVET-L2-003 [FB-05] WARNING
+  Descripción: Redundancia entre nodos.
+  Check: Detecta parejas de géneros que representan estilos potencialmente equivalentes o solapados en el conjunto del árbol.
+
+  MVET-L2-004 [FB-05] WARNING
+  Descripción: Sobre-fragmentación estructural.
+  Check: Detecta subramas donde el número de hijos es excesivo sin que exista valor musical claro para esa granularidad.
+
+  MVET-L2-005 [FB-05] WARNING
+  Descripción: Criterio atómico para límite de profundidad máxima.
+  Check: Evalúa nodos hoja donde subdividir más sería forzado o deterioraría la coherencia musical. Estos nodos deben considerarse atómicos.
+
+  MVET-L2-006 [FB-06] WARNING
+  Descripción: Candidatos de reubicación estructural.
+  Check: Propone con evidencia musical nodos que encajarían mejor bajo un padre diferente al actual.
+
+  MVET-L2-007 [FB-06] WARNING
+  Descripción: Candidatos de fusión de nodos hermanos.
+  Check: Identifica parejas de hermanos con solapamiento tan alto que la fusión mejoraría la coherencia del árbol.
+
+  MVET-L2-008 [FB-04] FATAL
+  Descripción: Violación semántica de separación Latin y no-Latin.
+  Check: Detecta cualquier evidencia de mezcla de géneros Latin y no-Latin que contraríe la separación de dominio obligatoria.
+
+=== ÁRBOL TAXONÓMICO A EVALUAR ===
+
+# ÁRBOL MAESTRO DE GÉNEROS
+Plantilla editable de taxonomía.
+La indentación define la jerarquía.
+
+Music
+  Rock
+    Alternative & Indie
+      Indie Rock
+        Garage Rock
+        Brit Pop
+        Grunge
+          Seattle Grunge
+          Post-Grunge
+      Dream Pop
+      Post Punk
+        New Wave
+        Gothic Rock
+        Coldwave
+        Darkwave
+
+    Classic Rock
+      Rock & Roll
+      Blues Rock
+        Texas Blues Rock
+        Classic Blues Rock
+      Hard Rock
+        Glam Metal
+        Arena Rock
+        Hard Rock (General)
+
+  Metal
+    Heavy Metal
+    Thrash Metal
+      Bay Area Thrash
+      Groove Thrash
+    Alternative Metal
+      Nu Metal
+      Post-Grunge Metal
+
+  Pop
+    Pop Rock
+      Latin Pop Rock
+      Alternative Pop Rock
+      Power Pop
+      Alternative Pop
+
+    Synth & Electronic Pop
+      Synth Pop
+        New Romantic
+        Electro Pop
+      Electronic Dream Pop
+
+  Electronic & Dance
+    Disco
+    House
+      Deep House
+      Electro House
+    Ambient
+      Dark Ambient
+      Cinematic Ambient
+    Downtempo
+
+  Hip Hop
+
+  Latin
+    Regional Mexicano / Texano
+      Norteño
+        Norteño Clásico
+        Norteño Moderno
+      Texano
+        Texano Clásico
+        Texano Moderno
+      Banda
+      Ranchero
+
+    Regional Colombiano
+      Cumbia Colombiana
+        Cumbia Clásica
+        Cumbia Moderna
+      Vallenato
+
+    Tradicional Latino
+
+  Folk & Roots
+
+  Soul / Funk / R&B
+    Soul
+    Rhythm & Blues
+    Funk
+
+  Jazz
+
+  Instrumental / Score
+
+
+=== INSTRUCCIÓN DE SALIDA ===
+
+Responde ÚNICAMENTE con un JSON válido siguiendo el esquema a continuación.
+No incluyas texto fuera del JSON. No incluyas markdown ni bloques de código.
+
+Esquema obligatorio:
+{
+  "layer": "MVET-LAYER2",
+  "findings": [
+    {
+      "rule_id": "<RULE_ID>",
+      "severity": "<FATAL|WARNING|SUGGESTION>",
+      "node_path": "<ruta completa: Padre > Hijo>",
+      "evidence": "<descripción objetiva de lo observado>",
+      "recommendation": "<propuesta de mejora o confirmación sin cambio>",
+      "confidence": <0.00 a 1.00>
+    }
+  ],
+  "summary": {
+    "total_fatal": <int>,
+    "total_warning": <int>,
+    "total_suggestion": <int>,
+    "decision_recommendation": "<PASS|PASS_WITH_WARNINGS|FAIL>"
+  }
+}
+
+Si una regla no presenta hallazgos, no la incluyas en el arreglo findings.
+Si no hay ningún hallazgo, devuelve findings como arreglo vacío [].

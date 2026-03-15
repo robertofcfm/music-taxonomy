@@ -28,7 +28,7 @@ Propietario del proyecto
 
 Estado:
 
-v0.5 — Regla de profundidad final alineada (mínimo 3 y criterio atómico).
+v0.6 — Capa 2 implementada (stub con contrato de prompt y validación de respuesta).
 
 Última actualización:
 
@@ -530,19 +530,36 @@ NOTAS DE IMPLEMENTACIÓN
 
 scripts/validate_tree.py
 
-Actualmente es un marcador de posición.
+Implementa la Capa 1 determinista.
+Ejecución: python scripts/validate_tree.py
+Salida: reports/validate_master_report.json y .md
 
-Este archivo implementará la Capa 1 cuando el conjunto
-de reglas esté finalizado y la matriz de aplicabilidad completa.
+scripts/validate_tree_layer2.py
 
-La implementación de Capa 1 puede iniciar.
+Implementa la Capa 2 semántica como stub operativo.
 
-La implementación de Capa 2 debe iniciar solo después de fijar
-la plantilla final del prompt y validar su esquema JSON de salida.
+Modo generación de prompt:
+  python scripts/validate_tree_layer2.py --print-prompt
+  Salida: reports/validate_master_layer2_prompt.txt
+  Ese archivo debe enviarse a un modelo de lenguaje externo.
+
+Modo aplicación de respuesta:
+  python scripts/validate_tree_layer2.py --apply-response <respuesta.json>
+  Valida el esquema JSON de la respuesta IA y genera reportes.
+  Salida: reports/validate_master_layer2_report.json y .md
+
+Pre-requisito de Capa 2:
+  Capa 1 debe haber terminado con PASS o PASS_WITH_WARNINGS.
 
 --------------------------------------------------
 HISTORIAL DE REVISIONES
 --------------------------------------------------
+
+v0.6 — 2026-03-15
+- scripts/validate_tree_layer2.py implementado como stub operativo de Capa 2.
+- Modos --print-prompt y --apply-response funcionando.
+- Contrato de respuesta JSON con validación de esquema.
+- Pre-requisito de Capa 1 verificado antes de ejecutar Capa 2.
 
 v0.5 — 2026-03-15
 - MVET-L1-007 actualizado: profundidad mínima = 3.

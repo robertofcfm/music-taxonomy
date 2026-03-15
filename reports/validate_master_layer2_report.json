@@ -1,0 +1,31 @@
+{
+  "process": "MVET-LAYER2",
+  "generated_at": "2026-03-15T23:34:38+00:00",
+  "schema_errors": [],
+  "summary": {
+    "decision": "PASS_WITH_WARNINGS",
+    "total_fatal": 0,
+    "total_warning": 1,
+    "total_suggestion": 0,
+    "total_findings": 1
+  },
+  "ai_summary": {
+    "total_fatal": 0,
+    "total_warning": 1,
+    "total_suggestion": 0,
+    "decision_recommendation": "PASS_WITH_WARNINGS"
+  },
+  "findings": [
+    {
+      "rule_id": "MVET-L2-001",
+      "fb": "FB-05",
+      "severity": "WARNING",
+      "node_path": "Music > Rock > Alternative & Indie > Indie Rock > Grunge",
+      "evidence": "Grunge y Post-Grunge comparten características instrumentales y vocales muy similares",
+      "recommendation": "Evaluar fusión o añadir descripción de distinción clara entre ambos",
+      "confidence": 0.75,
+      "schema_valid": true,
+      "schema_error": ""
+    }
+  ]
+}
