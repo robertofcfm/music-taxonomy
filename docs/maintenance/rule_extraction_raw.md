@@ -3,11 +3,6 @@
 Raw rules extracted from conversations. Not yet classified.
 
 ---
-RULE 008
-
-The classifier must load the taxonomy before classifying songs.
-
----
 RULE 019
 
 Minor stylistic influence must not trigger genre assignment.
@@ -18,41 +13,6 @@ RULE 022
 The project has three phases: taxonomy design, song classification, and tree generation.
 
 ---
-RULE 041
-
-The system must detect missing genres during classification.
-
----
-RULE 042
-
-Missing genres must trigger a fatal error.
-
----
-RULE 043
-
-The system must log detailed error diagnostics.
-
----
-RULE 044
-
-The system must allow multiple genres per song.
-
----
-RULE 045
-
-The classifier must ignore trivial stylistic references.
-
----
-RULE 061
-
-Only affected songs should be reevaluated.
-
----
-RULE 062
-
-Unaffected songs must not be reclassified unnecessarily.
-
----
 RULE 067
 
 The generated tree may activate nodes when songs appear.
@@ -61,31 +21,6 @@ The generated tree may activate nodes when songs appear.
 RULE 068
 
 Inactive nodes represent unused taxonomy branches.
-
----
-RULE 071
-
-The classifier must support batch processing.
-
----
-RULE 072
-
-Batch classification must support partial results.
-
----
-RULE 073
-
-Successful classifications must be appended to output.
-
----
-RULE 074
-
-Unclassified songs must remain queued.
-
----
-RULE 075
-
-Batch execution must stop when the error threshold is exceeded.
 
 ---
 RULE 079

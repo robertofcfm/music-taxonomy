@@ -149,6 +149,8 @@ Leaf nodes must correspond to clearly recognized genres.
 7. CLASSIFICATION PIPELINE
 --------------------------------------------------
 
+The classifier must load the taxonomy before classifying songs.
+
 Two execution modes exist.
 
 TEST MODE
@@ -172,6 +174,15 @@ Logs must confirm:
 - taxonomy was loaded
 - system rules were loaded
 - classifier version
+
+Batch processing is mandatory.
+
+Batch continuity rules:
+
+- batch classification must support partial results
+- successful classifications must be appended to output
+- unclassified songs must remain queued
+- batch execution must stop when the error threshold is exceeded
 
 --------------------------------------------------
 8. NODE MISSING RULE
@@ -208,6 +219,9 @@ Error reports must contain:
 - artist
 - description of the problem
 - suggested solution
+
+Error diagnostics must be detailed enough to support
+root-cause analysis and corrective action.
 
 --------------------------------------------------
 10. TAXONOMY VALIDATION
@@ -255,6 +269,11 @@ previous classification outputs become obsolete.
 In that case:
 
 All songs must be reclassified.
+
+If the taxonomy changes without breaking compatibility:
+
+- only affected songs should be reevaluated
+- unaffected songs must not be reclassified unnecessarily
 
 --------------------------------------------------
 END SYSTEM CONTRACT
