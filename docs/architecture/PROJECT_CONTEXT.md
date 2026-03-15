@@ -85,7 +85,7 @@ tras una revisión manual.
 6. GOBERNANZA DE TAXONOMÍA
 --------------------------------------------------
 
-La taxonomía se gobierna manualmente por el project owner.
+La taxonomía se gobierna manualmente por el propietario del proyecto.
 
 El sistema puede:
 

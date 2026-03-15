@@ -75,7 +75,7 @@ Las herramientas de automatización solo pueden:
 • analizar
 • sugerir mejoras
 
-Solo el project owner modifica la taxonomía maestra.
+Solo el propietario del proyecto modifica la taxonomía maestra.
 
 --------------------------------------------------
 4. ACTIVIDAD 2 — IDENTIFICACIÓN DE GÉNERO EN CANCIONES

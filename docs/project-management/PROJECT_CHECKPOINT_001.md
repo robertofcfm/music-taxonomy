@@ -1,194 +1,194 @@
-# Project Checkpoint 001
-Architecture Completion Snapshot
+# Checkpoint del Proyecto 001
+Instantánea de cierre de arquitectura
 
-This document captures the first stable reconstruction of the project
-after extracting knowledge from the development conversation.
+Este documento captura la primera reconstrucción estable del proyecto
+tras consolidar conocimiento de la conversación de desarrollo.
 
 Propósito:
-Preserve the architecture, reglas, and project structure so the project
-can be resumed later without losing context.
+Preservar arquitectura, reglas y estructura del proyecto para que pueda
+retomarse más adelante sin pérdida de contexto.
 
 ---
 
-# Project Objective
+# Objetivo del Proyecto
 
-The project builds a **music genre taxonomía system** capable of:
+El proyecto construye un **sistema de taxonomía de géneros musicales** capaz de:
 
-1. Defining a structured genre taxonomía.
-2. Classifying songs into genres using that taxonomía.
-3. Generating a dynamic genre tree based on real catalog content.
+1. Definir una taxonomía estructurada de géneros.
+2. Clasificar canciones en géneros usando esa taxonomía.
+3. Generar un árbol dinámico de géneros según el catálogo real.
 
-El sistema is divided into three phases.
-
----
-
-# Phase 1 — Taxonomy Design
-
-Estado: COMPLETED
-
-Goal:
-Design the genre taxonomía and all structural reglas before any automation.
-
-Outputs:
-
-taxonomy/genre_tree_master.md  
-Editable taxonomía template.
-
-taxonomy/genre_tree_operational.csv  
-Operational representation used by scripts.
-
-taxonomy/taxonomy_version.md  
-Version control for taxonomía compatibility.
-
-data/genre_alias.csv  
-Alias mapping for genre normalization.
-
-docs/governance/TAXONOMY_RULES.md  
-Taxonomy reglas.
-
-docs/governance/TAXONOMY_NAMING_CONVENTION.md  
-Genre naming reglas.
-
-docs/governance/TAXONOMY_CHANGE_POLICY.md  
-Rules governing taxonomía evolution.
-
-docs/governance/TAXONOMY_DEPTH_POLICY.md  
-Rules for branch depth.
-
-docs/governance/TAXONOMY_QUALITY_CHECKLIST.md  
-Validation criteria for taxonomía.
-
-docs/operations/PHASE1_FINAL_CHECKLIST.md  
-Checklist confirming Phase 1 completion.
+El sistema se divide en tres fases.
 
 ---
 
-# Phase 2 — Song Genre Classification
+# Fase 1 — Diseño de Taxonomía
 
-Estado: DESIGN COMPLETE / IMPLEMENTATION PENDIENTE
+Estado: COMPLETADA
 
-Goal:
-Assign genres to songs using the taxonomía.
+Objetivo:
+Diseñar la taxonomía de géneros y todas las reglas estructurales antes de automatizar.
 
-Input:
+Salidas:
+
+taxonomy/genre_tree_master.md
+Plantilla editable de taxonomía.
+
+taxonomy/genre_tree_operational.csv
+Representación operativa usada por scripts.
+
+taxonomy/taxonomy_version.md
+Control de versión para compatibilidad taxonómica.
+
+data/genre_alias.csv
+Mapa de alias para normalización de géneros.
+
+docs/governance/TAXONOMY_RULES.md
+Reglas de taxonomía.
+
+docs/governance/TAXONOMY_NAMING_CONVENTION.md
+Reglas de nombrado de géneros.
+
+docs/governance/TAXONOMY_CHANGE_POLICY.md
+Reglas que gobiernan evolución taxonómica.
+
+docs/governance/TAXONOMY_DEPTH_POLICY.md
+Reglas para profundidad de ramas.
+
+docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+Criterios de validación de calidad taxonómica.
+
+docs/operations/PHASE1_FINAL_CHECKLIST.md
+Checklist de cierre de Fase 1.
+
+---
+
+# Fase 2 — Clasificación de Género en Canciones
+
+Estado: DISEÑO COMPLETO / IMPLEMENTACIÓN PENDIENTE
+
+Objetivo:
+Asignar géneros a canciones usando la taxonomía.
+
+Entrada:
 
 catalog/songs_raw.csv
 
-Output:
+Salida:
 
 catalog/songs_with_genres.csv
 
-Rules:
+Reglas:
 
-• Genres debe be real musical genres.
-• Songs can belong to multiple genres.
-• Minor influences are ignored.
-• Genres debe match taxonomía leaves.
+• Los géneros deben ser géneros musicales reales.
+• Las canciones pueden pertenecer a múltiples géneros.
+• Las influencias menores se ignoran.
+• Los géneros deben corresponder a hojas de la taxonomía.
 
-If no suitable genre exists:
+Si no existe un género adecuado:
 
-A error fatal is raised and the taxonomía debe be expanded.
-
----
-
-# Phase 3 — Dynamic Genre Tree Generation
-
-Estado: DESIGN COMPLETE / IMPLEMENTATION PENDIENTE
-
-Goal:
-Generate a genre tree based on catalog data.
-
-Rule:
-
-A node becomes expandable when it contains more than:
-
-45 songs
-
-At that point:
-
-• The node becomes a parent
-• Songs are redistributed into subgenres
-
-This process builds the final listening tree.
+Se genera error fatal y la taxonomía debe expandirse manualmente.
 
 ---
 
-# Node Types
+# Fase 3 — Generación Dinámica de Árbol de Géneros
 
-NORMAL  
-Standard taxonomía node.
+Estado: DISEÑO COMPLETO / IMPLEMENTACIÓN PENDIENTE
 
-CLONE  
-Portal node pointing to another canonical node.
+Objetivo:
+Generar un árbol de géneros basado en datos del catálogo.
 
-GENERAL  
-Fallback node for songs that belong to a parent genre but not to any defined subgenre.
+Regla:
 
-ATOMIC  
-Terminal node that should not be expanded further.
+Un nodo se vuelve expandible cuando contiene más de:
 
----
+45 canciones
 
-# Latin Genre Strategy
+En ese punto:
 
-Latin music is handled as a separate branch.
+• El nodo se convierte en padre
+• Las canciones se redistribuyen entre subgéneros
 
-If a song is Latin:
-
-Its genres debe be selected from the Latin subtree.
-
-This prevents mixing Latin and non-Latin genre contexts.
+Este proceso construye el árbol de escucha final.
 
 ---
 
-# Versioning Strategy
+# Tipos de Nodo
 
-Each clasificación result stores:
+NORMAL
+Nodo taxonómico estándar.
+
+CLONE
+Nodo portal que apunta a otro nodo canónico.
+
+GENERAL
+Nodo fallback para canciones que pertenecen al género padre
+pero no encajan en subgéneros definidos.
+
+ATOMIC
+Nodo terminal que no debe expandirse más.
+
+---
+
+# Estrategia de Géneros Latin
+
+La música Latin se maneja como rama separada.
+
+Si una canción es Latin:
+
+Sus géneros deben seleccionarse del subárbol Latin.
+
+Esto evita mezclar contextos Latin y no-Latin.
+
+---
+
+# Estrategia de Versionado
+
+Cada resultado de clasificación almacena:
 
 taxonomy_version
 
-If the taxonomía structure changes:
+Si cambia la estructura de la taxonomía:
 
-Previous clasificacións puede become incompatible.
+Clasificaciones previas pueden volverse incompatibles.
 
 ---
 
-# Key Project Principle
+# Principio Clave del Proyecto
 
-The taxonomía template is **never modified automatically**.
+La plantilla taxonómica **nunca se modifica automáticamente**.
 
-Only the project owner edits:
+Solo el propietario del proyecto edita:
 
 taxonomy/genre_tree_master.md
 
-Automation tools puede only:
+Las herramientas de automatización solo pueden:
 
-• analyze
-• validate
-• suggest changes
+• analizar
+• validar
+• sugerir cambios
 
 ---
 
-# Current Repository Structure
+# Estructura Actual del Repositorio
 
 music-taxonomy/
 
-data/  
-taxonomy/  
-catalog/  
-scripts/  
-reports/  
+data/
+taxonomy/
+catalog/
+scripts/
+reports/
 docs/
 
 ---
 
-# Checkpoint Purpose
+# Propósito del Checkpoint
 
-This checkpoint ensures that:
+Este checkpoint garantiza que:
 
-• El sistema architecture is preserved  
-• The taxonomía reglas are documented  
-• The project can be resumed months later  
+• la arquitectura del sistema se preserva
+• las reglas de taxonomía están documentadas
+• el proyecto puede retomarse meses después
 
-without losing context.
-
+sin perder contexto.

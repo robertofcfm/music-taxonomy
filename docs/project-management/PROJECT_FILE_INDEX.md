@@ -1,28 +1,27 @@
-# PROJECT FILE INDEX
-Music Genre Taxonomy System
+# ÍNDICE DE ARCHIVOS DEL PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 1. PROPÓSITO
 --------------------------------------------------
 
-Este documento define the role of every file in the
-Music Genre Taxonomy System repository.
+Este documento define el rol de cada archivo dentro del repositorio.
 
-Its purpose is to:
+Su propósito es:
 
-• explain the repository structure  
-• define where documentation belongs  
-• prevent documentation drift  
-• guide reconstruction and maintenance processes  
+• explicar la estructura del repositorio
+• definir dónde vive cada tipo de documentación
+• prevenir deriva documental
+• guiar reconstrucción y mantenimiento
 
-All project documentation debe follow the structure
-defined in this index.
+Toda la documentación del proyecto debe seguir la estructura
+establecida en este índice.
 
 --------------------------------------------------
-2. REPOSITORY STRUCTURE
+2. ESTRUCTURA DEL REPOSITORIO
 --------------------------------------------------
 
-The repository is organized into several logical areas.
+El repositorio está organizado en áreas lógicas:
 
 catalog/
 data/
@@ -31,94 +30,94 @@ scripts/
 reports/
 docs/
 
-Each directory contains a specific type of data
-or documentation.
+Cada directorio contiene un tipo específico de datos
+o documentación.
 
 --------------------------------------------------
-3. CATALOG FILES
+3. ARCHIVOS DE CATÁLOGO
 --------------------------------------------------
 
 catalog/songs_raw.csv
 
-Input catalog containing songs to classify.
+Catálogo de entrada con canciones a clasificar.
 
-Typical fields include:
+Campos típicos:
 
-title  
+title
 artist
 
 --------------------------------------------------
 
 catalog/songs_with_genres.csv
 
-Output file produced by the clasificación system.
+Archivo de salida generado por el sistema de clasificación.
 
-Stores the genres assigned to each song.
+Almacena géneros asignados a cada canción.
 
 --------------------------------------------------
-4. DATA FILES
+4. ARCHIVOS DE DATOS
 --------------------------------------------------
 
 data/genre_alias.csv
 
-Alias mapping used to normalize genre names.
+Mapa de alias para normalizar nombres de género.
 
-Allows the classifier to match alternate genre labels
-to canonical taxonomía genres.
+Permite que el clasificador resuelva etiquetas alternas
+hacia géneros canónicos.
 
 --------------------------------------------------
-5. TAXONOMY FILES
+5. ARCHIVOS DE TAXONOMÍA
 --------------------------------------------------
 
 taxonomy/genre_tree_master.md
 
-Human-editable taxonomía template.
+Plantilla de taxonomía editable por humanos.
 
-Defines the genre hierarchy using indentation.
+Define la jerarquía de géneros con indentación.
 
-Only the project owner modifies this file.
+Solo el propietario del proyecto modifica este archivo.
 
 --------------------------------------------------
 
 taxonomy/genre_tree_operational.csv
 
-Machine-readable representation of the taxonomía.
+Representación machine-readable de la taxonomía.
 
-Generated from the master taxonomía and used
-by scripts and clasificación tools.
+Se genera desde la taxonomía maestra y la usan scripts
+y herramientas de clasificación.
 
 --------------------------------------------------
 
 taxonomy/taxonomy_version.md
 
-Stores the current taxonomía version.
+Almacena la versión vigente de la taxonomía.
 
-Used to verify compatibility between:
+Se usa para verificar compatibilidad entre:
 
-• taxonomía structure  
-• clasificación results  
-• generated genre trees  
+• estructura taxonómica
+• resultados de clasificación
+• árboles de género generados
 
 --------------------------------------------------
-6. SCRIPT FILES
+6. ARCHIVOS DE SCRIPTS
 --------------------------------------------------
 
 scripts/build_tree.py
 
-Generates the dynamic listening tree
-based on classified song data.
+Genera el árbol dinámico de escucha a partir
+de canciones clasificadas.
 
 --------------------------------------------------
 
 scripts/classify_songs.py
 
-Performs song genre clasificación.
+Realiza clasificación de género en canciones.
 
-Reads:
+Lee:
 
 catalog/songs_raw.csv
 
-Writes:
+Escribe:
 
 catalog/songs_with_genres.csv
 
@@ -126,224 +125,220 @@ catalog/songs_with_genres.csv
 
 scripts/validate_tree.py
 
-Validates taxonomía structure and checks
-for structural issues.
+Valida la estructura taxonómica y detecta
+issues estructurales.
 
 --------------------------------------------------
-7. REPORT FILES
+7. ARCHIVOS DE REPORTES
 --------------------------------------------------
 
-reports/taxonomía_improvement_report.csv
+reports/taxonomy_improvement_report.csv
 
-Contains suggestions for improving the taxonomía.
-
---------------------------------------------------
-
-reports/taxonomía_issues.csv
-
-Stores detected taxonomía problems such as:
-
-• ambiguous nodes  
-• missing genres  
-• clasificación conflicts  
+Contiene sugerencias para mejorar la taxonomía.
 
 --------------------------------------------------
-8. DOCUMENTATION STRUCTURE
+
+reports/taxonomy_issues.csv
+
+Almacena problemas detectados de taxonomía, como:
+
+• nodos ambiguos
+• géneros faltantes
+• conflictos de clasificación
+
+--------------------------------------------------
+8. ESTRUCTURA DE DOCUMENTACIÓN
 --------------------------------------------------
 
-All documentation is organized under the docs directory.
+Toda la documentación se organiza bajo docs/.
 
 docs/
 
-gobernanza/  
-architecture/  
-operations/  
-project-management/  
+governance/
+architecture/
+operations/
+project-management/
 releases/
 
-Documentation is grouped by function.
+La documentación se agrupa por función.
+Cada carpeta cumple un propósito operativo específico.
 
-Each folder serves a specific operational purpose.
+Los documentos de gobernanza y operaciones usan una
+plantilla de encabezado común con:
 
-Governance and operations documents use a common
-header template with:
-
-• Purpose  
-• Scope  
-• Owner  
-• Last Updated  
+• Propósito
+• Alcance
+• Responsable
+• Última actualización
 
 --------------------------------------------------
-9. GLOBAL GOVERNANCE DOCUMENTATION
+9. DOCUMENTACIÓN DE GOBERNANZA GLOBAL
 --------------------------------------------------
 
 docs/governance/GLOBAL_RULES.md
 
-Defines system-wide reglas that apply to multiple
-components of the repository.
+Define reglas transversales que aplican a múltiples
+componentes del repositorio.
 
-This file acts as the canonical location for reglas
-that affect more than one subsystem.
+Este archivo es la ubicación canónica para reglas
+que afectan más de un subsistema.
 
-Examples include reglas that affect:
+Ejemplos de reglas de alcance global:
 
-• taxonomía behavior  
-• clasificación logic  
-• validación procedures  
-• repository constraints  
+• comportamiento taxonómico
+• lógica de clasificación
+• procedimientos de validación
+• restricciones de repositorio
 
 --------------------------------------------------
 
-RULE PLACEMENT PRINCIPLE
+PRINCIPIO DE UBICACIÓN DE REGLAS
 
-If a rule applies to only one file or subsystem,
-it should be placed in that specific file.
+Si una regla aplica a un solo archivo o subsistema,
+debe vivir en ese archivo específico.
 
-If a rule applies to multiple files or subsystems,
-it debe be placed in:
+Si una regla aplica a múltiples archivos o subsistemas,
+debe ubicarse en:
 
 docs/governance/GLOBAL_RULES.md
 
-Other documents puede reference the rule but should
-not duplicate it.
+Otros documentos pueden referenciar la regla,
+pero no deben duplicarla.
 
 --------------------------------------------------
 
-RULE LOADING PRINCIPLE
+PRINCIPIO DE CARGA DE REGLAS
 
-Whenever repository reglas are evaluated
-(for example during reconstruction or validación),
-the following files debe always be loaded:
+Cuando se evalúen reglas del repositorio
+(por ejemplo durante reconstrucción o validación),
+siempre deben cargarse:
 
-1. docs/governance/GLOBAL_RULES.md  
-2. docs/governance/SYSTEM_CONTRACT.md  
+1. docs/governance/GLOBAL_RULES.md
+2. docs/governance/SYSTEM_CONTRACT.md
 
-GLOBAL_RULES.md contains canonical reglas.
+GLOBAL_RULES.md contiene reglas canónicas.
 
-SYSTEM_CONTRACT.md contains mandatory system reglas.
-
---------------------------------------------------
-
-GLOBAL PRECEDENCE PRINCIPLE
-
-docs/governance/GLOBAL_RULES.md is the canonical
-cross-system rule source.
-
-If a conflict exists between a local document
-and GLOBAL_RULES.md for a cross-subsystem rule,
-GLOBAL_RULES.md takes precedence.
-
-Local files puede specialize implementation details
-but no debe contradict global reglas.
+SYSTEM_CONTRACT.md contiene reglas obligatorias del sistema.
 
 --------------------------------------------------
-10. ARCHITECTURE DOCUMENTATION
+
+PRINCIPIO DE PRECEDENCIA GLOBAL
+
+docs/governance/GLOBAL_RULES.md es la fuente canónica
+para reglas transversales.
+
+Si existe conflicto entre un documento local y GLOBAL_RULES.md
+sobre una regla transversal, GLOBAL_RULES.md tiene precedencia.
+
+Los archivos locales pueden especializar implementación,
+pero no deben contradecir reglas globales.
+
+--------------------------------------------------
+10. DOCUMENTACIÓN DE ARQUITECTURA
 --------------------------------------------------
 
 docs/architecture/SYSTEM_OVERVIEW.md
 
-High-level description of the system architecture.
+Descripción de alto nivel de la arquitectura del sistema.
 
 --------------------------------------------------
 
 docs/architecture/PROJECT_CONTEXT.md
 
-Describes conceptual goals and system context.
+Describe objetivos conceptuales y contexto del sistema.
 
 --------------------------------------------------
 
 docs/architecture/PROJECT_OPERATING_MODEL.md
 
-Explains the operational separation of activities.
+Explica la separación operativa de actividades.
 
 --------------------------------------------------
-11. GOBERNANZA DE TAXONOMÍA DOCUMENTATION
+11. DOCUMENTACIÓN DE GOBERNANZA DE TAXONOMÍA
 --------------------------------------------------
 
 docs/governance/SYSTEM_CONTRACT.md
 
-Defines mandatory reglas governing system behavior.
+Define reglas obligatorias de comportamiento del sistema.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_RULES.md
 
-Defines the structure and behavior of the taxonomía.
+Define estructura y comportamiento de la taxonomía.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_CHANGE_POLICY.md
 
-Defines the reglas for modifying the taxonomía.
+Define reglas para modificar la taxonomía.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_DEPTH_POLICY.md
 
-Defines reglas governing taxonomía expansion.
+Define reglas de profundidad y expansión taxonómica.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_NAMING_CONVENTION.md
 
-Defines naming conventions for genres.
+Define convenciones de nombrado para géneros.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 
-Checklist used to validate taxonomía quality.
+Checklist para validar calidad taxonómica.
 
 --------------------------------------------------
-12. OPERATIONS DOCUMENTATION
+12. DOCUMENTACIÓN DE OPERACIONES
 --------------------------------------------------
 
 docs/operations/PROJECT_BOOTSTRAP.md
 
-Defines how a new session should initialize
-the project context.
+Define cómo inicializar una sesión nueva
+con el contexto correcto del proyecto.
 
 --------------------------------------------------
 
 docs/operations/PHASE1_FINAL_CHECKLIST.md
 
-Checklist confirming Phase 1 completion.
+Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
-13. PROJECT MANAGEMENT DOCUMENTATION
+13. DOCUMENTACIÓN DE GESTIÓN DEL PROYECTO
 --------------------------------------------------
 
 docs/project-management/PROJECT_STATE.md
 
-Stores the current operational state of the project.
+Almacena el estado operativo actual del proyecto.
 
 --------------------------------------------------
 
 docs/project-management/PROJECT_MEMORY.md
 
-Stores design decisions and historical context.
+Almacena decisiones de diseño y contexto histórico.
 
 --------------------------------------------------
 
 docs/project-management/PROJECT_FILE_INDEX.md
 
-Defines the documentation structure of the repository.
+Define la estructura documental del repositorio.
 
 --------------------------------------------------
 
 docs/project-management/PROJECT_CHECKPOINT_001.md
 
-Snapshot of the reconstructed project architecture.
+Instantánea de la arquitectura reconstruida del proyecto.
 
 --------------------------------------------------
-14. RELEASE DOCUMENTATION
+14. DOCUMENTACIÓN DE RELEASES
 --------------------------------------------------
 
 docs/releases/RELEASE_NOTES_v1.0.md
 
-Release notes describing the first stable
-version of the repository.
+Notas de release de la primera versión estable del repositorio.
 
 --------------------------------------------------
 FIN DEL DOCUMENTO
-
