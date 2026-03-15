@@ -8,21 +8,13 @@ RULE 019
 Minor stylistic influence must not trigger genre assignment.
 
 ---
-RULE 022
 
-The project has three phases: taxonomy design, song classification, and tree generation.
-
----
-RULE 067
-
-The generated tree may activate nodes when songs appear.
-
----
 RULE 079
 
 The repository must be reconstructable without conversation history.
 
 ---
+
 RULE 080
 
 Documentation must preserve design decisions.
