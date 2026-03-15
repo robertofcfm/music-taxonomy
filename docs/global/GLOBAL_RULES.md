@@ -158,4 +158,12 @@ G020 — REPOSITORY/DOCUMENTATION CONSISTENCY
 Repository content must remain consistent with documentation and design principles.
 
 --------------------------------------------------
+
+---
+RULE 019
+
+Minor stylistic influence must not trigger genre assignment.
+
+---
+
 END OF FILE
