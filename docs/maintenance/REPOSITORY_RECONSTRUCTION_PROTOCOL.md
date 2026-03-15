@@ -16,6 +16,7 @@ into their correct repository locations.
 The reconstruction process ensures that:
 
 • repository documentation remains consistent
+• documentation preserves design decisions
 • rules are placed in their correct files
 • duplicated or misplaced rules are removed
 • extracted rules are progressively integrated
@@ -334,6 +335,9 @@ move it to the end of the queue.
 If the file did not change:
 
 mark it as verified.
+
+Verified files are complete and must not be
+processed again in the same reconstruction cycle.
 
 --------------------------------------------------
 STEP 9 — PROGRESS REPORT
