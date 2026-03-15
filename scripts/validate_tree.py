@@ -1,17 +1,17 @@
-# VALIDATE TREE — Layer 1 Implementation
-# Music Genre Taxonomy System
+# VALIDATE TREE — Implementación Capa 1
+# Sistema de Taxonomía de Géneros Musicales
 #
-# Status: PENDING IMPLEMENTATION
+# Estado: IMPLEMENTACIÓN PENDIENTE
 #
-# This script implements Layer 1 (Deterministic Structural Validation)
-# of the Master Taxonomy Validation process.
+# Este script implementa la Capa 1 (Validación Estructural Determinista)
+# del proceso de validación de la taxonomía maestra.
 #
-# Strategy document:
+# Documento de estrategia:
 #   docs/operations/VALIDATE_MASTER_STRATEGY.md
 #
-# Target file:
+# Archivo objetivo:
 #   taxonomy/genre_tree_master.md
 #
-# Implementation must not begin until the governance applicability
-# matrix is formally defined in the strategy document.
-# See: VALIDATE_MASTER_STRATEGY.md — GOVERNANCE DOCUMENTS APPLICABILITY
+# La implementación no debe iniciar hasta que la matriz de aplicabilidad
+# de gobernanza esté formalmente definida en el documento de estrategia.
+# Ver: VALIDATE_MASTER_STRATEGY.md — APLICABILIDAD DE DOCUMENTOS DE GOBERNANZA

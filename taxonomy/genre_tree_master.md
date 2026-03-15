@@ -1,6 +1,6 @@
-# GENRE TREE MASTER
-Editable taxonomy template.
-Indentation defines hierarchy.
+# ÁRBOL MAESTRO DE GÉNEROS
+Plantilla editable de taxonomía.
+La indentación define la jerarquía.
 
 Music
   Rock

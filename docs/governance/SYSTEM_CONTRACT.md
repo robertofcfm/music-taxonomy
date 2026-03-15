@@ -1,300 +1,299 @@
-# SYSTEM CONTRACT
-Music Genre Taxonomy System
+# CONTRATO DEL SISTEMA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Mandatory system rules, validation constraints,
-and execution requirements.
+Reglas obligatorias del sistema, restricciones de validación
+y requisitos de ejecución.
 
-Owner:
+Propietario:
 
 Project Owner
 
-Last Updated:
+Última Actualización:
 
 2026-03-15
 
 --------------------------------------------------
-PURPOSE
+PROPÓSITO
 --------------------------------------------------
 
-This document defines the mandatory rules governing the system.
+Este documento define las reglas obligatorias que gobiernan el sistema.
 
-These rules cannot be violated by any component of the project.
-
---------------------------------------------------
-1. TAXONOMY GOVERNANCE
---------------------------------------------------
-
-The taxonomy is controlled manually by the user.
-
-The system must never:
-
-- add genres
-- move genres
-- merge genres
-- rename genres
-
-The system may only:
-
-- suggest improvements
-- report inconsistencies
-
-All structural modifications must be approved by the user.
+Estas reglas no pueden ser violadas por ningún componente del proyecto.
 
 --------------------------------------------------
-2. TAXONOMY STRUCTURE
+1. GOBERNANZA DE TAXONOMÍA
 --------------------------------------------------
 
-The taxonomy must follow these rules:
+La taxonomía es controlada manualmente por el usuario.
 
-- Single root node
-- Hierarchy defined by indentation
-- Only leaf nodes may receive song assignments
+El sistema nunca debe:
 
-Genres must represent real musical styles.
+- agregar géneros
+- mover géneros
+- fusionar géneros
+- renombrar géneros
 
-Genres must never be vague categories such as:
+El sistema solo puede:
+
+- sugerir mejoras
+- reportar inconsistencias
+
+Todas las modificaciones estructurales deben ser aprobadas por el usuario.
+
+--------------------------------------------------
+2. ESTRUCTURA DE TAXONOMÍA
+--------------------------------------------------
+
+La taxonomía debe seguir estas reglas:
+
+- Nodo raíz único
+- Jerarquía definida por indentación
+- Solo nodos hoja pueden recibir asignaciones de canciones
+
+Los géneros deben representar estilos musicales reales.
+
+Los géneros nunca deben ser categorías vagas como:
 
 - "Latin rhythms"
 - "Latin music"
 - "World music"
 - "Misc"
 
-Leaf nodes must represent specific musical genres.
+Los nodos hoja deben representar géneros musicales específicos.
 
 --------------------------------------------------
-3. NODE TYPES
+3. TIPOS DE NODO
 --------------------------------------------------
 
-The system supports four node types.
+El sistema soporta cuatro tipos de nodo.
 
-NORMAL NODE
+NODO NORMAL
 
-Standard taxonomy node.
+Nodo taxonómico estándar.
 
-CLONE NODE
+NODO CLONE
 
-A portal node referencing a canonical node.
+Nodo portal que referencia un nodo canónico.
 
-Clone nodes:
+Los nodos Clone:
 
-- have no children
-- contain no songs
-- act only as navigation portals
+- no tienen hijos
+- no contienen canciones
+- actúan solo como portales de navegación
 
-GENERAL NODE
+NODO GENERAL
 
-Fallback node used when songs fit the parent genre
-but not any existing subgenre.
+Nodo de respaldo usado cuando las canciones encajan en el género
+padre pero no en ningún subgénero existente.
 
-Example:
+Ejemplo:
 
 Hard Rock
   Glam Metal
   Arena Rock
   Hard Rock (General)
 
-Rules for General nodes:
+Reglas para nodos General:
 
-- they must be explicitly defined in the taxonomy
-- the classifier must try other genres before using them
-- they must not be abused as a default category
+- deben estar definidos explícitamente en la taxonomía
+- el clasificador debe intentar otros géneros antes de usarlos
+- no deben abusarse como categoría por defecto
 
-ATOMIC NODE
+NODO ATOMIC
 
-A genre that must not be subdivided further.
+Género que no debe subdividirse más.
 
-Atomic nodes represent genres where further subdivision
-would create artificial or meaningless categories.
-
---------------------------------------------------
-4. LATIN BRANCH RULE
---------------------------------------------------
-
-Latin music exists inside a dedicated Latin branch.
-
-If a song is Latin:
-
-Genres must be selected only within the Latin branch.
-
-If a song is not Latin:
-
-Genres must not be selected within the Latin branch.
-
-This rule prevents mixing Latin and non-Latin styles
-that share the same genre name but produce different
-playlist cohesion.
+Los nodos Atomic representan géneros donde más subdivisión
+crearía categorías artificiales o sin significado.
 
 --------------------------------------------------
-5. GENRE ASSIGNMENT RULE
+4. REGLA DE LA RAMA LATIN
 --------------------------------------------------
 
-A genre may be assigned only when its defining musical
-characteristics are clearly present in the song.
+La música latina existe dentro de una rama Latin dedicada.
 
-Minor stylistic influence must not count.
+Si una canción es Latin:
 
-Example:
+Los géneros deben seleccionarse solo dentro de la rama Latin.
 
-A song with a short rap section must not be classified as rap.
+Si una canción no es Latin:
 
-Songs may have multiple genres if the defining characteristics
-of each genre are clearly present.
+Los géneros no deben seleccionarse dentro de la rama Latin.
 
-There is no hierarchy or priority between genres.
-
-If a song clearly belongs to multiple genres,
-all of them must be assigned.
+Esta regla evita mezclar estilos Latin y no-Latin que comparten
+nombre de género pero producen distinta coherencia de playlists.
 
 --------------------------------------------------
-6. GENRE VALIDITY RULE
+5. REGLA DE ASIGNACIÓN DE GÉNERO
 --------------------------------------------------
 
-Genres must represent real musical styles.
+Un género puede asignarse solo cuando sus características
+musicales definitorias están claramente presentes en la canción.
 
-The classifier must avoid vague labels such as:
+La influencia estilística menor no cuenta.
+
+Ejemplo:
+
+Una canción con una sección corta de rap no debe clasificarse como rap.
+
+Las canciones pueden tener múltiples géneros si las características
+definitorias de cada uno están claramente presentes.
+
+No hay jerarquía ni prioridad entre géneros.
+
+Si una canción pertenece claramente a múltiples géneros,
+todos deben asignarse.
+
+--------------------------------------------------
+6. REGLA DE VALIDEZ DE GÉNERO
+--------------------------------------------------
+
+Los géneros deben representar estilos musicales reales.
+
+El clasificador debe evitar etiquetas vagas como:
 
 - latin rhythms
 - latin style
 - latin music
 - fusion style
 
-Leaf nodes must correspond to clearly recognized genres.
+Los nodos hoja deben corresponder a géneros claramente reconocidos.
 
 --------------------------------------------------
-7. CLASSIFICATION PIPELINE
+7. PIPELINE DE CLASIFICACIÓN
 --------------------------------------------------
 
-The classifier must load the taxonomy before classifying songs.
+El clasificador debe cargar la taxonomía antes de clasificar canciones.
 
-Two execution modes exist.
+Existen dos modos de ejecución.
 
-TEST MODE
+MODO TEST
 
-Batch size: 5 songs.
+Tamaño de lote: 5 canciones.
 
-Purpose:
+Propósito:
 
-- debugging
-- classifier validation
-- rule verification
+- depuración
+- validación del clasificador
+- verificación de reglas
 
-Logs must be highly detailed.
+Los logs deben ser altamente detallados.
 
-PRODUCTION MODE
+MODO PRODUCCIÓN
 
-Batch size: 100 songs.
+Tamaño de lote: 100 canciones.
 
-Logs must confirm:
+Los logs deben confirmar:
 
-- taxonomy was loaded
-- system rules were loaded
-- classifier version
+- que la taxonomía fue cargada
+- que las reglas del sistema fueron cargadas
+- versión del clasificador
 
-Batch processing is mandatory.
+El procesamiento por lotes es obligatorio.
 
-Batch continuity rules:
+Reglas de continuidad de lotes:
 
-- batch classification must support partial results
-- successful classifications must be appended to output
-- unclassified songs must remain queued
-- batch execution must stop when the error threshold is exceeded
-
---------------------------------------------------
-8. NODE MISSING RULE
---------------------------------------------------
-
-If a song requires a genre that does not exist
-in the taxonomy, the system must stop classification.
-
-The system must generate a report suggesting
-a new genre node.
-
-Batch rule:
-
-A batch may generate a maximum of 5 missing-node reports.
-
-If more than 5 appear, the execution must stop.
+- la clasificación por lotes debe soportar resultados parciales
+- las clasificaciones exitosas deben agregarse a la salida
+- las canciones no clasificadas deben permanecer en cola
+- la ejecución del lote debe detenerse al exceder el umbral de error
 
 --------------------------------------------------
-9. ERROR HANDLING
+8. REGLA DE NODO FALTANTE
 --------------------------------------------------
 
-Fatal errors stop processing immediately.
+Si una canción requiere un género que no existe en la taxonomía,
+el sistema debe detener la clasificación.
 
-Examples:
+El sistema debe generar un reporte sugiriendo
+un nuevo nodo de género.
 
-- genre missing from taxonomy
-- ambiguous classification
-- invalid taxonomy node
-- invalid taxonomy structure
+Regla de lote:
 
-Error reports must contain:
+Un lote puede generar un máximo de 5 reportes de nodo faltante.
 
-- song title
-- artist
-- description of the problem
-- suggested solution
-
-Error diagnostics must be detailed enough to support
-root-cause analysis and corrective action.
+Si aparecen más de 5, la ejecución debe detenerse.
 
 --------------------------------------------------
-10. TAXONOMY VALIDATION
+9. MANEJO DE ERRORES
 --------------------------------------------------
 
-Before every release the taxonomy must be validated.
+Los errores fatales detienen el procesamiento inmediatamente.
 
-Validation must detect:
+Ejemplos:
 
-- sibling genre similarity
-- playlist cohesion violations
-- redundant nodes
-- atomic node candidates
-- possible merges
+- género faltante en la taxonomía
+- clasificación ambigua
+- nodo taxonómico inválido
+- estructura taxonómica inválida
 
-A release cannot proceed until validation issues
-are resolved.
+Los reportes de error deben contener:
+
+- título de la canción
+- artista
+- descripción del problema
+- solución sugerida
+
+El diagnóstico de errores debe ser suficientemente detallado
+para soportar análisis de causa raíz y acción correctiva.
 
 --------------------------------------------------
-11. VERSION CONTROL
+10. VALIDACIÓN DE TAXONOMÍA
 --------------------------------------------------
 
-Taxonomy versions must be tracked.
+Antes de cada release la taxonomía debe validarse.
 
-Example:
+La validación debe detectar:
+
+- similitud entre géneros hermanos
+- violaciones de cohesión de playlists
+- nodos redundantes
+- candidatos a nodos atomic
+- posibles fusiones
+
+Un release no puede avanzar hasta que los problemas
+de validación estén resueltos.
+
+--------------------------------------------------
+11. CONTROL DE VERSIONES
+--------------------------------------------------
+
+Las versiones de taxonomía deben rastrearse.
+
+Ejemplo:
 
 taxonomy_version = 1.0
 
-Classification outputs must include:
+Las salidas de clasificación deben incluir:
 
 - taxonomy_version
 - classifier_version
 - rules_version
 
-This allows resuming classification or detecting
-incompatibilities.
+Esto permite reanudar clasificación o detectar
+incompatibilidades.
 
 --------------------------------------------------
-12. COMPATIBILITY RULE
+12. REGLA DE COMPATIBILIDAD
 --------------------------------------------------
 
-If the taxonomy changes in a way that breaks compatibility,
-previous classification outputs become obsolete.
+Si la taxonomía cambia de forma que rompe compatibilidad,
+las salidas de clasificación previas quedan obsoletas.
 
-In that case:
+En ese caso:
 
-All songs must be reclassified.
+Todas las canciones deben reclasificarse.
 
-If the taxonomy changes without breaking compatibility:
+Si la taxonomía cambia sin romper compatibilidad:
 
-- only affected songs should be reevaluated
-- unaffected songs must not be reclassified unnecessarily
+- solo las canciones afectadas deberían reevaluarse
+- las no afectadas no deben reclasificarse innecesariamente
 
 --------------------------------------------------
-END SYSTEM CONTRACT
+FIN CONTRATO DEL SISTEMA

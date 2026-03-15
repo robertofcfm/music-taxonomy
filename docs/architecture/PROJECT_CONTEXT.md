@@ -1,99 +1,100 @@
-# PROJECT CONTEXT
-Music Genre Taxonomy System
+# CONTEXTO DEL PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-1. PROJECT PURPOSE
+1. PROPÓSITO DEL PROYECTO
 --------------------------------------------------
 
-This project aims to build a structured music genre
-taxonomy together with a classification system capable
-of assigning accurate genres to songs.
+Este proyecto busca construir una taxonomía estructurada
+de géneros musicales junto con un sistema de clasificación
+capaz de asignar géneros precisos a las canciones.
 
-The taxonomy is designed not only for classification
-but also to generate coherent playlists based on
-genre hierarchy.
+La taxonomía está diseñada no solo para clasificación,
+sino también para generar playlists coherentes basadas
+en la jerarquía de géneros.
 
-The final goal is to allow navigation through genres
-in a way that produces musically consistent playlists.
-
---------------------------------------------------
-2. CORE OBJECTIVE
---------------------------------------------------
-
-The system aims to:
-
-• classify songs into meaningful musical genres  
-• maintain a coherent genre taxonomy  
-• generate genre-based playlists  
-• evolve the taxonomy as the catalog grows  
-
-The taxonomy acts as the musical knowledge base
-of the system.
+El objetivo final es permitir navegar por géneros de una
+manera que produzca playlists musicalmente consistentes.
 
 --------------------------------------------------
-3. SYSTEM ARCHITECTURE
+2. OBJETIVO CENTRAL
 --------------------------------------------------
 
-The system is composed of three major subsystems.
+El sistema busca:
 
-PHASE 1 — TAXONOMY DESIGN
+• clasificar canciones en géneros musicales significativos  
+• mantener una taxonomía de géneros coherente  
+• generar playlists basadas en géneros  
+• evolucionar la taxonomía conforme crece el catálogo  
 
-Defines the genre hierarchy.
-
-The taxonomy determines the valid genres that may
-be assigned during classification.
-
-PHASE 2 — SONG GENRE IDENTIFICATION
-
-Determines which genres a song belongs to.
-
-This process analyzes the musical characteristics
-of each song and assigns appropriate genres.
-
-PHASE 3 — DATASET-DRIVEN TREE GENERATION
-
-Uses the classified catalog to generate a listening
-tree that organizes songs into navigable genre nodes.
+La taxonomía actúa como la base de conocimiento musical
+del sistema.
 
 --------------------------------------------------
-4. PLAYLIST NAVIGATION CONCEPT
+3. ARQUITECTURA DEL SISTEMA
 --------------------------------------------------
 
-The taxonomy is designed to support navigation
-through musical styles.
+El sistema está compuesto por tres subsistemas principales.
 
-Users should be able to move through the hierarchy
-to find playlists that match a particular mood or
-musical style.
+FASE 1 — DISEÑO DE TAXONOMÍA
 
-Each node of the taxonomy may correspond to a
-playlist containing songs belonging to that genre.
+Define la jerarquía de géneros.
 
---------------------------------------------------
-5. TAXONOMY EVOLUTION
---------------------------------------------------
+La taxonomía determina los géneros válidos que pueden
+asignarse durante la clasificación.
 
-The taxonomy is expected to evolve as the catalog grows.
+FASE 2 — IDENTIFICACIÓN DE GÉNERO DE CANCIONES
 
-New genres may be discovered during classification.
+Determina a qué géneros pertenece una canción.
 
-When this happens the taxonomy may be expanded
-after manual review.
+Este proceso analiza las características musicales de
+cada canción y asigna géneros apropiados.
 
---------------------------------------------------
-6. TAXONOMY GOVERNANCE
---------------------------------------------------
+FASE 3 — GENERACIÓN DE ÁRBOL GUIADA POR DATASET
 
-The taxonomy is governed manually by the project owner.
-
-The system may:
-
-• analyze the taxonomy  
-• validate the taxonomy  
-• suggest improvements  
-
-But structural changes must always be reviewed
-before being applied.
+Usa el catálogo clasificado para generar un árbol de escucha
+que organiza canciones en nodos de género navegables.
 
 --------------------------------------------------
-END PROJECT CONTEXT
+4. CONCEPTO DE NAVEGACIÓN DE PLAYLISTS
+--------------------------------------------------
+
+La taxonomía está diseñada para soportar navegación
+por estilos musicales.
+
+Los usuarios deberían poder moverse por la jerarquía
+para encontrar playlists que coincidan con un estado
+de ánimo o estilo musical específico.
+
+Cada nodo de la taxonomía puede corresponder a una
+playlist con canciones de ese género.
+
+--------------------------------------------------
+5. EVOLUCIÓN DE LA TAXONOMÍA
+--------------------------------------------------
+
+Se espera que la taxonomía evolucione conforme crece
+el catálogo.
+
+Durante la clasificación pueden descubrirse géneros nuevos.
+
+Cuando esto ocurra, la taxonomía podrá expandirse
+tras una revisión manual.
+
+--------------------------------------------------
+6. GOBERNANZA DE TAXONOMÍA
+--------------------------------------------------
+
+La taxonomía se gobierna manualmente por el project owner.
+
+El sistema puede:
+
+• analizar la taxonomía  
+• validar la taxonomía  
+• sugerir mejoras  
+
+Pero los cambios estructurales siempre deben revisarse
+antes de aplicarse.
+
+--------------------------------------------------
+FIN CONTEXTO DEL PROYECTO

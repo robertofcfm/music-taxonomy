@@ -1,186 +1,194 @@
-# GLOBAL RULES
-Music Genre Taxonomy System
+# REGLAS GLOBALES
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Cross-subsystem rules that govern more than one
-repository component.
+Reglas transversales que gobiernan más de un
+componente del repositorio.
 
-Owner:
+Propietario:
 
 Project Owner
 
-Last Updated:
+Última Actualización:
 
 2026-03-15
 
 --------------------------------------------------
-PURPOSE
+PROPÓSITO
 --------------------------------------------------
 
-This document defines rules that apply to
-multiple subsystems of the project.
+Este documento define reglas que aplican a
+múltiples subsistemas del proyecto.
 
-These rules affect system components such as:
+Estas reglas afectan componentes del sistema como:
 
-• taxonomy
-• classifier
-• alias mapping
-• system validation
-• playlist generation
+• taxonomía
+• clasificador
+• mapeo de alias
+• validación del sistema
+• generación de playlists
 
-Rules that apply to more than one component
-must be placed here.
-
---------------------------------------------------
-GLOBAL RULES
---------------------------------------------------
-
-G001 — TAXONOMY AUTHORITY
-
-The taxonomy defines the only valid genres
-for the classification system.
-
-All genres assigned to songs must exist
-in the taxonomy.
+Las reglas que aplican a más de un componente
+deben colocarse aquí.
 
 --------------------------------------------------
+REGLAS GLOBALES
+--------------------------------------------------
 
-G002 — NO GENRE INVENTION
+G001 — AUTORIDAD DE LA TAXONOMÍA
 
-The classifier must never invent genres.
+La taxonomía define los únicos géneros válidos
+para el sistema de clasificación.
 
-All assigned genres must correspond to
-existing taxonomy nodes.
+Todos los géneros asignados a canciones deben existir
+en la taxonomía.
 
 --------------------------------------------------
 
-G003 — MISSING GENRE FAILURE
+G002 — NO INVENTAR GÉNEROS
 
-If a required genre is missing from the
-taxonomy, the system must produce a fatal error.
+El clasificador nunca debe inventar géneros.
 
---------------------------------------------------
-
-G004 — FATAL ERROR POLICY
-
-Fatal errors must stop execution and
-report the cause of the failure.
+Todos los géneros asignados deben corresponder a
+nodos existentes en la taxonomía.
 
 --------------------------------------------------
 
-G005 — MULTI-GENRE CLASSIFICATION
+G003 — FALLO POR GÉNERO FALTANTE
 
-A song may belong to multiple genres
-when musically justified.
-
---------------------------------------------------
-
-G006 — GENRE NORMALIZATION
-
-Genre names must be normalized before
-classification.
+Si falta un género requerido en la taxonomía,
+el sistema debe producir un error fatal.
 
 --------------------------------------------------
 
-G007 — ALIAS RESOLUTION
+G004 — POLÍTICA DE ERROR FATAL
 
-Genre aliases must resolve to canonical
-taxonomy genres.
-
---------------------------------------------------
-
-G008 — TAXONOMY IMMUTABILITY
-
-The system must never modify the taxonomy automatically.
+Los errores fatales deben detener la ejecución y
+reportar la causa del fallo.
 
 --------------------------------------------------
 
-G009 — TAXONOMY EDIT AUTHORITY
+G005 — CLASIFICACIÓN MULTI-GÉNERO
 
-Only the project owner may edit the taxonomy template.
-
---------------------------------------------------
-
-G010 — TAXONOMY VERSION CONSISTENCY
-
-Template and operational taxonomy versions must always match.
-If versions differ, the operational taxonomy must be regenerated.
+Una canción puede pertenecer a múltiples géneros
+cuando esté musicalmente justificado.
 
 --------------------------------------------------
 
-G011 — PLAYLIST CONSISTENCY
+G006 — NORMALIZACIÓN DE GÉNERO
 
-Taxonomy, classification, and playlist structure must remain musically coherent.
-Playlist structure must follow taxonomy hierarchy.
-
---------------------------------------------------
-
-G012 — LATIN DOMAIN SEPARATION
-
-Latin and non-Latin classification domains are independent.
-Latin songs must use Latin-branch genres only.
-Non-Latin songs must not use Latin-branch genres.
+Los nombres de género deben normalizarse antes de
+la clasificación.
 
 --------------------------------------------------
 
-G013 — CANONICAL ASSIGNMENT POLICY
+G007 — RESOLUCIÓN DE ALIAS
 
-Songs must be assigned to canonical taxonomy nodes, not clone nodes.
-
---------------------------------------------------
-
-G014 — PROPOSAL NON-AUTOMATION
-
-The classifier may suggest genres but must not add them automatically.
+Los alias de género deben resolverse a géneros
+canónicos de la taxonomía.
 
 --------------------------------------------------
 
-G015 — STRUCTURE VS ASSIGNMENT SEPARATION
+G008 — INMUTABILIDAD DE LA TAXONOMÍA
 
-Genre assignments must be stored separately from taxonomy structure.
-
---------------------------------------------------
-
-G016 — GENERATED TREE CONSTRAINTS
-
-The generated tree must follow taxonomy structure and must not alter taxonomy data.
+El sistema nunca debe modificar la taxonomía automáticamente.
 
 --------------------------------------------------
 
-G017 — DATASET/TAXONOMY SEPARATION
+G009 — AUTORIDAD DE EDICIÓN DE TAXONOMÍA
 
-Dataset state must not modify taxonomy automatically.
-
---------------------------------------------------
-
-G018 — VERSIONED CLASSIFICATION TRACEABILITY
-
-The system must version taxonomy/rules, and classification results must record the taxonomy version used.
+Solo el project owner puede editar la plantilla taxonómica.
 
 --------------------------------------------------
 
-G019 — RECLASSIFICATION ON CHANGE
+G010 — CONSISTENCIA DE VERSIÓN DE TAXONOMÍA
 
-Taxonomy changes may require reclassification of affected results.
+Las versiones de plantilla y taxonomía operativa siempre deben coincidir.
+Si las versiones difieren, la taxonomía operativa debe regenerarse.
 
 --------------------------------------------------
 
-G020 — REPOSITORY/DOCUMENTATION CONSISTENCY
+G011 — CONSISTENCIA DE PLAYLISTS
 
-Repository content must remain consistent with documentation and design principles.
+La taxonomía, la clasificación y la estructura de playlists deben
+mantener coherencia musical.
+La estructura de playlists debe seguir la jerarquía taxonómica.
+
+--------------------------------------------------
+
+G012 — SEPARACIÓN DEL DOMINIO LATIN
+
+Los dominios de clasificación Latin y no-Latin son independientes.
+Las canciones Latin deben usar solo géneros de la rama Latin.
+Las canciones no-Latin no deben usar géneros de la rama Latin.
+
+--------------------------------------------------
+
+G013 — POLÍTICA DE ASIGNACIÓN CANÓNICA
+
+Las canciones deben asignarse a nodos canónicos de la taxonomía,
+no a nodos clone.
+
+--------------------------------------------------
+
+G014 — NO AUTOMATIZAR PROPUESTAS
+
+El clasificador puede sugerir géneros pero no debe agregarlos automáticamente.
+
+--------------------------------------------------
+
+G015 — SEPARACIÓN ENTRE ESTRUCTURA Y ASIGNACIÓN
+
+Las asignaciones de género deben almacenarse por separado de la
+estructura taxonómica.
+
+--------------------------------------------------
+
+G016 — RESTRICCIONES DEL ÁRBOL GENERADO
+
+El árbol generado debe seguir la estructura taxonómica y no debe
+alterar datos de la taxonomía.
+
+--------------------------------------------------
+
+G017 — SEPARACIÓN DATASET/TAXONOMÍA
+
+El estado del dataset no debe modificar la taxonomía automáticamente.
+
+--------------------------------------------------
+
+G018 — TRAZABILIDAD VERSIONADA DE CLASIFICACIÓN
+
+El sistema debe versionar taxonomía/reglas, y los resultados de
+clasificación deben registrar la versión de taxonomía utilizada.
+
+--------------------------------------------------
+
+G019 — RECLASIFICACIÓN ANTE CAMBIO
+
+Los cambios en la taxonomía pueden requerir reclasificación de
+resultados afectados.
+
+--------------------------------------------------
+
+G020 — CONSISTENCIA REPOSITORIO/DOCUMENTACIÓN
+
+El contenido del repositorio debe mantenerse consistente con la
+documentación y los principios de diseño.
 
 --------------------------------------------------
 
 ---
-RULE 019
+REGLA 019
 
-Minor stylistic influence must not trigger genre assignment.
+La influencia estilística menor no debe activar
+la asignación de género.
 
 ---
 
-END OF FILE
+FIN DEL ARCHIVO

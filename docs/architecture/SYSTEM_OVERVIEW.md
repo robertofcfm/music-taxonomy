@@ -1,112 +1,112 @@
-# SYSTEM OVERVIEW
-Music Genre Taxonomy System
+# VISIÓN GENERAL DEL SISTEMA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document provides a high-level overview of the
-Music Genre Taxonomy System.
+Este documento ofrece una visión de alto nivel del
+Sistema de Taxonomía de Géneros Musicales.
 
-It explains how the main components of the project
-interact and how the taxonomy, classifier, and
-playlist generation pipeline operate together.
-
---------------------------------------------------
-2. SYSTEM GOALS
---------------------------------------------------
-
-The system has three main goals:
-
-• classify songs into meaningful musical genres  
-• maintain a coherent genre taxonomy  
-• generate navigable genre-based playlists  
-
-The taxonomy acts as the central knowledge structure
-for the entire system.
+Explica cómo interactúan los componentes principales
+del proyecto y cómo operan juntos la taxonomía,
+el clasificador y el pipeline de generación de playlists.
 
 --------------------------------------------------
-3. CORE COMPONENTS
+2. OBJETIVOS DEL SISTEMA
 --------------------------------------------------
 
-The project contains three main subsystems.
+El sistema tiene tres objetivos principales:
 
-1. TAXONOMY DESIGN
+• clasificar canciones en géneros musicales significativos  
+• mantener una taxonomía de géneros coherente  
+• generar playlists navegables basadas en géneros  
 
-The taxonomy defines the hierarchical structure of
-musical genres.
+La taxonomía actúa como la estructura central de
+conocimiento de todo el sistema.
 
-It is manually maintained by the user.
+--------------------------------------------------
+3. COMPONENTES CENTRALES
+--------------------------------------------------
 
-Files involved:
+El proyecto contiene tres subsistemas principales.
+
+1. DISEÑO DE TAXONOMÍA
+
+La taxonomía define la estructura jerárquica de
+los géneros musicales.
+
+Es mantenida manualmente por el usuario.
+
+Archivos involucrados:
 
 taxonomy/genre_tree_master.md  
 taxonomy/genre_tree_operational.csv  
 
 --------------------------------------------------
 
-2. SONG CLASSIFICATION
+2. CLASIFICACIÓN DE CANCIONES
 
-The classifier assigns genres to songs using the
-taxonomy.
+El clasificador asigna géneros a canciones usando
+la taxonomía.
 
-Input:
+Entrada:
 
 catalog/songs_raw.csv
 
-Output:
+Salida:
 
 catalog/songs_with_genres.csv
 
-Classification follows strict rules defined in:
+La clasificación sigue reglas estrictas definidas en:
 
 docs/governance/SYSTEM_CONTRACT.md
 
 --------------------------------------------------
 
-3. TREE GENERATION
+3. GENERACIÓN DE ÁRBOL
 
-After songs are classified, a dynamic genre tree
-may be generated based on the dataset.
+Después de clasificar canciones, puede generarse un
+árbol dinámico de géneros basado en el dataset.
 
-This process organizes songs into nodes that can
-be used to generate playlists.
-
---------------------------------------------------
-4. PROJECT PHASES
---------------------------------------------------
-
-The project evolves through three phases.
-
-PHASE 1
-
-Taxonomy design and rule definition.
-
-PHASE 2
-
-Song classification using the taxonomy.
-
-PHASE 3
-
-Generation of the dataset-driven genre tree.
+Este proceso organiza canciones en nodos que pueden
+usarse para generar playlists.
 
 --------------------------------------------------
-5. SYSTEM PRINCIPLES
+4. FASES DEL PROYECTO
 --------------------------------------------------
 
-The system follows several core principles.
+El proyecto evoluciona en tres fases.
 
-• taxonomy-first design  
-• manual taxonomy governance  
-• playlist coherence  
-• strict rule enforcement  
-• dataset-aware taxonomy evolution  
+FASE 1
+
+Diseño de taxonomía y definición de reglas.
+
+FASE 2
+
+Clasificación de canciones usando la taxonomía.
+
+FASE 3
+
+Generación del árbol de géneros guiado por dataset.
 
 --------------------------------------------------
-6. SYSTEM DOCUMENTATION
+5. PRINCIPIOS DEL SISTEMA
 --------------------------------------------------
 
-Key documents that govern the system:
+El sistema sigue varios principios centrales.
+
+• diseño taxonomy-first  
+• gobernanza taxonómica manual  
+• coherencia de playlists  
+• cumplimiento estricto de reglas  
+• evolución taxonómica guiada por dataset  
+
+--------------------------------------------------
+6. DOCUMENTACIÓN DEL SISTEMA
+--------------------------------------------------
+
+Documentos clave que gobiernan el sistema:
 
 docs/governance/SYSTEM_CONTRACT.md  
 docs/governance/TAXONOMY_RULES.md  
@@ -114,8 +114,8 @@ docs/governance/TAXONOMY_CHANGE_POLICY.md
 docs/governance/TAXONOMY_DEPTH_POLICY.md  
 docs/governance/TAXONOMY_NAMING_CONVENTION.md  
 
-These documents define the behavior and structure
-of the system.
+Estos documentos definen el comportamiento y la
+estructura del sistema.
 
 --------------------------------------------------
-END SYSTEM OVERVIEW
+FIN VISIÓN GENERAL DEL SISTEMA

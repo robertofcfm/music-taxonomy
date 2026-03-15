@@ -1,1 +1,1 @@
-# Placeholder script for song classification
+# Script placeholder para clasificación de canciones

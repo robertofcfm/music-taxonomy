@@ -1,200 +1,199 @@
-# PROJECT OPERATING MODEL
-Music Genre Taxonomy System
+# MODELO OPERATIVO DEL PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines the operational model of the
-Music Genre Taxonomy System.
+Este documento define el modelo operativo del
+Sistema de Taxonomía de Géneros Musicales.
 
-The project operates through three distinct activities.
+El proyecto opera mediante tres actividades distintas.
 
-Each activity manipulates a different type of data
-and must follow specific rules.
+Cada actividad manipula un tipo de dato diferente
+y debe seguir reglas específicas.
 
-Understanding this separation is critical for
-maintaining the integrity of the system.
-
---------------------------------------------------
-2. CORE PRINCIPLE
---------------------------------------------------
-
-The system separates three concerns:
-
-1. Taxonomy definition
-2. Song genre identification
-3. Dataset-driven genre tree generation
-
-Each activity interacts with different files and
-must not modify data belonging to another activity.
+Entender esta separación es crítico para mantener
+la integridad del sistema.
 
 --------------------------------------------------
-3. ACTIVITY 1 — TAXONOMY TEMPLATE MANAGEMENT
+2. PRINCIPIO CENTRAL
 --------------------------------------------------
 
-Purpose:
+El sistema separa tres frentes:
 
-Define and maintain the master genre taxonomy.
+1. Definición de taxonomía
+2. Identificación de género en canciones
+3. Generación de árbol de géneros guiada por dataset
 
-The taxonomy acts as the authoritative genre
-definition used by the entire system.
+Cada actividad interactúa con archivos distintos y
+no debe modificar datos que pertenezcan a otra actividad.
 
-Key characteristics:
+--------------------------------------------------
+3. ACTIVIDAD 1 — GESTIÓN DE PLANTILLA TAXONÓMICA
+--------------------------------------------------
 
-• manually maintained
-• defines valid genre leaves
-• defines hierarchical genre relationships
-• contains no song data
+Propósito:
 
-Primary file:
+Definir y mantener la taxonomía maestra de géneros.
+
+La taxonomía actúa como la definición autoritativa
+de géneros usada por todo el sistema.
+
+Características clave:
+
+• mantenimiento manual
+• define hojas de género válidas
+• define relaciones jerárquicas entre géneros
+• no contiene datos de canciones
+
+Archivo principal:
 
 taxonomy/genre_tree_master.md
 
-This file contains the human-editable taxonomy
-structure using indentation.
+Este archivo contiene la estructura taxonómica editable
+por humanos usando indentación.
 
 --------------------------------------------------
 
-Operational representation:
+Representación operativa:
 
 taxonomy/genre_tree_operational.csv
 
-This file is generated from the master taxonomy
-and is used by scripts and classification tools.
+Este archivo se genera a partir de la taxonomía maestra
+y es usado por scripts y herramientas de clasificación.
 
 --------------------------------------------------
 
-Important rule:
+Regla importante:
 
-The taxonomy template is never modified automatically.
+La plantilla taxonómica nunca se modifica automáticamente.
 
-Automation tools may only:
+Las herramientas de automatización solo pueden:
 
-• validate
-• analyze
-• suggest improvements
+• validar
+• analizar
+• sugerir mejoras
 
-Only the project owner modifies the master taxonomy.
+Solo el project owner modifica la taxonomía maestra.
 
 --------------------------------------------------
-4. ACTIVITY 2 — SONG GENRE IDENTIFICATION
+4. ACTIVIDAD 2 — IDENTIFICACIÓN DE GÉNERO EN CANCIONES
 --------------------------------------------------
 
-Purpose:
+Propósito:
 
-Determine which genres a song belongs to.
+Determinar a qué géneros pertenece una canción.
 
-This process analyzes songs and assigns genres
-based on the taxonomy.
+Este proceso analiza canciones y asigna géneros
+basados en la taxonomía.
 
-Input file:
+Archivo de entrada:
 
 catalog/songs_raw.csv
 
-This file contains the list of songs to classify.
+Este archivo contiene la lista de canciones a clasificar.
 
-Output file:
+Archivo de salida:
 
 catalog/songs_with_genres.csv
 
-This file stores classification results.
+Este archivo almacena los resultados de clasificación.
 
 --------------------------------------------------
 
-Classification rules:
+Reglas de clasificación:
 
-• Genres must exist in the taxonomy
-• Genres must correspond to taxonomy leaf nodes
-• Songs may belong to multiple genres
-• Minor stylistic influences must not be considered
+• Los géneros deben existir en la taxonomía
+• Los géneros deben corresponder a hojas taxonómicas
+• Las canciones pueden pertenecer a múltiples géneros
+• No deben considerarse influencias estilísticas menores
 
-Example:
+Ejemplo:
 
-A song containing a brief rap section should not
-be classified as Rap unless rap is structurally
-part of the song.
-
---------------------------------------------------
-
-Missing genre handling:
-
-If a suitable genre cannot be found in the taxonomy,
-the classification process must stop and report
-a fatal error.
-
-The taxonomy must then be expanded manually.
-
---------------------------------------------------
-5. ACTIVITY 3 — DYNAMIC GENRE TREE GENERATION
---------------------------------------------------
-
-Purpose:
-
-Generate a listening tree based on the actual
-music catalog.
-
-This tree is derived from the taxonomy and the
-classified song dataset.
-
-The resulting structure can be used to generate
-genre-based playlists.
+Una canción con una sección breve de rap no debería
+clasificarse como Rap, a menos que el rap sea una
+parte estructural de la canción.
 
 --------------------------------------------------
 
-Expansion rule:
+Manejo de género faltante:
 
-A node becomes expandable when the number of songs
-assigned to that node exceeds:
+Si no se encuentra un género adecuado en la taxonomía,
+el proceso de clasificación debe detenerse y reportar
+un error fatal.
 
-45 songs
-
-When this happens:
-
-• the node becomes a parent
-• songs are redistributed into subgenres
-
-This allows the tree to grow organically according
-to the real catalog.
-
-Nodes without assigned songs remain inactive and
-represent currently unused taxonomy branches.
+Luego, la taxonomía debe expandirse manualmente.
 
 --------------------------------------------------
-6. LATIN GENRE STRATEGY
+5. ACTIVIDAD 3 — GENERACIÓN DINÁMICA DE ÁRBOL DE GÉNEROS
 --------------------------------------------------
 
-Latin music is treated as a separate branch.
+Propósito:
 
-If a song is identified as Latin music,
-its genres must be selected from the Latin subtree.
+Generar un árbol de escucha basado en el catálogo
+musical real.
 
-This prevents mixing Latin and non-Latin genre
-contexts which often represent different musical
-traditions.
+Este árbol se deriva de la taxonomía y del dataset
+de canciones clasificadas.
+
+La estructura resultante puede usarse para generar
+playlists basadas en géneros.
 
 --------------------------------------------------
-7. SPECIAL NODE TYPES
+
+Regla de expansión:
+
+Un nodo se vuelve expandible cuando el número de canciones
+asignadas a ese nodo supera:
+
+45 canciones
+
+Cuando esto ocurre:
+
+• el nodo se convierte en padre
+• las canciones se redistribuyen en subgéneros
+
+Esto permite que el árbol crezca de manera orgánica
+de acuerdo con el catálogo real.
+
+Los nodos sin canciones asignadas permanecen inactivos y
+representan ramas taxonómicas actualmente sin uso.
+
+--------------------------------------------------
+6. ESTRATEGIA DE GÉNEROS LATINOS
 --------------------------------------------------
 
-The taxonomy supports several special node types.
+La música latina se trata como una rama separada.
+
+Si una canción se identifica como música latina,
+sus géneros deben seleccionarse del subárbol Latin.
+
+Esto evita mezclar contextos de géneros latinos y no latinos
+que con frecuencia representan tradiciones musicales distintas.
+
+--------------------------------------------------
+7. TIPOS ESPECIALES DE NODOS
+--------------------------------------------------
+
+La taxonomía soporta varios tipos especiales de nodos.
 
 NORMAL
 
-Standard genre node.
+Nodo de género estándar.
 
 CLONE
 
-A node that references another canonical node.
-Clone nodes act as navigation portals and
-do not duplicate the subtree.
+Nodo que referencia otro nodo canónico.
+Los nodos Clone actúan como portales de navegación y
+no duplican el subárbol.
 
 GENERAL
 
-Fallback node used when a song belongs to a parent
-genre but does not match any defined subgenre.
+Nodo de respaldo usado cuando una canción pertenece a un
+género padre pero no coincide con ningún subgénero definido.
 
-Example:
+Ejemplo:
 
 Hard Rock
   Glam Metal
@@ -203,35 +202,35 @@ Hard Rock
 
 ATOMIC
 
-A terminal genre that should not be subdivided
-because it already represents a specific style.
+Género terminal que no debe subdividirse más,
+porque ya representa un estilo específico.
 
 --------------------------------------------------
-8. VERSIONING
+8. VERSIONADO
 --------------------------------------------------
 
-The taxonomy version is stored in:
+La versión de taxonomía se almacena en:
 
 taxonomy/taxonomy_version.md
 
-Classification results store the taxonomy version
-used during classification.
+Los resultados de clasificación guardan la versión de
+taxonomía usada durante la clasificación.
 
-If the taxonomy structure changes,
-previous classifications may become incompatible.
-
---------------------------------------------------
-9. PROJECT NAVIGATION MODEL
---------------------------------------------------
-
-The taxonomy also functions as a playlist navigation
-structure.
-
-Users should be able to move up or down the genre
-hierarchy to find playlists matching a desired
-musical mood.
-
-Each node may correspond to a playlist.
+Si la estructura taxonómica cambia,
+clasificaciones previas pueden volverse incompatibles.
 
 --------------------------------------------------
-END DOCUMENT
+9. MODELO DE NAVEGACIÓN DEL PROYECTO
+--------------------------------------------------
+
+La taxonomía también funciona como estructura de
+navegación de playlists.
+
+Los usuarios deberían poder subir o bajar por la
+jerarquía de géneros para encontrar playlists que
+coincidan con un estado de ánimo musical deseado.
+
+Cada nodo puede corresponder a una playlist.
+
+--------------------------------------------------
+FIN DOCUMENTO

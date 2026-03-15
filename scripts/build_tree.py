@@ -1,1 +1,1 @@
-# Placeholder script to generate operational taxonomy
+# Script placeholder para generar la taxonomía operativa

@@ -1,81 +1,82 @@
-# PROJECT STATE
-Music Genre Taxonomy System
+# ESTADO DEL PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document stores the current operational
-status of the project.
+Este documento almacena el estado operativo
+actual del proyecto.
 
-It allows the project to be resumed after long
-periods without relying on conversation history.
-
---------------------------------------------------
-2. CURRENT PHASE
---------------------------------------------------
-
-Active Phase: Phase 1 — Taxonomy Definition
-
-Phase description:
-
-The taxonomy structure is being finalized and
-all taxonomy-related rules are being validated.
+Permite reanudar el proyecto después de períodos
+largos sin depender del historial de conversación.
 
 --------------------------------------------------
-3. TAXONOMY STATUS
+2. FASE ACTUAL
 --------------------------------------------------
 
-Taxonomy master file:
+Fase Activa: Fase 1 — Definición de Taxonomía
+
+Descripción de la fase:
+
+La estructura de la taxonomía se está finalizando y
+todas las reglas relacionadas con la taxonomía se
+están validando.
+
+--------------------------------------------------
+3. ESTADO DE LA TAXONOMÍA
+--------------------------------------------------
+
+Archivo maestro de taxonomía:
 
 taxonomy/genre_tree_master.md
 
-Operational taxonomy:
+Taxonomía operativa:
 
 taxonomy/genre_tree_operational.csv
 
-Current taxonomy status:
+Estado actual de la taxonomía:
 
-• structure under validation
-• taxonomy rules being consolidated
-• node definitions being reviewed
-
---------------------------------------------------
-4. CLASSIFICATION SYSTEM STATUS
---------------------------------------------------
-
-Classifier implementation status:
-
-• not finalized
-• rules under validation
-• test batches not yet executed
+• estructura en validación
+• reglas de taxonomía en consolidación
+• definiciones de nodos en revisión
 
 --------------------------------------------------
-5. DATASET STATUS
+4. ESTADO DEL SISTEMA DE CLASIFICACIÓN
 --------------------------------------------------
 
-Song catalog file:
+Estado de implementación del clasificador:
+
+• no finalizado
+• reglas en validación
+• lotes de prueba aún no ejecutados
+
+--------------------------------------------------
+5. ESTADO DEL DATASET
+--------------------------------------------------
+
+Archivo de catálogo de canciones:
 
 catalog/songs_raw.csv
 
-Classification output file:
+Archivo de salida de clasificación:
 
 catalog/songs_with_genres.csv
 
-Dataset processing status:
+Estado de procesamiento del dataset:
 
-• classification pipeline not yet executed
-
---------------------------------------------------
-6. NEXT STEPS
---------------------------------------------------
-
-Immediate priorities:
-
-1. finalize taxonomy rule documents
-2. validate taxonomy structure
-3. finalize system contract
-4. prepare classification phase
+• pipeline de clasificación aún no ejecutado
 
 --------------------------------------------------
-END PROJECT STATE
+6. SIGUIENTES PASOS
+--------------------------------------------------
+
+Prioridades inmediatas:
+
+1. finalizar documentos de reglas de taxonomía
+2. validar estructura de taxonomía
+3. finalizar contrato del sistema
+4. preparar fase de clasificación
+
+--------------------------------------------------
+FIN ESTADO DEL PROYECTO

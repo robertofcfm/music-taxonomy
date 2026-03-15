@@ -1,54 +1,54 @@
-# PROJECT BOOTSTRAP
-Music Genre Taxonomy System
+# INICIO DE PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Session initialization steps and required documents
-for starting work with current project context.
+Pasos de inicialización de sesión y documentos requeridos
+para comenzar trabajo con el contexto actual del proyecto.
 
-Owner:
+Propietario:
 
 Project Owner
 
-Last Updated:
+Última Actualización:
 
 2026-03-15
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines how to initialize the project
-when starting a new working session.
+Este documento define cómo inicializar el proyecto
+al comenzar una nueva sesión de trabajo.
 
-Its goal is to guarantee that the system loads
-the correct project context and avoids inventing
-information or operating with outdated taxonomy data.
+Su objetivo es garantizar que el sistema cargue
+el contexto correcto del proyecto y evite inventar
+información u operar con datos taxonómicos desactualizados.
 
 --------------------------------------------------
-2. REQUIRED DOCUMENTS
+2. DOCUMENTOS REQUERIDOS
 --------------------------------------------------
 
-When starting a new session the following documents
-must be loaded before performing any work.
+Al iniciar una nueva sesión, los siguientes documentos
+deben cargarse antes de realizar cualquier trabajo.
 
-SYSTEM RULES
+REGLAS DEL SISTEMA
 
 docs/governance/SYSTEM_CONTRACT.md
 
-TAXONOMY STRUCTURE RULES
+REGLAS DE ESTRUCTURA TAXONÓMICA
 
 docs/governance/TAXONOMY_RULES.md
 
-PROJECT CONTEXT
+CONTEXTO DEL PROYECTO
 
 docs/architecture/PROJECT_CONTEXT.md
 
-TAXONOMY GOVERNANCE
+GOBERNANZA TAXONÓMICA
 
 docs/governance/TAXONOMY_CHANGE_POLICY.md
 docs/governance/TAXONOMY_DEPTH_POLICY.md
@@ -56,65 +56,65 @@ docs/governance/TAXONOMY_NAMING_CONVENTION.md
 docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 
 --------------------------------------------------
-3. TAXONOMY FILES
+3. ARCHIVOS DE TAXONOMÍA
 --------------------------------------------------
 
-The editable taxonomy is stored in:
+La taxonomía editable se almacena en:
 
 taxonomy/genre_tree_master.md
 
-This file defines the genre hierarchy using indentation.
+Este archivo define la jerarquía de géneros mediante indentación.
 
-The operational representation used by scripts is:
+La representación operativa usada por scripts es:
 
 taxonomy/genre_tree_operational.csv
 
-Rules:
+Reglas:
 
-• The operational tree must always match the master tree  
-• If versions do not match the operational file must be regenerated  
+• El árbol operativo siempre debe coincidir con el árbol maestro  
+• Si las versiones no coinciden, el archivo operativo debe regenerarse  
 
 --------------------------------------------------
-4. TAXONOMY VERSION CONTROL
+4. CONTROL DE VERSIÓN DE TAXONOMÍA
 --------------------------------------------------
 
-Taxonomy version information is stored in:
+La información de versión de taxonomía se almacena en:
 
 taxonomy/taxonomy_version.md
 
-This version guarantees compatibility between:
+Esta versión garantiza compatibilidad entre:
 
-• taxonomy structure  
-• classification results  
-• generated trees  
+• estructura taxonómica  
+• resultados de clasificación  
+• árboles generados  
 
 --------------------------------------------------
-5. PROJECT STATE DOCUMENTS
+5. DOCUMENTOS DE ESTADO DEL PROYECTO
 --------------------------------------------------
 
-The following documents store project progress:
+Los siguientes documentos almacenan el avance del proyecto:
 
 docs/project-management/PROJECT_STATE.md  
 docs/project-management/PROJECT_MEMORY.md  
 docs/project-management/PROJECT_FILE_INDEX.md  
 docs/project-management/PROJECT_CHECKPOINT_*.md  
 
-They help restore context if the project is resumed
-after a long period.
+Ayudan a restaurar contexto si el proyecto se retoma
+después de un periodo largo.
 
 --------------------------------------------------
-6. CLASSIFICATION INPUT FILES
+6. ARCHIVOS DE ENTRADA DE CLASIFICACIÓN
 --------------------------------------------------
 
-Song catalogs are stored in:
+Los catálogos de canciones se almacenan en:
 
 catalog/songs_raw.csv
 
-After classification the output is written to:
+Después de la clasificación, la salida se escribe en:
 
 catalog/songs_with_genres.csv
 
-Only successfully classified songs are written.
+Solo se escriben canciones clasificadas correctamente.
 
 --------------------------------------------------
-END PROJECT BOOTSTRAP
+FIN INICIO DE PROYECTO

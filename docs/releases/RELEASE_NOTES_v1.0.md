@@ -1,2 +1,2 @@
-# Release Notes v1.0
-Initial stable taxonomy release.
+# Notas de Lanzamiento v1.0
+Lanzamiento inicial estable de la taxonomía.

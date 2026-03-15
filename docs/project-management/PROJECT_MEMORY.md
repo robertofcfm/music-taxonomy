@@ -1,66 +1,67 @@
-# PROJECT MEMORY
-Music Genre Taxonomy System
+# MEMORIA DEL PROYECTO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document records the key design decisions of the project.
+Este documento registra las decisiones clave de diseño del proyecto.
 
-It exists to preserve the reasoning behind the system architecture,
-taxonomy structure, and classification methodology.
+Existe para preservar el razonamiento detrás de la arquitectura
+del sistema, la estructura de la taxonomía y la metodología de
+clasificación.
 
-The goal is to ensure that future work on the project remains
-consistent with the original design philosophy.
-
---------------------------------------------------
-2. PROJECT VISION
---------------------------------------------------
-
-The system is designed to classify songs into meaningful musical
-genres and organize them into a structured taxonomy.
-
-The taxonomy is not only used for classification but also for
-playlist navigation.
-
-Users should be able to navigate the genre hierarchy to select
-playlists that match a desired musical mood.
+El objetivo es asegurar que el trabajo futuro en el proyecto se
+mantenga consistente con la filosofía de diseño original.
 
 --------------------------------------------------
-3. TAXONOMY-FIRST APPROACH
+2. VISIÓN DEL PROYECTO
 --------------------------------------------------
 
-The project follows a taxonomy-first design.
+El sistema está diseñado para clasificar canciones en géneros
+musicales significativos y organizarlos en una taxonomía estructurada.
 
-This means:
+La taxonomía no solo se utiliza para clasificación, sino también para
+navegación de playlists.
 
-• the taxonomy is designed before classification  
-• classification must follow the taxonomy  
-• the taxonomy defines valid genre targets  
-
-The classifier must never invent genres.
-
---------------------------------------------------
-4. DESIGN PRINCIPLE: PLAYLIST NAVIGATION
---------------------------------------------------
-
-The taxonomy is intended not only as a classification system,
-but also as a navigation structure for music listening.
-
-Users should be able to move up or down the taxonomy tree
-to find playlists that match a desired musical mood.
+Los usuarios deberían poder navegar la jerarquía de géneros para
+seleccionar playlists que coincidan con un estado de ánimo musical deseado.
 
 --------------------------------------------------
-5. DESIGN PRINCIPLE: DATASET-AWARE EVOLUTION
+3. ENFOQUE TAXONOMY-FIRST
 --------------------------------------------------
 
-The taxonomy may evolve as the dataset grows.
+El proyecto sigue un diseño taxonomy-first.
 
-As the catalog expands, certain genres may accumulate
-enough songs to justify further subdivision.
+Esto significa:
 
-The taxonomy design must remain flexible enough to
-accommodate this evolution while preserving musical coherence.
+• la taxonomía se diseña antes de la clasificación  
+• la clasificación debe seguir la taxonomía  
+• la taxonomía define los objetivos de género válidos  
+
+El clasificador nunca debe inventar géneros.
 
 --------------------------------------------------
-END PROJECT MEMORY
+4. PRINCIPIO DE DISEÑO: NAVEGACIÓN DE PLAYLISTS
+--------------------------------------------------
+
+La taxonomía está pensada no solo como un sistema de clasificación,
+sino también como una estructura de navegación para escucha musical.
+
+Los usuarios deberían poder subir o bajar por el árbol taxonómico
+para encontrar playlists que coincidan con un estado de ánimo deseado.
+
+--------------------------------------------------
+5. PRINCIPIO DE DISEÑO: EVOLUCIÓN GUIADA POR DATASET
+--------------------------------------------------
+
+La taxonomía puede evolucionar conforme crece el dataset.
+
+A medida que el catálogo se expande, ciertos géneros pueden acumular
+suficientes canciones para justificar una subdivisión adicional.
+
+El diseño de taxonomía debe mantenerse lo suficientemente flexible para
+acomodar esta evolución preservando la coherencia musical.
+
+--------------------------------------------------
+FIN MEMORIA DEL PROYECTO
