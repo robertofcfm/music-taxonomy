@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Genre Taxonomy System</title>
+  <style>
+    :root {
+      --bg:       #0d0d16;
+      --surface:  #13131f;
+      --surface2: #1a1a2e;
+      --border:   #252540;
+      --text:     #e2e8f0;
+      --muted:    #7c85a0;
+      --accent:   #6366f1;
+      --pass:     #10b981;
+      --fail:     #ef4444;
+      --warn:     #f59e0b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2.5rem 2rem;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    header .sub {
+      margin-top: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    /* ── Action bar ──────────────────────────────────────────── */
+    .action-bar {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.4rem 1.8rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .action-bar .info { flex: 1; }
+    .action-bar .info h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .action-bar .info p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .action-bar .info code {
+      background: var(--surface2);
+      padding: 0.1em 0.4em;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      color: #a5b4fc;
+    }
+
+    /* ── Button ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* Spinner */
+    .spinner {
+      width: 15px; height: 15px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.65s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Results (hidden until first run) ────────────────────── */
+    #results {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #results.visible { opacity: 1; }
+
+    /* ── Summary cards ───────────────────────────────────────── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+    }
+    .card-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+    .card-val {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .c-pass { color: var(--pass); }
+    .c-fail { color: var(--fail); }
+    .c-warn { color: var(--warn); }
+    .c-neutral { color: var(--text); }
+
+    /* Decision badge */
+    .badge {
+      display: inline-block;
+      padding: 0.28rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+    }
+    .b-pass { background: #10b98120; color: var(--pass); border: 1px solid #10b98150; }
+    .b-warn { background: #f59e0b20; color: var(--warn); border: 1px solid #f59e0b50; }
+    .b-fail { background: #ef444420; color: var(--fail); border: 1px solid #ef444450; }
+
+    /* ── Meta row ────────────────────────────────────────────── */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0.9rem 1.4rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .meta strong { color: var(--text); }
+
+    /* ── Section label ───────────────────────────────────────── */
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+      margin-bottom: 0.65rem;
+    }
+
+    /* ── Table ───────────────────────────────────────────────── */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.845rem;
+    }
+    thead th {
+      background: var(--surface2);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    tbody tr { border-top: 1px solid var(--border); }
+    tbody tr.row-fail { background: rgba(239,68,68,0.04); }
+    tbody tr:hover { background: var(--surface2); }
+    tbody td { padding: 0.8rem 1rem; vertical-align: top; }
+
+    /* Pills */
+    .pill {
+      display: inline-block;
+      padding: 0.18rem 0.5rem;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .p-fatal { background: #ef444420; color: var(--fail); }
+    .p-warn  { background: #f59e0b20; color: var(--warn); }
+
+    /* Status */
+    .st-pass { color: var(--pass); font-weight: 600; }
+    .st-fail { color: var(--fail); font-weight: 600; }
+
+    /* Causes */
+    details summary {
+      font-size: 0.73rem;
+      color: var(--muted);
+      cursor: pointer;
+      margin-top: 0.3rem;
+      user-select: none;
+    }
+    details ul {
+      margin-top: 0.3rem;
+      padding-left: 1rem;
+      font-size: 0.73rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Empty state */
+    .empty { text-align: center; padding: 2.5rem; color: var(--muted); font-size: 0.88rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sistema de Taxonomía de Géneros Musicales</h1>
+  <div class="sub">Music Genre Taxonomy System · Validation Dashboard</div>
+</header>
+
+<div class="action-bar">
+  <div class="info">
+    <h2>Validación de Taxonomía Maestra</h2>
+    <p>
+      Ejecuta la validación determinista (Capa 1) sobre
+      <code>taxonomy/genre_tree_master.md</code>.
+      Los resultados se muestran a continuación de forma estructurada.
+    </p>
+  </div>
+  <button class="btn btn-primary" id="btnRun" onclick="runValidation()">
+    <span class="spinner" id="spinner"></span>
+    <span id="btnLabel">Ejecutar Validación</span>
+  </button>
+</div>
+
+<div id="results">
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Decisión</div>
+      <div id="cDecision"></div>
+    </div>
+    <div class="card">
+      <div class="card-label">Checks</div>
+      <div class="card-val c-neutral" id="cTotal">—</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Fatal</div>
+      <div class="card-val" id="cFatal">—</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Warning</div>
+      <div class="card-val" id="cWarn">—</div>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta">
+    <span><strong>Fecha</strong> <span id="mDate">—</span></span>
+    <span><strong>Archivo</strong> <span id="mFile">—</span></span>
+    <span><strong>SHA256</strong> <span id="mHash">—</span></span>
+  </div>
+
+  <!-- Findings -->
+  <div class="section-label">Hallazgos por regla</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Regla</th>
+          <th>FB</th>
+          <th>Severidad</th>
+          <th>Resultado</th>
+          <th>Descripción / Evidencia / Causantes</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function badge(d) {
+    if (d === 'PASS') return `<span class="badge b-pass">PASS</span>`;
+    if (d === 'FAIL') return `<span class="badge b-fail">FAIL</span>`;
+    return `<span class="badge b-warn">PASS WITH WARNINGS</span>`;
+  }
+
+  function pill(s) {
+    return s === 'FATAL'
+      ? `<span class="pill p-fatal">FATAL</span>`
+      : `<span class="pill p-warn">WARNING</span>`;
+  }
+
+  function render(data) {
+    const s = data.summary || {};
+
+    // Cards
+    document.getElementById('cDecision').innerHTML = badge(s.decision);
+    document.getElementById('cTotal').textContent = s.total_checks ?? '—';
+
+    const fEl = document.getElementById('cFatal');
+    fEl.textContent = s.total_fatal ?? '—';
+    fEl.className = 'card-val ' + (s.total_fatal > 0 ? 'c-fail' : 'c-pass');
+
+    const wEl = document.getElementById('cWarn');
+    wEl.textContent = s.total_warning ?? '—';
+    wEl.className = 'card-val ' + (s.total_warning > 0 ? 'c-warn' : 'c-pass');
+
+    // Meta
+    const dateRaw = (data.generated_at || '—')
+      .replace('T', '  ').replace('+00:00', '') + ' UTC';
+    document.getElementById('mDate').textContent = dateRaw;
+    document.getElementById('mFile').textContent = data.taxonomy_file || '—';
+    const hash = data.taxonomy_sha256 || '—';
+    document.getElementById('mHash').textContent = hash !== '—'
+      ? hash.slice(0, 16) + '…' : '—';
+
+    // Findings
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = '';
+    const findings = data.findings || [];
+
+    if (!findings.length) {
+      tbody.innerHTML = `<tr><td colspan="5" class="empty">Sin hallazgos.</td></tr>`;
+    } else {
+      findings.forEach((f, i) => {
+        const causes = f.causes && f.causes.length
+          ? `<details><summary>Causantes (${f.causes.length})</summary>
+               <ul>${f.causes.map(c => `<li>${c}</li>`).join('')}</ul>
+             </details>`
+          : '';
+
+        const tr = document.createElement('tr');
+        if (!f.passed) tr.className = 'row-fail';
+        tr.innerHTML = `
+          <td style="font-family:monospace;font-weight:600;white-space:nowrap;font-size:0.82rem">${f.rule_id}</td>
+          <td style="font-size:0.75rem;color:var(--muted)">${f.fb}</td>
+          <td>${pill(f.severity)}</td>
+          <td style="white-space:nowrap">
+            ${f.passed
+              ? '<span class="st-pass">✓ PASS</span>'
+              : '<span class="st-fail">✗ FAIL</span>'}
+          </td>
+          <td>
+            <div style="font-size:0.82rem;font-weight:500">${f.description}</div>
+            <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;line-height:1.5">${f.evidence}</div>
+            ${causes}
+          </td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    const el = document.getElementById('results');
+    el.style.display = 'block';
+    requestAnimationFrame(() => el.classList.add('visible'));
+  }
+
+  async function runValidation() {
+    const btn = document.getElementById('btnRun');
+    const spinner = document.getElementById('spinner');
+    const label = document.getElementById('btnLabel');
+    btn.disabled = true;
+    spinner.style.display = 'inline-block';
+    label.textContent = 'Ejecutando…';
+    try {
+      const res = await fetch('/api/validate/layer1', { method: 'POST' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      render(await res.json());
+    } catch (e) {
+      alert('Error: ' + e.message);
+    } finally {
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      label.textContent = 'Ejecutar Validación';
+    }
+  }
+
+  // Carga el reporte existente al abrir la página
+  (async () => {
+    try {
+      const res = await fetch('/api/report/layer1');
+      if (res.ok) render(await res.json());
+    } catch (_) {}
+  })();
+</script>
+</body>
+</html>
