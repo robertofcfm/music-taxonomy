@@ -2,6 +2,23 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Session initialization steps and required documents
+for starting work with current project context.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
 1. PURPOSE
 --------------------------------------------------
 

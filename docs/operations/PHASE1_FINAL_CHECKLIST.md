@@ -1,6 +1,27 @@
 # Phase 1 Final Checklist
 Validation checklist for closing Phase 1: Taxonomy Definition.
 
+---
+
+## Document Metadata
+
+Scope:
+
+Phase 1 exit criteria and validation checks for
+taxonomy definition readiness.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+---
+
+## Purpose
+
 Phase 1 objective:
 Define the complete genre taxonomy structure and the rules governing it
 before implementing classification and tree generation processes.

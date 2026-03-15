@@ -2,6 +2,23 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Quality review criteria used to evaluate taxonomy
+readiness before changes or releases.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
 1. PURPOSE
 --------------------------------------------------
 

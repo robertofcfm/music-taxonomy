@@ -2,6 +2,23 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Depth limits, expansion criteria, and structural
+balance rules for taxonomy branches.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
 1. PURPOSE
 --------------------------------------------------
 

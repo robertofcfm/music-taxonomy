@@ -2,6 +2,23 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Governance rules for reviewing, approving, and
+validating taxonomy changes.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
 1. PURPOSE
 --------------------------------------------------
 

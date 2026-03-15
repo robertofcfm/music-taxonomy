@@ -165,6 +165,14 @@ Documentation is grouped by function.
 
 Each folder serves a specific operational purpose.
 
+Governance and operations documents use a common
+header template with:
+
+• Purpose  
+• Scope  
+• Owner  
+• Last Updated  
+
 --------------------------------------------------
 9. GLOBAL GOVERNANCE DOCUMENTATION
 --------------------------------------------------

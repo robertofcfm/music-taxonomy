@@ -2,6 +2,23 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Cross-subsystem rules that govern more than one
+repository component.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
 PURPOSE
 --------------------------------------------------
 

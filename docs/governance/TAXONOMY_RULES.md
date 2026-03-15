@@ -1,6 +1,27 @@
 # TAXONOMY RULES
 Music Genre Taxonomy System
 
+--------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Structural taxonomy rules used by validation,
+classification, and playlist generation.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
+PURPOSE
+--------------------------------------------------
+
 This document defines the structural rules governing the genre taxonomy.
 
 The taxonomy represents the musical knowledge base of the system and is

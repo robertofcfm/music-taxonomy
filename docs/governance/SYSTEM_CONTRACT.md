@@ -1,6 +1,27 @@
 # SYSTEM CONTRACT
 Music Genre Taxonomy System
 
+--------------------------------------------------
+DOCUMENT METADATA
+--------------------------------------------------
+
+Scope:
+
+Mandatory system rules, validation constraints,
+and execution requirements.
+
+Owner:
+
+Project Owner
+
+Last Updated:
+
+2026-03-15
+
+--------------------------------------------------
+PURPOSE
+--------------------------------------------------
+
 This document defines the mandatory rules governing the system.
 
 These rules cannot be violated by any component of the project.
