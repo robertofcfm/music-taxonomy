@@ -371,7 +371,7 @@ no se modifica
 solo se consulta
 se descarta cuando termine la reconstrucción
 -----
-
+Indicar claramente que reglas ya fueron aplicadas y no son necesarias que esten en el archivo raw
 --------------------------------------------------
 END OF PROTOCOL
 --------------------------------------------------
