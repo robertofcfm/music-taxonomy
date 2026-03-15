@@ -12,6 +12,8 @@ used by the classifier and playlist generation pipeline.
 
 The taxonomy defines the structure used to organize musical genres.
 
+The taxonomy must remain human-editable.
+
 Its purpose is to:
 
 - represent relationships between genres
@@ -19,6 +21,9 @@ Its purpose is to:
 - ensure playlist coherence
 
 The taxonomy must prioritize musical coherence over completeness.
+
+Genres must represent musically meaningful styles.
+Generic or vague descriptors are not valid genre nodes.
 
 --------------------------------------------------
 2. ROOT STRUCTURE
@@ -133,6 +138,9 @@ and its songs must be redistributed among subgenres.
 A node may contain a General subnode when
 existing subgenres do not fully cover the parent genre.
 
+General nodes act as explicit fallback nodes for songs
+that do not fit known subgenres of that parent.
+
 Example:
 
 Hard Rock
@@ -143,6 +151,7 @@ Hard Rock
 General nodes must:
 
 - be explicitly defined
+- never be auto-created by the system
 - not replace proper genre creation
 - be used only when necessary
 
@@ -231,11 +240,16 @@ The authoritative editable taxonomy source is:
 
 taxonomy/genre_tree_master.md
 
+The master taxonomy must stay directly editable by users.
+
 The operational taxonomy must be generated from
 the master taxonomy template.
 
 The operational representation must be machine-readable
 and must include numeric node codes.
+
+The playlist tree must be generated dynamically from
+classified songs using this taxonomy.
 
 --------------------------------------------------
 16. CLONE AND HYBRID GENRE POLICY

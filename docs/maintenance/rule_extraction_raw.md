@@ -8,26 +8,6 @@ RULE 008
 The classifier must load the taxonomy before classifying songs.
 
 ---
-RULE 013
-
-The taxonomy must be hierarchical.
-
----
-RULE 014
-
-Sibling genres must be musically distinct.
-
----
-RULE 016
-
-The taxonomy must prioritize musical coherence.
-
----
-RULE 017
-
-Genres must represent musical styles, not vague descriptors.
-
----
 RULE 019
 
 Minor stylistic influence must not trigger genre assignment.
@@ -36,11 +16,6 @@ Minor stylistic influence must not trigger genre assignment.
 RULE 022
 
 The project has three phases: taxonomy design, song classification, and tree generation.
-
----
-RULE 023
-
-The taxonomy must be human-editable.
 
 ---
 RULE 041
@@ -68,16 +43,6 @@ RULE 045
 The classifier must ignore trivial stylistic references.
 
 ---
-RULE 046
-
-Genres must be musically meaningful.
-
----
-RULE 047
-
-Generic labels must not be used as genres.
-
----
 RULE 048
 
 Taxonomy evolution must be controlled.
@@ -91,31 +56,6 @@ Taxonomy changes must be deliberate and documented.
 RULE 050
 
 The taxonomy owner must evaluate new genre proposals.
-
----
-RULE 052
-
-The taxonomy may include general fallback nodes.
-
----
-RULE 053
-
-A fallback node covers songs that do not fit known subgenres.
-
----
-RULE 054
-
-Fallback nodes must be explicitly defined.
-
----
-RULE 055
-
-Fallback nodes must not be auto-created.
-
----
-RULE 056
-
-Fallback nodes must be used only as a last resort.
 
 ---
 RULE 057
@@ -146,11 +86,6 @@ Only affected songs should be reevaluated.
 RULE 062
 
 Unaffected songs must not be reclassified unnecessarily.
-
----
-RULE 064
-
-The playlist tree must be generated dynamically from classified songs.
 
 ---
 RULE 067
