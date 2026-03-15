@@ -50,7 +50,7 @@ El checklist de calidad taxonómica debe ejecutarse:
 Un release no debe avanzar si quedan issues sin resolver.
 
 --------------------------------------------------
-3. CHECK DE ESTRUCTURA RAÍZ
+3. REVISIÓN DE ESTRUCTURA RAÍZ
 --------------------------------------------------
 
 Verifica que la taxonomía tenga exactamente un nodo raíz.
@@ -77,7 +77,7 @@ Preguntas guía:
 Si la respuesta no es clara, considera fusionarlos.
 
 --------------------------------------------------
-5. CHECK DE REDUNDANCIA DE GÉNEROS
+5. REVISIÓN DE REDUNDANCIA DE GÉNEROS
 --------------------------------------------------
 
 Revisa si dos géneros representan el mismo estilo.
@@ -135,7 +135,7 @@ Checklist:
 Los nodos General no deben convertirse en categoría por defecto.
 
 --------------------------------------------------
-9. CHECK DE BALANCE DE PROFUNDIDAD
+9. REVISIÓN DE BALANCE DE PROFUNDIDAD
 --------------------------------------------------
 
 Verifica que la profundidad de la taxonomía
@@ -148,7 +148,7 @@ Problemas a detectar:
 • crecimiento jerárquico desigual
 
 --------------------------------------------------
-10. CHECK DE REUBICACIÓN DE NODOS
+10. REVISIÓN DE REUBICACIÓN DE NODOS
 --------------------------------------------------
 
 Verifica que los géneros estén bajo
@@ -158,7 +158,7 @@ Si un género parece pertenecer de forma más natural
 a otra rama, debe considerarse su reubicación.
 
 --------------------------------------------------
-11. CHECK DE SOBRE-FRAGMENTACIÓN
+11. REVISIÓN DE SOBRE-FRAGMENTACIÓN
 --------------------------------------------------
 
 Detecta ramas que se hayan subdividido en exceso.

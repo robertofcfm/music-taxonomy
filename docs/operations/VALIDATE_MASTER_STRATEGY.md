@@ -11,9 +11,8 @@ Marco de Validación de Entrada Taxonómica (MVET)
 
 Alcance:
 
-Definir y gobernar la estrategia de validación para
-el archivo taxonómico maestro antes de cualquier uso
-operativo.
+Definir y gobernar la estrategia de validación del archivo
+maestro de taxonomía antes de cualquier uso operativo.
 
 Archivo objetivo:
 
@@ -29,7 +28,7 @@ Propietario del proyecto
 
 Estado:
 
-v0.2 — Matriz de aplicabilidad definida. Set de reglas pendiente.
+v0.2 — Matriz de aplicabilidad definida. Conjunto de reglas pendiente.
 
 Última actualización:
 
@@ -39,18 +38,17 @@ v0.2 — Matriz de aplicabilidad definida. Set de reglas pendiente.
 PROPÓSITO
 --------------------------------------------------
 
-Este documento define la estrategia completa para
-validar el archivo taxonómico maestro.
+Este documento define la estrategia completa para validar
+el archivo maestro de taxonomía.
 
-El objetivo es proteger la calidad de la taxonomía
-maestra en el tiempo para evitar que su integridad
-degrade a medida que evoluciona.
+El objetivo es proteger la calidad de la taxonomía maestra
+en el tiempo para evitar que su integridad disminuya a medida
+que evoluciona.
 
 Este documento es una referencia estratégica viva.
 
-En cada iteración se leerá, actualizará y
-refinará hasta que la implementación alcance
-su estado definitivo.
+En cada iteración se leerá, actualizará y refinará hasta que
+la implementación alcance su estado definitivo.
 
 --------------------------------------------------
 PRINCIPIO FUNDAMENTAL
@@ -58,11 +56,10 @@ PRINCIPIO FUNDAMENTAL
 
 Las reglas de gobernanza definidas en el proyecto son LEY.
 
-Cualquier regla derivada de los documentos de gobernanza
-que aplique a este proceso debe cumplirse
-sin excepción.
+Toda regla derivada de documentos de gobernanza que aplique
+a este proceso debe cumplirse sin excepción.
 
-Las violaciones causan ERROR FATAL.
+Cualquier violación causa ERROR FATAL.
 
 Un error fatal:
 
@@ -71,16 +68,16 @@ Un error fatal:
 - bloquea cualquier uso posterior del archivo validado
 - requiere corrección humana antes de reanudar
 
-No existen warnings para violaciones de reglas de gobernanza.
-Una regla de gobernanza se cumple o el proceso falla.
+No existen advertencias para violaciones de gobernanza.
+Una regla se cumple o el proceso falla.
 
 --------------------------------------------------
 ENFOQUE DE VALIDACIÓN
 --------------------------------------------------
 
-Este proceso usa un modelo de validación HÍBRIDO.
+Este proceso usa un modelo de validación híbrido.
 
-Dos capas de validación distintas operan en secuencia.
+Operan dos capas en secuencia.
 
 CAPA 1 — VALIDACIÓN ESTRUCTURAL DETERMINISTA
 
@@ -90,9 +87,8 @@ scripts/validate_tree.py
 
 Responsabilidad:
 
-Aplicar todas las validaciones objetivas basadas en reglas
-que puedan evaluarse algorítmicamente sin
-conocimiento musical ni juicio subjetivo.
+Aplicar validaciones objetivas basadas en reglas,
+algorítmicamente evaluables y sin juicio musical subjetivo.
 
 Comportamiento ante falla:
 
@@ -107,15 +103,15 @@ Prompt de IA con contexto fijo y estricto.
 
 Responsabilidad:
 
-Evaluar coherencia musical, diferenciación entre
-géneros hermanos, riesgos de cohesión de playlists,
-redundancia y oportunidades de mejora estructural.
+Evaluar coherencia musical, distinción entre géneros hermanos,
+riesgos de cohesión de playlists, redundancia y oportunidades
+estructurales de mejora.
 
 Comportamiento ante falla:
 
-Los hallazgos de esta capa se clasifican por severidad.
+Los hallazgos se clasifican por severidad.
 Los hallazgos de clase fatal detienen el proceso.
-Los hallazgos no fatales generan un reporte estructurado
+Los hallazgos no fatales generan reporte estructurado
 para revisión humana.
 
 PRINCIPIO COMPARTIDO:
@@ -140,220 +136,107 @@ APLICABILIDAD DE DOCUMENTOS DE GOBERNANZA
 
 Definiciones de clasificación:
 
-  MANDATORY   — Define reglas aplicadas directamente por
-                este proceso. No se permite exclusión.
-                Las reglas derivadas de estos documentos son LEY.
+MANDATORY:
+Define reglas aplicadas directamente por este proceso.
+No se permite exclusión.
+Las reglas derivadas de estos documentos son LEY.
 
-  CONDITIONAL — Aplica bajo escenarios específicos de ejecución
-                (post-cambio, pre-release).
-                Sus reglas aplican solo cuando el escenario está activo.
+CONDITIONAL:
+Aplica bajo escenarios específicos (post-cambio, pre-release).
+Sus reglas aplican solo cuando el escenario está activo.
 
-  REFERENTIAL — Proporciona solo contexto del sistema.
-                No gatilla checks obligatorios de validación.
-                No se derivan reglas de estos documentos.
+REFERENTIAL:
+Proporciona solo contexto del sistema.
+No gatilla checks obligatorios de validación.
+No se derivan reglas de estos documentos.
 
-  EXCLUDED    — Confirmado fuera de alcance.
-                La exclusión se justifica con
-                prueba de no injerencia.
+EXCLUDED:
+Confirmado fuera de alcance.
+La exclusión debe justificarse con prueba de no injerencia.
 
-Criterios de prueba de no injerencia (los cuatro deben cumplirse
-para excluir un documento):
+Criterios de no injerencia (deben cumplirse todos):
 
-    NI-1  No define reglas estructurales para el árbol maestro.
-    NI-2  No define restricciones de nombrado o profundidad.
-    NI-3  No define restricciones de cohesión o asignación
-      aplicables a la estructura del árbol.
-    NI-4  No impone condición de bloqueo para este proceso.
-
---------------------------------------------------
-
-[ MANDATORY ]
-
-docs/governance/GLOBAL_RULES.md
-
-  Razón:
-  Contiene reglas transversales que gobiernan directamente
-  la estructura taxonómica maestra.
-  Rules G001, G008, G009, G010, G011, G012, G013 impose
-  enforceable structural, naming, and domain constraints
-  sobre el árbol maestro. Ninguna puede excluirse.
+- NI-1 No define reglas estructurales del árbol maestro.
+- NI-2 No define restricciones de nombrado o profundidad.
+- NI-3 No define restricciones de cohesión o asignación aplicables al árbol.
+- NI-4 No impone condición de bloqueo para este proceso.
 
 --------------------------------------------------
 
-docs/governance/SYSTEM_CONTRACT.md
+MANDATORY
 
-  Razón:
-  La Sección 2 define restricciones obligatorias de estructura.
-  Section 3 defines valid node types (Normal, Clone, General, Atomic).
-  Section 4 defines the Latin branch isolation rule.
-  Section 10 explicitly defines taxonomía validación requirements.
-  Este documento es fuente primaria de reglas de validación.
+- docs/governance/GLOBAL_RULES.md
+  Razón: contiene reglas transversales con impacto directo en estructura,
+  nombrado y dominio de la taxonomía maestra.
 
---------------------------------------------------
+- docs/governance/SYSTEM_CONTRACT.md
+  Razón: define restricciones obligatorias de estructura, tipos de nodo,
+  aislamiento Latin y requerimientos explícitos de validación.
 
-docs/governance/TAXONOMY_RULES.md
+- docs/governance/TAXONOMY_RULES.md
+  Razón: documento estructural principal para raíz, jerarquía, hojas,
+  distinción de hermanos, cohesión, profundidad, nodos General/Atomic,
+  rama Latin y política clone/híbridos.
 
-  Razón:
-  Es el documento definitivo de reglas estructurales de taxonomía.
-  Covers root structure, hierarchy definition, leaf node rule,
-  sibling distinction, playlist cohesion, depth, expansion,
-  general node policy, atomic rule, Latin branch, naming,
-  clone and hybrid policy.
-  Cada sección contiene reglas aplicables de forma directa.
+- docs/governance/TAXONOMY_DEPTH_POLICY.md
+  Razón: define límites y balance de profundidad verificables.
 
---------------------------------------------------
+- docs/governance/TAXONOMY_NAMING_CONVENTION.md
+  Razón: define estándar de nombrado verificable directamente.
 
-docs/governance/TAXONOMY_DEPTH_POLICY.md
+- docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+  Razón: define checks de calidad que mapean a Capa 1 y Capa 2.
 
-  Razón:
-  Defines explicit depth constraints (min 3 levels, recommended
-  3–5, excessive depth triggers review) and balance reglas.
-  These are objectively checkable structural constraints
-  aplicables al árbol maestro en cada ejecución de validación.
+CONDITIONAL
 
---------------------------------------------------
+- docs/governance/TAXONOMY_CHANGE_POLICY.md
+  Aplica en corridas post-cambio y pre-release.
+  No aplica en checks rutinarios sin cambios recientes.
 
-docs/governance/TAXONOMY_NAMING_CONVENTION.md
+REFERENTIAL
 
-  Razón:
-  Define el estándar completo de nombrado para nodos taxonómicos:
-  uniqueness, language rule, Title Case, General node pattern,
-  Clone node naming, prohibition of ambiguous labels, length.
-  Todas sus reglas son verificables directamente sobre el árbol maestro.
+- docs/architecture/PROJECT_CONTEXT.md
+- docs/architecture/PROJECT_OPERATING_MODEL.md
+- docs/architecture/SYSTEM_OVERVIEW.md
 
---------------------------------------------------
+Razón general: aportan contexto de sistema;
+no son fuente primaria de reglas obligatorias en este proceso.
 
-docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+EXCLUDED
 
-  Razón:
-  Este documento ES el checklist de validación de calidad de la
-  taxonomía. Define checks para estructura raíz, género hermano,
-  distinction, redundancy, expansion review, atomic review,
-  general node usage, depth balance, over-fragmentation,
-  Latin branch, naming consistency, and release gate.
-  Mapea directamente a responsabilidades de Capa 1 y Capa 2.
+- Ninguno.
 
---------------------------------------------------
+Resumen de matriz:
 
-[ CONDITIONAL ]
-
-docs/governance/TAXONOMY_CHANGE_POLICY.md
-
-  Aplica cuando:
-  - El proceso corre después de un cambio manual al árbol maestro.
-  - El proceso corre como parte de una validación pre-release.
-
-  No aplica cuando:
-  - El proceso corre como check rutinario pre-clasificación
-    sin cambios recientes en el árbol maestro.
-
-  Razón:
-  Define política de fusión, política de reubicación y el
-  proceso completo de revisión de cambios. Estas reglas solo
-  se activan cuando hubo cambio estructural o un release pendiente.
-  Cuando están activas, estas reglas también son LEY.
-
---------------------------------------------------
-
-[ REFERENTIAL ]
-
-docs/architecture/PROJECT_CONTEXT.md
-
-  Prueba de no injerencia:
-  NI-1 PASS — No define reglas estructurales del árbol maestro.
-  NI-2 PASS — No define restricciones de nombrado o profundidad.
-  NI-3 PASS — No define restricciones de cohesión o asignación.
-  NI-4 PASS — No define condición de bloqueo para este proceso.
-
-  Razón:
-  Define propósito, objetivos y filosofía de evolución taxonómica.
-  Aporta contexto esencial, pero no contiene reglas de validación
-  aplicables de forma obligatoria.
-
---------------------------------------------------
-
-docs/architecture/PROJECT_OPERATING_MODEL.md
-
-  Prueba de no injerencia:
-  NI-1 PASS — Node types referenced here are fully covered
-               by SYSTEM_CONTRACT.md (MANDATORY).
-  NI-2 PASS — No contiene reglas independientes de nombrado o profundidad.
-  NI-3 PASS — Latin strategy referenced here is fully covered
-               by SYSTEM_CONTRACT.md and TAXONOMY_RULES.md.
-  NI-4 PASS — No blocking condition beyond what MANDATORY
-               documents already impose.
-
-  Razón:
-  Describes the operational model and activity separation.
-  Todo su contenido relevante para validación (tipos de nodo,
-  Latin separation, immutability) is redundantly and more
-  precisely defined in MANDATORY documents. Using this document
-  como fuente de reglas, crearía duplicidad de reglas con el mismo
-  contenido.
-
---------------------------------------------------
-
-docs/architecture/SYSTEM_OVERVIEW.md
-
-  Prueba de no injerencia:
-  NI-1 PASS — No define reglas estructurales independientes.
-  NI-2 PASS — No naming or depth constraints.
-  NI-3 PASS — No cohesion or assignment constraints.
-  NI-4 PASS — Only points to other documents; defines no
-               blocking condition on its own.
-
-  Razón:
-  Pure high-level overview. Its sole function is to describe
-  el sistema y referenciar documentos de gobernanza.
-  No se derivan reglas de este documento.
-
---------------------------------------------------
-
-[ EXCLUDED ]
-
-  Ninguno.
-
-  Todos los documentos candidatos fueron clasificados.
-  Ningún documento fue excluido sin justificación.
-
---------------------------------------------------
-
-Resumen de matriz de aplicabilidad:
-
-  MANDATORY    6 documents
-  CONDITIONAL  1 document
-  REFERENTIAL  3 documents
-  EXCLUDED     0 documents
+- MANDATORY: 6 documentos
+- CONDITIONAL: 1 documento
+- REFERENTIAL: 3 documentos
+- EXCLUDED: 0 documentos
 
 Alcance de derivación de reglas:
 
-  Las reglas del set de validación deben derivarse
-  exclusivamente de los 6 documentos MANDATORY, más
-  el documento CONDITIONAL cuando su escenario esté activo.
+Las reglas del set de validación deben derivarse exclusivamente
+de los 6 documentos MANDATORY y del documento CONDITIONAL
+cuando su escenario esté activo.
 
-  Los 3 documentos REFERENTIAL no deben usarse como fuente de reglas.
+Los documentos REFERENTIAL no deben usarse como fuente de reglas.
 
 --------------------------------------------------
-SET DE REGLAS DE VALIDACIÓN
+CONJUNTO DE REGLAS DE VALIDACIÓN
 --------------------------------------------------
 
 ESTADO: DEFINICIÓN PENDIENTE
 
-Las reglas se derivarán exclusivamente de documentos
-clasificados como MANDATORY o CONDITIONAL en la
-matriz de aplicabilidad anterior.
+Cada regla deberá definirse con:
 
-Cada regla se etiquetará con:
+- RULE_ID
+- SOURCE
+- LAYER (1 o 2)
+- SEVERITY (FATAL o WARNING)
+- DESCRIPTION
+- CHECK
 
-  RULE_ID     — Identificador único.
-  SOURCE      — Documento y sección de origen.
-  LAYER       — 1 (determinista) o 2 (IA semántica).
-  SEVERITY    — FATAL o WARNING.
-  DESCRIPTION — Qué se verifica.
-  CHECK       — Cómo se evalúa.
-
-No se puede inventar ninguna regla fuera del
-corpus documental de gobernanza.
+No se permite inventar reglas fuera del corpus de gobernanza.
 
 --------------------------------------------------
 REQUISITOS DEL PROMPT DE IA
@@ -361,55 +244,42 @@ REQUISITOS DEL PROMPT DE IA
 
 ESTADO: DEFINICIÓN PENDIENTE
 
-El prompt de IA para la Capa 2 debe incluir:
+El prompt de IA para Capa 2 debe incluir:
 
-  - Bloque rígido de contexto:
-    propósito del sistema, principio taxonomy-first,
-    regla de inmutabilidad, reglas de separación de dominio.
+- Bloque rígido de contexto (propósito del sistema, taxonomy-first,
+  inmutabilidad, separación de dominio).
+- Reglas de gobernanza aplicables extraídas del set MANDATORY.
+- Esquema de severidad: FATAL / WARNING / SUGGESTION.
+- Esquema estricto de salida JSON:
+  rule_id, severity, node_path, evidence, recommendation, confidence.
+- Prohibición explícita de sugerir cambios automáticos.
 
-  - Reglas de gobernanza aplicables extraídas y
-    priorizadas del set documental MANDATORY.
-
-  - Esquema de clasificación de severidad:
-    FATAL / WARNING / SUGGESTION.
-
-  - Esquema estricto de salida JSON:
-    rule_id, severity, node_path,
-    evidence, recommendation, confidence.
-
-  - Prohibición explícita de sugerir
-    cambios automáticos.
-
-El prompt debe ser determinista en estructura.
+La estructura del prompt debe ser determinista.
 El contenido variable se limita al input taxonómico.
 
 --------------------------------------------------
-SALIDA Y QUALITY GATE
+SALIDA Y GATE DE CALIDAD
 --------------------------------------------------
 
 ESTADO: DEFINICIÓN PENDIENTE
 
-El proceso produce un único reporte de validación.
+El proceso genera un único reporte de validación.
 
-Decisión de quality gate:
+Decisión de gate de calidad:
 
-  PASS             — Sin violaciones detectadas.
-
-  PASS WITH WARNINGS — Sin violaciones fatales.
-                       Hallazgos no fatales documentados.
-
-  FAIL             — Una o más violaciones fatales.
-                     Proceso bloqueado. Corrección requerida.
+- PASS: sin violaciones.
+- PASS WITH WARNINGS: sin violaciones fatales; hallazgos no fatales documentados.
+- FAIL: una o más violaciones fatales; proceso bloqueado.
 
 El reporte debe registrar:
 
-  - Taxonomy version validated.
-  - Date and time of execution.
-  - Documents applied (from applicability matrix).
-  - Layer 1 result and findings.
-  - Layer 2 result and findings.
-  - Final quality gate decision.
-  - Hash or checksum of the validated file.
+- versión de taxonomía validada
+- fecha y hora de ejecución
+- documentos aplicados
+- resultado y hallazgos de Capa 1
+- resultado y hallazgos de Capa 2
+- decisión final del quality gate
+- hash o checksum del archivo validado
 
 --------------------------------------------------
 TRAZABILIDAD
@@ -417,13 +287,13 @@ TRAZABILIDAD
 
 La taxonomía maestra nunca debe modificarse automáticamente.
 
-Cada corrida de validación debe producir un registro trazable.
+Cada corrida de validación debe generar un registro trazable.
 
 El historial de validación permite:
 
-  - Comparar evolución de calidad en el tiempo.
-  - Detectar regresiones tras cambios taxonómicos.
-  - Auditar qué reglas se aplicaron y cuándo.
+- comparar evolución de calidad en el tiempo
+- detectar regresiones tras cambios taxonómicos
+- auditar qué reglas se aplicaron y cuándo
 
 --------------------------------------------------
 NOTAS DE IMPLEMENTACIÓN
@@ -431,32 +301,28 @@ NOTAS DE IMPLEMENTACIÓN
 
 scripts/validate_tree.py
 
-Actualmente es un placeholder.
+Actualmente es un marcador de posición.
 
-Este archivo implementará la Capa 1 cuando el set
+Este archivo implementará la Capa 1 cuando el conjunto
 de reglas esté finalizado y la matriz de aplicabilidad completa.
 
-La implementación no debe iniciar hasta que el set de
-reglas de validación esté finalizado en este documento.
+La implementación no debe iniciar hasta que el conjunto de reglas
+quede finalizado en este documento.
 
 --------------------------------------------------
 HISTORIAL DE REVISIONES
 --------------------------------------------------
 
 v0.2 — 2026-03-15
-  Matriz de aplicabilidad documental completada.
-  6 MANDATORY, 1 CONDITIONAL, 3 REFERENTIAL, 0 EXCLUDED.
-  Pruebas de no injerencia documentadas para todos los docs REFERENTIAL.
-  Alcance de derivación de reglas formalmente acotado.
-  Gate de implementación actualizado: bloqueado hasta definir set de reglas.
+- Matriz de aplicabilidad documental completada.
+- 6 MANDATORY, 1 CONDITIONAL, 3 REFERENTIAL, 0 EXCLUDED.
+- Alcance de derivación de reglas formalmente acotado.
+- Gate de implementación bloqueado hasta definir conjunto de reglas.
 
 v0.1 — 2026-03-15
-  Borrador inicial abstracto de la estrategia.
-  Enfoque de proceso definido: híbrido (script + IA).
-  Reglas de gobernanza establecidas como LEY con enforcement fatal.
-  Secciones pendientes identificadas para iteraciones siguientes.
+- Borrador inicial abstracto de la estrategia.
+- Enfoque de proceso definido: híbrido (script + IA).
+- Reglas de gobernanza establecidas como LEY con cumplimiento fatal.
 
 --------------------------------------------------
 FIN DEL DOCUMENTO
-
-
