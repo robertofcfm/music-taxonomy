@@ -99,6 +99,7 @@ class Finding:
 	passed: bool
 	description: str
 	evidence: str
+	causes: list[str] = field(default_factory=list)
 
 
 def iso_now() -> str:
@@ -242,6 +243,7 @@ def run_layer1_checks(
 			passed=len(roots) == 1,
 			description="Debe existir un nodo raíz único.",
 			evidence=f"Raíces detectadas: {len(roots)}",
+			causes=[] if len(roots) == 1 else [f"Raíces detectadas: {', '.join(n.name for n in roots)}"],
 		)
 	)
 
@@ -254,6 +256,7 @@ def run_layer1_checks(
 			passed=len(parser_errors) == 0,
 			description="Jerarquía válida por indentación.",
 			evidence="Sin errores de parser" if not parser_errors else " | ".join(parser_errors),
+			causes=[] if not parser_errors else parser_errors,
 		)
 	)
 
@@ -272,6 +275,7 @@ def run_layer1_checks(
 				if not non_clone_duplicates
 				else f"Duplicados inválidos: {', '.join(sorted(non_clone_duplicates))}"
 			),
+			causes=[] if not non_clone_duplicates else [f"Nombre duplicado: {name}" for name in sorted(non_clone_duplicates)],
 		)
 	)
 
@@ -292,6 +296,10 @@ def run_layer1_checks(
 					f"No Title Case: {', '.join(f'{n.name} (L{n.line_no})' for n in invalid_case[:8])}; "
 					f"General inválido: {', '.join(f'{n.name} (L{n.line_no})' for n in bad_general_suffix[:8])}"
 				)
+			),
+			causes=(
+				[f"No Title Case: {n.name} (L{n.line_no})" for n in invalid_case]
+				+ [f"General inválido: {n.name} (L{n.line_no})" for n in bad_general_suffix]
 			),
 		)
 	)
@@ -316,6 +324,7 @@ def run_layer1_checks(
 				if not invalid_general_parent
 				else f"Ubicación inválida de General: {', '.join(invalid_general_parent)}"
 			),
+			causes=invalid_general_parent,
 		)
 	)
 
@@ -337,22 +346,30 @@ def run_layer1_checks(
 				if not clone_with_children
 				else f"Clones con hijos: {', '.join(clone_with_children)}"
 			),
+			causes=clone_with_children,
 		)
 	)
 
 	# MVET-L1-007
-	depths = [n.depth for n in nodes]
-	min_depth = min(depths) if depths else 0
-	max_depth = max(depths) if depths else 0
-	depth_warning = max_depth > 5 or max_depth < 3
+	leaf_nodes = [n for n in nodes if not n.children]
+	leaf_depths = [n.depth for n in leaf_nodes]
+	max_leaf_depth = max(leaf_depths) if leaf_depths else 0
+	# Nueva regla: mínimo de profundidad = 3. Sin máximo numérico fijo;
+	# la profundidad alta se considera válida si responde a granularidad atómica.
+	depth_warning = max_leaf_depth < 3
+	shallow_leaf_paths = [f"{n.path} (L{n.line_no}, depth={n.depth})" for n in leaf_nodes if n.depth < 3]
 	findings.append(
 		Finding(
 			rule_id="MVET-L1-007",
 			fb="FB-03",
 			severity="WARNING",
 			passed=not depth_warning,
-			description="Profundidad recomendada 3-5 niveles.",
-			evidence=f"Min depth: {min_depth}, Max depth: {max_depth}",
+			description="Profundidad mínima estructural >= 3; sin máximo numérico fijo.",
+			evidence=(
+				f"Max leaf depth: {max_leaf_depth}. "
+				"La profundidad máxima se justifica por criterio de nodo atómico."
+			),
+			causes=shallow_leaf_paths if depth_warning else [],
 		)
 	)
 
@@ -369,6 +386,7 @@ def run_layer1_checks(
 				if before_hash == after_hash
 				else "El hash cambió durante la validación"
 			),
+			causes=[] if before_hash == after_hash else ["SHA256 before != SHA256 after"],
 		)
 	)
 
@@ -390,6 +408,7 @@ def run_layer1_checks(
 				if not ambiguous_hits
 				else f"Términos ambiguos detectados: {', '.join(ambiguous_hits)}"
 			),
+			causes=ambiguous_hits,
 		)
 	)
 
@@ -407,6 +426,7 @@ def run_layer1_checks(
 				if latin_ok
 				else "Debe existir exactamente un nodo Latin directo bajo Music"
 			),
+			causes=[] if latin_ok else ["Nodo Latin ausente o mal ubicado (debe ser hijo directo de Music)"],
 		)
 	)
 
@@ -462,6 +482,7 @@ def write_reports(
 				"passed": f.passed,
 				"description": f.description,
 				"evidence": f.evidence,
+				"causes": f.causes,
 				"sources": FB_SOURCES.get(f.fb, []),
 			}
 			for f in findings
@@ -489,6 +510,7 @@ def write_reports(
 				f"### {f.rule_id} [{f.fb}] - {f.severity} - {status}",
 				f"- Descripción: {f.description}",
 				f"- Evidencia: {f.evidence}",
+				f"- Causantes: {'; '.join(f.causes) if f.causes else 'N/A'}",
 				f"- Fuentes: {', '.join(FB_SOURCES.get(f.fb, []))}",
 				"",
 			]

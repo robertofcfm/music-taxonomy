@@ -28,7 +28,7 @@ Propietario del proyecto
 
 Estado:
 
-v0.4 — Trazabilidad por archivo de conocimiento definida.
+v0.5 — Regla de profundidad final alineada (mínimo 3 y criterio atómico).
 
 Última actualización:
 
@@ -329,8 +329,10 @@ CAPA 1 — Reglas deterministas (script)
 - MVET-L1-007
   FB: FB-03
   SEVERITY: WARNING
-  DESCRIPTION: Profundidad recomendada del árbol.
-  CHECK: Reportar ramas fuera del rango recomendado 3–5 niveles.
+  DESCRIPTION: Profundidad mínima estructural del árbol.
+  CHECK: La profundidad mínima requerida es 3; no existe máximo numérico fijo.
+         La profundidad máxima queda limitada por criterio de género atómico
+         (cuando subdividir más sería forzado o no musicalmente útil).
 
 - MVET-L1-008
   FB: FB-04
@@ -535,6 +537,11 @@ la plantilla final del prompt y validar su esquema JSON de salida.
 --------------------------------------------------
 HISTORIAL DE REVISIONES
 --------------------------------------------------
+
+v0.5 — 2026-03-15
+- MVET-L1-007 actualizado: profundidad mínima = 3.
+- Se elimina tope máximo numérico fijo de profundidad.
+- La profundidad máxima se define por criterio de género atómico.
 
 v0.4 — 2026-03-15
 - Se cambió el modelo de trazabilidad: de SOURCE por regla a trazabilidad por archivo.

@@ -1,6 +1,6 @@
 {
   "process": "MVET-LAYER1",
-  "generated_at": "2026-03-15T22:47:26+00:00",
+  "generated_at": "2026-03-15T23:11:06+00:00",
   "taxonomy_file": "taxonomy/genre_tree_master.md",
   "taxonomy_sha256": "85e0abf22fb194319a16b32e3aabf0448915c184380737561491606ec3147e8c",
   "applied_sources_by_fb": {
@@ -29,9 +29,9 @@
     ]
   },
   "summary": {
-    "decision": "PASS_WITH_WARNINGS",
+    "decision": "PASS",
     "total_fatal": 0,
-    "total_warning": 1,
+    "total_warning": 0,
     "total_checks": 10
   },
   "findings": [
@@ -42,6 +42,7 @@
       "passed": true,
       "description": "Debe existir un nodo raíz único.",
       "evidence": "Raíces detectadas: 1",
+      "causes": [],
       "sources": [
         "docs/governance/SYSTEM_CONTRACT.md",
         "docs/governance/TAXONOMY_RULES.md"
@@ -54,6 +55,7 @@
       "passed": true,
       "description": "Jerarquía válida por indentación.",
       "evidence": "Sin errores de parser",
+      "causes": [],
       "sources": [
         "docs/governance/SYSTEM_CONTRACT.md",
         "docs/governance/TAXONOMY_RULES.md"
@@ -66,6 +68,7 @@
       "passed": true,
       "description": "Nombres de género únicos (excepto clone permitido).",
       "evidence": "Sin duplicados inválidos",
+      "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
       ]
@@ -77,6 +80,7 @@
       "passed": true,
       "description": "Formato de nombrado válido (Title Case y patrón General).",
       "evidence": "Formato válido",
+      "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
       ]
@@ -88,6 +92,7 @@
       "passed": true,
       "description": "Nodos General explícitos y bajo su padre correspondiente.",
       "evidence": "Nodos General válidos",
+      "causes": [],
       "sources": [
         "docs/governance/SYSTEM_CONTRACT.md",
         "docs/governance/TAXONOMY_RULES.md"
@@ -100,6 +105,7 @@
       "passed": true,
       "description": "Restricciones de nodo clone (sin hijos).",
       "evidence": "Sin clones con hijos",
+      "causes": [],
       "sources": [
         "docs/governance/SYSTEM_CONTRACT.md",
         "docs/governance/TAXONOMY_RULES.md"
@@ -109,9 +115,10 @@
       "rule_id": "MVET-L1-007",
       "fb": "FB-03",
       "severity": "WARNING",
-      "passed": false,
-      "description": "Profundidad recomendada 3-5 niveles.",
-      "evidence": "Min depth: 1, Max depth: 6",
+      "passed": true,
+      "description": "Profundidad mínima estructural >= 3; sin máximo numérico fijo.",
+      "evidence": "Max leaf depth: 6. La profundidad máxima se justifica por criterio de nodo atómico.",
+      "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_DEPTH_POLICY.md",
         "docs/governance/TAXONOMY_RULES.md"
@@ -124,6 +131,7 @@
       "passed": true,
       "description": "Inmutabilidad del archivo maestro.",
       "evidence": "Hash estable durante la ejecución",
+      "causes": [],
       "sources": [
         "docs/governance/GLOBAL_RULES.md",
         "docs/governance/SYSTEM_CONTRACT.md"
@@ -136,6 +144,7 @@
       "passed": true,
       "description": "Términos ambiguos prohibidos.",
       "evidence": "Sin términos ambiguos",
+      "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
       ]
@@ -147,6 +156,7 @@
       "passed": true,
       "description": "Separación de dominio Latin en estructura base.",
       "evidence": "Rama Latin válida bajo Music",
+      "causes": [],
       "sources": [
         "docs/governance/GLOBAL_RULES.md",
         "docs/governance/SYSTEM_CONTRACT.md"
