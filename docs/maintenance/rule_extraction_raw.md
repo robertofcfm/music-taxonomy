@@ -1,16 +1,6 @@
-# RAW RULE EXTRACTION SNAPSHOT
+﻿# RAW RULE EXTRACTION SNAPSHOT
 
 Raw rules extracted from conversations. Not yet classified.
-
----
-RULE 001
-
-The system must never modify the taxonomy automatically.
-
----
-RULE 002
-
-Only the project owner may edit the taxonomy template.
 
 ---
 RULE 003
@@ -28,16 +18,6 @@ RULE 005
 The operational taxonomy must include numeric node codes.
 
 ---
-RULE 006
-
-Template and operational taxonomy versions must always match.
-
----
-RULE 007
-
-If versions differ, regenerate the operational taxonomy.
-
----
 RULE 008
 
 The classifier must load the taxonomy before classifying songs.
@@ -51,11 +31,6 @@ The taxonomy must be hierarchical.
 RULE 014
 
 Sibling genres must be musically distinct.
-
----
-RULE 015
-
-Genres must produce coherent playlists.
 
 ---
 RULE 016
@@ -73,16 +48,6 @@ RULE 019
 Minor stylistic influence must not trigger genre assignment.
 
 ---
-RULE 020
-
-The taxonomy must guide playlist generation.
-
----
-RULE 021
-
-Playlist structure must follow taxonomy hierarchy.
-
----
 RULE 022
 
 The project has three phases: taxonomy design, song classification, and tree generation.
@@ -96,26 +61,6 @@ The taxonomy must be human-editable.
 RULE 024
 
 The operational tree must be machine-readable.
-
----
-RULE 027
-
-The system must support Latin music separation logic.
-
----
-RULE 028
-
-Latin songs must use only genres from the Latin branch.
-
----
-RULE 029
-
-Non-Latin songs must not use Latin-branch genres.
-
----
-RULE 030
-
-The Latin branch is an independent classification universe.
 
 ---
 RULE 031
@@ -136,11 +81,6 @@ Clone nodes must not have children.
 RULE 034
 
 Clone nodes must act as portals to canonical nodes.
-
----
-RULE 035
-
-Songs must be assigned to canonical nodes, not clones.
 
 ---
 RULE 036
@@ -218,11 +158,6 @@ RULE 050
 The taxonomy owner must evaluate new genre proposals.
 
 ---
-RULE 051
-
-The classifier may suggest genres, but must not add them automatically.
-
----
 RULE 052
 
 The taxonomy may include general fallback nodes.
@@ -278,24 +213,9 @@ RULE 062
 Unaffected songs must not be reclassified unnecessarily.
 
 ---
-RULE 063
-
-Genre assignments must be stored separately from tree structure.
-
----
 RULE 064
 
 The playlist tree must be generated dynamically from classified songs.
-
----
-RULE 065
-
-The generated tree must follow the taxonomy structure.
-
----
-RULE 066
-
-The generated tree must not alter the taxonomy.
 
 ---
 RULE 067
@@ -306,16 +226,6 @@ The generated tree may activate nodes when songs appear.
 RULE 068
 
 Inactive nodes represent unused taxonomy branches.
-
----
-RULE 069
-
-Taxonomy and dataset must remain separated.
-
----
-RULE 070
-
-The dataset must not modify taxonomy automatically.
 
 ---
 RULE 071
@@ -341,21 +251,6 @@ Unclassified songs must remain queued.
 RULE 075
 
 Batch execution must stop when the error threshold is exceeded.
-
----
-RULE 076
-
-The system must version taxonomy and rules.
-
----
-RULE 077
-
-Classification results must record the taxonomy version used.
-
----
-RULE 078
-
-Taxonomy changes may require result reclassification.
 
 ---
 RULE 079
@@ -418,17 +313,8 @@ RULE 090
 Reconstruction progress must be reported.
 
 ---
-RULE 091
-
-Repository content must stay consistent with documentation.
-
----
-RULE 092
-
-System behavior must remain consistent with taxonomy, classification, and playlist design principles.
-
----
 DUPLICATE COLLAPSE NOTE
 
-Former RULES 093–271 were semantic duplicates of RULE 092
+Former RULES 093â€“271 were semantic duplicates of RULE 092
 (same text; only the context counter changed).
+

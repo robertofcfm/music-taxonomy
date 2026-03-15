@@ -76,4 +76,86 @@ Genre aliases must resolve to canonical
 taxonomy genres.
 
 --------------------------------------------------
+
+G008 — TAXONOMY IMMUTABILITY
+
+The system must never modify the taxonomy automatically.
+
+--------------------------------------------------
+
+G009 — TAXONOMY EDIT AUTHORITY
+
+Only the project owner may edit the taxonomy template.
+
+--------------------------------------------------
+
+G010 — TAXONOMY VERSION CONSISTENCY
+
+Template and operational taxonomy versions must always match.
+If versions differ, the operational taxonomy must be regenerated.
+
+--------------------------------------------------
+
+G011 — PLAYLIST CONSISTENCY
+
+Taxonomy, classification, and playlist structure must remain musically coherent.
+Playlist structure must follow taxonomy hierarchy.
+
+--------------------------------------------------
+
+G012 — LATIN DOMAIN SEPARATION
+
+Latin and non-Latin classification domains are independent.
+Latin songs must use Latin-branch genres only.
+Non-Latin songs must not use Latin-branch genres.
+
+--------------------------------------------------
+
+G013 — CANONICAL ASSIGNMENT POLICY
+
+Songs must be assigned to canonical taxonomy nodes, not clone nodes.
+
+--------------------------------------------------
+
+G014 — PROPOSAL NON-AUTOMATION
+
+The classifier may suggest genres but must not add them automatically.
+
+--------------------------------------------------
+
+G015 — STRUCTURE VS ASSIGNMENT SEPARATION
+
+Genre assignments must be stored separately from taxonomy structure.
+
+--------------------------------------------------
+
+G016 — GENERATED TREE CONSTRAINTS
+
+The generated tree must follow taxonomy structure and must not alter taxonomy data.
+
+--------------------------------------------------
+
+G017 — DATASET/TAXONOMY SEPARATION
+
+Dataset state must not modify taxonomy automatically.
+
+--------------------------------------------------
+
+G018 — VERSIONED CLASSIFICATION TRACEABILITY
+
+The system must version taxonomy/rules, and classification results must record the taxonomy version used.
+
+--------------------------------------------------
+
+G019 — RECLASSIFICATION ON CHANGE
+
+Taxonomy changes may require reclassification of affected results.
+
+--------------------------------------------------
+
+G020 — REPOSITORY/DOCUMENTATION CONSISTENCY
+
+Repository content must remain consistent with documentation and design principles.
+
+--------------------------------------------------
 END OF FILE
