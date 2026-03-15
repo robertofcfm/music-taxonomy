@@ -354,8 +354,7 @@ def run_layer1_checks(
 	leaf_nodes = [n for n in nodes if not n.children]
 	leaf_depths = [n.depth for n in leaf_nodes]
 	max_leaf_depth = max(leaf_depths) if leaf_depths else 0
-	# Nueva regla: mínimo de profundidad = 3. Sin máximo numérico fijo;
-	# la profundidad alta se considera válida si responde a granularidad atómica.
+	# Regla estructural de Capa 1: mínimo de profundidad = 3.
 	depth_warning = max_leaf_depth < 3
 	shallow_leaf_paths = [f"{n.path} (L{n.line_no}, depth={n.depth})" for n in leaf_nodes if n.depth < 3]
 	findings.append(
@@ -364,10 +363,10 @@ def run_layer1_checks(
 			fb="FB-03",
 			severity="WARNING",
 			passed=not depth_warning,
-			description="Profundidad mínima estructural >= 3; sin máximo numérico fijo.",
+			description="Profundidad mínima estructural >= 3.",
 			evidence=(
 				f"Max leaf depth: {max_leaf_depth}. "
-				"La profundidad máxima se justifica por criterio de nodo atómico."
+				"La evaluación de profundidad máxima por criterio atómico corresponde a Capa 2."
 			),
 			causes=shallow_leaf_paths if depth_warning else [],
 		)

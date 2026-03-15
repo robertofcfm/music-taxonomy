@@ -1,6 +1,6 @@
 # Reporte de Validación MVET (Capa 1)
 
-- Fecha: 2026-03-15T23:11:06+00:00
+- Fecha: 2026-03-15T23:16:46+00:00
 - Archivo: taxonomy/genre_tree_master.md
 - SHA256: 85e0abf22fb194319a16b32e3aabf0448915c184380737561491606ec3147e8c
 - Decisión: PASS
@@ -46,8 +46,8 @@
 - Fuentes: docs/governance/SYSTEM_CONTRACT.md, docs/governance/TAXONOMY_RULES.md
 
 ### MVET-L1-007 [FB-03] - WARNING - PASS
-- Descripción: Profundidad mínima estructural >= 3; sin máximo numérico fijo.
-- Evidencia: Max leaf depth: 6. La profundidad máxima se justifica por criterio de nodo atómico.
+- Descripción: Profundidad mínima estructural >= 3.
+- Evidencia: Max leaf depth: 6. La evaluación de profundidad máxima por criterio atómico corresponde a Capa 2.
 - Causantes: N/A
 - Fuentes: docs/governance/TAXONOMY_DEPTH_POLICY.md, docs/governance/TAXONOMY_RULES.md
 

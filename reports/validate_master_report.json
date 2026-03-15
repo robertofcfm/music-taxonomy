@@ -1,6 +1,6 @@
 {
   "process": "MVET-LAYER1",
-  "generated_at": "2026-03-15T23:11:06+00:00",
+  "generated_at": "2026-03-15T23:16:46+00:00",
   "taxonomy_file": "taxonomy/genre_tree_master.md",
   "taxonomy_sha256": "85e0abf22fb194319a16b32e3aabf0448915c184380737561491606ec3147e8c",
   "applied_sources_by_fb": {
@@ -116,8 +116,8 @@
       "fb": "FB-03",
       "severity": "WARNING",
       "passed": true,
-      "description": "Profundidad mínima estructural >= 3; sin máximo numérico fijo.",
-      "evidence": "Max leaf depth: 6. La profundidad máxima se justifica por criterio de nodo atómico.",
+      "description": "Profundidad mínima estructural >= 3.",
+      "evidence": "Max leaf depth: 6. La evaluación de profundidad máxima por criterio atómico corresponde a Capa 2.",
       "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_DEPTH_POLICY.md",

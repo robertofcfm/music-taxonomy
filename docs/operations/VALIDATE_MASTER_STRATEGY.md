@@ -241,6 +241,12 @@ Formato obligatorio de regla:
 - DESCRIPTION
 - CHECK
 
+Convención de asignación por capa:
+
+- `MVET-L1-*`: se implementa y ejecuta en Capa 1 (determinista).
+- `MVET-L2-*`: se implementa y ejecuta en Capa 2 (semántica IA).
+- `MVET-C-*`: reglas condicionales (activación por escenario).
+
 Modelo de trazabilidad:
 
 - La gobernanza se usa como base de conocimiento normativa.
@@ -330,9 +336,8 @@ CAPA 1 — Reglas deterministas (script)
   FB: FB-03
   SEVERITY: WARNING
   DESCRIPTION: Profundidad mínima estructural del árbol.
-  CHECK: La profundidad mínima requerida es 3; no existe máximo numérico fijo.
-         La profundidad máxima queda limitada por criterio de género atómico
-         (cuando subdividir más sería forzado o no musicalmente útil).
+  CHECK: La profundidad mínima requerida es 3.
+         Esta regla no evalúa semántica musical ni justificación atómica.
 
 - MVET-L1-008
   FB: FB-04
@@ -381,8 +386,9 @@ CAPA 2 — Reglas semánticas (IA)
 - MVET-L2-005
   FB: FB-05
   SEVERITY: WARNING
-  DESCRIPTION: Candidatos a género atómico.
-  CHECK: Nodos donde subdividir deterioraría coherencia.
+  DESCRIPTION: Criterio atómico para límite de profundidad máxima.
+  CHECK: Nodos hoja donde subdividir más sería forzado o
+         deterioraría coherencia musical.
 
 - MVET-L2-006
   FB: FB-06
@@ -542,6 +548,7 @@ v0.5 — 2026-03-15
 - MVET-L1-007 actualizado: profundidad mínima = 3.
 - Se elimina tope máximo numérico fijo de profundidad.
 - La profundidad máxima se define por criterio de género atómico.
+- Se separa formalmente la evaluación: mínimo en Capa 1 y criterio atómico en Capa 2.
 
 v0.4 — 2026-03-15
 - Se cambió el modelo de trazabilidad: de SOURCE por regla a trazabilidad por archivo.
