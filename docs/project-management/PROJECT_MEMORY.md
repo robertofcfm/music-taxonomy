@@ -31,7 +31,7 @@ seleccionar playlists que coincidan con un estado de ánimo musical deseado.
 3. ENFOQUE TAXONOMY-FIRST
 --------------------------------------------------
 
-El proyecto sigue un diseño taxonomy-first.
+El proyecto sigue un diseño taxonomía-first.
 
 Esto significa:
 
@@ -65,3 +65,4 @@ acomodar esta evolución preservando la coherencia musical.
 
 --------------------------------------------------
 FIN MEMORIA DEL PROYECTO
+

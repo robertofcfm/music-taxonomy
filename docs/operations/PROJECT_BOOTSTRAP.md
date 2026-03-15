@@ -12,7 +12,7 @@ para comenzar trabajo con el contexto actual del proyecto.
 
 Propietario:
 
-Project Owner
+Propietario del proyecto
 
 Última Actualización:
 
@@ -118,3 +118,4 @@ Solo se escriben canciones clasificadas correctamente.
 
 --------------------------------------------------
 FIN INICIO DE PROYECTO
+

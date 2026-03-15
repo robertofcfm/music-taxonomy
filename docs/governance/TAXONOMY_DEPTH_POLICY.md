@@ -2,41 +2,41 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
 Depth limits, expansion criteria, and structural
-balance rules for taxonomy branches.
+balance reglas for taxonomía branches.
 
-Owner:
+Responsable:
 
-Project Owner
+Propietario del proyecto
 
-Last Updated:
+Última actualización:
 
 2026-03-15
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines how deep the genre taxonomy
+Este documento define how deep the genre taxonomía
 is allowed to grow and how depth should be managed.
 
-The goal is to maintain a structure that is:
+El objetivo es maintain a structure that is:
 
 • musically meaningful  
 • easy to navigate  
-• stable for classification  
+• stable for clasificación  
 • suitable for playlist generation  
 
 --------------------------------------------------
 2. MINIMUM STRUCTURAL DEPTH
 --------------------------------------------------
 
-The taxonomy should normally reach at least
+The taxonomía should normally reach at least
 three levels of depth.
 
 Example:
@@ -46,14 +46,14 @@ Music
     Alternative Rock
       Indie Rock
 
-This allows classification to reach a level
+This allows clasificación to reach a level
 of genre specificity that is useful for playlists.
 
 --------------------------------------------------
 3. RECOMMENDED DEPTH RANGE
 --------------------------------------------------
 
-The recommended taxonomy depth is:
+The recommended taxonomía depth is:
 
 3 to 5 levels.
 
@@ -66,7 +66,7 @@ without producing unnecessary complexity.
 
 Very deep hierarchies should be avoided.
 
-If a taxonomy branch becomes excessively deep,
+If a taxonomía branch becomes excessively deep,
 it should be reviewed.
 
 Possible corrective actions:
@@ -87,25 +87,25 @@ A node should only be expanded when:
 • meaningful subgenres exist  
 • the subdivision improves playlist coherence  
 
-Artificial subdivisions must be avoided.
+Artificial subdivisions debe be avoided.
 
 --------------------------------------------------
 6. BALANCE PRINCIPLE
 --------------------------------------------------
 
-The taxonomy should remain balanced.
+The taxonomía should remain balanced.
 
 Branches should not grow disproportionately deep
 while other branches remain extremely shallow.
 
-When imbalance appears, the taxonomy should
+When imbalance appears, the taxonomía should
 be reviewed.
 
 --------------------------------------------------
 7. DATASET-DRIVEN EXPANSION CONTROL
 --------------------------------------------------
 
-Taxonomy expansion must be dataset-driven.
+Taxonomy expansion debe be dataset-driven.
 
 A node becomes eligible for expansion when
 its song count exceeds the expansion threshold.
@@ -115,9 +115,10 @@ Operational threshold reference:
 approximately 45 songs.
 
 After an expansion is introduced, songs assigned
-to the expanded node must be reevaluated to
+to the expanded node debe be reevaluated to
 determine whether a more specific subgenre
-classification is now applicable.
+clasificación is now applicable.
 
 --------------------------------------------------
 END TAXONOMY DEPTH POLICY
+

@@ -4,59 +4,59 @@ Architecture Completion Snapshot
 This document captures the first stable reconstruction of the project
 after extracting knowledge from the development conversation.
 
-Purpose:
-Preserve the architecture, rules, and project structure so the project
+Propósito:
+Preserve the architecture, reglas, and project structure so the project
 can be resumed later without losing context.
 
 ---
 
 # Project Objective
 
-The project builds a **music genre taxonomy system** capable of:
+The project builds a **music genre taxonomía system** capable of:
 
-1. Defining a structured genre taxonomy.
-2. Classifying songs into genres using that taxonomy.
+1. Defining a structured genre taxonomía.
+2. Classifying songs into genres using that taxonomía.
 3. Generating a dynamic genre tree based on real catalog content.
 
-The system is divided into three phases.
+El sistema is divided into three phases.
 
 ---
 
 # Phase 1 — Taxonomy Design
 
-Status: COMPLETED
+Estado: COMPLETED
 
 Goal:
-Design the genre taxonomy and all structural rules before any automation.
+Design the genre taxonomía and all structural reglas before any automation.
 
 Outputs:
 
 taxonomy/genre_tree_master.md  
-Editable taxonomy template.
+Editable taxonomía template.
 
 taxonomy/genre_tree_operational.csv  
 Operational representation used by scripts.
 
 taxonomy/taxonomy_version.md  
-Version control for taxonomy compatibility.
+Version control for taxonomía compatibility.
 
 data/genre_alias.csv  
 Alias mapping for genre normalization.
 
 docs/governance/TAXONOMY_RULES.md  
-Taxonomy rules.
+Taxonomy reglas.
 
 docs/governance/TAXONOMY_NAMING_CONVENTION.md  
-Genre naming rules.
+Genre naming reglas.
 
 docs/governance/TAXONOMY_CHANGE_POLICY.md  
-Rules governing taxonomy evolution.
+Rules governing taxonomía evolution.
 
 docs/governance/TAXONOMY_DEPTH_POLICY.md  
 Rules for branch depth.
 
 docs/governance/TAXONOMY_QUALITY_CHECKLIST.md  
-Validation criteria for taxonomy.
+Validation criteria for taxonomía.
 
 docs/operations/PHASE1_FINAL_CHECKLIST.md  
 Checklist confirming Phase 1 completion.
@@ -65,10 +65,10 @@ Checklist confirming Phase 1 completion.
 
 # Phase 2 — Song Genre Classification
 
-Status: DESIGN COMPLETE / IMPLEMENTATION PENDING
+Estado: DESIGN COMPLETE / IMPLEMENTATION PENDIENTE
 
 Goal:
-Assign genres to songs using the taxonomy.
+Assign genres to songs using the taxonomía.
 
 Input:
 
@@ -80,20 +80,20 @@ catalog/songs_with_genres.csv
 
 Rules:
 
-• Genres must be real musical genres.
+• Genres debe be real musical genres.
 • Songs can belong to multiple genres.
 • Minor influences are ignored.
-• Genres must match taxonomy leaves.
+• Genres debe match taxonomía leaves.
 
 If no suitable genre exists:
 
-A fatal error is raised and the taxonomy must be expanded.
+A error fatal is raised and the taxonomía debe be expanded.
 
 ---
 
 # Phase 3 — Dynamic Genre Tree Generation
 
-Status: DESIGN COMPLETE / IMPLEMENTATION PENDING
+Estado: DESIGN COMPLETE / IMPLEMENTATION PENDIENTE
 
 Goal:
 Generate a genre tree based on catalog data.
@@ -116,7 +116,7 @@ This process builds the final listening tree.
 # Node Types
 
 NORMAL  
-Standard taxonomy node.
+Standard taxonomía node.
 
 CLONE  
 Portal node pointing to another canonical node.
@@ -135,7 +135,7 @@ Latin music is handled as a separate branch.
 
 If a song is Latin:
 
-Its genres must be selected from the Latin subtree.
+Its genres debe be selected from the Latin subtree.
 
 This prevents mixing Latin and non-Latin genre contexts.
 
@@ -143,25 +143,25 @@ This prevents mixing Latin and non-Latin genre contexts.
 
 # Versioning Strategy
 
-Each classification result stores:
+Each clasificación result stores:
 
 taxonomy_version
 
-If the taxonomy structure changes:
+If the taxonomía structure changes:
 
-Previous classifications may become incompatible.
+Previous clasificacións puede become incompatible.
 
 ---
 
 # Key Project Principle
 
-The taxonomy template is **never modified automatically**.
+The taxonomía template is **never modified automatically**.
 
 Only the project owner edits:
 
 taxonomy/genre_tree_master.md
 
-Automation tools may only:
+Automation tools puede only:
 
 • analyze
 • validate
@@ -186,8 +186,9 @@ docs/
 
 This checkpoint ensures that:
 
-• The system architecture is preserved  
-• The taxonomy rules are documented  
+• El sistema architecture is preserved  
+• The taxonomía reglas are documented  
 • The project can be resumed months later  
 
 without losing context.
+

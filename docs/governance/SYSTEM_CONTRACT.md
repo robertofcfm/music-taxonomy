@@ -12,7 +12,7 @@ y requisitos de ejecución.
 
 Propietario:
 
-Project Owner
+Propietario del proyecto
 
 Última Actualización:
 
@@ -274,7 +274,7 @@ Las salidas de clasificación deben incluir:
 
 - taxonomy_version
 - classifier_version
-- rules_version
+- reglas_version
 
 Esto permite reanudar clasificación o detectar
 incompatibilidades.
@@ -297,3 +297,4 @@ Si la taxonomía cambia sin romper compatibilidad:
 
 --------------------------------------------------
 FIN CONTRATO DEL SISTEMA
+

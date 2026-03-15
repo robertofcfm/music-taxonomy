@@ -1,34 +1,34 @@
-# TAXONOMY QUALITY CHECKLIST
+# TAXONOMY CHECKLIST DE CALIDAD
 Music Genre Taxonomy System
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Quality review criteria used to evaluate taxonomy
+Quality review criteria used to evaluate taxonomía
 readiness before changes or releases.
 
-Owner:
+Responsable:
 
-Project Owner
+Propietario del proyecto
 
-Last Updated:
+Última actualización:
 
 2026-03-15
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines the checklist used to evaluate
-the quality of the genre taxonomy.
+Este documento define the checklist used to evaluate
+the quality of the genre taxonomía.
 
 The checklist helps detect structural problems
 before a release is created.
 
-The goal is to maintain a taxonomy that is:
+El objetivo es maintain a taxonomía that is:
 
 • musically coherent  
 • structurally balanced  
@@ -39,29 +39,29 @@ The goal is to maintain a taxonomy that is:
 2. WHEN TO RUN THE CHECKLIST
 --------------------------------------------------
 
-The taxonomy quality checklist must be executed:
+The taxonomía quality checklist debe be executed:
 
 • before creating a release  
-• after modifying the taxonomy  
+• after modifying the taxonomía  
 • after adding new genres  
 • after merging or relocating nodes  
 
-A release must not proceed if unresolved issues remain.
+A release no debe proceed if unresolved issues remain.
 
 --------------------------------------------------
-3. ROOT STRUCTURE CHECK
+3. ESTRUCTURA RAÍZ CHECK
 --------------------------------------------------
 
-Verify that the taxonomy has exactly one root node.
+Verify that the taxonomía has exactly one root node.
 
 Example:
 
 Music
 
-All genres must descend from this root.
+All genres debe descend from this root.
 
 --------------------------------------------------
-4. SIBLING GENRE DISTINCTION
+4. GÉNERO HERMANO DISTINCTION
 --------------------------------------------------
 
 Verify that sibling genres represent clearly
@@ -81,13 +81,13 @@ If the answer is unclear, consider merging them.
 
 Check if two genres represent the same style.
 
-Redundant genres may occur when:
+Redundant genres puede occur when:
 
 • different names refer to the same style  
 • subgenres overlap heavily  
 • historical naming inconsistencies exist  
 
-In these cases a merge may be recommended.
+In these cases a merge puede be recommended.
 
 --------------------------------------------------
 6. NODE EXPANSION REVIEW
@@ -120,7 +120,7 @@ A node should be considered atomic when:
 Atomic nodes should not be subdivided.
 
 --------------------------------------------------
-8. GENERAL NODE USAGE
+8. NODO GENERAL USAGE
 --------------------------------------------------
 
 Verify that General nodes are used correctly.
@@ -131,13 +131,13 @@ Checklist:
 • Are songs incorrectly accumulating in the General node?  
 • Could new subgenres be defined instead?  
 
-General nodes must not become a default category.
+General nodes no debe become a default category.
 
 --------------------------------------------------
 9. DEPTH BALANCE CHECK
 --------------------------------------------------
 
-Verify that the taxonomy depth remains balanced.
+Verify that the taxonomía depth remains balanced.
 
 Problems to detect:
 
@@ -168,15 +168,15 @@ Indicators:
 • genres that are difficult to distinguish  
 • excessive specialization  
 
-In these cases the taxonomy may need simplification.
+In these cases the taxonomía puede need simplification.
 
 --------------------------------------------------
-12. LATIN BRANCH VALIDATION
+12. RAMA LATIN VALIDATION
 --------------------------------------------------
 
 Verify that Latin genres remain inside the Latin branch.
 
-Songs classified as Latin must not use genres
+Songs classified as Latin no debe use genres
 outside the Latin branch.
 
 --------------------------------------------------
@@ -197,12 +197,13 @@ Check for:
 
 Before creating a project release verify that:
 
-• all taxonomy issues have been reviewed  
+• all taxonomía issues have been reviewed  
 • no unresolved structural problems remain  
-• taxonomy structure is coherent  
+• taxonomía structure is coherent  
 • naming conventions are respected  
 
-A release must not proceed if the checklist fails.
+A release no debe proceed if the checklist fails.
 
 --------------------------------------------------
-END TAXONOMY QUALITY CHECKLIST
+END TAXONOMY CHECKLIST DE CALIDAD
+

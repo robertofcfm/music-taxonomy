@@ -2,61 +2,61 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Structural taxonomy rules used by validation,
-classification, and playlist generation.
+Structural taxonomía reglas used by validación,
+clasificación, and playlist generation.
 
-Owner:
+Responsable:
 
-Project Owner
+Propietario del proyecto
 
-Last Updated:
+Última actualización:
 
 2026-03-15
 
 --------------------------------------------------
-PURPOSE
+PROPÓSITO
 --------------------------------------------------
 
-This document defines the structural rules governing the genre taxonomy.
+Este documento define the structural reglas governing the genre taxonomía.
 
-The taxonomy represents the musical knowledge base of the system and is
+The taxonomía represents the musical knowledge base of the system and is
 used by the classifier and playlist generation pipeline.
 
 --------------------------------------------------
-1. TAXONOMY PURPOSE
+1. TAXONOMY PROPÓSITO
 --------------------------------------------------
 
-The taxonomy defines the structure used to organize musical genres.
+The taxonomía defines the structure used to organize musical genres.
 
-The taxonomy must remain human-editable.
+The taxonomía debe remain human-editable.
 
 Its purpose is to:
 
 - represent relationships between genres
-- guide song classification
+- guide song clasificación
 - ensure playlist coherence
 
-The taxonomy must prioritize musical coherence over completeness.
+The taxonomía debe prioritize musical coherence over completeness.
 
-Genres must represent musically meaningful styles.
+Genres debe represent musically meaningful styles.
 Generic or vague descriptors are not valid genre nodes.
 
 --------------------------------------------------
-2. ROOT STRUCTURE
+2. ESTRUCTURA RAÍZ
 --------------------------------------------------
 
-The taxonomy must have a single root node.
+The taxonomía debe have a nodo raíz único.
 
 Example:
 
 Music
 
-All genres must descend from this root.
+All genres debe descend from this root.
 
 --------------------------------------------------
 3. HIERARCHY DEFINITION
@@ -78,7 +78,7 @@ Each indentation level represents a deeper specialization.
 4. LEAF NODE RULE
 --------------------------------------------------
 
-Songs may only be classified into leaf nodes.
+Songs puede only be classified into leaf nodes.
 
 Leaf nodes are nodes that do not have children.
 
@@ -95,29 +95,29 @@ Only:
 - Indie Rock
 - Grunge
 
-are valid classification targets.
+are valid clasificación targets.
 
 --------------------------------------------------
-5. SIBLING GENRE RULE
+5. GÉNERO HERMANO RULE
 --------------------------------------------------
 
-Genres that share the same parent must represent
+Genres that share the same parent debe represent
 musically distinguishable styles.
 
-Sibling genres must not be so similar that they
+Sibling genres no debe be so similar that they
 produce indistinguishable playlists.
 
 If sibling genres cannot be clearly distinguished,
 they should be merged.
 
 --------------------------------------------------
-6. PLAYLIST COHESION RULE
+6. COHESIÓN DE PLAYLIST RULE
 --------------------------------------------------
 
-The taxonomy must prioritize playlist coherence.
+The taxonomía debe prioritize playlist coherence.
 
 If a node generates playlists that sound inconsistent,
-the taxonomy must be adjusted.
+the taxonomía debe be adjusted.
 
 Possible actions:
 
@@ -129,7 +129,7 @@ Possible actions:
 7. NODE DEPTH POLICY
 --------------------------------------------------
 
-The taxonomy should maintain a moderate depth.
+The taxonomía should maintain a moderate depth.
 
 Typical depth:
 
@@ -142,7 +142,7 @@ they represent meaningful musical distinctions.
 8. EXPANSION RULE
 --------------------------------------------------
 
-A node may be expanded when the number of songs
+A node puede be expanded when the number of songs
 assigned to it exceeds the expansion threshold.
 
 Expansion threshold:
@@ -150,13 +150,13 @@ Expansion threshold:
 45 songs.
 
 When expansion occurs, the node becomes a parent
-and its songs must be redistributed among subgenres.
+and its songs debe be redistributed among subgenres.
 
 --------------------------------------------------
-9. GENERAL NODE POLICY
+9. NODO GENERAL POLICY
 --------------------------------------------------
 
-A node may contain a General subnode when
+A node puede contain a General subnode when
 existing subgenres do not fully cover the parent genre.
 
 General nodes act as explicit fallback nodes for songs
@@ -169,7 +169,7 @@ Hard Rock
   Arena Rock
   Hard Rock (General)
 
-General nodes must:
+General nodes debe:
 
 - be explicitly defined
 - never be auto-created by the system
@@ -188,7 +188,7 @@ Atomic genres represent styles where further
 subdivision would create artificial distinctions.
 
 --------------------------------------------------
-11. LATIN BRANCH STRUCTURE
+11. RAMA LATIN STRUCTURE
 --------------------------------------------------
 
 Latin music exists in a dedicated branch.
@@ -204,13 +204,13 @@ Music
 Genres under Latin represent styles belonging
 to Latin musical traditions.
 
-Songs classified as Latin must use this branch.
+Songs classified as Latin debe use this branch.
 
 --------------------------------------------------
 12. GENRE NAMING RULE
 --------------------------------------------------
 
-Genre names must follow these rules:
+Genre names debe follow these reglas:
 
 - Title Case
 - Clear musical meaning
@@ -228,23 +228,23 @@ Example of invalid names:
 13. TAXONOMY MODIFICATION POLICY
 --------------------------------------------------
 
-Taxonomy modifications must be made manually.
+Taxonomy modifications debe be made manually.
 
-The system cannot automatically modify the taxonomy.
+El sistema cannot automatically modify the taxonomía.
 
-The system may only:
+El sistema puede only:
 
 - suggest new nodes
 - report inconsistencies
 - propose structural improvements
 
-All changes must be approved by the user.
+All changes debe be approved by the user.
 
 --------------------------------------------------
-14. TAXONOMY VALIDATION
+14. VALIDACIÓN DE TAXONOMÍA
 --------------------------------------------------
 
-Before a release the taxonomy must be validated.
+Antes de un release the taxonomía debe ser validada.
 
 Validation checks include:
 
@@ -257,42 +257,43 @@ Validation checks include:
 15. SOURCE AND OPERATIONAL REPRESENTATION
 --------------------------------------------------
 
-The authoritative editable taxonomy source is:
+The authoritative editable taxonomía source is:
 
 taxonomy/genre_tree_master.md
 
-The master taxonomy must stay directly editable by users.
+The master taxonomía debe stay directly editable by users.
 
-The operational taxonomy must be generated from
-the master taxonomy template.
+The operational taxonomía debe be generated from
+the master taxonomía template.
 
-The operational representation must be machine-readable
-and must include numeric node codes.
+The operational representation debe be machine-readable
+and debe include numeric node codes.
 
-The playlist tree must be generated dynamically from
-classified songs using this taxonomy.
+The playlist tree debe be generated dynamically from
+classified songs using this taxonomía.
 
 --------------------------------------------------
 16. CLONE AND HYBRID GENRE POLICY
 --------------------------------------------------
 
-The taxonomy supports clone nodes.
+The taxonomía supports clone nodes.
 
-Clone node rules:
+Clone node reglas:
 
-- a clone must reference one canonical node
-- clone nodes must not have children
+- a clone debe reference one canonical node
+- clone nodes no debe have children
 - clone nodes act as navigation portals
 - clones exist to avoid structural duplication
-- canonical nodes may have children
+- canonical nodes puede have children
 
-The taxonomy supports hybrid genres.
+The taxonomía supports hybrid genres.
 
-Hybrid genre rules:
+Hybrid genre reglas:
 
-- a hybrid may appear in multiple conceptual branches
+- a hybrid puede appear in multiple conceptual branches
 - when represented in multiple branches, clone nodes
   should be used to point to the canonical node
 
 --------------------------------------------------
 END TAXONOMY RULES
+

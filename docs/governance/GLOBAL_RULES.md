@@ -12,7 +12,7 @@ componente del repositorio.
 
 Propietario:
 
-Project Owner
+Propietario del proyecto
 
 Última Actualización:
 
@@ -192,3 +192,4 @@ la asignación de género.
 ---
 
 FIN DEL ARCHIVO
+

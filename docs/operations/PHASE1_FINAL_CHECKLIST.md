@@ -5,16 +5,16 @@ Validation checklist for closing Phase 1: Taxonomy Definition.
 
 ## Document Metadata
 
-Scope:
+Alcance:
 
-Phase 1 exit criteria and validation checks for
-taxonomy definition readiness.
+Phase 1 exit criteria and validación checks for
+taxonomía definition readiness.
 
-Owner:
+Responsable:
 
-Project Owner
+Propietario del proyecto
 
-Last Updated:
+Última actualización:
 
 2026-03-15
 
@@ -23,10 +23,10 @@ Last Updated:
 ## Purpose
 
 Phase 1 objective:
-Define the complete genre taxonomy structure and the rules governing it
-before implementing classification and tree generation processes.
+Define the complete genre taxonomía structure and the reglas governing it
+before implementing clasificación and tree generation processes.
 
-This checklist ensures the taxonomy template is consistent, stable,
+This checklist ensures the taxonomía template is consistent, stable,
 and ready for use by the classifier and tree generator.
 
 ---
@@ -35,7 +35,7 @@ and ready for use by the classifier and tree generator.
 
 [ ] The file `taxonomy/genre_tree_master.md` exists.
 
-[ ] The tree contains a **single root node**.
+[ ] The tree contains a **nodo raíz único**.
 
 [ ] Hierarchy is defined exclusively by **indentation**.
 
@@ -48,13 +48,13 @@ and ready for use by the classifier and tree generator.
 - "Various"
 - "Other"
 
-Genres must be musically meaningful.
+Genres debe be musically meaningful.
 
 ---
 
 # 2. Minimum Depth Rule
 
-Each branch of the taxonomy must satisfy:
+Each branch of the taxonomía debe satisfy:
 
 Minimum depth = **3 levels whenever musically meaningful**
 
@@ -74,7 +74,7 @@ Shallow branches are acceptable only if:
 
 # 3. Parent–Child Musical Rule
 
-A parent genre must **contain** the musical characteristics of its children.
+A parent genre debe **contain** the musical characteristics of its children.
 
 Correct:
 
@@ -88,23 +88,23 @@ Rock
 
 Rule:
 
-Child genres must be **subsets** of the parent genre.
+Child genres debe be **subsets** of the parent genre.
 
 ---
 
 # 4. Genre Independence Rule
 
-Sibling genres must be **musically distinguishable**.
+Sibling genres debe be **musically distinguishable**.
 
 If two sibling genres:
 
 - share most characteristics
-- are difficult to distinguish in classification
+- are difficult to distinguish in clasificación
 
-Then one of the following actions must be taken:
+Then one of the following actions debe be taken:
 
 - merge the genres
-- restructure the taxonomy
+- restructure the taxonomía
 
 ---
 
@@ -140,7 +140,7 @@ Clone nodes:
 - act as **portals** to the canonical node
 - share the same tracks as the canonical node
 
-Canonical node rules:
+Canonical node reglas:
 
 - holds the real subtree
 - clone nodes only reference it
@@ -157,7 +157,7 @@ A `(General)` node is allowed when:
 
 Rules:
 
-- must be explicitly defined in the template
+- debe be explicitly defined in the template
 - cannot be created automatically
 - should be used sparingly
 
@@ -169,7 +169,7 @@ Latin music is handled as a **separate branch**.
 
 If a track is identified as Latin:
 
-Its genre classification must be restricted
+Its genre clasificación debe be restricted
 to nodes within the **Latin branch**.
 
 Example:
@@ -202,16 +202,16 @@ This helps the classifier normalize genre names.
 
 # 10. Taxonomy Versioning
 
-The taxonomy version is stored in:
+The taxonomía version is stored in:
 
 taxonomy/taxonomy_version.md
 
-Each classification output must include the taxonomy version used.
+Each clasificación output debe include the taxonomía version used.
 
-If the taxonomy structure changes:
+If the taxonomía structure changes:
 
-- previous classifications may become obsolete
-- full reclassification may be required
+- previous clasificacións puede become obsolete
+- full reclasificación puede be required
 
 ---
 
@@ -232,15 +232,15 @@ and includes:
 - parent relationships
 - node type
 
-The template must **never contain codes**.
+The template debe **never contain codes**.
 
 ---
 
 # 12. Template Editing Rule
 
-The taxonomy template is **only modified manually by the project owner**.
+The taxonomía template is **only modified manually by the project owner**.
 
-Automation tools may:
+Automation tools puede:
 
 - analyze
 - validate
@@ -252,7 +252,7 @@ But **never modify the template automatically**.
 
 # 13. Quality Validation
 
-Each time the taxonomy changes, validation must check:
+Each time the taxonomía changes, validación debe check:
 
 - duplicate genre names
 - ambiguous sibling genres
@@ -260,9 +260,9 @@ Each time the taxonomy changes, validation must check:
 - missing `(General)` nodes
 - incorrect hierarchy relationships
 
-Issues must be documented in:
+Issues debe be documented in:
 
-reports/taxonomy_issues.csv
+reports/taxonomía_issues.csv
 
 ---
 
@@ -271,12 +271,13 @@ reports/taxonomy_issues.csv
 Phase 1 is considered complete when:
 
 ✔ Genre tree template exists  
-✔ Taxonomy rules documented  
+✔ Taxonomy reglas documented  
 ✔ Naming conventions defined  
-✔ Structural validation rules defined  
+✔ Structural validación reglas defined  
 ✔ Versioning defined  
 ✔ Alias system defined  
 
 At this point the system is ready to begin:
 
 Phase 2 — Song Genre Classification
+

@@ -2,33 +2,33 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
-DOCUMENT METADATA
+METADATOS DEL DOCUMENTO
 --------------------------------------------------
 
-Scope:
+Alcance:
 
-Naming standards for taxonomy nodes, fallback nodes,
+Naming standards for taxonomía nodes, fallback nodes,
 and clone naming consistency.
 
-Owner:
+Responsable:
 
-Project Owner
+Propietario del proyecto
 
-Last Updated:
+Última actualización:
 
 2026-03-15
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines the rules used to name genres
-within the taxonomy.
+Este documento define the reglas used to name genres
+within the taxonomía.
 
 Consistent naming is critical for:
 
-• classification accuracy
-• taxonomy readability
+• clasificación accuracy
+• taxonomía readability
 • avoiding ambiguity
 • maintaining structural clarity
 
@@ -36,19 +36,19 @@ Consistent naming is critical for:
 2. UNIQUE GENRE NAMES
 --------------------------------------------------
 
-Each genre name must be unique across the taxonomy.
+Each genre name debe be unique across the taxonomía.
 
-Two nodes must never share the same name unless one
+Two nodes debe never share the same name unless one
 of them is a Clone node referencing the canonical node.
 
-This ensures that classification targets remain
+This ensures that clasificación targets remain
 unambiguous.
 
 --------------------------------------------------
 3. LANGUAGE RULE
 --------------------------------------------------
 
-Outside the Latin branch, genre names must be written
+Outside the Latin branch, genre names debe be written
 in English.
 
 Examples:
@@ -68,14 +68,14 @@ Norteño
 Banda  
 Ranchero  
 
-English may still be used inside the Latin branch
+English puede still be used inside the Latin branch
 when the genre name is widely recognized in English.
 
 --------------------------------------------------
 4. AVOID AMBIGUOUS TERMS
 --------------------------------------------------
 
-Genre names must represent clearly identifiable
+Genre names debe represent clearly identifiable
 musical styles.
 
 The following types of names are not allowed:
@@ -95,7 +95,7 @@ Latin Rhythms
 5. TITLE CASE
 --------------------------------------------------
 
-Genre names must follow Title Case formatting.
+Genre names debe follow Title Case formatting.
 
 Examples:
 
@@ -106,12 +106,12 @@ Progressive Rock
 This improves readability and consistency.
 
 --------------------------------------------------
-6. GENERAL NODE NAMING
+6. NODO GENERAL NAMING
 --------------------------------------------------
 
-Fallback nodes must follow a strict naming rule.
+Fallback nodes debe follow a strict naming rule.
 
-The name must be:
+The name debe be:
 
 Parent Genre + "(General)"
 
@@ -123,15 +123,15 @@ Latin Rock (General)
 This ensures that fallback nodes are clearly identifiable.
 
 --------------------------------------------------
-7. CLONE NODE NAMING
+7. NODO CLON NAMING
 --------------------------------------------------
 
-Clone nodes must use the same genre name as their
+Clone nodes debe use the same genre name as their
 canonical node.
 
-However, internally they must reference the canonical node.
+However, internally they debe reference the canonical node.
 
-Clone nodes exist only for navigation and classification
+Clone nodes exist only for navigation and clasificación
 assistance.
 
 They do not contain independent song assignments.
@@ -155,14 +155,15 @@ Instead, prefer clearly established genre names.
 9. DATASET CONSISTENCY
 --------------------------------------------------
 
-Genre names used during classification must match
-exactly the names defined in the taxonomy.
+Genre names used during clasificación debe match
+exactly the names defined in the taxonomía.
 
-The classifier must not invent variations or
+The classifier no debe invent variations or
 synonyms of genre names.
 
-Aliases may be handled separately through the
+Aliases puede be handled separately through the
 genre alias system.
 
 --------------------------------------------------
 END TAXONOMY NAMING CONVENTION
+

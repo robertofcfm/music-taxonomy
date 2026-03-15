@@ -2,10 +2,10 @@
 Music Genre Taxonomy System
 
 --------------------------------------------------
-1. PURPOSE
+1. PROPÓSITO
 --------------------------------------------------
 
-This document defines the role of every file in the
+Este documento define the role of every file in the
 Music Genre Taxonomy System repository.
 
 Its purpose is to:
@@ -15,7 +15,7 @@ Its purpose is to:
 • prevent documentation drift  
 • guide reconstruction and maintenance processes  
 
-All project documentation must follow the structure
+All project documentation debe follow the structure
 defined in this index.
 
 --------------------------------------------------
@@ -51,7 +51,7 @@ artist
 
 catalog/songs_with_genres.csv
 
-Output file produced by the classification system.
+Output file produced by the clasificación system.
 
 Stores the genres assigned to each song.
 
@@ -64,7 +64,7 @@ data/genre_alias.csv
 Alias mapping used to normalize genre names.
 
 Allows the classifier to match alternate genre labels
-to canonical taxonomy genres.
+to canonical taxonomía genres.
 
 --------------------------------------------------
 5. TAXONOMY FILES
@@ -72,7 +72,7 @@ to canonical taxonomy genres.
 
 taxonomy/genre_tree_master.md
 
-Human-editable taxonomy template.
+Human-editable taxonomía template.
 
 Defines the genre hierarchy using indentation.
 
@@ -82,21 +82,21 @@ Only the project owner modifies this file.
 
 taxonomy/genre_tree_operational.csv
 
-Machine-readable representation of the taxonomy.
+Machine-readable representation of the taxonomía.
 
-Generated from the master taxonomy and used
-by scripts and classification tools.
+Generated from the master taxonomía and used
+by scripts and clasificación tools.
 
 --------------------------------------------------
 
 taxonomy/taxonomy_version.md
 
-Stores the current taxonomy version.
+Stores the current taxonomía version.
 
 Used to verify compatibility between:
 
-• taxonomy structure  
-• classification results  
+• taxonomía structure  
+• clasificación results  
 • generated genre trees  
 
 --------------------------------------------------
@@ -112,7 +112,7 @@ based on classified song data.
 
 scripts/classify_songs.py
 
-Performs song genre classification.
+Performs song genre clasificación.
 
 Reads:
 
@@ -126,26 +126,26 @@ catalog/songs_with_genres.csv
 
 scripts/validate_tree.py
 
-Validates taxonomy structure and checks
+Validates taxonomía structure and checks
 for structural issues.
 
 --------------------------------------------------
 7. REPORT FILES
 --------------------------------------------------
 
-reports/taxonomy_improvement_report.csv
+reports/taxonomía_improvement_report.csv
 
-Contains suggestions for improving the taxonomy.
+Contains suggestions for improving the taxonomía.
 
 --------------------------------------------------
 
-reports/taxonomy_issues.csv
+reports/taxonomía_issues.csv
 
-Stores detected taxonomy problems such as:
+Stores detected taxonomía problems such as:
 
 • ambiguous nodes  
 • missing genres  
-• classification conflicts  
+• clasificación conflicts  
 
 --------------------------------------------------
 8. DOCUMENTATION STRUCTURE
@@ -155,7 +155,7 @@ All documentation is organized under the docs directory.
 
 docs/
 
-governance/  
+gobernanza/  
 architecture/  
 operations/  
 project-management/  
@@ -179,17 +179,17 @@ header template with:
 
 docs/governance/GLOBAL_RULES.md
 
-Defines system-wide rules that apply to multiple
+Defines system-wide reglas that apply to multiple
 components of the repository.
 
-This file acts as the canonical location for rules
+This file acts as the canonical location for reglas
 that affect more than one subsystem.
 
-Examples include rules that affect:
+Examples include reglas that affect:
 
-• taxonomy behavior  
-• classification logic  
-• validation procedures  
+• taxonomía behavior  
+• clasificación logic  
+• validación procedures  
 • repository constraints  
 
 --------------------------------------------------
@@ -200,27 +200,27 @@ If a rule applies to only one file or subsystem,
 it should be placed in that specific file.
 
 If a rule applies to multiple files or subsystems,
-it must be placed in:
+it debe be placed in:
 
 docs/governance/GLOBAL_RULES.md
 
-Other documents may reference the rule but should
+Other documents puede reference the rule but should
 not duplicate it.
 
 --------------------------------------------------
 
 RULE LOADING PRINCIPLE
 
-Whenever repository rules are evaluated
-(for example during reconstruction or validation),
-the following files must always be loaded:
+Whenever repository reglas are evaluated
+(for example during reconstruction or validación),
+the following files debe always be loaded:
 
 1. docs/governance/GLOBAL_RULES.md  
 2. docs/governance/SYSTEM_CONTRACT.md  
 
-GLOBAL_RULES.md contains canonical rules.
+GLOBAL_RULES.md contains canonical reglas.
 
-SYSTEM_CONTRACT.md contains mandatory system rules.
+SYSTEM_CONTRACT.md contains mandatory system reglas.
 
 --------------------------------------------------
 
@@ -233,8 +233,8 @@ If a conflict exists between a local document
 and GLOBAL_RULES.md for a cross-subsystem rule,
 GLOBAL_RULES.md takes precedence.
 
-Local files may specialize implementation details
-but must not contradict global rules.
+Local files puede specialize implementation details
+but no debe contradict global reglas.
 
 --------------------------------------------------
 10. ARCHITECTURE DOCUMENTATION
@@ -257,30 +257,30 @@ docs/architecture/PROJECT_OPERATING_MODEL.md
 Explains the operational separation of activities.
 
 --------------------------------------------------
-11. TAXONOMY GOVERNANCE DOCUMENTATION
+11. GOBERNANZA DE TAXONOMÍA DOCUMENTATION
 --------------------------------------------------
 
 docs/governance/SYSTEM_CONTRACT.md
 
-Defines mandatory rules governing system behavior.
+Defines mandatory reglas governing system behavior.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_RULES.md
 
-Defines the structure and behavior of the taxonomy.
+Defines the structure and behavior of the taxonomía.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_CHANGE_POLICY.md
 
-Defines the rules for modifying the taxonomy.
+Defines the reglas for modifying the taxonomía.
 
 --------------------------------------------------
 
 docs/governance/TAXONOMY_DEPTH_POLICY.md
 
-Defines rules governing taxonomy expansion.
+Defines reglas governing taxonomía expansion.
 
 --------------------------------------------------
 
@@ -292,7 +292,7 @@ Defines naming conventions for genres.
 
 docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 
-Checklist used to validate taxonomy quality.
+Checklist used to validate taxonomía quality.
 
 --------------------------------------------------
 12. OPERATIONS DOCUMENTATION
@@ -345,4 +345,5 @@ Release notes describing the first stable
 version of the repository.
 
 --------------------------------------------------
-END DOCUMENT
+FIN DEL DOCUMENTO
+
