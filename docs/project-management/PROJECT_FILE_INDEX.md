@@ -166,7 +166,7 @@ Documentation is grouped by function.
 Each folder serves a specific operational purpose.
 
 --------------------------------------------------
-9. GOVERNANCE DOCUMENTATION
+9. GLOBAL GOVERNANCE DOCUMENTATION
 --------------------------------------------------
 
 docs/governance/GLOBAL_RULES.md
@@ -249,7 +249,7 @@ docs/architecture/PROJECT_OPERATING_MODEL.md
 Explains the operational separation of activities.
 
 --------------------------------------------------
-11. GOVERNANCE DETAIL DOCUMENTS
+11. TAXONOMY GOVERNANCE DOCUMENTATION
 --------------------------------------------------
 
 docs/governance/SYSTEM_CONTRACT.md
@@ -302,7 +302,7 @@ docs/operations/PHASE1_FINAL_CHECKLIST.md
 Checklist confirming Phase 1 completion.
 
 --------------------------------------------------
-13. PROJECT-MANAGEMENT DOCUMENTATION
+13. PROJECT MANAGEMENT DOCUMENTATION
 --------------------------------------------------
 
 docs/project-management/PROJECT_STATE.md
