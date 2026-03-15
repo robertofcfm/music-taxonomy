@@ -224,4 +224,40 @@ Validation checks include:
 - playlist cohesion problems
 
 --------------------------------------------------
+15. SOURCE AND OPERATIONAL REPRESENTATION
+--------------------------------------------------
+
+The authoritative editable taxonomy source is:
+
+taxonomy/genre_tree_master.md
+
+The operational taxonomy must be generated from
+the master taxonomy template.
+
+The operational representation must be machine-readable
+and must include numeric node codes.
+
+--------------------------------------------------
+16. CLONE AND HYBRID GENRE POLICY
+--------------------------------------------------
+
+The taxonomy supports clone nodes.
+
+Clone node rules:
+
+- a clone must reference one canonical node
+- clone nodes must not have children
+- clone nodes act as navigation portals
+- clones exist to avoid structural duplication
+- canonical nodes may have children
+
+The taxonomy supports hybrid genres.
+
+Hybrid genre rules:
+
+- a hybrid may appear in multiple conceptual branches
+- when represented in multiple branches, clone nodes
+  should be used to point to the canonical node
+
+--------------------------------------------------
 END TAXONOMY RULES

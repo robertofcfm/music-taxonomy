@@ -3,21 +3,6 @@
 Raw rules extracted from conversations. Not yet classified.
 
 ---
-RULE 003
-
-`genre_tree_master.md` is the authoritative editable taxonomy source.
-
----
-RULE 004
-
-The operational taxonomy must be generated from the template.
-
----
-RULE 005
-
-The operational taxonomy must include numeric node codes.
-
----
 RULE 008
 
 The classifier must load the taxonomy before classifying songs.
@@ -56,56 +41,6 @@ The project has three phases: taxonomy design, song classification, and tree gen
 RULE 023
 
 The taxonomy must be human-editable.
-
----
-RULE 024
-
-The operational tree must be machine-readable.
-
----
-RULE 031
-
-The taxonomy must support genre clones.
-
----
-RULE 032
-
-A clone node must reference a canonical node.
-
----
-RULE 033
-
-Clone nodes must not have children.
-
----
-RULE 034
-
-Clone nodes must act as portals to canonical nodes.
-
----
-RULE 036
-
-Clone nodes support navigation without duplicating structure.
-
----
-RULE 037
-
-Canonical nodes may have children.
-
----
-RULE 038
-
-The system must support hybrid genres.
-
----
-RULE 039
-
-Hybrid genres may appear in multiple conceptual branches.
-
----
-RULE 040
-
-If a hybrid appears in multiple branches, clones may be used.
 
 ---
 RULE 041
