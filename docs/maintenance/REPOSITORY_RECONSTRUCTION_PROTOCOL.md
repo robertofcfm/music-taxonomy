@@ -363,6 +363,15 @@ The following errors invalidate an iteration:
 If an iteration becomes invalid,
 it must be repeated from STEP 1.
 
+-----
+rule_extraction_raw.md
+no es parte del repositorio final
+no se itera sobre él
+no se modifica
+solo se consulta
+se descarta cuando termine la reconstrucción
+-----
+
 --------------------------------------------------
 END OF PROTOCOL
 --------------------------------------------------

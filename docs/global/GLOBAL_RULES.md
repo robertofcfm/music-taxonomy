@@ -23,49 +23,56 @@ must be placed here.
 GLOBAL RULES
 --------------------------------------------------
 
-RULE G001
+G001 — TAXONOMY AUTHORITY
 
 The taxonomy defines the only valid genres
-for classification.
+for the classification system.
+
+All genres assigned to songs must exist
+in the taxonomy.
 
 --------------------------------------------------
 
-RULE G002
+G002 — NO GENRE INVENTION
 
 The classifier must never invent genres.
 
---------------------------------------------------
-
-RULE G003
-
-If a required genre is missing the system
-must produce a fatal error.
+All assigned genres must correspond to
+existing taxonomy nodes.
 
 --------------------------------------------------
 
-RULE G004
+G003 — MISSING GENRE FAILURE
 
-Fatal errors must stop the process and
-report the cause.
+If a required genre is missing from the
+taxonomy, the system must produce a fatal error.
 
 --------------------------------------------------
 
-RULE G005
+G004 — FATAL ERROR POLICY
+
+Fatal errors must stop execution and
+report the cause of the failure.
+
+--------------------------------------------------
+
+G005 — MULTI-GENRE CLASSIFICATION
 
 A song may belong to multiple genres
-if justified musically.
+when musically justified.
 
 --------------------------------------------------
 
-RULE G006
+G006 — GENRE NORMALIZATION
 
-The classifier must normalize genre names.
+Genre names must be normalized before
+classification.
 
 --------------------------------------------------
 
-RULE G007
+G007 — ALIAS RESOLUTION
 
-Genre aliases must map to canonical
+Genre aliases must resolve to canonical
 taxonomy genres.
 
 --------------------------------------------------
