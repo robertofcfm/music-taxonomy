@@ -1,0 +1,156 @@
+{
+  "process": "MVET-LAYER1",
+  "generated_at": "2026-03-15T22:47:26+00:00",
+  "taxonomy_file": "taxonomy/genre_tree_master.md",
+  "taxonomy_sha256": "85e0abf22fb194319a16b32e3aabf0448915c184380737561491606ec3147e8c",
+  "applied_sources_by_fb": {
+    "FB-01": [
+      "docs/governance/SYSTEM_CONTRACT.md",
+      "docs/governance/TAXONOMY_RULES.md"
+    ],
+    "FB-02": [
+      "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
+    ],
+    "FB-03": [
+      "docs/governance/TAXONOMY_DEPTH_POLICY.md",
+      "docs/governance/TAXONOMY_RULES.md"
+    ],
+    "FB-04": [
+      "docs/governance/GLOBAL_RULES.md",
+      "docs/governance/SYSTEM_CONTRACT.md"
+    ],
+    "FB-05": [
+      "docs/governance/TAXONOMY_QUALITY_CHECKLIST.md",
+      "docs/governance/TAXONOMY_RULES.md"
+    ],
+    "FB-06": [
+      "docs/governance/TAXONOMY_CHANGE_POLICY.md",
+      "docs/governance/TAXONOMY_QUALITY_CHECKLIST.md"
+    ]
+  },
+  "summary": {
+    "decision": "PASS_WITH_WARNINGS",
+    "total_fatal": 0,
+    "total_warning": 1,
+    "total_checks": 10
+  },
+  "findings": [
+    {
+      "rule_id": "MVET-L1-001",
+      "fb": "FB-01",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Debe existir un nodo raíz único.",
+      "evidence": "Raíces detectadas: 1",
+      "sources": [
+        "docs/governance/SYSTEM_CONTRACT.md",
+        "docs/governance/TAXONOMY_RULES.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-002",
+      "fb": "FB-01",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Jerarquía válida por indentación.",
+      "evidence": "Sin errores de parser",
+      "sources": [
+        "docs/governance/SYSTEM_CONTRACT.md",
+        "docs/governance/TAXONOMY_RULES.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-003",
+      "fb": "FB-02",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Nombres de género únicos (excepto clone permitido).",
+      "evidence": "Sin duplicados inválidos",
+      "sources": [
+        "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-004",
+      "fb": "FB-02",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Formato de nombrado válido (Title Case y patrón General).",
+      "evidence": "Formato válido",
+      "sources": [
+        "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-005",
+      "fb": "FB-01",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Nodos General explícitos y bajo su padre correspondiente.",
+      "evidence": "Nodos General válidos",
+      "sources": [
+        "docs/governance/SYSTEM_CONTRACT.md",
+        "docs/governance/TAXONOMY_RULES.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-006",
+      "fb": "FB-01",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Restricciones de nodo clone (sin hijos).",
+      "evidence": "Sin clones con hijos",
+      "sources": [
+        "docs/governance/SYSTEM_CONTRACT.md",
+        "docs/governance/TAXONOMY_RULES.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-007",
+      "fb": "FB-03",
+      "severity": "WARNING",
+      "passed": false,
+      "description": "Profundidad recomendada 3-5 niveles.",
+      "evidence": "Min depth: 1, Max depth: 6",
+      "sources": [
+        "docs/governance/TAXONOMY_DEPTH_POLICY.md",
+        "docs/governance/TAXONOMY_RULES.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-008",
+      "fb": "FB-04",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Inmutabilidad del archivo maestro.",
+      "evidence": "Hash estable durante la ejecución",
+      "sources": [
+        "docs/governance/GLOBAL_RULES.md",
+        "docs/governance/SYSTEM_CONTRACT.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-009",
+      "fb": "FB-02",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Términos ambiguos prohibidos.",
+      "evidence": "Sin términos ambiguos",
+      "sources": [
+        "docs/governance/TAXONOMY_NAMING_CONVENTION.md"
+      ]
+    },
+    {
+      "rule_id": "MVET-L1-010",
+      "fb": "FB-04",
+      "severity": "FATAL",
+      "passed": true,
+      "description": "Separación de dominio Latin en estructura base.",
+      "evidence": "Rama Latin válida bajo Music",
+      "sources": [
+        "docs/governance/GLOBAL_RULES.md",
+        "docs/governance/SYSTEM_CONTRACT.md"
+      ]
+    }
+  ]
+}
