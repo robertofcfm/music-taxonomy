@@ -20,6 +20,12 @@ Changes must always prioritize musical coherence.
 The taxonomy evolves through controlled changes
 approved by the user.
 
+Every proposed change must be deliberate and
+documented before approval.
+
+The taxonomy owner is responsible for evaluating
+new genre proposals.
+
 The system may analyze the taxonomy and suggest
 possible improvements but cannot apply them automatically.
 

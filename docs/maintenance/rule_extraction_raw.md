@@ -43,21 +43,6 @@ RULE 045
 The classifier must ignore trivial stylistic references.
 
 ---
-RULE 048
-
-Taxonomy evolution must be controlled.
-
----
-RULE 049
-
-Taxonomy changes must be deliberate and documented.
-
----
-RULE 050
-
-The taxonomy owner must evaluate new genre proposals.
-
----
 RULE 057
 
 The taxonomy must support dataset-driven expansion.
