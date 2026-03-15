@@ -238,7 +238,7 @@ The template debe **never contain codes**.
 
 # 12. Template Editing Rule
 
-The taxonomía template is **only modified manually by the project owner**.
+The taxonomía template is **only modified manually by the propietario del proyecto**.
 
 Automation tools puede:
 

@@ -102,7 +102,7 @@ El sistema nunca debe modificar la taxonomía automáticamente.
 
 G009 — AUTORIDAD DE EDICIÓN DE TAXONOMÍA
 
-Solo el project owner puede editar la plantilla taxonómica.
+Solo el propietario del proyecto puede editar la plantilla taxonómica.
 
 --------------------------------------------------
 

@@ -96,7 +96,7 @@ Generación del árbol de géneros guiado por dataset.
 
 El sistema sigue varios principios centrales.
 
-• diseño taxonomía-first  
+• diseño taxonomy-first  
 • gobernanza taxonómica manual  
 • coherencia de playlists  
 • cumplimiento estricto de reglas  

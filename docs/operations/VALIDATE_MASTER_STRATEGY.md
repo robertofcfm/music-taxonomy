@@ -278,7 +278,7 @@ El reporte debe registrar:
 - documentos aplicados
 - resultado y hallazgos de Capa 1
 - resultado y hallazgos de Capa 2
-- decisión final del quality gate
+- decisión final del gate de calidad
 - hash o checksum del archivo validado
 
 --------------------------------------------------
