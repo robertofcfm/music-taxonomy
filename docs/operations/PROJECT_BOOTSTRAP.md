@@ -21,22 +21,22 @@ must be loaded before performing any work.
 
 SYSTEM RULES
 
-docs/SYSTEM_CONTRACT.md
+docs/governance/SYSTEM_CONTRACT.md
 
 TAXONOMY STRUCTURE RULES
 
-docs/TAXONOMY_RULES.md
+docs/governance/TAXONOMY_RULES.md
 
 PROJECT CONTEXT
 
-docs/PROJECT_CONTEXT.md
+docs/architecture/PROJECT_CONTEXT.md
 
 TAXONOMY GOVERNANCE
 
-docs/TAXONOMY_CHANGE_POLICY.md
-docs/TAXONOMY_DEPTH_POLICY.md
-docs/TAXONOMY_NAMING_CONVENTION.md
-docs/TAXONOMY_QUALITY_CHECKLIST.md
+docs/governance/TAXONOMY_CHANGE_POLICY.md
+docs/governance/TAXONOMY_DEPTH_POLICY.md
+docs/governance/TAXONOMY_NAMING_CONVENTION.md
+docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 
 --------------------------------------------------
 3. TAXONOMY FILES
@@ -77,10 +77,10 @@ This version guarantees compatibility between:
 
 The following documents store project progress:
 
-docs/PROJECT_STATE.md  
-docs/PROJECT_MEMORY.md  
-docs/PROJECT_FILE_INDEX.md  
-docs/PROJECT_CHECKPOINT_*.md  
+docs/project-management/PROJECT_STATE.md  
+docs/project-management/PROJECT_MEMORY.md  
+docs/project-management/PROJECT_FILE_INDEX.md  
+docs/project-management/PROJECT_CHECKPOINT_*.md  
 
 They help restore context if the project is resumed
 after a long period.

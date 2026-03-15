@@ -43,22 +43,22 @@ Version control for taxonomy compatibility.
 data/genre_alias.csv  
 Alias mapping for genre normalization.
 
-docs/TAXONOMY_RULES.md  
+docs/governance/TAXONOMY_RULES.md  
 Taxonomy rules.
 
-docs/TAXONOMY_NAMING_CONVENTION.md  
+docs/governance/TAXONOMY_NAMING_CONVENTION.md  
 Genre naming rules.
 
-docs/TAXONOMY_CHANGE_POLICY.md  
+docs/governance/TAXONOMY_CHANGE_POLICY.md  
 Rules governing taxonomy evolution.
 
-docs/TAXONOMY_DEPTH_POLICY.md  
+docs/governance/TAXONOMY_DEPTH_POLICY.md  
 Rules for branch depth.
 
-docs/TAXONOMY_QUALITY_CHECKLIST.md  
+docs/governance/TAXONOMY_QUALITY_CHECKLIST.md  
 Validation criteria for taxonomy.
 
-docs/PHASE1_FINAL_CHECKLIST.md  
+docs/operations/PHASE1_FINAL_CHECKLIST.md  
 Checklist confirming Phase 1 completion.
 
 ---

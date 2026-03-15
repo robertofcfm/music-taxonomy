@@ -60,7 +60,7 @@ catalog/songs_with_genres.csv
 
 Classification follows strict rules defined in:
 
-docs/SYSTEM_CONTRACT.md
+docs/governance/SYSTEM_CONTRACT.md
 
 --------------------------------------------------
 
@@ -108,11 +108,11 @@ The system follows several core principles.
 
 Key documents that govern the system:
 
-SYSTEM_CONTRACT.md  
-TAXONOMY_RULES.md  
-TAXONOMY_CHANGE_POLICY.md  
-TAXONOMY_DEPTH_POLICY.md  
-TAXONOMY_NAMING_CONVENTION.md  
+docs/governance/SYSTEM_CONTRACT.md  
+docs/governance/TAXONOMY_RULES.md  
+docs/governance/TAXONOMY_CHANGE_POLICY.md  
+docs/governance/TAXONOMY_DEPTH_POLICY.md  
+docs/governance/TAXONOMY_NAMING_CONVENTION.md  
 
 These documents define the behavior and structure
 of the system.

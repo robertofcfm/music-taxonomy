@@ -155,20 +155,21 @@ All documentation is organized under the docs directory.
 
 docs/
 
-global/  
-system/  
-taxonomy/  
-project/  
-maintenance/  
+governance/  
+architecture/  
+operations/  
+project-management/  
 releases/
 
-Each folder serves a specific documentation purpose.
+Documentation is grouped by function.
+
+Each folder serves a specific operational purpose.
 
 --------------------------------------------------
-9. GLOBAL DOCUMENTATION
+9. GOVERNANCE DOCUMENTATION
 --------------------------------------------------
 
-docs/global/GLOBAL_RULES.md
+docs/governance/GLOBAL_RULES.md
 
 Defines system-wide rules that apply to multiple
 components of the repository.
@@ -193,7 +194,7 @@ it should be placed in that specific file.
 If a rule applies to multiple files or subsystems,
 it must be placed in:
 
-docs/global/GLOBAL_RULES.md
+docs/governance/GLOBAL_RULES.md
 
 Other documents may reference the rule but should
 not duplicate it.
@@ -206,20 +207,18 @@ Whenever repository rules are evaluated
 (for example during reconstruction or validation),
 the following files must always be loaded:
 
-1. docs/global/GLOBAL_RULES.md  
-2. docs/maintenance/rule_extraction_raw.md  
+1. docs/governance/GLOBAL_RULES.md  
+2. docs/governance/SYSTEM_CONTRACT.md  
 
 GLOBAL_RULES.md contains canonical rules.
 
-rule_extraction_raw.md contains rules extracted
-from development conversations that have not yet
-been integrated into the repository.
+SYSTEM_CONTRACT.md contains mandatory system rules.
 
 --------------------------------------------------
 
 GLOBAL PRECEDENCE PRINCIPLE
 
-docs/global/GLOBAL_RULES.md is the canonical
+docs/governance/GLOBAL_RULES.md is the canonical
 cross-system rule source.
 
 If a conflict exists between a local document
@@ -230,112 +229,103 @@ Local files may specialize implementation details
 but must not contradict global rules.
 
 --------------------------------------------------
-10. SYSTEM DOCUMENTATION
+10. ARCHITECTURE DOCUMENTATION
 --------------------------------------------------
 
-docs/system/SYSTEM_OVERVIEW.md
+docs/architecture/SYSTEM_OVERVIEW.md
 
 High-level description of the system architecture.
 
 --------------------------------------------------
 
-docs/system/SYSTEM_CONTRACT.md
+docs/architecture/PROJECT_CONTEXT.md
+
+Describes conceptual goals and system context.
+
+--------------------------------------------------
+
+docs/architecture/PROJECT_OPERATING_MODEL.md
+
+Explains the operational separation of activities.
+
+--------------------------------------------------
+11. GOVERNANCE DETAIL DOCUMENTS
+--------------------------------------------------
+
+docs/governance/SYSTEM_CONTRACT.md
 
 Defines mandatory rules governing system behavior.
 
 --------------------------------------------------
-11. TAXONOMY DOCUMENTATION
---------------------------------------------------
 
-docs/taxonomy/TAXONOMY_RULES.md
+docs/governance/TAXONOMY_RULES.md
 
 Defines the structure and behavior of the taxonomy.
 
 --------------------------------------------------
 
-docs/taxonomy/TAXONOMY_CHANGE_POLICY.md
+docs/governance/TAXONOMY_CHANGE_POLICY.md
 
 Defines the rules for modifying the taxonomy.
 
 --------------------------------------------------
 
-docs/taxonomy/TAXONOMY_DEPTH_POLICY.md
+docs/governance/TAXONOMY_DEPTH_POLICY.md
 
 Defines rules governing taxonomy expansion.
 
 --------------------------------------------------
 
-docs/taxonomy/TAXONOMY_NAMING_CONVENTION.md
+docs/governance/TAXONOMY_NAMING_CONVENTION.md
 
 Defines naming conventions for genres.
 
 --------------------------------------------------
 
-docs/taxonomy/TAXONOMY_QUALITY_CHECKLIST.md
+docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 
 Checklist used to validate taxonomy quality.
 
 --------------------------------------------------
-12. PROJECT DOCUMENTATION
+12. OPERATIONS DOCUMENTATION
 --------------------------------------------------
 
-docs/project/PROJECT_CONTEXT.md
-
-Describes the conceptual goals of the project.
-
---------------------------------------------------
-
-docs/project/PROJECT_STATE.md
-
-Stores the current operational state of the project.
-
---------------------------------------------------
-
-docs/project/PROJECT_MEMORY.md
-
-Stores design decisions and historical context.
-
---------------------------------------------------
-
-docs/project/PROJECT_FILE_INDEX.md
-
-Defines the documentation structure of the repository.
-
---------------------------------------------------
-13. MAINTENANCE DOCUMENTATION
---------------------------------------------------
-
-docs/maintenance/PROJECT_BOOTSTRAP.md
+docs/operations/PROJECT_BOOTSTRAP.md
 
 Defines how a new session should initialize
 the project context.
 
 --------------------------------------------------
 
-docs/maintenance/REPOSITORY_RECONSTRUCTION_PROTOCOL.md
-
-Defines the protocol used to reconstruct project
-knowledge from the development conversation.
-
---------------------------------------------------
-
-docs/maintenance/PROJECT_OPERATING_MODEL.md
-
-Explains the operational model of the system and
-the separation between taxonomy design,
-song classification, and tree generation.
-
---------------------------------------------------
-
-docs/maintenance/PROJECT_CHECKPOINT_001.md
-
-Snapshot of the reconstructed project architecture.
-
---------------------------------------------------
-
-docs/maintenance/PHASE1_FINAL_CHECKLIST.md
+docs/operations/PHASE1_FINAL_CHECKLIST.md
 
 Checklist confirming Phase 1 completion.
+
+--------------------------------------------------
+13. PROJECT-MANAGEMENT DOCUMENTATION
+--------------------------------------------------
+
+docs/project-management/PROJECT_STATE.md
+
+Stores the current operational state of the project.
+
+--------------------------------------------------
+
+docs/project-management/PROJECT_MEMORY.md
+
+Stores design decisions and historical context.
+
+--------------------------------------------------
+
+docs/project-management/PROJECT_FILE_INDEX.md
+
+Defines the documentation structure of the repository.
+
+--------------------------------------------------
+
+docs/project-management/PROJECT_CHECKPOINT_001.md
+
+Snapshot of the reconstructed project architecture.
 
 --------------------------------------------------
 14. RELEASE DOCUMENTATION
