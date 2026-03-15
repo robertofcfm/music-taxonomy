@@ -157,6 +157,9 @@ When this happens:
 This allows the tree to grow organically according
 to the real catalog.
 
+Nodes without assigned songs remain inactive and
+represent currently unused taxonomy branches.
+
 --------------------------------------------------
 6. LATIN GENRE STRATEGY
 --------------------------------------------------

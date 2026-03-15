@@ -18,11 +18,6 @@ RULE 067
 The generated tree may activate nodes when songs appear.
 
 ---
-RULE 068
-
-Inactive nodes represent unused taxonomy branches.
-
----
 RULE 079
 
 The repository must be reconstructable without conversation history.
