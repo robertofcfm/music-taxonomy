@@ -43,26 +43,6 @@ RULE 045
 The classifier must ignore trivial stylistic references.
 
 ---
-RULE 057
-
-The taxonomy must support dataset-driven expansion.
-
----
-RULE 058
-
-A node becomes expandable when song count exceeds a threshold.
-
----
-RULE 059
-
-The expansion threshold is approximately 45 songs.
-
----
-RULE 060
-
-After expansion, songs must be reevaluated for subgenres.
-
----
 RULE 061
 
 Only affected songs should be reevaluated.

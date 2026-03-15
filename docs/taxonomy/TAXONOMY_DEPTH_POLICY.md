@@ -85,4 +85,22 @@ When imbalance appears, the taxonomy should
 be reviewed.
 
 --------------------------------------------------
+7. DATASET-DRIVEN EXPANSION CONTROL
+--------------------------------------------------
+
+Taxonomy expansion must be dataset-driven.
+
+A node becomes eligible for expansion when
+its song count exceeds the expansion threshold.
+
+Operational threshold reference:
+
+approximately 45 songs.
+
+After an expansion is introduced, songs assigned
+to the expanded node must be reevaluated to
+determine whether a more specific subgenre
+classification is now applicable.
+
+--------------------------------------------------
 END TAXONOMY DEPTH POLICY
