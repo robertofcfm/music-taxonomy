@@ -1,5 +1,5 @@
-# TAXONOMY DEPTH POLICY
-Music Genre Taxonomy System
+# POLÍTICA DE PROFUNDIDAD TAXONÓMICA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 METADATOS DEL DOCUMENTO
@@ -7,8 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Depth limits, expansion criteria, and structural
-balance reglas for taxonomía branches.
+Límites de profundidad, criterios de expansión
+y reglas de balance estructural para ramas taxonómicas.
 
 Responsable:
 
@@ -22,103 +22,105 @@ Propietario del proyecto
 1. PROPÓSITO
 --------------------------------------------------
 
-Este documento define how deep the genre taxonomía
-is allowed to grow and how depth should be managed.
+Este documento define cuánta profundidad puede
+alcanzar la taxonomía y cómo debe gestionarse.
 
-El objetivo es maintain a structure that is:
+El objetivo es mantener una estructura que sea:
 
-• musically meaningful  
-• easy to navigate  
-• stable for clasificación  
-• suitable for playlist generation  
+• musicalmente significativa
+• fácil de navegar
+• estable para clasificar
+• útil para generar playlists
 
 --------------------------------------------------
-2. MINIMUM STRUCTURAL DEPTH
+2. PROFUNDIDAD ESTRUCTURAL MÍNIMA
 --------------------------------------------------
 
-The taxonomía should normally reach at least
-three levels of depth.
+La taxonomía debería alcanzar normalmente al menos
+tres niveles de profundidad.
 
-Example:
+Ejemplo:
 
 Music
   Rock
     Alternative Rock
       Indie Rock
 
-This allows clasificación to reach a level
-of genre specificity that is useful for playlists.
+Esto permite alcanzar un nivel de especificidad
+de género útil para playlists.
 
 --------------------------------------------------
-3. RECOMMENDED DEPTH RANGE
+3. RANGO DE PROFUNDIDAD RECOMENDADO
 --------------------------------------------------
 
-The recommended taxonomía depth is:
+La profundidad recomendada de la taxonomía es:
 
-3 to 5 levels.
+3 a 5 niveles.
 
-This range usually allows enough specialization
-without producing unnecessary complexity.
-
---------------------------------------------------
-4. EXCESSIVE DEPTH
---------------------------------------------------
-
-Very deep hierarchies should be avoided.
-
-If a taxonomía branch becomes excessively deep,
-it should be reviewed.
-
-Possible corrective actions:
-
-• merge subgenres  
-• simplify the hierarchy  
-• move nodes to a more appropriate parent  
+Este rango suele permitir especialización suficiente
+sin crear complejidad innecesaria.
 
 --------------------------------------------------
-5. EXPANSION PRINCIPLE
+4. PROFUNDIDAD EXCESIVA
 --------------------------------------------------
 
-Depth should grow only when musically justified.
+Deben evitarse jerarquías excesivamente profundas.
 
-A node should only be expanded when:
+Si una rama taxonómica se vuelve demasiado profunda,
+debe revisarse.
 
-• enough songs exist to justify subdivision  
-• meaningful subgenres exist  
-• the subdivision improves playlist coherence  
+Acciones correctivas posibles:
 
-Artificial subdivisions debe be avoided.
-
---------------------------------------------------
-6. BALANCE PRINCIPLE
---------------------------------------------------
-
-The taxonomía should remain balanced.
-
-Branches should not grow disproportionately deep
-while other branches remain extremely shallow.
-
-When imbalance appears, the taxonomía should
-be reviewed.
+• fusionar subgéneros
+• simplificar la jerarquía
+• mover nodos a un padre más adecuado
 
 --------------------------------------------------
-7. DATASET-DRIVEN EXPANSION CONTROL
+5. PRINCIPIO DE EXPANSIÓN
 --------------------------------------------------
 
-Taxonomy expansion debe be dataset-driven.
+La profundidad debe crecer solo cuando esté
+musicalmente justificado.
 
-A node becomes eligible for expansion when
-its song count exceeds the expansion threshold.
+Un nodo debería expandirse solo cuando:
 
-Operational threshold reference:
+• exista suficiente volumen de canciones
+• existan subgéneros significativos
+• la subdivisión mejore la coherencia de playlists
 
-approximately 45 songs.
-
-After an expansion is introduced, songs assigned
-to the expanded node debe be reevaluated to
-determine whether a more specific subgenre
-clasificación is now applicable.
+Deben evitarse subdivisiones artificiales.
 
 --------------------------------------------------
-END TAXONOMY DEPTH POLICY
+6. PRINCIPIO DE BALANCE
+--------------------------------------------------
+
+La taxonomía debería mantenerse balanceada.
+
+Las ramas no deberían crecer de forma
+desproporcionadamente profunda mientras otras
+permanecen extremadamente superficiales.
+
+Cuando aparezca desbalance, la taxonomía
+debe revisarse.
+
+--------------------------------------------------
+7. CONTROL DE EXPANSIÓN GUIADO POR DATASET
+--------------------------------------------------
+
+La expansión taxonómica debe estar guiada por datos.
+
+Un nodo se vuelve elegible para expansión cuando
+su número de canciones supera el umbral definido.
+
+Referencia de umbral operativo:
+
+aproximadamente 45 canciones.
+
+Después de introducir una expansión, las canciones
+asignadas al nodo expandido deben reevaluarse para
+determinar si ya aplica una clasificación
+de subgénero más específica.
+
+--------------------------------------------------
+FIN POLÍTICA DE PROFUNDIDAD TAXONÓMICA
 

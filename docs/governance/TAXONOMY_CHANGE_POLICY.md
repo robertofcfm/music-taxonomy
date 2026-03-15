@@ -1,5 +1,5 @@
-# TAXONOMY CHANGE POLICY
-Music Genre Taxonomy System
+# POLÍTICA DE CAMBIOS DE TAXONOMÍA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 METADATOS DEL DOCUMENTO
@@ -7,8 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Governance reglas for reviewing, approving, and
-validating taxonomía changes.
+Reglas de gobernanza para revisar, aprobar y
+validar cambios en la taxonomía.
 
 Responsable:
 
@@ -22,83 +22,83 @@ Propietario del proyecto
 1. PROPÓSITO
 --------------------------------------------------
 
-Este documento define the policy governing structural
-changes to the genre taxonomía.
+Este documento define la política que gobierna
+los cambios estructurales de la taxonomía de géneros.
 
-The taxonomía represents the structural backbone
-of the system and debe evolve carefully.
+La taxonomía representa la columna vertebral
+estructural del sistema y debe evolucionar con cuidado.
 
-Changes debe always prioritize musical coherence.
-
---------------------------------------------------
-2. TAXONOMY CHANGE PRINCIPLE
---------------------------------------------------
-
-The taxonomía evolves through controlled changes
-approved by the user.
-
-Every proposed change debe be deliberate and
-documented before approval.
-
-The taxonomía owner is responsible for evaluating
-new genre proposals.
-
-El sistema puede analyze the taxonomía and suggest
-possible improvements but cannot apply them automatically.
+Los cambios siempre deben priorizar la coherencia musical.
 
 --------------------------------------------------
-3. NODE MERGE POLICY
+2. PRINCIPIO DE CAMBIO TAXONÓMICO
 --------------------------------------------------
 
-Two sibling genres puede require merging when:
+La taxonomía evoluciona mediante cambios controlados
+aprobados por el usuario.
 
-• their musical identity overlaps heavily
-• their playlists sound nearly identical
-• the classifier frequently assigns songs to both
+Cada cambio propuesto debe ser deliberado y
+documentado antes de su aprobación.
 
-When this occurs the system puede recommend merging them
-into a single genre.
+El responsable de la taxonomía evalúa
+las propuestas de nuevos géneros.
 
---------------------------------------------------
-4. NODE RELOCATION POLICY
---------------------------------------------------
-
-A genre puede require relocation when it fits better
-under a different parent genre.
-
-Example:
-
-A genre placed under Rock puede later be identified
-as belonging under Metal.
-
-El sistema puede report this possibility but no debe
-move the node automatically.
+El sistema puede analizar la taxonomía y sugerir
+mejoras, pero no puede aplicarlas automáticamente.
 
 --------------------------------------------------
-5. TAXONOMY REVIEW PROCESS
+3. POLÍTICA DE FUSIÓN DE NODOS
 --------------------------------------------------
 
-Whenever the taxonomía changes, the system should
-review the entire structure to detect improvement
-opportunities.
+Dos géneros hermanos pueden requerir fusión cuando:
 
-This includes:
+• su identidad musical se solapa fuertemente
+• sus playlists suenan casi iguales
+• el clasificador asigna canciones a ambos con frecuencia
 
-• detecting overly similar sibling genres
-• detecting nodes that should be merged
-• detecting nodes that should be expanded
-• detecting atomic genre candidates
+Cuando esto ocurra, el sistema puede recomendar
+fusionarlos en un único género.
 
 --------------------------------------------------
-6. RELEASE VALIDATION
+4. POLÍTICA DE REUBICACIÓN DE NODOS
 --------------------------------------------------
 
-Before a new project release is created,
-the taxonomía debe ser validada.
+Un género puede requerir reubicación cuando encaja mejor
+bajo un género padre diferente.
 
-Validation ensures that:
+Ejemplo:
 
-• all reported issues have been reviewed
-• taxonomía structure remains coherent
-• no unresolved structural problems remain
+Un género ubicado bajo Rock puede posteriormente
+identificarse como más adecuado bajo Metal.
+
+El sistema puede reportar esta posibilidad, pero no debe
+mover el nodo automáticamente.
+
+--------------------------------------------------
+5. PROCESO DE REVISIÓN DE TAXONOMÍA
+--------------------------------------------------
+
+Siempre que la taxonomía cambie, el sistema debe
+revisar la estructura completa para detectar
+oportunidades de mejora.
+
+Esto incluye:
+
+• detectar géneros hermanos excesivamente similares
+• detectar nodos candidatos a fusión
+• detectar nodos candidatos a expansión
+• detectar candidatos a géneros atómicos
+
+--------------------------------------------------
+6. VALIDACIÓN DE RELEASE
+--------------------------------------------------
+
+Antes de crear un nuevo release del proyecto,
+la taxonomía debe validarse.
+
+La validación garantiza que:
+
+• todos los issues reportados fueron revisados
+• la estructura taxonómica se mantiene coherente
+• no existen problemas estructurales sin resolver
 

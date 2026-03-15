@@ -1,5 +1,5 @@
-# TAXONOMY RULES
-Music Genre Taxonomy System
+# REGLAS DE TAXONOMÍA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 METADATOS DEL DOCUMENTO
@@ -7,8 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Structural taxonomía reglas used by validación,
-clasificación, and playlist generation.
+Reglas estructurales de taxonomía usadas por
+validación, clasificación y generación de playlists.
 
 Responsable:
 
@@ -22,67 +22,54 @@ Propietario del proyecto
 PROPÓSITO
 --------------------------------------------------
 
-Este documento define the structural reglas governing the genre taxonomía.
+Este documento define las reglas estructurales que
+gobiernan la taxonomía de géneros.
 
-The taxonomía represents the musical knowledge base of the system and is
-used by the classifier and playlist generation pipeline.
+La taxonomía representa la base de conocimiento
+musical del sistema y es usada por el clasificador
+y por el pipeline de generación de playlists.
 
 --------------------------------------------------
-1. TAXONOMY PROPÓSITO
+1. PROPÓSITO DE LA TAXONOMÍA
 --------------------------------------------------
 
-The taxonomía defines the structure used to organize musical genres.
+La taxonomía define la estructura usada para
+organizar géneros musicales.
 
-The taxonomía debe remain human-editable.
+La taxonomía debe mantenerse editable por humanos.
 
-Its purpose is to:
+Su propósito es:
 
-- represent relationships between genres
-- guide song clasificación
-- ensure playlist coherence
+- representar relaciones entre géneros
+- guiar la clasificación de canciones
+- asegurar coherencia de playlists
 
-The taxonomía debe prioritize musical coherence over completeness.
+La taxonomía debe priorizar la coherencia musical
+por encima de la completitud.
 
-Genres debe represent musically meaningful styles.
-Generic or vague descriptors are not valid genre nodes.
+Los géneros deben representar estilos musicalmente
+significativos. Descriptores genéricos o vagos
+no son nodos válidos de género.
 
 --------------------------------------------------
 2. ESTRUCTURA RAÍZ
 --------------------------------------------------
 
-The taxonomía debe have a nodo raíz único.
+La taxonomía debe tener un nodo raíz único.
 
-Example:
-
-Music
-
-All genres debe descend from this root.
-
---------------------------------------------------
-3. HIERARCHY DEFINITION
---------------------------------------------------
-
-Hierarchy is defined by indentation.
-
-Example:
+Ejemplo:
 
 Music
-  Rock
-    Alternative Rock
-      Indie Rock
-      Grunge
 
-Each indentation level represents a deeper specialization.
+Todos los géneros deben descender de esta raíz.
 
 --------------------------------------------------
-4. LEAF NODE RULE
+3. DEFINICIÓN DE JERARQUÍA
 --------------------------------------------------
 
-Songs puede only be classified into leaf nodes.
+La jerarquía se define por indentación.
 
-Leaf nodes are nodes that do not have children.
-
-Example:
+Ejemplo:
 
 Music
   Rock
@@ -90,110 +77,132 @@ Music
       Indie Rock
       Grunge
 
-Only:
+Cada nivel de indentación representa una
+especialización más profunda.
+
+--------------------------------------------------
+4. REGLA DE NODO HOJA
+--------------------------------------------------
+
+Las canciones solo pueden clasificarse en nodos hoja.
+
+Los nodos hoja son nodos que no tienen hijos.
+
+Ejemplo:
+
+Music
+  Rock
+    Alternative Rock
+      Indie Rock
+      Grunge
+
+Solo:
 
 - Indie Rock
 - Grunge
 
-are valid clasificación targets.
+son objetivos válidos de clasificación.
 
 --------------------------------------------------
-5. GÉNERO HERMANO RULE
+5. REGLA DE GÉNEROS HERMANOS
 --------------------------------------------------
 
-Genres that share the same parent debe represent
-musically distinguishable styles.
+Los géneros que comparten el mismo padre deben
+representar estilos musicalmente distinguibles.
 
-Sibling genres no debe be so similar that they
-produce indistinguishable playlists.
+Los géneros hermanos no deben ser tan similares
+que produzcan playlists indistinguibles.
 
-If sibling genres cannot be clearly distinguished,
-they should be merged.
-
---------------------------------------------------
-6. COHESIÓN DE PLAYLIST RULE
---------------------------------------------------
-
-The taxonomía debe prioritize playlist coherence.
-
-If a node generates playlists that sound inconsistent,
-the taxonomía debe be adjusted.
-
-Possible actions:
-
-- merge sibling genres
-- move nodes to a different parent
-- split genres when necessary
+Si no pueden distinguirse con claridad,
+deberían fusionarse.
 
 --------------------------------------------------
-7. NODE DEPTH POLICY
+6. REGLA DE COHESIÓN DE PLAYLIST
 --------------------------------------------------
 
-The taxonomía should maintain a moderate depth.
+La taxonomía debe priorizar la coherencia de playlist.
 
-Typical depth:
+Si un nodo genera playlists inconsistentes,
+la taxonomía debe ajustarse.
 
-3–5 levels.
+Acciones posibles:
 
-Overly deep hierarchies should be avoided unless
-they represent meaningful musical distinctions.
-
---------------------------------------------------
-8. EXPANSION RULE
---------------------------------------------------
-
-A node puede be expanded when the number of songs
-assigned to it exceeds the expansion threshold.
-
-Expansion threshold:
-
-45 songs.
-
-When expansion occurs, the node becomes a parent
-and its songs debe be redistributed among subgenres.
+- fusionar géneros hermanos
+- mover nodos a otro padre
+- dividir géneros cuando sea necesario
 
 --------------------------------------------------
-9. NODO GENERAL POLICY
+7. POLÍTICA DE PROFUNDIDAD DE NODOS
 --------------------------------------------------
 
-A node puede contain a General subnode when
-existing subgenres do not fully cover the parent genre.
+La taxonomía debería mantener una profundidad moderada.
 
-General nodes act as explicit fallback nodes for songs
-that do not fit known subgenres of that parent.
+Profundidad típica:
 
-Example:
+3–5 niveles.
+
+Deben evitarse jerarquías excesivamente profundas,
+salvo cuando representen distinciones musicales
+realmente significativas.
+
+--------------------------------------------------
+8. REGLA DE EXPANSIÓN
+--------------------------------------------------
+
+Un nodo puede expandirse cuando el número de canciones
+asignadas supera el umbral de expansión.
+
+Umbral de expansión:
+
+45 canciones.
+
+Cuando ocurre expansión, el nodo se convierte en padre
+y sus canciones deben redistribuirse entre subgéneros.
+
+--------------------------------------------------
+9. POLÍTICA DE NODO GENERAL
+--------------------------------------------------
+
+Un nodo puede contener un subnodo General cuando
+los subgéneros existentes no cubren completamente
+el género padre.
+
+Los nodos General actúan como fallback explícito
+para canciones que no encajan en subgéneros conocidos
+de ese padre.
+
+Ejemplo:
 
 Hard Rock
   Glam Metal
   Arena Rock
   Hard Rock (General)
 
-General nodes debe:
+Los nodos General deben:
 
-- be explicitly defined
-- never be auto-created by the system
-- not replace proper genre creation
-- be used only when necessary
-
---------------------------------------------------
-10. ATOMIC GENRE RULE
---------------------------------------------------
-
-Some genres should not be subdivided further.
-
-These genres are considered atomic.
-
-Atomic genres represent styles where further
-subdivision would create artificial distinctions.
+- estar definidos explícitamente
+- no crearse automáticamente por el sistema
+- no reemplazar creación apropiada de géneros
+- usarse solo cuando sea necesario
 
 --------------------------------------------------
-11. RAMA LATIN STRUCTURE
+10. REGLA DE GÉNERO ATÓMICO
 --------------------------------------------------
 
-Latin music exists in a dedicated branch.
+Algunos géneros no deberían subdividirse más.
 
-Example:
+Estos géneros se consideran atómicos.
+
+Los géneros atómicos representan estilos donde
+subdividir más crearía distinciones artificiales.
+
+--------------------------------------------------
+11. ESTRUCTURA DE RAMA LATIN
+--------------------------------------------------
+
+La música Latin existe en una rama dedicada.
+
+Ejemplo:
 
 Music
   Latin
@@ -201,99 +210,101 @@ Music
     Latin Pop
     Regional Latin
 
-Genres under Latin represent styles belonging
-to Latin musical traditions.
+Los géneros dentro de Latin representan estilos
+propios de tradiciones musicales latinas.
 
-Songs classified as Latin debe use this branch.
+Las canciones clasificadas como Latin deben usar
+esta rama.
 
 --------------------------------------------------
-12. GENRE NAMING RULE
+12. REGLA DE NOMBRADO DE GÉNEROS
 --------------------------------------------------
 
-Genre names debe follow these reglas:
+Los nombres de género deben cumplir estas reglas:
 
 - Title Case
-- Clear musical meaning
-- No abbreviations unless widely accepted
+- significado musical claro
+- sin abreviaciones, salvo que estén ampliamente aceptadas
 
-Avoid vague or descriptive labels.
+Evita etiquetas vagas o descriptivas.
 
-Example of invalid names:
+Ejemplos de nombres inválidos:
 
 - Latin Style
 - Misc Genres
 - Mixed Music
 
 --------------------------------------------------
-13. TAXONOMY MODIFICATION POLICY
+13. POLÍTICA DE MODIFICACIÓN DE TAXONOMÍA
 --------------------------------------------------
 
-Taxonomy modifications debe be made manually.
+Las modificaciones taxonómicas deben hacerse manualmente.
 
-El sistema cannot automatically modify the taxonomía.
+El sistema no puede modificar automáticamente la taxonomía.
 
-El sistema puede only:
+El sistema solo puede:
 
-- suggest new nodes
-- report inconsistencies
-- propose structural improvements
+- sugerir nuevos nodos
+- reportar inconsistencias
+- proponer mejoras estructurales
 
-All changes debe be approved by the user.
+Todos los cambios deben ser aprobados por el usuario.
 
 --------------------------------------------------
 14. VALIDACIÓN DE TAXONOMÍA
 --------------------------------------------------
 
-Antes de un release the taxonomía debe ser validada.
+Antes de un release, la taxonomía debe validarse.
 
-Validation checks include:
+La validación incluye:
 
-- sibling genre similarity
-- redundant nodes
-- overly deep hierarchies
-- playlist cohesion problems
+- similitud entre géneros hermanos
+- nodos redundantes
+- jerarquías excesivamente profundas
+- problemas de cohesión de playlists
 
 --------------------------------------------------
-15. SOURCE AND OPERATIONAL REPRESENTATION
+15. REPRESENTACIÓN FUENTE Y OPERATIVA
 --------------------------------------------------
 
-The authoritative editable taxonomía source is:
+La fuente editable autoritativa de la taxonomía es:
 
 taxonomy/genre_tree_master.md
 
-The master taxonomía debe stay directly editable by users.
+La taxonomía maestra debe mantenerse directamente
+editable por usuarios.
 
-The operational taxonomía debe be generated from
-the master taxonomía template.
+La taxonomía operativa debe generarse a partir
+de la plantilla maestra.
 
-The operational representation debe be machine-readable
-and debe include numeric node codes.
+La representación operativa debe ser machine-readable
+y debe incluir códigos numéricos de nodo.
 
-The playlist tree debe be generated dynamically from
-classified songs using this taxonomía.
-
---------------------------------------------------
-16. CLONE AND HYBRID GENRE POLICY
---------------------------------------------------
-
-The taxonomía supports clone nodes.
-
-Clone node reglas:
-
-- a clone debe reference one canonical node
-- clone nodes no debe have children
-- clone nodes act as navigation portals
-- clones exist to avoid structural duplication
-- canonical nodes puede have children
-
-The taxonomía supports hybrid genres.
-
-Hybrid genre reglas:
-
-- a hybrid puede appear in multiple conceptual branches
-- when represented in multiple branches, clone nodes
-  should be used to point to the canonical node
+El árbol de playlists debe generarse dinámicamente
+desde canciones clasificadas usando esta taxonomía.
 
 --------------------------------------------------
-END TAXONOMY RULES
+16. POLÍTICA DE GÉNEROS CLONE E HÍBRIDOS
+--------------------------------------------------
+
+La taxonomía soporta nodos clone.
+
+Reglas de nodos clone:
+
+- un clone debe referenciar un nodo canónico
+- los nodos clone no deben tener hijos
+- los nodos clone actúan como portales de navegación
+- existen para evitar duplicación estructural
+- los nodos canónicos pueden tener hijos
+
+La taxonomía soporta géneros híbridos.
+
+Reglas de géneros híbridos:
+
+- un híbrido puede aparecer en múltiples ramas conceptuales
+- cuando se representa en varias ramas, deberían usarse
+  nodos clone para apuntar al nodo canónico
+
+--------------------------------------------------
+FIN REGLAS DE TAXONOMÍA
 

@@ -1,5 +1,5 @@
-# TAXONOMY NAMING CONVENTION
-Music Genre Taxonomy System
+# CONVENCIÓN DE NOMBRADO TAXONÓMICO
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 METADATOS DEL DOCUMENTO
@@ -7,8 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Naming standards for taxonomía nodes, fallback nodes,
-and clone naming consistency.
+Estándares de nombrado para nodos de la taxonomía,
+nodos fallback y consistencia de nombres clone.
 
 Responsable:
 
@@ -22,148 +22,154 @@ Propietario del proyecto
 1. PROPÓSITO
 --------------------------------------------------
 
-Este documento define the reglas used to name genres
-within the taxonomía.
+Este documento define las reglas usadas para nombrar
+géneros dentro de la taxonomía.
 
-Consistent naming is critical for:
+Un nombrado consistente es crítico para:
 
-• clasificación accuracy
-• taxonomía readability
-• avoiding ambiguity
-• maintaining structural clarity
-
---------------------------------------------------
-2. UNIQUE GENRE NAMES
---------------------------------------------------
-
-Each genre name debe be unique across the taxonomía.
-
-Two nodes debe never share the same name unless one
-of them is a Clone node referencing the canonical node.
-
-This ensures that clasificación targets remain
-unambiguous.
+• precisión de clasificación
+• legibilidad de la taxonomía
+• evitar ambigüedad
+• mantener claridad estructural
 
 --------------------------------------------------
-3. LANGUAGE RULE
+2. NOMBRES DE GÉNERO ÚNICOS
 --------------------------------------------------
 
-Outside the Latin branch, genre names debe be written
-in English.
+Cada nombre de género debe ser único en toda la taxonomía.
 
-Examples:
+Dos nodos nunca deben compartir el mismo nombre salvo que
+uno sea un nodo clone que referencie el nodo canónico.
 
-Rock  
-Alternative Rock  
-Dream Pop  
+Esto garantiza que los objetivos de clasificación
+permanezcan no ambiguos.
+
+--------------------------------------------------
+3. REGLA DE IDIOMA
+--------------------------------------------------
+
+Fuera de la rama Latin, los nombres de género deben
+escribirse en inglés.
+
+Ejemplos:
+
+Rock
+Alternative Rock
+Dream Pop
 Heavy Metal
 
-Inside the Latin branch, Spanish names are allowed
-when the genre originates from Latin musical traditions.
+Dentro de la rama Latin se permiten nombres en español
+cuando el género pertenece a tradiciones musicales latinas.
 
-Examples:
+Ejemplos:
 
-Vallenato  
-Norteño  
-Banda  
-Ranchero  
+Vallenato
+Norteño
+Banda
+Ranchero
 
-English puede still be used inside the Latin branch
-when the genre name is widely recognized in English.
+También puede usarse inglés dentro de la rama Latin
+cuando el nombre del género esté ampliamente reconocido
+en inglés.
 
 --------------------------------------------------
-4. AVOID AMBIGUOUS TERMS
+4. EVITAR TÉRMINOS AMBIGUOS
 --------------------------------------------------
 
-Genre names debe represent clearly identifiable
-musical styles.
+Los nombres de género deben representar estilos
+musicales claramente identificables.
 
-The following types of names are not allowed:
+No se permiten los siguientes tipos de nombres:
 
-• vague stylistic descriptions  
-• marketing labels  
-• non-musical descriptors  
+• descripciones estilísticas vagas
+• etiquetas de marketing
+• descriptores no musicales
 
-Examples of invalid names:
+Ejemplos de nombres inválidos:
 
-Latin Style  
-Mixed Music  
-Various Genres  
+Latin Style
+Mixed Music
+Various Genres
 Latin Rhythms
 
 --------------------------------------------------
 5. TITLE CASE
 --------------------------------------------------
 
-Genre names debe follow Title Case formatting.
+Los nombres de género deben seguir formato Title Case.
 
-Examples:
+Ejemplos:
 
-Alternative Rock  
-Synth Pop  
-Progressive Rock  
+Alternative Rock
+Synth Pop
+Progressive Rock
 
-This improves readability and consistency.
+Esto mejora legibilidad y consistencia.
 
 --------------------------------------------------
-6. NODO GENERAL NAMING
+6. NOMBRADO DE NODO GENERAL
 --------------------------------------------------
 
-Fallback nodes debe follow a strict naming rule.
+Los nodos fallback deben seguir una regla estricta
+de nombrado.
 
-The name debe be:
+El nombre debe ser:
 
 Parent Genre + "(General)"
 
-Example:
+Ejemplo:
 
-Hard Rock (General)  
+Hard Rock (General)
 Latin Rock (General)
 
-This ensures that fallback nodes are clearly identifiable.
+Esto garantiza que los nodos fallback sean
+claramente identificables.
 
 --------------------------------------------------
-7. NODO CLON NAMING
+7. NOMBRADO DE NODO CLONE
 --------------------------------------------------
 
-Clone nodes debe use the same genre name as their
-canonical node.
+Los nodos clone deben usar el mismo nombre de género
+que su nodo canónico.
 
-However, internally they debe reference the canonical node.
+Sin embargo, internamente deben referenciar
+al nodo canónico.
 
-Clone nodes exist only for navigation and clasificación
-assistance.
+Los nodos clone existen solo para navegación y soporte
+de clasificación.
 
-They do not contain independent song assignments.
+No contienen asignaciones de canciones independientes.
 
 --------------------------------------------------
-8. AVOID OVERLY LONG NAMES
+8. EVITAR NOMBRES EXCESIVAMENTE LARGOS
 --------------------------------------------------
 
-Genre names should remain concise.
+Los nombres de género deberían mantenerse concisos.
 
-Avoid unnecessarily long labels that combine
-multiple descriptors.
+Evita etiquetas innecesariamente largas que combinen
+múltiples descriptores.
 
-Example of bad naming:
+Ejemplo de mal nombrado:
 
 Alternative Progressive Experimental Rock
 
-Instead, prefer clearly established genre names.
+En su lugar, prioriza nombres de género
+claramente establecidos.
 
 --------------------------------------------------
-9. DATASET CONSISTENCY
+9. CONSISTENCIA CON EL DATASET
 --------------------------------------------------
 
-Genre names used during clasificación debe match
-exactly the names defined in the taxonomía.
+Los nombres de género usados durante la clasificación
+deben coincidir exactamente con los definidos
+en la taxonomía.
 
-The classifier no debe invent variations or
-synonyms of genre names.
+El clasificador no debe inventar variaciones ni
+sinónimos de nombres de género.
 
-Aliases puede be handled separately through the
-genre alias system.
+Los alias pueden manejarse por separado mediante
+el sistema de aliases de género.
 
 --------------------------------------------------
-END TAXONOMY NAMING CONVENTION
+FIN CONVENCIÓN DE NOMBRADO TAXONÓMICO
 

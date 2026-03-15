@@ -1,5 +1,5 @@
-# TAXONOMY CHECKLIST DE CALIDAD
-Music Genre Taxonomy System
+# CHECKLIST DE CALIDAD TAXONÓMICA
+Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 METADATOS DEL DOCUMENTO
@@ -7,8 +7,9 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Quality review criteria used to evaluate taxonomía
-readiness before changes or releases.
+Criterios de revisión de calidad para evaluar
+la preparación de la taxonomía antes de cambios
+o releases.
 
 Responsable:
 
@@ -22,188 +23,190 @@ Propietario del proyecto
 1. PROPÓSITO
 --------------------------------------------------
 
-Este documento define the checklist used to evaluate
-the quality of the genre taxonomía.
+Este documento define el checklist usado para evaluar
+la calidad de la taxonomía de géneros.
 
-The checklist helps detect structural problems
-before a release is created.
+El checklist ayuda a detectar problemas estructurales
+antes de crear un release.
 
-El objetivo es maintain a taxonomía that is:
+El objetivo es mantener una taxonomía que sea:
 
-• musically coherent  
-• structurally balanced  
-• easy to classify against  
-• suitable for playlist generation  
-
---------------------------------------------------
-2. WHEN TO RUN THE CHECKLIST
---------------------------------------------------
-
-The taxonomía quality checklist debe be executed:
-
-• before creating a release  
-• after modifying the taxonomía  
-• after adding new genres  
-• after merging or relocating nodes  
-
-A release no debe proceed if unresolved issues remain.
+• musicalmente coherente
+• estructuralmente balanceada
+• fácil de usar para clasificar
+• adecuada para generación de playlists
 
 --------------------------------------------------
-3. ESTRUCTURA RAÍZ CHECK
+2. CUÁNDO EJECUTAR EL CHECKLIST
 --------------------------------------------------
 
-Verify that the taxonomía has exactly one root node.
+El checklist de calidad taxonómica debe ejecutarse:
 
-Example:
+• antes de crear un release
+• después de modificar la taxonomía
+• después de agregar nuevos géneros
+• después de fusionar o reubicar nodos
+
+Un release no debe avanzar si quedan issues sin resolver.
+
+--------------------------------------------------
+3. CHECK DE ESTRUCTURA RAÍZ
+--------------------------------------------------
+
+Verifica que la taxonomía tenga exactamente un nodo raíz.
+
+Ejemplo:
 
 Music
 
-All genres debe descend from this root.
+Todos los géneros deben descender de esta raíz.
 
 --------------------------------------------------
-4. GÉNERO HERMANO DISTINCTION
+4. DISTINCIÓN ENTRE GÉNEROS HERMANOS
 --------------------------------------------------
 
-Verify that sibling genres represent clearly
-distinguishable musical styles.
+Verifica que los géneros hermanos representen
+estilos musicales claramente distinguibles.
 
-Questions to ask:
+Preguntas guía:
 
-• Do these genres produce different sounding playlists?  
-• Can songs be clearly assigned to one or the other?  
-• Do they represent recognized musical categories?  
+• ¿Estos géneros producen playlists con sonido distinto?
+• ¿Las canciones se pueden asignar claramente a uno u otro?
+• ¿Representan categorías musicales reconocidas?
 
-If the answer is unclear, consider merging them.
-
---------------------------------------------------
-5. GENRE REDUNDANCY CHECK
---------------------------------------------------
-
-Check if two genres represent the same style.
-
-Redundant genres puede occur when:
-
-• different names refer to the same style  
-• subgenres overlap heavily  
-• historical naming inconsistencies exist  
-
-In these cases a merge puede be recommended.
+Si la respuesta no es clara, considera fusionarlos.
 
 --------------------------------------------------
-6. NODE EXPANSION REVIEW
+5. CHECK DE REDUNDANCIA DE GÉNEROS
 --------------------------------------------------
 
-Check whether large nodes should be expanded.
+Revisa si dos géneros representan el mismo estilo.
 
-Indicators for expansion:
+Puede haber redundancia cuando:
 
-• large number of songs in a node  
-• recognizable subgenres exist  
-• playlists feel too diverse  
+• diferentes nombres se refieren al mismo estilo
+• los subgéneros se solapan fuertemente
+• existen inconsistencias históricas de nombrado
 
-Reference threshold:
-
-45 songs.
+En estos casos, puede recomendarse una fusión.
 
 --------------------------------------------------
-7. ATOMIC GENRE REVIEW
+6. REVISIÓN DE EXPANSIÓN DE NODOS
 --------------------------------------------------
 
-Check whether some nodes should be marked atomic.
+Revisa si nodos grandes deberían expandirse.
 
-A node should be considered atomic when:
+Indicadores de expansión:
 
-• no widely recognized subgenres exist  
-• further subdivision harms playlist cohesion  
-• the genre already represents a very specific style  
+• gran número de canciones en un nodo
+• existencia de subgéneros reconocibles
+• playlists demasiado diversas
 
-Atomic nodes should not be subdivided.
+Umbral de referencia:
+
+45 canciones.
 
 --------------------------------------------------
-8. NODO GENERAL USAGE
+7. REVISIÓN DE GÉNEROS ATÓMICOS
 --------------------------------------------------
 
-Verify that General nodes are used correctly.
+Revisa si ciertos nodos deberían marcarse como atómicos.
+
+Un nodo debe considerarse atómico cuando:
+
+• no existen subgéneros ampliamente reconocidos
+• subdividir más daña la cohesión de playlists
+• el género ya representa un estilo muy específico
+
+Los nodos atómicos no deberían subdividirse.
+
+--------------------------------------------------
+8. USO DE NODO GENERAL
+--------------------------------------------------
+
+Verifica que los nodos General se usen correctamente.
 
 Checklist:
 
-• Does the parent genre justify a fallback node?  
-• Are songs incorrectly accumulating in the General node?  
-• Could new subgenres be defined instead?  
+• ¿El género padre justifica un nodo fallback?
+• ¿Se están acumulando canciones incorrectamente en General?
+• ¿Podrían definirse subgéneros nuevos en su lugar?
 
-General nodes no debe become a default category.
-
---------------------------------------------------
-9. DEPTH BALANCE CHECK
---------------------------------------------------
-
-Verify that the taxonomía depth remains balanced.
-
-Problems to detect:
-
-• branches that are excessively deep  
-• branches that remain extremely shallow  
-• uneven hierarchy growth  
+Los nodos General no deben convertirse en categoría por defecto.
 
 --------------------------------------------------
-10. NODE RELOCATION CHECK
+9. CHECK DE BALANCE DE PROFUNDIDAD
 --------------------------------------------------
 
-Verify that genres are placed under the most
-appropriate parent node.
+Verifica que la profundidad de la taxonomía
+se mantenga balanceada.
 
-If a genre appears to belong more naturally
-under another branch, relocation should be
-considered.
+Problemas a detectar:
 
---------------------------------------------------
-11. OVER-FRAGMENTATION CHECK
---------------------------------------------------
-
-Detect branches that have been subdivided too much.
-
-Indicators:
-
-• extremely small sibling genres  
-• genres that are difficult to distinguish  
-• excessive specialization  
-
-In these cases the taxonomía puede need simplification.
+• ramas excesivamente profundas
+• ramas extremadamente superficiales
+• crecimiento jerárquico desigual
 
 --------------------------------------------------
-12. RAMA LATIN VALIDATION
+10. CHECK DE REUBICACIÓN DE NODOS
 --------------------------------------------------
 
-Verify that Latin genres remain inside the Latin branch.
+Verifica que los géneros estén bajo
+el nodo padre más apropiado.
 
-Songs classified as Latin no debe use genres
-outside the Latin branch.
-
---------------------------------------------------
-13. NAMING CONSISTENCY
---------------------------------------------------
-
-Verify that genre names follow the naming conventions.
-
-Check for:
-
-• Title Case usage  
-• consistent naming patterns  
-• absence of ambiguous labels  
+Si un género parece pertenecer de forma más natural
+a otra rama, debe considerarse su reubicación.
 
 --------------------------------------------------
-14. RELEASE VALIDATION
+11. CHECK DE SOBRE-FRAGMENTACIÓN
 --------------------------------------------------
 
-Before creating a project release verify that:
+Detecta ramas que se hayan subdividido en exceso.
 
-• all taxonomía issues have been reviewed  
-• no unresolved structural problems remain  
-• taxonomía structure is coherent  
-• naming conventions are respected  
+Indicadores:
 
-A release no debe proceed if the checklist fails.
+• géneros hermanos demasiado pequeños
+• géneros difíciles de distinguir
+• especialización excesiva
+
+En estos casos, la taxonomía puede requerir simplificación.
 
 --------------------------------------------------
-END TAXONOMY CHECKLIST DE CALIDAD
+12. VALIDACIÓN DE RAMA LATIN
+--------------------------------------------------
+
+Verifica que los géneros Latin permanezcan
+dentro de la rama Latin.
+
+Las canciones clasificadas como Latin no deben
+usar géneros fuera de esa rama.
+
+--------------------------------------------------
+13. CONSISTENCIA DE NOMBRADO
+--------------------------------------------------
+
+Verifica que los nombres de género respeten
+las convenciones de nombrado.
+
+Revisa:
+
+• uso de Title Case
+• patrones de nombrado consistentes
+• ausencia de etiquetas ambiguas
+
+--------------------------------------------------
+14. VALIDACIÓN DE RELEASE
+--------------------------------------------------
+
+Antes de crear un release del proyecto, verifica que:
+
+• todos los issues taxonómicos fueron revisados
+• no quedan problemas estructurales sin resolver
+• la estructura taxonómica es coherente
+• se respetan las convenciones de nombrado
+
+Un release no debe avanzar si el checklist falla.
+
+--------------------------------------------------
+FIN CHECKLIST DE CALIDAD TAXONÓMICA
 
