@@ -319,6 +319,25 @@
       <tbody id="tbody"></tbody>
     </table>
   </div>
+
+  <div class="section-label" style="margin-top:1.6rem">Hallazgos semánticos (Capa 2)</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Regla</th>
+          <th>FB</th>
+          <th>Severidad</th>
+          <th>Nodo</th>
+          <th>Evidencia / Recomendación</th>
+          <th>Confianza</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyL2">
+        <tr><td colspan="6" class="empty">Sin reporte de Capa 2.</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <script>
@@ -398,6 +417,32 @@
     requestAnimationFrame(() => el.classList.add('visible'));
   }
 
+  function renderLayer2(data) {
+    const tbody = document.getElementById('tbodyL2');
+    tbody.innerHTML = '';
+
+    if (!data || !data.findings || !data.findings.length) {
+      tbody.innerHTML = `<tr><td colspan="6" class="empty">Sin hallazgos de Capa 2.</td></tr>`;
+      return;
+    }
+
+    data.findings.forEach((f) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="font-family:monospace;font-weight:600;white-space:nowrap;font-size:0.82rem">${f.rule_id || '—'}</td>
+        <td style="font-size:0.75rem;color:var(--muted)">${f.fb || '—'}</td>
+        <td>${pill(f.severity || 'WARNING')}</td>
+        <td style="font-size:0.78rem;line-height:1.45">${f.node_path || '—'}</td>
+        <td>
+          <div style="font-size:0.75rem;color:var(--muted);line-height:1.5">${f.evidence || '—'}</div>
+          <div style="font-size:0.75rem;line-height:1.5;margin-top:0.35rem"><strong>Recomendación:</strong> ${f.recommendation || '—'}</div>
+        </td>
+        <td style="white-space:nowrap">${typeof f.confidence === 'number' ? f.confidence.toFixed(2) : '—'}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
   async function runValidation() {
     const btn = document.getElementById('btnRun');
     const spinner = document.getElementById('spinner');
@@ -412,6 +457,7 @@
       if (data.layer1) {
         render(data.layer1);
       }
+      renderLayer2(data.layer2);
       const note = document.getElementById('pipelineNote');
       const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
       note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
@@ -434,6 +480,7 @@
       if (data.layer1) {
         render(data.layer1);
       }
+      renderLayer2(data.layer2);
       const note = document.getElementById('pipelineNote');
       const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
       note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')

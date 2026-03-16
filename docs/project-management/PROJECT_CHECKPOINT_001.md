@@ -192,3 +192,62 @@ Este checkpoint garantiza que:
 • el proyecto puede retomarse meses después
 
 sin perder contexto.
+
+---
+
+# Actualización de Continuidad (2026-03-15)
+
+Estado actualizado tras iteraciones de validación:
+
+1. Documento operativo MVET actualizado a v0.6.
+2. Capa 1 implementada y estable en scripts/validate_tree.py.
+3. Capa 2 implementada como stub operativo en
+	 scripts/validate_tree_layer2.py.
+4. Dashboard web local implementado para ejecutar validación
+	 y visualizar resultados.
+
+## Activos Nuevos
+
+scripts/validate_tree_layer2.py
+
+Funcionalidades:
+
+• --print-prompt genera prompt determinista en:
+	reports/validate_master_layer2_prompt.txt
+• --apply-response <json> valida esquema de respuesta IA y genera:
+	reports/validate_master_layer2_report.json
+	reports/validate_master_layer2_report.md
+
+scripts/web_app.py
+
+Endpoints principales:
+
+• GET /api/report/full
+• POST /api/validate/full
+
+Pipeline del endpoint /api/validate/full:
+
+• Ejecuta Capa 1
+• Si Capa 1 != FAIL y existe respuesta IA guardada,
+	ejecuta Capa 2 automáticamente
+
+web/index.html
+
+• UI para ejecutar pipeline desde botón único
+• Render legible de JSON de salida
+• Tabla de hallazgos y causantes por regla
+
+## Convención de operación vigente
+
+Flujo CLI equivalente:
+
+1) python scripts/validate_tree.py
+2) python scripts/validate_tree_layer2.py --print-prompt
+3) guardar respuesta IA en reports/validate_master_layer2_response.json
+4) python scripts/validate_tree_layer2.py --apply-response reports/validate_master_layer2_response.json
+
+Flujo Web equivalente:
+
+1) python scripts/web_app.py --port 8765
+2) abrir http://localhost:8765
+3) presionar "Ejecutar Validación (L1 + L2)"

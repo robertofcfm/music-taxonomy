@@ -64,5 +64,51 @@ El diseño de taxonomía debe mantenerse lo suficientemente flexible para
 acomodar esta evolución preservando la coherencia musical.
 
 --------------------------------------------------
+6. MEMORIA DE VALIDACIÓN MVET
+--------------------------------------------------
+
+Se formalizó un modelo híbrido de validación de taxonomía:
+
+• Capa 1 (determinista): checks estructurales, trazables y repetibles
+• Capa 2 (semántica): análisis musical con IA bajo contrato JSON estricto
+
+La gobernanza se usa como fuente de conocimiento por archivo
+(modelo FB), no como mapeo rígido SOURCE por regla.
+
+Convención establecida:
+
+• MVET-L1-* => Capa 1
+• MVET-L2-* => Capa 2
+• MVET-C-* => reglas condicionales
+
+Decisión clave de profundidad:
+
+• mínimo estructural (>= 3) se valida en Capa 1
+• límite máximo por criterio atómico se evalúa en Capa 2
+
+Regla de trazabilidad operativa:
+
+El reporte debe incluir causantes explícitos cuando una regla falla.
+
+--------------------------------------------------
+7. MEMORIA DE OPERACIÓN WEB
+--------------------------------------------------
+
+Se implementó una interfaz web local para operar validación desde UI.
+
+Componentes:
+
+• scripts/web_app.py (servidor local)
+• web/index.html (dashboard)
+
+El botón principal ejecuta pipeline completo:
+
+• Capa 1 siempre
+• Capa 2 si existe reports/validate_master_layer2_response.json
+
+La UI muestra resultados de Capa 1 en formato legible,
+y estado de ejecución de pipeline incluyendo decisión de Capa 2.
+
+--------------------------------------------------
 FIN MEMORIA DEL PROYECTO
 
