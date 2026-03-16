@@ -180,6 +180,17 @@
       font-size: 0.78rem;
       color: var(--muted);
     }
+    .pipeline-diag {
+      margin-top: 0.6rem;
+      padding: 0.6rem 0.9rem;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: pre-wrap;
+      line-height: 1.45;
+    }
 
     /* ── Section label ───────────────────────────────────────── */
     .section-label {
@@ -302,6 +313,7 @@
     <span><strong>SHA256</strong> <span id="mHash">—</span></span>
   </div>
   <div class="pipeline-note" id="pipelineNote">Estado pipeline: —</div>
+  <div class="pipeline-diag" id="pipelineDiag">Diagnóstico: —</div>
 
   <!-- Findings -->
   <div class="section-label">Hallazgos por regla</div>
@@ -372,6 +384,7 @@
     document.getElementById('mFile').textContent = '—';
     document.getElementById('mHash').textContent = '—';
     document.getElementById('pipelineNote').textContent = 'Estado pipeline: esperando ejecución manual.';
+    document.getElementById('pipelineDiag').textContent = 'Diagnóstico: pendiente de ejecución.';
 
     document.getElementById('tbody').innerHTML =
       `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
@@ -443,12 +456,23 @@
     requestAnimationFrame(() => el.classList.add('visible'));
   }
 
-  function renderLayer2(data) {
+  function renderLayer2(data, pipeline) {
     const tbody = document.getElementById('tbodyL2');
     tbody.innerHTML = '';
 
-    if (!data || !data.findings || !data.findings.length) {
-      tbody.innerHTML = `<tr><td colspan="6" class="empty">Sin hallazgos de Capa 2.</td></tr>`;
+    if (!data) {
+      const reason = pipeline && pipeline.message
+        ? pipeline.message
+        : 'No se generó reporte de Capa 2 en esta ejecución.';
+      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 no ejecutada. ${reason}</td></tr>`;
+      return;
+    }
+
+    if (!data.findings || !data.findings.length) {
+      const decision = data.summary && data.summary.decision
+        ? data.summary.decision
+        : 'N/D';
+      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 ejecutada sin hallazgos. Decisión: ${decision}.</td></tr>`;
       return;
     }
 
@@ -483,11 +507,25 @@
       if (data.layer1) {
         render(data.layer1);
       }
-      renderLayer2(data.layer2);
+      renderLayer2(data.layer2, data.pipeline);
       const note = document.getElementById('pipelineNote');
       const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
       note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
         + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
+
+      const diag = document.getElementById('pipelineDiag');
+      const p = data.pipeline || {};
+      const d = p.diagnostics || {};
+      const pr = d.prompt || {};
+      const rf = d.response_file || {};
+      const ap = d.layer2_apply || {};
+      diag.textContent =
+        'Diagnóstico:\n' +
+        '- wait_seconds=' + (p.layer2_wait_seconds ?? '—') + '\n' +
+        '- prompt.executed=' + (pr.executed ?? false) + ', exit=' + (pr.exit_code ?? '—') + ', fresh=' + (pr.file_fresh ?? false) + '\n' +
+        '- response.detected=' + (rf.detected ?? false) + ', exists=' + (rf.file_exists ?? false) + ', fresh=' + (rf.file_fresh ?? false) + '\n' +
+        '- response.json_valid=' + (rf.json_valid ?? false) + (rf.json_error ? (', error=' + rf.json_error) : '') + '\n' +
+        '- apply.executed=' + (ap.executed ?? false) + ', exit=' + (ap.exit_code ?? '—') + ', report_fresh=' + (ap.report_fresh ?? false);
     } catch (e) {
       alert('Error: ' + e.message);
     } finally {
