@@ -7,7 +7,7 @@ Music
     Alternative & Indie
       Indie Rock
       Grunge
-        Seattle Grunge
+        Seattle Grunge (Atomic)
         Post-Grunge
       Dream Pop
       Post Punk
@@ -36,7 +36,7 @@ Music
 
     Synth & Electronic Pop
       Synth Pop
-        New Romantic
+        New Romantic (Atomic)
         Electro Pop
 
   Electronic & Dance
@@ -47,7 +47,6 @@ Music
     Ambient
       Dark Ambient
       Cinematic Ambient
-    Downtempo
 
   Hip Hop
 
@@ -68,10 +67,7 @@ Music
       Vallenato
 
   Soul / Funk / R&B
-    Soul
-    Rhythm & Blues
+    Soul / Rhythm & Blues
     Funk
 
   Jazz
-
-  Instrumental / Score

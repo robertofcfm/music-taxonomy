@@ -663,12 +663,14 @@
     }
 
     data.findings.forEach((f) => {
+      const passed = f.result === 'PASS';
       const tr = document.createElement('tr');
+      if (!passed) tr.className = 'row-fail';
       tr.innerHTML = `
         <td style="font-family:monospace;font-weight:600;white-space:nowrap;font-size:0.82rem">${f.rule_id || '—'}</td>
         <td style="font-size:0.75rem;color:var(--muted)">${f.fb || '—'}</td>
         <td>${pill(f.severity || 'WARNING')}</td>
-        <td style="white-space:nowrap"><span class="st-fail">✗ FAIL</span></td>
+        <td style="white-space:nowrap">${passed ? '<span class="st-pass">✓ PASS</span>' : '<span class="st-fail">✗ FAIL</span>'}</td>
         <td style="font-size:0.78rem;line-height:1.45">${f.node_path || '—'}</td>
         <td>
           <div style="font-size:0.75rem;color:var(--muted);line-height:1.5">${f.evidence || '—'}</div>

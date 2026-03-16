@@ -244,6 +244,7 @@ def build_prompt(taxonomy_text: str) -> str:
     {
       "rule_id": "<RULE_ID>",
       "severity": "<FATAL|WARNING|SUGGESTION>",
+      "result": "<PASS si la recomendación es no hacer cambios | FAIL si se requiere o sugiere una acción>",
       "node_path": "<ruta completa: Padre > Hijo>",
       "evidence": "<descripción objetiva de lo observado>",
       "recommendation": "<propuesta de mejora o confirmación sin cambio>",
@@ -284,10 +285,14 @@ Si no hay ningún hallazgo, devuelve findings como arreglo vacío [].
 # ---------------------------------------------------------------------------
 
 
+VALID_RESULTS = {"PASS", "FAIL"}
+
+
 @dataclass
 class Layer2Finding:
     rule_id: str
     severity: str
+    result: str
     node_path: str
     evidence: str
     recommendation: str
@@ -309,6 +314,7 @@ def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]
         prefix = f"findings[{i}]"
         rule_id = item.get("rule_id", "")
         severity = item.get("severity", "")
+        result = item.get("result", "")
         node_path = item.get("node_path", "")
         evidence = item.get("evidence", "")
         recommendation = item.get("recommendation", "")
@@ -319,6 +325,8 @@ def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]
             item_errors.append(f"{prefix}: rule_id inválido '{rule_id}'.")
         if severity not in VALID_SEVERITIES:
             item_errors.append(f"{prefix}: severity inválida '{severity}'.")
+        if result not in VALID_RESULTS:
+            item_errors.append(f"{prefix}: result inválido '{result}' (debe ser PASS o FAIL).")
         if not node_path:
             item_errors.append(f"{prefix}: node_path vacío.")
         if not evidence:
@@ -334,6 +342,7 @@ def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]
                 Layer2Finding(
                     rule_id=rule_id or "UNKNOWN",
                     severity=severity or "UNKNOWN",
+                    result=result if result in VALID_RESULTS else "FAIL",
                     node_path=node_path,
                     evidence=evidence,
                     recommendation=recommendation,
@@ -347,6 +356,7 @@ def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]
                 Layer2Finding(
                     rule_id=rule_id,
                     severity=severity,
+                    result=result,
                     node_path=node_path,
                     evidence=evidence,
                     recommendation=recommendation,
@@ -411,6 +421,7 @@ def write_layer2_reports(
                 "rule_id": f.rule_id,
                 "fb": rule_map.get(f.rule_id, {}).get("fb", ""),
                 "severity": f.severity,
+                "result": f.result,
                 "node_path": f.node_path,
                 "evidence": f.evidence,
                 "recommendation": f.recommendation,
