@@ -11,7 +11,6 @@ Music
       Grunge
       Dream Pop
       Post Punk
-        New Wave
         Gothic Rock
         Coldwave
         Darkwave
@@ -22,9 +21,6 @@ Music
         Texas Blues Rock
         Classic Blues Rock
       Hard Rock
-        Glam Metal
-        Arena Rock
-        Hard Rock (General)
 
   Metal
     Heavy Metal
@@ -40,9 +36,8 @@ Music
 
     Synth & Electronic Pop
       Synth Pop
-        New Romantic
-        Electro Pop
       Electronic Dream Pop
+      New Wave
 
   Electronic & Dance
     Disco
@@ -66,11 +61,7 @@ Music
 
     Regional Mexicano / Texano
       Norteño
-        Norteño Clásico
-        Norteño Moderno
       Texano
-        Texano Clásico
-        Texano Moderno
       Banda
       Ranchero
 

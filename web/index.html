@@ -715,21 +715,7 @@
     document.getElementById('promptStatus').textContent = 'Prompt copiado al portapapeles.';
   }
 
-  async function loadExistingState() {
-    resetView();
-    try {
-      const res = await fetch('/api/report/full');
-      const data = await res.json();
-      if (data.layer1) {
-        render(data.layer1);
-      }
-      renderPrompt(data.prompt, data.pipeline, data.layer1);
-      renderLayer2(data.layer2, data.pipeline);
-      renderPipeline(data.pipeline, data.layer2);
-    } catch (_) {}
-  }
-
-  loadExistingState();
+  resetView();
 </script>
 </body>
 </html>
