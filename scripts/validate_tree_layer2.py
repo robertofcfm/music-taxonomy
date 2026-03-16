@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -32,103 +33,41 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+GOVERNANCE_DIR = REPO_ROOT / "docs" / "governance"
 DEFAULT_TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "genre_tree_master.md"
 REPORTS_DIR = REPO_ROOT / "reports"
 LAYER1_REPORT = REPORTS_DIR / "validate_master_report.json"
 PROMPT_OUTPUT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
 
-
-# ---------------------------------------------------------------------------
-# Definición de reglas MVET-L2 (fuente de conocimiento: FB)
-# ---------------------------------------------------------------------------
-
-MVET_L2_RULES: list[dict] = [
-    {
-        "rule_id": "MVET-L2-001",
-        "fb": "FB-05",
-        "severity": "WARNING",
-        "description": "Distinción musical entre géneros hermanos.",
-        "check": (
-            "Evalúa si los géneros que comparten el mismo padre son musicalmente "
-            "distinguibles entre sí. Si dos hermanos producirían playlists "
-            "indistinguibles, deben reportarse."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-002",
-        "fb": "FB-05",
-        "severity": "WARNING",
-        "description": "Riesgos de cohesión de playlists por estructura.",
-        "check": (
-            "Identifica nodos donde la mezcla estilística potencial del contenido "
-            "del nodo podría producir playlists inconsistentes."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-003",
-        "fb": "FB-05",
-        "severity": "WARNING",
-        "description": "Redundancia entre nodos.",
-        "check": (
-            "Detecta parejas de géneros que representan estilos potencialmente "
-            "equivalentes o solapados en el conjunto del árbol, excluyendo "
-            "nodos clone."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-004",
-        "fb": "FB-05",
-        "severity": "WARNING",
-        "description": "Sobre-fragmentación estructural.",
-        "check": (
-            "Detecta subramas donde el número de hijos es excesivo sin que "
-            "exista valor musical claro para esa granularidad."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-005",
-        "fb": "FB-05",
-        "severity": "WARNING",
-        "description": "Criterio atómico para límite de profundidad máxima.",
-        "check": (
-            "Evalúa nodos hoja donde subdividir más sería forzado o deterioraría "
-            "la coherencia musical. Estos nodos deben considerarse atómicos."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-006",
-        "fb": "FB-06",
-        "severity": "WARNING",
-        "description": "Candidatos de reubicación estructural.",
-        "check": (
-            "Propone con evidencia musical nodos que encajarían mejor "
-            "bajo un padre diferente al actual."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-007",
-        "fb": "FB-06",
-        "severity": "WARNING",
-        "description": "Candidatos de fusión de nodos hermanos.",
-        "check": (
-            "Identifica parejas de hermanos con solapamiento tan alto que "
-            "la fusión mejoraría la coherencia del árbol."
-        ),
-    },
-    {
-        "rule_id": "MVET-L2-008",
-        "fb": "FB-04",
-        "severity": "FATAL",
-        "description": "Violación semántica de separación Latin y no-Latin.",
-        "check": (
-            "Detecta cualquier evidencia de mezcla de géneros Latin y "
-            "no-Latin que contraríe la separación de dominio obligatoria, "
-            "excluyendo nodos clone."
-        ),
-    },
+GOVERNANCE_DOCS_MANDATORY = [
+    GOVERNANCE_DIR / "GLOBAL_RULES.md",
+    GOVERNANCE_DIR / "SYSTEM_CONTRACT.md",
+    GOVERNANCE_DIR / "MVET_LAYER2_RULES.md",
+    GOVERNANCE_DIR / "TAXONOMY_RULES.md",
+    GOVERNANCE_DIR / "TAXONOMY_DEPTH_POLICY.md",
+    GOVERNANCE_DIR / "TAXONOMY_NAMING_CONVENTION.md",
+    GOVERNANCE_DIR / "TAXONOMY_QUALITY_CHECKLIST.md",
 ]
+GOVERNANCE_DOC_CHANGE_POLICY = GOVERNANCE_DIR / "TAXONOMY_CHANGE_POLICY.md"
 
-RULE_IDS = {r["rule_id"] for r in MVET_L2_RULES}
+
+# ---------------------------------------------------------------------------
+# Definición dinámica de reglas MVET-L2 desde docs/governance
+# ---------------------------------------------------------------------------
+
+RULE_MARKER_START = "<!-- MVET:LAYER2_RULE_START -->"
+RULE_MARKER_END = "<!-- MVET:LAYER2_RULE_END -->"
+RULE_BLOCK_RE = re.compile(
+    re.escape(RULE_MARKER_START) + r"\s*(\{.*?\})\s*" + re.escape(RULE_MARKER_END),
+    re.DOTALL,
+)
+LAYER2_RULE_REQUIRED_FIELDS = {
+    "rule_id",
+    "fb",
+    "severity",
+    "description",
+    "check",
+}
 VALID_SEVERITIES = {"FATAL", "WARNING", "SUGGESTION"}
 VALID_DECISIONS = {"PASS", "PASS_WITH_WARNINGS", "FAIL"}
 
@@ -144,6 +83,102 @@ def iso_now() -> str:
 
 def load_taxonomy_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
+
+
+def load_governance_context() -> str:
+    """Construye contexto normativo dinámico desde docs/governance/."""
+    blocks: list[str] = []
+
+    for doc in GOVERNANCE_DOCS_MANDATORY:
+        if not doc.exists():
+            raise FileNotFoundError(f"No existe documento obligatorio de governance: {doc}")
+        rel = doc.relative_to(REPO_ROOT)
+        content = doc.read_text(encoding="utf-8").strip()
+        blocks.append(f"=== {rel} (MANDATORY) ===\n{content}")
+
+    if GOVERNANCE_DOC_CHANGE_POLICY.exists():
+        rel = GOVERNANCE_DOC_CHANGE_POLICY.relative_to(REPO_ROOT)
+        content = GOVERNANCE_DOC_CHANGE_POLICY.read_text(encoding="utf-8").strip()
+        blocks.append(f"=== {rel} (CONDITIONAL) ===\n{content}")
+    else:
+        blocks.append(
+            "=== docs/governance/TAXONOMY_CHANGE_POLICY.md (CONDITIONAL) ===\n"
+            "Archivo no presente en este workspace."
+        )
+
+    applicability = """\
+=== ALCANCE DE APLICACIÓN PARA CAPA 2 ===
+
+Aplica únicamente reglas semánticas y estructurales de taxonomía para validar coherencia musical del árbol.
+Ignora reglas operativas fuera de alcance de esta capa (por ejemplo: modos de ejecución,
+batching, logging, continuidad de lotes, o detalles de pipeline de clasificación de canciones).
+
+Precedencia obligatoria:
+- Si hay conflicto interpretativo, prioriza SYSTEM_CONTRACT y GLOBAL_RULES.
+- No inventar reglas fuera del corpus de governance cargado abajo.
+"""
+
+    return f"{applicability}\n\n" + "\n\n".join(blocks)
+
+
+def load_layer2_rules_from_governance() -> list[dict[str, str]]:
+    """Carga reglas MVET-L2 marcadas en docs/governance mediante bloques JSON."""
+    if not GOVERNANCE_DIR.exists():
+        raise FileNotFoundError(f"No existe directorio de governance: {GOVERNANCE_DIR}")
+
+    rules: list[dict[str, str]] = []
+    seen_ids: set[str] = set()
+
+    for doc in sorted(GOVERNANCE_DIR.glob("*.md")):
+        text = doc.read_text(encoding="utf-8")
+        for match in RULE_BLOCK_RE.finditer(text):
+            block = match.group(1)
+            try:
+                parsed = json.loads(block)
+            except json.JSONDecodeError as e:
+                raise ValueError(
+                    f"Regla L2 con JSON inválido en {doc.relative_to(REPO_ROOT)}: {e}"
+                ) from e
+
+            if not isinstance(parsed, dict):
+                raise ValueError(
+                    f"Regla L2 inválida en {doc.relative_to(REPO_ROOT)}: debe ser objeto JSON."
+                )
+
+            missing = LAYER2_RULE_REQUIRED_FIELDS - parsed.keys()
+            if missing:
+                raise ValueError(
+                    f"Regla L2 inválida en {doc.relative_to(REPO_ROOT)}: faltan campos {sorted(missing)}."
+                )
+
+            rule_id = str(parsed["rule_id"]).strip()
+            severity = str(parsed["severity"]).strip()
+            if not rule_id:
+                raise ValueError(f"Regla L2 inválida en {doc.relative_to(REPO_ROOT)}: rule_id vacío.")
+            if rule_id in seen_ids:
+                raise ValueError(f"rule_id duplicado en reglas L2: {rule_id}")
+            if severity not in VALID_SEVERITIES:
+                raise ValueError(
+                    f"Regla L2 '{rule_id}' con severity inválida '{severity}'."
+                )
+
+            normalized = {
+                "rule_id": rule_id,
+                "fb": str(parsed["fb"]).strip(),
+                "severity": severity,
+                "description": str(parsed["description"]).strip(),
+                "check": str(parsed["check"]).strip(),
+            }
+            rules.append(normalized)
+            seen_ids.add(rule_id)
+
+    if not rules:
+        raise ValueError(
+            "No se encontraron reglas L2 marcadas en docs/governance. "
+            f"Usa bloques {RULE_MARKER_START} ... {RULE_MARKER_END}."
+        )
+
+    return rules
 
 
 def check_layer1_prerequisite() -> tuple[bool, str]:
@@ -179,24 +214,6 @@ PRINCIPIOS OBLIGATORIOS:
 """
 
 CLONE_CONTEXT = """\
-=== CONTEXTO NORMATIVO Y OPERATIVO ===
-
-Fuentes normativas MANDATORY para esta validación:
-- docs/governance/GLOBAL_RULES.md
-- docs/governance/SYSTEM_CONTRACT.md
-- docs/governance/TAXONOMY_RULES.md
-- docs/governance/TAXONOMY_DEPTH_POLICY.md
-- docs/governance/TAXONOMY_NAMING_CONVENTION.md
-- docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
-
-Fuente CONDITIONAL (solo cuando aplique escenario post-cambio/pre-release):
-- docs/governance/TAXONOMY_CHANGE_POLICY.md
-
-Precedencia y alcance:
-- No inventar reglas fuera del corpus normativo.
-- Si hay conflicto interpretativo, prioriza SYSTEM_CONTRACT y GLOBAL_RULES.
-- Usa documentos referenciales solo como contexto, no como fuente de reglas nuevas.
-
 Glosario operativo mínimo para Capa 2:
 
 Nodo clone:
@@ -229,12 +246,12 @@ Instrucción de evaluación:
 """
 
 
-def build_prompt(taxonomy_text: str) -> str:
+def build_prompt(taxonomy_text: str, governance_context: str, layer2_rules: list[dict[str, str]]) -> str:
     rules_block = "\n".join(
         f"  {r['rule_id']} [{r['fb']}] {r['severity']}\n"
         f"  Descripción: {r['description']}\n"
         f"  Check: {r['check']}\n"
-        for r in MVET_L2_RULES
+        for r in layer2_rules
     )
 
     output_schema = """\
@@ -261,6 +278,9 @@ def build_prompt(taxonomy_text: str) -> str:
 
     return f"""{SYSTEM_CONTEXT}
 {CLONE_CONTEXT}
+=== CONTEXTO NORMATIVO DINÁMICO ===
+
+{governance_context}
 === REGLAS DE VALIDACIÓN A APLICAR ===
 
 {rules_block}
@@ -275,6 +295,8 @@ No incluyas texto fuera del JSON. No incluyas markdown ni bloques de código.
 Esquema obligatorio:
 {output_schema}
 
+Descarta explícitamente cualquier hallazgo con "result": "PASS".
+No incluyas elementos con result PASS dentro del arreglo findings.
 Si una regla no presenta hallazgos, no la incluyas en el arreglo findings.
 Si no hay ningún hallazgo, devuelve findings como arreglo vacío [].
 """
@@ -301,7 +323,9 @@ class Layer2Finding:
     schema_error: str = ""
 
 
-def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]]:
+def validate_response_schema(
+    data: dict, valid_rule_ids: set[str]
+) -> tuple[list[Layer2Finding], list[str]]:
     """Valida el JSON de respuesta de la IA contra el contrato MVET."""
     errors: list[str] = []
     findings: list[Layer2Finding] = []
@@ -321,7 +345,7 @@ def validate_response_schema(data: dict) -> tuple[list[Layer2Finding], list[str]
         confidence = item.get("confidence")
 
         item_errors: list[str] = []
-        if rule_id not in RULE_IDS:
+        if rule_id not in valid_rule_ids:
             item_errors.append(f"{prefix}: rule_id inválido '{rule_id}'.")
         if severity not in VALID_SEVERITIES:
             item_errors.append(f"{prefix}: severity inválida '{severity}'.")
@@ -392,6 +416,7 @@ def summarize_layer2(findings: list[Layer2Finding]) -> tuple[int, int, int, str]
 
 
 def write_layer2_reports(
+    layer2_rules: list[dict[str, str]],
     findings: list[Layer2Finding],
     schema_errors: list[str],
     ai_summary: dict,
@@ -403,7 +428,7 @@ def write_layer2_reports(
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = iso_now()
 
-    rule_map = {r["rule_id"]: r for r in MVET_L2_RULES}
+    rule_map = {r["rule_id"]: r for r in layer2_rules}
     payload = {
         "process": "MVET-LAYER2",
         "generated_at": timestamp,
@@ -520,9 +545,23 @@ def main() -> int:
             return 1
         print(f"Prerequisito Capa 1: {info}")
 
+    try:
+        layer2_rules = load_layer2_rules_from_governance()
+    except (FileNotFoundError, ValueError) as e:
+        print(f"ERROR: {e}")
+        return 2
+
+    valid_rule_ids = {r["rule_id"] for r in layer2_rules}
+
     if args.print_prompt:
         taxonomy_text = load_taxonomy_text(taxonomy_path)
-        prompt = build_prompt(taxonomy_text)
+        try:
+            governance_context = load_governance_context()
+        except FileNotFoundError as e:
+            print(f"ERROR: {e}")
+            return 2
+
+        prompt = build_prompt(taxonomy_text, governance_context, layer2_rules)
         REPORTS_DIR.mkdir(parents=True, exist_ok=True)
         PROMPT_OUTPUT.write_text(prompt, encoding="utf-8")
         print(f"Prompt generado: {PROMPT_OUTPUT.relative_to(REPO_ROOT)}")
@@ -542,12 +581,13 @@ def main() -> int:
         print(f"ERROR: el archivo de respuesta no es JSON válido: {e}")
         return 2
 
-    findings, schema_errors = validate_response_schema(response_data)
+    findings, schema_errors = validate_response_schema(response_data, valid_rule_ids)
     findings = [f for f in findings if f.result != "PASS"]
     fatal_count, warning_count, suggestion_count, decision = summarize_layer2(findings)
     ai_summary = response_data.get("summary", {})
 
     write_layer2_reports(
+        layer2_rules=layer2_rules,
         findings=findings,
         schema_errors=schema_errors,
         ai_summary=ai_summary,
