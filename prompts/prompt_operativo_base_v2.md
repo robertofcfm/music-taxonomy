@@ -8,6 +8,9 @@ OBJETIVO
 Construir un prompt final corto, claro y ejecutable,
 con carga selectiva de contexto y reglas.
 
+Este formato usa carga directa desde docs/context y
+docs/governance, sin herencia de templates base.
+
 --------------------------------------------------
 FORMATO BASE
 --------------------------------------------------
@@ -20,9 +23,8 @@ FORMATO BASE
 
 [DIAGNOSTICO_IMPORTS]
 - MANDATORY:
-  - docs/governance/GLOBAL_RULES.md
-  - docs/governance/SYSTEM_CONTRACT.md
-  - docs/context/PROJECT_CONTEXT.md
+  - docs/context/CONTEXT_REGISTRY.md
+  - docs/governance/RULES_REGISTRY.md
 - CONDITIONAL:
   - [agregar solo si aplica]
 - REFERENTIAL:
@@ -60,6 +62,7 @@ REGLAS DE USO RAPIDAS
 --------------------------------------------------
 
 - Mantener el presupuesto de contexto corto.
+- Cargar primero los dos registros y luego resolver imports finales.
 - Si falta informacion critica, devolver NADA y listar faltantes.
 - No promover un documento referencial a regla obligatoria.
 - Si hay conflicto normativo, detener y reportar.

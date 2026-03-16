@@ -91,82 +91,28 @@ los cambios queden aplicados sin edicion manual extensa.
 3. MODELO DE ESTRUCTURACIÓN
 --------------------------------------------------
 
-El sistema usa una estructura lineal por instancia.
+El sistema usa composicion directa por instancia.
 
 Restricción:
 
-- una instancia concreta puede heredar de un solo padre
-- no se permite herencia múltiple por complejidad
-- los templates hijos agregan definiciones, no redefinen
-  el flujo estructural del padre
+- no depender de herencia formal entre templates
+- no forzar jerarquías de plantilla para tareas simples
+- priorizar prompts operativos concretos en prompts/
 
-La herencia puede tener múltiples niveles.
+Cada prompt debe declarar imports resueltos y objetivo.
 
-Ejemplo válido:
+Flujo recomendado:
 
-- nivel 1: template padre base
-- nivel 2: template hijo por tipo
-- nivel 3: template hijo especializado por proceso
-- nivel 4: instancia concreta final
+- paso 1: cargar docs/context/CONTEXT_REGISTRY.md
+- paso 2: cargar docs/governance/RULES_REGISTRY.md
+- paso 3: clasificar imports en MANDATORY/CONDITIONAL/REFERENTIAL/EXCLUDED
+- paso 4: generar prompt operativo final
 
-La restricción es linealidad, no profundidad.
+Este enfoque reduce complejidad y evita dependencia de
+archivos plantilla para cada variante.
 
-Por tanto, sí se permiten templates de 3er o 4to nivel,
-siempre que cada nodo tenga un solo padre directo.
-
-El padre define el flujo general y los contratos mínimos.
-
-El hijo especializa definiciones usando el marcador:
-
-[TIPO_TEMPLATE]
-
-Valores iniciales soportados:
-
-- Prompt
-- Tarea
-
-Ejemplo de niveles posteriores permitidos:
-
-- un template de validación puede heredar de TIPO_TAREA
-- un template de validación del árbol maestro puede heredar
-  del template de validación
-
-RESOLUCIÓN ASCENDENTE OBLIGATORIA
-
-La concreción no se valida solo contra el último padre directo.
-
-Debe resolverse toda la cadena de abstracción hacia arriba
-hasta el ancestro raíz.
-
-Esto implica:
-
-- resolver los contratos del template actual
-- resolver los contratos heredados del padre directo
-- resolver los contratos heredados de abuelos y niveles superiores
-- confirmar que ningún marcador abstracto permanezca en ningún nivel
-
-Si un template de nivel 3 implementa su propio contenido pero deja
-sin resolver un contrato heredado desde nivel 1, entonces sigue
-siendo ABSTRACTO.
-
-USO DE [TIPO_TEMPLATE] DENTRO DE DEFINICIONES
-
-Un documento puede incluir definiciones que dependan del
-valor de [TIPO_TEMPLATE] sin necesidad de crear múltiples
-versiones del flujo base.
-
-Ejemplo:
-
-[TIPO_TEMPLATE]
-Prompt
-
-o
-
-[TIPO_TEMPLATE]
-Tarea
-
-Con eso, un template hijo puede reutilizar el flujo del padre
-y especializar solo las definiciones que cambian para ese tipo.
+La validación se centra en cobertura de imports y
+consistencia normativa, no en cadenas de herencia.
 
 --------------------------------------------------
 4. MODELO DE DIVISIÓN EN CAPAS
