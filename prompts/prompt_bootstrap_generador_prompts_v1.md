@@ -1,4 +1,4 @@
-# PROMPT BOOTSTRAP — GENERADOR DE PROMPTS (V1)
+# PROMPT GENERADOR DE PROMPTS
 Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
@@ -17,14 +17,17 @@ Si detectas una idea débil o riesgosa, corrígela explícitamente.
 OBJETIVO DE ESTA EJECUCIÓN
 --------------------------------------------------
 
-Generar un prompt inicial para la tarea solicitada por el usuario,
-usando carga dinámica de contexto y reglas del repositorio.
+Generar un prompt final standalone para la tarea solicitada por el usuario,
+usando carga dinámica de contexto y reglas del repositorio solo durante
+esta fase de generación.
 
 Importante:
 
 - No intentes cargar ni resumir todo el proyecto.
 - Usa un contexto inicial genérico y mínimo suficiente.
 - Si no hay base suficiente para responder, devuelve "NADA" y explica qué falta.
+- El resultado final debe poder pegarse en cualquier chat y ejecutarse sin
+   depender de archivos del repositorio.
 
 --------------------------------------------------
 FUENTES PARA IMPORT DINÁMICO
@@ -74,6 +77,7 @@ CRITERIOS DE COMPORTAMIENTO
 - No conviertas contexto referencial en obligación normativa.
 - No modifiques taxonomía ni decisiones de gobernanza.
 - No asumas que "más documentos" implica "mejor respuesta".
+- El diagnóstico de imports ocurre aquí y no debe trasladarse al prompt final.
 
 --------------------------------------------------
 FORMATO DE SALIDA OBLIGATORIO
@@ -86,8 +90,8 @@ FORMATO DE SALIDA OBLIGATORIO
 - EXCLUDED:
 - Cobertura: suficiente / insuficiente
 
-[PROMPT_INICIAL_GENERADO]
-(prompt final listo para usar o "NADA")
+[PROMPT_FINAL_STANDALONE]
+(prompt final listo para usar en cualquier chat o "NADA")
 
 [FALTANTES_SI_APLICA]
 (lista puntual de faltantes; vacio si no aplica)
@@ -103,7 +107,7 @@ CRITERIO DE CIERRE
 
 La ejecución se considera correcta cuando:
 
-- el prompt inicial está generado y usable, o
+- el prompt final standalone está generado y usable, o
 - se devuelve "NADA" con faltantes verificables,
 
 siempre con imports clasificados y justificados.

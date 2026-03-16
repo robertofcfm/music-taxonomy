@@ -3,6 +3,7 @@
 Esta carpeta centraliza los prompts operativos del repositorio.
 
 Uso recomendado:
+- Separar prompts en dos tipos: generador y final standalone.
 - Guardar aqui prompts finales listos para ejecucion.
 - Mantener nombres descriptivos por flujo o tarea.
 - Componer prompts cargando solo archivos necesarios desde docs/context/ y docs/governance/.
@@ -12,11 +13,12 @@ Ejemplos de nombres:
 - classify_songs_prompt_v1.txt
 - validate_master_layer2_prompt_v2.txt
 
-Prompt inicial recomendado:
+Prompt generador recomendado:
 - prompt_bootstrap_generador_prompts_v1.md
 
-Plantilla operativa base recomendada:
+Prompt final standalone base:
 - prompt_operativo_base.md
 
 Nota:
-- El flujo recomendado para prompts nuevos vive en esta carpeta.
+- El diagnostico de imports se ejecuta en el prompt generador.
+- El resultado final debe poder usarse en cualquier chat sin contexto del repositorio.

@@ -32,6 +32,8 @@ LAYER1_REPORT_MD = REPORTS_DIR / "validate_master_report.md"
 LAYER1_RUN_METADATA = REPORTS_DIR / "validate_master_run_metadata.json"
 LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
 HTML_FILE = REPO_ROOT / "web" / "index.html"
+UTILERIAS_HTML_FILE = REPO_ROOT / "web" / "utilerias.html"
+PROMPTS_DIR = REPO_ROOT / "prompts"
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -92,6 +94,98 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
+    def _send_utilerias_html(self) -> None:
+        content = UTILERIAS_HTML_FILE.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(content)))
+        self.end_headers()
+        self.wfile.write(content)
+
+    @staticmethod
+    def _prompt_generation_requests_seed() -> list[dict]:
+        return [
+            {
+                "id": "req-001",
+                "nombre": "Generar prompt para depurar estructura de taxonomía",
+                "tarea": "Analizar inconsistencias de estructura taxonómica y proponer correcciones priorizadas.",
+                "objetivo": "Obtener recomendaciones accionables con justificación técnica.",
+                "restricciones": "No modificar archivos automáticamente; reportar riesgos de impacto.",
+                "salida_esperada": "Lista priorizada de hallazgos y plan de corrección.",
+                "estado": "pendiente",
+            },
+            {
+                "id": "req-002",
+                "nombre": "Generar prompt para revisar naming de géneros",
+                "tarea": "Revisar convenciones de nombres de géneros y detectar ambigüedades.",
+                "objetivo": "Reducir inconsistencias de etiquetado en nuevas propuestas.",
+                "restricciones": "No aprobar cambios sin evidencia y ejemplos.",
+                "salida_esperada": "Checklist de mejoras y casos conflictivos.",
+                "estado": "pendiente",
+            },
+        ]
+
+    @staticmethod
+    def _list_prompt_templates() -> list[str]:
+        templates: list[str] = []
+        if not PROMPTS_DIR.exists():
+            return templates
+        for path in sorted(PROMPTS_DIR.glob("*.md")):
+            if path.name.lower() == "readme.md":
+                continue
+            templates.append(f"prompts/{path.name}")
+        return templates
+
+    @staticmethod
+    def _validate_prompt_request(item: dict) -> list[str]:
+        errors: list[str] = []
+        required = {
+            "id": "Falta id de solicitud.",
+            "nombre": "Falta nombre de solicitud.",
+            "tarea": "Falta descripción de la tarea.",
+            "objetivo": "Falta objetivo operativo.",
+            "salida_esperada": "Falta salida esperada.",
+        }
+        for key, message in required.items():
+            value = str(item.get(key, "")).strip()
+            if not value:
+                errors.append(message)
+        return errors
+
+    @staticmethod
+    def _build_standalone_prompt(item: dict) -> str:
+        nombre = str(item.get("nombre", "Solicitud sin nombre")).strip()
+        tarea = str(item.get("tarea", "")).strip()
+        objetivo = str(item.get("objetivo", "")).strip()
+        restricciones = str(item.get("restricciones", "Sin restricciones adicionales.")).strip()
+        salida_esperada = str(item.get("salida_esperada", "")).strip()
+
+        return (
+            "Actua como especialista senior en la tarea descrita.\n"
+            "No busques complacer ni confirmar supuestos: entrega recomendaciones "
+            "reales, accionables y justificadas, incluso si contradicen la propuesta inicial.\n\n"
+            f"Contexto de la solicitud: {nombre}.\n\n"
+            "Objetivo de esta ejecucion:\n"
+            f"{objetivo}\n\n"
+            "Tarea:\n"
+            f"{tarea}\n\n"
+            "Restricciones:\n"
+            f"- {restricciones}\n"
+            "- No inventar datos no proporcionados por el usuario.\n"
+            "- Si falta informacion critica, detener y pedir faltantes exactos.\n\n"
+            "Formato de salida obligatorio:\n"
+            "[RESPUESTA]\n"
+            "- (entregable final)\n\n"
+            "[FALTANTES_SI_APLICA]\n"
+            "- (lista puntual)\n\n"
+            "[RECOMENDACIONES_EXPERTAS]\n"
+            "- recomendacion 1\n"
+            "- recomendacion 2\n"
+            "- recomendacion 3\n\n"
+            "[CRITERIO_DE_CIERRE]\n"
+            f"- La tarea se considera completa cuando la salida cumple: {salida_esperada}."
+        )
+
     @staticmethod
     def _load_layer1_report() -> dict | None:
         if not LAYER1_REPORT.exists():
@@ -150,6 +244,20 @@ class Handler(http.server.BaseHTTPRequestHandler):
         if self.path in ("/", "/index.html"):
             self._send_html()
 
+        elif self.path in ("/utilerias", "/utilerias.html"):
+            if not UTILERIAS_HTML_FILE.exists():
+                self._send_json({"error": "No existe web/utilerias.html."}, 404)
+                return
+            self._send_utilerias_html()
+
+        elif self.path == "/api/utilerias/requests":
+            self._send_json(
+                {
+                    "items": self._prompt_generation_requests_seed(),
+                    "templates": self._list_prompt_templates(),
+                }
+            )
+
         elif self.path == "/api/report/layer1":
             if LAYER1_REPORT.exists():
                 self._send_json(json.loads(LAYER1_REPORT.read_text(encoding="utf-8")))
@@ -206,6 +314,68 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     "message": "Reportes de validación limpiados.",
                 }
             )
+
+        elif self.path == "/api/utilerias/process":
+            payload, error = self._read_request_json()
+            if error:
+                self._send_json({"error": error}, 400)
+                return
+
+            items = payload.get("items")
+            if not isinstance(items, list):
+                self._send_json({"error": "El campo items debe ser una lista."}, 400)
+                return
+
+            results: list[dict] = []
+            processed_at = int(time.time())
+            for raw_item in items:
+                item = raw_item if isinstance(raw_item, dict) else {}
+                req_id = str(item.get("id", "")).strip() or f"req-{processed_at}"
+                errors = self._validate_prompt_request(item)
+
+                recommendations = [
+                    "Mantener alcance mínimo suficiente para evitar ruido.",
+                    "Revisar que la tarea no dependa de contexto implícito.",
+                    "Confirmar criterio de cierre antes de ejecutar en chat externo.",
+                ]
+
+                if errors:
+                    results.append(
+                        {
+                            "id": req_id,
+                            "status": "REQUIERE_CORRECCION",
+                            "prompt_final": "",
+                            "errores": errors,
+                            "recomendaciones": recommendations,
+                        }
+                    )
+                    continue
+
+                prompt_final = self._build_standalone_prompt(item)
+                has_placeholders = "[DEFINIR_" in prompt_final or "[PENDIENTE_" in prompt_final
+                if has_placeholders:
+                    results.append(
+                        {
+                            "id": req_id,
+                            "status": "REQUIERE_CORRECCION",
+                            "prompt_final": "",
+                            "errores": ["El prompt contiene placeholders pendientes."],
+                            "recomendaciones": recommendations,
+                        }
+                    )
+                    continue
+
+                results.append(
+                    {
+                        "id": req_id,
+                        "status": "PROMPT_OK",
+                        "prompt_final": prompt_final,
+                        "errores": [],
+                        "recomendaciones": recommendations,
+                    }
+                )
+
+            self._send_json({"results": results, "processed_count": len(results)})
 
         elif self.path == "/api/validate/layer1":
             proc = subprocess.run(

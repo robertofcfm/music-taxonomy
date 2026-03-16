@@ -368,15 +368,24 @@ Checklist de cierre de la Fase 1.
 
 prompts/prompt_bootstrap_generador_prompts_v1.md
 
-Prompt base recomendado para generar prompts operativos
-por composicion dinamica de contexto y reglas.
+Prompt generador de prompts.
+Realiza diagnostico de imports, valida cobertura,
+y produce prompt final standalone o mensaje de correccion.
 
 --------------------------------------------------
 
 prompts/prompt_operativo_base.md
 
-Plantilla corta estandar para redactar prompts
-operativos con imports clasificados y cierre.
+Prompt final base standalone.
+Diseñado para ejecutarse en cualquier chat sin
+dependencia de contexto documental del repositorio.
+
+--------------------------------------------------
+
+docs/architecture/PROMPTS_DUAL_PIPELINE_STRATEGY.md
+
+Define la estrategia dual de prompts (generador + standalone),
+incluyendo especificación funcional de la página de procesamiento.
 
 --------------------------------------------------
 

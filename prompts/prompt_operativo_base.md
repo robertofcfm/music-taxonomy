@@ -1,95 +1,59 @@
-# PROMPT OPERATIVO BASE — GENERAR PROMPT
+# PROMPT FINAL BASE — STANDALONE
 Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
 OBJETIVO
 --------------------------------------------------
 
-Generar un prompt final, corto y ejecutable,
-para construir otros prompts con carga selectiva
-de contexto y reglas.
+Definir la plantilla del prompt final que se entrega
+al usuario para ejecutar la tarea en cualquier chat,
+sin depender del contexto documental del repositorio.
 
-Este formato usa composicion directa desde
-docs/context y docs/governance.
+Este documento no hace imports ni diagnósticos.
+Es el resultado consumible luego de la fase generadora.
 
 --------------------------------------------------
-FORMATO PRECONFIGURADO
+FORMATO STANDALONE RECOMENDADO
 --------------------------------------------------
 
 [TAREA]
-- Crear un prompt inicial para una tarea puntual del proyecto.
+- Describir en una linea la tarea concreta a resolver.
 
 [OBJETIVO_OPERATIVO]
-- Entregar un prompt final usable que incluya imports clasificados,
-  restricciones claras y criterio de cierre.
-
-[DIAGNOSTICO_IMPORTS]
-- MANDATORY:
-  - docs/context/CONTEXT_REGISTRY.md
-  - docs/governance/RULES_REGISTRY.md
-  - docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
-  - docs/governance/AI_PROMPT_SYSTEM_RULES.md
-- CONDITIONAL:
-  - docs/context/PROJECT_CONTEXT.md
-  - docs/governance/GLOBAL_RULES.md
-  - docs/governance/SYSTEM_CONTRACT.md
-- REFERENTIAL:
-  - docs/context/SYSTEM_OVERVIEW.md
-  - docs/project-management/PROJECT_FILE_INDEX.md
-- EXCLUDED:
-  - docs/governance/TAXONOMY_RULES.md
-  - docs/governance/TAXONOMY_CHANGE_POLICY.md
-  - docs/governance/TAXONOMY_DEPTH_POLICY.md
-  - docs/governance/TAXONOMY_NAMING_CONVENTION.md
-  - docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
-  - docs/governance/MVET_LAYER2_RULES.md
-- COBERTURA:
-  - suficiente para objetivo generico de composicion de prompts.
+- Entregar resultado correcto, verificable y accionable.
 
 [ENTRADAS]
-- Descripcion de la tarea a convertir en prompt.
-- Restricciones del usuario (si existen).
+- Datos que el usuario debe proporcionar.
+- Restricciones de formato o alcance.
 
 [SALIDA_ESPERADA]
-- Prompt final listo para ejecutar.
-- Formato claro por bloques.
-- Recomendaciones expertas si detecta riesgos de enfoque.
+- Tipo de salida esperado y formato de respuesta.
+- Criterio de calidad minimo.
 
 [RESTRICCIONES]
-- No inventar reglas no documentadas.
-- No promover contexto a regla.
-- No modificar taxonomia automaticamente.
-- Si falta base critica, devolver NADA y listar faltantes.
-- Si hay conflicto normativo, detener y reportar.
+- No inventar datos.
+- No asumir contexto externo no provisto por el usuario.
+- Si faltan datos criticos, pedirlos de forma puntual.
 
 [PROMPT_FINAL]
-Actua como arquitecto senior de prompts y gobernanza documental.
+Actua como especialista senior en la tarea descrita.
 No busques complacer ni confirmar supuestos: entrega recomendaciones
-reales, accionables y justificadas, incluso si contradicen
-la propuesta inicial.
+reales, accionables y justificadas, incluso si contradicen la propuesta
+inicial del usuario.
 
 Objetivo de esta ejecucion:
-Generar un prompt final para la tarea indicada por el usuario,
-con carga selectiva de contexto y reglas, y con alcance minimo
-suficiente para ejecutar bien.
+Resolver la tarea indicada con precision y trazabilidad,
+usando un enfoque operativo y verificable.
 
 Protocolo obligatorio:
-1. Leer docs/context/CONTEXT_REGISTRY.md y docs/governance/RULES_REGISTRY.md.
-2. Clasificar imports en MANDATORY, CONDITIONAL, REFERENTIAL y EXCLUDED.
-3. Mantener presupuesto de contexto corto.
-4. Validar cobertura y conflictos normativos.
-5. Si falta informacion critica: devolver NADA y listar faltantes exactos.
+1. Confirmar objetivo y salida esperada.
+2. Detectar riesgos de suposiciones no validadas.
+3. Ejecutar respuesta en bloques claros y auditables.
+4. Si falta informacion critica, detener y pedir faltantes exactos.
 
 Formato de salida:
-[DIAGNOSTICO_IMPORTS]
-- MANDATORY:
-- CONDITIONAL:
-- REFERENTIAL:
-- EXCLUDED:
-- COBERTURA: suficiente | insuficiente
-
-[PROMPT_INICIAL_GENERADO]
-- (prompt final listo para uso o NADA)
+[RESPUESTA]
+- (entregable final)
 
 [FALTANTES_SI_APLICA]
 - (lista puntual)
@@ -100,16 +64,16 @@ Formato de salida:
 - recomendacion 3
 
 [CRITERIO_DE_CIERRE]
-- La tarea se considera completa cuando el prompt final se puede ejecutar
-  sin marcadores pendientes y con imports justificados.
+- La tarea se considera completa cuando la respuesta cumple objetivo,
+  formato y criterio de calidad sin placeholders pendientes.
 
 --------------------------------------------------
 REGLAS DE USO RAPIDAS
 --------------------------------------------------
 
-- Ajustar CONDITIONAL por tarea activa.
-- Mantener EXCLUDED para evitar ruido.
-- Evitar cargar reglas de dominio no activado.
+- Este archivo representa el prompt final utilizable en cualquier chat.
+- No incluir en este archivo diagnosticos de imports ni rutas del repositorio.
+- Los chequeos de cobertura y conflictos se resuelven en la fase generadora.
 
 --------------------------------------------------
 FIN DEL DOCUMENTO

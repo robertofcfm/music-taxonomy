@@ -81,6 +81,12 @@ Para generar un prompt concreto:
 Una IA selecciona contexto y reglas, y construye el
 documento final para la tarea indicada.
 
+Modelo operativo dual:
+
+- fase generadora: realiza diagnostico de imports y validación normativa
+- fase standalone: entrega prompt final ejecutable en cualquier chat
+  sin depender de contexto documental del repositorio
+
 Ventaja principal:
 
 Si un documento fuente del proyecto se actualiza,
@@ -106,7 +112,7 @@ Flujo recomendado:
 - paso 1: cargar docs/context/CONTEXT_REGISTRY.md
 - paso 2: cargar docs/governance/RULES_REGISTRY.md
 - paso 3: clasificar imports en MANDATORY/CONDITIONAL/REFERENTIAL/EXCLUDED
-- paso 4: generar prompt operativo final
+- paso 4: generar prompt final standalone
 
 Este enfoque reduce complejidad y evita dependencia de
 archivos plantilla para cada variante.

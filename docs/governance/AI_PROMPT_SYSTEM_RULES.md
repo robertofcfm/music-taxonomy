@@ -61,6 +61,16 @@ la conversación.
 Ver: PROTOCOLO DE CIERRE DE CONVERSACIÓN (sección 3
 de este documento).
 
+P6 — SEPARACIÓN DE FASES
+
+La arquitectura de prompts se divide en dos fases:
+
+- fase generadora: diagnóstico de imports y validación de cobertura
+- fase final standalone: ejecución de la tarea en chat externo
+
+El diagnóstico de imports no debe permanecer en el
+prompt final standalone.
+
 --------------------------------------------------
 2. REGLA DE SELECCIÓN
 --------------------------------------------------
@@ -90,6 +100,12 @@ docs/operations/VALIDATE_MASTER_STRATEGY.md
 
 No se está introduciendo un modelo nuevo sino formalizando
 uno ya presente en el proyecto.
+
+Aplicación por fase:
+
+- la regla de selección se aplica en fase generadora
+- el prompt final standalone se entrega limpio de rutas internas
+  del repositorio
 
 --------------------------------------------------
 3. PROTOCOLO DE CIERRE DE CONVERSACIÓN

@@ -115,11 +115,12 @@ Prompt bootstrap recomendado:
 
 - prompts/prompt_bootstrap_generador_prompts_v1.md
 
-Plantilla corta estandar recomendada:
+Prompt final standalone base recomendado:
 
 - prompts/prompt_operativo_base.md
 
-Este enfoque debe construir el prompt final cargando de forma
+Este enfoque usa dos fases. El generador debe construir el prompt final
+cargando de forma
 explícita documentos desde:
 
 - docs/context/
@@ -137,6 +138,7 @@ Reglas de uso:
 - evitar cargar contexto no activado por la tarea
 - reportar conflictos normativos antes de ejecutar
 - mantener presupuesto de contexto corto
+- entregar un prompt final utilizable sin contexto del repositorio
 
 --------------------------------------------------
 6. ARCHIVOS DE ENTRADA DE CLASIFICACIÓN
