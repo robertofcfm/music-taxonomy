@@ -27,6 +27,7 @@ catalog/
 data/
 taxonomy/
 scripts/
+prompts/
 reports/
 docs/
 
@@ -127,6 +128,19 @@ scripts/validate_tree.py
 
 Valida la estructura taxonómica y detecta
 issues estructurales.
+
+--------------------------------------------------
+
+CARPETA DE PROMPTS
+
+prompts/
+
+Directorio raíz para almacenar prompts operativos
+reutilizables del proyecto.
+
+En esta sección se colocarán los prompts finales
+utilizados por flujos de trabajo, automatizaciones
+o ejecuciones manuales.
 
 --------------------------------------------------
 7. ARCHIVOS DE REPORTES
@@ -357,6 +371,15 @@ docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md
 
 Especializa la plantilla base para instancias cuyo
 objetivo sea producir una tarea operativa específica.
+
+Nota de ubicación:
+
+Los prompts operativos finales deben almacenarse en:
+
+prompts/
+
+docs/operations/ contiene plantillas y marcos base,
+no prompts finales de ejecución.
 
 --------------------------------------------------
 13. DOCUMENTACIÓN DE GESTIÓN DEL PROYECTO
