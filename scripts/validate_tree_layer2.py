@@ -71,7 +71,8 @@ MVET_L2_RULES: list[dict] = [
         "description": "Redundancia entre nodos.",
         "check": (
             "Detecta parejas de géneros que representan estilos potencialmente "
-            "equivalentes o solapados en el conjunto del árbol."
+            "equivalentes o solapados en el conjunto del árbol, excluyendo "
+            "nodos clone."
         ),
     },
     {

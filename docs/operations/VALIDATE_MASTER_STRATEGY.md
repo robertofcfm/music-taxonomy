@@ -375,7 +375,8 @@ CAPA 2 — Reglas semánticas (IA)
   FB: FB-05
   SEVERITY: WARNING
   DESCRIPTION: Redundancia entre nodos.
-  CHECK: Detección de géneros potencialmente equivalentes.
+  CHECK: Detección de géneros potencialmente equivalentes,
+         excluyendo nodos clone.
 
 - MVET-L2-004
   FB: FB-05
