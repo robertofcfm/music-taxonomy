@@ -1,45 +1,39 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T06:32:04+00:00
+- Fecha: 2026-03-16T06:39:51+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
-- WARNING: 6
+- WARNING: 5
 - SUGGESTION: 0
 
 ## Hallazgos
 
 ### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie
-- Evidencia: New Wave and Post Punk appear as sibling genres under the same parent. Historically and musically these styles share a large overlap of artists, production aesthetics, and era (late 1970s–1980s), and many playlists would contain both without clear separation.
-- Recomendación: Review whether both nodes provide sufficiently distinct playlist identities within this branch, or whether clearer structural separation or contextualization under a different structural grouping would improve musical distinction.
+- Nodo: Music > Rock > Alternative & Indie > Post-Punk Era
+- Evidencia: The sibling nodes 'New Wave' and 'Post Punk' share significant historical and sonic overlap (late-70s/early-80s post-punk lineage, similar instrumentation and production aesthetics). Many artists and playlists frequently cross-classify between both, potentially producing partially indistinguishable playlists.
+- Recomendación: Maintain separation but ensure classification guidelines clearly distinguish melodic pop-leaning New Wave from darker or more experimental Post Punk to preserve playlist cohesion.
 - Confianza: 0.78
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Latin > Regional Mexicano / Texano (Structural)
-- Evidencia: The node aggregates Norteño, Texano, Banda, and Ranchero, which are distinct traditions with different instrumentation and rhythmic structures. If content were placed directly at the structural node rather than within its children, playlists could mix highly different styles.
-- Recomendación: Ensure the structural node functions strictly as an organizational container and that musical content is assigned to its specific child genres to maintain playlist cohesion.
-- Confianza: 0.86
+- Nodo: Music > Rock > Alternative & Indie
+- Evidencia: The parent node contains stylistically diverse children (Indie Rock, Grunge, Dream Pop, Post-Punk derived styles). If content is assigned directly to the parent node rather than its children, resulting playlists could mix very different aesthetics (lo-fi indie rock, heavy grunge, atmospheric dream pop, post-punk derivatives).
+- Recomendación: Encourage classification into the specific subgenres rather than the parent node to avoid stylistically inconsistent playlists at this level.
+- Confianza: 0.83
 
 ### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Post Punk > Coldwave / Darkwave
-- Evidencia: The node label combines two historically related but distinct scenes (Coldwave and Darkwave). These styles often overlap but are not identical and may function as separate genre labels in music classification systems.
-- Recomendación: Evaluate whether combining both labels into a single node introduces semantic redundancy or ambiguity in the taxonomy. Consider clarifying the intended scope of the node.
-- Confianza: 0.81
+- Nodo: Music > Latin > Regional Colombiano > Cumbia Colombiana
+- Evidencia: The subgenres 'Cumbia Clásica' and 'Cumbia Moderna' may overlap significantly depending on interpretation. Many modern recordings reproduce traditional arrangements, and playlist differentiation between these two nodes may become ambiguous without strict temporal or stylistic criteria.
+- Recomendación: Clarify classification criteria (e.g., instrumentation modernization, production era, fusion elements) to ensure playlists under each node remain musically distinguishable.
+- Confianza: 0.74
+
+### MVET-L2-006 [FB-06] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Dream Pop
+- Evidencia: Dream Pop historically derives from both alternative rock and post-punk/shoegaze traditions and is often categorized closer to the shoegaze/dream-pop continuum rather than the broader indie rock grouping. Its atmospheric and ethereal sound profile differs significantly from most Indie Rock and Grunge siblings.
+- Recomendación: Evaluate whether Dream Pop would fit better under a more specific atmospheric/post-punk derived branch (e.g., near shoegaze/post-punk related nodes) rather than within the broader Alternative & Indie grouping.
+- Confianza: 0.63
 
 ### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Grunge > Seattle Grunge (Atomic)
-- Evidencia: Seattle Grunge represents a historically specific scene tied to a particular geographic and cultural context. Further subdivision would likely be arbitrary and reduce musical coherence.
-- Recomendación: Maintain this node as atomic unless a clearly recognized musical sub-style emerges that is widely accepted in musicological or industry classification.
-- Confianza: 0.90
-
-### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Dream Pop (Atomic)
-- Evidencia: Dream Pop is already a well-established stylistic category defined by production aesthetics and atmospheric sound. Subdividing further would likely create artificial microgenres without clear musical boundaries.
-- Recomendación: Keep the node atomic unless a widely recognized and musically coherent subgenre appears.
-- Confianza: 0.88
-
-### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Pop > Synth & Electronic Pop > Electro Pop (Atomic)
-- Evidencia: Electro Pop functions as a recognizable genre boundary with consistent sonic identity centered on electronic production and pop song structures. Additional subdivision would likely reduce classification clarity.
-- Recomendación: Retain atomic status unless the taxonomy later incorporates major distinct electro-pop-derived substyles.
-- Confianza: 0.87
+- Nodo: Music > Rock > Alternative & Indie > Grunge > Seattle Grunge
+- Evidencia: Seattle Grunge represents a historically and geographically specific scene tied to the early 1990s Seattle movement. Further subdivision would likely fragment the style without producing musically coherent subgenres.
+- Recomendación: Treat this node as an atomic genre boundary unless future taxonomy introduces historically justified micro-scenes.
+- Confianza: 0.86

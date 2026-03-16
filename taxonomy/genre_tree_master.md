@@ -4,14 +4,14 @@ Indentation defines hierarchy.
 
 Music
   Rock
-    Alternative & Indie
+    Alternative & Indie (Structural)
       Indie Rock
       Grunge
         Seattle Grunge (Atomic)
         Post-Grunge
       Dream Pop (Atomic)
       Post-Punk Era (Structural)
-        New Wave
+        New Wave (Atomic)
         Post Punk
           Gothic Rock
           Coldwave / Darkwave (Atomic)
@@ -62,9 +62,7 @@ Music
       Ranchero
 
     Regional Colombiano
-      Cumbia Colombiana
-        Cumbia Clásica
-        Cumbia Moderna
+      Cumbia Colombiana (Atomic)
       Vallenato
 
   Soul / Funk / R&B

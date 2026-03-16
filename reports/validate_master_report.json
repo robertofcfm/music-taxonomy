@@ -1,8 +1,8 @@
 {
   "process": "MVET-LAYER1",
-  "generated_at": "2026-03-16T06:31:04+00:00",
+  "generated_at": "2026-03-16T06:42:32+00:00",
   "taxonomy_file": "taxonomy/genre_tree_master.md",
-  "taxonomy_sha256": "376f6aebf866db8fcf70719ed199d7642f0de34360802b8fe45baee1e2340a16",
+  "taxonomy_sha256": "cd0328a87689b361aa1c086b425a8ce59976b32797f5e8b4c0ca7b9110eaed22",
   "applied_sources_by_fb": {
     "FB-01": [
       "docs/governance/SYSTEM_CONTRACT.md",
@@ -117,7 +117,7 @@
       "severity": "WARNING",
       "passed": true,
       "description": "Profundidad mínima estructural >= 3.",
-      "evidence": "Max leaf depth: 5. La evaluación de profundidad máxima por criterio atómico corresponde a Capa 2.",
+      "evidence": "Max leaf depth: 6. La evaluación de profundidad máxima por criterio atómico corresponde a Capa 2.",
       "causes": [],
       "sources": [
         "docs/governance/TAXONOMY_DEPTH_POLICY.md",
