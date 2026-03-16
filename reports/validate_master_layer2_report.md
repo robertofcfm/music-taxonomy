@@ -1,51 +1,51 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T05:58:05+00:00
+- Fecha: 2026-03-16T06:00:47+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
-- WARNING: 4
-- SUGGESTION: 3
+- WARNING: 7
+- SUGGESTION: 0
 
 ## Hallazgos
 
-### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Electronic & Dance > Downtempo
-- Evidencia: Downtempo es un término amplio que puede abarcar estilos muy diversos (trip hop, chillout, lounge, ambient beat, downtempo electronica). Bajo la estructura actual no existen subgéneros que delimiten el contenido, lo que puede producir playlists estilísticamente heterogéneas dentro del nodo.
-- Recomendación: Evaluar en futuras iteraciones si Downtempo debe mantenerse como nodo general o si requiere subdivisiones estilísticas para preservar cohesión musical.
-- Confianza: 0.78
+### MVET-L2-001 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Post Punk
+- Evidencia: Los nodos hijos New Wave, Coldwave y Darkwave comparten fuerte herencia directa del Post-Punk con características sonoras cercanas (uso prominente de sintetizadores, estética oscura y estructuras rítmicas similares). En contextos de playlists, New Wave y Coldwave pueden producir resultados estilísticamente cercanos dependiendo del periodo histórico o selección de artistas.
+- Recomendación: Revisar si la separación actual entre New Wave, Coldwave y Darkwave produce playlists suficientemente distinguibles o si requiere clarificación semántica adicional a nivel taxonómico. No se recomienda modificación automática.
+- Confianza: 0.63
+
+### MVET-L2-001 [FB-05] - WARNING
+- Nodo: Music > Pop > Synth & Electronic Pop > Synth Pop
+- Evidencia: Los nodos hijos Electro Pop y New Romantic presentan una intersección histórica fuerte dentro del ecosistema Synth Pop de los años 80 y revival posterior. En muchos catálogos discográficos los artistas pueden aparecer simultáneamente clasificados en ambos estilos, lo que puede producir playlists parcialmente indistinguibles.
+- Recomendación: Revisar si el nodo Electro Pop está siendo utilizado como subgénero estilístico claro o como extensión moderna del Synth Pop. Considerar si la distinción se sostiene consistentemente en clasificación musical.
+- Confianza: 0.66
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Instrumental / Score
-- Evidencia: El nodo agrupa potencialmente múltiples dominios musicales diferentes (film score, game score, classical crossover, instrumental rock, ambient instrumental). La ausencia de subdivisiones puede producir playlists con estilos muy distintos.
-- Recomendación: Evaluar si este nodo debe actuar como nodo agrupador estructural o si se requerirán subgéneros específicos en el futuro para mantener coherencia de playlists.
-- Confianza: 0.81
+- Nodo: Music > Electronic & Dance
+- Evidencia: El nodo mezcla estilos orientados a pista de baile (Disco, House, Electro House) con estilos predominantemente atmosféricos o no rítmicos (Ambient, Dark Ambient, Cinematic Ambient). Esto puede generar playlists con coherencia rítmica inconsistente si el nodo se utiliza como punto de reproducción.
+- Recomendación: Tratar el nodo principalmente como agrupador estructural y priorizar la reproducción desde sus subgéneros más específicos para evitar mezclas estilísticas amplias.
+- Confianza: 0.82
+
+### MVET-L2-003 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Dream Pop / Music > Rock > Alternative & Indie > Post Punk > Coldwave
+- Evidencia: Dream Pop y Coldwave comparten estética sonora atmosférica, uso extensivo de reverberación y estructuras melódicas etéreas. En algunos catálogos y escenas musicales (especialmente en Europa y revival post-2000) los artistas pueden aparecer etiquetados indistintamente en ambos estilos.
+- Recomendación: Revisar si existe solapamiento excesivo en clasificación práctica entre ambos nodos dentro del árbol. No implica necesariamente fusión, pero sí monitoreo taxonómico.
+- Confianza: 0.55
 
 ### MVET-L2-004 [FB-05] - WARNING
 - Nodo: Music > Rock > Alternative & Indie > Post Punk
-- Evidencia: El nodo Post Punk contiene cuatro hijos (New Wave, Gothic Rock, Coldwave, Darkwave). Aunque todos derivan históricamente del post-punk, algunos evolucionaron hacia escenas estilísticamente diferenciadas y parcialmente independientes. Existe riesgo de que el nodo padre funcione más como agrupador histórico que como género operativo.
-- Recomendación: Revisar si Post Punk está actuando como agrupador estructural o si el árbol podría reorganizar estos subgéneros de forma más directa bajo Alternative & Indie en futuras revisiones.
-- Confianza: 0.66
+- Evidencia: El nodo contiene cuatro subgéneros (New Wave, Gothic Rock, Coldwave, Darkwave) que representan evoluciones estilísticas históricamente relacionadas del Post-Punk. Aunque distinguibles, la granularidad puede acercarse a fragmentación dependiendo del volumen de contenido disponible en el catálogo.
+- Recomendación: Monitorear crecimiento del catálogo en esta rama para validar que cada subgénero mantiene volumen musical suficiente para justificar su nivel estructural.
+- Confianza: 0.52
 
-### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Soul / Funk / R&B > Soul | Music > Soul / Funk / R&B > Rhythm & Blues
-- Evidencia: Existe solapamiento histórico y estilístico significativo entre Soul y Rhythm & Blues, especialmente en repertorio posterior a los años 60 donde ambos términos se utilizan de forma intercambiable en algunos catálogos.
-- Recomendación: Mantener ambos géneros solo si se aplican criterios curatoriales claros para diferenciarlos; de lo contrario podría evaluarse una estrategia de delimitación más estricta.
-- Confianza: 0.69
+### MVET-L2-005 [FB-05] - WARNING
+- Nodo: Music > Rock > Classic Rock > Hard Rock
+- Evidencia: Hard Rock está marcado como nodo Atomic. El estilo posee subdivisiones históricamente reconocidas (por ejemplo Glam Metal, Arena Rock o variantes regionales), lo que sugiere que su condición de atómico puede depender más de una decisión operativa del sistema que de un límite musical absoluto.
+- Recomendación: Revisar periódicamente si la condición Atomic sigue siendo adecuada para el catálogo real del sistema.
+- Confianza: 0.47
 
-### MVET-L2-005 [FB-05] - SUGGESTION
-- Nodo: Music > Rock > Alternative & Indie > Grunge > Seattle Grunge
-- Evidencia: Seattle Grunge representa una escena geográfica muy específica con identidad histórica clara pero con un catálogo relativamente acotado. Subdividirlo más probablemente deterioraría la coherencia musical.
-- Recomendación: Tratar este nodo como atómico salvo que exista una razón histórica o musicológica fuerte para subdividirlo.
-- Confianza: 0.83
-
-### MVET-L2-005 [FB-05] - SUGGESTION
-- Nodo: Music > Pop > Synth & Electronic Pop > Synth Pop > New Romantic
-- Evidencia: New Romantic es una escena estilística bien delimitada dentro del synth pop temprano de los años 80. Mayor subdivisión probablemente generaría fragmentación sin valor musical claro.
-- Recomendación: Considerar este nodo como atómico dentro de la estructura actual.
-- Confianza: 0.84
-
-### MVET-L2-005 [FB-05] - SUGGESTION
-- Nodo: Music > Latin > Regional Mexicano / Texano > Banda
-- Evidencia: Banda ya está marcada como Atomic en el árbol. En la práctica musical el género suele tratarse como unidad estilística clara dentro del regional mexicano.
-- Recomendación: Confirmar el estado atómico del nodo, evitando subdivisiones innecesarias salvo que el catálogo futuro lo requiera.
-- Confianza: 0.90
+### MVET-L2-006 [FB-06] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Post Punk > New Wave
+- Evidencia: New Wave evolucionó históricamente desde el Post-Punk pero en muchos sistemas taxonómicos se clasifica como un movimiento pop-rock más amplio asociado a Synth Pop y al pop de los años 80. Su ubicación estricta bajo Post-Punk puede limitar su contexto estilístico completo.
+- Recomendación: Evaluar si New Wave debe mantenerse como derivado directo de Post-Punk o si funcionaría mejor como nodo paralelo dentro de una estructura pop/rock de los 80.
+- Confianza: 0.61

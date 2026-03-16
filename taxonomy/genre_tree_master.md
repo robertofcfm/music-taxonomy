@@ -9,9 +9,9 @@ Music
       Grunge
         Seattle Grunge (Atomic)
         Post-Grunge
-      Dream Pop
+      Dream Pop (Atomic)
+      New Wave
       Post Punk
-        New Wave
         Gothic Rock
         Coldwave
         Darkwave
@@ -37,16 +37,17 @@ Music
     Synth & Electronic Pop
       Synth Pop
         New Romantic (Atomic)
-        Electro Pop
+        Electro Pop (Atomic)
 
   Electronic & Dance
     Disco
     House
       Deep House
       Electro House
-    Ambient
-      Dark Ambient
-      Cinematic Ambient
+
+  Ambient
+    Dark Ambient
+    Cinematic Ambient
 
   Hip Hop
 

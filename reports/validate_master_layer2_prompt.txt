@@ -103,7 +103,7 @@ Music
     Alternative & Indie
       Indie Rock
       Grunge
-        Seattle Grunge
+        Seattle Grunge (Atomic)
         Post-Grunge
       Dream Pop
       Post Punk
@@ -132,7 +132,7 @@ Music
 
     Synth & Electronic Pop
       Synth Pop
-        New Romantic
+        New Romantic (Atomic)
         Electro Pop
 
   Electronic & Dance
@@ -143,7 +143,6 @@ Music
     Ambient
       Dark Ambient
       Cinematic Ambient
-    Downtempo
 
   Hip Hop
 
@@ -164,13 +163,11 @@ Music
       Vallenato
 
   Soul / Funk / R&B
-    Soul
-    Rhythm & Blues
+    Soul / Rhythm & Blues
     Funk
 
   Jazz
 
-  Instrumental / Score
 === INSTRUCCIÓN DE SALIDA ===
 
 Responde ÚNICAMENTE con un JSON válido siguiendo el esquema a continuación.
@@ -183,6 +180,7 @@ Esquema obligatorio:
     {
       "rule_id": "<RULE_ID>",
       "severity": "<FATAL|WARNING|SUGGESTION>",
+      "result": "<PASS si la recomendación es no hacer cambios | FAIL si se requiere o sugiere una acción>",
       "node_path": "<ruta completa: Padre > Hijo>",
       "evidence": "<descripción objetiva de lo observado>",
       "recommendation": "<propuesta de mejora o confirmación sin cambio>",
