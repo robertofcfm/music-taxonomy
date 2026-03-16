@@ -13,8 +13,7 @@ Music
       New Wave
       Post Punk
         Gothic Rock
-        Coldwave
-        Darkwave
+        Coldwave / Darkwave
 
     Classic Rock
       Rock & Roll
@@ -37,7 +36,7 @@ Music
     Synth & Electronic Pop
       Synth Pop
         New Romantic (Atomic)
-        Electro Pop (Atomic)
+      Electro Pop (Atomic)
 
   Electronic & Dance
     Disco
@@ -55,7 +54,7 @@ Music
     Rock Latino
     Pop Latino
     Hip Hop Latino
-    Regional Mexicano / Texano
+    Regional Mexicano / Texano (Structural)
       Norteño
       Texano
       Banda (Atomic)
