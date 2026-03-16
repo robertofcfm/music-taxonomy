@@ -36,7 +36,7 @@ IMPORTS
 
 CONTEXT
 
-- docs/governance/AI_PROMPT_SYSTEM_CONTEXT.md
+- docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
 
 RULES
 

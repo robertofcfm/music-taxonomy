@@ -201,9 +201,9 @@ CONDITIONAL
 
 REFERENTIAL
 
-- docs/architecture/PROJECT_CONTEXT.md
-- docs/architecture/PROJECT_OPERATING_MODEL.md
-- docs/architecture/SYSTEM_OVERVIEW.md
+- docs/context/PROJECT_CONTEXT.md
+- docs/context/PROJECT_OPERATING_MODEL.md
+- docs/context/SYSTEM_OVERVIEW.md
 
 Razón general: aportan contexto de sistema;
 no son fuente primaria de reglas obligatorias en este proceso.

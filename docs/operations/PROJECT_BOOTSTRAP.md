@@ -46,7 +46,8 @@ docs/governance/TAXONOMY_RULES.md
 
 CONTEXTO DEL PROYECTO
 
-docs/architecture/PROJECT_CONTEXT.md
+docs/context/CONTEXT_REGISTRY.md
+docs/context/PROJECT_CONTEXT.md
 
 GOBERNANZA TAXONÓMICA
 

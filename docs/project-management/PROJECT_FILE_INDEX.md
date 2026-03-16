@@ -234,22 +234,36 @@ Los archivos locales pueden especializar implementación,
 pero no deben contradecir reglas globales.
 
 --------------------------------------------------
-10. DOCUMENTACIÓN DE ARQUITECTURA
+10. DOCUMENTACIÓN DE CONTEXTO
 --------------------------------------------------
 
-docs/architecture/SYSTEM_OVERVIEW.md
+docs/context/CONTEXT_REGISTRY.md
+
+Registro canonico de archivos de contexto del proyecto,
+clasificados por nivel de uso.
+
+--------------------------------------------------
+
+docs/context/README.md
+
+Guia rapida de la carpeta context y referencia
+al registro de contexto.
+
+--------------------------------------------------
+
+docs/context/SYSTEM_OVERVIEW.md
 
 Descripción de alto nivel de la arquitectura del sistema.
 
 --------------------------------------------------
 
-docs/architecture/PROJECT_CONTEXT.md
+docs/context/PROJECT_CONTEXT.md
 
 Describe objetivos conceptuales y contexto del sistema.
 
 --------------------------------------------------
 
-docs/architecture/PROJECT_OPERATING_MODEL.md
+docs/context/PROJECT_OPERATING_MODEL.md
 
 Explica la separación operativa de actividades.
 
@@ -308,7 +322,7 @@ Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
 
-docs/governance/AI_PROMPT_SYSTEM_CONTEXT.md
+docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
 
 Contexto del sistema de plantillas de prompt para IA.
 Explica el modelo abstracto/concreto, herencia, capas

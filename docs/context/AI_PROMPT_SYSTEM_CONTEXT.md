@@ -184,7 +184,7 @@ Se carga siempre.
 
 - docs/governance/GLOBAL_RULES.md
 - docs/governance/SYSTEM_CONTRACT.md
-- docs/architecture/PROJECT_CONTEXT.md
+- docs/context/PROJECT_CONTEXT.md
 
 Función:
 
@@ -288,7 +288,7 @@ CONDITIONAL:
 
 REFERENTIAL:
 
-- docs/architecture/PROJECT_CONTEXT.md
+- docs/context/PROJECT_CONTEXT.md
 
 ESCENARIO: VALIDACIÓN DEL ÁRBOL MAESTRO
 
@@ -308,8 +308,8 @@ CONDITIONAL:
 
 REFERENTIAL:
 
-- docs/architecture/PROJECT_CONTEXT.md
-- docs/architecture/SYSTEM_OVERVIEW.md
+- docs/context/PROJECT_CONTEXT.md
+- docs/context/SYSTEM_OVERVIEW.md
 
 ESCENARIO: CLASIFICACIÓN DE CANCIONES
 
@@ -318,7 +318,7 @@ MANDATORY:
 - docs/governance/GLOBAL_RULES.md
 - docs/governance/SYSTEM_CONTRACT.md
 - docs/governance/TAXONOMY_RULES.md
-- docs/architecture/PROJECT_CONTEXT.md
+- docs/context/PROJECT_CONTEXT.md
 
 CONDITIONAL:
 
@@ -327,7 +327,7 @@ CONDITIONAL:
 
 REFERENTIAL:
 
-- docs/architecture/PROJECT_OPERATING_MODEL.md
+- docs/context/PROJECT_OPERATING_MODEL.md
 
 --------------------------------------------------
 6. PLANTILLA MÍNIMA RECOMENDADA
@@ -340,7 +340,7 @@ MANDATORY
 
 - docs/governance/GLOBAL_RULES.md
 - docs/governance/SYSTEM_CONTRACT.md
-- docs/architecture/PROJECT_CONTEXT.md
+- docs/context/PROJECT_CONTEXT.md
 
 Y sumar solo un bloque especializado según la tarea principal.
 
