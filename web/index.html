@@ -171,6 +171,16 @@
     }
     .meta strong { color: var(--text); }
 
+    .pipeline-note {
+      margin-top: 0.8rem;
+      padding: 0.6rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface2);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
     /* ── Section label ───────────────────────────────────────── */
     .section-label {
       font-size: 0.7rem;
@@ -253,7 +263,7 @@
   <div class="info">
     <h2>Validación de Taxonomía Maestra</h2>
     <p>
-      Ejecuta la validación determinista (Capa 1) sobre
+      Ejecuta el pipeline de validación (Capa 1 y Capa 2) sobre
       <code>taxonomy/genre_tree_master.md</code>.
       Los resultados se muestran a continuación de forma estructurada.
     </p>
@@ -291,6 +301,7 @@
     <span><strong>Archivo</strong> <span id="mFile">—</span></span>
     <span><strong>SHA256</strong> <span id="mHash">—</span></span>
   </div>
+  <div class="pipeline-note" id="pipelineNote">Estado pipeline: —</div>
 
   <!-- Findings -->
   <div class="section-label">Hallazgos por regla</div>
@@ -395,23 +406,38 @@
     spinner.style.display = 'inline-block';
     label.textContent = 'Ejecutando…';
     try {
-      const res = await fetch('/api/validate/layer1', { method: 'POST' });
+      const res = await fetch('/api/validate/full', { method: 'POST' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      render(await res.json());
+      const data = await res.json();
+      if (data.layer1) {
+        render(data.layer1);
+      }
+      const note = document.getElementById('pipelineNote');
+      const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
+      note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
+        + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
     } catch (e) {
       alert('Error: ' + e.message);
     } finally {
       btn.disabled = false;
       spinner.style.display = 'none';
-      label.textContent = 'Ejecutar Validación';
+      label.textContent = 'Ejecutar Validación (L1 + L2)';
     }
   }
 
   // Carga el reporte existente al abrir la página
   (async () => {
     try {
-      const res = await fetch('/api/report/layer1');
-      if (res.ok) render(await res.json());
+      const res = await fetch('/api/report/full');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.layer1) {
+        render(data.layer1);
+      }
+      const note = document.getElementById('pipelineNote');
+      const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
+      note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
+        + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
     } catch (_) {}
   })();
 </script>
