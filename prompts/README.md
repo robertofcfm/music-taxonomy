@@ -15,8 +15,8 @@ Ejemplos de nombres:
 Prompt inicial recomendado:
 - prompt_bootstrap_generador_prompts_v1.md
 
-Plantilla corta estandar recomendada:
-- prompt_operativo_base_v2.md
+Plantilla operativa base recomendada:
+- prompt_operativo_base.md
 
 Nota:
 - El flujo recomendado para prompts nuevos vive en esta carpeta.

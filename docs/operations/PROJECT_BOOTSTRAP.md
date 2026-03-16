@@ -117,7 +117,7 @@ Prompt bootstrap recomendado:
 
 Plantilla corta estandar recomendada:
 
-- prompts/prompt_operativo_base_v2.md
+- prompts/prompt_operativo_base.md
 
 Este enfoque debe construir el prompt final cargando de forma
 explícita documentos desde:

@@ -373,7 +373,7 @@ por composicion dinamica de contexto y reglas.
 
 --------------------------------------------------
 
-prompts/prompt_operativo_base_v2.md
+prompts/prompt_operativo_base.md
 
 Plantilla corta estandar para redactar prompts
 operativos con imports clasificados y cierre.
