@@ -268,6 +268,14 @@ docs/context/PROJECT_OPERATING_MODEL.md
 Explica la separación operativa de actividades.
 
 --------------------------------------------------
+
+docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
+
+Contexto del sistema de plantillas de prompt para IA.
+Explica el modelo abstracto/concreto, herencia, capas
+y criterios de uso por escenario.
+
+--------------------------------------------------
 11. DOCUMENTACIÓN DE GOBERNANZA DE TAXONOMÍA
 --------------------------------------------------
 
@@ -319,14 +327,6 @@ con el contexto correcto del proyecto.
 docs/operations/PHASE1_FINAL_CHECKLIST.md
 
 Checklist de cierre de la Fase 1.
-
---------------------------------------------------
-
-docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
-
-Contexto del sistema de plantillas de prompt para IA.
-Explica el modelo abstracto/concreto, herencia, capas
-y criterios de uso por escenario.
 
 --------------------------------------------------
 
