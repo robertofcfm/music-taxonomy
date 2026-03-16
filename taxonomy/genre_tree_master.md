@@ -40,7 +40,6 @@ Music
       Latin Pop Rock
       Alternative Pop Rock
       Power Pop
-      Alternative Pop
 
     Synth & Electronic Pop
       Synth Pop

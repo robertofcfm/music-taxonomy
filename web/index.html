@@ -353,6 +353,32 @@
       : `<span class="pill p-warn">WARNING</span>`;
   }
 
+  function resetView() {
+    const results = document.getElementById('results');
+    results.classList.remove('visible');
+
+    document.getElementById('cDecision').innerHTML = '—';
+    document.getElementById('cTotal').textContent = '—';
+
+    const fEl = document.getElementById('cFatal');
+    fEl.textContent = '—';
+    fEl.className = 'card-val';
+
+    const wEl = document.getElementById('cWarn');
+    wEl.textContent = '—';
+    wEl.className = 'card-val';
+
+    document.getElementById('mDate').textContent = '—';
+    document.getElementById('mFile').textContent = '—';
+    document.getElementById('mHash').textContent = '—';
+    document.getElementById('pipelineNote').textContent = 'Estado pipeline: esperando ejecución manual.';
+
+    document.getElementById('tbody').innerHTML =
+      `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
+    document.getElementById('tbodyL2').innerHTML =
+      `<tr><td colspan="6" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
+  }
+
   function render(data) {
     const s = data.summary || {};
 
@@ -471,20 +497,11 @@
     }
   }
 
-  // Carga el reporte existente al abrir la página
+  // Limpia reportes previos y deja la UI en estado vacío al abrir la página
   (async () => {
+    resetView();
     try {
-      const res = await fetch('/api/report/full');
-      if (!res.ok) return;
-      const data = await res.json();
-      if (data.layer1) {
-        render(data.layer1);
-      }
-      renderLayer2(data.layer2);
-      const note = document.getElementById('pipelineNote');
-      const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
-      note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
-        + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
+      await fetch('/api/report/clear', { method: 'POST' });
     } catch (_) {}
   })();
 </script>

@@ -16,6 +16,7 @@ import json
 import socketserver
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -26,10 +27,33 @@ VALIDATE_L2 = REPO_ROOT / "scripts" / "validate_tree_layer2.py"
 LAYER1_REPORT = REPORTS_DIR / "validate_master_report.json"
 LAYER2_REPORT = REPORTS_DIR / "validate_master_layer2_report.json"
 LAYER2_RESPONSE = REPORTS_DIR / "validate_master_layer2_response.json"
+LAYER2_PROMPT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
+LAYER1_REPORT_MD = REPORTS_DIR / "validate_master_report.md"
+LAYER1_RUN_METADATA = REPORTS_DIR / "validate_master_run_metadata.json"
+LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
 HTML_FILE = REPO_ROOT / "web" / "index.html"
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
+    def _clear_validation_reports(self) -> list[str]:
+        cleared: list[str] = []
+        files_to_clear = [
+            LAYER1_REPORT,
+            LAYER1_REPORT_MD,
+            LAYER1_RUN_METADATA,
+            LAYER2_REPORT,
+            LAYER2_REPORT_MD,
+        ]
+        for path in files_to_clear:
+            if path.exists():
+                path.unlink()
+                cleared.append(path.name)
+        return cleared
+
+    @staticmethod
+    def _is_fresh(path: Path, started_at_epoch: float) -> bool:
+        return path.exists() and path.stat().st_mtime >= started_at_epoch
+
     def _send_json(self, data: dict, status: int = 200) -> None:
         body = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
         self.send_response(status)
@@ -85,7 +109,17 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.send_error(404)
 
     def do_POST(self) -> None:
-        if self.path == "/api/validate/layer1":
+        if self.path == "/api/report/clear":
+            cleared = self._clear_validation_reports()
+            self._send_json(
+                {
+                    "ok": True,
+                    "cleared_files": cleared,
+                    "message": "Reportes de validación limpiados.",
+                }
+            )
+
+        elif self.path == "/api/validate/layer1":
             proc = subprocess.run(
                 [PYTHON, str(VALIDATE_L1)],
                 capture_output=True,
@@ -103,6 +137,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self._send_json(data)
 
         elif self.path == "/api/validate/full":
+            # Fuerza corrida fresca en cada click, sin reusar reportes previos.
+            self._clear_validation_reports()
+
+            l1_started_at = time.time()
             l1_proc = subprocess.run(
                 [PYTHON, str(VALIDATE_L1)],
                 capture_output=True,
@@ -110,7 +148,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 cwd=str(REPO_ROOT),
             )
 
-            if not LAYER1_REPORT.exists():
+            if not self._is_fresh(LAYER1_REPORT, l1_started_at):
                 self._send_json(
                     {
                         "error": l1_proc.stderr or l1_proc.stdout,
@@ -131,6 +169,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 "layer2": None,
                 "pipeline": {
                     "layer1_exit_code": l1_proc.returncode,
+                    "layer2_prompt_executed": False,
                     "layer2_executed": False,
                     "message": "",
                 },
@@ -141,13 +180,35 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 self._send_json(response)
                 return
 
+            l2_prompt_started_at = time.time()
+            l2_prompt_proc = subprocess.run(
+                [
+                    PYTHON,
+                    str(VALIDATE_L2),
+                    "--print-prompt",
+                ],
+                capture_output=True,
+                text=True,
+                cwd=str(REPO_ROOT),
+            )
+            response["pipeline"]["layer2_prompt_executed"] = True
+            response["pipeline"]["layer2_prompt_exit_code"] = l2_prompt_proc.returncode
+
+            if not self._is_fresh(LAYER2_PROMPT, l2_prompt_started_at):
+                response["pipeline"]["message"] = "Capa 2 omitida: no se pudo regenerar el prompt."
+                response["pipeline"]["layer2_prompt_stdout"] = l2_prompt_proc.stdout
+                response["pipeline"]["layer2_prompt_stderr"] = l2_prompt_proc.stderr
+                self._send_json(response, 500)
+                return
+
             if not LAYER2_RESPONSE.exists():
                 response["pipeline"]["message"] = (
-                    "Capa 2 omitida: no existe reports/validate_master_layer2_response.json"
+                    "Capa 2 pendiente: prompt regenerado, falta reports/validate_master_layer2_response.json"
                 )
                 self._send_json(response)
                 return
 
+            l2_started_at = time.time()
             l2_proc = subprocess.run(
                 [
                     PYTHON,
@@ -163,11 +224,11 @@ class Handler(http.server.BaseHTTPRequestHandler):
             response["pipeline"]["layer2_executed"] = True
             response["pipeline"]["layer2_exit_code"] = l2_proc.returncode
 
-            if LAYER2_REPORT.exists():
+            if self._is_fresh(LAYER2_REPORT, l2_started_at):
                 response["layer2"] = json.loads(LAYER2_REPORT.read_text(encoding="utf-8"))
-                response["pipeline"]["message"] = "Capa 1 y Capa 2 ejecutadas."
+                response["pipeline"]["message"] = "Capa 1 y Capa 2 ejecutadas (corrida fresca)."
             else:
-                response["pipeline"]["message"] = "Capa 2 ejecutada pero sin reporte generado."
+                response["pipeline"]["message"] = "Capa 2 ejecutada pero sin reporte fresco generado."
                 response["pipeline"]["layer2_stdout"] = l2_proc.stdout
                 response["pipeline"]["layer2_stderr"] = l2_proc.stderr
 
