@@ -22,7 +22,7 @@ PRINCIPIOS OBLIGATORIOS:
 
   MVET-L2-003 [FB-05] WARNING
   Descripción: Redundancia entre nodos.
-  Check: Detecta parejas de géneros que representan estilos potencialmente equivalentes o solapados en el conjunto del árbol.
+  Check: Detecta parejas de géneros que representan estilos potencialmente equivalentes o solapados en el conjunto del árbol, excluyendo nodos clone.
 
   MVET-L2-004 [FB-05] WARNING
   Descripción: Sobre-fragmentación estructural.

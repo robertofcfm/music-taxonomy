@@ -8,9 +8,9 @@ Music
       Indie Rock
         Garage Rock
         Brit Pop
-        Grunge
-          Seattle Grunge
-          Post-Grunge
+      Grunge
+        Seattle Grunge
+        Post-Grunge
       Dream Pop
       Post Punk
         New Wave

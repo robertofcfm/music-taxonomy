@@ -1,6 +1,6 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T01:07:13+00:00
+- Fecha: 2026-03-16T01:14:58+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
 - WARNING: 8
