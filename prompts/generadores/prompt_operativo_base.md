@@ -16,6 +16,11 @@ Es el resultado consumible luego de la fase generadora.
 FORMATO STANDALONE RECOMENDADO
 --------------------------------------------------
 
+[GENERADO_CON_BASE_EN]
+- Fecha de generación: YYYY-MM-DD
+- Archivos fuente usados y su fecha de última actualización:
+  - (nombre_archivo.md — YYYY-MM-DD)
+
 [TAREA]
 - Describir en una linea la tarea concreta a resolver.
 
@@ -46,10 +51,12 @@ Resolver la tarea indicada con precision y trazabilidad,
 usando un enfoque operativo y verificable.
 
 Protocolo obligatorio:
-1. Confirmar objetivo y salida esperada.
-2. Detectar riesgos de suposiciones no validadas.
-3. Ejecutar respuesta en bloques claros y auditables.
-4. Si falta informacion critica, detener y pedir faltantes exactos.
+1. Al inicio de sesión: si existen tareas pendientes,
+   cargar PROJECT_STATE.md antes de proceder.
+2. Confirmar objetivo y salida esperada.
+3. Detectar riesgos de suposiciones no validadas.
+4. Ejecutar respuesta en bloques claros y auditables.
+5. Si falta informacion critica, detener y pedir faltantes exactos.
 
 Formato de salida:
 [RESPUESTA]

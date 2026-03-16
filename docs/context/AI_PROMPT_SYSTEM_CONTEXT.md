@@ -128,7 +128,12 @@ Se recomienda dividir reglas y contexto en cuatro capas.
 
 CAPA A — CORE OBLIGATORIO
 
-Se carga siempre.
+Se recomienda cargar.
+
+Cargar ambos cuando la tarea impacte comportamiento
+sistémico o requiera autoridad normativa transversal.
+Para sesiones de solo prompts, aplicar criterio del
+RULES_REGISTRY como fuente normativa vinculante.
 
 - docs/governance/GLOBAL_RULES.md
 - docs/governance/SYSTEM_CONTRACT.md
