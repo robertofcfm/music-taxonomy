@@ -307,6 +307,13 @@ docs/operations/PHASE1_FINAL_CHECKLIST.md
 Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
+
+docs/operations/AI_PROMPT_BASE_TEMPLATE.md
+
+Define una plantilla base para componer prompts de IA
+mediante carga selectiva de reglas y contexto.
+
+--------------------------------------------------
 13. DOCUMENTACIÓN DE GESTIÓN DEL PROYECTO
 --------------------------------------------------
 

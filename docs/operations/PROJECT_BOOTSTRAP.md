@@ -103,6 +103,25 @@ Ayudan a restaurar contexto si el proyecto se retoma
 después de un periodo largo.
 
 --------------------------------------------------
+5A. PLANTILLA BASE PARA IA
+--------------------------------------------------
+
+Para sesiones asistidas por IA que requieran carga selectiva
+de reglas y contexto, usar además:
+
+docs/operations/AI_PROMPT_BASE_TEMPLATE.md
+
+Este documento define una plantilla reusable para declarar:
+
+- documentos obligatorios
+- documentos condicionales
+- documentos referenciales
+- documentos excluidos
+
+Su uso ayuda a evitar prompts demasiado grandes o con
+contexto irrelevante.
+
+--------------------------------------------------
 6. ARCHIVOS DE ENTRADA DE CLASIFICACIÓN
 --------------------------------------------------
 
