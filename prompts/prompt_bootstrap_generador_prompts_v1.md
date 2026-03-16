@@ -109,6 +109,10 @@ La ejecución se considera correcta cuando:
 
 siempre con imports clasificados y justificados.
 
+Además, el prompt final generado debe incluir la instrucción de reportar
+el indicador de estado de capacidad (🟢/🟡/🔴) al final de cada respuesta.
+Si no la incluye, la ejecución se considera incompleta.
+
 Si la ejecución es correcta y el contexto mínimo está cubierto,
 agrega al final la pregunta de arranque:
 

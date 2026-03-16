@@ -74,6 +74,12 @@ Formato de salida:
 - La tarea se considera completa cuando la respuesta cumple objetivo,
   formato y criterio de calidad sin placeholders pendientes.
 
+[ESTADO_DE_CAPACIDAD]
+Reportar al final de cada respuesta relevante:
+  🟢 Chat manejable
+  🟡 Chat extenso, considera reiniciar pronto
+  🔴 Chat crítico, reiniciar recomendado
+
 --------------------------------------------------
 REGLAS DE USO RAPIDAS
 --------------------------------------------------
