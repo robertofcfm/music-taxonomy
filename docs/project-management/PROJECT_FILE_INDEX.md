@@ -308,10 +308,27 @@ Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
 
+docs/governance/AI_PROMPT_SYSTEM_CONTEXT.md
+
+Contexto del sistema de plantillas de prompt para IA.
+Explica el modelo abstracto/concreto, herencia, capas
+y criterios de uso por escenario.
+
+--------------------------------------------------
+
+docs/governance/AI_PROMPT_SYSTEM_RULES.md
+
+Reglas que gobiernan el uso y composición de plantillas
+de prompt para IA. Contiene principios de composición,
+regla de selección y protocolo de cierre de conversación.
+
+--------------------------------------------------
+
 docs/operations/AI_PROMPT_BASE_TEMPLATE.md
 
-Define una plantilla base para componer prompts de IA
-mediante carga selectiva de reglas y contexto.
+Plantilla base abstracta para prompts de IA.
+Contiene solo IMPORTS a contexto y reglas,
+más la definición estructural de la plantilla.
 
 --------------------------------------------------
 
