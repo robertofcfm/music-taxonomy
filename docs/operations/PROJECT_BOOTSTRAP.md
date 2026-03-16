@@ -111,12 +111,24 @@ de reglas y contexto, usar además:
 
 docs/operations/AI_PROMPT_BASE_TEMPLATE.md
 
+Y, según el tipo de instancia a generar, uno de estos
+templates hijos:
+
+- docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md
+- docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md
+
 Este documento define una plantilla reusable para declarar:
 
 - documentos obligatorios
 - documentos condicionales
 - documentos referenciales
 - documentos excluidos
+
+La plantilla base actúa como template padre.
+Los templates hijos especializan definiciones según:
+
+- [TIPO_TEMPLATE] = Prompt
+- [TIPO_TEMPLATE] = Tarea
 
 Su uso ayuda a evitar prompts demasiado grandes o con
 contexto irrelevante.

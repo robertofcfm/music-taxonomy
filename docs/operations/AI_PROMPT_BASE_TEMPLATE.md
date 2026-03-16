@@ -59,6 +59,7 @@ Formato recomendado para contratos abstractos:
 
 - [DEFINIR_TAREA]
 - [DEFINIR_OBJETIVO]
+- [TIPO_TEMPLATE]
 - [DEFINIR_IMPORTS_MANDATORY]
 - [DEFINIR_IMPORTS_CONDITIONAL]
 - [DEFINIR_IMPORTS_REFERENTIAL]
@@ -67,6 +68,34 @@ Formato recomendado para contratos abstractos:
 
 Mientras una plantilla conserve marcadores de este tipo,
 debe considerarse ABSTRACTA.
+
+MODELO DE HERENCIA SIMPLE
+
+Este sistema debe usar un solo TEMPLATE PADRE por instancia.
+
+Restricción:
+
+- una instancia concreta puede heredar de un solo padre
+- no se permite herencia múltiple por complejidad
+- los templates hijos agregan definiciones, no redefinen
+  el flujo estructural del padre
+
+El padre define el flujo general y los contratos mínimos.
+
+El hijo especializa definiciones usando el marcador:
+
+[TIPO_TEMPLATE]
+
+Valores iniciales soportados:
+
+- Prompt
+- Tarea
+
+Por tanto:
+
+- AI_PROMPT_BASE_TEMPLATE.md es el padre
+- AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md es un hijo
+- AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md es un hijo
 
 Para cada tipo de trabajo se genera una INSTANCIA CONCRETA:
 un documento específico con los imports ya resueltos,
@@ -242,6 +271,25 @@ Los archivos actuales en docs/governance/ deben evaluarse
 para determinar si requieren subdivisión en secciones
 o si la selección por capa ya es suficiente.
 
+USO DE [TIPO_TEMPLATE] DENTRO DE DEFINICIONES
+
+Un documento puede incluir definiciones que dependan del
+valor de [TIPO_TEMPLATE] sin necesidad de crear múltiples
+versiones del flujo base.
+
+Ejemplo conceptual:
+
+[TIPO_TEMPLATE]
+Prompt
+
+o
+
+[TIPO_TEMPLATE]
+Tarea
+
+Con eso, un template hijo puede reutilizar el flujo del padre
+y especializar solo las definiciones que cambian para ese tipo.
+
 --------------------------------------------------
 5. REGLA DE SELECCIÓN
 --------------------------------------------------
@@ -349,6 +397,9 @@ ESQUELETO MÍNIMO DE INSTANCIA
 
 [AQUI_SIGUE_CON_EL_CONTENIDO]
 
+[TIPO_TEMPLATE]
+[DEFINIR_TIPO_TEMPLATE]
+
 Este bloque sirve como encabezado mínimo para una instancia
 concreta y obliga a declarar primero la tarea antes de cargar
 reglas, contexto y restricciones.
@@ -356,6 +407,7 @@ reglas, contexto y restricciones.
 Convención:
 
 - Si el bloque conserva [DEFINIR_TAREA], la pieza sigue siendo abstracta.
+- Si conserva [DEFINIR_TIPO_TEMPLATE], la pieza sigue siendo abstracta.
 - Si el bloque ya contiene una tarea real, puede continuar a validación.
 - Una instancia no debe ejecutarse como prompt final si conserva
   cualquier marcador abstracto pendiente.
@@ -443,6 +495,7 @@ Antes de considerar lista una instancia concreta, verificar:
 - no contiene marcadores [DEFINIR_*]
 - no contiene marcadores [COLOCAR_AQUI_*]
 - no contiene marcadores [PENDIENTE_*]
+- [TIPO_TEMPLATE] fue resuelto con un valor válido
 - todos los imports requeridos fueron resueltos
 - la validación de cobertura fue ejecutada y reportada
 

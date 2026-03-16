@@ -314,6 +314,20 @@ Define una plantilla base para componer prompts de IA
 mediante carga selectiva de reglas y contexto.
 
 --------------------------------------------------
+
+docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md
+
+Especializa la plantilla base para instancias cuyo
+objetivo sea producir un prompt final.
+
+--------------------------------------------------
+
+docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md
+
+Especializa la plantilla base para instancias cuyo
+objetivo sea producir una tarea operativa específica.
+
+--------------------------------------------------
 13. DOCUMENTACIÓN DE GESTIÓN DEL PROYECTO
 --------------------------------------------------
 
