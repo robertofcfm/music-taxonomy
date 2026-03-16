@@ -290,7 +290,21 @@ Explica el modelo abstracto/concreto, herencia, capas
 y criterios de uso por escenario.
 
 --------------------------------------------------
-11. DOCUMENTACIÓN DE GOBERNANZA DE TAXONOMÍA
+11. DOCUMENTACIÓN DE GOBERNANZA
+--------------------------------------------------
+
+docs/governance/RULES_REGISTRY.md
+
+Registro canónico de archivos normativos del proyecto,
+clasificados por nivel y uso recomendado.
+
+--------------------------------------------------
+
+docs/governance/GLOBAL_RULES.md
+
+Reglas transversales que aplican a múltiples
+componentes del repositorio.
+
 --------------------------------------------------
 
 docs/governance/SYSTEM_CONTRACT.md
@@ -328,6 +342,14 @@ docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
 Checklist para validar calidad taxonómica.
 
 --------------------------------------------------
+
+docs/governance/AI_PROMPT_SYSTEM_RULES.md
+
+Reglas que gobiernan el uso y composición de plantillas
+de prompt para IA. Contiene principios de composición,
+regla de selección y protocolo de cierre de conversación.
+
+--------------------------------------------------
 12. DOCUMENTACIÓN DE OPERACIONES
 --------------------------------------------------
 
@@ -341,14 +363,6 @@ con el contexto correcto del proyecto.
 docs/operations/PHASE1_FINAL_CHECKLIST.md
 
 Checklist de cierre de la Fase 1.
-
---------------------------------------------------
-
-docs/governance/AI_PROMPT_SYSTEM_RULES.md
-
-Reglas que gobiernan el uso y composición de plantillas
-de prompt para IA. Contiene principios de composición,
-regla de selección y protocolo de cierre de conversación.
 
 --------------------------------------------------
 

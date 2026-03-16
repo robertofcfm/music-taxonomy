@@ -10,3 +10,6 @@ Uso recomendado:
 Ejemplos de nombres:
 - classify_songs_prompt_v1.txt
 - validate_master_layer2_prompt_v2.txt
+
+Prompt inicial recomendado:
+- prompt_bootstrap_generador_prompts_v1.md
