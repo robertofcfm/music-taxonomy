@@ -12,8 +12,6 @@ Music
     Hard Rock
     Alternative & Indie
       Indie Rock
-        Garage Rock
-        Brit Pop
       Grunge (Atomic)
       Dream Pop
       Post Punk
@@ -31,8 +29,6 @@ Music
       Alternative Pop Rock
       Power Pop
     New Wave
-      Synth Pop
-      Electronic Dream Pop
   Electronic & Dance
     House
       Deep House

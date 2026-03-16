@@ -4,48 +4,48 @@
 {
 "rule_id": "MVET-L2-001",
 "severity": "WARNING",
-"node_path": "Music > Pop > Synth & Electronic Pop > New Wave",
-"evidence": "New Wave es un término paraguas que históricamente precede y engloba gran parte del Synth Pop, pero en esta estructura se presenta como un subgénero hijo de Synth & Electronic Pop, lo que genera confusión en la distinción de playlists.",
-"recommendation": "Evaluar si New Wave debe ser hermano de Synth & Electronic Pop o si debe contenerlo, dada su amplitud histórica y musical.",
+"node_path": "Music > Rock > Alternative & Indie > Indie Rock > Brit Pop",
+"evidence": "Brit Pop, aunque históricamente ligado al Indie Rock, presenta una estructura melódica y producción que a menudo lo hace indistinguible de ramas de Power Pop o Pop Rock en términos de curación de playlists.",
+"recommendation": "Evaluar si Brit Pop debe mantenerse como hijo de Indie Rock o si su proximidad al Pop amerita una referencia cruzada (clone).",
 "confidence": 0.85
 },
 {
 "rule_id": "MVET-L2-003",
 "severity": "WARNING",
-"node_path": "Music > Rock > Classic Rock",
-"evidence": "Classic Rock no es un género musical per se, sino un formato radial. Existe un solapamiento masivo con Rock & Roll, Blues Rock y Hard Rock que ya cuelgan del mismo nivel.",
-"recommendation": "Considerar a Classic Rock como un nodo organizador o etiqueta, ya que su contenido musical es redundante con los nodos hermanos específicos.",
+"node_path": "Music > Pop > New Wave > Electronic Dream Pop",
+"evidence": "Potencial redundancia con Music > Rock > Alternative & Indie > Dream Pop. La distinción entre ambos nodos para la generación de playlists es baja debido al solapamiento de texturas etéreas y sintetizadores.",
+"recommendation": "Fusionar bajo Dream Pop o definir Electronic Dream Pop como un nodo atómico con reglas de producción estrictamente electrónicas.",
 "confidence": 0.90
+},
+{
+"rule_id": "MVET-L2-005",
+"severity": "SUGGESTION",
+"node_path": "Music > Rock > Alternative & Indie > Grunge (Atomic)",
+"evidence": "El nodo está correctamente marcado como Atomic. Subdividirlo en sub-escenas (Seattle Sound vs Post-Grunge) degradaría la cohesión de la rama madre.",
+"recommendation": "Mantener como Atomic y no permitir descendencia.",
+"confidence": 1.00
 },
 {
 "rule_id": "MVET-L2-006",
 "severity": "WARNING",
-"node_path": "Music > Electronic & Dance > Disco",
-"evidence": "Musicalmente, el Disco es el precursor directo del House. Aunque se clasifica como Electronic & Dance, su estructura rítmica y origen lo vinculan estrechamente con Soul / Funk / R&B.",
-"recommendation": "Evaluar la creación de un nodo clone en Soul / Funk / R&B o reubicar si la intención es priorizar el origen estilístico sobre el entorno de consumo (Dance).",
+"node_path": "Music > Soul / Funk / R&B > Disco",
+"evidence": "Musicalmente, Disco comparte más rasgos estructurales de BPM y patrones rítmicos con 'Electronic & Dance' que con las formas tradicionales de Soul o R&B.",
+"recommendation": "Considerar reubicación bajo Electronic & Dance o crear un nodo portal (clone) en dicha sección.",
 "confidence": 0.80
 },
 {
 "rule_id": "MVET-L2-007",
 "severity": "WARNING",
-"node_path": "Music > Latin > Regional Mexicano / Texano > Texano",
-"evidence": "Alta redundancia entre Texano y Norteño en el contexto actual de la industria, donde la distinción sonora es mínima para la generación de playlists automatizadas.",
-"recommendation": "Fusionar en un nodo 'Norteño & Texano' o clarificar fronteras si se mantiene la separación.",
+"node_path": "Music > Rock > Roots & Early Rock > Blues Rock",
+"evidence": "Los nodos hermanos 'Texas Blues Rock' y 'Classic Blues Rock' presentan un solapamiento estilístico alto que podría no justificar la separación en la Capa 2.",
+"recommendation": "Fusionar en un único nodo Blues Rock o mover a una capa de mayor profundidad si se requiere granularidad geográfica.",
 "confidence": 0.75
-},
-{
-"rule_id": "MVET-L2-005",
-"severity": "WARNING",
-"node_path": "Music > Rock > Alternative & Indie > Grunge",
-"evidence": "Nodo identificado como hoja (atomic). Subdividir Grunge (ej. Seattle Sound vs Post-Grunge) suele diluir la identidad del género original sin beneficio taxonómico claro.",
-"recommendation": "Marcar formalmente como nodo Atomic.",
-"confidence": 0.95
 }
 ],
 "summary": {
 "total_fatal": 0,
-"total_warning": 5,
-"total_suggestion": 0,
+"total_warning": 4,
+"total_suggestion": 1,
 "decision_recommendation": "PASS_WITH_WARNINGS"
 }
 }

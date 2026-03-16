@@ -421,13 +421,14 @@
           <th>Regla</th>
           <th>FB</th>
           <th>Severidad</th>
+          <th>Resultado</th>
           <th>Nodo</th>
           <th>Evidencia / Recomendación</th>
           <th>Confianza</th>
         </tr>
       </thead>
       <tbody id="tbodyL2">
-        <tr><td colspan="6" class="empty">Sin reporte de Capa 2.</td></tr>
+        <tr><td colspan="7" class="empty">Sin reporte de Capa 2.</td></tr>
       </tbody>
     </table>
   </div>
@@ -476,7 +477,36 @@
     document.getElementById('tbody').innerHTML =
       `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Capa 1".</td></tr>`;
     document.getElementById('tbodyL2').innerHTML =
-      `<tr><td colspan="6" class="empty">Sin procesamiento de Capa 2 en esta sesión. Ejecuta primero la Capa 1.</td></tr>`;
+      `<tr><td colspan="7" class="empty">Sin procesamiento de Capa 2 en esta sesión. Ejecuta primero la Capa 1.</td></tr>`;
+  }
+
+  function getCombinedSummary(layer1, layer2) {
+    const l1 = layer1 && layer1.summary ? layer1.summary : {};
+    const l2 = layer2 && layer2.summary ? layer2.summary : {};
+
+    const totalChecks = (l1.total_checks || 0) + (l2.total_findings || 0);
+    const totalFatal = (l1.total_fatal || 0) + (l2.total_fatal || 0);
+    const totalWarning = (l1.total_warning || 0) + (l2.total_warning || 0);
+    const totalSuggestion = l2.total_suggestion || 0;
+
+    let decision = 'PASS';
+    if (totalFatal > 0) {
+      decision = 'FAIL';
+    } else if (
+      totalWarning > 0 ||
+      totalSuggestion > 0 ||
+      l1.decision === 'PASS_WITH_WARNINGS' ||
+      l2.decision === 'PASS_WITH_WARNINGS'
+    ) {
+      decision = 'PASS_WITH_WARNINGS';
+    }
+
+    return {
+      decision,
+      totalChecks,
+      totalFatal,
+      totalWarning,
+    };
   }
 
   function renderPrompt(prompt, pipeline, layer1) {
@@ -548,34 +578,34 @@
       : 'Diagnóstico: sin detalles adicionales.';
   }
 
-  function render(data) {
-    const s = data.summary || {};
+  function render(layer1, layer2) {
+    const s = getCombinedSummary(layer1, layer2);
 
     // Cards
     document.getElementById('cDecision').innerHTML = badge(s.decision);
-    document.getElementById('cTotal').textContent = s.total_checks ?? '—';
+    document.getElementById('cTotal').textContent = s.totalChecks ?? '—';
 
     const fEl = document.getElementById('cFatal');
-    fEl.textContent = s.total_fatal ?? '—';
-    fEl.className = 'card-val ' + (s.total_fatal > 0 ? 'c-fail' : 'c-pass');
+    fEl.textContent = s.totalFatal ?? '—';
+    fEl.className = 'card-val ' + (s.totalFatal > 0 ? 'c-fail' : 'c-pass');
 
     const wEl = document.getElementById('cWarn');
-    wEl.textContent = s.total_warning ?? '—';
-    wEl.className = 'card-val ' + (s.total_warning > 0 ? 'c-warn' : 'c-pass');
+    wEl.textContent = s.totalWarning ?? '—';
+    wEl.className = 'card-val ' + (s.totalWarning > 0 ? 'c-warn' : 'c-pass');
 
     // Meta
-    const dateRaw = (data.generated_at || '—')
+    const dateRaw = (layer1 && layer1.generated_at ? layer1.generated_at : '—')
       .replace('T', '  ').replace('+00:00', '') + ' UTC';
     document.getElementById('mDate').textContent = dateRaw;
-    document.getElementById('mFile').textContent = data.taxonomy_file || '—';
-    const hash = data.taxonomy_sha256 || '—';
+    document.getElementById('mFile').textContent = (layer1 && layer1.taxonomy_file) || '—';
+    const hash = (layer1 && layer1.taxonomy_sha256) || '—';
     document.getElementById('mHash').textContent = hash !== '—'
       ? hash.slice(0, 16) + '…' : '—';
 
     // Findings
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = '';
-    const findings = data.findings || [];
+    const findings = (layer1 && layer1.findings) || [];
 
     if (!findings.length) {
       tbody.innerHTML = `<tr><td colspan="5" class="empty">Sin hallazgos.</td></tr>`;
@@ -620,7 +650,7 @@
       const reason = pipeline && pipeline.message
         ? pipeline.message
         : 'No hay reporte de Capa 2 disponible todavía.';
-      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 aún no procesada. ${reason}</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="7" class="empty">Capa 2 aún no procesada. ${reason}</td></tr>`;
       return;
     }
 
@@ -628,7 +658,7 @@
       const decision = data.summary && data.summary.decision
         ? data.summary.decision
         : 'N/D';
-      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 ejecutada sin hallazgos. Decisión: ${decision}.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="7" class="empty">Capa 2 ejecutada sin hallazgos. Decisión: ${decision}.</td></tr>`;
       return;
     }
 
@@ -638,6 +668,7 @@
         <td style="font-family:monospace;font-weight:600;white-space:nowrap;font-size:0.82rem">${f.rule_id || '—'}</td>
         <td style="font-size:0.75rem;color:var(--muted)">${f.fb || '—'}</td>
         <td>${pill(f.severity || 'WARNING')}</td>
+        <td style="white-space:nowrap"><span class="st-fail">✗ FAIL</span></td>
         <td style="font-size:0.78rem;line-height:1.45">${f.node_path || '—'}</td>
         <td>
           <div style="font-size:0.75rem;color:var(--muted);line-height:1.5">${f.evidence || '—'}</div>
@@ -659,9 +690,7 @@
     try {
       const res = await fetch('/api/validate/full', { method: 'POST' });
       const data = await res.json();
-      if (data.layer1) {
-        render(data.layer1);
-      }
+      render(data.layer1, data.layer2);
       renderPrompt(data.prompt, data.pipeline, data.layer1);
       renderLayer2(data.layer2, data.pipeline);
       renderPipeline(data.pipeline, data.layer2);
@@ -693,9 +722,7 @@
         body: JSON.stringify({ response_text: responseText }),
       });
       const data = await res.json();
-      if (data.layer1) {
-        render(data.layer1);
-      }
+      render(data.layer1, data.layer2);
       renderPrompt(data.prompt, data.pipeline, data.layer1);
       renderLayer2(data.layer2, data.pipeline);
       renderPipeline(data.pipeline, data.layer2);
