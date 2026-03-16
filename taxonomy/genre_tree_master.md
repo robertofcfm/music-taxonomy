@@ -34,8 +34,6 @@ Music
       Bay Area Thrash
       Groove Thrash
     Alternative Metal
-      Nu Metal
-      Post-Grunge Metal
 
   Pop
     Pop Rock
