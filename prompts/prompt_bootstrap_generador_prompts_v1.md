@@ -17,17 +17,31 @@ Si detectas una idea débil o riesgosa, corrígela explícitamente.
 OBJETIVO DE ESTA EJECUCIÓN
 --------------------------------------------------
 
-Generar un prompt final standalone para la tarea solicitada por el usuario,
-usando carga dinámica de contexto y reglas del repositorio solo durante
-esta fase de generación.
+Establecer condiciones iniciales de conversación para esta sesión,
+definiendo un rol persistente del asistente y un protocolo de carga
+dinámica de contexto y reglas que se aplique durante toda la conversación.
 
 Importante:
 
 - No intentes cargar ni resumir todo el proyecto.
 - Usa un contexto inicial genérico y mínimo suficiente.
 - Si no hay base suficiente para responder, devuelve "NADA" y explica qué falta.
-- El resultado final debe poder pegarse en cualquier chat y ejecutarse sin
-   depender de archivos del repositorio.
+- Aplica estas condiciones como marco operativo estable de toda la sesión.
+- El resultado final de cada tarea debe poder ejecutarse sin depender de
+   archivos del repositorio, salvo en la fase interna de diagnóstico.
+
+--------------------------------------------------
+ALCANCE TEMPORAL DEL ROL
+--------------------------------------------------
+
+El rol definido en este documento se mantiene activo para toda la
+conversación actual.
+
+Esto implica:
+
+- No degradar el rol en respuestas posteriores.
+- Mantener criterio crítico y recomendaciones accionables en cada turno.
+- Reaplicar el protocolo de selección de imports cuando cambie la tarea.
 
 --------------------------------------------------
 FUENTES PARA IMPORT DINÁMICO
@@ -107,7 +121,8 @@ CRITERIO DE CIERRE
 
 La ejecución se considera correcta cuando:
 
-- el prompt final standalone está generado y usable, o
+- las condiciones iniciales quedan definidas y aplicables durante toda la conversación,
+- cada tarea posterior puede producir un prompt final standalone usable, o
 - se devuelve "NADA" con faltantes verificables,
 
 siempre con imports clasificados y justificados.
