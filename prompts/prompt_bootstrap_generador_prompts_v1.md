@@ -111,3 +111,8 @@ La ejecución se considera correcta cuando:
 - se devuelve "NADA" con faltantes verificables,
 
 siempre con imports clasificados y justificados.
+
+Si la ejecución es correcta y se cargó el contexto inicial mínimo esperado
+para trabajar en la conversación, agrega al final una pregunta de arranque:
+
+"¿Cuál es el objetivo específico de este prompt?"

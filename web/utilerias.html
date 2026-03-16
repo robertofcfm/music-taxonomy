@@ -111,7 +111,7 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 900px;
+      min-width: 1180px;
     }
 
     th, td {
@@ -140,6 +140,10 @@
       font: 0.8rem/1.45 Consolas, monospace;
       background: #fff;
       color: var(--text);
+    }
+
+    td textarea.prompt-base {
+      min-height: 200px;
     }
 
     .status {
@@ -173,6 +177,13 @@
     .result-item h3 {
       margin: 0 0 8px;
       font-size: 0.88rem;
+    }
+
+    .result-task {
+      margin: 0 0 8px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.45;
     }
 
     pre {
@@ -210,6 +221,8 @@
 
     <div class="toolbar">
       <button class="btn-main" id="btnProcess">Procesar</button>
+      <button class="btn-alt" id="btnSelectAll">Seleccionar todo</button>
+      <button class="btn-alt" id="btnClearAll">Limpiar seleccion</button>
       <button class="btn-alt" id="btnReload">Recargar lista</button>
     </div>
 
@@ -219,12 +232,15 @@
         <table>
           <thead>
             <tr>
+              <th>Sel.</th>
               <th>ID</th>
+              <th>Archivo</th>
               <th>Nombre</th>
               <th>Tarea</th>
               <th>Objetivo</th>
               <th>Restricciones</th>
               <th>Salida Esperada</th>
+              <th>Prompt Base</th>
               <th>Estado</th>
             </tr>
           </thead>
@@ -256,12 +272,15 @@
       stateItems.forEach((item) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
+          <td><input type="checkbox" data-check-id="${item.id}" ${item.selected ? "checked" : ""}></td>
           <td>${item.id || ""}</td>
+          <td>${item.archivo || ""}</td>
           <td><textarea data-field="nombre" data-id="${item.id}">${item.nombre || ""}</textarea></td>
           <td><textarea data-field="tarea" data-id="${item.id}">${item.tarea || ""}</textarea></td>
           <td><textarea data-field="objetivo" data-id="${item.id}">${item.objetivo || ""}</textarea></td>
           <td><textarea data-field="restricciones" data-id="${item.id}">${item.restricciones || ""}</textarea></td>
           <td><textarea data-field="salida_esperada" data-id="${item.id}">${item.salida_esperada || ""}</textarea></td>
+          <td><textarea class="prompt-base" data-field="prompt_base" data-id="${item.id}" readonly>${item.prompt_base || ""}</textarea></td>
           <td><span class="${statusClass(item.estado)}">${statusLabel(item.estado)}</span></td>
         `;
         tbody.appendChild(tr);
@@ -273,6 +292,14 @@
           const field = el.getAttribute("data-field");
           const target = stateItems.find((x) => x.id === id);
           if (target) target[field] = el.value;
+        });
+      });
+
+      tbody.querySelectorAll("input[data-check-id]").forEach((el) => {
+        el.addEventListener("change", () => {
+          const id = el.getAttribute("data-check-id");
+          const target = stateItems.find((x) => x.id === id);
+          if (target) target.selected = !!el.checked;
         });
       });
     }
@@ -294,6 +321,7 @@
         const recs = (r.recomendaciones || []).map((e) => `- ${e}`).join("\n");
         box.innerHTML = `
           <h3>${r.id} · ${title}</h3>
+          <p class="result-task"><strong>Tarea:</strong> ${r.tarea || "(sin tarea)"}</p>
           <div class="meta">Errores:</div>
           <pre>${errs || "(sin errores)"}</pre>
           <div class="meta">Prompt final:</div>
@@ -308,16 +336,31 @@
     async function loadRequests() {
       const res = await fetch("/api/utilerias/requests");
       const data = await res.json();
-      stateItems = data.items || [];
+      stateItems = (data.items || []).map((item) => ({ ...item, selected: true }));
       renderRows();
       renderResults([]);
     }
 
     async function processRequests() {
+      const selectedItems = stateItems.filter((x) => x.selected);
+      if (selectedItems.length === 0) {
+        renderResults([
+          {
+            id: "sin-seleccion",
+            tarea: "Selecciona al menos un elemento de la lista.",
+            status: "REQUIERE_CORRECCION",
+            prompt_final: "",
+            errores: ["No hay elementos seleccionados para procesar."],
+            recomendaciones: ["Marca uno o varios checkboxes y vuelve a presionar Procesar."],
+          }
+        ]);
+        return;
+      }
+
       const res = await fetch("/api/utilerias/process", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items: stateItems })
+        body: JSON.stringify({ items: selectedItems })
       });
       const data = await res.json();
       const results = data.results || [];
@@ -333,8 +376,15 @@
       renderResults(results);
     }
 
+    function setAllSelections(value) {
+      stateItems = stateItems.map((x) => ({ ...x, selected: value }));
+      renderRows();
+    }
+
     document.getElementById("btnReload").addEventListener("click", loadRequests);
     document.getElementById("btnProcess").addEventListener("click", processRequests);
+    document.getElementById("btnSelectAll").addEventListener("click", () => setAllSelections(true));
+    document.getElementById("btnClearAll").addEventListener("click", () => setAllSelections(false));
 
     loadRequests();
   </script>

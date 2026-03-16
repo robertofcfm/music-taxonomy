@@ -77,10 +77,14 @@ Nombre funcional:
 - Generador de prompts
 
 Ubicación en la app web:
+- home principal: web/home.html
+- ruta home principal: /
+- home actual (dashboard existente): /index.html
 - página: web/utilerias.html
 - ruta: /utilerias
 - API de carga: GET /api/utilerias/requests
 - API de proceso: POST /api/utilerias/process
+- origen de lista: archivos .md dentro de prompts/generadores/
 
 Propósito:
 - mostrar lista de prompts a generar
@@ -88,7 +92,7 @@ Propósito:
 
 Flujo de usuario:
 1. Ver lista de solicitudes de prompt.
-2. Seleccionar una o varias solicitudes.
+2. Marcar con checkbox una o varias solicitudes.
 3. Presionar Procesar.
 4. Recibir para cada solicitud uno de dos resultados:
    - PROMPT_OK: prompt final standalone listo para usar.
@@ -128,7 +132,7 @@ Esto permite que la página renderice una tabla clara y accionable.
 
 Prompts activos:
 - prompts/prompt_bootstrap_generador_prompts_v1.md
-- prompts/prompt_operativo_base.md
+- prompts/generadores/prompt_operativo_base.md
 
 Documentación de soporte:
 - docs/context/AI_PROMPT_SYSTEM_CONTEXT.md

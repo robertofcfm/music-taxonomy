@@ -31,9 +31,11 @@ LAYER2_PROMPT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
 LAYER1_REPORT_MD = REPORTS_DIR / "validate_master_report.md"
 LAYER1_RUN_METADATA = REPORTS_DIR / "validate_master_run_metadata.json"
 LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
+HOME_HTML_FILE = REPO_ROOT / "web" / "home.html"
 HTML_FILE = REPO_ROOT / "web" / "index.html"
 UTILERIAS_HTML_FILE = REPO_ROOT / "web" / "utilerias.html"
 PROMPTS_DIR = REPO_ROOT / "prompts"
+GENERADORES_DIR = PROMPTS_DIR / "generadores"
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -94,6 +96,14 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
+    def _send_home_html(self) -> None:
+        content = HOME_HTML_FILE.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(content)))
+        self.end_headers()
+        self.wfile.write(content)
+
     def _send_utilerias_html(self) -> None:
         content = UTILERIAS_HTML_FILE.read_bytes()
         self.send_response(200)
@@ -104,37 +114,82 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
     @staticmethod
     def _prompt_generation_requests_seed() -> list[dict]:
-        return [
-            {
-                "id": "req-001",
-                "nombre": "Generar prompt para depurar estructura de taxonomía",
-                "tarea": "Analizar inconsistencias de estructura taxonómica y proponer correcciones priorizadas.",
-                "objetivo": "Obtener recomendaciones accionables con justificación técnica.",
-                "restricciones": "No modificar archivos automáticamente; reportar riesgos de impacto.",
-                "salida_esperada": "Lista priorizada de hallazgos y plan de corrección.",
-                "estado": "pendiente",
-            },
-            {
-                "id": "req-002",
-                "nombre": "Generar prompt para revisar naming de géneros",
-                "tarea": "Revisar convenciones de nombres de géneros y detectar ambigüedades.",
-                "objetivo": "Reducir inconsistencias de etiquetado en nuevas propuestas.",
-                "restricciones": "No aprobar cambios sin evidencia y ejemplos.",
-                "salida_esperada": "Checklist de mejoras y casos conflictivos.",
-                "estado": "pendiente",
-            },
-        ]
+        items: list[dict] = []
+        if not GENERADORES_DIR.exists():
+            return items
+
+        paths = sorted(path for path in GENERADORES_DIR.glob("*.md") if path.name.lower() != "readme.md")
+        for index, path in enumerate(paths, start=1):
+            text = path.read_text(encoding="utf-8").strip()
+            rel_path = f"prompts/generadores/{path.name}"
+            nombre = Handler._extract_main_title(text) or path.stem.replace("_", " ").strip().title()
+            tarea = Handler._extract_section_value(text, "TAREA", "Definir tarea operativa a ejecutar.")
+            objetivo = Handler._extract_section_value(text, "OBJETIVO_OPERATIVO", "Definir objetivo operativo de la ejecución.")
+            restricciones = Handler._extract_section_value(text, "RESTRICCIONES", "No inventar datos; solicitar faltantes críticos.")
+            salida_esperada = Handler._extract_section_value(text, "SALIDA_ESPERADA", "Resultado final utilizable sin placeholders.")
+
+            items.append(
+                {
+                    "id": f"req-gen-{index:03d}",
+                    "nombre": nombre,
+                    "archivo": rel_path,
+                    "tarea": tarea,
+                    "objetivo": objetivo,
+                    "restricciones": restricciones,
+                    "salida_esperada": salida_esperada,
+                    "estado": "pendiente",
+                    "prompt_base": text,
+                }
+            )
+
+        return items
 
     @staticmethod
     def _list_prompt_templates() -> list[str]:
         templates: list[str] = []
-        if not PROMPTS_DIR.exists():
+        if not GENERADORES_DIR.exists():
             return templates
-        for path in sorted(PROMPTS_DIR.glob("*.md")):
+        for path in sorted(GENERADORES_DIR.glob("*.md")):
             if path.name.lower() == "readme.md":
                 continue
-            templates.append(f"prompts/{path.name}")
+            templates.append(f"prompts/generadores/{path.name}")
         return templates
+
+    @staticmethod
+    def _extract_main_title(text: str) -> str:
+        for raw_line in text.splitlines():
+            line = raw_line.strip()
+            if line.startswith("#"):
+                return line.lstrip("#").strip()
+        return ""
+
+    @staticmethod
+    def _extract_section_value(text: str, section_name: str, default: str) -> str:
+        lines = text.splitlines()
+        marker = f"[{section_name}]"
+        inside = False
+        captured: list[str] = []
+
+        for raw_line in lines:
+            line = raw_line.strip()
+            if line == marker:
+                inside = True
+                continue
+            if inside and line.startswith("[") and line.endswith("]"):
+                break
+            if not inside:
+                continue
+            if not line or set(line) == {"-"}:
+                continue
+            cleaned = line
+            if cleaned.startswith("- "):
+                cleaned = cleaned[2:].strip()
+            if cleaned:
+                captured.append(cleaned)
+
+        if not captured:
+            return default
+        return " ".join(captured)
 
     @staticmethod
     def _validate_prompt_request(item: dict) -> list[str]:
@@ -154,13 +209,14 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
     @staticmethod
     def _build_standalone_prompt(item: dict) -> str:
+        base_prompt = str(item.get("prompt_base", "")).strip()
         nombre = str(item.get("nombre", "Solicitud sin nombre")).strip()
         tarea = str(item.get("tarea", "")).strip()
         objetivo = str(item.get("objetivo", "")).strip()
         restricciones = str(item.get("restricciones", "Sin restricciones adicionales.")).strip()
         salida_esperada = str(item.get("salida_esperada", "")).strip()
 
-        return (
+        prompt_generado = (
             "Actua como especialista senior en la tarea descrita.\n"
             "No busques complacer ni confirmar supuestos: entrega recomendaciones "
             "reales, accionables y justificadas, incluso si contradicen la propuesta inicial.\n\n"
@@ -185,6 +241,21 @@ class Handler(http.server.BaseHTTPRequestHandler):
             "[CRITERIO_DE_CIERRE]\n"
             f"- La tarea se considera completa cuando la salida cumple: {salida_esperada}."
         )
+
+        if base_prompt:
+            return (
+                f"{base_prompt}\n\n"
+                "--------------------------------------------------\n"
+                "SOLICITUD ACTIVA\n"
+                "--------------------------------------------------\n"
+                f"Nombre: {nombre}\n"
+                f"Tarea: {tarea}\n"
+                f"Objetivo: {objetivo}\n"
+                f"Restricciones: {restricciones}\n"
+                f"Salida esperada: {salida_esperada}\n"
+            )
+
+        return prompt_generado
 
     @staticmethod
     def _load_layer1_report() -> dict | None:
@@ -241,7 +312,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
         }
 
     def do_GET(self) -> None:
-        if self.path in ("/", "/index.html"):
+        if self.path in ("/", "/home", "/home.html"):
+            if not HOME_HTML_FILE.exists():
+                self._send_json({"error": "No existe web/home.html."}, 404)
+                return
+            self._send_home_html()
+
+        elif self.path == "/index.html":
             self._send_html()
 
         elif self.path in ("/utilerias", "/utilerias.html"):
@@ -343,6 +420,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     results.append(
                         {
                             "id": req_id,
+                            "tarea": str(item.get("tarea", "")).strip(),
                             "status": "REQUIERE_CORRECCION",
                             "prompt_final": "",
                             "errores": errors,
@@ -357,6 +435,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     results.append(
                         {
                             "id": req_id,
+                            "tarea": str(item.get("tarea", "")).strip(),
                             "status": "REQUIERE_CORRECCION",
                             "prompt_final": "",
                             "errores": ["El prompt contiene placeholders pendientes."],
@@ -368,6 +447,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 results.append(
                     {
                         "id": req_id,
+                        "tarea": str(item.get("tarea", "")).strip(),
                         "status": "PROMPT_OK",
                         "prompt_final": prompt_final,
                         "errores": [],

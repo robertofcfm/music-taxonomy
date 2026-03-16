@@ -17,7 +17,7 @@ Prompt generador recomendado:
 - prompt_bootstrap_generador_prompts_v1.md
 
 Prompt final standalone base:
-- prompt_operativo_base.md
+- generadores/prompt_operativo_base.md
 
 Nota:
 - El diagnostico de imports se ejecuta en el prompt generador.

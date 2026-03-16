@@ -117,7 +117,7 @@ Prompt bootstrap recomendado:
 
 Prompt final standalone base recomendado:
 
-- prompts/prompt_operativo_base.md
+- prompts/generadores/prompt_operativo_base.md
 
 Este enfoque usa dos fases. El generador debe construir el prompt final
 cargando de forma
