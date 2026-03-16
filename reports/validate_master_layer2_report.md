@@ -1,6 +1,6 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T04:02:16+00:00
+- Fecha: 2026-03-16T04:07:46+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
 - WARNING: 5
@@ -9,31 +9,31 @@
 ## Hallazgos
 
 ### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Latin > Regional Mexicano / Texano > Norteño
-- Evidencia: La distinción entre 'Norteño Clásico' y 'Norteño Moderno' es puramente temporal/generacional; musicalmente comparten la misma estructura de conjunto (acordeón/bajo sexto), lo que genera playlists indistinguibles en instrumentación.
-- Recomendación: Considerar la unificación en un nodo atómico 'Norteño' o definir criterios de instrumentación específicos para 'Moderno' (ej. inclusión de batería/saxofón).
-- Confianza: 0.85
-
-### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Latin > Regional Mexicano / Texano > Texano
-- Evidencia: Al igual que en Norteño, la división 'Clásico' vs 'Moderno' en el género Texano produce un solapamiento musical crítico en una capa de profundidad 4.
-- Recomendación: Fusión de nodos bajo el nodo padre 'Texano' para mantener la cohesión de la playlist.
+- Nodo: Music > Pop > Synth & Electronic Pop > New Wave
+- Evidencia: New Wave es un término paraguas que históricamente precede y engloba gran parte del Synth Pop, pero en esta estructura se presenta como un subgénero hijo de Synth & Electronic Pop, lo que genera confusión en la distinción de playlists.
+- Recomendación: Evaluar si New Wave debe ser hermano de Synth & Electronic Pop o si debe contenerlo, dada su amplitud histórica y musical.
 - Confianza: 0.85
 
 ### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Pop > Synth & Electronic Pop > Synth Pop > Electro Pop
-- Evidencia: Redundancia potencial con 'Electronic & Dance > House > Electro House' en tracks de transición, aunque la estructura vocal de Pop suele ser el diferenciador.
-- Recomendación: Confirmar si 'Electro Pop' debe permanecer en Pop o si su estructura rítmica justifica una relación con Electronic & Dance.
-- Confianza: 0.70
-
-### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Classic Rock > Hard Rock > Hard Rock (General)
-- Evidencia: El uso de '(General)' indica un nodo de respaldo que, por definición, no es atómico y sugiere una clasificación incompleta de los subestilos de Hard Rock presentes.
-- Recomendación: Renombrar a 'Hard Rock' y marcar como Nodo General sin hijos, evitando la redundancia con el padre.
+- Nodo: Music > Rock > Classic Rock
+- Evidencia: Classic Rock no es un género musical per se, sino un formato radial. Existe un solapamiento masivo con Rock & Roll, Blues Rock y Hard Rock que ya cuelgan del mismo nivel.
+- Recomendación: Considerar a Classic Rock como un nodo organizador o etiqueta, ya que su contenido musical es redundante con los nodos hermanos específicos.
 - Confianza: 0.90
 
 ### MVET-L2-006 [FB-06] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Post Punk > New Wave
-- Evidencia: El New Wave, aunque comparte raíces con el Post Punk, tiene una estética sonora (sintetizadores, producción brillante) que a menudo lo acerca más a 'Synth & Electronic Pop'.
-- Recomendación: Evaluar si New Wave debe ser un nodo hermano de Post Punk o un nodo clonado desde el área de Pop.
+- Nodo: Music > Electronic & Dance > Disco
+- Evidencia: Musicalmente, el Disco es el precursor directo del House. Aunque se clasifica como Electronic & Dance, su estructura rítmica y origen lo vinculan estrechamente con Soul / Funk / R&B.
+- Recomendación: Evaluar la creación de un nodo clone en Soul / Funk / R&B o reubicar si la intención es priorizar el origen estilístico sobre el entorno de consumo (Dance).
+- Confianza: 0.80
+
+### MVET-L2-007 [FB-06] - WARNING
+- Nodo: Music > Latin > Regional Mexicano / Texano > Texano
+- Evidencia: Alta redundancia entre Texano y Norteño en el contexto actual de la industria, donde la distinción sonora es mínima para la generación de playlists automatizadas.
+- Recomendación: Fusionar en un nodo 'Norteño & Texano' o clarificar fronteras si se mantiene la separación.
 - Confianza: 0.75
+
+### MVET-L2-005 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Grunge
+- Evidencia: Nodo identificado como hoja (atomic). Subdividir Grunge (ej. Seattle Sound vs Post-Grunge) suele diluir la identidad del género original sin beneficio taxonómico claro.
+- Recomendación: Marcar formalmente como nodo Atomic.
+- Confianza: 0.95
