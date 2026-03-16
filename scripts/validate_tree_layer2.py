@@ -122,7 +122,8 @@ MVET_L2_RULES: list[dict] = [
         "description": "Violación semántica de separación Latin y no-Latin.",
         "check": (
             "Detecta cualquier evidencia de mezcla de géneros Latin y "
-            "no-Latin que contraríe la separación de dominio obligatoria."
+            "no-Latin que contraríe la separación de dominio obligatoria, "
+            "excluyendo nodos clone."
         ),
     },
 ]

@@ -407,7 +407,7 @@ CAPA 2 — Reglas semánticas (IA)
   FB: FB-04
   SEVERITY: FATAL
   DESCRIPTION: Violación semántica de separación Latin y no-Latin.
-  CHECK: Hallazgo explícito de mezcla de dominios incompatibles.
+  CHECK: Hallazgo explícito de mezcla de dominios incompatibles, excluyendo nodos clone.
 
 Reglas condicionales (activas en post-cambio y pre-release):
 

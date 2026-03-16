@@ -332,14 +332,14 @@
   <div class="info">
     <h2>Validación de Taxonomía Maestra</h2>
     <p>
-      Ejecuta la Capa 1 y genera el prompt manual de Capa 2 sobre
+      Ejecuta la validación determinista de Capa 1 y genera el prompt manual de Capa 2 sobre
       <code>taxonomy/genre_tree_master.md</code>.
-      Luego copia el prompt a una IA externa, pega aquí el JSON de respuesta y el sistema generará el mismo reporte estructurado de Capa 2.
+      Luego copia el prompt a una IA externa, pega aquí el JSON de respuesta y el sistema generará el reporte estructurado de Capa 2.
     </p>
   </div>
   <button class="btn btn-primary" id="btnRun" onclick="runValidation()">
     <span class="spinner" id="spinner"></span>
-    <span id="btnLabel">Ejecutar Validación (L1 + Prompt L2)</span>
+    <span id="btnLabel">Ejecutar Capa 1 y Generar Prompt L2</span>
   </button>
 </div>
 
@@ -370,14 +370,14 @@
     <span><strong>Archivo</strong> <span id="mFile">—</span></span>
     <span><strong>SHA256</strong> <span id="mHash">—</span></span>
   </div>
-  <div class="pipeline-note" id="pipelineNote">Estado pipeline: —</div>
+  <div class="pipeline-note" id="pipelineNote">Estado del flujo: —</div>
   <div class="pipeline-diag" id="pipelineDiag">Diagnóstico: —</div>
 
   <div class="section-label" style="margin-top:1.2rem">Intercambio manual Capa 2</div>
   <div class="manual-panel">
     <div class="manual-card">
       <h3>Prompt generado</h3>
-      <p>Copia este contenido y pégalo en la IA que usarás para la validación semántica.</p>
+      <p>Copia este contenido y pégalo en la IA que usarás para la validación semántica de Capa 2.</p>
       <div class="manual-status" id="promptStatus">Prompt pendiente de generación.</div>
       <textarea id="promptText" readonly placeholder="Aquí aparecerá el prompt recién generado."></textarea>
       <div class="manual-actions">
@@ -386,11 +386,11 @@
     </div>
     <div class="manual-card">
       <h3>Respuesta JSON de la IA</h3>
-      <p>Pega el JSON exacto devuelto por la IA. Se guardará en <code>reports/validate_master_layer2_response.json</code> y luego se procesará.</p>
+      <p>Pega el JSON exacto devuelto por la IA. Se guardará en <code>reports/validate_master_layer2_response.json</code> y luego se procesará para generar el reporte de Capa 2.</p>
       <div class="manual-status" id="responseStatus">Pega aquí el JSON cuando la IA responda.</div>
       <textarea id="responseText" placeholder="Pega aquí el JSON de respuesta..."></textarea>
       <div class="manual-actions">
-        <button class="btn btn-primary" id="btnApplyL2" onclick="applyLayer2Response()" disabled>Guardar y Procesar Capa 2</button>
+        <button class="btn btn-primary" id="btnApplyL2" onclick="applyLayer2Response()" disabled>Guardar JSON y Procesar Capa 2</button>
       </div>
     </div>
   </div>
@@ -463,8 +463,8 @@
     document.getElementById('mDate').textContent = '—';
     document.getElementById('mFile').textContent = '—';
     document.getElementById('mHash').textContent = '—';
-    document.getElementById('pipelineNote').textContent = 'Estado pipeline: esperando ejecución manual.';
-    document.getElementById('pipelineDiag').textContent = 'Diagnóstico: pendiente de ejecución.';
+    document.getElementById('pipelineNote').textContent = 'Estado del flujo: listo para ejecutar Capa 1.';
+    document.getElementById('pipelineDiag').textContent = 'Diagnóstico: sin ejecución todavía.';
     document.getElementById('promptStatus').textContent = 'Prompt pendiente de generación.';
     document.getElementById('promptText').value = '';
     document.getElementById('responseStatus').textContent = 'Pega aquí el JSON cuando la IA responda.';
@@ -473,9 +473,9 @@
     document.getElementById('btnApplyL2').disabled = true;
 
     document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
+      `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Capa 1 y Generar Prompt L2".</td></tr>`;
     document.getElementById('tbodyL2').innerHTML =
-      `<tr><td colspan="6" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
+      `<tr><td colspan="6" class="empty">Sin procesamiento de Capa 2 en esta sesión. Ejecuta primero la Capa 1.</td></tr>`;
   }
 
   function renderPrompt(prompt, pipeline, layer1) {
@@ -500,8 +500,8 @@
     const canApply = promptExists && layer1Decision !== 'FAIL';
     applyBtn.disabled = !canApply;
     responseStatus.textContent = canApply
-      ? 'Pega el JSON y ejecuta el procesamiento de Capa 2.'
-      : 'La Capa 2 se habilita cuando exista un prompt válido y la Capa 1 no esté en FAIL.';
+      ? 'Pega el JSON y presiona "Guardar JSON y Procesar Capa 2".'
+      : 'La Capa 2 solo se habilita cuando exista un prompt válido y la Capa 1 no esté en FAIL.';
   }
 
   function renderPipeline(pipeline, layer2) {
@@ -514,7 +514,7 @@
     const ap = d.layer2_apply || {};
     const l2Decision = layer2 && layer2.summary ? layer2.summary.decision : null;
 
-    note.textContent = 'Estado pipeline: ' + (p.message || 'Sin detalle')
+    note.textContent = 'Estado del flujo: ' + (p.message || 'Sin detalle')
       + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
 
     const lines = [];
@@ -618,8 +618,8 @@
     if (!data) {
       const reason = pipeline && pipeline.message
         ? pipeline.message
-        : 'No se generó reporte de Capa 2 en esta ejecución.';
-      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 no ejecutada. ${reason}</td></tr>`;
+        : 'No hay reporte de Capa 2 disponible todavía.';
+      tbody.innerHTML = `<tr><td colspan="6" class="empty">Capa 2 aún no procesada. ${reason}</td></tr>`;
       return;
     }
 
@@ -670,7 +670,7 @@
     } finally {
       btn.disabled = false;
       spinner.style.display = 'none';
-      label.textContent = 'Ejecutar Validación (L1 + Prompt L2)';
+      label.textContent = 'Ejecutar Capa 1 y Generar Prompt L2';
     }
   }
 
