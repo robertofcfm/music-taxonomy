@@ -1,45 +1,69 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T04:52:18+00:00
+- Fecha: 2026-03-16T05:17:32+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
-- WARNING: 6
-- SUGGESTION: 0
+- WARNING: 7
+- SUGGESTION: 3
 
 ## Hallazgos
 
 ### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Music > Pop > Pop Rock
-- Evidencia: Pop Rock shares strong musical overlap with Rock-derived structures (electric guitar dominance, verse-chorus rock songwriting, rock rhythm section). Playlists combining Pop Rock with mainstream Rock nodes (e.g., Alternative Rock, Rock & Roll) could be difficult to distinguish stylistically from Pop playlists depending on artist selection.
-- Recomendación: Review whether Pop Rock is best treated under Pop or whether it structurally aligns better with the Rock domain while maintaining pop-influenced characteristics.
-- Confianza: 0.71
+- Nodo: Music > Pop > Pop Rock > Alternative Pop Rock / Alternative Pop
+- Evidencia: Alternative Pop Rock y Alternative Pop comparten un espacio estilístico muy cercano. Ambos suelen incluir estructuras pop con estética alternativa/indie y producción contemporánea, lo que podría generar playlists con alta superposición sonora y difícil distinción auditiva clara.
+- Recomendación: Revisar la definición musical operativa de ambos nodos para asegurar criterios diferenciadores claros o documentar explícitamente el límite entre ambos estilos.
+- Confianza: 0.78
+
+### MVET-L2-001 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Indie Rock > Garage Rock / Brit Pop
+- Evidencia: Garage Rock y Brit Pop aparecen como hermanos bajo Indie Rock. Aunque ambos pueden intersectar con escenas indie, Garage Rock es históricamente un revival del proto-punk y rock crudo de los 60s, mientras que Brit Pop es un movimiento británico con estética pop-rock melódica. La cercanía estructural podría sugerir mayor similitud de la que realmente existe.
+- Recomendación: Revisar si la proximidad estructural comunica adecuadamente su relación musical o si el posicionamiento requiere documentación aclaratoria en reglas curatoriales.
+- Confianza: 0.66
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Latin > Regional Mexicano / Texano
-- Evidencia: The parent node aggregates multiple stylistically distinct traditions (Norteño, Texano, Banda, Ranchero). These styles differ significantly in instrumentation (accordion vs brass banda ensembles), rhythmic patterns, and production traditions, increasing the probability that playlists generated from the parent node alone would be stylistically inconsistent.
-- Recomendación: Encourage classification at the child level when possible and treat the parent primarily as a structural grouping rather than a playlistable genre.
-- Confianza: 0.84
+- Nodo: Music > Latin > Tradicional Latino
+- Evidencia: El nodo Tradicional Latino es extremadamente amplio y potencialmente puede contener múltiples tradiciones musicales muy diferentes (p. ej., trova, música andina, bolero tradicional, música campesina, etc.). Esta amplitud puede producir playlists estilísticamente inconsistentes.
+- Recomendación: Evaluar si el nodo funciona únicamente como contenedor general o si requiere reglas curatoriales claras para mantener coherencia musical dentro de playlists.
+- Confianza: 0.82
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Latin > Regional Colombiano > Cumbia Colombiana
-- Evidencia: The node includes both Cumbia Clásica and Cumbia Moderna. These represent historically and sonically different production eras (traditional folkloric instrumentation vs modern electronic or hybrid arrangements), which may produce mixed playlist cohesion when aggregated.
-- Recomendación: Use the node primarily as a navigational parent and prefer leaf-level classification when generating playlists.
-- Confianza: 0.79
-
-### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Instrumental > Score
-- Evidencia: The distinction between Instrumental and Score may be ambiguous in practice. Film scores, game scores, and orchestral soundtrack works are inherently instrumental, meaning some recordings could logically belong to both categories.
-- Recomendación: Clarify the semantic distinction between general Instrumental music and narrative audiovisual scoring contexts to reduce classification overlap.
+- Nodo: Music > Folk & Roots
+- Evidencia: El nodo Folk & Roots aparece sin subgéneros definidos. Dado que el dominio folk incluye múltiples tradiciones estilísticamente distintas, el nodo podría producir playlists con gran variabilidad estilística.
+- Recomendación: Definir criterios curatoriales o subdivisiones si el volumen de contenido crece y la coherencia musical comienza a degradarse.
 - Confianza: 0.74
 
-### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Grunge
-- Evidencia: Grunge is marked as Atomic. Historically the genre already represents a highly specific stylistic moment (late 1980s–1990s Seattle-derived alternative rock). Further subdivision would likely be stylistically artificial.
-- Recomendación: The atomic designation appears reasonable; confirm that no further structural subdivision is planned unless supported by clear musical taxonomy distinctions.
-- Confianza: 0.83
+### MVET-L2-003 [FB-05] - WARNING
+- Nodo: Music > Pop > Synth & Electronic Pop > Electronic Dream Pop / Music > Rock > Alternative & Indie > Dream Pop
+- Evidencia: Electronic Dream Pop y Dream Pop comparten una base estilística muy cercana. Dream Pop históricamente ya incorpora producción electrónica y atmósferas sintetizadas, por lo que ambos nodos podrían solaparse conceptualmente.
+- Recomendación: Documentar si Electronic Dream Pop se define por una producción predominantemente electrónica o considerar revisar el grado de separación conceptual entre ambos nodos.
+- Confianza: 0.81
+
+### MVET-L2-004 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Post Punk
+- Evidencia: Post Punk contiene múltiples subgéneros (New Wave, Gothic Rock, Coldwave, Darkwave) que históricamente se desarrollaron como escenas parcialmente independientes. La agrupación puede generar una subrama amplia con fronteras estilísticas complejas.
+- Recomendación: Monitorear si el número de hijos sigue creciendo y evaluar si la granularidad sigue aportando valor musical o si requiere reorganización estructural futura.
+- Confianza: 0.69
 
 ### MVET-L2-006 [FB-06] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Post Punk
-- Evidencia: Post Punk historically precedes and partially influences Alternative Rock and Indie Rock rather than being strictly a subtype of them. Structurally it is often treated as a parallel rock movement rather than a descendant category.
-- Recomendación: Review whether Post Punk should remain under Alternative & Indie or be positioned as a sibling movement within Rock to better reflect historical lineage.
-- Confianza: 0.68
+- Nodo: Music > Metal > Alternative Metal > Post-Grunge Metal
+- Evidencia: Post-Grunge Metal mezcla dos dominios estilísticos distintos: Post-Grunge suele derivar del rock alternativo/grunge, mientras que Alternative Metal pertenece al dominio metal. La denominación sugiere una posible zona híbrida que podría encajar también dentro de la rama grunge/post-grunge del rock.
+- Recomendación: Revisar si el nodo está definido como subestilo metalizado de post-grunge o si su ubicación estructural debe justificarse explícitamente dentro del dominio metal.
+- Confianza: 0.71
+
+### MVET-L2-005 [FB-05] - SUGGESTION
+- Nodo: Music > Rock > Classic Rock > Hard Rock > Hard Rock (General)
+- Evidencia: Hard Rock (General) funciona como nodo hoja de respaldo dentro de Hard Rock cuando un estilo no encaja en Glam Metal o Arena Rock. Subdividirlo más probablemente generaría categorías artificiales.
+- Recomendación: Considerar este nodo como candidato a nodo atómico de cierre dentro de esta subrama salvo que aparezcan subestilos bien definidos.
+- Confianza: 0.88
+
+### MVET-L2-005 [FB-05] - SUGGESTION
+- Nodo: Music > Metal > Thrash Metal > Bay Area Thrash
+- Evidencia: Bay Area Thrash representa una escena histórica específica con identidad clara. Una subdivisión adicional probablemente sería artificial o basada en bandas más que en estilos.
+- Recomendación: Tratar el nodo como hoja atómica dentro del árbol salvo que exista una distinción musical clara adicional.
+- Confianza: 0.86
+
+### MVET-L2-005 [FB-05] - SUGGESTION
+- Nodo: Music > Latin > Regional Mexicano / Texano > Banda
+- Evidencia: Banda es un estilo regional bien definido dentro de la música mexicana con identidad instrumental clara. Subdividirlo más podría degradar la coherencia estilística.
+- Recomendación: Considerar el nodo como candidato a nodo atómico a menos que existan subestilos ampliamente reconocidos.
+- Confianza: 0.83

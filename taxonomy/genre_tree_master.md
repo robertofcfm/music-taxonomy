@@ -6,8 +6,6 @@ Music
   Rock
     Alternative & Indie
       Indie Rock
-        Garage Rock
-        Brit Pop
       Grunge
         Seattle Grunge
         Post-Grunge
@@ -23,31 +21,23 @@ Music
       Blues Rock
         Texas Blues Rock
         Classic Blues Rock
-      Hard Rock
-        Glam Metal
-        Arena Rock
-        Hard Rock (General)
+      Hard Rock (Atomic)
 
   Metal
     Heavy Metal
     Thrash Metal
-      Bay Area Thrash
-      Groove Thrash
     Alternative Metal
       Nu Metal
-      Post-Grunge Metal
 
   Pop
     Pop Rock
       Alternative Pop Rock
       Power Pop
-      Alternative Pop
 
     Synth & Electronic Pop
       Synth Pop
         New Romantic
         Electro Pop
-      Electronic Dream Pop
 
   Electronic & Dance
     Disco
@@ -68,7 +58,7 @@ Music
     Regional Mexicano / Texano
       Norteño
       Texano
-      Banda
+      Banda (Atomic)
       Ranchero
 
     Regional Colombiano
@@ -76,10 +66,6 @@ Music
         Cumbia Clásica
         Cumbia Moderna
       Vallenato
-
-    Tradicional Latino
-
-  Folk & Roots
 
   Soul / Funk / R&B
     Soul
