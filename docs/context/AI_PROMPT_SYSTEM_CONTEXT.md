@@ -126,7 +126,7 @@ consistencia normativa, no en cadenas de herencia.
 
 Se recomienda dividir reglas y contexto en cuatro capas.
 
-CAPA A — CORE OBLIGATORIO
+CAPA A — CORE REQUERIDO
 
 Se recomienda cargar.
 
@@ -343,7 +343,7 @@ plantilla gigante. Eso termina degradando precisión, foco y obediencia.
 
 Lo correcto es:
 
-- un núcleo obligatorio pequeño
+- un núcleo requerido pequeño
 - módulos especializados por tarea
 - consistencia normativa sin conflictos
 - criterio formal de inclusión y exclusión
