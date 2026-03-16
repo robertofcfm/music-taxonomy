@@ -80,6 +80,20 @@ Restricción:
 - los templates hijos agregan definiciones, no redefinen
   el flujo estructural del padre
 
+La herencia puede tener múltiples niveles.
+
+Ejemplo válido:
+
+- nivel 1: template padre base
+- nivel 2: template hijo por tipo
+- nivel 3: template hijo especializado por proceso
+- nivel 4: instancia concreta final
+
+La restricción es linealidad, no profundidad.
+
+Por tanto, sí se permiten templates de 3er o 4to nivel,
+siempre que cada nodo tenga un solo padre directo.
+
 El padre define el flujo general y los contratos mínimos.
 
 El hijo especializa definiciones usando el marcador:
@@ -97,6 +111,12 @@ Por tanto:
 - AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md es un hijo
 - AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md es un hijo
 
+Ejemplo de niveles posteriores permitidos:
+
+- un template de validación puede heredar de TIPO_TAREA
+- un template de validación del árbol maestro puede heredar
+  del template de validación
+
 Para cada tipo de trabajo se genera una INSTANCIA CONCRETA:
 un documento específico con los imports ya resueltos,
 los archivos seleccionados y el objetivo definido.
@@ -106,6 +126,24 @@ implementa todos los contratos abstractos.
 
 Una instancia concreta solo se considera LISTA PARA USO
 FINAL si no conserva marcadores abstractos pendientes.
+
+RESOLUCIÓN ASCENDENTE OBLIGATORIA
+
+La concreción no se valida solo contra el último padre directo.
+
+Debe resolverse toda la cadena de abstracción hacia arriba
+hasta el ancestro raíz.
+
+Esto implica:
+
+- resolver los contratos del template actual
+- resolver los contratos heredados del padre directo
+- resolver los contratos heredados de abuelos y niveles superiores
+- confirmar que ningún marcador abstracto permanezca en ningún nivel
+
+Si un template de nivel 3 implementa su propio contenido pero deja
+sin resolver un contrato heredado desde nivel 1, entonces sigue
+siendo ABSTRACTO.
 
 Si todavía contiene bloques como:
 
@@ -498,9 +536,24 @@ Antes de considerar lista una instancia concreta, verificar:
 - [TIPO_TEMPLATE] fue resuelto con un valor válido
 - todos los imports requeridos fueron resueltos
 - la validación de cobertura fue ejecutada y reportada
+- todos los contratos heredados de niveles superiores fueron resueltos
+- la cadena completa de herencia fue recorrida hasta el padre raíz
 
 Si alguna condición falla, el documento sigue siendo ABSTRACTO
 o PARCIAL y no debe tratarse como prompt final.
+
+PROTOCOLO DE RESOLUCIÓN DE HERENCIA
+
+Para cada instancia o template derivado, aplicar este orden:
+
+1. Identificar el padre directo.
+2. Recorrer la cadena de padres hasta el template raíz.
+3. Reunir todos los marcadores abstractos heredados.
+4. Resolverlos desde el nivel más alto hacia el más específico.
+5. Verificar que el documento final no conserve contratos pendientes.
+
+Si la cadena de herencia no puede reconstruirse con claridad,
+el documento no debe considerarse final.
 
 --------------------------------------------------
 8. PLANTILLA MÍNIMA RECOMENDADA PARA ESTE PROYECTO

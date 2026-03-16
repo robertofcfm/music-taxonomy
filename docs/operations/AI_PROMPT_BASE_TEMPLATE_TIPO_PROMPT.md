@@ -48,6 +48,9 @@ Reglas:
 - no redefine secciones estructurales del padre
 - no agrega un segundo padre
 - solo especializa definiciones dependientes de [TIPO_TEMPLATE]
+- puede actuar como padre de un template más específico
+- cualquier nieto debe resolver también los contratos heredados
+  desde AI_PROMPT_BASE_TEMPLATE.md
 
 --------------------------------------------------
 3. DEFINICIONES ESPECIALIZADAS
