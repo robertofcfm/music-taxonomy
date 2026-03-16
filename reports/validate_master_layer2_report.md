@@ -1,6 +1,6 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T04:44:52+00:00
+- Fecha: 2026-03-16T04:52:18+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
 - WARNING: 6
@@ -9,37 +9,37 @@
 ## Hallazgos
 
 ### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Music > Soul / Funk / R&B
-- Evidencia: Los nodos hermanos Soul y Rhythm & Blues presentan una frontera estilística difusa en muchas discografías modernas. Gran parte del catálogo contemporáneo clasificado como Soul también se etiqueta como R&B, lo que puede producir playlists con contenido altamente indistinguible.
-- Recomendación: Revisar la distinción curatorial entre Soul y Rhythm & Blues para asegurar criterios claros de clasificación (era, instrumentación, tradición estilística). Si no se pueden mantener playlists claramente diferenciadas, considerar redefinir criterios editoriales o documentar explícitamente el límite semántico.
-- Confianza: 0.86
+- Nodo: Music > Pop > Pop Rock
+- Evidencia: Pop Rock shares strong musical overlap with Rock-derived structures (electric guitar dominance, verse-chorus rock songwriting, rock rhythm section). Playlists combining Pop Rock with mainstream Rock nodes (e.g., Alternative Rock, Rock & Roll) could be difficult to distinguish stylistically from Pop playlists depending on artist selection.
+- Recomendación: Review whether Pop Rock is best treated under Pop or whether it structurally aligns better with the Rock domain while maintaining pop-influenced characteristics.
+- Confianza: 0.71
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Instrumental / Score
-- Evidencia: El nodo mezcla potencialmente música instrumental genérica con música de score cinematográfico o de videojuegos. Estos dominios pueden producir playlists con objetivos musicales distintos (ambiental, cinematográfico, orquestal, minimalista, etc.).
-- Recomendación: Evaluar si el nodo debe representar exclusivamente música de score o si debe mantenerse como nodo paraguas. Si se mantiene, documentar explícitamente el alcance para evitar mezcla incoherente de playlists.
-- Confianza: 0.81
+- Nodo: Music > Latin > Regional Mexicano / Texano
+- Evidencia: The parent node aggregates multiple stylistically distinct traditions (Norteño, Texano, Banda, Ranchero). These styles differ significantly in instrumentation (accordion vs brass banda ensembles), rhythmic patterns, and production traditions, increasing the probability that playlists generated from the parent node alone would be stylistically inconsistent.
+- Recomendación: Encourage classification at the child level when possible and treat the parent primarily as a structural grouping rather than a playlistable genre.
+- Confianza: 0.84
+
+### MVET-L2-002 [FB-05] - WARNING
+- Nodo: Music > Latin > Regional Colombiano > Cumbia Colombiana
+- Evidencia: The node includes both Cumbia Clásica and Cumbia Moderna. These represent historically and sonically different production eras (traditional folkloric instrumentation vs modern electronic or hybrid arrangements), which may produce mixed playlist cohesion when aggregated.
+- Recomendación: Use the node primarily as a navigational parent and prefer leaf-level classification when generating playlists.
+- Confianza: 0.79
 
 ### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Pop > Pop Rock > Alternative Pop Rock
-- Evidencia: Alternative Pop Rock puede solaparse semánticamente con Indie Rock dentro de Music > Rock > Alternative & Indie. Ambos estilos pueden generar playlists con repertorio altamente coincidente dependiendo del artista.
-- Recomendación: Revisar el límite entre Alternative Pop Rock e Indie Rock. Si el criterio diferenciador es la orientación comercial o la producción pop, documentar esa diferencia para evitar redundancia estructural.
-- Confianza: 0.78
-
-### MVET-L2-006 [FB-06] - WARNING
-- Nodo: Music > Rock > Roots & Early Rock > Blues Rock
-- Evidencia: Blues Rock es históricamente un subgénero consolidado del Rock en general y no exclusivamente del periodo 'Roots & Early Rock'. Además, su desarrollo principal ocurre en décadas posteriores al Rock & Roll temprano.
-- Recomendación: Evaluar si Blues Rock debería ser hermano directo dentro de Rock en lugar de estar contenido bajo Roots & Early Rock. La ubicación actual puede sugerir erróneamente que pertenece solo al periodo fundacional del género.
-- Confianza: 0.88
-
-### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Electronic & Dance > Downtempo
-- Evidencia: Downtempo puede actuar como categoría paraguas que incluye estilos muy diversos (chillout, trip hop instrumental, lounge electrónico, ambient beat). Esta amplitud puede producir playlists estilísticamente inconsistentes.
-- Recomendación: Verificar si el nodo se usa como categoría operativa amplia o si se requiere documentación curatorial para mantener coherencia musical en las playlists generadas.
-- Confianza: 0.76
+- Nodo: Music > Instrumental > Score
+- Evidencia: The distinction between Instrumental and Score may be ambiguous in practice. Film scores, game scores, and orchestral soundtrack works are inherently instrumental, meaning some recordings could logically belong to both categories.
+- Recomendación: Clarify the semantic distinction between general Instrumental music and narrative audiovisual scoring contexts to reduce classification overlap.
+- Confianza: 0.74
 
 ### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Post Punk > Gothic Rock
-- Evidencia: Gothic Rock es un subgénero históricamente bien definido con identidad musical clara y generalmente no se subdivide más sin entrar en micro-escenas o etiquetas híbridas.
-- Recomendación: Considerar tratar Gothic Rock como nodo atómico en la política editorial para evitar subdivisiones artificiales en futuras expansiones.
+- Nodo: Music > Rock > Alternative & Indie > Grunge
+- Evidencia: Grunge is marked as Atomic. Historically the genre already represents a highly specific stylistic moment (late 1980s–1990s Seattle-derived alternative rock). Further subdivision would likely be stylistically artificial.
+- Recomendación: The atomic designation appears reasonable; confirm that no further structural subdivision is planned unless supported by clear musical taxonomy distinctions.
 - Confianza: 0.83
+
+### MVET-L2-006 [FB-06] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Post Punk
+- Evidencia: Post Punk historically precedes and partially influences Alternative Rock and Indie Rock rather than being strictly a subtype of them. Structurally it is often treated as a parallel rock movement rather than a descendant category.
+- Recomendación: Review whether Post Punk should remain under Alternative & Indie or be positioned as a sibling movement within Rock to better reflect historical lineage.
+- Confianza: 0.68

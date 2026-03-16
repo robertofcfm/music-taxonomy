@@ -4,50 +4,50 @@
 {
 "rule_id": "MVET-L2-001",
 "severity": "WARNING",
-"node_path": "Music > Soul / Funk / R&B",
-"evidence": "Los nodos hermanos Soul y Rhythm & Blues presentan una frontera estilística difusa en muchas discografías modernas. Gran parte del catálogo contemporáneo clasificado como Soul también se etiqueta como R&B, lo que puede producir playlists con contenido altamente indistinguible.",
-"recommendation": "Revisar la distinción curatorial entre Soul y Rhythm & Blues para asegurar criterios claros de clasificación (era, instrumentación, tradición estilística). Si no se pueden mantener playlists claramente diferenciadas, considerar redefinir criterios editoriales o documentar explícitamente el límite semántico.",
-"confidence": 0.86
+"node_path": "Music > Pop > Pop Rock",
+"evidence": "Pop Rock shares strong musical overlap with Rock-derived structures (electric guitar dominance, verse-chorus rock songwriting, rock rhythm section). Playlists combining Pop Rock with mainstream Rock nodes (e.g., Alternative Rock, Rock & Roll) could be difficult to distinguish stylistically from Pop playlists depending on artist selection.",
+"recommendation": "Review whether Pop Rock is best treated under Pop or whether it structurally aligns better with the Rock domain while maintaining pop-influenced characteristics.",
+"confidence": 0.71
 },
 {
 "rule_id": "MVET-L2-002",
 "severity": "WARNING",
-"node_path": "Music > Instrumental / Score",
-"evidence": "El nodo mezcla potencialmente música instrumental genérica con música de score cinematográfico o de videojuegos. Estos dominios pueden producir playlists con objetivos musicales distintos (ambiental, cinematográfico, orquestal, minimalista, etc.).",
-"recommendation": "Evaluar si el nodo debe representar exclusivamente música de score o si debe mantenerse como nodo paraguas. Si se mantiene, documentar explícitamente el alcance para evitar mezcla incoherente de playlists.",
-"confidence": 0.81
+"node_path": "Music > Latin > Regional Mexicano / Texano",
+"evidence": "The parent node aggregates multiple stylistically distinct traditions (Norteño, Texano, Banda, Ranchero). These styles differ significantly in instrumentation (accordion vs brass banda ensembles), rhythmic patterns, and production traditions, increasing the probability that playlists generated from the parent node alone would be stylistically inconsistent.",
+"recommendation": "Encourage classification at the child level when possible and treat the parent primarily as a structural grouping rather than a playlistable genre.",
+"confidence": 0.84
+},
+{
+"rule_id": "MVET-L2-002",
+"severity": "WARNING",
+"node_path": "Music > Latin > Regional Colombiano > Cumbia Colombiana",
+"evidence": "The node includes both Cumbia Clásica and Cumbia Moderna. These represent historically and sonically different production eras (traditional folkloric instrumentation vs modern electronic or hybrid arrangements), which may produce mixed playlist cohesion when aggregated.",
+"recommendation": "Use the node primarily as a navigational parent and prefer leaf-level classification when generating playlists.",
+"confidence": 0.79
 },
 {
 "rule_id": "MVET-L2-003",
 "severity": "WARNING",
-"node_path": "Music > Pop > Pop Rock > Alternative Pop Rock",
-"evidence": "Alternative Pop Rock puede solaparse semánticamente con Indie Rock dentro de Music > Rock > Alternative & Indie. Ambos estilos pueden generar playlists con repertorio altamente coincidente dependiendo del artista.",
-"recommendation": "Revisar el límite entre Alternative Pop Rock e Indie Rock. Si el criterio diferenciador es la orientación comercial o la producción pop, documentar esa diferencia para evitar redundancia estructural.",
-"confidence": 0.78
-},
-{
-"rule_id": "MVET-L2-006",
-"severity": "WARNING",
-"node_path": "Music > Rock > Roots & Early Rock > Blues Rock",
-"evidence": "Blues Rock es históricamente un subgénero consolidado del Rock en general y no exclusivamente del periodo 'Roots & Early Rock'. Además, su desarrollo principal ocurre en décadas posteriores al Rock & Roll temprano.",
-"recommendation": "Evaluar si Blues Rock debería ser hermano directo dentro de Rock en lugar de estar contenido bajo Roots & Early Rock. La ubicación actual puede sugerir erróneamente que pertenece solo al periodo fundacional del género.",
-"confidence": 0.88
-},
-{
-"rule_id": "MVET-L2-002",
-"severity": "WARNING",
-"node_path": "Music > Electronic & Dance > Downtempo",
-"evidence": "Downtempo puede actuar como categoría paraguas que incluye estilos muy diversos (chillout, trip hop instrumental, lounge electrónico, ambient beat). Esta amplitud puede producir playlists estilísticamente inconsistentes.",
-"recommendation": "Verificar si el nodo se usa como categoría operativa amplia o si se requiere documentación curatorial para mantener coherencia musical en las playlists generadas.",
-"confidence": 0.76
+"node_path": "Music > Instrumental > Score",
+"evidence": "The distinction between Instrumental and Score may be ambiguous in practice. Film scores, game scores, and orchestral soundtrack works are inherently instrumental, meaning some recordings could logically belong to both categories.",
+"recommendation": "Clarify the semantic distinction between general Instrumental music and narrative audiovisual scoring contexts to reduce classification overlap.",
+"confidence": 0.74
 },
 {
 "rule_id": "MVET-L2-005",
 "severity": "WARNING",
-"node_path": "Music > Rock > Alternative & Indie > Post Punk > Gothic Rock",
-"evidence": "Gothic Rock es un subgénero históricamente bien definido con identidad musical clara y generalmente no se subdivide más sin entrar en micro-escenas o etiquetas híbridas.",
-"recommendation": "Considerar tratar Gothic Rock como nodo atómico en la política editorial para evitar subdivisiones artificiales en futuras expansiones.",
+"node_path": "Music > Rock > Alternative & Indie > Grunge",
+"evidence": "Grunge is marked as Atomic. Historically the genre already represents a highly specific stylistic moment (late 1980s–1990s Seattle-derived alternative rock). Further subdivision would likely be stylistically artificial.",
+"recommendation": "The atomic designation appears reasonable; confirm that no further structural subdivision is planned unless supported by clear musical taxonomy distinctions.",
 "confidence": 0.83
+},
+{
+"rule_id": "MVET-L2-006",
+"severity": "WARNING",
+"node_path": "Music > Rock > Alternative & Indie > Post Punk",
+"evidence": "Post Punk historically precedes and partially influences Alternative Rock and Indie Rock rather than being strictly a subtype of them. Structurally it is often treated as a parallel rock movement rather than a descendant category.",
+"recommendation": "Review whether Post Punk should remain under Alternative & Indie or be positioned as a sibling movement within Rock to better reflect historical lineage.",
+"confidence": 0.68
 }
 ],
 "summary": {

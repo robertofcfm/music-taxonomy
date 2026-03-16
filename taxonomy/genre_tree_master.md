@@ -1,53 +1,91 @@
-# ÁRBOL MAESTRO DE GÉNEROS
-Plantilla editable de taxonomía.
-La indentación define la jerarquía.
+# GENRE TREE MASTER
+Editable taxonomy template.
+Indentation defines hierarchy.
 
 Music
   Rock
-    Rock & Roll
-    Blues Rock
-    Hard Rock
     Alternative & Indie
       Indie Rock
-      Grunge (Atomic)
+        Garage Rock
+        Brit Pop
+      Grunge
+        Seattle Grunge
+        Post-Grunge
       Dream Pop
       Post Punk
+        New Wave
+        Gothic Rock
+        Coldwave
+        Darkwave
+
+    Classic Rock
+      Rock & Roll
+      Blues Rock
+        Texas Blues Rock
+        Classic Blues Rock
+      Hard Rock
+        Glam Metal
+        Arena Rock
+        Hard Rock (General)
+
   Metal
     Heavy Metal
     Thrash Metal
       Bay Area Thrash
       Groove Thrash
     Alternative Metal
+      Nu Metal
+      Post-Grunge Metal
+
   Pop
     Pop Rock
-    New Wave
+      Alternative Pop Rock
+      Power Pop
+      Alternative Pop
+
+    Synth & Electronic Pop
+      Synth Pop
+        New Romantic
+        Electro Pop
+      Electronic Dream Pop
+
   Electronic & Dance
+    Disco
     House
       Deep House
       Electro House
     Ambient
       Dark Ambient
       Cinematic Ambient
+    Downtempo
+
   Hip Hop
+
   Latin
     Rock Latino
     Pop Latino
     Hip Hop Latino
     Regional Mexicano / Texano
-      Norteño & Texano
+      Norteño
+      Texano
       Banda
       Ranchero
+
     Regional Colombiano
       Cumbia Colombiana
         Cumbia Clásica
         Cumbia Moderna
       Vallenato
+
     Tradicional Latino
+
   Folk & Roots
+
   Soul / Funk / R&B
-    Soul / Rhythm & Blues
+    Soul
+    Rhythm & Blues
     Funk
-    Disco
+
   Jazz
-  Instrumental 
-  Score
+
+  Instrumental / Score
