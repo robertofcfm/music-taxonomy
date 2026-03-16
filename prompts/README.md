@@ -16,9 +16,6 @@ Ejemplos de nombres:
 Prompt generador recomendado:
 - prompt_bootstrap_generador_prompts_v1.md
 
-Prompt final standalone base:
-- generadores/prompt_operativo_base.md
-
 Nota:
 - El diagnostico de imports se ejecuta en el prompt generador.
 - El resultado final debe poder usarse en cualquier chat sin contexto del repositorio.

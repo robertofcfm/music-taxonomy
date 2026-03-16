@@ -132,7 +132,6 @@ Esto permite que la página renderice una tabla clara y accionable.
 
 Prompts activos:
 - prompts/prompt_bootstrap_generador_prompts_v1.md
-- prompts/generadores/prompt_operativo_base.md
 
 Documentación de soporte:
 - docs/context/AI_PROMPT_SYSTEM_CONTEXT.md

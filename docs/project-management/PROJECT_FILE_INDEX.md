@@ -374,14 +374,6 @@ y produce prompt final standalone o mensaje de correccion.
 
 --------------------------------------------------
 
-prompts/generadores/prompt_operativo_base.md
-
-Prompt final base standalone.
-Diseñado para ejecutarse en cualquier chat sin
-dependencia de contexto documental del repositorio.
-
---------------------------------------------------
-
 docs/architecture/PROMPTS_DUAL_PIPELINE_STRATEGY.md
 
 Define la estrategia dual de prompts (generador + standalone),

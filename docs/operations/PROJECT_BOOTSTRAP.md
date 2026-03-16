@@ -115,10 +115,6 @@ Prompt bootstrap recomendado:
 
 - prompts/prompt_bootstrap_generador_prompts_v1.md
 
-Prompt final standalone base recomendado:
-
-- prompts/generadores/prompt_operativo_base.md
-
 Este enfoque usa dos fases. El generador debe construir el prompt final
 cargando de forma
 explícita documentos desde:
