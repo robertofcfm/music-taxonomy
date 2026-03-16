@@ -32,7 +32,6 @@ LAYER1_REPORT_MD = REPORTS_DIR / "validate_master_report.md"
 LAYER1_RUN_METADATA = REPORTS_DIR / "validate_master_run_metadata.json"
 LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
 HTML_FILE = REPO_ROOT / "web" / "index.html"
-LAYER2_WAIT_SECONDS = 10
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -57,23 +56,6 @@ class Handler(http.server.BaseHTTPRequestHandler):
     def _is_fresh(path: Path, started_at_epoch: float) -> bool:
         return path.exists() and path.stat().st_mtime >= started_at_epoch
 
-    @staticmethod
-    def _wait_for_fresh_file(
-        path: Path,
-        started_at_epoch: float,
-        timeout_seconds: int,
-        poll_interval_seconds: float = 0.5,
-    ) -> bool:
-        if timeout_seconds <= 0:
-            return Handler._is_fresh(path, started_at_epoch)
-
-        deadline = time.time() + timeout_seconds
-        while time.time() <= deadline:
-            if Handler._is_fresh(path, started_at_epoch):
-                return True
-            time.sleep(poll_interval_seconds)
-        return Handler._is_fresh(path, started_at_epoch)
-
     def _send_json(self, data: dict, status: int = 200) -> None:
         body = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
         self.send_response(status)
@@ -82,6 +64,26 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _read_request_json(self) -> tuple[dict | None, str | None]:
+        try:
+            content_length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            return None, "Header Content-Length inválido."
+
+        if content_length <= 0:
+            return None, "Cuerpo de solicitud vacío."
+
+        raw_body = self.rfile.read(content_length)
+        try:
+            payload = json.loads(raw_body.decode("utf-8"))
+        except Exception as exc:
+            return None, f"No se pudo decodificar el JSON del request: {exc}"
+
+        if not isinstance(payload, dict):
+            return None, "El cuerpo JSON debe ser un objeto."
+
+        return payload, None
+
     def _send_html(self) -> None:
         content = HTML_FILE.read_bytes()
         self.send_response(200)
@@ -89,6 +91,20 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(content)))
         self.end_headers()
         self.wfile.write(content)
+
+    @staticmethod
+    def _load_prompt_payload() -> dict:
+        if not LAYER2_PROMPT.exists():
+            return {
+                "exists": False,
+                "path": "reports/validate_master_layer2_prompt.txt",
+                "text": "",
+            }
+        return {
+            "exists": True,
+            "path": "reports/validate_master_layer2_prompt.txt",
+            "text": LAYER2_PROMPT.read_text(encoding="utf-8"),
+        }
 
     def do_GET(self) -> None:
         if self.path in ("/", "/index.html"):
@@ -110,19 +126,29 @@ class Handler(http.server.BaseHTTPRequestHandler):
             payload: dict = {
                 "layer1": None,
                 "layer2": None,
+                "prompt": self._load_prompt_payload(),
                 "pipeline": {
+                    "layer2_prompt_generated": False,
                     "layer2_executed": False,
                     "message": "",
                 },
             }
             if LAYER1_REPORT.exists():
                 payload["layer1"] = json.loads(LAYER1_REPORT.read_text(encoding="utf-8"))
+            if payload["prompt"]["exists"]:
+                payload["pipeline"]["layer2_prompt_generated"] = True
             if LAYER2_REPORT.exists():
                 payload["layer2"] = json.loads(LAYER2_REPORT.read_text(encoding="utf-8"))
                 payload["pipeline"]["layer2_executed"] = True
                 payload["pipeline"]["message"] = "Se encontró reporte previo de Capa 2."
+            elif payload["prompt"]["exists"]:
+                payload["pipeline"]["message"] = (
+                    "Prompt de Capa 2 disponible. Copia el texto, consulta la IA y pega aquí el JSON."
+                )
+            elif payload["layer1"]:
+                payload["pipeline"]["message"] = "Capa 1 ejecutada sin prompt disponible de Capa 2."
             else:
-                payload["pipeline"]["message"] = "Sin reporte de Capa 2."
+                payload["pipeline"]["message"] = "Sin ejecución previa."
             self._send_json(payload)
 
         else:
@@ -157,7 +183,6 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self._send_json(data)
 
         elif self.path == "/api/validate/full":
-            # Fuerza corrida fresca en cada click, sin reusar reportes previos.
             self._clear_validation_reports()
 
             l1_started_at = time.time()
@@ -187,12 +212,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
             response: dict = {
                 "layer1": layer1,
                 "layer2": None,
+                "prompt": self._load_prompt_payload(),
                 "pipeline": {
                     "started_at_epoch": l1_started_at,
                     "layer1_exit_code": l1_proc.returncode,
-                    "layer2_prompt_executed": False,
+                    "layer2_prompt_generated": False,
                     "layer2_executed": False,
-                    "layer2_wait_seconds": LAYER2_WAIT_SECONDS,
                     "diagnostics": {
                         "prompt": {
                             "executed": False,
@@ -201,21 +226,6 @@ class Handler(http.server.BaseHTTPRequestHandler):
                             "stderr": "",
                             "file_exists": False,
                             "file_fresh": False,
-                        },
-                        "response_file": {
-                            "wait_seconds": LAYER2_WAIT_SECONDS,
-                            "detected": False,
-                            "file_exists": False,
-                            "file_fresh": False,
-                            "json_valid": False,
-                            "json_error": "",
-                        },
-                        "layer2_apply": {
-                            "executed": False,
-                            "exit_code": None,
-                            "stdout": "",
-                            "stderr": "",
-                            "report_fresh": False,
                         },
                     },
                     "message": "",
@@ -238,7 +248,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 text=True,
                 cwd=str(REPO_ROOT),
             )
-            response["pipeline"]["layer2_prompt_executed"] = True
+            response["pipeline"]["layer2_prompt_generated"] = True
             response["pipeline"]["layer2_prompt_exit_code"] = l2_prompt_proc.returncode
             response["pipeline"]["diagnostics"]["prompt"]["executed"] = True
             response["pipeline"]["diagnostics"]["prompt"]["exit_code"] = l2_prompt_proc.returncode
@@ -251,39 +261,68 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
             if not self._is_fresh(LAYER2_PROMPT, l2_prompt_started_at):
                 response["pipeline"]["message"] = "Capa 2 omitida: no se pudo regenerar el prompt."
-                response["pipeline"]["layer2_prompt_stdout"] = l2_prompt_proc.stdout
-                response["pipeline"]["layer2_prompt_stderr"] = l2_prompt_proc.stderr
                 self._send_json(response, 500)
                 return
 
-            response_ready = self._wait_for_fresh_file(
-                LAYER2_RESPONSE,
-                l2_prompt_started_at,
-                LAYER2_WAIT_SECONDS,
-            )
-            response["pipeline"]["diagnostics"]["response_file"]["detected"] = response_ready
-            response["pipeline"]["diagnostics"]["response_file"]["file_exists"] = LAYER2_RESPONSE.exists()
-            response["pipeline"]["diagnostics"]["response_file"]["file_fresh"] = self._is_fresh(
-                LAYER2_RESPONSE, l2_prompt_started_at
+            response["prompt"] = self._load_prompt_payload()
+            response["pipeline"]["message"] = (
+                "Capa 1 ejecutada y prompt de Capa 2 generado. "
+                "Copia el prompt, consulta la IA y pega aquí el JSON devuelto."
             )
 
-            if not response_ready:
-                response["pipeline"]["message"] = (
-                    "Capa 2 pendiente: prompt regenerado y respuesta previa limpiada; "
-                    f"se esperó {LAYER2_WAIT_SECONDS}s por reports/validate_master_layer2_response.json "
-                    "sin detectar respuesta nueva"
-                )
-                self._send_json(response)
+            self._send_json(response)
+
+        elif self.path == "/api/validate/layer2-response":
+            payload, error = self._read_request_json()
+            if error:
+                self._send_json({"error": error}, 400)
                 return
+
+            response_text = str(payload.get("response_text", "")).strip()
+            if not response_text:
+                self._send_json({"error": "El campo response_text es obligatorio."}, 400)
+                return
+
+            response_started_at = time.time()
+            REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+            LAYER2_RESPONSE.write_text(response_text, encoding="utf-8")
+
+            response: dict = {
+                "layer1": None,
+                "layer2": None,
+                "prompt": self._load_prompt_payload(),
+                "pipeline": {
+                    "layer2_prompt_generated": LAYER2_PROMPT.exists(),
+                    "layer2_executed": False,
+                    "diagnostics": {
+                        "response_file": {
+                            "file_exists": LAYER2_RESPONSE.exists(),
+                            "file_fresh": self._is_fresh(LAYER2_RESPONSE, response_started_at),
+                            "json_valid": False,
+                            "json_error": "",
+                        },
+                        "layer2_apply": {
+                            "executed": False,
+                            "exit_code": None,
+                            "stdout": "",
+                            "stderr": "",
+                            "report_fresh": False,
+                        },
+                    },
+                    "message": "",
+                },
+            }
+
+            if LAYER1_REPORT.exists():
+                response["layer1"] = json.loads(LAYER1_REPORT.read_text(encoding="utf-8"))
 
             try:
                 json.loads(LAYER2_RESPONSE.read_text(encoding="utf-8-sig"))
                 response["pipeline"]["diagnostics"]["response_file"]["json_valid"] = True
             except Exception as exc:
-                response["pipeline"]["diagnostics"]["response_file"]["json_valid"] = False
                 response["pipeline"]["diagnostics"]["response_file"]["json_error"] = str(exc)
                 response["pipeline"]["message"] = (
-                    "Capa 2 detectó archivo de respuesta, pero JSON inválido."
+                    "La respuesta fue guardada, pero el contenido no es JSON válido."
                 )
                 self._send_json(response, 400)
                 return
@@ -313,13 +352,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
             if report_fresh:
                 response["layer2"] = json.loads(LAYER2_REPORT.read_text(encoding="utf-8"))
-                response["pipeline"]["message"] = "Capa 1 y Capa 2 ejecutadas (corrida fresca)."
-            else:
-                response["pipeline"]["message"] = "Capa 2 ejecutada pero sin reporte fresco generado."
-                response["pipeline"]["layer2_stdout"] = l2_proc.stdout
-                response["pipeline"]["layer2_stderr"] = l2_proc.stderr
+                response["pipeline"]["message"] = "Respuesta IA guardada y Capa 2 procesada."
+                self._send_json(response)
+                return
 
-            self._send_json(response)
+            response["pipeline"]["message"] = "La respuesta fue guardada, pero no se generó un reporte fresco de Capa 2."
+            self._send_json(response, 500)
 
         else:
             self.send_error(404)
@@ -334,23 +372,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
 def main() -> None:
     parser = argparse.ArgumentParser(description="Servidor web local de validación de taxonomía.")
     parser.add_argument("--port", type=int, default=8080, help="Puerto (default: 8080)")
-    parser.add_argument(
-        "--layer2-wait-seconds",
-        type=int,
-        default=10,
-        help="Segundos máximos para esperar respuesta nueva de Capa 2 (default: 10, 0 desactiva espera).",
-    )
     args = parser.parse_args()
-
-    global LAYER2_WAIT_SECONDS
-    LAYER2_WAIT_SECONDS = max(0, args.layer2_wait_seconds)
 
     socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("localhost", args.port), Handler) as server:
         url = f"http://localhost:{args.port}"
         print(f"\n  ▶  Servidor iniciado en {url}")
         print(f"  ·  Abre {url} en tu navegador")
-        print(f"  ·  Espera automática Capa 2: {LAYER2_WAIT_SECONDS}s")
         print("  ·  Presiona Ctrl+C para detener.\n")
         try:
             server.serve_forever()

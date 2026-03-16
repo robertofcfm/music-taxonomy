@@ -95,6 +95,13 @@
     .btn-primary { background: var(--accent); color: #fff; }
     .btn-primary:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
     .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover:not(:disabled) { border-color: var(--accent); color: #c7d2fe; }
+    .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
 
     /* Spinner */
     .spinner {
@@ -192,6 +199,51 @@
       line-height: 1.45;
     }
 
+    .manual-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .manual-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .manual-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+    .manual-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 0.7rem;
+    }
+    .manual-status {
+      margin-bottom: 0.7rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .manual-card textarea {
+      width: 100%;
+      min-height: 280px;
+      resize: vertical;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      padding: 0.85rem;
+      font: 0.78rem/1.5 Consolas, 'Courier New', monospace;
+      margin-bottom: 0.8rem;
+    }
+    .manual-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
     /* ── Section label ───────────────────────────────────────── */
     .section-label {
       font-size: 0.7rem;
@@ -261,6 +313,12 @@
 
     /* Empty state */
     .empty { text-align: center; padding: 2.5rem; color: var(--muted); font-size: 0.88rem; }
+
+    @media (max-width: 760px) {
+      body { padding: 1.25rem 1rem; }
+      .action-bar { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -274,14 +332,14 @@
   <div class="info">
     <h2>Validación de Taxonomía Maestra</h2>
     <p>
-      Ejecuta el pipeline de validación (Capa 1 y Capa 2) sobre
+      Ejecuta la Capa 1 y genera el prompt manual de Capa 2 sobre
       <code>taxonomy/genre_tree_master.md</code>.
-      Los resultados se muestran a continuación de forma estructurada.
+      Luego copia el prompt a una IA externa, pega aquí el JSON de respuesta y el sistema generará el mismo reporte estructurado de Capa 2.
     </p>
   </div>
   <button class="btn btn-primary" id="btnRun" onclick="runValidation()">
     <span class="spinner" id="spinner"></span>
-    <span id="btnLabel">Ejecutar Validación</span>
+    <span id="btnLabel">Ejecutar Validación (L1 + Prompt L2)</span>
   </button>
 </div>
 
@@ -314,6 +372,28 @@
   </div>
   <div class="pipeline-note" id="pipelineNote">Estado pipeline: —</div>
   <div class="pipeline-diag" id="pipelineDiag">Diagnóstico: —</div>
+
+  <div class="section-label" style="margin-top:1.2rem">Intercambio manual Capa 2</div>
+  <div class="manual-panel">
+    <div class="manual-card">
+      <h3>Prompt generado</h3>
+      <p>Copia este contenido y pégalo en la IA que usarás para la validación semántica.</p>
+      <div class="manual-status" id="promptStatus">Prompt pendiente de generación.</div>
+      <textarea id="promptText" readonly placeholder="Aquí aparecerá el prompt recién generado."></textarea>
+      <div class="manual-actions">
+        <button class="btn btn-secondary" id="btnCopyPrompt" onclick="copyPrompt()" disabled>Copiar Prompt</button>
+      </div>
+    </div>
+    <div class="manual-card">
+      <h3>Respuesta JSON de la IA</h3>
+      <p>Pega el JSON exacto devuelto por la IA. Se guardará en <code>reports/validate_master_layer2_response.json</code> y luego se procesará.</p>
+      <div class="manual-status" id="responseStatus">Pega aquí el JSON cuando la IA responda.</div>
+      <textarea id="responseText" placeholder="Pega aquí el JSON de respuesta..."></textarea>
+      <div class="manual-actions">
+        <button class="btn btn-primary" id="btnApplyL2" onclick="applyLayer2Response()" disabled>Guardar y Procesar Capa 2</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Findings -->
   <div class="section-label">Hallazgos por regla</div>
@@ -385,11 +465,86 @@
     document.getElementById('mHash').textContent = '—';
     document.getElementById('pipelineNote').textContent = 'Estado pipeline: esperando ejecución manual.';
     document.getElementById('pipelineDiag').textContent = 'Diagnóstico: pendiente de ejecución.';
+    document.getElementById('promptStatus').textContent = 'Prompt pendiente de generación.';
+    document.getElementById('promptText').value = '';
+    document.getElementById('responseStatus').textContent = 'Pega aquí el JSON cuando la IA responda.';
+    document.getElementById('responseText').value = '';
+    document.getElementById('btnCopyPrompt').disabled = true;
+    document.getElementById('btnApplyL2').disabled = true;
 
     document.getElementById('tbody').innerHTML =
       `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
     document.getElementById('tbodyL2').innerHTML =
       `<tr><td colspan="6" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Validación".</td></tr>`;
+  }
+
+  function renderPrompt(prompt, pipeline, layer1) {
+    const promptText = prompt && prompt.text ? prompt.text : '';
+    const promptExists = Boolean(prompt && prompt.exists && promptText);
+    const promptStatus = document.getElementById('promptStatus');
+    const responseStatus = document.getElementById('responseStatus');
+    const applyBtn = document.getElementById('btnApplyL2');
+
+    document.getElementById('promptText').value = promptText;
+    document.getElementById('btnCopyPrompt').disabled = !promptExists;
+
+    if (promptExists) {
+      promptStatus.textContent = 'Prompt disponible. Cópialo completo antes de consultar la IA.';
+    } else if (pipeline && pipeline.message) {
+      promptStatus.textContent = pipeline.message;
+    } else {
+      promptStatus.textContent = 'Prompt pendiente de generación.';
+    }
+
+    const layer1Decision = layer1 && layer1.summary ? layer1.summary.decision : null;
+    const canApply = promptExists && layer1Decision !== 'FAIL';
+    applyBtn.disabled = !canApply;
+    responseStatus.textContent = canApply
+      ? 'Pega el JSON y ejecuta el procesamiento de Capa 2.'
+      : 'La Capa 2 se habilita cuando exista un prompt válido y la Capa 1 no esté en FAIL.';
+  }
+
+  function renderPipeline(pipeline, layer2) {
+    const note = document.getElementById('pipelineNote');
+    const diag = document.getElementById('pipelineDiag');
+    const p = pipeline || {};
+    const d = p.diagnostics || {};
+    const pr = d.prompt || {};
+    const rf = d.response_file || {};
+    const ap = d.layer2_apply || {};
+    const l2Decision = layer2 && layer2.summary ? layer2.summary.decision : null;
+
+    note.textContent = 'Estado pipeline: ' + (p.message || 'Sin detalle')
+      + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
+
+    const lines = [];
+    if (Object.keys(pr).length) {
+      lines.push(
+        '- prompt.executed=' + (pr.executed ?? false)
+        + ', exit=' + (pr.exit_code ?? '—')
+        + ', exists=' + (pr.file_exists ?? false)
+        + ', fresh=' + (pr.file_fresh ?? false)
+      );
+    }
+    if (Object.keys(rf).length) {
+      lines.push(
+        '- response.exists=' + (rf.file_exists ?? false)
+        + ', fresh=' + (rf.file_fresh ?? false)
+        + ', json_valid=' + (rf.json_valid ?? false)
+        + (rf.json_error ? (', error=' + rf.json_error) : '')
+      );
+    }
+    if (Object.keys(ap).length) {
+      lines.push(
+        '- apply.executed=' + (ap.executed ?? false)
+        + ', exit=' + (ap.exit_code ?? '—')
+        + ', report_fresh=' + (ap.report_fresh ?? false)
+      );
+    }
+
+    diag.textContent = lines.length
+      ? 'Diagnóstico:\n' + lines.join('\n')
+      : 'Diagnóstico: sin detalles adicionales.';
   }
 
   function render(data) {
@@ -502,46 +657,78 @@
     label.textContent = 'Ejecutando…';
     try {
       const res = await fetch('/api/validate/full', { method: 'POST' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       if (data.layer1) {
         render(data.layer1);
       }
+      renderPrompt(data.prompt, data.pipeline, data.layer1);
       renderLayer2(data.layer2, data.pipeline);
-      const note = document.getElementById('pipelineNote');
-      const l2Decision = data.layer2 && data.layer2.summary ? data.layer2.summary.decision : null;
-      note.textContent = 'Estado pipeline: ' + (data.pipeline && data.pipeline.message ? data.pipeline.message : 'Sin detalle')
-        + (l2Decision ? (' | Decisión Capa 2: ' + l2Decision) : '');
-
-      const diag = document.getElementById('pipelineDiag');
-      const p = data.pipeline || {};
-      const d = p.diagnostics || {};
-      const pr = d.prompt || {};
-      const rf = d.response_file || {};
-      const ap = d.layer2_apply || {};
-      diag.textContent =
-        'Diagnóstico:\n' +
-        '- wait_seconds=' + (p.layer2_wait_seconds ?? '—') + '\n' +
-        '- prompt.executed=' + (pr.executed ?? false) + ', exit=' + (pr.exit_code ?? '—') + ', fresh=' + (pr.file_fresh ?? false) + '\n' +
-        '- response.detected=' + (rf.detected ?? false) + ', exists=' + (rf.file_exists ?? false) + ', fresh=' + (rf.file_fresh ?? false) + '\n' +
-        '- response.json_valid=' + (rf.json_valid ?? false) + (rf.json_error ? (', error=' + rf.json_error) : '') + '\n' +
-        '- apply.executed=' + (ap.executed ?? false) + ', exit=' + (ap.exit_code ?? '—') + ', report_fresh=' + (ap.report_fresh ?? false);
+      renderPipeline(data.pipeline, data.layer2);
+      if (!res.ok) throw new Error((data.pipeline && data.pipeline.message) || ('HTTP ' + res.status));
     } catch (e) {
       alert('Error: ' + e.message);
     } finally {
       btn.disabled = false;
       spinner.style.display = 'none';
-      label.textContent = 'Ejecutar Validación (L1 + L2)';
+      label.textContent = 'Ejecutar Validación (L1 + Prompt L2)';
     }
   }
 
-  // Limpia reportes previos y deja la UI en estado vacío al abrir la página
-  (async () => {
+  async function applyLayer2Response() {
+    const btn = document.getElementById('btnApplyL2');
+    const responseText = document.getElementById('responseText').value.trim();
+    if (!responseText) {
+      alert('Pega primero el JSON de respuesta.');
+      return;
+    }
+
+    const previousLabel = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Procesando…';
+    try {
+      const res = await fetch('/api/validate/layer2-response', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ response_text: responseText }),
+      });
+      const data = await res.json();
+      if (data.layer1) {
+        render(data.layer1);
+      }
+      renderPrompt(data.prompt, data.pipeline, data.layer1);
+      renderLayer2(data.layer2, data.pipeline);
+      renderPipeline(data.pipeline, data.layer2);
+      if (!res.ok) throw new Error((data.pipeline && data.pipeline.message) || data.error || ('HTTP ' + res.status));
+    } catch (e) {
+      alert('Error: ' + e.message);
+    } finally {
+      btn.textContent = previousLabel;
+      btn.disabled = !document.getElementById('promptText').value.trim();
+    }
+  }
+
+  async function copyPrompt() {
+    const promptText = document.getElementById('promptText').value;
+    if (!promptText) return;
+    await navigator.clipboard.writeText(promptText);
+    document.getElementById('promptStatus').textContent = 'Prompt copiado al portapapeles.';
+  }
+
+  async function loadExistingState() {
     resetView();
     try {
-      await fetch('/api/report/clear', { method: 'POST' });
+      const res = await fetch('/api/report/full');
+      const data = await res.json();
+      if (data.layer1) {
+        render(data.layer1);
+      }
+      renderPrompt(data.prompt, data.pipeline, data.layer1);
+      renderLayer2(data.layer2, data.pipeline);
+      renderPipeline(data.pipeline, data.layer2);
     } catch (_) {}
-  })();
+  }
+
+  loadExistingState();
 </script>
 </body>
 </html>
