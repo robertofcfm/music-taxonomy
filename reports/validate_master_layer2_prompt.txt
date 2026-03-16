@@ -42,6 +42,13 @@ Nodo General:
 Nodo Atomic:
 - Nodo hoja que no debe subdividirse más sin perder coherencia musical.
 
+Nodo Agrupador Estructural:
+- Nodo padre usado principalmente para organización estructural
+  y navegación taxonómica.
+- No debe asumirse por defecto como género reproducible principal.
+- Cuando existan hijos musicalmente distinguibles, la evaluación debe
+  priorizar esos hijos por encima del padre.
+
 Identificación operativa para esta validación:
 - Si un nodo está marcado explícitamente como clone, trátalo como clone.
 - Si el nombre del nodo contiene la palabra "clone", trátalo como clone.

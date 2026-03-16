@@ -112,6 +112,17 @@ Género que no debe subdividirse más.
 Los nodos Atomic representan géneros donde más subdivisión
 crearía categorías artificiales o sin significado.
 
+NODO AGRUPADOR ESTRUCTURAL
+
+Nodo padre usado principalmente para organización estructural
+y navegación taxonómica.
+
+Los nodos agrupadores estructurales:
+
+- pueden reunir subgéneros relacionados sin funcionar como género reproducible principal
+- no deben asumirse por defecto como destino preferente de playlists
+- deben priorizar clasificación y evaluación en hijos cuando existan hijos musicalmente distinguibles
+
 --------------------------------------------------
 4. REGLA DE LA RAMA LATIN
 --------------------------------------------------
