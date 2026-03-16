@@ -543,6 +543,7 @@ def main() -> int:
         return 2
 
     findings, schema_errors = validate_response_schema(response_data)
+    findings = [f for f in findings if f.result != "PASS"]
     fatal_count, warning_count, suggestion_count, decision = summarize_layer2(findings)
     ai_summary = response_data.get("summary", {})
 
