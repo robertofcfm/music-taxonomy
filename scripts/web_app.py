@@ -13,10 +13,12 @@ from __future__ import annotations
 import argparse
 import http.server
 import json
+import re
 import socketserver
 import subprocess
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +36,7 @@ LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
 HOME_HTML_FILE = REPO_ROOT / "web" / "home.html"
 HTML_FILE = REPO_ROOT / "web" / "index.html"
 UTILERIAS_HTML_FILE = REPO_ROOT / "web" / "utilerias.html"
+AUDITORIA_HTML_FILE = REPO_ROOT / "web" / "auditoria.html"
 PROMPTS_DIR = REPO_ROOT / "prompts"
 GENERADORES_DIR = PROMPTS_DIR / "generadores"
 
@@ -111,6 +114,386 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(content)))
         self.end_headers()
         self.wfile.write(content)
+
+    def _send_auditoria_html(self) -> None:
+        content = AUDITORIA_HTML_FILE.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(content)))
+        self.end_headers()
+        self.wfile.write(content)
+
+    # ── Audit checks ────────────────────────────────────────────
+
+    @staticmethod
+    def _audit_check_separacion_funcional() -> dict:
+        """Check 1: cada archivo está en el directorio funcional correcto."""
+        hallazgos: list[str] = []
+        skip_dirs = {"__pycache__", ".git", ".venv", "node_modules", ".mypy_cache"}
+
+        rules: list[tuple[Path, set[str], str]] = [
+            (REPO_ROOT / "scripts",                    {".py"},                    "scripts/"),
+            (REPO_ROOT / "web",                        {".html"},                  "web/"),
+            (REPO_ROOT / "docs" / "governance",        {".md"},                    "docs/governance/"),
+            (REPO_ROOT / "docs" / "context",           {".md"},                    "docs/context/"),
+            (REPO_ROOT / "docs" / "project-management",{".md"},                    "docs/project-management/"),
+            (REPO_ROOT / "docs" / "operations",        {".md"},                    "docs/operations/"),
+            (REPO_ROOT / "docs" / "architecture",      {".md"},                    "docs/architecture/"),
+            (REPO_ROOT / "docs" / "releases",          {".md"},                    "docs/releases/"),
+            (REPO_ROOT / "reports",                    {".json", ".md", ".txt", ".csv"}, "reports/"),
+            (REPO_ROOT / "catalog",                    {".csv"},                   "catalog/"),
+            (REPO_ROOT / "data",                       {".csv"},                   "data/"),
+            (REPO_ROOT / "prompts",                    {".md"},                    "prompts/"),
+        ]
+
+        seen: set[str] = set()
+        for folder, allowed_exts, label in rules:
+            if not folder.exists():
+                continue
+            for file in folder.rglob("*"):
+                if file.is_dir():
+                    continue
+                if any(part in skip_dirs for part in file.parts):
+                    continue
+                if file.suffix.lower() not in allowed_exts:
+                    rel = str(file.relative_to(REPO_ROOT))
+                    if rel not in seen:
+                        seen.add(rel)
+                        hallazgos.append(
+                            f"Archivo fuera de lugar en {label} → {rel}  (extensión {file.suffix!r})"
+                        )
+
+        # Extra: Python files outside scripts/
+        scripts_dir = REPO_ROOT / "scripts"
+        for py_file in REPO_ROOT.rglob("*.py"):
+            if any(part in skip_dirs for part in py_file.parts):
+                continue
+            if not py_file.is_relative_to(scripts_dir):
+                rel = str(py_file.relative_to(REPO_ROOT))
+                if rel not in seen:
+                    seen.add(rel)
+                    hallazgos.append(f"Script .py fuera de scripts/ → {rel}")
+
+        status = "PASS" if not hallazgos else ("WARN" if len(hallazgos) <= 3 else "FAIL")
+        return {
+            "id": "separacion_funcional",
+            "nombre": "Separación por función",
+            "descripcion": (
+                "Verifica que cada archivo esté en su directorio funcional asignado: "
+                "scripts en scripts/, reglas en docs/governance/, reportes en reports/, etc."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _audit_check_contradicciones_normativas() -> dict:
+        """Check 2: no hay secciones duplicadas entre archivos de gobernanza
+        ni lenguaje normativo en archivos de contexto."""
+        hallazgos: list[str] = []
+
+        # 2a — Detectar headers de sección duplicados entre archivos de gobernanza
+        governance_dir = REPO_ROOT / "docs" / "governance"
+        section_header_pattern = re.compile(r"^#{2,3}\s+(.+)$", re.MULTILINE)
+        header_sources: dict[str, list[str]] = {}
+        if governance_dir.exists():
+            for md_file in sorted(governance_dir.glob("*.md")):
+                text = md_file.read_text(encoding="utf-8")
+                for header in section_header_pattern.findall(text):
+                    key = header.strip().upper()
+                    if len(key) > 4:  # skip trivially short names
+                        header_sources.setdefault(key, []).append(
+                            str(md_file.relative_to(REPO_ROOT))
+                        )
+            for header, files in header_sources.items():
+                uniq = list(dict.fromkeys(files))
+                if len(uniq) > 1:
+                    hallazgos.append(
+                        f"Sección «{header}» aparece en múltiples archivos de gobernanza: "
+                        + ", ".join(uniq)
+                    )
+
+        # 2b — Detectar lenguaje normativo fuerte en archivos de contexto
+        normative_re = re.compile(
+            r"\b(OBLIGATORIO|PROHIBIDO|ESTÁ PROHIBIDO|NO SE PERMITE|SE PROH[IÍ]BE|QUEDA PROHIBIDO)\b",
+            re.IGNORECASE,
+        )
+        context_dir = REPO_ROOT / "docs" / "context"
+        if context_dir.exists():
+            for md_file in sorted(context_dir.glob("*.md")):
+                text = md_file.read_text(encoding="utf-8")
+                matches: list[str] = []
+                for i, line in enumerate(text.splitlines(), 1):
+                    stripped = line.strip()
+                    if stripped.startswith("#"):
+                        continue
+                    if normative_re.search(stripped):
+                        matches.append(f"línea {i}: {stripped[:90]}")
+                if matches:
+                    rel = str(md_file.relative_to(REPO_ROOT))
+                    hallazgos.append(
+                        f"Lenguaje normativo en archivo de contexto {rel}:\n"
+                        + "\n".join(f"  {m}" for m in matches[:3])
+                        + (f"\n  … y {len(matches) - 3} más" if len(matches) > 3 else "")
+                    )
+
+        # 2c — Verificar que ningún archivo esté en ambos registros como fuente primaria
+        ref_pattern = re.compile(r"^\s*-\s+(docs/\S+\.md)", re.MULTILINE)
+        context_registry = REPO_ROOT / "docs" / "context" / "CONTEXT_REGISTRY.md"
+        rules_registry   = REPO_ROOT / "docs" / "governance" / "RULES_REGISTRY.md"
+        ctx_refs: set[str] = set()
+        rul_refs: set[str] = set()
+        if context_registry.exists():
+            ctx_refs = set(ref_pattern.findall(context_registry.read_text(encoding="utf-8")))
+        if rules_registry.exists():
+            rul_refs = set(ref_pattern.findall(rules_registry.read_text(encoding="utf-8")))
+        for shared in sorted(ctx_refs & rul_refs):
+            hallazgos.append(
+                f"Archivo listado en ambos registros (contexto Y reglas): {shared}"
+            )
+
+        status = "PASS" if not hallazgos else ("WARN" if len(hallazgos) <= 2 else "FAIL")
+        return {
+            "id": "contradicciones_normativas",
+            "nombre": "Sin contradicciones normativas",
+            "descripcion": (
+                "Verifica que no haya secciones duplicadas entre archivos de gobernanza, "
+                "que los archivos de contexto no contengan lenguaje normativo fuerte, "
+                "y que ningún archivo aparezca a la vez como contexto y como regla."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _audit_check_reglas_incrustadas() -> dict:
+        """Check 3: scripts y prompts no contienen reglas copiadas inline."""
+        hallazgos: list[str] = []
+
+        # 3a — Scripts Python: detectar bloques de texto con separadores tipo gobernanza
+        separator_re = re.compile(r"-{15,}")
+        scripts_dir = REPO_ROOT / "scripts"
+        if scripts_dir.exists():
+            for py_file in sorted(scripts_dir.glob("*.py")):
+                text = py_file.read_text(encoding="utf-8")
+                string_blocks = re.findall(r'"""([\s\S]*?)"""', text)
+                for block in string_blocks:
+                    sep_count = len(separator_re.findall(block))
+                    if sep_count >= 2 and len(block) > 200:
+                        rel = str(py_file.relative_to(REPO_ROOT))
+                        hallazgos.append(
+                            f"Posible bloque de reglas inline en {rel} "
+                            f"({len(block)} chars, {sep_count} separadores '---'). "
+                            "Considerar mover a docs/ y referenciar."
+                        )
+                        break  # one warning per file is enough
+
+        # 3b — Prompts generadores: detectar secciones normativas incrustadas
+        normative_section_re = re.compile(
+            r"^#{1,3}\s*(REGLAS|RESTRICCIONES ABSOLUTAS|NORMAS|PROHIBICIONES)\s*$",
+            re.MULTILINE | re.IGNORECASE,
+        )
+        generadores_dir = REPO_ROOT / "prompts" / "generadores"
+        if generadores_dir.exists():
+            for md_file in sorted(generadores_dir.glob("*.md")):
+                if md_file.name.lower() == "readme.md":
+                    continue
+                text = md_file.read_text(encoding="utf-8")
+                if normative_section_re.search(text):
+                    rel = str(md_file.relative_to(REPO_ROOT))
+                    hallazgos.append(
+                        f"Sección normativa incrustada en prompt {rel}. "
+                        "Usar referencia a docs/governance/ en lugar de copiar el contenido."
+                    )
+
+        # 3c — Comparación de fragmentos: verificar que prompts no repitan párrafos de gobernanza
+        governance_dir = REPO_ROOT / "docs" / "governance"
+        governance_fingerprints: set[str] = set()
+        MIN_PARA_LEN = 60
+        if governance_dir.exists():
+            for md_file in governance_dir.glob("*.md"):
+                text = md_file.read_text(encoding="utf-8")
+                for para in re.split(r"\n\s*\n", text):
+                    clean = para.strip()
+                    if len(clean) >= MIN_PARA_LEN and not clean.startswith("#"):
+                        governance_fingerprints.add(clean[:120])
+
+        prompts_dir = REPO_ROOT / "prompts"
+        if prompts_dir.exists() and governance_fingerprints:
+            for md_file in prompts_dir.rglob("*.md"):
+                if "generadores" in str(md_file) and md_file.name.lower() == "readme.md":
+                    continue
+                text = md_file.read_text(encoding="utf-8")
+                copied = [fp for fp in governance_fingerprints if fp in text]
+                if copied:
+                    rel = str(md_file.relative_to(REPO_ROOT))
+                    hallazgos.append(
+                        f"Contenido de gobernanza copiado literalmente en {rel} "
+                        f"({len(copied)} fragmento(s) coincidente(s)). "
+                        "Usar referencia en lugar de copia."
+                    )
+
+        status = "PASS" if not hallazgos else ("WARN" if len(hallazgos) <= 2 else "FAIL")
+        return {
+            "id": "reglas_incrustadas",
+            "nombre": "Sin reglas incrustadas en scripts/prompts",
+            "descripcion": (
+                "Verifica que scripts y prompts no contengan reglas o contexto copiados inline. "
+                "Deben usar referencias a los archivos fuente para que siempre tomen los valores más recientes."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _audit_check_integridad_registros() -> dict:
+        """Check 4 (recomendado): todos los archivos listados en los registros existen."""
+        hallazgos: list[str] = []
+        ref_pattern = re.compile(r"^\s*-\s+(docs/\S+\.md)", re.MULTILINE)
+        registries = [
+            REPO_ROOT / "docs" / "context" / "CONTEXT_REGISTRY.md",
+            REPO_ROOT / "docs" / "governance" / "RULES_REGISTRY.md",
+        ]
+        for registry_path in registries:
+            if not registry_path.exists():
+                hallazgos.append(
+                    f"Registro no encontrado: {str(registry_path.relative_to(REPO_ROOT))}"
+                )
+                continue
+            text = registry_path.read_text(encoding="utf-8")
+            for ref in ref_pattern.findall(text):
+                target = REPO_ROOT / ref
+                if not target.exists():
+                    rel_reg = str(registry_path.relative_to(REPO_ROOT))
+                    hallazgos.append(
+                        f"[{rel_reg}] Archivo referenciado no existe: {ref}"
+                    )
+
+        status = "PASS" if not hallazgos else "FAIL"
+        return {
+            "id": "integridad_registros",
+            "nombre": "Integridad de registros",
+            "descripcion": (
+                "Verifica que todos los archivos listados en CONTEXT_REGISTRY.md y RULES_REGISTRY.md "
+                "existan físicamente en el repositorio."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _audit_check_marcadores_borrador() -> dict:
+        """Check 5 (recomendado): prompts finales no tienen marcadores pendientes."""
+        hallazgos: list[str] = []
+        draft_pattern = re.compile(
+            r"\[(?:DEFINIR|PENDIENTE|COLOCAR_AQUI|COLOCAR_AQUÍ|TODO|FIXME)[_\]]",
+            re.IGNORECASE,
+        )
+        generadores_dir = REPO_ROOT / "prompts" / "generadores"
+        if generadores_dir.exists():
+            for md_file in sorted(generadores_dir.glob("*.md")):
+                if md_file.name.lower() == "readme.md":
+                    continue
+                text = md_file.read_text(encoding="utf-8")
+                matches = draft_pattern.findall(text)
+                if matches:
+                    rel = str(md_file.relative_to(REPO_ROOT))
+                    unique_markers = list(dict.fromkeys(matches))[:4]
+                    hallazgos.append(
+                        f"{rel}: {len(matches)} marcador(es) de borrador → "
+                        + ", ".join(unique_markers)
+                    )
+
+        status = "PASS" if not hallazgos else "FAIL"
+        return {
+            "id": "marcadores_borrador",
+            "nombre": "Sin marcadores de borrador en prompts finales",
+            "descripcion": (
+                "Verifica que los prompts en prompts/generadores/ no contengan marcadores pendientes "
+                "como [DEFINIR_*] o [PENDIENTE_*]. Su presencia indica que el prompt es un borrador."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _audit_check_metadatos_documentos() -> dict:
+        """Check 6 (recomendado): documentos clave tienen metadatos de fecha y no están desactualizados."""
+        hallazgos: list[str] = []
+        date_re = re.compile(r"[Úú]ltima actualizaci[oó]n[:\s]*(\d{4}-\d{2}-\d{2})", re.IGNORECASE)
+        STALE_DAYS = 90
+        today = datetime.now().date()
+
+        key_docs = [
+            REPO_ROOT / "docs" / "governance" / "GLOBAL_RULES.md",
+            REPO_ROOT / "docs" / "governance" / "SYSTEM_CONTRACT.md",
+            REPO_ROOT / "docs" / "governance" / "AI_PROMPT_SYSTEM_RULES.md",
+            REPO_ROOT / "docs" / "governance" / "RULES_REGISTRY.md",
+            REPO_ROOT / "docs" / "context" / "AI_PROMPT_SYSTEM_CONTEXT.md",
+            REPO_ROOT / "docs" / "context" / "PROJECT_CONTEXT.md",
+            REPO_ROOT / "docs" / "context" / "SYSTEM_OVERVIEW.md",
+            REPO_ROOT / "docs" / "context" / "CONTEXT_REGISTRY.md",
+        ]
+
+        for doc_path in key_docs:
+            rel = str(doc_path.relative_to(REPO_ROOT))
+            if not doc_path.exists():
+                hallazgos.append(f"Documento clave no encontrado: {rel}")
+                continue
+            text = doc_path.read_text(encoding="utf-8")
+            match = date_re.search(text)
+            if not match:
+                hallazgos.append(f"Sin campo 'Última actualización' en: {rel}")
+            else:
+                try:
+                    doc_date = datetime.strptime(match.group(1), "%Y-%m-%d").date()
+                    delta = (today - doc_date).days
+                    if delta > STALE_DAYS:
+                        hallazgos.append(
+                            f"Documento posiblemente desactualizado ({delta} días sin revisión): {rel}"
+                        )
+                except ValueError:
+                    hallazgos.append(f"Fecha de actualización con formato inválido en: {rel}")
+
+        status = "PASS" if not hallazgos else ("WARN" if all("desactualizado" in h for h in hallazgos) else "FAIL")
+        return {
+            "id": "metadatos_documentos",
+            "nombre": "Consistencia de metadatos de documentos",
+            "descripcion": (
+                "Verifica que los documentos clave tengan el campo 'Última actualización' "
+                f"y que no lleven más de {STALE_DAYS} días sin revisión."
+            ),
+            "status": status,
+            "hallazgos": hallazgos,
+            "total_hallazgos": len(hallazgos),
+        }
+
+    @staticmethod
+    def _run_audit() -> dict:
+        checks = [
+            Handler._audit_check_separacion_funcional(),
+            Handler._audit_check_contradicciones_normativas(),
+            Handler._audit_check_reglas_incrustadas(),
+            Handler._audit_check_integridad_registros(),
+            Handler._audit_check_marcadores_borrador(),
+            Handler._audit_check_metadatos_documentos(),
+        ]
+        resumen = {
+            "total": len(checks),
+            "pass":  sum(1 for c in checks if c["status"] == "PASS"),
+            "warn":  sum(1 for c in checks if c["status"] == "WARN"),
+            "fail":  sum(1 for c in checks if c["status"] == "FAIL"),
+        }
+        return {
+            "timestamp": datetime.now().isoformat(timespec="seconds"),
+            "checks": checks,
+            "resumen": resumen,
+        }
 
     @staticmethod
     def _prompt_generation_requests_seed() -> list[dict]:
@@ -327,6 +710,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return
             self._send_utilerias_html()
 
+        elif self.path in ("/auditoria", "/auditoria.html"):
+            if not AUDITORIA_HTML_FILE.exists():
+                self._send_json({"error": "No existe web/auditoria.html."}, 404)
+                return
+            self._send_auditoria_html()
+
         elif self.path == "/api/utilerias/requests":
             self._send_json(
                 {
@@ -391,6 +780,14 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     "message": "Reportes de validación limpiados.",
                 }
             )
+
+        elif self.path == "/api/auditoria/run":
+            try:
+                result = self._run_audit()
+            except Exception as exc:
+                self._send_json({"error": f"Error interno al ejecutar la auditoría: {exc}"}, 500)
+                return
+            self._send_json(result)
 
         elif self.path == "/api/utilerias/process":
             payload, error = self._read_request_json()
