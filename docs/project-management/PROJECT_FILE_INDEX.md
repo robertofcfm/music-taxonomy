@@ -285,9 +285,9 @@ Explica la separación operativa de actividades.
 
 docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
 
-Contexto del sistema de plantillas de prompt para IA.
-Explica el modelo abstracto/concreto, herencia, capas
-y criterios de uso por escenario.
+Contexto del sistema de composicion de prompts para IA.
+Explica capas, seleccion de imports y criterios de uso
+por escenario.
 
 --------------------------------------------------
 11. DOCUMENTACIÓN DE GOBERNANZA
@@ -345,7 +345,7 @@ Checklist para validar calidad taxonómica.
 
 docs/governance/AI_PROMPT_SYSTEM_RULES.md
 
-Reglas que gobiernan el uso y composición de plantillas
+Reglas que gobiernan el uso y composicion
 de prompt para IA. Contiene principios de composición,
 regla de selección y protocolo de cierre de conversación.
 
@@ -366,25 +366,19 @@ Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
 
-docs/operations/AI_PROMPT_BASE_TEMPLATE.md
+prompts/prompt_bootstrap_generador_prompts_v1.md
 
-Plantilla base abstracta para prompts de IA.
-Contiene solo IMPORTS a contexto y reglas,
-más la definición estructural de la plantilla.
-
---------------------------------------------------
-
-docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md
-
-Especializa la plantilla base para instancias cuyo
-objetivo sea producir un prompt final.
+Prompt base recomendado para generar prompts operativos
+por composicion dinamica de contexto y reglas.
 
 --------------------------------------------------
 
-docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md
+prompts/prompt_operativo_base_v2.md
 
-Especializa la plantilla base para instancias cuyo
-objetivo sea producir una tarea operativa específica.
+Plantilla corta estandar para redactar prompts
+operativos con imports clasificados y cierre.
+
+--------------------------------------------------
 
 Nota de ubicación:
 
@@ -392,8 +386,7 @@ Los prompts operativos finales deben almacenarse en:
 
 prompts/
 
-docs/operations/ contiene plantillas y marcos base,
-no prompts finales de ejecución.
+docs/operations/ contiene soporte documental operativo.
 
 --------------------------------------------------
 13. DOCUMENTACIÓN DE GESTIÓN DEL PROYECTO

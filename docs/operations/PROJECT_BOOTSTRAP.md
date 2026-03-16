@@ -103,36 +103,40 @@ docs/project-management/PROJECT_CHECKPOINT_*.md
 Ayudan a restaurar contexto si el proyecto se retoma
 después de un periodo largo.
 
---------------------------------------------------
-5A. PLANTILLA BASE PARA IA
+5A. COMPOSICIÓN DE PROMPTS IA
 --------------------------------------------------
 
 Para sesiones asistidas por IA que requieran carga selectiva
-de reglas y contexto, usar además:
+de reglas y contexto, usar prompts operativos en:
 
-docs/operations/AI_PROMPT_BASE_TEMPLATE.md
+prompts/
 
-Y, según el tipo de instancia a generar, uno de estos
-templates hijos:
+Prompt bootstrap recomendado:
 
-- docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_PROMPT.md
-- docs/operations/AI_PROMPT_BASE_TEMPLATE_TIPO_TAREA.md
+- prompts/prompt_bootstrap_generador_prompts_v1.md
 
-Este documento define una plantilla reusable para declarar:
+Plantilla corta estandar recomendada:
+
+- prompts/prompt_operativo_base_v2.md
+
+Este enfoque debe construir el prompt final cargando de forma
+explícita documentos desde:
+
+- docs/context/
+- docs/governance/
+
+La selección de imports se declara por grupos:
 
 - documentos obligatorios
 - documentos condicionales
 - documentos referenciales
 - documentos excluidos
 
-La plantilla base actúa como template padre.
-Los templates hijos especializan definiciones según:
+Reglas de uso:
 
-- [TIPO_TEMPLATE] = Prompt
-- [TIPO_TEMPLATE] = Tarea
-
-Su uso ayuda a evitar prompts demasiado grandes o con
-contexto irrelevante.
+- evitar cargar contexto no activado por la tarea
+- reportar conflictos normativos antes de ejecutar
+- mantener presupuesto de contexto corto
 
 --------------------------------------------------
 6. ARCHIVOS DE ENTRADA DE CLASIFICACIÓN

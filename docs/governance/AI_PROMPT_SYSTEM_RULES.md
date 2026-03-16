@@ -1,4 +1,4 @@
-# REGLAS DEL SISTEMA DE PLANTILLAS DE PROMPT
+# REGLAS DEL SISTEMA DE COMPOSICION DE PROMPTS
 Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
@@ -7,8 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Reglas que gobiernan el uso y composición de plantillas
-de prompt para IA en este proyecto.
+Reglas que gobiernan la composicion de prompts para IA
+en este proyecto.
 
 Propietario:
 
@@ -134,7 +134,7 @@ PASO 4 — PUNTO DE REANUDACIÓN
 
 El resumen generado en el PASO 1 se carga al iniciar
 la siguiente sesión como contexto inicial junto con
-la plantilla base mínima.
+el prompt operativo base.
 
 MENSAJE TIPO PARA SOLICITAR RESPALDO
 

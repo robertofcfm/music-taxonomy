@@ -1,4 +1,4 @@
-# CONTEXTO DEL SISTEMA DE PLANTILLAS DE PROMPT
+# CONTEXTO DEL SISTEMA DE COMPOSICION DE PROMPTS
 Sistema de Taxonomía de Géneros Musicales
 
 --------------------------------------------------
@@ -7,9 +7,8 @@ METADATOS DEL DOCUMENTO
 
 Alcance:
 
-Contexto del sistema de plantillas de prompt para IA.
-Explica el modelo abstracto/concreto, la herencia,
-la división en capas y los criterios por escenario.
+Contexto del sistema de composicion de prompts para IA.
+Explica capas, seleccion de imports y criterios por escenario.
 
 Propietario:
 
@@ -23,7 +22,7 @@ Propietario del proyecto
 1. VIABILIDAD DEL MODELO
 --------------------------------------------------
 
-La estrategia de usar plantillas con carga selectiva es VIABLE.
+La estrategia de componer prompts con carga selectiva es VIABLE.
 
 Pero debe entenderse correctamente:
 
@@ -33,42 +32,40 @@ Pero debe entenderse correctamente:
   por una plantilla operativa.
 
 --------------------------------------------------
-2. MODELO ABSTRACTO / CONCRETO
+2. MODELO DE COMPOSICIÓN
 --------------------------------------------------
 
-La plantilla base es un documento ABSTRACTO.
+Un prompt operativo debe construirse con un nucleo pequeno
+y modulos seleccionados por tarea.
 
-Contiene la estructura base, principios y criterios
-pero no tiene los valores de una tarea particular.
+La composicion define principios y criterios,
+mas no obliga una herencia formal de templates.
 
-Su función es equivalente a una clase abstracta.
+Se puede usar una guia base, pero el resultado final
+debe quedar como prompt concreto y ejecutable.
 
-Puede contener contratos, campos obligatorios y bloques
-marcados como pendientes de implementación.
+Debe declarar imports por grupos y justificar cobertura.
 
-Formato recomendado para contratos abstractos:
+Formato recomendado para declaracion de composicion:
 
 - [DEFINIR_TAREA]
 - [DEFINIR_OBJETIVO]
-- [TIPO_TEMPLATE]
 - [DEFINIR_IMPORTS_MANDATORY]
 - [DEFINIR_IMPORTS_CONDITIONAL]
 - [DEFINIR_IMPORTS_REFERENTIAL]
+- [DEFINIR_IMPORTS_EXCLUDED]
 - [DEFINIR_RESTRICCIONES]
 - [DEFINIR_CRITERIO_CIERRE]
 
-Mientras una plantilla conserve marcadores de este tipo,
-debe considerarse ABSTRACTA.
+Mientras el documento conserve marcadores de este tipo,
+debe considerarse BORRADOR.
 
-Para cada tipo de trabajo se genera una INSTANCIA CONCRETA:
-un documento específico con los imports ya resueltos,
-los archivos seleccionados y el objetivo definido.
+Para cada tipo de trabajo se genera un PROMPT CONCRETO:
+un documento con imports resueltos, archivos seleccionados
+y objetivo definido.
 
-La instancia concreta es equivalente a una clase que
-implementa todos los contratos abstractos.
-
-Una instancia concreta solo se considera LISTA PARA USO
-FINAL si no conserva marcadores abstractos pendientes.
+Un prompt concreto solo se considera LISTO PARA USO
+FINAL si no conserva marcadores pendientes.
 
 Si todavía contiene bloques como:
 
@@ -76,26 +73,25 @@ Si todavía contiene bloques como:
 - [COLOCAR_AQUI_*]
 - [PENDIENTE_*]
 
-entonces sigue siendo una plantilla parcial o un borrador,
-no un documento final de trabajo.
+entonces sigue siendo un borrador y no un documento
+final de trabajo.
 
-Para generar una instancia concreta:
+Para generar un prompt concreto:
 
-Una IA lee la plantilla abstracta y produce el documento
-de prompt particular para la tarea indicada.
+Una IA selecciona contexto y reglas, y construye el
+documento final para la tarea indicada.
 
 Ventaja principal:
 
 Si un documento fuente del proyecto se actualiza,
-solo hay que regenerar la instancia concreta a partir
-de la plantilla abstracta para que los cambios queden
-aplicados sin editar el prompt a mano.
+solo hay que recomponer el prompt concreto para que
+los cambios queden aplicados sin edicion manual extensa.
 
 --------------------------------------------------
-3. MODELO DE HERENCIA
+3. MODELO DE ESTRUCTURACIÓN
 --------------------------------------------------
 
-El sistema usa un solo TEMPLATE PADRE por instancia.
+El sistema usa una estructura lineal por instancia.
 
 Restricción:
 

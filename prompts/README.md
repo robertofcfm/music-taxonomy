@@ -5,7 +5,8 @@ Esta carpeta centraliza los prompts operativos del repositorio.
 Uso recomendado:
 - Guardar aqui prompts finales listos para ejecucion.
 - Mantener nombres descriptivos por flujo o tarea.
-- Evitar duplicar plantillas base que ya viven en docs/operations/.
+- Componer prompts cargando solo archivos necesarios desde docs/context/ y docs/governance/.
+- Declarar imports en grupos: MANDATORY, CONDITIONAL, REFERENTIAL y EXCLUDED.
 
 Ejemplos de nombres:
 - classify_songs_prompt_v1.txt
@@ -13,3 +14,9 @@ Ejemplos de nombres:
 
 Prompt inicial recomendado:
 - prompt_bootstrap_generador_prompts_v1.md
+
+Plantilla corta estandar recomendada:
+- prompt_operativo_base_v2.md
+
+Nota:
+- El flujo recomendado para prompts nuevos vive en esta carpeta.
