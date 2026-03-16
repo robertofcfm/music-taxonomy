@@ -332,14 +332,15 @@
   <div class="info">
     <h2>Validación de Taxonomía Maestra</h2>
     <p>
-      Ejecuta la validación determinista de Capa 1 y genera el prompt manual de Capa 2 sobre
+      Ejecuta la validación determinista de Capa 1 sobre
       <code>taxonomy/genre_tree_master.md</code>.
-      Luego copia el prompt a una IA externa, pega aquí el JSON de respuesta y el sistema generará el reporte estructurado de Capa 2.
+      El prompt de Capa 2 se regenera automáticamente al mostrarse para copiarlo.
+      Luego pégalo en una IA externa, trae el JSON de respuesta y el sistema generará el reporte estructurado de Capa 2.
     </p>
   </div>
   <button class="btn btn-primary" id="btnRun" onclick="runValidation()">
     <span class="spinner" id="spinner"></span>
-    <span id="btnLabel">Ejecutar Capa 1 y Generar Prompt L2</span>
+    <span id="btnLabel">Ejecutar Capa 1</span>
   </button>
 </div>
 
@@ -473,7 +474,7 @@
     document.getElementById('btnApplyL2').disabled = true;
 
     document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Capa 1 y Generar Prompt L2".</td></tr>`;
+      `<tr><td colspan="5" class="empty">Sin ejecución en esta sesión. Presiona "Ejecutar Capa 1".</td></tr>`;
     document.getElementById('tbodyL2').innerHTML =
       `<tr><td colspan="6" class="empty">Sin procesamiento de Capa 2 en esta sesión. Ejecuta primero la Capa 1.</td></tr>`;
   }
@@ -670,7 +671,7 @@
     } finally {
       btn.disabled = false;
       spinner.style.display = 'none';
-      label.textContent = 'Ejecutar Capa 1 y Generar Prompt L2';
+      label.textContent = 'Ejecutar Capa 1';
     }
   }
 

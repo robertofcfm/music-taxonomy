@@ -1,6 +1,6 @@
 {
   "process": "MVET-LAYER2",
-  "generated_at": "2026-03-16T03:19:14+00:00",
+  "generated_at": "2026-03-16T03:51:48+00:00",
   "schema_errors": [],
   "summary": {
     "decision": "FAIL",
@@ -21,8 +21,8 @@
       "fb": "FB-04",
       "severity": "FATAL",
       "node_path": "Music > Pop > Pop Rock > Latin Pop Rock",
-      "evidence": "El nodo 'Latin Pop Rock' se encuentra bajo la rama 'Pop', que es de dominio no-Latin, violando la separación obligatoria e inviolable entre géneros Latin y no-Latin.",
-      "recommendation": "Reubicar 'Latin Pop Rock' o sus elementos bajo la rama raíz 'Latin' para mantener la integridad de dominios.",
+      "evidence": "Se detectó un nodo de dominio 'Latin' (Latin Pop Rock) ubicado dentro de una rama de dominio 'no-Latin' (Pop Rock), violando la separación obligatoria e inviolable de dominios.",
+      "recommendation": "Mover 'Latin Pop Rock' a una rama bajo el nodo raíz 'Latin' o crear un nodo clone en la ubicación actual que apunte a una ubicación canónica dentro del dominio 'Latin'.",
       "confidence": 1.0,
       "schema_valid": true,
       "schema_error": ""
@@ -31,31 +31,9 @@
       "rule_id": "MVET-L2-001",
       "fb": "FB-05",
       "severity": "WARNING",
-      "node_path": "Music > Rock > Alternative & Indie > Grunge > Seattle Grunge",
-      "evidence": "La distinción musical entre 'Seattle Grunge' y el nodo padre 'Grunge' (o su hermano 'Post-Grunge') a nivel de playlist es mínima; el Grunge es inherentemente de Seattle en su origen, generando contenido indistinguible.",
-      "recommendation": "Fusionar 'Seattle Grunge' con el nodo padre 'Grunge' para evitar redundancia geográfica.",
-      "confidence": 0.9,
-      "schema_valid": true,
-      "schema_error": ""
-    },
-    {
-      "rule_id": "MVET-L2-001",
-      "fb": "FB-05",
-      "severity": "WARNING",
-      "node_path": "Music > Rock > Classic Rock > Hard Rock > Hard Rock (General)",
-      "evidence": "El nodo 'Hard Rock (General)' es musicalmente indistinguible de su nodo padre 'Hard Rock'. Los nodos 'General' suelen ser redundantes si no hay subgéneros específicos que lo diferencien.",
-      "recommendation": "Eliminar el nodo 'Hard Rock (General)' y utilizar el nodo padre para el contenido genérico.",
-      "confidence": 0.95,
-      "schema_valid": true,
-      "schema_error": ""
-    },
-    {
-      "rule_id": "MVET-L2-006",
-      "fb": "FB-06",
-      "severity": "WARNING",
-      "node_path": "Music > Rock > Alternative & Indie > Post Punk > New Wave",
-      "evidence": "Aunque históricamente vinculados, la New Wave evolucionó hacia estructuras pop y sintéticas que encajarían mejor como un puente hacia 'Synth Pop' o en una categoría de mayor espectro debido a su limpieza sonora frente al Post Punk.",
-      "recommendation": "Evaluar la reubicación de 'New Wave' o crear una relación transversal, dado que su cohesión con 'Gothic Rock' es baja.",
+      "node_path": "Music > Rock > Alternative & Indie > Indie Rock > Brit Pop",
+      "evidence": "El Brit Pop, aunque históricamente ligado al Indie Rock, presenta estructuras melódicas y de producción que a menudo lo acercan más al Pop Rock o Alternative Pop Rock, generando potencial indistinguibilidad en playlists de Indie Rock purista.",
+      "recommendation": "Evaluar si Brit Pop debe ser un nodo hermano de Indie Rock en lugar de un hijo, para mantener la cohesión de la rama Indie.",
       "confidence": 0.85,
       "schema_valid": true,
       "schema_error": ""
@@ -64,9 +42,31 @@
       "rule_id": "MVET-L2-003",
       "fb": "FB-05",
       "severity": "WARNING",
+      "node_path": "Music > Rock > Alternative & Indie > Post Punk > New Wave",
+      "evidence": "Existe un solapamiento significativo entre New Wave y Synth Pop (ubicado en la rama Pop). Muchos artistas de New Wave son indistinguibles de los de Synth Pop en una selección musical automatizada.",
+      "recommendation": "Considerar el uso de nodos clone para conectar estas identidades o definir criterios de segmentación tímbrica más estrictos.",
+      "confidence": 0.9,
+      "schema_valid": true,
+      "schema_error": ""
+    },
+    {
+      "rule_id": "MVET-L2-005",
+      "fb": "FB-05",
+      "severity": "WARNING",
+      "node_path": "Music > Latin > Regional Mexicano / Texano > Norteño > Norteño Clásico",
+      "evidence": "Nodos como Norteño Clásico y Norteño Moderno han alcanzado el límite de especificidad musical útil para la gestión de catálogos generales; subdividir más fragmentaría la audiencia sin beneficio sonoro claro.",
+      "recommendation": "Marcar estos nodos como Atomic para evitar sobre-fragmentación futura.",
+      "confidence": 0.95,
+      "schema_valid": true,
+      "schema_error": ""
+    },
+    {
+      "rule_id": "MVET-L2-006",
+      "fb": "FB-06",
+      "severity": "WARNING",
       "node_path": "Music > Pop > Synth & Electronic Pop > Electronic Dream Pop",
-      "evidence": "Existe un solapamiento potencial con 'Music > Rock > Alternative & Indie > Dream Pop'. La distinción entre ambos suele ser la instrumentación (sintetizadores vs guitarras), pero en playlists modernas suelen mezclarse.",
-      "recommendation": "Definir criterios atómicos estrictos para separar ambos o considerar una referencia cruzada.",
+      "evidence": "Musicalmente, el Electronic Dream Pop comparte más texturas y estructuras con Dream Pop (ubicado en Rock > Alternative & Indie) que con el Synth Pop convencional.",
+      "recommendation": "Evaluar la reubicación como hijo de Dream Pop o establecer una relación de proximidad mediante nodos clone.",
       "confidence": 0.8,
       "schema_valid": true,
       "schema_error": ""

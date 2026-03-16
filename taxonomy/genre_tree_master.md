@@ -35,7 +35,6 @@ Music
 
   Pop
     Pop Rock
-      Latin Pop Rock
       Alternative Pop Rock
       Power Pop
 
@@ -58,6 +57,13 @@ Music
   Hip Hop
 
   Latin
+
+    Rock Latino
+
+    Pop Latino
+
+    Hip Hop Latino
+
     Regional Mexicano / Texano
       Norteño
         Norteño Clásico

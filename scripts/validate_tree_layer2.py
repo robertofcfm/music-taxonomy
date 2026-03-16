@@ -178,6 +178,49 @@ PRINCIPIOS OBLIGATORIOS:
   El sistema solo puede sugerir; nunca modificar.
 """
 
+CLONE_CONTEXT = """\
+=== CONTEXTO NORMATIVO Y OPERATIVO ===
+
+Fuentes normativas MANDATORY para esta validación:
+- docs/governance/GLOBAL_RULES.md
+- docs/governance/SYSTEM_CONTRACT.md
+- docs/governance/TAXONOMY_RULES.md
+- docs/governance/TAXONOMY_DEPTH_POLICY.md
+- docs/governance/TAXONOMY_NAMING_CONVENTION.md
+- docs/governance/TAXONOMY_QUALITY_CHECKLIST.md
+
+Fuente CONDITIONAL (solo cuando aplique escenario post-cambio/pre-release):
+- docs/governance/TAXONOMY_CHANGE_POLICY.md
+
+Precedencia y alcance:
+- No inventar reglas fuera del corpus normativo.
+- Si hay conflicto interpretativo, prioriza SYSTEM_CONTRACT y GLOBAL_RULES.
+- Usa documentos referenciales solo como contexto, no como fuente de reglas nuevas.
+
+Glosario operativo mínimo para Capa 2:
+
+Nodo clone:
+- Nodo portal que referencia un nodo canónico.
+- No tiene hijos ni contiene canciones.
+- Existe para navegación y soporte de clasificación.
+
+Nodo General:
+- Nodo de respaldo para contenido válido del dominio del padre
+    que no encaja en subgéneros más específicos.
+
+Nodo Atomic:
+- Nodo hoja que no debe subdividirse más sin perder coherencia musical.
+
+Identificación operativa para esta validación:
+- Si un nodo está marcado explícitamente como clone, trátalo como clone.
+- Si el nombre del nodo contiene la palabra "clone", trátalo como clone.
+- Si el nombre del nodo contiene el marcador "->", trátalo como clone.
+
+Instrucción de evaluación:
+- Cuando una regla indique excluir nodos clone, exclúyelos completamente del análisis.
+- No reportes como conflicto semántico una mezcla Latin/no-Latin si la aparente mezcla ocurre solo por nodos clone.
+"""
+
 
 def build_prompt(taxonomy_text: str) -> str:
     rules_block = "\n".join(
@@ -209,6 +252,7 @@ def build_prompt(taxonomy_text: str) -> str:
 }"""
 
     return f"""{SYSTEM_CONTEXT}
+{CLONE_CONTEXT}
 === REGLAS DE VALIDACIÓN A APLICAR ===
 
 {rules_block}
