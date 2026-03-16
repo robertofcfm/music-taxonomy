@@ -10,10 +10,11 @@ Music
         Seattle Grunge (Atomic)
         Post-Grunge
       Dream Pop (Atomic)
-      New Wave
-      Post Punk
-        Gothic Rock
-        Coldwave / Darkwave
+      Post-Punk Era (Structural)
+        New Wave
+        Post Punk
+          Gothic Rock
+          Coldwave / Darkwave (Atomic)
 
     Classic Rock
       Rock & Roll

@@ -1,39 +1,45 @@
 # Reporte de Validación MVET (Capa 2 — Semántica IA)
 
-- Fecha: 2026-03-16T06:24:21+00:00
+- Fecha: 2026-03-16T06:32:04+00:00
 - Decisión: PASS_WITH_WARNINGS
 - FATAL: 0
-- WARNING: 5
+- WARNING: 6
 - SUGGESTION: 0
 
 ## Hallazgos
 
 ### MVET-L2-001 [FB-05] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > Post Punk
-- Evidencia: Los géneros hermanos Gothic Rock, Coldwave y Darkwave comparten raíces directas en el movimiento post-punk y presentan instrumentación, estética y tempo muy similares. En muchos catálogos musicales y playlists editoriales, las canciones de estos tres estilos suelen mezclarse sin una separación clara.
-- Recomendación: Revisar si los criterios de diferenciación musical entre Gothic Rock, Coldwave y Darkwave están suficientemente definidos para justificar tres nodos hermanos independientes. Si no existen criterios curatoriales claros, considerar consolidación conceptual o documentación adicional que justifique la separación.
-- Confianza: 0.82
+- Nodo: Music > Rock > Alternative & Indie
+- Evidencia: New Wave and Post Punk appear as sibling genres under the same parent. Historically and musically these styles share a large overlap of artists, production aesthetics, and era (late 1970s–1980s), and many playlists would contain both without clear separation.
+- Recomendación: Review whether both nodes provide sufficiently distinct playlist identities within this branch, or whether clearer structural separation or contextualization under a different structural grouping would improve musical distinction.
+- Confianza: 0.78
 
 ### MVET-L2-002 [FB-05] - WARNING
-- Nodo: Music > Latin > Regional Mexicano / Texano
-- Evidencia: El nodo agrupa estilos con diferencias musicales marcadas: Norteño, Texano, Banda y Ranchero presentan instrumentación, tradición interpretativa y estructuras rítmicas distintas. La mezcla indiscriminada dentro del nodo padre podría generar playlists estilísticamente inconsistentes.
-- Recomendación: Mantener el nodo como agrupador estructural si su propósito es navegación regional, pero considerar documentar explícitamente que funciona como agrupador estructural y no como género reproducible para playlists.
-- Confianza: 0.87
+- Nodo: Music > Latin > Regional Mexicano / Texano (Structural)
+- Evidencia: The node aggregates Norteño, Texano, Banda, and Ranchero, which are distinct traditions with different instrumentation and rhythmic structures. If content were placed directly at the structural node rather than within its children, playlists could mix highly different styles.
+- Recomendación: Ensure the structural node functions strictly as an organizational container and that musical content is assigned to its specific child genres to maintain playlist cohesion.
+- Confianza: 0.86
 
 ### MVET-L2-003 [FB-05] - WARNING
-- Nodo: Music > Pop > Synth & Electronic Pop
-- Evidencia: Synth Pop y Electro Pop pueden solaparse significativamente en producción musical, instrumentación electrónica y estética sonora. En muchos catálogos contemporáneos ambos términos se utilizan de manera intercambiable.
-- Recomendación: Verificar que existan criterios curatoriales claros para diferenciar Synth Pop y Electro Pop dentro del árbol. Si la distinción se basa en época, estética o producción específica, debería documentarse para evitar redundancia taxonómica.
-- Confianza: 0.76
-
-### MVET-L2-006 [FB-06] - WARNING
-- Nodo: Music > Rock > Alternative & Indie > New Wave
-- Evidencia: New Wave históricamente deriva del movimiento post-punk y comparte rasgos estilísticos con ese ecosistema musical. Su ubicación directa bajo Alternative & Indie puede ocultar su relación estructural con Post Punk.
-- Recomendación: Evaluar si New Wave funcionaría mejor como nodo hermano o subnodo dentro del dominio conceptual de Post Punk, o si su posición actual responde a una decisión editorial deliberada basada en uso contemporáneo.
-- Confianza: 0.63
+- Nodo: Music > Rock > Alternative & Indie > Post Punk > Coldwave / Darkwave
+- Evidencia: The node label combines two historically related but distinct scenes (Coldwave and Darkwave). These styles often overlap but are not identical and may function as separate genre labels in music classification systems.
+- Recomendación: Evaluate whether combining both labels into a single node introduces semantic redundancy or ambiguity in the taxonomy. Consider clarifying the intended scope of the node.
+- Confianza: 0.81
 
 ### MVET-L2-005 [FB-05] - WARNING
-- Nodo: Music > Rock > Classic Rock > Hard Rock
-- Evidencia: Hard Rock se marca como nodo Atomic. El género es ampliamente reconocido como estilo consolidado y subdividirlo adicionalmente dentro de esta rama podría introducir fragmentación innecesaria sin beneficio musical claro en esta taxonomía.
-- Recomendación: Mantener Hard Rock como nodo atómico dentro de esta estructura salvo que se introduzcan subgéneros con criterios curatoriales sólidos.
-- Confianza: 0.80
+- Nodo: Music > Rock > Alternative & Indie > Grunge > Seattle Grunge (Atomic)
+- Evidencia: Seattle Grunge represents a historically specific scene tied to a particular geographic and cultural context. Further subdivision would likely be arbitrary and reduce musical coherence.
+- Recomendación: Maintain this node as atomic unless a clearly recognized musical sub-style emerges that is widely accepted in musicological or industry classification.
+- Confianza: 0.90
+
+### MVET-L2-005 [FB-05] - WARNING
+- Nodo: Music > Rock > Alternative & Indie > Dream Pop (Atomic)
+- Evidencia: Dream Pop is already a well-established stylistic category defined by production aesthetics and atmospheric sound. Subdividing further would likely create artificial microgenres without clear musical boundaries.
+- Recomendación: Keep the node atomic unless a widely recognized and musically coherent subgenre appears.
+- Confianza: 0.88
+
+### MVET-L2-005 [FB-05] - WARNING
+- Nodo: Music > Pop > Synth & Electronic Pop > Electro Pop (Atomic)
+- Evidencia: Electro Pop functions as a recognizable genre boundary with consistent sonic identity centered on electronic production and pop song structures. Additional subdivision would likely reduce classification clarity.
+- Recomendación: Retain atomic status unless the taxonomy later incorporates major distinct electro-pop-derived substyles.
+- Confianza: 0.87
