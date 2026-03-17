@@ -45,6 +45,22 @@ No solicitar canciones manuales como entrada primaria.
 Solo permitir entrada manual para pruebas puntuales
 si el usuario lo pide de forma explicita.
 
+Campos de entrada esperados en songs_raw.csv:
+
+- title
+- artist
+
+Archivo de salida obligatorio:
+
+- catalog/songs_with_genres.csv
+
+Campos de salida obligatorios y orden:
+
+- title
+- artist
+- genres
+- taxonomy_version
+
 
 --------------------------------------------------
 PROTOCOLO DE CARGA DINAMICA (OBLIGATORIO)
@@ -147,6 +163,32 @@ Faltante detectado: Synthwave no existe en Music > Electronic
 
 Propuesta de ubicacion: Music > Electronic > Synthwave
 
+### Paso 8 - Escritura de salida en CSV
+
+Si la cancion recibe al menos un genero valido, agregar
+registro en catalog/songs_with_genres.csv con este esquema:
+
+- title: valor de entrada
+- artist: valor de entrada
+- genres: lista de generos en string delimitado por "|"
+- taxonomy_version: version activa informada para la corrida
+
+Si la cancion queda en GENRE_MISSING, NO escribir fila
+en songs_with_genres.csv para esa cancion.
+
+En todos los casos GENRE_MISSING, agregar reporte de faltante.
+
+### Paso 9 - Criterio de parada de ejecucion
+
+La corrida se ejecuta de forma continua hasta cumplir
+una de estas condiciones:
+
+1. Se termina el alcance solicitado (fila, rango o lote), o
+2. Se acumulan 5 reportes de genero faltante (GENRE_MISSING)
+
+Si se alcanza el limite de 5 faltantes, detener la corrida,
+cerrar con estado parcial y entregar resumen acumulado.
+
 --------------------------------------------------
 GOBERNANZA DE ASIGNACION
 --------------------------------------------------
@@ -198,6 +240,13 @@ FORMATO DE RESPUESTA OBLIGATORIO
 - genero_faltante_1: ubicacion_propuesta
 - motivo:
 - accion_sugerida:
+
+[CONTROL_DE_EJECUCION]
+- total_canciones_procesadas:
+- total_asignadas:
+- total_genre_missing:
+- umbral_faltantes: 5
+- stop_reason: FIN_ALCANCE | UMBRAL_FALTANTES
 
 [ESTADO_FINAL]
 - clasificacion_status: SUCCESS | PARTIAL | MISSING_GENRES
