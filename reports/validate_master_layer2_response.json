@@ -5,33 +5,132 @@
       "rule_id": "MVET-L2-001",
       "severity": "WARNING",
       "result": "FAIL",
-      "node_path": "Music > Pop > Synth & Electronic Pop",
-      "evidence": "Los hijos 'Synth Pop' y 'Electro Pop (Atomic)' conviven como hermanos bajo el mismo padre, pero sus fronteras no estan explicitadas y en catalogos reales suelen solaparse como pop electronico centrado en sintetizadores, con riesgo de playlists muy similares.",
-      "recommendation": "Definir un criterio musical mas estricto entre ambos nodos o convertir uno de ellos en una subdivision mas precisa/alias para evitar ambiguedad entre hermanos.",
-      "confidence": 0.67
+      "node_path": "Music > Rock > Post-Punk Era > New Wave",
+      "evidence": "New Wave y Post Punk comparten padre estructural (Post-Punk Era). New Wave emergió directamente del Post-Punk como versión más pop y sintetizada. Comparten artistas históricos y características sonoras. Una playlist de New Wave y una de Post Punk pueden resultar difíciles de distinguir sin criterios de asignación precisos y explícitos.",
+      "recommendation": "Documentar criterios de distinción operativa claros: New Wave prioriza melodías pop y sintetizadores con estética comercial; Post Punk prioriza experimentación, guitarras angulares y temática introspectiva. Confirmar que la clasificación aplica estos criterios consistentemente.",
+      "confidence": 0.75
+    },
+    {
+      "rule_id": "MVET-L2-001",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Classic Rock > Blues Rock > Texas Blues Rock",
+      "evidence": "Texas Blues Rock y Classic Blues Rock son hermanos bajo Blues Rock. La distinción (origen geográfico vs era clásica) es tenue desde perspectiva de playlist: ambos producen blues rock de guitarra tradicional. La diferencia sonora percibida entre una playlist de Texas Blues Rock y una de Classic Blues Rock sería mínima para la mayoría de los oyentes.",
+      "recommendation": "Evaluar si la distinción Texas/Classic produce playlists verdaderamente diferenciadas a juicio del propietario. Si no, considerar fusión en un único nodo Blues Rock (Atomic).",
+      "confidence": 0.80
+    },
+    {
+      "rule_id": "MVET-L2-001",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Post-Punk Era > Post Punk > Gothic Rock",
+      "evidence": "Gothic Rock y Coldwave / Darkwave comparten padre (Post Punk) y solapan significativamente en estética, instrumental y base de artistas. Ambos son géneros oscuros post-punk con guitarras procesadas, sintetizadores y bajo prominente. Sus playlists pueden resultar difíciles de distinguir sin criterios de asignación muy precisos.",
+      "recommendation": "Clarificar criterios de distinción operativa: p.ej. Gothic Rock prioriza temática gótica con guitarras reverberantes; Coldwave/Darkwave añade influencia electrónica industrial más fría. Si no se pueden distinguir con criterios claros y mutuamente excluyentes, evaluar fusión.",
+      "confidence": 0.85
     },
     {
       "rule_id": "MVET-L2-002",
       "severity": "WARNING",
       "result": "FAIL",
-      "node_path": "Music > Latin > Regional Mexicano / Texano (Structural)",
-      "evidence": "El nodo padre agrupa Norteño, Texano, Banda y Ranchero, subestilos con instrumentacion, enfoque ritmico y tradicion regional diferentes; una playlist tomada al nivel del padre tenderia a mezclar repertorios heterogeneos.",
-      "recommendation": "Mantener este nodo estrictamente como estructural y no como destino de playlist; si se necesitara uso operativo del padre, separar la rama mexicana regional de la texana en umbrellas estructurales mas cerrados.",
+      "node_path": "Music > Soul / Funk / R&B",
+      "evidence": "El nodo padre Soul / Funk / R&B contiene 'Funk' en su nombre, pero uno de sus hijos directos también se llama Funk. El otro hijo (Soul / Rhythm & Blues) cubre dos de los tres conceptos del padre. El nodo padre no está marcado como Agrupador Estructural explícito. Si se usara como destino de clasificación, produciría playlists inconsistentes mezclando Soul, Funk y R&B sin criterio claro de separación respecto a sus hijos.",
+      "recommendation": "Marcar Soul / Funk / R&B como Agrupador Estructural (Structural) para indicar que no debe recibir canciones directamente, o añadir un nodo Soul / Funk / R&B (General) como fallback explícito según la política de nodos General.",
+      "confidence": 0.70
+    },
+    {
+      "rule_id": "MVET-L2-003",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Post-Punk Era > Post Punk > Gothic Rock",
+      "evidence": "Gothic Rock y Coldwave / Darkwave (hermanos bajo Post Punk) representan territorios sonoros con solapamiento sustancial. Coldwave/Darkwave es históricamente una categoría que abarca influencias góticas del post-punk. Numerosos artistas aparecen clasificados en ambos géneros en fuentes de referencia musicales (Bauhaus, Christian Death, The Sisters of Mercy), sugiriendo redundancia parcial.",
+      "recommendation": "Evaluar si pueden mantenerse con criterios musicales mutuamente excluyentes. Si el solapamiento persiste en la práctica de clasificación, considerar fusión bajo un único nodo representativo (p.ej. Gothic Rock / Darkwave).",
       "confidence": 0.82
     },
     {
-      "rule_id": "MVET-L2-002",
+      "rule_id": "MVET-L2-003",
       "severity": "WARNING",
       "result": "FAIL",
-      "node_path": "Music > Rock > Alternative & Indie (Structural)",
-      "evidence": "El padre reune Indie Rock, Grunge, Dream Pop y material Post-Punk/New Wave bajo una sola umbrella; esos hijos pueden producir experiencias de escucha muy distintas y solo conservan coherencia clara como nodo de navegacion, no como bucket musical reproducible.",
-      "recommendation": "Conservar el nodo como agrupador puramente estructural y evitar usarlo como genero reproducible; si hace falta un nivel intermedio operativo, particionarlo en umbrellas mas estrechas por afinidad musical.",
-      "confidence": 0.74
+      "node_path": "Music > Rock > Indie Rock",
+      "evidence": "Indie Rock (bajo Rock) y Alternative Pop Rock (bajo Pop > Pop Rock) cubren territorios sonoros solapados: muchos artistas indie/alternativo producen música que califica simultáneamente como Indie Rock y Alternative Pop Rock. La coexistencia en ramas distintas (Rock vs Pop) puede generar redundancia de clasificación y duplicación de canciones entre catálogos.",
+      "recommendation": "Clarificar la distinción operativa entre Indie Rock y Alternative Pop Rock: p.ej. Indie Rock implica producción independiente y sonido más raw; Alternative Pop Rock implica mayor pulido de producción con orientación pop. Si no se puede distinguir con precisión, evaluar si uno de los dos nodos es prescindible.",
+      "confidence": 0.68
+    },
+    {
+      "rule_id": "MVET-L2-004",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Classic Rock > Blues Rock",
+      "evidence": "Blues Rock se subdivide en Texas Blues Rock y Classic Blues Rock. Esta granularidad (dos subnodos definidos por región/era dentro de un ya específico Blues Rock) representa sobre-fragmentación: la diferencia sonora entre una playlist de Texas Blues Rock y una de Classic Blues Rock sería sutil. Ambos representan blues rock de guitarra eléctrica tradicional.",
+      "recommendation": "Evaluar si la distinción Texas/Classic produce valor de playlist real. Si no, colapsar ambos nodos y marcar Blues Rock como Atomic. Esta simplificación mejoraría la coherencia estructural de la rama Classic Rock.",
+      "confidence": 0.78
+    },
+    {
+      "rule_id": "MVET-L2-005",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Grunge > Post-Grunge",
+      "evidence": "Post-Grunge es un nodo hoja no marcado como Atomic. Es un subgénero específico y bien definido (popularizado a finales de los 90s: Foo Fighters, Nickelback, Matchbox Twenty) que no presenta subgéneros ampliamente reconocidos. Subdividirlo más sería forzado y deterioraría la coherencia de playlist.",
+      "recommendation": "Marcar Post-Grunge como Atomic.",
+      "confidence": 0.88
+    },
+    {
+      "rule_id": "MVET-L2-005",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Post-Punk Era > Post Punk > Gothic Rock",
+      "evidence": "Gothic Rock es un nodo hoja no marcado como Atomic. Es un subgénero específico y delimitado del post-punk con características propias bien establecidas. Subdivisiones adicionales (p.ej. Goth Rock britáanico vs Death Rock americano) crearían distinciones de granularidad excesiva para el nivel actual del árbol.",
+      "recommendation": "Marcar Gothic Rock como Atomic.",
+      "confidence": 0.85
+    },
+    {
+      "rule_id": "MVET-L2-005",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Classic Rock > Rock & Roll",
+      "evidence": "Rock & Roll es un nodo hoja no marcado como Atomic. Como nodo hoja dentro de Classic Rock, representa un estilo histórico consolidado. Aunque existen subdivisiones teóricas (Rockabilly, Doo-Wop, Early Rock), estas serían de granularidad excesiva en el contexto actual del árbol.",
+      "recommendation": "Marcar Rock & Roll como Atomic, o confirmar si el propietario desea expandirlo con subgéneros específicos en el futuro.",
+      "confidence": 0.75
+    },
+    {
+      "rule_id": "MVET-L2-006",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Dream Pop",
+      "evidence": "Dream Pop (Atomic) es hijo directo de Rock como hermano de Indie Rock, Grunge, Post-Punk Era y Classic Rock. Dream Pop emergió de influencias Post-Punk, Shoegaze y New Wave, compartiendo mayor afinidad estilística con el universo Post-Punk Era que con Rock genérico. Su ubicación actual puede resultar estructuralmente incongruente para clasificación y navegación.",
+      "recommendation": "Evaluar reubicación de Dream Pop bajo Post-Punk Era (Structural), donde compartiría espacio con New Wave y Post Punk, géneros con mayor parentesco musical. Decisión final del propietario.",
+      "confidence": 0.72
+    },
+    {
+      "rule_id": "MVET-L2-006",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Latin > Texano",
+      "evidence": "Texano (Tejano) es hijo directo de Latin al mismo nivel que Regional Mexicano, Regional Colombiano, Rock Latino y Pop Latino. Texano tiene fuertes raíces musicales en estilos de la frontera norte de México (especialmente Norteño y Conjunto acordeonero). Su composición musical lo acerca más a la familia Regional Mexicano que a un género de nivel superior Latin independiente.",
+      "recommendation": "Evaluar reubicación de Texano bajo Regional Mexicano (Structural) como hermano de Norteño, Banda y Ranchero. Tener en cuenta que Texano integra influencias anglófonas (country, pop) que lo distinguen parcialmente. Decisión final del propietario.",
+      "confidence": 0.65
+    },
+    {
+      "rule_id": "MVET-L2-007",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Post-Punk Era > Post Punk > Gothic Rock",
+      "evidence": "Gothic Rock y Coldwave / Darkwave son hermanos bajo Post Punk con solapamiento musical tan alto que sus playlists serían difícilmente distinguibles. Comparten oscuridad estética, influencias post-punk, uso de sintetizadores y base de artistas común (Bauhaus, The Cure, Siouxsie and the Banshees aparecen frecuentemente clasificados en ambos). La fusión mejoraría la coherencia estructural del árbol.",
+      "recommendation": "Considerar fusionar Gothic Rock y Coldwave / Darkwave en un único nodo representativo (p.ej. Gothic Rock / Darkwave marcado como Atomic). Decisión final del propietario.",
+      "confidence": 0.83
+    },
+    {
+      "rule_id": "MVET-L2-007",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Classic Rock > Blues Rock > Texas Blues Rock",
+      "evidence": "Texas Blues Rock y Classic Blues Rock son hermanos bajo Blues Rock con solapamiento sonoro muy alto. Ambos representan blues rock de guitarra eléctrica tradicional sin diferencias estilísticas de peso que justifiquen nodos separados en términos de generación de playlists. La fusión en un único nodo Blues Rock marcaría una mejora de coherencia estructural.",
+      "recommendation": "Fusionar Texas Blues Rock y Classic Blues Rock y marcar Blues Rock como Atomic. Decisión final del propietario.",
+      "confidence": 0.80
     }
   ],
   "summary": {
     "total_fatal": 0,
-    "total_warning": 3,
+    "total_warning": 14,
     "total_suggestion": 0,
     "decision_recommendation": "PASS_WITH_WARNINGS"
   }

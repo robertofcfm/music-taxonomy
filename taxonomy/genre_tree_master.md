@@ -4,17 +4,16 @@ Indentation defines hierarchy.
 
 Music
   Rock
-    Alternative & Indie (Structural)
-      Indie Rock
-      Grunge
-        Seattle Grunge (Atomic)
-        Post-Grunge
-      Dream Pop (Atomic)
-      Post-Punk Era (Structural)
-        New Wave (Atomic)
-        Post Punk
-          Gothic Rock
-          Coldwave / Darkwave (Atomic)
+    Indie Rock
+    Grunge
+      Seattle Grunge (Atomic)
+      Post-Grunge
+    Dream Pop (Atomic)
+    Post-Punk Era (Structural)
+      New Wave (Atomic)
+      Post Punk
+        Gothic Rock
+        Coldwave / Darkwave (Atomic)
 
     Classic Rock
       Rock & Roll
@@ -34,9 +33,9 @@ Music
       Alternative Pop Rock
       Power Pop
 
-    Synth & Electronic Pop
-      Synth Pop
-        New Romantic (Atomic)
+    Synth Pop
+      New Romantic (Atomic)
+      Synth Pop (General)
       Electro Pop (Atomic)
 
   Electronic & Dance
@@ -55,11 +54,11 @@ Music
     Rock Latino
     Pop Latino
     Hip Hop Latino
-    Regional Mexicano / Texano (Structural)
+    Regional Mexicano (Structural)
       Norteño
-      Texano
       Banda (Atomic)
       Ranchero
+    Texano
 
     Regional Colombiano
       Cumbia Colombiana (Atomic)
