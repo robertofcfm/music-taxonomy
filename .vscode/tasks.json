@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Validate Prompt Bootstrap",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/validate_prompt_bootstrap.py"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

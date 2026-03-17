@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "[pre-commit] Validando bootstrap de prompts..."
+
+if command -v python >/dev/null 2>&1; then
+  python scripts/validate_prompt_bootstrap.py
+elif command -v py >/dev/null 2>&1; then
+  py -3 scripts/validate_prompt_bootstrap.py
+else
+  echo "[pre-commit] ERROR: No se encontro python ni py en PATH."
+  exit 1
+fi
+
+status=$?
+if [ "$status" -ne 0 ]; then
+  echo "[pre-commit] Commit bloqueado: corrige el prompt bootstrap."
+  exit "$status"
+fi
+
+echo "[pre-commit] OK"
+exit 0

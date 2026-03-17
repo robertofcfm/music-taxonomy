@@ -19,3 +19,14 @@ Prompt generador recomendado:
 Nota:
 - El diagnostico de imports se ejecuta en el prompt generador.
 - El resultado final debe poder usarse en cualquier chat sin contexto del repositorio.
+
+Validacion automatica recomendada:
+- Ejecutar `python scripts/validate_prompt_bootstrap.py` antes de usar el bootstrap.
+- Si falla, el script devuelve `NADA` y detalla faltantes/politicas incumplidas.
+
+Automatizacion (recomendada):
+- VS Code task disponible: `Validate Prompt Bootstrap`.
+- Hook pre-commit disponible en `.githooks/pre-commit`.
+- Para activarlo en el repo, ejecutar:
+	`powershell -ExecutionPolicy Bypass -File scripts/setup_git_hooks.ps1`
+- Desde ese momento, cada commit valida automaticamente el bootstrap y bloquea el commit si hay incumplimientos.
