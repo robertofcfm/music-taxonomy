@@ -8,8 +8,6 @@ Music
     Grunge
       Seattle Grunge (Atomic)
       Post-Grunge (Atomic)
-    Dream Pop (Atomic)
-    New Wave (Atomic)
     Post Punk
 
     Classic Rock
@@ -30,6 +28,8 @@ Music
       New Romantic (Atomic)
       Synth Pop (General)
       Electro Pop (Atomic)
+      Dream Pop (Atomic)
+      New Wave (Atomic)
 
   Electronic & Dance
     Disco

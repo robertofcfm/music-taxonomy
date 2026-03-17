@@ -88,3 +88,23 @@ Formato:
   "check": "Detecta cualquier evidencia de mezcla de generos Latin y no-Latin que contrarie la separacion de dominio obligatoria, excluyendo nodos clone."
 }
 <!-- MVET:LAYER2_RULE_END -->
+
+<!-- MVET:LAYER2_RULE_START -->
+{
+  "rule_id": "MVET-L2-009",
+  "fb": "FB-05",
+  "severity": "WARNING",
+  "description": "Refactoring de marcadores Atomic inapropiados.",
+  "check": "Detecta nodos marcados como (Atomic) que deberian ser descompostos. Esto ocurre cuando nuevos subgeneros musicales validos emergen y justifican subdividir un genero previamente considerado atomico. Recomienda quitar el marcador (Atomic) y crear subgeneros apropiados."
+}
+<!-- MVET:LAYER2_RULE_END -->
+
+<!-- MVET:LAYER2_RULE_START -->
+{
+  "rule_id": "MVET-L2-010",
+  "fb": "FB-06",
+  "severity": "WARNING",
+  "description": "Candidatos para agrupacion jerarquica de nodos hermanos.",
+  "check": "Identifica grupos de nodos hermanos que comparten caracteristicas musicales suficientes para justificar un nodo padre intermedio que los agrupe. Propone crear un Agrupador Estructural (Structural) que organice estos hermanos con mayor coherencia, simplificando la estructura y mejorando la navegacion taxonomica."
+}
+<!-- MVET:LAYER2_RULE_END -->
