@@ -99,7 +99,8 @@ algorítmicamente evaluables y sin juicio musical subjetivo.
 Comportamiento ante falla:
 
 Cualquier violación en esta capa causa error fatal.
-La Capa 2 no debe ejecutarse si falla la Capa 1.
+La Capa 2 puede ejecutarse de forma independiente para analisis semantico,
+pero sus resultados no anulan ni compensan fallas fatales detectadas en Capa 1.
 
 CAPA 2 — VALIDACIÓN MUSICAL SEMÁNTICA
 
@@ -541,16 +542,13 @@ Implementa la Capa 2 semántica como stub operativo.
 
 Modo generación de prompt:
   python scripts/validate_tree_layer2.py --print-prompt
-  Salida: reports/validate_master_layer2_prompt.txt
+  Salida: prompts/validate_master_layer2_prompt.txt
   Ese archivo debe enviarse a un modelo de lenguaje externo.
 
 Modo aplicación de respuesta:
   python scripts/validate_tree_layer2.py --apply-response <respuesta.json>
   Valida el esquema JSON de la respuesta IA y genera reportes.
   Salida: reports/validate_master_layer2_report.json y .md
-
-Pre-requisito de Capa 2:
-  Capa 1 debe haber terminado con PASS o PASS_WITH_WARNINGS.
 
 --------------------------------------------------
 HISTORIAL DE REVISIONES

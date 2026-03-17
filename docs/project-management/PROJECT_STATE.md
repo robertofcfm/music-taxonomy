@@ -94,7 +94,7 @@ Artefactos clave actualmente activos:
 
 • reports/validate_master_report.json (resultado Capa 1)
 • reports/validate_master_layer2_report.json (resultado Capa 2)
-• reports/validate_master_layer2_prompt.txt (prompt determinista L2)
+• prompts/validate_master_layer2_prompt.txt (prompt determinista L2)
 
 --------------------------------------------------
 FIN ESTADO DEL PROYECTO

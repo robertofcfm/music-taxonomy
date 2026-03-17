@@ -4,7 +4,7 @@ Modos de operación:
 
   --print-prompt
       Genera el prompt determinista para la IA y lo escribe en
-      reports/validate_master_layer2_prompt.txt.
+      prompts/validate_master_layer2_prompt.txt.
       Ese texto debe enviarse a un modelo de lenguaje externo.
 
   --apply-response <archivo.json>
@@ -18,10 +18,6 @@ Modos de operación:
             Convención de archivos esperada:
                 iteración 1: validate_master_layer2_response.json
                 iteración N>1: validate_master_layer2_response.iterN.json
-
-Prerrequisito:
-  Capa 1 debe haber terminado con decisión PASS o PASS_WITH_WARNINGS.
-  Este script verifica ese requisito antes de continuar.
 
 Salida mínima (modo --apply-response):
   reports/validate_master_layer2_report.json
@@ -42,21 +38,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GOVERNANCE_DIR = REPO_ROOT / "docs" / "governance"
 DEFAULT_TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "genre_tree_master.md"
+PROMPTS_DIR = REPO_ROOT / "prompts"
+PROMPT_TEMPLATE = PROMPTS_DIR / "generadores" / "validate_master_layer2_prompt_template.md"
+PROMPT_CONTEXT = PROMPTS_DIR / "generadores" / "validate_master_layer2_prompt_context.json"
+VALIDATE_MASTER_STRATEGY = REPO_ROOT / "docs" / "operations" / "VALIDATE_MASTER_STRATEGY.md"
 REPORTS_DIR = REPO_ROOT / "reports"
-LAYER1_REPORT = REPORTS_DIR / "validate_master_report.json"
-PROMPT_OUTPUT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
+PROMPT_OUTPUT = PROMPTS_DIR / "validate_master_layer2_prompt.txt"
 DEFAULT_CYCLE_RESPONSE_BASENAME = "validate_master_layer2_response"
-
-GOVERNANCE_DOCS_MANDATORY = [
-    GOVERNANCE_DIR / "GLOBAL_RULES.md",
-    GOVERNANCE_DIR / "SYSTEM_CONTRACT.md",
-    GOVERNANCE_DIR / "MVET_LAYER2_RULES.md",
-    GOVERNANCE_DIR / "TAXONOMY_RULES.md",
-    GOVERNANCE_DIR / "TAXONOMY_DEPTH_POLICY.md",
-    GOVERNANCE_DIR / "TAXONOMY_NAMING_CONVENTION.md",
-    GOVERNANCE_DIR / "TAXONOMY_QUALITY_CHECKLIST.md",
-]
-GOVERNANCE_DOC_CHANGE_POLICY = GOVERNANCE_DIR / "TAXONOMY_CHANGE_POLICY.md"
 
 
 # ---------------------------------------------------------------------------
@@ -93,40 +81,89 @@ def load_taxonomy_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def load_prompt_template() -> str:
+    if not PROMPT_TEMPLATE.exists():
+        raise FileNotFoundError(f"No existe plantilla de prompt L2: {PROMPT_TEMPLATE}")
+    return PROMPT_TEMPLATE.read_text(encoding="utf-8")
+
+
+def load_prompt_context() -> dict[str, str]:
+    if not PROMPT_CONTEXT.exists():
+        raise FileNotFoundError(f"No existe contexto de prompt L2: {PROMPT_CONTEXT}")
+
+    try:
+        payload = json.loads(PROMPT_CONTEXT.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Contexto de prompt L2 invalido: {e}") from e
+
+    required_fields = {"system_context", "clone_context", "applicability_context"}
+    missing = required_fields - payload.keys()
+    if missing:
+        raise ValueError(f"Contexto de prompt L2 incompleto: faltan {sorted(missing)}")
+
+    return {field: str(payload[field]).strip() for field in required_fields}
+
+
+def load_governance_doc_groups() -> dict[str, list[Path]]:
+    if not VALIDATE_MASTER_STRATEGY.exists():
+        raise FileNotFoundError(
+            f"No existe documento estrategico de validacion: {VALIDATE_MASTER_STRATEGY}"
+        )
+
+    section_names = ("MANDATORY", "CONDITIONAL", "REFERENTIAL", "EXCLUDED")
+    groups: dict[str, list[Path]] = {name: [] for name in section_names}
+    current_section: str | None = None
+
+    for raw_line in VALIDATE_MASTER_STRATEGY.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+
+        if line in section_names:
+            current_section = line
+            continue
+
+        if line.startswith("Resumen de matriz:") or line.startswith("Alcance de derivación"):
+            current_section = None
+            continue
+
+        if current_section is None or not line.startswith("- "):
+            continue
+
+        candidate = line[2:].strip()
+        if not candidate.endswith(".md"):
+            continue
+
+        groups[current_section].append(REPO_ROOT / Path(candidate))
+
+    if not groups["MANDATORY"]:
+        raise ValueError(
+            "No se pudieron derivar documentos MANDATORY desde VALIDATE_MASTER_STRATEGY.md"
+        )
+
+    return groups
+
+
 def load_governance_context() -> str:
     """Construye contexto normativo dinámico desde docs/governance/."""
+    prompt_context = load_prompt_context()
+    doc_groups = load_governance_doc_groups()
     blocks: list[str] = []
 
-    for doc in GOVERNANCE_DOCS_MANDATORY:
+    for doc in doc_groups["MANDATORY"]:
         if not doc.exists():
             raise FileNotFoundError(f"No existe documento obligatorio de governance: {doc}")
         rel = doc.relative_to(REPO_ROOT)
         content = doc.read_text(encoding="utf-8").strip()
         blocks.append(f"=== {rel} (MANDATORY) ===\n{content}")
 
-    if GOVERNANCE_DOC_CHANGE_POLICY.exists():
-        rel = GOVERNANCE_DOC_CHANGE_POLICY.relative_to(REPO_ROOT)
-        content = GOVERNANCE_DOC_CHANGE_POLICY.read_text(encoding="utf-8").strip()
-        blocks.append(f"=== {rel} (CONDITIONAL) ===\n{content}")
-    else:
-        blocks.append(
-            "=== docs/governance/TAXONOMY_CHANGE_POLICY.md (CONDITIONAL) ===\n"
-            "Archivo no presente en este workspace."
-        )
+    for doc in doc_groups["CONDITIONAL"]:
+        rel = doc.relative_to(REPO_ROOT)
+        if doc.exists():
+            content = doc.read_text(encoding="utf-8").strip()
+            blocks.append(f"=== {rel} (CONDITIONAL) ===\n{content}")
+        else:
+            blocks.append(f"=== {rel} (CONDITIONAL) ===\nArchivo no presente en este workspace.")
 
-    applicability = """\
-=== ALCANCE DE APLICACIÓN PARA CAPA 2 ===
-
-Aplica únicamente reglas semánticas y estructurales de taxonomía para validar coherencia musical del árbol.
-Ignora reglas operativas fuera de alcance de esta capa (por ejemplo: modos de ejecución,
-batching, logging, continuidad de lotes, o detalles de pipeline de clasificación de canciones).
-
-Precedencia obligatoria:
-- Si hay conflicto interpretativo, prioriza SYSTEM_CONTRACT y GLOBAL_RULES.
-- No inventar reglas fuera del corpus de governance cargado abajo.
-"""
-
-    return f"{applicability}\n\n" + "\n\n".join(blocks)
+    return f"{prompt_context['applicability_context']}\n\n" + "\n\n".join(blocks)
 
 
 def load_layer2_rules_from_governance() -> list[dict[str, str]]:
@@ -189,72 +226,17 @@ def load_layer2_rules_from_governance() -> list[dict[str, str]]:
     return rules
 
 
-def check_layer1_prerequisite() -> tuple[bool, str]:
-    """Verifica que Capa 1 haya terminado con decisión no FAIL."""
-    if not LAYER1_REPORT.exists():
-        return False, "No se encontró el reporte de Capa 1. Ejecutar validate_tree.py primero."
-    try:
-        data = json.loads(LAYER1_REPORT.read_text(encoding="utf-8"))
-        decision = data.get("summary", {}).get("decision", "")
-        if decision == "FAIL":
-            return False, f"Capa 1 terminó en FAIL. Capa 2 bloqueada hasta resolver issues fatales."
-        return True, decision
-    except Exception as e:
-        return False, f"No se pudo leer el reporte de Capa 1: {e}"
-
-
 # ---------------------------------------------------------------------------
 # Modo: --print-prompt
 # ---------------------------------------------------------------------------
 
-SYSTEM_CONTEXT = """\
-Eres un experto en taxonomía de géneros musicales.
-Tu rol es evaluar la coherencia, calidad musical y estructura semántica
-de un árbol taxonómico de géneros musicales.
-
-PRINCIPIOS OBLIGATORIOS:
-- No proponer cambios automáticos al archivo maestro.
-- No inventar reglas fuera del corpus de gobernanza proporcionado.
-- No ocultar incertidumbre: reflejar confianza real en el campo confidence.
-- La separación entre géneros Latin y no-Latin es obligatoria e inviolable.
-- El árbol es controlado manualmente por el propietario del proyecto.
-  El sistema solo puede sugerir; nunca modificar.
-"""
-
-CLONE_CONTEXT = """\
-Glosario operativo mínimo para Capa 2:
-
-Nodo clone:
-- Nodo portal que referencia un nodo canónico.
-- No tiene hijos ni contiene canciones.
-- Existe para navegación y soporte de clasificación.
-
-Nodo General:
-- Nodo de respaldo para contenido válido del dominio del padre
-    que no encaja en subgéneros más específicos.
-
-Nodo Atomic:
-- Nodo hoja que no debe subdividirse más sin perder coherencia musical.
-
-Nodo Agrupador Estructural:
-- Nodo padre usado principalmente para organización estructural
-    y navegación taxonómica.
-- No debe asumirse por defecto como género reproducible principal.
-- Cuando existan hijos musicalmente distinguibles, la evaluación debe
-    priorizar esos hijos por encima del padre.
-
-Identificación operativa para esta validación:
-- Si un nodo está marcado explícitamente como clone, trátalo como clone.
-- Si el nombre del nodo contiene la palabra "clone", trátalo como clone.
-- Si el nombre del nodo contiene el marcador "->", trátalo como clone.
-
-Instrucción de evaluación:
-- Cuando una regla indique excluir nodos clone, exclúyelos completamente del análisis.
-- No reportes como conflicto semántico una mezcla Latin/no-Latin si la aparente mezcla ocurre solo por nodos clone.
-"""
-
-
-def build_prompt(taxonomy_text: str, governance_context: str, layer2_rules: list[dict[str, str]]) -> str:
+def build_prompt(
+    taxonomy_text: str,
+    governance_context: str,
+    layer2_rules: list[dict[str, str]],
+    prompt_template: str,
+    prompt_context: dict[str, str],
+) -> str:
     rules_block = "\n".join(
         f"  {r['rule_id']} [{r['fb']}] {r['severity']}\n"
         f"  Descripción: {r['description']}\n"
@@ -284,30 +266,14 @@ def build_prompt(taxonomy_text: str, governance_context: str, layer2_rules: list
   }
 }"""
 
-    return f"""{SYSTEM_CONTEXT}
-{CLONE_CONTEXT}
-=== CONTEXTO NORMATIVO DINÁMICO ===
-
-{governance_context}
-=== REGLAS DE VALIDACIÓN A APLICAR ===
-
-{rules_block}
-=== ÁRBOL TAXONÓMICO A EVALUAR ===
-
-{taxonomy_text}
-=== INSTRUCCIÓN DE SALIDA ===
-
-Responde ÚNICAMENTE con un JSON válido siguiendo el esquema a continuación.
-No incluyas texto fuera del JSON. No incluyas markdown ni bloques de código.
-
-Esquema obligatorio:
-{output_schema}
-
-Descarta explícitamente cualquier hallazgo con "result": "PASS".
-No incluyas elementos con result PASS dentro del arreglo findings.
-Si una regla no presenta hallazgos, no la incluyas en el arreglo findings.
-Si no hay ningún hallazgo, devuelve findings como arreglo vacío [].
-"""
+    return (
+        prompt_template.replace("{{SYSTEM_CONTEXT}}", prompt_context["system_context"])
+        .replace("{{CLONE_CONTEXT}}", prompt_context["clone_context"])
+        .replace("{{GOVERNANCE_CONTEXT}}", governance_context)
+        .replace("{{RULES_BLOCK}}", rules_block)
+        .replace("{{TAXONOMY_TEXT}}", taxonomy_text)
+        .replace("{{OUTPUT_SCHEMA}}", output_schema)
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -585,11 +551,6 @@ def parse_args() -> argparse.Namespace:
         help="Ruta al archivo maestro de taxonomía.",
     )
     parser.add_argument(
-        "--skip-layer1-check",
-        action="store_true",
-        help="Omite la verificación de prerequisito de Capa 1.",
-    )
-    parser.add_argument(
         "--max-iterations",
         type=int,
         default=10,
@@ -614,13 +575,6 @@ def main() -> int:
         print(f"ERROR: no existe el archivo: {taxonomy_path}")
         return 2
 
-    if not args.skip_layer1_check:
-        ok, info = check_layer1_prerequisite()
-        if not ok:
-            print(f"BLOQUEADO: {info}")
-            return 1
-        print(f"Prerequisito Capa 1: {info}")
-
     try:
         layer2_rules = load_layer2_rules_from_governance()
     except (FileNotFoundError, ValueError) as e:
@@ -632,13 +586,21 @@ def main() -> int:
     if args.print_prompt:
         taxonomy_text = load_taxonomy_text(taxonomy_path)
         try:
+            prompt_context = load_prompt_context()
             governance_context = load_governance_context()
-        except FileNotFoundError as e:
+            prompt_template = load_prompt_template()
+        except (FileNotFoundError, ValueError) as e:
             print(f"ERROR: {e}")
             return 2
 
-        prompt = build_prompt(taxonomy_text, governance_context, layer2_rules)
-        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        prompt = build_prompt(
+            taxonomy_text,
+            governance_context,
+            layer2_rules,
+            prompt_template,
+            prompt_context,
+        )
+        PROMPTS_DIR.mkdir(parents=True, exist_ok=True)
         PROMPT_OUTPUT.write_text(prompt, encoding="utf-8")
         print(f"Prompt generado: {PROMPT_OUTPUT.relative_to(REPO_ROOT)}")
         print("Copia el contenido de ese archivo a un modelo de lenguaje externo.")

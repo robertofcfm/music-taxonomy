@@ -213,7 +213,7 @@ scripts/validate_tree_layer2.py
 Funcionalidades:
 
 • --print-prompt genera prompt determinista en:
-	reports/validate_master_layer2_prompt.txt
+	prompts/validate_master_layer2_prompt.txt
 • --apply-response <json> valida esquema de respuesta IA y genera:
 	reports/validate_master_layer2_report.json
 	reports/validate_master_layer2_report.md

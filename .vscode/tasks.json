@@ -27,7 +27,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Run Layer2 Cycle (Fast, Skip L1)",
+      "label": "Run Layer2 Cycle (Fast)",
       "type": "shell",
       "command": "powershell",
       "args": [
@@ -38,8 +38,7 @@
         "-ResponseDir",
         "reports",
         "-MaxIterations",
-        "10",
-        "-SkipLayer1Check"
+        "10"
       ],
       "problemMatcher": []
     }

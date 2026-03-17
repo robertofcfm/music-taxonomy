@@ -2,7 +2,6 @@ param(
     [string]$ResponseDir = "reports",
     [int]$MaxIterations = 10,
     [string]$CycleResponseBasename = "validate_master_layer2_response",
-    [switch]$SkipLayer1Check,
     [string]$TaxonomyFile
 )
 
@@ -36,10 +35,6 @@ $argsList = @(
     "--cycle-response-basename",
     $CycleResponseBasename
 )
-
-if ($SkipLayer1Check) {
-    $argsList += "--skip-layer1-check"
-}
 
 if ($TaxonomyFile) {
     $argsList += "--taxonomy-file"

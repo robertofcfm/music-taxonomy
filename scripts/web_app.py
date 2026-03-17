@@ -29,7 +29,7 @@ VALIDATE_L2 = REPO_ROOT / "scripts" / "validate_tree_layer2.py"
 LAYER1_REPORT = REPORTS_DIR / "validate_master_report.json"
 LAYER2_REPORT = REPORTS_DIR / "validate_master_layer2_report.json"
 LAYER2_RESPONSE = REPORTS_DIR / "validate_master_layer2_response.json"
-LAYER2_PROMPT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
+LAYER2_PROMPT = REPO_ROOT / "prompts" / "validate_master_layer2_prompt.txt"
 LAYER1_REPORT_MD = REPORTS_DIR / "validate_master_report.md"
 LAYER1_RUN_METADATA = REPORTS_DIR / "validate_master_run_metadata.json"
 LAYER2_REPORT_MD = REPORTS_DIR / "validate_master_layer2_report.md"
@@ -658,23 +658,20 @@ class Handler(http.server.BaseHTTPRequestHandler):
         }
 
         if regenerate:
-            layer1 = self._load_layer1_report()
-            decision = (layer1 or {}).get("summary", {}).get("decision", "")
-            if decision and decision != "FAIL":
-                started_at = time.time()
-                proc = subprocess.run(
-                    [PYTHON, str(VALIDATE_L2), "--print-prompt"],
-                    capture_output=True,
-                    text=True,
-                    cwd=str(REPO_ROOT),
-                )
-                diagnostics["executed"] = True
-                diagnostics["exit_code"] = proc.returncode
-                diagnostics["stdout"] = proc.stdout
-                diagnostics["stderr"] = proc.stderr
-                diagnostics["file_exists"] = LAYER2_PROMPT.exists()
-                diagnostics["file_fresh"] = self._is_fresh(LAYER2_PROMPT, started_at)
-                diagnostics["regenerated_on_read"] = True
+            started_at = time.time()
+            proc = subprocess.run(
+                [PYTHON, str(VALIDATE_L2), "--print-prompt"],
+                capture_output=True,
+                text=True,
+                cwd=str(REPO_ROOT),
+            )
+            diagnostics["executed"] = True
+            diagnostics["exit_code"] = proc.returncode
+            diagnostics["stdout"] = proc.stdout
+            diagnostics["stderr"] = proc.stderr
+            diagnostics["file_exists"] = LAYER2_PROMPT.exists()
+            diagnostics["file_fresh"] = self._is_fresh(LAYER2_PROMPT, started_at)
+            diagnostics["regenerated_on_read"] = True
 
         payload = self._load_prompt_payload()
         diagnostics["file_exists"] = payload["exists"]
@@ -685,12 +682,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
         if not LAYER2_PROMPT.exists():
             return {
                 "exists": False,
-                "path": "reports/validate_master_layer2_prompt.txt",
+                "path": "prompts/validate_master_layer2_prompt.txt",
                 "text": "",
             }
         return {
             "exists": True,
-            "path": "reports/validate_master_layer2_prompt.txt",
+            "path": "prompts/validate_master_layer2_prompt.txt",
             "text": LAYER2_PROMPT.read_text(encoding="utf-8"),
         }
 
