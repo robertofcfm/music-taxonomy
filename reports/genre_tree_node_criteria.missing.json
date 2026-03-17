@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "generated_for": "missing-node-criteria",
+  "nodes": [
+    {
+      "node_path": "Music > Rock > Art Rock",
+      "membership_criteria": "TODO: definir criterio de pertenencia para este nodo.",
+      "exclusion_criteria": "TODO: definir criterio de exclusion para este nodo.",
+      "reference_examples": [
+        "TODO: ejemplo 1",
+        "TODO: ejemplo 2"
+      ]
+    }
+  ]
+}

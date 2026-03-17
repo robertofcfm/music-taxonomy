@@ -1540,6 +1540,10 @@ Si una recomendacion contradice estos criterios, prioriza estos criterios sincro
   Membership: Canciones dentro de la tradicion Rock en sus variantes historicas y modernas.
   Exclusion: No incluir generos de otros dominios salvo hibridos explicitamente nombrados.
   Examples: Classic Rock, Alternative Rock, Hard Rock
+- Node: Music > Rock > Art Rock
+  Membership: Rock con enfoque artistico y experimental, estructuras no convencionales o arreglos conceptuales como rasgo dominante.
+  Exclusion: Excluir Rock convencional sin experimentacion dominante y excluir Grunge cuando prevalezca su estetica cruda caracteristica.
+  Examples: Roxy Music, David Bowie, Talking Heads
 - Node: Music > Rock > Grunge
   Membership: Rock alternativo de estetica grunge con sonido crudo y distorsion, asociado a la escena de Seattle y derivados.
   Exclusion: Excluir Hard Rock clasico y Alternative Metal cuando no exista identidad grunge dominante.
@@ -1553,7 +1557,7 @@ Si una recomendacion contradice estos criterios, prioriza estos criterios sincro
   Exclusion: Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.
   Examples: Norteño Clasico, Norteño Moderno, Corrido Norteño
 
-Cobertura criterios: 4/4 nodos no-raiz.
+Cobertura criterios: 5/5 nodos no-raiz.
 === ARBOL TAXONOMICO A EVALUAR ===
 
 # GENRE TREE MASTER
@@ -1562,6 +1566,7 @@ Cobertura criterios: 4/4 nodos no-raiz.
 
 Music
   Rock
+    Art Rock
     Grunge
   Latin
     Norteño

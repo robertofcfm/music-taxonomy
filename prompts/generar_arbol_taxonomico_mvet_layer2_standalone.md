@@ -84,6 +84,24 @@ Para cada nodo agregado debes generar:
 - criterio_de_exclusion: que tipo de canciones NO pertenecen
 - ejemplos_referencia: 2 a 5 ejemplos orientativos (si no hay certeza, declarar baja confianza)
 
+REQUISITO DE SINCRONIZACION OBLIGATORIO:
+Cada nodo que se inserte en taxonomy/genre_tree_master.md debe tener
+una entrada correspondiente en taxonomy/genre_tree_node_criteria.json.
+Ambos archivos deben mantenerse sincronizados en todo momento.
+
+Por cada nodo aceptado, genera la entrada JSON lista para insertar:
+{
+  "node_path": "<path completo desde Music>",
+  "membership_criteria": "<criterio_de_pertenencia>",
+  "exclusion_criteria": "<criterio_de_exclusion>",
+  "reference_examples": ["<ejemplo1>", "<ejemplo2>"]
+}
+
+No se considera completa una insercion si no incluye esta entrada.
+Si se detecta un nodo en genre_tree_master.md sin entrada en
+genre_tree_node_criteria.json, reportar como inconsistencia de
+sincronizacion antes de continuar.
+
 ### Paso 6 - Validacion posterior a insercion
 Ejecuta validacion semantica usando el conjunto de reglas activas seleccionado dinamicamente en esta ejecucion.
 Si detectas incumplimiento grave o incoherencia estructural:
@@ -94,6 +112,14 @@ Si detectas incumplimiento grave o incoherencia estructural:
 ## REGLA DE NO-AUTOMATISMO DE CAMBIOS
 No apliques cambios silenciosos ni masivos.
 Solo agrega o rechaza el nodo solicitado por turno, con trazabilidad completa.
+
+REGLA DE SINCRONIZACION:
+- genre_tree_master.md y genre_tree_node_criteria.json son un par sincronizado.
+- Toda respuesta que proponga un nodo aceptado DEBE incluir la entrada
+  JSON correspondiente para genre_tree_node_criteria.json en el bloque
+  [CRITERIA_JSON_ENTRY] del formato de respuesta.
+- Si el usuario aplica solo uno de los dos archivos, la siguiente ejecucion
+  debe detectar y reportar la inconsistencia como faltante critico.
 
 ## FORMATO DE RESPUESTA OBLIGATORIO
 Responde SIEMPRE en este formato:
@@ -129,6 +155,15 @@ Responde SIEMPRE en este formato:
 - criterio_de_pertenencia:
 - criterio_de_exclusion:
 - ejemplos_referencia:
+
+[CRITERIA_JSON_ENTRY]
+(entrada lista para insertar en taxonomy/genre_tree_node_criteria.json)
+{
+  "node_path": "",
+  "membership_criteria": "",
+  "exclusion_criteria": "",
+  "reference_examples": []
+}
 
 [RESULTADO_VALIDACION]
 - checks_aplicados:

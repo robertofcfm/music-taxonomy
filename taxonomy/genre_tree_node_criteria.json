@@ -14,6 +14,12 @@
       "reference_examples": ["Nirvana", "Soundgarden", "Alice in Chains"]
     },
     {
+      "node_path": "Music > Rock > Art Rock",
+      "membership_criteria": "Rock con enfoque artistico y experimental, estructuras no convencionales o arreglos conceptuales como rasgo dominante.",
+      "exclusion_criteria": "Excluir Rock convencional sin experimentacion dominante y excluir Grunge cuando prevalezca su estetica cruda caracteristica.",
+      "reference_examples": ["Roxy Music", "David Bowie", "Talking Heads"]
+    },
+    {
       "node_path": "Music > Latin",
       "membership_criteria": "Generos de la tradicion musical latina y regionales hispanoamericanos.",
       "exclusion_criteria": "Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.",

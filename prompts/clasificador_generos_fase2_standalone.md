@@ -167,11 +167,32 @@ musicalmente valida:
 - NO inventes genero operativo ni clasifiques a ciegas
 - Marca status: GENRE_MISSING
 
+REQUISITO DE SINCRONIZACION OBLIGATORIO:
+Cada nodo propuesto para genre_tree_master.md DEBE acompanarse
+de una entrada propuesta para taxonomy/genre_tree_node_criteria.json
+con los campos:
+  - node_path
+  - membership_criteria
+  - exclusion_criteria
+  - reference_examples
+
+Ambos archivos deben mantenerse sincronizados en todo momento.
+No se considera valida una propuesta de nodo que no incluya
+su entrada de criterios correspondiente.
+
 Ejemplo:
 
 Faltante detectado: Synthwave no existe en Music > Electronic
 
 Propuesta de ubicacion: Music > Electronic > Synthwave
+
+Entrada propuesta para genre_tree_node_criteria.json:
+{
+  "node_path": "Music > Electronic > Synthwave",
+  "membership_criteria": "...",
+  "exclusion_criteria": "...",
+  "reference_examples": [...]
+}
 
 ### Paso 8 - Escritura de salida en CSV
 
@@ -209,6 +230,16 @@ IMPORTANTE: Este proceso es analisis y sugerencia, no automatizacion.
 - El usuario final valida y autoriza las asignaciones
 - Los cambios en songs_with_genres.csv se hacen manualmente
   o via scripts que usen estas sugerencias como entrada
+
+REGLA DE SINCRONIZACION TAXONOMY:
+- genre_tree_master.md y genre_tree_node_criteria.json son fuentes
+  que deben permanecer sincronizadas en todo momento.
+- Toda propuesta de nuevo nodo DEBE incluir la entrada de criterios
+  correspondiente para genre_tree_node_criteria.json.
+- No reportar un nodo propuesto sin su entrada de criterios.
+- Si el usuario aplica cambios en genre_tree_master.md sin actualizar
+  genre_tree_node_criteria.json, reportar inconsistencia de sincronizacion
+  como faltante critico antes de iniciar clasificacion.
 
 No apliques cambios silenciosos ni masivos.
 
@@ -251,6 +282,11 @@ FORMATO DE RESPUESTA OBLIGATORIO
 - genero_faltante_1: ubicacion_propuesta
 - motivo:
 - accion_sugerida:
+- criteria_entry_propuesta:
+    node_path:
+    membership_criteria:
+    exclusion_criteria:
+    reference_examples:
 
 [CONTROL_DE_EJECUCION]
 - total_canciones_procesadas:
