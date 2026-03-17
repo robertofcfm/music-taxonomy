@@ -67,6 +67,11 @@ def load_taxonomy_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def is_response_stale(response_path: Path, taxonomy_path: Path) -> bool:
+    """Return True when a response is older than taxonomy source file."""
+    return response_path.stat().st_mtime < taxonomy_path.stat().st_mtime
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Validación semántica (Capa 2) — taxonomy/genre_tree_master.md."
@@ -206,6 +211,15 @@ def main() -> int:
             print(f"ERROR: no existe el archivo de respuesta: {response_path}")
             return 2
 
+        if is_response_stale(response_path, taxonomy_path):
+            print(
+                "ERROR: la respuesta IA está desactualizada respecto al árbol activo."
+            )
+            print(f"  - Taxonomía activa: {taxonomy_path}")
+            print(f"  - Respuesta desactualizada: {response_path}")
+            print("Regenera prompt y respuesta con el árbol actual antes de aplicar.")
+            return 2
+
         try:
             response_data = load_response_json(response_path)
         except ValueError as e:
@@ -264,6 +278,16 @@ def main() -> int:
                 f"{response_path.name}"
             )
             return 1
+
+        if is_response_stale(response_path, taxonomy_path):
+            print(
+                "ERROR: respuesta de ciclo desactualizada respecto al árbol activo."
+            )
+            print(f"  - Iteración: {iteration}")
+            print(f"  - Taxonomía activa: {taxonomy_path}")
+            print(f"  - Respuesta desactualizada: {response_path}")
+            print("Regenera prompt y respuesta con el árbol actual antes de continuar ciclo.")
+            return 2
 
         try:
             response_data = load_response_json(response_path)
