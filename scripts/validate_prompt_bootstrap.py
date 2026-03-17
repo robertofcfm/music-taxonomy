@@ -43,6 +43,16 @@ class CheckResult:
     detail: str
 
 
+def safe_print(text: str) -> None:
+    """Imprime texto sin fallar si la consola no soporta ciertos caracteres."""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # Fallback para consolas cp1252 en hooks de git sobre Windows.
+        encoded = text.encode("ascii", errors="replace").decode("ascii")
+        print(encoded)
+
+
 def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip().lower())
 
@@ -116,7 +126,7 @@ def validate(prompt_path: Path) -> tuple[list[CheckResult], dict[str, list[str]]
                 ],
             ),
             detail=(
-                "Debe incluir instrucción explícita de reportar estado 🟢/🟡/🔴 en cada respuesta."
+                "Debe incluir instruccion explicita de reportar estado de capacidad en cada respuesta."
             ),
         )
     )
@@ -143,45 +153,45 @@ def validate(prompt_path: Path) -> tuple[list[CheckResult], dict[str, list[str]]
 
 
 def print_markdown_report(prompt_path: Path, checks: list[CheckResult], imports: dict[str, list[str]]) -> int:
-    print("[DIAGNOSTICO_IMPORTS]")
-    print(f"- MANDATORY: {', '.join(imports['MANDATORY']) or '(vacio)'}")
-    print(f"- CONDITIONAL: {', '.join(imports['CONDITIONAL']) or '(vacio)'}")
-    print(f"- REFERENTIAL: {', '.join(imports['REFERENTIAL']) or '(vacio)'}")
-    print(f"- EXCLUDED: {', '.join(imports['EXCLUDED']) or '(vacio)'}")
+    safe_print("[DIAGNOSTICO_IMPORTS]")
+    safe_print(f"- MANDATORY: {', '.join(imports['MANDATORY']) or '(vacio)'}")
+    safe_print(f"- CONDITIONAL: {', '.join(imports['CONDITIONAL']) or '(vacio)'}")
+    safe_print(f"- REFERENTIAL: {', '.join(imports['REFERENTIAL']) or '(vacio)'}")
+    safe_print(f"- EXCLUDED: {', '.join(imports['EXCLUDED']) or '(vacio)'}")
     coverage = "insuficiente" if imports["MISSING_BASE"] else "suficiente"
-    print(f"- Cobertura: {coverage}")
+    safe_print(f"- Cobertura: {coverage}")
 
-    print("\n[VALIDACION_POLITICAS]")
+    safe_print("\n[VALIDACION_POLITICAS]")
     for c in checks:
         status = "OK" if c.passed else "FAIL"
-        print(f"- {c.name}: {status} | {c.detail}")
+        safe_print(f"- {c.name}: {status} | {c.detail}")
 
     failed_checks = [c for c in checks if not c.passed]
     if imports["MISSING_BASE"]:
-        print("\n[PROMPT_FINAL_STANDALONE]")
-        print("NADA")
-        print("\n[FALTANTES_SI_APLICA]")
+        safe_print("\n[PROMPT_FINAL_STANDALONE]")
+        safe_print("NADA")
+        safe_print("\n[FALTANTES_SI_APLICA]")
         for path in imports["MISSING_BASE"]:
-            print(f"- {path}")
+            safe_print(f"- {path}")
         return 1
 
     if failed_checks:
-        print("\n[PROMPT_FINAL_STANDALONE]")
-        print("NADA")
-        print("\n[FALTANTES_SI_APLICA]")
+        safe_print("\n[PROMPT_FINAL_STANDALONE]")
+        safe_print("NADA")
+        safe_print("\n[FALTANTES_SI_APLICA]")
         for check in failed_checks:
-            print(f"- Ajustar politica: {check.name}")
+            safe_print(f"- Ajustar politica: {check.name}")
         return 1
 
-    print("\n[PROMPT_FINAL_STANDALONE]")
-    print(
+    safe_print("\n[PROMPT_FINAL_STANDALONE]")
+    safe_print(
         "VALIDO: el bootstrap cumple politicas base. "
         "Puedes usar este archivo como prompt generador de arranque."
     )
-    print("\n[FALTANTES_SI_APLICA]")
-    print("- vacio")
-    print("\nArchivo validado:")
-    print(f"- {prompt_path}")
+    safe_print("\n[FALTANTES_SI_APLICA]")
+    safe_print("- vacio")
+    safe_print("\nArchivo validado:")
+    safe_print(f"- {prompt_path}")
     return 0
 
 
