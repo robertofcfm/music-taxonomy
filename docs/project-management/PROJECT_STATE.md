@@ -64,23 +64,31 @@ Estado del sistema de validación:
 • scripts/web_app.py + web/index.html: dashboard local implementado
 
 --------------------------------------------------
-5. ESTADO DEL DATASET
+6. ARQUITECTURA DE VALIDACIÓN LAYER2 (CAPA 2)
 --------------------------------------------------
 
-Archivo de catálogo de canciones:
+Modularización de scripts/validate_tree_layer2.py (v2):
 
-catalog/songs_raw.csv
+La validación semántica se ha refactorizado en módulos
+especializados con responsabilidades claras:
 
-Archivo de salida de clasificación:
+| Módulo | Responsabilidad |
+|--------|---|
+| layer2_contract.py | Constantes compartidas, funciones de utilidad |
+| layer2_prompt_builder.py | Construcción determinista de prompts con {{PLACEHOLDERS}} |
+| layer2_governance_loader.py | Carga dinámico de contexto + reglas + estrategia |
+| layer2_response_processor.py | Validación schema + reportes JSON/MD |
+| validate_tree_layer2.py | CLI puro (orquestación) |
 
-catalog/songs_with_genres.csv
+Estado:
 
-Estado de procesamiento del dataset:
-
-• pipeline de clasificación aún no ejecutado
+• 5 módulos implementados y probados
+• 4 unit tests con 100% pass rate
+• separación de responsabilidades completada
+• reducción de validate_tree_layer2.py de ~850 a ~250 líneas
 
 --------------------------------------------------
-6. SIGUIENTES PASOS
+7. SIGUIENTES PASOS
 --------------------------------------------------
 
 Prioridades inmediatas:

@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -12,13 +12,15 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import validate_tree_layer2 as l2
+import layer2_governance_loader as governance
+import layer2_prompt_builder as prompt_builder
+import layer2_response_processor as response_processor
 
 
 class ValidateTreeLayer2Tests(unittest.TestCase):
     def test_build_prompt_rejects_unresolved_placeholders(self) -> None:
         with self.assertRaises(ValueError):
-            l2.build_prompt(
+            prompt_builder.build_prompt(
                 taxonomy_text="Music\n  Rock",
                 governance_context="ctx",
                 layer2_rules=[],
@@ -52,9 +54,9 @@ class ValidateTreeLayer2Tests(unittest.TestCase):
             },
         }
 
-        with patch.object(l2, "write_layer2_reports"):
+        with patch.object(response_processor, "write_layer2_reports"):
             findings, schema_errors, _, fatal_count, warning_count, suggestion_count, decision = (
-                l2.process_layer2_response(
+                response_processor.process_layer2_response(
                     response_data,
                     layer2_rules=[
                         {
@@ -66,6 +68,7 @@ class ValidateTreeLayer2Tests(unittest.TestCase):
                         }
                     ],
                     valid_rule_ids={"MVET-L2-001"},
+                    reports_dir=REPO_ROOT / "reports",
                 )
             )
 
@@ -76,7 +79,8 @@ class ValidateTreeLayer2Tests(unittest.TestCase):
         self.assertTrue(any("summary.decision_recommendation inconsistente" in error for error in schema_errors))
 
     def test_load_governance_doc_groups_derives_strategy_matrix(self) -> None:
-        groups = l2.load_governance_doc_groups()
+        strategy_path = REPO_ROOT / "docs" / "operations" / "VALIDATE_MASTER_STRATEGY.md"
+        groups = governance.load_governance_doc_groups(strategy_path, REPO_ROOT)
 
         mandatory = {path.as_posix().split("music-taxonomy/")[-1] for path in groups["MANDATORY"]}
         conditional = {path.as_posix().split("music-taxonomy/")[-1] for path in groups["CONDITIONAL"]}
@@ -84,6 +88,53 @@ class ValidateTreeLayer2Tests(unittest.TestCase):
         self.assertIn("docs/governance/GLOBAL_RULES.md", mandatory)
         self.assertIn("docs/governance/SYSTEM_CONTRACT.md", mandatory)
         self.assertIn("docs/governance/TAXONOMY_CHANGE_POLICY.md", conditional)
+
+    def test_response_processor_writes_both_report_formats(self) -> None:
+        """Test que proceso_layer2_response genera ambos formatos de reporte."""
+        response_data = {
+            "layer": "MVET-LAYER2",
+            "findings": [
+                {
+                    "rule_id": "MVET-L2-001",
+                    "severity": "WARNING",
+                    "result": "FAIL",
+                    "node_path": "Music > Pop",
+                    "evidence": "Test evidence",
+                    "recommendation": "Test recommendation",
+                    "confidence": 0.75,
+                }
+            ],
+            "summary": {
+                "total_fatal": 0,
+                "total_warning": 1,
+                "total_suggestion": 0,
+                "decision_recommendation": "PASS_WITH_WARNINGS",
+            },
+        }
+
+        test_reports_dir = REPO_ROOT / "reports"
+        findings, schema_errors, _, fatal_count, warning_count, _, decision = (
+            response_processor.process_layer2_response(
+                response_data,
+                layer2_rules=[
+                    {
+                        "rule_id": "MVET-L2-001",
+                        "fb": "FB-05",
+                        "severity": "WARNING",
+                        "description": "Test rule",
+                        "check": "Test check",
+                    }
+                ],
+                valid_rule_ids={"MVET-L2-001"},
+                reports_dir=test_reports_dir,
+            )
+        )
+
+        self.assertEqual(len(findings), 1)
+        self.assertEqual(warning_count, 1)
+        self.assertEqual(decision, "PASS_WITH_WARNINGS")
+        self.assertTrue((test_reports_dir / "validate_master_layer2_report.json").exists())
+        self.assertTrue((test_reports_dir / "validate_master_layer2_report.md").exists())
 
 
 if __name__ == "__main__":

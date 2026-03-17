@@ -381,6 +381,25 @@ incluyendo especificación funcional de la página de procesamiento.
 
 --------------------------------------------------
 
+docs/architecture/LAYER2_ARCHITECTURE.md
+
+Documentación completa de la arquitectura modular de validación
+Layer2 (Capa 2 — Semántica IA).
+
+Incluye:
+
+• Tabla de responsabilidades de módulos (layer2_*.py)
+• Flujo de ejecución de validación
+• Interfaz de cada módulo especializado
+• Contrato de respuesta IA
+• Configuración externa (plantilla, contexto, estrategia)
+• Suite de testing
+
+Este documento es la referencia principal para entender la
+arquitectura de validación semántica y sus extensiones futuras.
+
+--------------------------------------------------
+
 Nota de ubicación:
 
 Los prompts operativos finales deben almacenarse en:
