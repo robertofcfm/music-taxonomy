@@ -9,6 +9,7 @@ def build_prompt(
     layer2_rules: list[dict[str, str]],
     prompt_template: str,
     prompt_context: dict[str, str],
+  node_criteria_context: str = "",
 ) -> str:
     rules_block = "\n".join(
         f"  {r['rule_id']} [{r['fb']}] {r['severity']}\n"
@@ -44,6 +45,7 @@ def build_prompt(
         .replace("{{CLONE_CONTEXT}}", prompt_context["clone_context"])
         .replace("{{GOVERNANCE_CONTEXT}}", governance_context)
         .replace("{{RULES_BLOCK}}", rules_block)
+      .replace("{{NODE_CRITERIA_CONTEXT}}", node_criteria_context.strip())
         .replace("{{TAXONOMY_TEXT}}", taxonomy_text)
         .replace("{{OUTPUT_SCHEMA}}", output_schema)
     )

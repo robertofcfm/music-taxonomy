@@ -1523,73 +1523,48 @@ La validación garantiza que:
   Descripción: Violacion semantica de separacion Latin y no-Latin.
   Check: Detecta cualquier evidencia de mezcla de generos Latin y no-Latin que contrarie la separacion de dominio obligatoria, excluyendo nodos clone.
 
+  MVET-L2-009 [FB-05] WARNING
+  Descripción: Refactoring de marcadores Atomic inapropiados.
+  Check: Detecta nodos marcados como (Atomic) que deberian ser descompostos. Esto ocurre cuando nuevos subgeneros musicales validos emergen y justifican subdividir un genero previamente considerado atomico. Recomienda quitar el marcador (Atomic) y crear subgeneros apropiados.
+
+  MVET-L2-010 [FB-06] WARNING
+  Descripción: Candidatos para agrupacion jerarquica de nodos hermanos.
+  Check: Identifica grupos de nodos hermanos que comparten caracteristicas musicales suficientes para justificar un nodo padre intermedio que los agrupe. Propone crear un Agrupador Estructural (Structural) que organice estos hermanos con mayor coherencia, simplificando la estructura y mejorando la navegacion taxonomica.
+
+=== CONTEXTO DE CRITERIOS POR NODO (SINCRONIZADO) ===
+
+Aplica estos criterios para decidir inserciones y validar coherencia semantica.
+Si una recomendacion contradice estos criterios, prioriza estos criterios sincronizados.
+
+- Node: Music > Rock
+  Membership: Canciones dentro de la tradicion Rock en sus variantes historicas y modernas.
+  Exclusion: No incluir generos de otros dominios salvo hibridos explicitamente nombrados.
+  Examples: Classic Rock, Alternative Rock, Hard Rock
+- Node: Music > Rock > Grunge
+  Membership: Rock alternativo de estetica grunge con sonido crudo y distorsion, asociado a la escena de Seattle y derivados.
+  Exclusion: Excluir Hard Rock clasico y Alternative Metal cuando no exista identidad grunge dominante.
+  Examples: Nirvana, Soundgarden, Alice in Chains
+- Node: Music > Latin
+  Membership: Generos de la tradicion musical latina y regionales hispanoamericanos.
+  Exclusion: Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.
+  Examples: Regional Mexicano, Salsa, Cumbia
+- Node: Music > Latin > Norteño
+  Membership: Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.
+  Exclusion: Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.
+  Examples: Norteño Clasico, Norteño Moderno, Corrido Norteño
+
+Cobertura criterios: 4/4 nodos no-raiz.
 === ARBOL TAXONOMICO A EVALUAR ===
 
 # GENRE TREE MASTER
-Editable taxonomy template.
-Indentation defines hierarchy.
+# Editable taxonomy template.
+# Indentation defines hierarchy.
 
 Music
   Rock
-    Indie Rock
     Grunge
-      Seattle Grunge (Atomic)
-      Post-Grunge (Atomic)
-    Dream Pop (Atomic)
-    New Wave (Atomic)
-    Post Punk
-
-    Classic Rock
-      Rock & Roll (Atomic)
-      Blues Rock
-      Hard Rock (Atomic)
-
-  Metal
-    Heavy Metal
-    Thrash Metal
-    Alternative Metal
-      Nu Metal
-
-  Pop
-    Pop Rock
-
-    Synth Pop
-      New Romantic (Atomic)
-      Synth Pop (General)
-      Electro Pop (Atomic)
-
-  Electronic & Dance
-    Disco
-    House
-      Deep House
-      Electro House
-
-  Ambient
-    Dark Ambient
-    Cinematic Ambient
-
-  Hip Hop
-
   Latin
-    Rock Latino
-    Pop Latino
-    Hip Hop Latino
-    Regional Mexicano (Structural)
-      Norteño
-      Banda (Atomic)
-      Ranchero
-      Texano
-
-    Regional Colombiano
-      Cumbia Colombiana (Atomic)
-      Vallenato
-
-  Soul / Rhythm & Blues
-  
-  Funk
-
-  Jazz
-
+    Norteño
 === INSTRUCCION DE SALIDA ===
 
 Responde UNICAMENTE con un JSON valido siguiendo el esquema a continuacion.

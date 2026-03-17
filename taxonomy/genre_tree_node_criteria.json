@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "nodes": [
+    {
+      "node_path": "Music > Rock",
+      "membership_criteria": "Canciones dentro de la tradicion Rock en sus variantes historicas y modernas.",
+      "exclusion_criteria": "No incluir generos de otros dominios salvo hibridos explicitamente nombrados.",
+      "reference_examples": ["Classic Rock", "Alternative Rock", "Hard Rock"]
+    },
+    {
+      "node_path": "Music > Rock > Grunge",
+      "membership_criteria": "Rock alternativo de estetica grunge con sonido crudo y distorsion, asociado a la escena de Seattle y derivados.",
+      "exclusion_criteria": "Excluir Hard Rock clasico y Alternative Metal cuando no exista identidad grunge dominante.",
+      "reference_examples": ["Nirvana", "Soundgarden", "Alice in Chains"]
+    },
+    {
+      "node_path": "Music > Latin",
+      "membership_criteria": "Generos de la tradicion musical latina y regionales hispanoamericanos.",
+      "exclusion_criteria": "Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.",
+      "reference_examples": ["Regional Mexicano", "Salsa", "Cumbia"]
+    },
+    {
+      "node_path": "Music > Latin > Norteño",
+      "membership_criteria": "Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.",
+      "exclusion_criteria": "Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.",
+      "reference_examples": ["Norteño Clasico", "Norteño Moderno", "Corrido Norteño"]
+    }
+  ]
+}

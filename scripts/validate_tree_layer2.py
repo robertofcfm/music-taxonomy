@@ -27,6 +27,7 @@ Salida mínima (modo --apply-response):
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -41,11 +42,17 @@ from layer2_response_processor import (
     load_response_json,
     process_layer2_response,
 )
+from taxonomy_criteria_sync import (
+    build_criteria_sync,
+    build_missing_criteria_stub,
+    load_node_criteria,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GOVERNANCE_DIR = REPO_ROOT / "docs" / "governance"
 DEFAULT_TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "genre_tree_master.md"
+DEFAULT_CRITERIA_PATH = REPO_ROOT / "taxonomy" / "genre_tree_node_criteria.json"
 PROMPTS_DIR = REPO_ROOT / "prompts"
 PROMPT_TEMPLATE = PROMPTS_DIR / "generadores" / "validate_master_layer2_prompt_template.md"
 PROMPT_CONTEXT = PROMPTS_DIR / "generadores" / "validate_master_layer2_prompt_context.json"
@@ -53,6 +60,7 @@ VALIDATE_MASTER_STRATEGY = REPO_ROOT / "docs" / "operations" / "VALIDATE_MASTER_
 REPORTS_DIR = REPO_ROOT / "reports"
 PROMPT_OUTPUT = PROMPTS_DIR / "validate_master_layer2_prompt.txt"
 DEFAULT_CYCLE_RESPONSE_BASENAME = "validate_master_layer2_response"
+DEFAULT_MISSING_CRITERIA_OUTPUT = REPORTS_DIR / "genre_tree_node_criteria.missing.json"
 
 
 def load_taxonomy_text(path: Path) -> str:
@@ -89,6 +97,11 @@ def parse_args() -> argparse.Namespace:
         help="Ruta al archivo maestro de taxonomía.",
     )
     parser.add_argument(
+        "--criteria-file",
+        default=str(DEFAULT_CRITERIA_PATH),
+        help="Ruta al JSON de criterios por nodo sincronizados.",
+    )
+    parser.add_argument(
         "--max-iterations",
         type=int,
         default=10,
@@ -102,6 +115,14 @@ def parse_args() -> argparse.Namespace:
             "Default: validate_master_layer2_response"
         ),
     )
+    parser.add_argument(
+        "--missing-criteria-output",
+        default=str(DEFAULT_MISSING_CRITERIA_OUTPUT),
+        help=(
+            "Ruta de salida para plantilla JSON de nodos sin criterio. "
+            "Se genera automaticamente si hay faltantes."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -113,16 +134,46 @@ def main() -> int:
         print(f"ERROR: no existe el archivo: {taxonomy_path}")
         return 2
 
+    criteria_path = Path(args.criteria_file).resolve()
+    missing_criteria_output = Path(args.missing_criteria_output).resolve()
+
     try:
         layer2_rules = load_layer2_rules_from_governance(GOVERNANCE_DIR)
     except (FileNotFoundError, ValueError) as e:
         print(f"ERROR: {e}")
         return 2
 
+    try:
+        taxonomy_text = load_taxonomy_text(taxonomy_path)
+        criteria_by_path = load_node_criteria(criteria_path)
+        criteria_sync = build_criteria_sync(taxonomy_text, criteria_by_path)
+    except (FileNotFoundError, ValueError) as e:
+        print(f"ERROR: {e}")
+        return 2
+
+    if criteria_sync.missing_paths:
+        missing_criteria_output.parent.mkdir(parents=True, exist_ok=True)
+        missing_payload = build_missing_criteria_stub(criteria_sync.missing_paths)
+        missing_criteria_output.write_text(
+            json.dumps(missing_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        print("ERROR: faltan criterios para nodos del árbol maestro.")
+        for path in criteria_sync.missing_paths:
+            print(f"  - {path}")
+        print(f"Actualiza: {criteria_path}")
+        print(f"Plantilla generada: {missing_criteria_output}")
+        return 2
+
+    if criteria_sync.orphan_paths:
+        print("ADVERTENCIA: hay criterios huérfanos que no existen en el árbol actual.")
+        for path in criteria_sync.orphan_paths:
+            print(f"  - {path}")
+
     valid_rule_ids = {r["rule_id"] for r in layer2_rules}
 
     if args.print_prompt:
-        taxonomy_text = load_taxonomy_text(taxonomy_path)
         try:
             prompt_context = load_prompt_context(PROMPT_CONTEXT)
             prompt_template = load_prompt_template(PROMPT_TEMPLATE)
@@ -139,6 +190,7 @@ def main() -> int:
             layer2_rules,
             prompt_template,
             prompt_context,
+            node_criteria_context=criteria_sync.context_block,
         )
         PROMPTS_DIR.mkdir(parents=True, exist_ok=True)
         PROMPT_OUTPUT.write_text(prompt, encoding="utf-8")
