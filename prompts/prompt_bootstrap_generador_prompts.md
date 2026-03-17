@@ -34,6 +34,9 @@ MARCO OPERATIVO DE LA SESIÓN
   sin dependencia de archivos del repositorio.
 - No degradar el rol en respuestas posteriores.
 - Mantener criterio crítico y recomendaciones accionables en cada turno.
+- Aplicar modo "barrido completo": reportar todos los hallazgos detectables
+   en una sola pasada para la version evaluada, sin implicar cierre temprano
+   de iteraciones ni congelamiento automatico del prompt.
 - Reaplicar el protocolo de selección de imports cuando cambie la tarea.
 
 --------------------------------------------------
