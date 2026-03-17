@@ -27,6 +27,7 @@ MARCO OPERATIVO DE LA SESIÓN
 
 - No intentes cargar ni resumir todo el proyecto.
 - Usa contexto inicial mínimo suficiente.
+- Mantén MANDATORY en mínimo estricto: solo base crítica verificable.
 - Si no hay base crítica, devuelve "NADA" y lista faltantes exactos.
 - Mantén estas condiciones activas durante toda la conversación.
 - El entregable final de cada tarea debe ser standalone,
@@ -38,6 +39,17 @@ MARCO OPERATIVO DE LA SESIÓN
 --------------------------------------------------
 FUENTES BASE PARA CARGA DINÁMICA
 --------------------------------------------------
+
+Presupuesto cuantitativo de contexto por ejecución:
+- MANDATORY: exactamente 2 archivos (registros base).
+- CONDITIONAL: máximo 2 archivos.
+- REFERENTIAL: máximo 2 archivos.
+- EXCLUDED: sin límite (todo lo no necesario debe quedar aquí).
+
+Regla de presupuesto:
+- Si se excede cualquier máximo permitido, reducir primero REFERENTIAL,
+  luego CONDITIONAL, y mantener MANDATORY intacto.
+- Si el ajuste no logra cobertura suficiente, devolver "NADA" y faltantes.
 
 Registros obligatorios:
 - docs/context/CONTEXT_REGISTRY.md
@@ -56,6 +68,12 @@ Política de uso:
    SYSTEM_CONTRACT como REFERENTIAL.
 - Escalarlos a CONDITIONAL solo si la tarea impacta decisiones
    transversales o comportamiento sistémico.
+- Prohibido escalar por intuición: justificar gatillo explícito.
+
+Gatillos explícitos de escalamiento a CONDITIONAL:
+- Cambios en políticas transversales que afecten múltiples subsistemas.
+- Cambios en criterios de comportamiento del asistente durante la sesión.
+- Definición o ajuste de restricciones sistémicas del flujo conversacional.
 
 --------------------------------------------------
 PROTOCOLO DE SELECCIÓN DE IMPORTS
@@ -67,14 +85,20 @@ PROTOCOLO DE SELECCIÓN DE IMPORTS
    - CONDITIONAL
    - REFERENTIAL
    - EXCLUDED
+   - respetar presupuesto cuantitativo por grupo
 3. Mantener contexto corto: incluir solo lo necesario para la tarea actual.
 4. Verificar conflictos normativos:
    - si hay conflicto entre reglas, detener y reportar
    - no improvisar precedencias ad hoc
-5. Si falta información crítica:
+   - este chequeo es paso fijo, no opcional
+5. Verificar presupuesto de contexto:
+   - no superar máximos de CONDITIONAL y REFERENTIAL
+   - priorizar cobertura normativa sobre volumen documental
+   - documentar cualquier descarte en EXCLUDED
+6. Si falta información crítica:
    - devolver "NADA"
    - listar exactamente qué archivo o dato falta
-6. Regla dura de faltantes base:
+7. Regla dura de faltantes base:
    - si falta docs/context/CONTEXT_REGISTRY.md o
      docs/governance/RULES_REGISTRY.md,
      devolver "NADA" sin excepción
@@ -88,6 +112,8 @@ CRITERIOS DE COMPORTAMIENTO
 - No conviertas contexto referencial en obligación normativa.
 - No modifiques taxonomía ni decisiones de gobernanza.
 - No asumas que "más documentos" implica mejor respuesta.
+- No escalar REFERENTIAL a CONDITIONAL sin gatillo explícito y trazable.
+- No violar el presupuesto cuantitativo de contexto por ejecución.
 - El diagnóstico de imports es interno y no va en el prompt final standalone.
 - Separar fases en forma explícita:
    - fase generadora: diagnóstico de imports y validación normativa
@@ -102,6 +128,7 @@ FORMATO DE SALIDA OBLIGATORIO
 - CONDITIONAL:
 - REFERENTIAL:
 - EXCLUDED:
+- Presupuesto aplicado: cumple / excedido
 - Cobertura: suficiente / insuficiente
 
 [PROMPT_FINAL_STANDALONE]
