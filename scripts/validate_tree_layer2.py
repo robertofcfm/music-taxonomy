@@ -34,6 +34,16 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from layer2_contract import (
+    LAYER2_RULE_REQUIRED_FIELDS,
+    RESPONSE_LAYER,
+    VALID_DECISIONS,
+    VALID_RESULTS,
+    VALID_SEVERITIES,
+    compute_decision,
+    find_unresolved_placeholders,
+)
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GOVERNANCE_DIR = REPO_ROOT / "docs" / "governance"
@@ -57,15 +67,6 @@ RULE_BLOCK_RE = re.compile(
     re.escape(RULE_MARKER_START) + r"\s*(\{.*?\})\s*" + re.escape(RULE_MARKER_END),
     re.DOTALL,
 )
-LAYER2_RULE_REQUIRED_FIELDS = {
-    "rule_id",
-    "fb",
-    "severity",
-    "description",
-    "check",
-}
-VALID_SEVERITIES = {"FATAL", "WARNING", "SUGGESTION"}
-VALID_DECISIONS = {"PASS", "PASS_WITH_WARNINGS", "FAIL"}
 
 
 # ---------------------------------------------------------------------------
@@ -140,6 +141,16 @@ def load_governance_doc_groups() -> dict[str, list[Path]]:
         )
 
     return groups
+
+
+def validate_rendered_prompt(prompt: str) -> str:
+    unresolved = find_unresolved_placeholders(prompt)
+    if unresolved:
+        raise ValueError(
+            "La plantilla de prompt L2 dejo placeholders sin resolver: "
+            + ", ".join(unresolved)
+        )
+    return prompt
 
 
 def load_governance_context() -> str:
@@ -266,7 +277,7 @@ def build_prompt(
   }
 }"""
 
-    return (
+    return validate_rendered_prompt(
         prompt_template.replace("{{SYSTEM_CONTEXT}}", prompt_context["system_context"])
         .replace("{{CLONE_CONTEXT}}", prompt_context["clone_context"])
         .replace("{{GOVERNANCE_CONTEXT}}", governance_context)
@@ -279,11 +290,6 @@ def build_prompt(
 # ---------------------------------------------------------------------------
 # Modo: --apply-response
 # ---------------------------------------------------------------------------
-
-
-VALID_RESULTS = {"PASS", "FAIL"}
-
-
 @dataclass
 class Layer2Finding:
     rule_id: str
@@ -303,6 +309,12 @@ def validate_response_schema(
     """Valida el JSON de respuesta de la IA contra el contrato MVET."""
     errors: list[str] = []
     findings: list[Layer2Finding] = []
+
+    if not isinstance(data, dict):
+        return findings, ["La respuesta IA debe ser un objeto JSON."]
+
+    if data.get("layer") != RESPONSE_LAYER:
+        errors.append(f"Campo 'layer' inválido: '{data.get('layer')}'.")
 
     if not isinstance(data.get("findings"), list):
         errors.append("Campo 'findings' faltante o no es un arreglo.")
@@ -325,6 +337,8 @@ def validate_response_schema(
             item_errors.append(f"{prefix}: severity inválida '{severity}'.")
         if result not in VALID_RESULTS:
             item_errors.append(f"{prefix}: result inválido '{result}' (debe ser PASS o FAIL).")
+        if result == "PASS":
+            item_errors.append(f"{prefix}: result PASS no permitido en findings.")
         if not node_path:
             item_errors.append(f"{prefix}: node_path vacío.")
         if not evidence:
@@ -370,8 +384,40 @@ def validate_response_schema(
             errors.append(
                 f"summary.decision_recommendation inválido: '{summary.get('decision_recommendation')}'."
             )
+        for field in ("total_fatal", "total_warning", "total_suggestion"):
+            value = summary.get(field)
+            if not isinstance(value, int) or value < 0:
+                errors.append(f"summary.{field} inválido: '{value}'.")
 
     return findings, errors
+
+
+def validate_ai_summary(
+    ai_summary: dict,
+    fatal_count: int,
+    warning_count: int,
+    suggestion_count: int,
+    decision: str,
+) -> list[str]:
+    if not isinstance(ai_summary, dict):
+        return []
+
+    errors: list[str] = []
+    expected_values = {
+        "total_fatal": fatal_count,
+        "total_warning": warning_count,
+        "total_suggestion": suggestion_count,
+        "decision_recommendation": decision,
+    }
+
+    for field, expected in expected_values.items():
+        observed = ai_summary.get(field)
+        if observed != expected:
+            errors.append(
+                f"summary.{field} inconsistente: esperado '{expected}', recibido '{observed}'."
+            )
+
+    return errors
 
 
 def summarize_layer2(findings: list[Layer2Finding]) -> tuple[int, int, int, str]:
@@ -379,12 +425,7 @@ def summarize_layer2(findings: list[Layer2Finding]) -> tuple[int, int, int, str]
     warnings = sum(1 for f in findings if f.severity == "WARNING" and f.schema_valid)
     suggestions = sum(1 for f in findings if f.severity == "SUGGESTION" and f.schema_valid)
 
-    if fatals:
-        decision = "FAIL"
-    elif warnings or suggestions:
-        decision = "PASS_WITH_WARNINGS"
-    else:
-        decision = "PASS"
+    decision = compute_decision(fatals, warnings, suggestions)
 
     return fatals, warnings, suggestions, decision
 
@@ -487,6 +528,15 @@ def process_layer2_response(
     findings = [f for f in findings if f.result != "PASS"]
     fatal_count, warning_count, suggestion_count, decision = summarize_layer2(findings)
     ai_summary = response_data.get("summary", {})
+    schema_errors.extend(
+        validate_ai_summary(
+            ai_summary,
+            fatal_count,
+            warning_count,
+            suggestion_count,
+            decision,
+        )
+    )
 
     write_layer2_reports(
         layer2_rules=layer2_rules,
@@ -529,7 +579,7 @@ def parse_args() -> argparse.Namespace:
     group.add_argument(
         "--print-prompt",
         action="store_true",
-        help="Genera el prompt para la IA y lo guarda en reports/.",
+        help="Genera el prompt para la IA y lo guarda en prompts/.",
     )
     group.add_argument(
         "--apply-response",

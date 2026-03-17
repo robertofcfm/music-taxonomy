@@ -1,0 +1,38 @@
+{
+  "layer": "MVET-LAYER2",
+  "findings": [
+    {
+      "rule_id": "MVET-L2-001",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Pop > Synth & Electronic Pop",
+      "evidence": "Los hijos 'Synth Pop' y 'Electro Pop (Atomic)' conviven como hermanos bajo el mismo padre, pero sus fronteras no estan explicitadas y en catalogos reales suelen solaparse como pop electronico centrado en sintetizadores, con riesgo de playlists muy similares.",
+      "recommendation": "Definir un criterio musical mas estricto entre ambos nodos o convertir uno de ellos en una subdivision mas precisa/alias para evitar ambiguedad entre hermanos.",
+      "confidence": 0.67
+    },
+    {
+      "rule_id": "MVET-L2-002",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Latin > Regional Mexicano / Texano (Structural)",
+      "evidence": "El nodo padre agrupa Norteño, Texano, Banda y Ranchero, subestilos con instrumentacion, enfoque ritmico y tradicion regional diferentes; una playlist tomada al nivel del padre tenderia a mezclar repertorios heterogeneos.",
+      "recommendation": "Mantener este nodo estrictamente como estructural y no como destino de playlist; si se necesitara uso operativo del padre, separar la rama mexicana regional de la texana en umbrellas estructurales mas cerrados.",
+      "confidence": 0.82
+    },
+    {
+      "rule_id": "MVET-L2-002",
+      "severity": "WARNING",
+      "result": "FAIL",
+      "node_path": "Music > Rock > Alternative & Indie (Structural)",
+      "evidence": "El padre reune Indie Rock, Grunge, Dream Pop y material Post-Punk/New Wave bajo una sola umbrella; esos hijos pueden producir experiencias de escucha muy distintas y solo conservan coherencia clara como nodo de navegacion, no como bucket musical reproducible.",
+      "recommendation": "Conservar el nodo como agrupador puramente estructural y evitar usarlo como genero reproducible; si hace falta un nivel intermedio operativo, particionarlo en umbrellas mas estrechas por afinidad musical.",
+      "confidence": 0.74
+    }
+  ],
+  "summary": {
+    "total_fatal": 0,
+    "total_warning": 3,
+    "total_suggestion": 0,
+    "decision_recommendation": "PASS_WITH_WARNINGS"
+  }
+}
