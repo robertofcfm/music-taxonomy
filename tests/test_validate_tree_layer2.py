@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -108,6 +109,71 @@ class ValidateTreeLayer2Tests(unittest.TestCase):
         self.assertIn("TODO", node["membership_criteria"])
         self.assertIn("TODO", node["exclusion_criteria"])
         self.assertEqual(len(node["reference_examples"]), 2)
+
+    def test_main_removes_stale_missing_criteria_report_when_sync_is_clean(self) -> None:
+        taxonomy_path = REPO_ROOT / "taxonomy" / "test_sync_taxonomy.md"
+        criteria_path = REPO_ROOT / "taxonomy" / "test_sync_criteria.json"
+        missing_output = REPO_ROOT / "reports" / "test_missing_criteria.json"
+
+        taxonomy_path.write_text(
+            "Music\n  Rock\n    Grunge\n  Latin",
+            encoding="utf-8",
+        )
+        criteria_path.write_text(
+            json.dumps(
+                {
+                    "version": "1.0",
+                    "nodes": [
+                        {
+                            "node_path": "Music > Rock",
+                            "membership_criteria": "m",
+                            "exclusion_criteria": "e",
+                            "reference_examples": [],
+                        },
+                        {
+                            "node_path": "Music > Rock > Grunge",
+                            "membership_criteria": "m",
+                            "exclusion_criteria": "e",
+                            "reference_examples": [],
+                        },
+                        {
+                            "node_path": "Music > Latin",
+                            "membership_criteria": "m",
+                            "exclusion_criteria": "e",
+                            "reference_examples": [],
+                        },
+                    ],
+                },
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        missing_output.write_text("{}", encoding="utf-8")
+
+        try:
+            test_args = [
+                "validate_tree_layer2.py",
+                "--print-prompt",
+                "--taxonomy-file",
+                str(taxonomy_path),
+                "--criteria-file",
+                str(criteria_path),
+                "--missing-criteria-output",
+                str(missing_output),
+            ]
+
+            with patch.object(sys, "argv", test_args):
+                import validate_tree_layer2 as validate_tree_layer2
+
+                exit_code = validate_tree_layer2.main()
+
+            self.assertEqual(exit_code, 0)
+            self.assertFalse(missing_output.exists())
+        finally:
+            taxonomy_path.unlink(missing_ok=True)
+            criteria_path.unlink(missing_ok=True)
+            missing_output.unlink(missing_ok=True)
 
     def test_process_layer2_response_reports_summary_mismatch_and_pass_items(self) -> None:
         response_data = {

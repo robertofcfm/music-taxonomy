@@ -171,6 +171,9 @@ def main() -> int:
         print(f"Plantilla generada: {missing_criteria_output}")
         return 2
 
+    if missing_criteria_output.exists():
+        missing_criteria_output.unlink()
+
     if criteria_sync.orphan_paths:
         print("ADVERTENCIA: hay criterios huérfanos que no existen en el árbol actual.")
         for path in criteria_sync.orphan_paths:
