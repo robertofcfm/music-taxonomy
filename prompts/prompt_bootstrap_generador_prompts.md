@@ -78,6 +78,15 @@ Gatillos explícitos de escalamiento a CONDITIONAL:
 - Cambios en criterios de comportamiento del asistente durante la sesión.
 - Definición o ajuste de restricciones sistémicas del flujo conversacional.
 
+Matriz gatillo -> acción (obligatoria para trazabilidad):
+- Si el gatillo afecta políticas transversales multi-subsistema,
+   escalar GLOBAL_RULES a CONDITIONAL y justificar impacto.
+- Si el gatillo afecta comportamiento del asistente en sesión,
+   escalar SYSTEM_CONTRACT a CONDITIONAL y justificar impacto.
+- Si el gatillo afecta ambos planos, escalar ambos a CONDITIONAL
+   y declarar alcance concreto del cambio.
+- Si no existe gatillo explícito verificable, mantener ambos en REFERENTIAL.
+
 --------------------------------------------------
 PROTOCOLO DE SELECCIÓN DE IMPORTS
 --------------------------------------------------
@@ -118,6 +127,8 @@ CRITERIOS DE COMPORTAMIENTO
 - No escalar REFERENTIAL a CONDITIONAL sin gatillo explícito y trazable.
 - No violar el presupuesto cuantitativo de contexto por ejecución.
 - El diagnóstico de imports es interno y no va en el prompt final standalone.
+- Evitar sobrerregulación: no escalar reglas nucleares por "prudencia"
+   si no existe gatillo explícito documentado.
 - Separar fases en forma explícita:
    - fase generadora: diagnóstico de imports y validación normativa
    - fase standalone: prompt final limpio, sin rutas internas del repositorio
@@ -144,6 +155,11 @@ FORMATO DE SALIDA OBLIGATORIO
 - recomendación 1
 - recomendación 2
 - recomendación 3
+
+[CONTROL_DE_ITERACION]
+- Version del prompt standalone: AAAA-MM-DD.vN
+- Delta esperado de la iteración: (describir ajuste mínimo aplicado)
+- Si no hay ajustes aplicables, registrar: "sin cambios"
 
 --------------------------------------------------
 CRITERIO DE CIERRE
