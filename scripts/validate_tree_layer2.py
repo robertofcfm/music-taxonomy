@@ -12,6 +12,13 @@ Modos de operación:
       contrato definido en VALIDATE_MASTER_STRATEGY.md, y genera
       los reportes de Capa 2.
 
+    --apply-cycle <directorio>
+            Aplica respuestas de IA en forma cíclica hasta que no haya
+            hallazgos pendientes o se alcance el máximo de iteraciones.
+            Convención de archivos esperada:
+                iteración 1: validate_master_layer2_response.json
+                iteración N>1: validate_master_layer2_response.iterN.json
+
 Prerrequisito:
   Capa 1 debe haber terminado con decisión PASS o PASS_WITH_WARNINGS.
   Este script verifica ese requisito antes de continuar.
@@ -38,6 +45,7 @@ DEFAULT_TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "genre_tree_master.md"
 REPORTS_DIR = REPO_ROOT / "reports"
 LAYER1_REPORT = REPORTS_DIR / "validate_master_report.json"
 PROMPT_OUTPUT = REPORTS_DIR / "validate_master_layer2_prompt.txt"
+DEFAULT_CYCLE_RESPONSE_BASENAME = "validate_master_layer2_response"
 
 GOVERNANCE_DOCS_MANDATORY = [
     GOVERNANCE_DIR / "GLOBAL_RULES.md",
@@ -497,6 +505,51 @@ def write_layer2_reports(
     report_md.write_text("\n".join(md_lines), encoding="utf-8")
 
 
+def load_response_json(response_path: Path) -> dict:
+    try:
+        return json.loads(response_path.read_text(encoding="utf-8-sig"))
+    except json.JSONDecodeError as e:
+        raise ValueError(f"el archivo de respuesta no es JSON válido: {e}") from e
+
+
+def process_layer2_response(
+    response_data: dict,
+    layer2_rules: list[dict[str, str]],
+    valid_rule_ids: set[str],
+) -> tuple[list[Layer2Finding], list[str], dict, int, int, int, str]:
+    findings, schema_errors = validate_response_schema(response_data, valid_rule_ids)
+    findings = [f for f in findings if f.result != "PASS"]
+    fatal_count, warning_count, suggestion_count, decision = summarize_layer2(findings)
+    ai_summary = response_data.get("summary", {})
+
+    write_layer2_reports(
+        layer2_rules=layer2_rules,
+        findings=findings,
+        schema_errors=schema_errors,
+        ai_summary=ai_summary,
+        decision=decision,
+        fatal_count=fatal_count,
+        warning_count=warning_count,
+        suggestion_count=suggestion_count,
+    )
+
+    return (
+        findings,
+        schema_errors,
+        ai_summary,
+        fatal_count,
+        warning_count,
+        suggestion_count,
+        decision,
+    )
+
+
+def expected_cycle_response_path(response_dir: Path, iteration: int, base_name: str) -> Path:
+    if iteration == 1:
+        return response_dir / f"{base_name}.json"
+    return response_dir / f"{base_name}.iter{iteration}.json"
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -517,6 +570,15 @@ def parse_args() -> argparse.Namespace:
         metavar="ARCHIVO_JSON",
         help="Procesa la respuesta JSON de la IA y genera reportes.",
     )
+    group.add_argument(
+        "--apply-cycle",
+        metavar="DIRECTORIO_RESPUESTAS",
+        help=(
+            "Procesa respuestas en ciclo hasta no encontrar hallazgos. "
+            "Espera validate_master_layer2_response.json (iteración 1) y "
+            "validate_master_layer2_response.iterN.json (iteraciones siguientes)."
+        ),
+    )
     parser.add_argument(
         "--taxonomy-file",
         default=str(DEFAULT_TAXONOMY_PATH),
@@ -526,6 +588,20 @@ def parse_args() -> argparse.Namespace:
         "--skip-layer1-check",
         action="store_true",
         help="Omite la verificación de prerequisito de Capa 1.",
+    )
+    parser.add_argument(
+        "--max-iterations",
+        type=int,
+        default=10,
+        help="Máximo de iteraciones para --apply-cycle (default: 10).",
+    )
+    parser.add_argument(
+        "--cycle-response-basename",
+        default=DEFAULT_CYCLE_RESPONSE_BASENAME,
+        help=(
+            "Nombre base de archivos para --apply-cycle (sin extensión). "
+            "Default: validate_master_layer2_response"
+        ),
     )
     return parser.parse_args()
 
@@ -569,43 +645,110 @@ def main() -> int:
         print("Guarda la respuesta JSON y pásala con --apply-response <archivo.json>")
         return 0
 
-    # Modo --apply-response
-    response_path = Path(args.apply_response).resolve()
-    if not response_path.exists():
-        print(f"ERROR: no existe el archivo de respuesta: {response_path}")
+    if args.apply_response:
+        # Modo --apply-response
+        response_path = Path(args.apply_response).resolve()
+        if not response_path.exists():
+            print(f"ERROR: no existe el archivo de respuesta: {response_path}")
+            return 2
+
+        try:
+            response_data = load_response_json(response_path)
+        except ValueError as e:
+            print(f"ERROR: {e}")
+            return 2
+
+        (
+            findings,
+            schema_errors,
+            _,
+            fatal_count,
+            warning_count,
+            suggestion_count,
+            decision,
+        ) = process_layer2_response(response_data, layer2_rules, valid_rule_ids)
+
+        if schema_errors:
+            print(f"ADVERTENCIA: {len(schema_errors)} errores de esquema en la respuesta IA.")
+            for e in schema_errors:
+                print(f"  - {e}")
+
+        print(f"Decision: {decision}")
+        print(f"FATAL: {fatal_count} | WARNING: {warning_count} | SUGGESTION: {suggestion_count}")
+        print("Reportes: reports/validate_master_layer2_report.json, reports/validate_master_layer2_report.md")
+        return 1 if decision == "FAIL" else 0
+
+    # Modo --apply-cycle
+    if args.max_iterations < 1:
+        print("ERROR: --max-iterations debe ser >= 1")
         return 2
 
-    try:
-        response_data = json.loads(response_path.read_text(encoding="utf-8-sig"))
-    except json.JSONDecodeError as e:
-        print(f"ERROR: el archivo de respuesta no es JSON válido: {e}")
+    response_dir = Path(args.apply_cycle).resolve()
+    if not response_dir.exists() or not response_dir.is_dir():
+        print(f"ERROR: no existe el directorio de respuestas: {response_dir}")
         return 2
 
-    findings, schema_errors = validate_response_schema(response_data, valid_rule_ids)
-    findings = [f for f in findings if f.result != "PASS"]
-    fatal_count, warning_count, suggestion_count, decision = summarize_layer2(findings)
-    ai_summary = response_data.get("summary", {})
+    base_name = str(args.cycle_response_basename).strip()
+    if not base_name:
+        print("ERROR: --cycle-response-basename no puede estar vacío")
+        return 2
 
-    write_layer2_reports(
-        layer2_rules=layer2_rules,
-        findings=findings,
-        schema_errors=schema_errors,
-        ai_summary=ai_summary,
-        decision=decision,
-        fatal_count=fatal_count,
-        warning_count=warning_count,
-        suggestion_count=suggestion_count,
+    for iteration in range(1, args.max_iterations + 1):
+        response_path = expected_cycle_response_path(response_dir, iteration, base_name)
+        if not response_path.exists():
+            if iteration == 1:
+                print(f"ERROR: no existe archivo de iteración 1: {response_path}")
+                return 2
+
+            print(
+                "PENDIENTE: no se encontró la siguiente respuesta para continuar ciclo: "
+                f"{response_path.name}"
+            )
+            return 1
+
+        try:
+            response_data = load_response_json(response_path)
+        except ValueError as e:
+            print(f"ERROR en iteración {iteration}: {e}")
+            return 2
+
+        (
+            findings,
+            schema_errors,
+            _,
+            fatal_count,
+            warning_count,
+            suggestion_count,
+            decision,
+        ) = process_layer2_response(response_data, layer2_rules, valid_rule_ids)
+
+        print(
+            f"Iteración {iteration}: decision={decision} | "
+            f"FATAL={fatal_count} WARNING={warning_count} SUGGESTION={suggestion_count}"
+        )
+
+        if schema_errors:
+            print(f"ADVERTENCIA iteración {iteration}: {len(schema_errors)} errores de esquema.")
+            for e in schema_errors:
+                print(f"  - {e}")
+
+        if not findings and not schema_errors:
+            print(f"Ciclo cerrado en iteración {iteration}: no hay hallazgos pendientes.")
+            print(
+                "Reportes: reports/validate_master_layer2_report.json, "
+                "reports/validate_master_layer2_report.md"
+            )
+            return 0
+
+    print(
+        "PENDIENTE: se alcanzó el máximo de iteraciones sin quedar limpio. "
+        f"max_iterations={args.max_iterations}"
     )
-
-    if schema_errors:
-        print(f"ADVERTENCIA: {len(schema_errors)} errores de esquema en la respuesta IA.")
-        for e in schema_errors:
-            print(f"  - {e}")
-
-    print(f"Decision: {decision}")
-    print(f"FATAL: {fatal_count} | WARNING: {warning_count} | SUGGESTION: {suggestion_count}")
-    print("Reportes: reports/validate_master_layer2_report.json, reports/validate_master_layer2_report.md")
-    return 1 if decision == "FAIL" else 0
+    print(
+        "Reportes: reports/validate_master_layer2_report.json, "
+        "reports/validate_master_layer2_report.md"
+    )
+    return 1
 
 
 if __name__ == "__main__":
