@@ -3,3 +3,4 @@
 # Indentation defines hierarchy.
 
 Music
+  Latin
