@@ -113,7 +113,7 @@ prompts/
 
 Prompt bootstrap recomendado:
 
-- prompts/prompt_bootstrap_generador_prompts_v1.md
+- prompts/prompt_bootstrap_generador_prompts.md
 
 Este enfoque usa dos fases. El generador debe construir el prompt final
 cargando de forma

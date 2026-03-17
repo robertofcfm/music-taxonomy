@@ -366,7 +366,7 @@ Checklist de cierre de la Fase 1.
 
 --------------------------------------------------
 
-prompts/prompt_bootstrap_generador_prompts_v1.md
+prompts/prompt_bootstrap_generador_prompts.md
 
 Prompt generador de prompts.
 Realiza diagnostico de imports, valida cobertura,

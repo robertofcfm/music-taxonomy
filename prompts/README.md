@@ -14,7 +14,7 @@ Ejemplos de nombres:
 - validate_master_layer2_prompt_v2.txt
 
 Prompt generador recomendado:
-- prompt_bootstrap_generador_prompts_v1.md
+- prompt_bootstrap_generador_prompts.md
 
 Nota:
 - El diagnostico de imports se ejecuta en el prompt generador.
