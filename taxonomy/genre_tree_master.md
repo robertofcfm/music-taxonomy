@@ -7,19 +7,14 @@ Music
     Indie Rock
     Grunge
       Seattle Grunge (Atomic)
-      Post-Grunge
+      Post-Grunge (Atomic)
     Dream Pop (Atomic)
-    Post-Punk Era (Structural)
-      New Wave (Atomic)
-      Post Punk
-        Gothic Rock
-        Coldwave / Darkwave (Atomic)
+    New Wave (Atomic)
+    Post Punk
 
     Classic Rock
-      Rock & Roll
+      Rock & Roll (Atomic)
       Blues Rock
-        Texas Blues Rock
-        Classic Blues Rock
       Hard Rock (Atomic)
 
   Metal
@@ -30,8 +25,6 @@ Music
 
   Pop
     Pop Rock
-      Alternative Pop Rock
-      Power Pop
 
     Synth Pop
       New Romantic (Atomic)
@@ -58,14 +51,14 @@ Music
       Norteño
       Banda (Atomic)
       Ranchero
-    Texano
+      Texano
 
     Regional Colombiano
       Cumbia Colombiana (Atomic)
       Vallenato
 
-  Soul / Funk / R&B
-    Soul / Rhythm & Blues
-    Funk
+  Soul / Rhythm & Blues
+  
+  Funk
 
   Jazz
