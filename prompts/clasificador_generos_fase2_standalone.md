@@ -54,6 +54,13 @@ Archivo de salida obligatorio:
 
 - catalog/songs_with_genres.csv
 
+Fuentes operativas predefinidas en este proyecto (no pedirlas de nuevo
+salvo que el usuario solicite override explicito):
+
+- taxonomia base: taxonomy/genre_tree_master.md
+- criterios por nodo: taxonomy/genre_tree_node_criteria.json
+- version taxonomia: taxonomy/taxonomy_version.md
+
 Campos de salida obligatorios y orden:
 
 - title
@@ -85,20 +92,22 @@ aplicables con este proceso:
 PROTOCOLO POR CADA SOLICITUD
 --------------------------------------------------
 
-### Paso 1 - Solicitar dato minimo
+### Paso 1 - Parametros de ejecucion predefinidos
 
-Pide al usuario:
+Usa parametros fijos de corrida para este proyecto:
 
-- Confirmacion de lectura desde catalog/songs_raw.csv
-- Alcance de ejecucion: fila especifica, rango o lote completo
-- Caracteristicas musicales adicionales (opcional)
+1) Alcance de ejecucion: lote completo
+2) Criterios musicales adicionales: ninguno (usar solo reglas activas)
 
-Si falta informacion critica, solicitala antes de clasificar.
+No solicitar estos parametros al usuario en cada corrida.
+Solo pedir confirmacion si el usuario solicita un override explicito.
 
 ### Paso 2 - Cargar taxonomia y criterios
 
-- Pide la taxonomia de generos (formato: indentado)
-- Pide criterios especificos por nodo si estan disponibles
+- Carga taxonomia desde taxonomy/genre_tree_master.md
+- Carga criterios por nodo desde taxonomy/genre_tree_node_criteria.json
+- Carga version activa desde taxonomy/taxonomy_version.md
+- Solo pedir override al usuario si desea usar otra fuente
 - Clasifica fuentes:
   - MANDATORY: taxonomia estructura (que es nodo hoja vs padre)
   - CONDITIONAL: criterios de pertenencia (si los hay)
@@ -153,6 +162,7 @@ Si NO existe genero adecuado en la taxonomia para una cancion
 musicalmente valida:
 
 - Reporta genero faltante con justificacion
+- Reporta cancion afectada (title, artist)
 - Propone ubicacion sugerida dentro de la taxonomia
 - NO inventes genero operativo ni clasifiques a ciegas
 - Marca status: GENRE_MISSING
@@ -183,7 +193,7 @@ En todos los casos GENRE_MISSING, agregar reporte de faltante.
 La corrida se ejecuta de forma continua hasta cumplir
 una de estas condiciones:
 
-1. Se termina el alcance solicitado (fila, rango o lote), o
+1. Se termina el alcance fijo del lote completo, o
 2. Se acumulan 5 reportes de genero faltante (GENRE_MISSING)
 
 Si se alcanza el limite de 5 faltantes, detener la corrida,
@@ -237,6 +247,7 @@ FORMATO DE RESPUESTA OBLIGATORIO
 - genero_2: confianza_2 | justificacion | criterios_aplicados
 
 [FALTANTES_CRITICOS_SI_APLICA]
+- cancion: title | artist
 - genero_faltante_1: ubicacion_propuesta
 - motivo:
 - accion_sugerida:
@@ -245,6 +256,7 @@ FORMATO DE RESPUESTA OBLIGATORIO
 - total_canciones_procesadas:
 - total_asignadas:
 - total_genre_missing:
+- canciones_con_genre_missing:
 - umbral_faltantes: 5
 - stop_reason: FIN_ALCANCE | UMBRAL_FALTANTES
 
@@ -263,7 +275,8 @@ Razon:
 CONDICION DE ARRANQUE
 --------------------------------------------------
 
-Inicia cada ejecucion con esta pregunta:
+Inicia cada ejecucion con este estado fijo:
 
-"Se procesaran canciones desde catalog/songs_raw.csv.
-Que alcance quieres ejecutar: una fila, un rango o lote completo?"
+"Se procesaran canciones desde catalog/songs_raw.csv en lote completo,
+sin criterios musicales adicionales, hasta finalizar lote o alcanzar
+5 casos GENRE_MISSING."
