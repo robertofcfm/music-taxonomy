@@ -1,3 +1,18 @@
+---
+
+## Prompt de Arranque de Sesión (para copiar y pegar)
+
+Usa este prompt al inicio de cada nueva conversación para asegurar que el agente siga el flujo operativo sin interrupciones ni sugerencias fuera del prompt:
+
+```
+Instrucción para la sesión:
+- Sigue el prompt operativo seleccionado al pie de la letra, sin pedir confirmaciones ni sugerir pasos adicionales.
+- No interrumpas el flujo salvo por errores fatales o ambigüedades no cubiertas.
+- No expliques ni resumas a menos que el prompt lo indique.
+- El usuario ya conoce el flujo y las reglas.
+```
+
+Pega este bloque antes de tu prompt operativo para maximizar la autonomía y evitar interrupciones.
 ## Prompts Finales para el Usuario
 
 | Archivo                                             | Objetivo principal                                                      |
