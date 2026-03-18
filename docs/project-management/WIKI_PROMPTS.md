@@ -4,9 +4,11 @@
 
 Usa este prompt al inicio de cada nueva conversación para asegurar que el agente siga el flujo operativo sin interrupciones ni sugerencias fuera del prompt:
 
+
 ```
 Instrucción para la sesión:
-- Sigue el prompt operativo seleccionado al pie de la letra, sin pedir confirmaciones ni sugerir pasos adicionales.
+- Antes de iniciar, pregunta al usuario: "¿Con qué prompt operativo deseas comenzar esta sesión? (indica el nombre de archivo)".
+- Una vez indicado, sigue ese prompt operativo al pie de la letra, sin pedir confirmaciones ni sugerir pasos adicionales.
 - No interrumpas el flujo salvo por errores fatales o ambigüedades no cubiertas.
 - No expliques ni resumas a menos que el prompt lo indique.
 - El usuario ya conoce el flujo y las reglas.
