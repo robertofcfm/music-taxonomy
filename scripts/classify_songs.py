@@ -1,3 +1,24 @@
+
+# === INTEGRACIÓN DE CRITERIOS POR NODO ===
+# Este script ahora carga y expone los criterios de membresía y exclusión definidos en taxonomy/genre_tree_node_criteria.json
+# para que el agente LLM y cualquier lógica de validación puedan consultarlos y justificar asignaciones o advertencias.
+
+import json
+from pathlib import Path
+
+CRITERIA_PATH = Path(__file__).parent.parent / "taxonomy" / "genre_tree_node_criteria.json"
+try:
+	with open(CRITERIA_PATH, encoding="utf-8") as f:
+		NODE_CRITERIA = {item["node_path"]: item for item in json.load(f)["nodes"]}
+except Exception as e:
+	NODE_CRITERIA = {}
+	print(f"[WARN] No se pudo cargar criterios por nodo: {e}")
+
+# USO SUGERIDO:
+# - Para cada asignación de género, consulta NODE_CRITERIA[nodo]["membership_criteria"] y ["exclusion_criteria"]
+# - Justifica la asignación o advertencia en función de estos criterios
+# - Si el nodo no tiene criterios definidos, reporta advertencia de cobertura incompleta
+
 # IMPORTANTE: El match de género lo realizas tu como el agente LLM (modelo de lenguaje), siguiendo el protocolo standalone y evaluando cada canción según los criterios de pertenencia, exclusión y coherencia musical definidos en la taxonomía.
 # El usuario no debe realizar el match manualmente. No se permite automatizar el match mediante lógica de script, heurísticas ni inferencias automáticas fuera del razonamiento del LLM.
 # Cada asignación debe justificarse explícitamente y cumplir la regla de convivencia homogénea dentro del nodo hoja.
