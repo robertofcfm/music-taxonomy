@@ -1552,7 +1552,7 @@ Si una recomendacion contradice estos criterios, prioriza estos criterios sincro
   Membership: Generos de la tradicion musical latina y regionales hispanoamericanos.
   Exclusion: Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.
   Examples: Regional Mexicano, Salsa, Cumbia
-- Node: Music > Latin > Norteño (Atomic)
+- Node: Music > Latin > Norteño
   Membership: Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.
   Exclusion: Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.
   Examples: Norteño Clasico, Norteño Moderno, Corrido Norteño
@@ -1569,7 +1569,7 @@ Music
     Art Rock
     Grunge
   Latin
-    Norteño (Atomic)
+    Norteño
 === INSTRUCCION DE SALIDA ===
 
 Responde UNICAMENTE con un JSON valido siguiendo el esquema a continuacion.

@@ -26,7 +26,7 @@
       "reference_examples": ["Regional Mexicano", "Salsa", "Cumbia"]
     },
     {
-      "node_path": "Music > Latin > Norteño (Atomic)",
+      "node_path": "Music > Latin > Norteño",
       "membership_criteria": "Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.",
       "exclusion_criteria": "Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.",
       "reference_examples": ["Norteño Clasico", "Norteño Moderno", "Corrido Norteño"]

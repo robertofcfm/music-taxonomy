@@ -1,38 +1,10 @@
 {
   "layer": "MVET-LAYER2",
-  "findings": [
-    {
-      "rule_id": "MVET-L2-005",
-      "severity": "WARNING",
-      "result": "FAIL",
-      "node_path": "Multiple > Leaf Nodes",
-      "evidence": "21 nodos hoja carecen del marcador (Atomic) a pesar de no tener hijos y representar géneros donde la subdivisión adicional sería forzada o deterioraría la coherencia de playlist. Nodos afectados: Indie Rock, Post Punk, Blues Rock, Heavy Metal, Thrash Metal, Nu Metal, Pop Rock, Disco, Deep House, Electro House, Dark Ambient, Cinematic Ambient, Rock Latino, Pop Latino, Hip Hop Latino, Norteño, Ranchero, Texano, Vallenato, Soul / Rhythm & Blues, Funk.",
-      "recommendation": "Marcar estos nodos hoja con el sufijo (Atomic) para indicar explícitamente que representan géneros atómicos que no deben subdividirse más, alineado con la sección 10 de TAXONOMY_RULES.",
-      "confidence": 0.82
-    },
-    {
-      "rule_id": "MVET-L2-006",
-      "severity": "WARNING",
-      "result": "FAIL",
-      "node_path": "Rock > Dream Pop (Atomic)",
-      "evidence": "Dream Pop se caracteriza por sensibilidades indie fusionadas con atmósferas electrónicas oníricas. La literatura musical asocia Dream Pop primariamente con tradiciones Indie Pop o Synth Pop, no con Rock central. Su ubicación bajo Rock puede reducir la precisión de clasificación y navegación taxonómica.",
-      "recommendation": "Evaluar la reubicación de Dream Pop a Pop > Synth Pop o considerar crear una rama Indie bajo Pop para reflejar con precisión la naturaleza musical del género.",
-      "confidence": 0.72
-    },
-    {
-      "rule_id": "MVET-L2-006",
-      "severity": "WARNING",
-      "result": "FAIL",
-      "node_path": "Rock > New Wave (Atomic)",
-      "evidence": "New Wave combina elementos rock y electrónicos pero está alieneado históricamente con tradiciones Electronic/Synth. El género emergió junto a synth-pop y experimentación electrónica. La ubicación actual bajo Rock diverge de patrones de taxonomía musical establecidos.",
-      "recommendation": "Evaluar reubicación de New Wave a Electronic & Dance o a Pop > Synth Pop para reflejar mejor el carácter electrónico del género y mejorar la precisión de clasificación.",
-      "confidence": 0.75
-    }
-  ],
+  "findings": [],
   "summary": {
     "total_fatal": 0,
-    "total_warning": 3,
+    "total_warning": 0,
     "total_suggestion": 0,
-    "decision_recommendation": "PASS_WITH_WARNINGS"
+    "decision_recommendation": "PASS"
   }
 }

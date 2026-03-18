@@ -7,4 +7,4 @@ Music
     Art Rock
     Grunge
   Latin
-    Norteño (Atomic)
+    Norteño
