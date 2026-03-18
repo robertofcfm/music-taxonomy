@@ -31,5 +31,35 @@
       "exclusion_criteria": "Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.",
       "reference_examples": ["Norteño Clasico", "Norteño Moderno", "Corrido Norteño"]
     }
+    ,{
+        "node_path": "Music > Electronic",
+        "membership_criteria": "Géneros musicales basados principalmente en la producción electrónica, síntesis y manipulación digital del sonido.",
+        "exclusion_criteria": "Excluir géneros donde la instrumentación acústica o tradicional sea predominante.",
+        "reference_examples": ["Techno", "House", "Drum and Bass"]
+    }
+      ,{
+          "node_path": "Music > Electronic > Drum and Bass",
+          "membership_criteria": "Canciones de música electrónica con tempo acelerado (160-180 BPM), patrones de batería sincopados y líneas de bajo prominentes.",
+          "exclusion_criteria": "Excluir géneros electrónicos que no tengan énfasis en breakbeats rápidos y bajo dominante (ej. House, Techno, Trance).",
+          "reference_examples": ["Goldie", "Roni Size", "Pendulum"]
+      }
+    ,{
+        "node_path": "Music > Rock > Alternative Rock",
+        "membership_criteria": "Canciones de Rock con enfoque alternativo, innovación estilística o ruptura con el mainstream, especialmente de los 80s-90s.",
+        "exclusion_criteria": "Excluir Grunge, Art Rock y Hard Rock cuando la identidad principal no sea alternativa.",
+        "reference_examples": ["R.E.M.", "The Smashing Pumpkins", "Pixies"]
+    }
+      ,{
+          "node_path": "Music > Rock > New Wave",
+          "membership_criteria": "Canciones de Rock y pop con fuerte influencia de la música electrónica y estética moderna, especialmente de finales de los 70s y 80s.",
+          "exclusion_criteria": "Excluir synthpop puro, punk sin elementos electrónicos y géneros alternativos posteriores.",
+          "reference_examples": ["Talking Heads", "The Cars", "Blondie"]
+      }
+        ,{
+            "node_path": "Music > Latin > Cumbia Pop",
+            "membership_criteria": "Canciones que fusionan la estructura rítmica de la cumbia con elementos melódicos, arreglos y producción de la música pop contemporánea.",
+            "exclusion_criteria": "Excluir cumbia tradicional sin elementos pop y pop latino sin base rítmica de cumbia.",
+            "reference_examples": ["Rombai", "Agapornis", "Marama"]
+        }
   ]
 }

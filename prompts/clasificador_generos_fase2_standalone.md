@@ -1,5 +1,13 @@
+
 # PROMPT IDENTIFICADOR DE GENEROS (FASE 2)
 ## Clasificacion de Canciones a Taxonomia Musical
+
+--------------------------------------------------
+CONDICION DE ARRANQUE Y ALCANCE
+--------------------------------------------------
+
+Este proceso SIEMPRE evalúa el lote completo de canciones desde catalog/songs_raw.csv, o se detiene automáticamente si se acumulan 5 casos de género faltante (GENRE_MISSING), lo que ocurra primero. No se permite ejecución parcial salvo para pruebas manuales explícitas.
+
 
 --------------------------------------------------
 ROL
@@ -22,15 +30,18 @@ que la taxonomia contiene.
 OBJETIVO OPERATIVO
 --------------------------------------------------
 
-Para cada cancion tomada desde catalog/songs_raw.csv:
 
-1. Analiza caracteristicas musicales (estilo, instrumentos,
-   tempo, energia, contexto historico, etc.)
-2. Identifica generos candidatos en la taxonomia facilitada
-3. Clasifica en SOLO nodos hoja de la taxonomia
-4. Asigna multiples generos si la cancion los justifica musicalmente
-5. Reporta confianza y justificacion por cada asignacion
-6. Deten si no existe genero adecuado: reporta faltante
+El proceso es automático sobre el lote completo, sin intervención manual, y se detiene si se detectan 5 géneros faltantes.
+
+
+Para cada canción tomada desde catalog/songs_raw.csv:
+1. Analiza características musicales (estilo, instrumentos, tempo, energía, contexto histórico, etc.)
+2. Identifica géneros candidatos en la taxonomía facilitada
+3. Clasifica en SOLO nodos hoja de la taxonomía
+4. Solo asigna un género si la canción comparte rasgos musicales, instrumentales y de contexto muy similares con otras canciones del mismo género, evitando disonancia dentro del nodo.
+5. Asigna múltiples géneros si la canción los justifica musicalmente y cumple la regla anterior para cada uno.
+6. Reporta confianza y justificación por cada asignación
+7. Detén si no existe género adecuado: reporta faltante
 
 
 --------------------------------------------------
