@@ -1528,8 +1528,8 @@ La validación garantiza que:
   Check: Detecta nodos marcados como (Atomic) que deberian ser descompostos. Esto ocurre cuando nuevos subgeneros musicales validos emergen y justifican subdividir un genero previamente considerado atomico. Recomienda quitar el marcador (Atomic) y crear subgeneros apropiados.
 
   MVET-L2-010 [FB-06] WARNING
-  Descripción: Candidatos para agrupacion jerarquica de nodos hermanos.
-  Check: Identifica grupos de nodos hermanos que comparten caracteristicas musicales suficientes para justificar un nodo padre intermedio que los agrupe. Propone crear un Agrupador Estructural (Structural) que organice estos hermanos con mayor coherencia, simplificando la estructura y mejorando la navegacion taxonomica.
+  Descripción: Candidatos para agrupacion jerarquica de nodos.
+  Check: Evalua cada nodo individualmente para determinar si su ubicacion actual es la mas coherente musicalmente. Si un nodo, por su naturaleza o contexto musical, justifica la existencia de un nodo padre intermedio (Agrupador Estructural), debe sugerirse su creacion aunque no existan hermanos. Esto permite mejorar la navegacion y coherencia taxonomica incluso en ramas con un solo hijo.
 
 === CONTEXTO DE CRITERIOS POR NODO (SINCRONIZADO) ===
 
@@ -1548,6 +1548,18 @@ Si una recomendacion contradice estos criterios, prioriza estos criterios sincro
   Membership: Rock alternativo de estetica grunge con sonido crudo y distorsion, asociado a la escena de Seattle y derivados.
   Exclusion: Excluir Hard Rock clasico y Alternative Metal cuando no exista identidad grunge dominante.
   Examples: Nirvana, Soundgarden, Alice in Chains
+- Node: Music > Rock > Alternative Rock
+  Membership: Canciones de Rock con enfoque alternativo, innovación estilística o ruptura con el mainstream, especialmente de los 80s-90s.
+  Exclusion: Excluir Grunge, Art Rock y Hard Rock cuando la identidad principal no sea alternativa.
+  Examples: R.E.M., The Smashing Pumpkins, Pixies
+- Node: Music > Rock > New Wave
+  Membership: Canciones de Rock y pop con fuerte influencia de la música electrónica y estética moderna, especialmente de finales de los 70s y 80s.
+  Exclusion: Excluir synthpop puro, punk sin elementos electrónicos y géneros alternativos posteriores.
+  Examples: Talking Heads, The Cars, Blondie
+- Node: Music > Rock > Soft Rock
+  Membership: Canciones de Rock caracterizadas por melodías suaves, arreglos pulidos y producción orientada a la accesibilidad, con énfasis en armonías vocales y menor distorsión.
+  Exclusion: Excluir Hard Rock, Art Rock y géneros donde predomine la agresividad, experimentación o distorsión.
+  Examples: Air Supply, Bread, Chicago
 - Node: Music > Latin
   Membership: Generos de la tradicion musical latina y regionales hispanoamericanos.
   Exclusion: Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.
@@ -1556,20 +1568,34 @@ Si una recomendacion contradice estos criterios, prioriza estos criterios sincro
   Membership: Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.
   Exclusion: Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.
   Examples: Norteño Clasico, Norteño Moderno, Corrido Norteño
+- Node: Music > Latin > Cumbia Pop
+  Membership: Canciones que fusionan la estructura rítmica de la cumbia con elementos melódicos, arreglos y producción de la música pop contemporánea.
+  Exclusion: Excluir cumbia tradicional sin elementos pop y pop latino sin base rítmica de cumbia.
+  Examples: Rombai, Agapornis, Marama
+- Node: Music > Electronic
+  Membership: Géneros musicales basados principalmente en la producción electrónica, síntesis y manipulación digital del sonido.
+  Exclusion: Excluir géneros donde la instrumentación acústica o tradicional sea predominante.
+  Examples: Techno, House, Drum and Bass
+- Node: Music > Electronic > Drum and Bass
+  Membership: Canciones de música electrónica con tempo acelerado (160-180 BPM), patrones de batería sincopados y líneas de bajo prominentes.
+  Exclusion: Excluir géneros electrónicos que no tengan énfasis en breakbeats rápidos y bajo dominante (ej. House, Techno, Trance).
+  Examples: Goldie, Roni Size, Pendulum
 
-Cobertura criterios: 5/5 nodos no-raiz.
+Cobertura criterios: 11/11 nodos no-raiz.
 === ARBOL TAXONOMICO A EVALUAR ===
-
-# GENRE TREE MASTER
-# Editable taxonomy template.
-# Indentation defines hierarchy.
 
 Music
   Rock
     Art Rock
     Grunge
+    Alternative Rock
+    New Wave
+    Soft Rock
   Latin
     Norteño
+    Cumbia Pop
+  Electronic
+    Drum and Bass
 === INSTRUCCION DE SALIDA ===
 
 Responde UNICAMENTE con un JSON valido siguiendo el esquema a continuacion.
