@@ -104,7 +104,7 @@ Formato:
   "rule_id": "MVET-L2-010",
   "fb": "FB-06",
   "severity": "WARNING",
-  "description": "Candidatos para agrupacion jerarquica de nodos hermanos.",
-  "check": "Identifica grupos de nodos hermanos que comparten caracteristicas musicales suficientes para justificar un nodo padre intermedio que los agrupe. Propone crear un Agrupador Estructural (Structural) que organice estos hermanos con mayor coherencia, simplificando la estructura y mejorando la navegacion taxonomica."
+  "description": "Candidatos para agrupacion jerarquica de nodos.",
+  "check": "Evalua cada nodo individualmente para determinar si su ubicacion actual es la mas coherente musicalmente. Si un nodo, por su naturaleza o contexto musical, justifica la existencia de un nodo padre intermedio (Agrupador Estructural), debe sugerirse su creacion aunque no existan hermanos. Esto permite mejorar la navegacion y coherencia taxonomica incluso en ramas con un solo hijo."
 }
 <!-- MVET:LAYER2_RULE_END -->
