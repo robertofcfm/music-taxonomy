@@ -4,6 +4,7 @@ Music
     Grunge
     Alternative Rock
     New Wave
+    Soft Rock
   Latin
     Norteño
     Cumbia Pop

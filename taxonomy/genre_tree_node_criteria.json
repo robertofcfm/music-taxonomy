@@ -61,5 +61,11 @@
             "exclusion_criteria": "Excluir cumbia tradicional sin elementos pop y pop latino sin base rítmica de cumbia.",
             "reference_examples": ["Rombai", "Agapornis", "Marama"]
         }
+        ,{
+          "node_path": "Music > Rock > Soft Rock",
+          "membership_criteria": "Canciones de Rock caracterizadas por melodías suaves, arreglos pulidos y producción orientada a la accesibilidad, con énfasis en armonías vocales y menor distorsión.",
+          "exclusion_criteria": "Excluir Hard Rock, Art Rock y géneros donde predomine la agresividad, experimentación o distorsión.",
+          "reference_examples": ["Air Supply", "Bread", "Chicago"]
+          }
   ]
 }
