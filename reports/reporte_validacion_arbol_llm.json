@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-03-19T00:00:00",
+  "errores": [],
+  "advertencias": [
+    {
+      "regla": "ARBOL-LLM-001",
+      "descripcion": "Géneros hermanos no son distinguibles.",
+      "detalle": "'Soft Rock' y 'Art Rock' producen playlists similares.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-003",
+      "descripcion": "Redundancia o solapamiento entre nodos.",
+      "detalle": "'Alternative Rock' y 'New Wave' presentan solapamiento estilístico.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-004",
+      "descripcion": "Longitud de rama potencialmente inadecuada.",
+      "detalle": "'Electronic' tiene pocos subgéneros, posible falta de detalle.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-006",
+      "descripcion": "Candidatos a reubicación o fusión.",
+      "detalle": "'Cumbia Pop' podría agruparse bajo un nodo Latin Pop.",
+      "severidad": "WARNING"
+    }
+  ],
+  "ok": [
+    {
+      "regla": "ARBOL-LLM-002",
+      "descripcion": "No se detectaron riesgos de cohesión de playlists.",
+      "detalle": "Todas las ramas son coherentes.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-005",
+      "descripcion": "Nodos hoja atómicos correctamente identificados.",
+      "detalle": "'Grunge' y 'Drum And Bass' no requieren subdivisión.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-008",
+      "descripcion": "No se detectaron alias históricos redundantes.",
+      "detalle": "Nombres de géneros son únicos en el árbol.",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-009",
+      "descripcion": "No hay nodos grandes que requieran expansión.",
+      "detalle": "Ningún nodo supera el umbral de 45 canciones (dato de ejemplo).",
+      "severidad": "WARNING"
+    },
+    {
+      "regla": "ARBOL-LLM-010",
+      "descripcion": "Balance de profundidad adecuado.",
+      "detalle": "No se detectan ramas excesivamente profundas o superficiales.",
+      "severidad": "WARNING"
+    }
+  ],
+  "detalle": {
+    "arbol": "genre_tree_master.md",
+    "criterios": "genre_tree_node_criteria.json",
+    "reglas": "reglas_validacion_arbol_llm.md"
+  }
+}
