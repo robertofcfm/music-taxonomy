@@ -9,6 +9,7 @@ from pathlib import Path
 import sys
 import argparse
 import datetime
+from utils.validate_criteria_coverage import *
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = REPO_ROOT / "reports"

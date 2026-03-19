@@ -30,6 +30,7 @@ import hashlib
 import argparse
 import datetime
 import re
+from utils.validate_criteria_coverage import *
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GOVERNANCE_DIR = REPO_ROOT / "docs" / "governance"

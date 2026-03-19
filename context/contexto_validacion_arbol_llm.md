@@ -2,6 +2,35 @@
 
 Contexto mínimo necesario para validaciones que requieren LLM.
 
+## Principios obligatorios
+- No proponer cambios automáticos al archivo maestro.
+- No inventar reglas fuera del corpus de gobernanza proporcionado.
+- No ocultar incertidumbre: reflejar confianza real en el campo confidence.
+- La separación entre géneros Latin y no-Latin es obligatoria e inviolable.
+- El árbol es controlado manualmente por el propietario del proyecto. El sistema solo puede sugerir; nunca modificar.
+
+## Glosario operativo mínimo para Capa 2
+- **Nodo clone**: Nodo portal que referencia un nodo canónico. No tiene hijos ni contiene canciones. Existe para navegación y soporte de clasificación.
+- **Nodo General**: Nodo de respaldo para contenido válido del dominio del padre que no encaja en subgéneros más específicos.
+- **Nodo Atómico**: Nodo hoja que no debe subdividirse más sin perder coherencia musical.
+- **Nodo Agrupador Estructural**: Nodo padre usado principalmente para organización estructural y navegación taxonómica. No debe asumirse por defecto como género reproducible principal. Cuando existan hijos musicalmente distinguibles, la evaluación debe priorizar esos hijos por encima del padre.
+
+Identificación operativa para esta validación:
+- Si un nodo está marcado explícitamente como clone, trátalo como clone.
+- Si el nombre del nodo contiene la palabra "clone", trátalo como clone.
+- Si el nombre del nodo contiene el marcador "->", trátalo como clone.
+
+Instrucción de evaluación:
+- Cuando una regla indique excluir nodos clone, exclúyelos completamente del análisis.
+- No reportes como conflicto semántico una mezcla Latin/no-Latin si la aparente mezcla ocurre solo por nodos clone.
+
+## Alcance de aplicación para Capa 2
+Aplica únicamente reglas semánticas y estructurales de taxonomía para validar coherencia musical del árbol. Ignora reglas operativas fuera de alcance de esta capa (por ejemplo: modos de ejecución, batching, logging, continuidad de lotes, o detalles de pipeline de clasificación de canciones).
+
+Precedencia obligatoria:
+- Si hay conflicto interpretativo, prioriza SYSTEM_CONTRACT y GLOBAL_RULES.
+- No inventar reglas fuera del corpus de governance cargado abajo.
+
 ## Contexto adicional para validaciones LLM
 - La redundancia puede surgir por alias, solapamiento o inconsistencias históricas de nombrado.
 - Nodos con muchas canciones o playlists diversas pueden requerir subdivisión si existen subgéneros reconocibles (umbral sugerido: 45 canciones).
