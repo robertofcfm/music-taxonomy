@@ -1,0 +1,65 @@
+
+# Prompt LLM Capa 2: Validación de Árbol de Géneros Musicales
+
+Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
+
+--- INSTRUCCIONES ---
+1. Toma el árbol de géneros musicales desde:
+   taxonomy/genre_tree_master.md
+2. Toma el contexto operativo y definiciones desde:
+   context/contexto_validacion_arbol_llm.md
+3. Toma las reglas de validación LLM desde:
+   governance/reglas_validacion_arbol_llm.md
+4. Evalúa cada una de las reglas LLM sobre el árbol, aplicando el contexto.
+5. Genera dos archivos como respuesta:
+   - Un reporte en JSON con el formato exacto que produce el script de validación determinista (errores, advertencias, ok, detalle, timestamp).
+   - Un reporte en Markdown con el mismo formato y secciones que el script (errores, advertencias, reglas validadas, archivos utilizados, fecha).
+
+--- FORMATO DE RESPUESTA ---
+La respuesta debe contener únicamente:
+1. El JSON de reporte de validación.
+2. El Markdown de reporte de validación.
+
+No incluyas explicaciones adicionales ni comentarios fuera de los dos reportes.
+
+--- EJEMPLO DE RESPUESTA ---
+
+```json
+{
+  "timestamp": "2026-03-18T23:59:00",
+  "errores": [
+    {"regla": "ARBOL-LLM-007", "descripcion": "Se detectó mezcla indebida de géneros Latin y no-Latin.", "detalle": "'Cumbia Pop' bajo rama no-Latin.", "severidad": "FATAL"}
+  ],
+  "advertencias": [
+    {"regla": "ARBOL-LLM-001", "descripcion": "Géneros hermanos no son distinguibles.", "detalle": "'Soft Rock' y 'Art Rock' producen playlists similares.", "severidad": "WARNING"}
+  ],
+  "ok": [
+    {"regla": "ARBOL-LLM-002", "descripcion": "No se detectaron riesgos de cohesión de playlists.", "detalle": "Todas las ramas son coherentes.", "severidad": "WARNING"}
+  ],
+  "detalle": {"arbol": "genre_tree_master.md", "criterios": "genre_tree_node_criteria.json", "reglas": "reglas_validacion_arbol_llm.md"}
+}
+```
+
+```markdown
+# Reporte de Validación LLM del Árbol
+Fecha: 2026-03-18T23:59:00
+
+## Archivos utilizados
+- Árbol: genre_tree_master.md
+- Criterios: genre_tree_node_criteria.json
+- Reglas: reglas_validacion_arbol_llm.md
+
+## ❌ Errores
+- **ARBOL-LLM-007** (FATAL): Se detectó mezcla indebida de géneros Latin y no-Latin.
+  - Detalle: 'Cumbia Pop' bajo rama no-Latin.
+
+## ⚠️ Advertencias
+- **ARBOL-LLM-001** (WARNING): Géneros hermanos no son distinguibles.
+  - Detalle: 'Soft Rock' y 'Art Rock' producen playlists similares.
+
+## ✅ Reglas validadas correctamente
+- **ARBOL-LLM-002**: No se detectaron riesgos de cohesión de playlists.
+  - Todas las ramas son coherentes.
+```
+
+PROCESA este prompt y responde únicamente con los dos reportes (JSON y Markdown) generados tras evaluar todas las reglas LLM sobre el árbol, usando el contexto y las reglas indicadas.
