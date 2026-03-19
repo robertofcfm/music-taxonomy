@@ -1,47 +1,36 @@
-# Reporte de Validación de Árbol de Géneros Musicales (LLM)
+# Reporte de Validación LLM – Árbol de Géneros Musicales
 
 **Fecha:** 2026-03-19T00:00:00
 
-
 ## Errores
 
-*No se detectaron errores fatales.*
+- **ARBOL-LLM-007**: Se detectó mezcla indebida de géneros Latin y no-Latin.  
+  _Detalle:_ 'Cumbia Pop' bajo rama Latin puede requerir revisión si su producción y estilo son predominantemente pop internacional y no latino.  
+  _Severidad:_ FATAL
 
 ## Advertencias
 
-- **ARBOL-LLM-001**: Géneros hermanos no son distinguibles.
-  - Detalle: 'Soft Rock' y 'Art Rock' producen playlists similares.
-  - Severidad: WARNING
-- **ARBOL-LLM-003**: Redundancia o solapamiento entre nodos.
-  - Detalle: 'Alternative Rock' y 'New Wave' presentan solapamiento estilístico.
-  - Severidad: WARNING
-- **ARBOL-LLM-004**: Longitud de rama potencialmente inadecuada.
-  - Detalle: 'Electronic' tiene pocos subgéneros, posible falta de detalle.
-  - Severidad: WARNING
-- **ARBOL-LLM-006**: Candidatos a reubicación o fusión.
-  - Detalle: 'Cumbia Pop' podría agruparse bajo un nodo Latin Pop.
-  - Severidad: WARNING
+- **ARBOL-LLM-001**: Géneros hermanos no son completamente distinguibles.  
+  _Detalle:_ 'Soft Rock' y 'Art Rock' pueden solaparse en algunos contextos estilísticos.  
+  _Severidad:_ WARNING
 
-## Reglas validadas OK
+- **ARBOL-LLM-003**: Redundancia o solapamiento potencial.  
+  _Detalle:_ 'Alternative Rock' y 'Grunge' pueden compartir repertorio y artistas, revisar criterios de exclusión.  
+  _Severidad:_ WARNING
 
-- **ARBOL-LLM-002**: No se detectaron riesgos de cohesión de playlists.
-  - Detalle: Todas las ramas son coherentes.
-  - Severidad: WARNING
-- **ARBOL-LLM-005**: Nodos hoja atómicos correctamente identificados.
-  - Detalle: 'Grunge' y 'Drum And Bass' no requieren subdivisión.
-  - Severidad: WARNING
-- **ARBOL-LLM-008**: No se detectaron alias históricos redundantes.
-  - Detalle: Nombres de géneros son únicos en el árbol.
-  - Severidad: WARNING
-- **ARBOL-LLM-009**: No hay nodos grandes que requieran expansión.
-  - Detalle: Ningún nodo supera el umbral de 45 canciones (dato de ejemplo).
-  - Severidad: WARNING
-- **ARBOL-LLM-010**: Balance de profundidad adecuado.
-  - Detalle: No se detectan ramas excesivamente profundas o superficiales.
-  - Severidad: WARNING
+- **ARBOL-LLM-004**: Longitud de rama potencialmente insuficiente.  
+  _Detalle:_ Rama 'Electronic' tiene solo un subgénero, considerar expansión.  
+  _Severidad:_ WARNING
+
+## Reglas validadas
+
+- ARBOL-LLM-001 a ARBOL-LLM-011 (todas aplicadas según contexto y criterios).
 
 ## Archivos utilizados
 
-- Árbol: genre_tree_master.md
-- Criterios: genre_tree_node_criteria.json
-- Reglas: reglas_validacion_arbol_llm.md
+- taxonomy/genre_tree_master.md
+- taxonomy/genre_tree_node_criteria.json
+- governance/reglas_validacion_arbol_llm.md
+- context/contexto_validacion_arbol_llm.md
+
+---
