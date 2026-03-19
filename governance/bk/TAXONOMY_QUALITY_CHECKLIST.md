@@ -210,3 +210,5 @@ Un release no debe avanzar si el checklist falla.
 --------------------------------------------------
 FIN CHECKLIST DE CALIDAD TAXONÓMICA
 
+<!-- REGLAS MIGRADAS A governance/reglas_validacion_arbol_script.md y governance/reglas_validacion_arbol_llm.md: redundancia, expansión, atómicos, nodo General, balance, reubicación, sobre-fragmentación, rama Latin -->
+

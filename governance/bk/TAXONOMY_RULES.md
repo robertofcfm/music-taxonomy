@@ -55,13 +55,7 @@ no son nodos válidos de género.
 2. ESTRUCTURA RAÍZ
 --------------------------------------------------
 
-La taxonomía debe tener un nodo raíz único.
-
-Ejemplo:
-
-Music
-
-Todos los géneros deben descender de esta raíz.
+(Esta regla fue migrada a reglas_validacion_arbol_script.md)
 
 --------------------------------------------------
 3. DEFINICIÓN DE JERARQUÍA
@@ -107,43 +101,19 @@ son objetivos válidos de clasificación.
 5. REGLA DE GÉNEROS HERMANOS
 --------------------------------------------------
 
-Los géneros que comparten el mismo padre deben
-representar estilos musicalmente distinguibles.
-
-Los géneros hermanos no deben ser tan similares
-que produzcan playlists indistinguibles.
-
-Si no pueden distinguirse con claridad,
-deberían fusionarse.
+(Esta regla fue migrada a reglas_validacion_arbol_llm.md)
 
 --------------------------------------------------
 6. REGLA DE COHESIÓN DE PLAYLIST
 --------------------------------------------------
 
-La taxonomía debe priorizar la coherencia de playlist.
-
-Si un nodo genera playlists inconsistentes,
-la taxonomía debe ajustarse.
-
-Acciones posibles:
-
-- fusionar géneros hermanos
-- mover nodos a otro padre
-- dividir géneros cuando sea necesario
+(Esta regla fue migrada a reglas_validacion_arbol_llm.md)
 
 --------------------------------------------------
 7. POLÍTICA DE PROFUNDIDAD DE NODOS
 --------------------------------------------------
 
-La taxonomía debería mantener una profundidad moderada.
-
-Profundidad típica:
-
-3–5 niveles.
-
-Deben evitarse jerarquías excesivamente profundas,
-salvo cuando representen distinciones musicales
-realmente significativas.
+(Esta regla fue migrada a reglas_validacion_arbol_script.md)
 
 --------------------------------------------------
 8. REGLA DE EXPANSIÓN
@@ -177,13 +147,6 @@ Hard Rock
   Glam Metal
   Arena Rock
   Hard Rock (General)
-
-Los nodos General deben:
-
-- estar definidos explícitamente
-- no crearse automáticamente por el sistema
-- no reemplazar creación apropiada de géneros
-- usarse solo cuando sea necesario
 
 --------------------------------------------------
 10. REGLA DE GÉNERO ATÓMICO

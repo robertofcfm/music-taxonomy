@@ -173,3 +173,5 @@ el sistema de aliases de género.
 --------------------------------------------------
 FIN CONVENCIÓN DE NOMBRADO TAXONÓMICO
 
+<!-- REGLAS MIGRADAS A governance/reglas_validacion_arbol_script.md y governance/reglas_validacion_arbol_llm.md: idioma, Title Case, nodo General, nodo clone, nombres largos, términos ambiguos, consistencia con dataset -->
+
