@@ -72,3 +72,10 @@ Este documento establece el plan de acción para migrar y reorganizar scripts y 
 	- Si se interrumpe la sesión, al reanudar se debe revisar este archivo antes de continuar.
 
 🟢 Chat manejable
+## Orden de migración de tareas
+
+1. Validación del árbol (estructura, reglas y prompts asociados)
+2. (En cola) Migrar y refactorizar el resto de tareas una por una, siguiendo el mismo proceso:
+	- Clasificación de canciones
+	- Generación de árbol
+	- Otros procesos o validaciones

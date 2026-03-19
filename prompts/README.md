@@ -30,3 +30,20 @@ Automatizacion (recomendada):
 - Para activarlo en el repo, ejecutar:
 	`powershell -ExecutionPolicy Bypass -File scripts/setup_git_hooks.ps1`
 - Desde ese momento, cada commit valida automaticamente el bootstrap y bloquea el commit si hay incumplimientos.
+
+# Índice de prompts
+
+## Activos (refactorizados)
+- prompt_bootstrap_generador_prompts.md
+
+## En bk/ (pendientes de migrar)
+- README.md
+- generar_arbol_taxonomico_mvet_layer2_standalone.md
+- clasificador_generos_fase2_standalone.md
+- validate_master_layer2_prompt.txt
+- generadores/validate_master_layer2_prompt_context.json
+- generadores/validate_master_layer2_agent_orchestrator.md
+- generadores/validate_master_layer2_prompt_template.md
+
+## Estado de migración
+- Última actualización: 2026-03-18
