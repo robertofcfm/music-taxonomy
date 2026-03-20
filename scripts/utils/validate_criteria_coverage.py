@@ -33,8 +33,11 @@ if missing:
         print('  -', m)
     sys.exit(1)
 if extra:
-    print('ERROR: Existen criterios definidos para nodos inexistentes en el árbol:')
+    print('INFO: Existen criterios definidos para nodos inexistentes en el árbol, serán eliminados automáticamente:')
     for e in sorted(extra):
         print('  -', e)
-    sys.exit(1)
+    # Eliminar nodos inexistentes
+    data['nodes'] = [node for node in data['nodes'] if node['node_path'] in tree_paths]
+    with open('taxonomy/genre_tree_node_criteria.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 print('OK: Todos los nodos del árbol tienen criterios y no hay criterios huérfanos.')

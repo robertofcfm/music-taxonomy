@@ -4,6 +4,11 @@ Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de v
 
 --- INSTRUCCIONES ---
 1. Antes de cualquier validación, ejecuta el script scripts/validate_criteria_coverage.py. Si detecta nodos del árbol sin criterios o criterios para nodos inexistentes, reporta el error y detén el proceso.
+1. Antes de cualquier validación, ejecuta el script scripts/validate_criteria_coverage.py.
+  - Si detecta criterios definidos para nodos inexistentes, los eliminará automáticamente.
+  - Si detecta nodos del árbol sin criterios definidos en genre_tree_node_criteria.json, intenta complementar el archivo agregando los criterios faltantes (siguiendo el formato existente).
+  - Si no puede agregar los criterios faltantes por algún motivo, reporta el error y detén el proceso.
+  - Si logra complementar el archivo, continúa normalmente con la validación.
 2. Toma el árbol de géneros musicales desde:
   taxonomy/genre_tree_master.md
 3. Toma el contexto operativo y definiciones desde:
