@@ -15,20 +15,20 @@
     },
     {
       "node_path": "Art Rock",
-      "membership_criteria": "Rock con enfoque artístico y experimental, estructuras no convencionales o arreglos conceptuales como rasgo dominante.",
-      "exclusion_criteria": "Excluir Rock convencional sin experimentación dominante, excluir Grunge cuando prevalezca su estética cruda característica y excluir Soft Rock cuando la suavidad, accesibilidad y producción pulida sean los rasgos principales. Si existe ambigüedad, priorizar la clasificación como Art Rock solo si la experimentación artística es claramente dominante.",
+        "membership_criteria": "Rock con enfoque artístico y experimental, estructuras no convencionales o arreglos conceptuales como rasgo dominante. No debe clasificarse aquí música donde la suavidad, accesibilidad o producción pulida sean predominantes (ver Soft Rock), ni donde la crudeza y distorsión sean centrales (ver Grunge).",
+        "exclusion_criteria": "Excluir Rock convencional sin experimentación dominante. Excluir Grunge cuando prevalezca su estética cruda característica. Excluir Soft Rock cuando la suavidad, accesibilidad y producción pulida sean los rasgos principales. Si existe ambigüedad con Soft Rock, priorizar Soft Rock solo si la suavidad y accesibilidad son claramente dominantes; si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales. Si la experimentación artística es claramente dominante, clasificar como Art Rock.",
       "reference_examples": ["Roxy Music", "David Bowie", "Talking Heads"]
     },
     {
       "node_path": "Grunge",
-      "membership_criteria": "Rock alternativo de estética grunge con sonido crudo y distorsión, asociado a la escena de Seattle y derivados.",
-      "exclusion_criteria": "Excluir Hard Rock clásico, Alternative Metal y cualquier canción que pueda clasificarse como Alternative Rock si la identidad grunge no es claramente dominante. Si existe ambigüedad entre Grunge y Alternative Rock, priorizar la clasificación según la estética vocal, lírica y de producción: Grunge debe mostrar crudeza, angustia y distorsión como rasgos principales.",
+        "membership_criteria": "Rock alternativo de estética grunge con sonido crudo y distorsión, asociado a la escena de Seattle y derivados. No debe clasificarse aquí música donde la innovación estilística o la ruptura con el mainstream sean predominantes sin crudeza/distorsión central (ver Alternative Rock).",
+        "exclusion_criteria": "Excluir Hard Rock clásico, Alternative Metal y cualquier canción que pueda clasificarse como Alternative Rock si la identidad grunge no es claramente dominante. Si existe ambigüedad con Alternative Rock, priorizar Grunge solo si la crudeza, angustia y distorsión son centrales; si la innovación estilística o la ruptura con el mainstream son predominantes sin crudeza/distorsión, clasificar como Alternative Rock.",
       "reference_examples": ["Nirvana", "Soundgarden", "Alice in Chains"]
     },
     {
       "node_path": "Alternative Rock",
-      "membership_criteria": "Canciones de Rock con enfoque alternativo, innovación estilística o ruptura con el mainstream, especialmente de los 80s-90s.",
-      "exclusion_criteria": "Excluir Grunge, Art Rock y Hard Rock cuando la identidad principal no sea alternativa. Si existe ambigüedad con Grunge, priorizar la clasificación como Grunge solo si la crudeza, distorsión y la estética asociada a Seattle son predominantes; de lo contrario, debe clasificarse como Alternative Rock.",
+        "membership_criteria": "Canciones de Rock con enfoque alternativo, innovación estilística o ruptura con el mainstream, especialmente de los 80s-90s. No debe clasificarse aquí música donde la crudeza, angustia y distorsión sean centrales (ver Grunge).",
+        "exclusion_criteria": "Excluir Grunge, Art Rock y Hard Rock cuando la identidad principal no sea alternativa. Si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza, angustia y distorsión son centrales; si la innovación estilística o la ruptura con el mainstream son predominantes sin crudeza/distorsión, clasificar como Alternative Rock.",
       "reference_examples": ["R.E.M.", "The Smashing Pumpkins", "Pixies"]
     },
     {
@@ -39,8 +39,8 @@
     },
     {
       "node_path": "Soft Rock",
-      "membership_criteria": "Canciones de Rock caracterizadas por melodías suaves, arreglos pulidos y producción orientada a la accesibilidad, con énfasis en armonías vocales y menor distorsión.",
-      "exclusion_criteria": "Excluir Hard Rock, Art Rock y géneros donde predomine la agresividad, experimentación o distorsión. Si existe ambigüedad con Art Rock, priorizar la clasificación como Soft Rock solo si la suavidad, accesibilidad y producción pulida son claramente dominantes; de lo contrario, debe clasificarse como Art Rock.",
+        "membership_criteria": "Canciones de Rock caracterizadas por melodías suaves, arreglos pulidos y producción orientada a la accesibilidad, con énfasis en armonías vocales y menor distorsión. No debe clasificarse aquí música donde la experimentación artística o la crudeza/distorsión sean predominantes.",
+        "exclusion_criteria": "Excluir Hard Rock, Art Rock y géneros donde predomine la agresividad, experimentación o distorsión. Si existe ambigüedad con Art Rock, priorizar Soft Rock solo si la suavidad, accesibilidad y producción pulida son claramente dominantes; si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales. Si la experimentación artística es claramente dominante, clasificar como Art Rock.",
       "reference_examples": ["Air Supply", "Bread", "Chicago"]
     },
     {
@@ -57,8 +57,8 @@
     },
     {
       "node_path": "Cumbia Pop",
-      "membership_criteria": "Canciones que fusionan la estructura rítmica de la cumbia (patrón rítmico y percusión característica) con elementos melódicos, arreglos y producción de la música pop contemporánea. La base rítmica de cumbia debe ser claramente dominante, aunque la producción sea moderna o internacional.",
-      "exclusion_criteria": "Excluir cumbia tradicional sin elementos pop, pop latino o internacional sin base rítmica de cumbia, y cualquier canción donde la cumbia no sea el componente rítmico principal. El pop internacional que solo toma influencias superficiales de cumbia, sin adoptar su ritmo base, no debe clasificarse aquí.",
+        "membership_criteria": "Canciones que fusionan la estructura rítmica de la cumbia (patrón rítmico y percusión característica) con elementos melódicos, arreglos y producción de la música pop contemporánea. La base rítmica de cumbia y el contexto cultural latino deben ser claramente dominantes. Solo se considera Latin si la raíz y el enfoque principal son latinos, incluso si la producción es moderna o internacional.",
+        "exclusion_criteria": "Excluir cumbia tradicional sin elementos pop, pop latino o internacional sin base rítmica de cumbia, cualquier canción donde la cumbia no sea el componente rítmico principal, y pop internacional que solo toma influencias superficiales de cumbia sin adoptar su ritmo base. Excluir también canciones donde el enfoque principal sea pop internacional o global sin predominancia de identidad latina en ritmo y contexto.",
       "reference_examples": ["Rombai", "Agapornis", "Marama"]
     },
     {

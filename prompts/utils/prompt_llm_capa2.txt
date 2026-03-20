@@ -3,8 +3,8 @@
 Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
 
 --- INSTRUCCIONES ---
-1. Antes de cualquier validación, ejecuta el script scripts/validate_criteria_coverage.py. Si detecta nodos del árbol sin criterios o criterios para nodos inexistentes, reporta el error y detén el proceso.
-1. Antes de cualquier validación, ejecuta el script scripts/validate_criteria_coverage.py.
+1. Antes de cualquier validación, ejecuta el script scripts/utils/validate_criteria_coverage.py. Si detecta nodos del árbol sin criterios o criterios para nodos inexistentes, reporta el error y detén el proceso.
+1. Antes de cualquier validación, ejecuta el script scripts/utils/validate_criteria_coverage.py.
   - Si detecta criterios definidos para nodos inexistentes, los eliminará automáticamente.
   - Si detecta nodos del árbol sin criterios definidos en genre_tree_node_criteria.json, intenta complementar el archivo agregando los criterios faltantes (siguiendo el formato existente).
   - Si no puede agregar los criterios faltantes por algún motivo, reporta el error y detén el proceso.
@@ -17,9 +17,11 @@ Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de v
   governance/reglas_validacion_arbol_llm.md
 5. Utiliza el archivo taxonomy/genre_tree_node_criteria.json como ayuda para interpretar criterios y validar los nodos.
 6. Evalúa cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
-7. Genera dos archivos como respuesta:
+7. Genera dos archivos como respuesta de la evaluacion de TODAS las reglas:
    - Un reporte en JSON con el formato exacto que produce el script de validación determinista (errores, advertencias, ok, detalle, timestamp).
    - Un reporte en Markdown con el mismo formato y secciones que el script (errores, advertencias, reglas validadas, archivos utilizados, fecha).
+   Estos se generaran en la carpeta reports con los nombres reporte_validacion_arbol_llm,json y reporte_validacion_arbol_llm.md
+   No es necesario mostrarlos en pantalla y los ejemplos son eso ejemplos estos no se incluyen solo lo real
 
 --- FORMATO DE RESPUESTA ---
 La respuesta debe contener únicamente:
@@ -69,3 +71,5 @@ Fecha: 2026-03-18T23:59:00
 ```
 
 PROCESA este prompt y responde únicamente con los dos reportes (JSON y Markdown) generados tras evaluar todas las reglas LLM sobre el árbol, usando el contexto y las reglas indicadas.
+MUY IMPORTANTE 
+no se deben mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación
