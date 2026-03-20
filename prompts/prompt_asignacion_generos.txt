@@ -13,19 +13,13 @@ Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de v
 3. Toma el contexto operativo y definiciones desde:
   context/contexto_validacion_arbol_llm.md
 4. Toma las reglas de validación LLM desde:
+  governance/reglas_globales_llm.md
   governance/reglas_validacion_arbol_llm.md
 5. Utiliza el archivo taxonomy/genre_tree_node_criteria.json como ayuda para interpretar criterios y validar los nodos.
-6. Evalúa TU MISMO COMO LLM SIN CREAR ARCHIVOS DETERMINISTICOS cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
-7. Genera dos archivos como respuesta de la evaluacion de TODAS las reglas:
-   - Un reporte en JSON con el formato exacto que produce el script de validación determinista (errores, advertencias, ok, detalle, timestamp).
-   - Un reporte en Markdown con el mismo formato y secciones que el script (errores, advertencias, reglas validadas, archivos utilizados, fecha).
-   Estos se generaran en la carpeta reports con los nombres reporte_validacion_arbol_llm.json y reporte_validacion_arbol_llm.md
-   No es necesario mostrarlos en pantalla y los ejemplos son eso ejemplos estos no se incluyen solo lo real
-
---- FORMATO DE RESPUESTA ---
-La respuesta debe contener únicamente:
-1. El JSON de reporte de validación.
-2. El Markdown de reporte de validación.
+6. Utiliza el archivo catalog/songs_raw.csv, para tomar las canciones a procesar
+6. Evalúa TU MISMO COMO LLM SIN CREAR ARCHIVOS DETERMINISTICOS cada una de las reglas LLM sobre el árbol, 
+aplicando el contexto y los criterios. Todo esto para asignar genero o generos a las canciones y/o reportar si se encontraron generos faltantes
+7. Genera archivos de respuesta como se indico previamente en los documentos leidos
 
 No incluyas explicaciones adicionales ni comentarios fuera de los dos reportes.
 
