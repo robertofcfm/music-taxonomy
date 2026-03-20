@@ -15,9 +15,10 @@
     },
     {
       "node_path": "Art Rock",
-        "membership_criteria": "Rock con enfoque artístico y experimental, estructuras no convencionales o arreglos conceptuales como rasgo dominante. No debe clasificarse aquí música donde la suavidad, accesibilidad o producción pulida sean predominantes (ver Soft Rock), ni donde la crudeza y distorsión sean centrales (ver Grunge).",
-        "exclusion_criteria": "Excluir Rock convencional sin experimentación dominante. Excluir Grunge cuando prevalezca su estética cruda característica. Excluir Soft Rock cuando la suavidad, accesibilidad y producción pulida sean los rasgos principales. Si existe ambigüedad con Soft Rock, priorizar Soft Rock solo si la suavidad y accesibilidad son claramente dominantes; si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales. Si la experimentación artística es claramente dominante, clasificar como Art Rock.",
-      "reference_examples": ["Roxy Music", "David Bowie", "Talking Heads"]
+      "membership_criteria": "Rock donde la experimentación artística, la estructura conceptual o la innovación formal son el rasgo central y dominante. Debe haber una intención clara de romper con las formas tradicionales del rock, usando arreglos complejos, cambios de compás, letras abstractas o elementos de performance. Si la innovación es principalmente estilística (sonido, actitud, moda) y no formal/conceptual, clasificar como Alternative Rock.",
+      "exclusion_criteria": "Excluir música donde la innovación es solo estilística o de actitud (ver Alternative Rock). Excluir Soft Rock si la suavidad y accesibilidad predominan. Excluir Grunge si la crudeza y distorsión son centrales. Si hay duda entre Art Rock y Alternative Rock, priorizar Art Rock solo si la experimentación formal/conceptual es inequívoca.",
+      "reference_examples": ["Roxy Music", "King Crimson", "Genesis (Peter Gabriel era)", "David Bowie (Berlin Trilogy)", "Pink Floyd (The Wall)", "Talking Heads (Remain in Light)", "Yes"],
+      "counter_examples": ["Radiohead (OK Computer)", "Pixies", "The Smashing Pumpkins", "Nirvana", "REM", "The Strokes"]
     },
     {
       "node_path": "Grunge",
@@ -27,9 +28,10 @@
     },
     {
       "node_path": "Alternative Rock",
-        "membership_criteria": "Canciones de Rock con enfoque alternativo, innovación estilística o ruptura con el mainstream, especialmente de los 80s-90s. No debe clasificarse aquí música donde la crudeza, angustia y distorsión sean centrales (ver Grunge).",
-        "exclusion_criteria": "Excluir Grunge, Art Rock y Hard Rock cuando la identidad principal no sea alternativa. Si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza, angustia y distorsión son centrales; si la innovación estilística o la ruptura con el mainstream son predominantes sin crudeza/distorsión, clasificar como Alternative Rock.",
-      "reference_examples": ["R.E.M.", "The Smashing Pumpkins", "Pixies"]
+      "membership_criteria": "Rock donde la innovación es principalmente estilística, de actitud, sonido o imagen, y la ruptura con el mainstream es el rasgo central. No debe clasificarse aquí música donde la experimentación formal/conceptual (estructura, arreglos, performance) sea dominante (ver Art Rock). Si la crudeza y distorsión son centrales, clasificar como Grunge.",
+      "exclusion_criteria": "Excluir Art Rock si la experimentación formal/conceptual es inequívoca. Excluir Grunge si la crudeza, angustia y distorsión son centrales. Si hay duda entre Alternative Rock y Art Rock, priorizar Alternative Rock solo si la innovación es principalmente estilística y no formal/conceptual.",
+      "reference_examples": ["R.E.M.", "Pixies", "The Smashing Pumpkins", "Radiohead (OK Computer)", "The Strokes", "Sonic Youth", "Placebo", "Blur"],
+      "counter_examples": ["King Crimson", "Genesis (Peter Gabriel era)", "Pink Floyd (The Wall)", "Yes", "Roxy Music", "David Bowie (Berlin Trilogy)"]
     },
     {
       "node_path": "New Wave",

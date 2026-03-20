@@ -1,4 +1,26 @@
 {
+  "timestamp": "2026-03-20T00:00:00Z",
+  "errores": [],
+  "advertencias": [
+    {
+      "id": "ARBOL-LLM-001",
+      "descripcion": "Los géneros hermanos bajo 'Rock' son musicalmente distinguibles, pero se recomienda revisar posibles solapamientos entre 'Art Rock' y 'Alternative Rock'.",
+      "detalle": "Ambos géneros pueden compartir elementos experimentales, pero sus criterios de inclusión y exclusión están bien definidos."
+    },
+    {
+      "id": "ARBOL-LLM-003",
+      "descripcion": "Posible redundancia entre 'Art Rock' y 'Alternative Rock'.",
+      "detalle": "Ambos pueden incluir música experimental, pero los criterios de exclusión minimizan el solapamiento."
+    }
+  ],
+  "ok": [
+    "Separación Latin/no-Latin respetada.",
+    "No se detectan nombres ambiguos ni excesivamente largos.",
+    "No hay nodos hoja que requieran subdivisión adicional.",
+    "No se detectan ramas excesivamente profundas ni superficiales."
+  ]
+}
+{
   "timestamp": "2026-03-19T00:00:00",
   "errores": [],
   {
@@ -31,28 +53,28 @@
         "severidad": "WARNING"
       }
     ],
-    "ok": [
-      {
-        "regla": "ARBOL-LLM-002",
-        "descripcion": "No se detectaron riesgos de cohesión de playlists.",
-        "detalle": "Las ramas principales son coherentes.",
-        "severidad": "WARNING"
-      },
-      {
-        "regla": "ARBOL-LLM-005",
-        "descripcion": "Nodos hoja atómicos correctamente definidos.",
-        "detalle": "Nodos como 'Grunge', 'Norteño', 'Drum And Bass' cumplen criterios de atomicidad.",
-        "severidad": "WARNING"
-      }
-    ],
-    "detalle": {
-      "arbol": "genre_tree_master.md",
-      "criterios": "genre_tree_node_criteria.json",
-      "reglas": "reglas_validacion_arbol_llm.md"
-    }
-  }
-    },
     {
+      "timestamp": "2026-03-20T00:00:00Z",
+      "errores": [],
+      "advertencias": [
+        {
+          "id": "ARBOL-LLM-001",
+          "descripcion": "Los géneros hermanos bajo 'Rock' son musicalmente distinguibles, pero se recomienda revisar posibles solapamientos entre 'Art Rock' y 'Alternative Rock'.",
+          "detalle": "Ambos géneros pueden compartir elementos experimentales, pero sus criterios de inclusión y exclusión están bien definidos."
+        },
+        {
+          "id": "ARBOL-LLM-003",
+          "descripcion": "Posible redundancia entre 'Art Rock' y 'Alternative Rock'.",
+          "detalle": "Ambos pueden incluir música experimental, pero los criterios de exclusión minimizan el solapamiento."
+        }
+      ],
+      "ok": [
+        "Separación Latin/no-Latin respetada.",
+        "No se detectan nombres ambiguos ni excesivamente largos.",
+        "No hay nodos hoja que requieran subdivisión adicional.",
+        "No se detectan ramas excesivamente profundas ni superficiales."
+      ]
+    }
       "regla": "ARBOL-LLM-010",
       "descripcion": "Balance de profundidad adecuado.",
       "detalle": "No se detectan ramas excesivamente profundas o superficiales.",
