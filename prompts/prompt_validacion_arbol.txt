@@ -12,8 +12,8 @@ Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de v
   taxonomy/genre_tree_master.md
 3. Toma el contexto operativo y definiciones desde:
   context/contexto_validacion_arbol_llm.md
-  - contexto_asignacion_generos_llm.md
 4. Toma las reglas de validación LLM desde:
+  governance/reglas_globales_llm.md
   governance/reglas_validacion_arbol_llm.md
 5. Utiliza el archivo taxonomy/genre_tree_node_criteria.json como ayuda para interpretar criterios y validar los nodos.
 6. Evalúa TU MISMO COMO LLM SIN CREAR ARCHIVOS DETERMINISTICOS cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
