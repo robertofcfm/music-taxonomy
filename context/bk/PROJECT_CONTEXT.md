@@ -1,62 +1,11 @@
-# CONTEXTO DEL PROYECTO
-Sistema de Taxonomía de Géneros Musicales
-
---------------------------------------------------
-METADATOS DEL DOCUMENTO
---------------------------------------------------
-
-Última actualización:
-
-2026-03-16
-
---------------------------------------------------
-1. PROPÓSITO DEL PROYECTO
---------------------------------------------------
-
-Este proyecto busca construir una taxonomía estructurada
 de géneros musicales junto con un sistema de clasificación
 capaz de asignar géneros precisos a las canciones.
-
-La taxonomía está diseñada no solo para clasificación,
 sino también para generar playlists coherentes basadas
 en la jerarquía de géneros.
-
-El objetivo final es permitir navegar por géneros de una
-manera que produzca playlists musicalmente consistentes.
-
---------------------------------------------------
-2. OBJETIVO CENTRAL
---------------------------------------------------
-
-El sistema busca:
-
-• clasificar canciones en géneros musicales significativos  
-• mantener una taxonomía de géneros coherente  
-• generar playlists basadas en géneros  
-• evolucionar la taxonomía conforme crece el catálogo  
-
-La taxonomía actúa como la base de conocimiento musical
 del sistema.
-
---------------------------------------------------
-3. ARQUITECTURA DEL SISTEMA
---------------------------------------------------
-
-El sistema está compuesto por tres subsistemas principales.
-
-FASE 1 — DISEÑO DE TAXONOMÍA
-
-Define la jerarquía de géneros.
-
-La taxonomía determina los géneros válidos que pueden
 asignarse durante la clasificación.
-
-FASE 2 — IDENTIFICACIÓN DE GÉNERO DE CANCIONES
-
-Determina a qué géneros pertenece una canción.
-
-Este proceso analiza las características musicales de
 cada canción y asigna géneros apropiados.
+Este archivo ha sido migrado. El contexto relevante para asignación de géneros con LLM se encuentra ahora en context/asignacion_generos_llm.md
 
 FASE 3 — GENERACIÓN DE ÁRBOL GUIADA POR DATASET
 
