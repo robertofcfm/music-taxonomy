@@ -1,89 +1,45 @@
 {
   "timestamp": "2026-03-20T00:00:00Z",
+  "version": "1.0",
+  "archivos_utilizados": [
+    "taxonomy/genre_tree_master.md",
+    "context/contexto_validacion_arbol_llm.md",
+    "governance/reglas_validacion_arbol_llm.md",
+    "taxonomy/genre_tree_node_criteria.json"
+  ],
   "errores": [],
   "advertencias": [
     {
-      "id": "ARBOL-LLM-001",
-      "descripcion": "Los géneros hermanos bajo 'Rock' son musicalmente distinguibles, pero se recomienda revisar posibles solapamientos entre 'Art Rock' y 'Alternative Rock'.",
-      "detalle": "Ambos géneros pueden compartir elementos experimentales, pero sus criterios de inclusión y exclusión están bien definidos."
+      "id": "ARBOL-LLM-004",
+      "detalle": "La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' solo tiene un hijo ('Drum And Bass'). Considerar expansión si existen más subgéneros relevantes."
     },
     {
-      "id": "ARBOL-LLM-003",
-      "descripcion": "Posible redundancia entre 'Art Rock' y 'Alternative Rock'.",
-      "detalle": "Ambos pueden incluir música experimental, pero los criterios de exclusión minimizan el solapamiento."
+      "id": "ARBOL-LLM-009",
+      "detalle": "No se detectan nodos con exceso de canciones o playlists diversas, pero se recomienda monitorear 'Rock' y 'Latin' si crecen en volumen."
     }
   ],
   "ok": [
     "Separación Latin/no-Latin respetada.",
-    "No se detectan nombres ambiguos ni excesivamente largos.",
-    "No hay nodos hoja que requieran subdivisión adicional.",
-    "No se detectan ramas excesivamente profundas ni superficiales."
-  ]
-}
-{
-  "timestamp": "2026-03-19T00:00:00",
-  "errores": [],
-  {
-    "timestamp": "2026-03-19T00:00:00",
-    "errores": [
-      {
-        "regla": "ARBOL-LLM-007",
-        "descripcion": "Se detectó mezcla indebida de géneros Latin y no-Latin.",
-        "detalle": "'Cumbia Pop' bajo rama Latin puede requerir revisión si su producción y estilo son predominantemente pop internacional y no latino.",
-        "severidad": "FATAL"
-      }
-    ],
-    "advertencias": [
-      {
-        "regla": "ARBOL-LLM-001",
-        "descripcion": "Géneros hermanos no son completamente distinguibles.",
-        "detalle": "'Soft Rock' y 'Art Rock' pueden solaparse en algunos contextos estilísticos.",
-        "severidad": "WARNING"
-      },
-      {
-        "regla": "ARBOL-LLM-003",
-        "descripcion": "Redundancia o solapamiento potencial.",
-        "detalle": "'Alternative Rock' y 'Grunge' pueden compartir repertorio y artistas, revisar criterios de exclusión.",
-        "severidad": "WARNING"
-      },
-      {
-        "regla": "ARBOL-LLM-004",
-        "descripcion": "Longitud de rama potencialmente insuficiente.",
-        "detalle": "Rama 'Electronic' tiene solo un subgénero, considerar expansión.",
-        "severidad": "WARNING"
-      }
-    ],
-    {
-      "timestamp": "2026-03-20T00:00:00Z",
-      "errores": [],
-      "advertencias": [
-        {
-          "id": "ARBOL-LLM-001",
-          "descripcion": "Los géneros hermanos bajo 'Rock' son musicalmente distinguibles, pero se recomienda revisar posibles solapamientos entre 'Art Rock' y 'Alternative Rock'.",
-          "detalle": "Ambos géneros pueden compartir elementos experimentales, pero sus criterios de inclusión y exclusión están bien definidos."
-        },
-        {
-          "id": "ARBOL-LLM-003",
-          "descripcion": "Posible redundancia entre 'Art Rock' y 'Alternative Rock'.",
-          "detalle": "Ambos pueden incluir música experimental, pero los criterios de exclusión minimizan el solapamiento."
-        }
-      ],
-      "ok": [
-        "Separación Latin/no-Latin respetada.",
-        "No se detectan nombres ambiguos ni excesivamente largos.",
-        "No hay nodos hoja que requieran subdivisión adicional.",
-        "No se detectan ramas excesivamente profundas ni superficiales."
-      ]
-    }
-      "regla": "ARBOL-LLM-010",
-      "descripcion": "Balance de profundidad adecuado.",
-      "detalle": "No se detectan ramas excesivamente profundas o superficiales.",
-      "severidad": "WARNING"
-    }
+    "No se detectan nombres ambiguos, vagos o no musicales.",
+    "No se detectan casos de sobre-fragmentación.",
+    "No se detectan nodos hoja que requieran subdivisión adicional.",
+    "No se detectan candidatos claros de reubicación o fusión jerárquica.",
+    "No se detectan solapamientos relevantes entre Art Rock, Alternative Rock y Grunge tras la mejora de criterios."
   ],
-  "detalle": {
-    "arbol": "genre_tree_master.md",
-    "criterios": "genre_tree_node_criteria.json",
-    "reglas": "reglas_validacion_arbol_llm.md"
-  }
+  "reglas_validadas": [
+    "ARBOL-LLM-001",
+    "ARBOL-LLM-002",
+    "ARBOL-LLM-003",
+    "ARBOL-LLM-004",
+    "ARBOL-LLM-005",
+    "ARBOL-LLM-006",
+    "ARBOL-LLM-007",
+    "ARBOL-LLM-008",
+    "ARBOL-LLM-009",
+    "ARBOL-LLM-010",
+    "ARBOL-LLM-011",
+    "ARBOL-LLM-012",
+    "ARBOL-LLM-013",
+    "ARBOL-LLM-014"
+  ]
 }
