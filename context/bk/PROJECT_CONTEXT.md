@@ -5,7 +5,7 @@ en la jerarquía de géneros.
 del sistema.
 asignarse durante la clasificación.
 cada canción y asigna géneros apropiados.
-Este archivo ha sido migrado. El contexto relevante para asignación de géneros con LLM se encuentra ahora en context/asignacion_generos_llm.md
+Este archivo ha sido migrado. El contexto relevante para asignación de géneros con LLM se encuentra ahora en context/contexto_asignacion_generos_llm.md
 
 FASE 3 — GENERACIÓN DE ÁRBOL GUIADA POR DATASET
 

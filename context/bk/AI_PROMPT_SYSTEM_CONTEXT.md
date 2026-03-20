@@ -1,4 +1,4 @@
-Este archivo ha sido migrado. El contexto relevante para asignación de géneros con LLM se encuentra ahora en context/asignacion_generos_llm.md
+Este archivo ha sido migrado. El contexto relevante para asignación de géneros con LLM se encuentra ahora en context/contexto_asignacion_generos_llm.md
 debe considerarse BORRADOR.
 
 Para cada tipo de trabajo se genera un PROMPT CONCRETO:
