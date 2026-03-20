@@ -50,3 +50,34 @@ El proceso LLM no puede modificar la taxonomía ni los criterios, solo consultar
 
 R6 — AUDITORÍA
 Debe generarse un registro auditable de las asignaciones y justificaciones.
+
+--------------------------------------------------
+PROTOCOLOS OPERATIVOS ADICIONALES
+--------------------------------------------------
+
+P1 — PARADA POR FALTANTES
+La ejecución se detiene automáticamente si se acumulan 5 casos de género faltante (GENRE_MISSING), o al finalizar el lote completo de canciones, lo que ocurra primero.
+
+P2 — CLASIFICACIÓN SOLO EN NODOS HOJA
+Solo se permite asignar géneros que sean nodos hoja en la taxonomía. Si un candidato tiene hijos, se deben proponer los hijos como alternativas.
+
+P3 — SINCRONIZACIÓN OBLIGATORIA DE CRITERIOS
+Toda propuesta de nuevo nodo en genre_tree_master.md debe incluir su entrada correspondiente en genre_tree_node_criteria.json (membership_criteria, exclusion_criteria, reference_examples). Ambos archivos deben mantenerse sincronizados.
+
+P4 — REPORTE DE FALTANTES CRÍTICOS
+Si no existe género adecuado para una canción, se debe reportar el faltante con justificación, propuesta de ubicación en la taxonomía y criterios sugeridos. No escribir en songs_with_genres.csv para esos casos.
+
+P5 — AUTORIZACIÓN Y TRAZABILIDAD
+El sistema solo sugiere asignaciones; el usuario final valida y autoriza. No aplicar cambios silenciosos ni masivos. Toda clasificación debe ser trazable y auditable.
+
+P6 — PROTOCOLO DE CARGA DINÁMICA
+Diagnosticar y clasificar fuentes y reglas en cada ejecución como: MANDATORY, CONDITIONAL, REFERENTIAL, EXCLUDED. Activar solo reglas con injerencia directa en validez de nodo hoja, criterios de pertenencia, cohesión musical y normalización de nombres.
+
+P7 — FORMATO DE RESPUESTA
+Toda ejecución debe generar un reporte estructurado con:
+- Diagnóstico de carga dinámica
+- Candidatos identificados y validación de nodo hoja
+- Asignaciones finales con confianza y justificación
+- Faltantes críticos (si aplica) con propuesta de criterios
+- Control de ejecución y estado final
+- Indicador de capacidad (🟢/🟡/🔴)
