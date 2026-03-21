@@ -3,50 +3,58 @@
 import json
 import sys
 
-with open('taxonomy/genre_tree_master.md', encoding='utf-8') as f:
-    lines = [line.strip() for line in f if line.strip()]
 
-def extract_paths(lines):
+with open('taxonomy/genre_tree_master.md', encoding='utf-8') as f:
+    lines = [line.rstrip('\n') for line in f if line.strip()]
+
+
+def extract_all_paths(lines):
     paths = []
     stack = []
     for idx, line in enumerate(lines):
-        indent = len(line) - len(line.lstrip())
-        name = line.strip()
+        # Considerar tabs como 2 espacios
+        line_expanded = line.replace('\t', '  ')
+        indent = len(line_expanded) - len(line_expanded.lstrip())
+        name = line_expanded.strip()
         level = indent // 2
         stack = stack[:level]
         stack.append(name)
-        # Solo agregar si la raíz es 'Music'
         if stack and stack[0] == 'Music':
-            # Es hoja si la siguiente línea tiene menor o igual indentación
-            is_leaf = True
-            if idx + 1 < len(lines):
-                next_indent = len(lines[idx + 1]) - len(lines[idx + 1].lstrip())
-                if next_indent > indent:
-                    is_leaf = False
-            if is_leaf:
-                paths.append(' > '.join(stack))
+            paths.append(' > '.join(stack))
     return paths
 
 with open('taxonomy/genre_tree_node_criteria.json', encoding='utf-8') as f:
     data = json.load(f)
     criteria_nodes = set(node['node_path'] for node in data['nodes'])
 
-tree_paths = set(extract_paths(lines))
+
+
+all_paths = extract_all_paths(lines)
+tree_paths = set(all_paths)
+
+print('Nodos detectados en el árbol (todos los niveles):')
+for path in all_paths:
+    print(f'  - {path}')
 
 missing = tree_paths - criteria_nodes
 extra = criteria_nodes - tree_paths
 
 if missing:
-    print('ERROR: Los siguientes nodos del árbol no tienen criterios definidos en genre_tree_node_criteria.json:')
+    print('\nERROR: Los siguientes nodos del árbol no tienen criterios definidos en genre_tree_node_criteria.json:')
     for m in sorted(missing):
         print('  -', m)
     sys.exit(1)
 if extra:
-    print('INFO: Existen criterios definidos para nodos inexistentes en el árbol, serán eliminados automáticamente:')
+    print('\nINFO: Existen criterios definidos para nodos inexistentes en el árbol:')
     for e in sorted(extra):
         print('  -', e)
-    # Eliminar nodos inexistentes
-    data['nodes'] = [node for node in data['nodes'] if node['node_path'] in tree_paths]
-    with open('taxonomy/genre_tree_node_criteria.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-print('OK: Todos los nodos del árbol tienen criterios y no hay criterios huérfanos.')
+    confirm = input('¿Deseas eliminar estos criterios de nodos inexistentes? (y/n): ').strip().lower()
+    if confirm == 'y':
+        data['nodes'] = [node for node in data['nodes'] if node['node_path'] in tree_paths]
+        with open('taxonomy/genre_tree_node_criteria.json', 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print('Criterios eliminados.')
+    else:
+        print('No se realizaron cambios. Revisa los criterios manualmente.')
+else:
+    print('OK: Todos los nodos del árbol tienen criterios y no hay criterios huérfanos.')

@@ -24,11 +24,13 @@ aplicando el contexto y los criterios.
   - No se permite asignar solo a categorías genéricas como "Pop", "Ballad", "Rock", "Global" o "Latin" si existen ramas más específicas en la taxonomía.
   - El género propuesto debe cumplir los criterios de coherencia, no disonancia y relevancia taxonómica, y debe estar alineado con la estructura: Music > Macroárea (Global/Latin) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
   - Incluye en el reporte el criterio y justificación detallada para cada género faltante sugerido, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
-8. Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
+7b. Itera el proceso de asignación y validación de géneros para cada canción, deteniéndote y reportando en cuanto se detecten 5 géneros faltantes, o bien informa el estado cada 10 canciones procesadas durante pruebas. No inventes procesos, no desarrolles flujos automáticos ni realices inferencias fuera de lo explicitado en estas instrucciones. El procedimiento debe seguirse exactamente como se describe, sin atajos ni malabares.
+8. Para cada canción, identifica el o los géneros predominantes a los que pertenece, considerando únicamente aquellos que definen el carácter musical principal de la obra. La asignación debe buscar el nivel más específico posible dentro de la taxonomía, evitando categorías genéricas (ejemplo incorrecto: "Pop", "Rock", "Latin"; ejemplo correcto: "Hard Rock", "Grunge", "Vallenato", "Banda"). Si el género predominante no existe en el árbol, repórtalo como "género faltante" y sugiere el camino taxonómico más específico posible, fundamentando la propuesta en los criterios de nodos y el contexto operativo. Si el género existe bajo un nombre equivalente o sinónimo, debe hacerse el match y documentar la equivalencia. Evalúa siempre si el nodo encontrado es lo suficientemente específico para evitar disonancias; si no lo es, sugiere la subdivisión o ajuste necesario.
+9. Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
    - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el género específico sugerido y su justificación.
    - El segundo debe presentar la misma información en formato Markdown, siguiendo el formato de los reportes previos.
    - No incluyas explicaciones, ejemplos ni comentarios adicionales fuera de los dos reportes.
    - No se permite mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación.
-9. Genera archivos de respuesta como se indicó previamente en los documentos leídos.
+10. Genera archivos de respuesta como se indicó previamente en los documentos leídos.
 
 No incluyas explicaciones adicionales ni comentarios fuera de los dos reportes.

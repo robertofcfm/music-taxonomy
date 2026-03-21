@@ -29,6 +29,7 @@ Clasificar canciones en géneros musicales significativos usando LLM, manteniend
 - No duplicar reglas ni contexto en otros archivos.
 - Separar claramente la lógica de procesamiento LLM de la lógica de procesamiento por script.
 - Mantener la integridad de la taxonomía: solo asignar géneros válidos definidos en la estructura maestra.
+- Una canción solo puede ser asignada a uno o más géneros si estos representan de manera predominante su carácter musical. No se deben asignar géneros cuya influencia sea secundaria o marginal en la obra.
 
 --------------------------------------------------
 4. MODELO DE COMPOSICIÓN DE PROMPTS
