@@ -2,16 +2,13 @@
 
 Aquí se colocarán únicamente las reglas que requieren interpretación o razonamiento de un modelo de lenguaje (LLM).
 
-## Formato sugerido
-- Cada regla debe tener: id, descripción, severidad, prompt sugerido.
-- Ejemplo:
 
----
-- id: ARBOL-LLM-001
-  descripcion: "¿Los géneros hermanos son musicalmente distinguibles?"
-  severidad: WARNING
-  prompt: "Evalúa si los géneros que comparten el mismo padre son musicalmente distinguibles entre sí. Si dos hermanos producirían playlists indistinguibles, deben reportarse."
----
+## Principios y estructura taxonómica obligatoria
+- La estructura del árbol debe seguir: Music (raíz) > Macroárea (Global, Latin) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
+- La separación entre macroáreas "Global" y "Latin" es inviolable en el segundo nivel.
+- Los géneros faltantes deben reportarse con la máxima especificidad posible, evitando categorías genéricas (ej. no usar solo "Pop", "Ballad", "Rock").
+- Toda sugerencia de género faltante debe incluir justificación y criterios claros, alineados con el contexto operativo y los criterios de nodos.
+- No se permite inventar géneros fuera de la lógica taxonómica y los criterios definidos.
 
 (Agregar reglas conforme se identifiquen en la migración)
 

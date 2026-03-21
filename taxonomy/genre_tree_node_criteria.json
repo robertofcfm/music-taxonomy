@@ -5,76 +5,19 @@
       "node_path": "Music",
       "membership_criteria": "Nodo raíz que agrupa todos los géneros musicales del proyecto. No debe clasificarse directamente canciones aquí; sirve solo como agrupador principal.",
       "exclusion_criteria": "Excluir cualquier género específico o subgénero. No usar para playlists ni clasificación directa.",
-      "reference_examples": ["Rock", "Latin", "Electronic"]
+      "reference_examples": ["Global", "Latin"]
     },
     {
-      "node_path": "Rock",
-      "membership_criteria": "Canciones dentro de la tradicion Rock en sus variantes historicas y modernas.",
-      "exclusion_criteria": "No incluir generos de otros dominios salvo hibridos explicitamente nombrados.",
-      "reference_examples": ["Classic Rock", "Alternative Rock", "Hard Rock"]
+      "node_path": "Music > Global",
+      "membership_criteria": "Macroárea que agrupa géneros musicales de tradición global, anglosajona o internacional, no latinos. Incluye géneros como Rock, Electronic, Pop internacional, etc.",
+      "exclusion_criteria": "Excluir géneros de raíz latina o regional hispanoamericana, salvo fusiones explícitas.",
+      "reference_examples": ["Rock", "Electronic", "Pop"]
     },
     {
-      "node_path": "Art Rock",
-      "membership_criteria": "Rock donde la experimentación artística, la estructura conceptual o la innovación formal (estructura, arreglos, performance) son el rasgo central y dominante. Debe haber una intención clara de romper con las formas tradicionales del rock, usando arreglos complejos, cambios de compás, letras abstractas o elementos de performance. Si la innovación es principalmente estilística (sonido, actitud, moda) y no formal/conceptual, clasificar como Alternative Rock. Si la crudeza, angustia y distorsión son centrales, clasificar como Grunge. No debe haber solapamiento: priorizar Art Rock solo si la experimentación formal/conceptual es inequívoca y dominante sobre la innovación estilística o la crudeza."
-      ,"exclusion_criteria": "Excluir música donde la innovación es solo estilística o de actitud (ver Alternative Rock). Excluir Soft Rock si la suavidad y accesibilidad predominan. Excluir Grunge si la crudeza y distorsión son centrales. Si hay duda entre Art Rock y Alternative Rock, priorizar Art Rock solo si la experimentación formal/conceptual es inequívoca y dominante. Si hay duda con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales."
-      ,"reference_examples": ["Roxy Music", "King Crimson", "Genesis (Peter Gabriel era)", "David Bowie (Berlin Trilogy)", "Pink Floyd (The Wall)", "Talking Heads (Remain in Light)", "Yes", "Brian Eno"],
-      "counter_examples": ["Radiohead (OK Computer)", "Pixies", "The Smashing Pumpkins", "Nirvana", "REM", "The Strokes", "Soundgarden", "Alice in Chains"]
-    },
-    {
-      "node_path": "Grunge",
-        "membership_criteria": "Rock alternativo de estética grunge con sonido crudo, distorsión y angustia emocional, asociado a la escena de Seattle y derivados. La crudeza, distorsión y angustia deben ser centrales. No debe clasificarse aquí música donde la innovación estilística o la ruptura con el mainstream sean predominantes sin crudeza/distorsión central (ver Alternative Rock). Si la experimentación formal/conceptual es dominante, clasificar como Art Rock.",
-        "exclusion_criteria": "Excluir Hard Rock clásico, Alternative Metal y cualquier canción que pueda clasificarse como Alternative Rock si la identidad grunge no es claramente dominante. Si existe ambigüedad con Alternative Rock, priorizar Grunge solo si la crudeza, angustia y distorsión son centrales; si la innovación estilística o la ruptura con el mainstream son predominantes sin crudeza/distorsión, clasificar como Alternative Rock. Si hay duda con Art Rock, priorizar Grunge solo si la crudeza y distorsión son centrales.",
-      "reference_examples": ["Nirvana", "Soundgarden", "Alice in Chains", "Pearl Jam"],
-      "counter_examples": ["Radiohead (OK Computer)", "Pixies", "The Smashing Pumpkins", "King Crimson", "Genesis (Peter Gabriel era)", "Pink Floyd (The Wall)", "Yes", "Roxy Music", "David Bowie (Berlin Trilogy)"]
-    },
-    {
-      "node_path": "Alternative Rock",
-      "membership_criteria": "Rock donde la innovación es principalmente estilística, de actitud, sonido o imagen, y la ruptura con el mainstream es el rasgo central. No debe clasificarse aquí música donde la experimentación formal/conceptual (estructura, arreglos, performance) sea dominante (ver Art Rock). Si la crudeza y distorsión son centrales, clasificar como Grunge. Si la experimentación formal/conceptual es dominante, clasificar como Art Rock. No debe haber solapamiento: priorizar Alternative Rock solo si la innovación estilística es inequívoca y dominante sobre la crudeza o la experimentación formal/conceptual.",
-      "exclusion_criteria": "Excluir Art Rock si la experimentación formal/conceptual es inequívoca y dominante. Excluir Grunge si la crudeza, angustia y distorsión son centrales. Si hay duda entre Alternative Rock y Art Rock, priorizar Alternative Rock solo si la innovación es principalmente estilística y no formal/conceptual. Si hay duda con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales.",
-      "reference_examples": ["R.E.M.", "Pixies", "The Smashing Pumpkins", "Radiohead (OK Computer)", "The Strokes", "Sonic Youth", "Placebo", "Blur", "Interpol"],
-      "counter_examples": ["King Crimson", "Genesis (Peter Gabriel era)", "Pink Floyd (The Wall)", "Yes", "Roxy Music", "David Bowie (Berlin Trilogy)", "Nirvana", "Soundgarden", "Alice in Chains", "Pearl Jam", "Brian Eno"]
-    },
-    {
-      "node_path": "New Wave",
-      "membership_criteria": "Canciones de Rock y pop con fuerte influencia de la música electrónica y estética moderna, especialmente de finales de los 70s y 80s.",
-      "exclusion_criteria": "Excluir synthpop puro, punk sin elementos electrónicos y géneros alternativos posteriores.",
-      "reference_examples": ["Talking Heads", "The Cars", "Blondie"]
-    },
-    {
-      "node_path": "Soft Rock",
-        "membership_criteria": "Canciones de Rock caracterizadas por melodías suaves, arreglos pulidos y producción orientada a la accesibilidad, con énfasis en armonías vocales y menor distorsión. No debe clasificarse aquí música donde la experimentación artística o la crudeza/distorsión sean predominantes.",
-        "exclusion_criteria": "Excluir Hard Rock, Art Rock y géneros donde predomine la agresividad, experimentación o distorsión. Si existe ambigüedad con Art Rock, priorizar Soft Rock solo si la suavidad, accesibilidad y producción pulida son claramente dominantes; si existe ambigüedad con Grunge, priorizar Grunge solo si la crudeza y distorsión son centrales. Si la experimentación artística es claramente dominante, clasificar como Art Rock.",
-      "reference_examples": ["Air Supply", "Bread", "Chicago"]
-    },
-    {
-      "node_path": "Latin",
-      "membership_criteria": "Generos de la tradicion musical latina y regionales hispanoamericanos.",
-      "exclusion_criteria": "Excluir nodos que pertenecen primariamente a dominios no latinos sin fusion explicita.",
-      "reference_examples": ["Regional Mexicano", "Salsa", "Cumbia"]
-    },
-    {
-      "node_path": "Norteño",
-      "membership_criteria": "Musica regional mexicana de identidad nortena con acordeon y bajo sexto como rasgos frecuentes.",
-      "exclusion_criteria": "Excluir Banda, Ranchera u otros estilos cuando no predominen rasgos nortenos.",
-      "reference_examples": ["Norteño Clasico", "Norteño Moderno", "Corrido Norteño"]
-    },
-    {
-      "node_path": "Cumbia Pop",
-        "membership_criteria": "Canciones que fusionan la estructura rítmica de la cumbia (patrón rítmico y percusión característica) con elementos melódicos, arreglos y producción de la música pop contemporánea. La base rítmica de cumbia y el contexto cultural latino deben ser claramente dominantes. Solo se considera Latin si la raíz y el enfoque principal son latinos, incluso si la producción es moderna o internacional.",
-        "exclusion_criteria": "Excluir cumbia tradicional sin elementos pop, pop latino o internacional sin base rítmica de cumbia, cualquier canción donde la cumbia no sea el componente rítmico principal, y pop internacional que solo toma influencias superficiales de cumbia sin adoptar su ritmo base. Excluir también canciones donde el enfoque principal sea pop internacional o global sin predominancia de identidad latina en ritmo y contexto.",
-      "reference_examples": ["Rombai", "Agapornis", "Marama"]
-    },
-    {
-      "node_path": "Electronic",
-      "membership_criteria": "Géneros musicales basados principalmente en la producción electrónica, síntesis y manipulación digital del sonido.",
-      "exclusion_criteria": "Excluir géneros donde la instrumentación acústica o tradicional sea predominante.",
-      "reference_examples": ["Techno", "House", "Drum and Bass"]
-    },
-    {
-      "node_path": "Drum And Bass",
-      "membership_criteria": "Canciones de música electrónica con tempo acelerado (160-180 BPM), patrones de batería sincopados y líneas de bajo prominentes.",
-      "exclusion_criteria": "Excluir géneros electrónicos que no tengan énfasis en breakbeats rápidos y bajo dominante (ej. House, Techno, Trance).",
-      "reference_examples": ["Goldie", "Roni Size", "Pendulum"]
+      "node_path": "Music > Latin",
+      "membership_criteria": "Macroárea que agrupa géneros musicales de tradición latina y regionales hispanoamericanos. Incluye géneros como Salsa, Cumbia, Regional Mexicano, etc.",
+      "exclusion_criteria": "Excluir géneros de raíz global o anglosajona, salvo fusiones explícitas.",
+      "reference_examples": ["Salsa", "Cumbia", "Regional Mexicano"]
     }
   ]
 }

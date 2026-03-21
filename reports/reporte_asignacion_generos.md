@@ -1,0 +1,65 @@
+# Reporte de Asignación de Géneros
+
+## Géneros faltantes
+**Criterio:** No existe un género específico de nivel 4 o 5 en el árbol de géneros para ninguna de las canciones procesadas. El árbol actual solo contiene nodos principales (Music, Global, Latin), lo que impide una asignación precisa y específica según las reglas establecidas.
+
+### Canciones afectadas
+- I'm Not In Love — 10cc
+- Love Song — 311
+- What's Up? — 4 Non Blondes
+- The Day Of The Greys — 4hero
+- I Ran (So Far Away) — A Flock Of Seagulls
+- Dime Porque — A.B. Quintanilla III Y Los Kumbia Kings
+- Dime Quién — A.B. Quintanilla III Y Los Kumbia Kings
+- Fuiste Mala — A.B. Quintanilla III Y Los Kumbia Kings
+- Sshh!! — A.B. Quintanilla III Y Los Kumbia Kings
+- Te Quiero A Tí — A.B. Quintanilla III Y Los Kumbia Kings
+- Dancing Queen — ABBA
+- The Winner Takes It All — ABBA
+- Back In Black — AC/DC
+- Highway to Hell — AC/DC
+- Thunderstruck — AC/DC
+- Post Traumatic Love — Actors
+- Rolling in the Deep — Adele
+- Dos Culpables — Adriana Lucia
+- Enamórate Como Yo — Adriana Lucia
+- Llegaste Tú — Adriana Lucia
+- Olvidarte Es Imposible (Te Amaría) — Adriana Lucia
+- Amazing — Aerosmith
+- Crazy — Aerosmith
+- Cryin' — Aerosmith
+- Dream On — Aerosmith
+- Fallen Angels — Aerosmith
+- Falling In Love (Is Hard On The Knees) — Aerosmith
+- Fly Away From Here — Aerosmith
+- Hole In My Soul — Aerosmith
+- I Don't Want to Miss a Thing (From 'Armageddon' Soundtrack) — Aerosmith
+- Jaded — Aerosmith
+- Pink — Aerosmith
+- Take on Me — A-Ha
+- Sexy Boy — Air
+- Surfing on a Rocket — Air
+- Lost In Love — Air Supply
+- El Circo — Albert Zamora Y Talento
+- Quien Mas Te Adora — Albert Zamora Y Talento
+- Tu Carcel — Albert Zamora Y Talento
+- Te Esperaba — Alejandra Guzman
+- Abrazame — Alejandro Fernández
+- Como Quien Pierde una Estrella — Alejandro Fernández
+- Cuando Yo Quería Ser Grande — Alejandro Fernández
+- Me Dedique a Perderte — Alejandro Fernandez A Duo Con Amaia Montero
+- Amiga mía — Alejandro Sanz
+- Corazón partío — Alejandro Sanz
+- Pisando fuerte — Alejandro Sanz
+- Si tú me miras — Alejandro Sanz
+- Y, ¿Si fuera ella? — Alejandro Sanz
+- Sexo Pudor Y Lágrimas — Aleks Syntek
+- Anhelos — Alfredo Gutierrez
+- Man in the Box — Alice In Chains
+- No Excuses — Alice In Chains
+- Rooster (2022 Remaster) — Alice In Chains
+- We Die Young — Alice In Chains
+- Metalingus — Alter Bridge
+- A Horse with No Name — America
+- La Cumbia Sampuesana — Aniceto Molina
+- You Should All Be Murdered — Another Sunny Day
