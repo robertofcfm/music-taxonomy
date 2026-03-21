@@ -20,10 +20,10 @@ aplicando el contexto y los criterios.
 
 6. Utiliza el archivo catalog/songs_raw.csv para tomar la lista de canciones a procesar.
 
-7. Para cada canción, asigna el género más específico posible según el árbol de géneros, los criterios y las reglas LLM. La asignación debe buscar siempre el nivel más bajo disponible (nivel 4 o 5 como mínimo, es decir, subgénero, estilo, microgénero, escena o fusión). No se permite asignar solo a categorías genéricas como "Pop", "Ballad", "Rock", "Global" o "Latin" si existen ramas más específicas en la taxonomía.
-   - Si no existe un género válido en la taxonomía para una canción, repórtala explícitamente como "género faltante" y sugiere el género más específico posible, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
-   - El género propuesto debe cumplir los criterios de coherencia, no disonancia y relevancia taxonómica, y debe estar alineado con la estructura: Music > Macroárea (Global/Latin) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
-   - Incluye en el reporte el criterio y justificación detallada para cada género faltante sugerido, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
+7. Para cada canción, toma el género sugerido y busca ese nombre exacto en cualquier parte del árbol de géneros (sin importar la ruta completa). Si el nodo existe, asígnalo tal cual aparece en el árbol. Si no existe, intenta encontrar un nodo equivalente (sinónimos, variantes aceptadas). Solo si no hay coincidencia ni equivalente, repórtala explícitamente como "género faltante" y sugiere el género más específico posible, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
+  - No se permite asignar solo a categorías genéricas como "Pop", "Ballad", "Rock", "Global" o "Latin" si existen ramas más específicas en la taxonomía.
+  - El género propuesto debe cumplir los criterios de coherencia, no disonancia y relevancia taxonómica, y debe estar alineado con la estructura: Music > Macroárea (Global/Latin) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
+  - Incluye en el reporte el criterio y justificación detallada para cada género faltante sugerido, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
 8. Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
    - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el género específico sugerido y su justificación.
    - El segundo debe presentar la misma información en formato Markdown, siguiendo el formato de los reportes previos.
