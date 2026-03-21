@@ -6,6 +6,24 @@
       "membership_criteria": "Raíz de la taxonomía musical. No debe clasificarse música aquí.",
       "exclusion_criteria": "Excluir cualquier género específico o subgénero.",
       "reference_examples": []
-    }
+    },
+    { "node_path": "Music > Global", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Rock", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Rock > Alternative Rock", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Rock > Hard Rock", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Rock > Post Punk", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Rock > Soft Rock", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Pop", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Pop > Art Pop", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Electronic", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Electronic > Drum And Bass", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Soul", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Soul > Pop Soul", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Reggae", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Global > Reggae > Reggae Rock", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Latin", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Latin > Cumbia", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Latin > Cumbia > Cumbia Pop", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] },
+    { "node_path": "Music > Latin > Vallenato", "membership_criteria": "", "exclusion_criteria": "", "reference_examples": [] }
   ]
 }
