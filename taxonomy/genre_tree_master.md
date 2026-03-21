@@ -7,16 +7,21 @@ Music
     Soft Rock
     Reggae Rock
   Pop
-    Sophisti-Pop
+    Pop Ballad
+    Singer-Songwriter Pop
+    Pop (General)
   Electronic
     Synthpop
     Downtempo
     Drum And Bass
+    Big Beat
   Soul
     Pop Soul
+  Classical
   Regional Mexicano
     Norteño
     Texano
+    Ranchera
   Vallenato
   Cumbia
     Cumbia Pop
