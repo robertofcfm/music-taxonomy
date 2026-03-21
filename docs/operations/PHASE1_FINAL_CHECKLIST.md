@@ -163,25 +163,7 @@ Rules:
 
 ---
 
-# 8. Latin Music Rule
 
-Latin music is handled as a **separate branch**.
-
-If a track is identified as Latin:
-
-Its genre clasificación debe be restricted
-to nodes within the **Latin branch**.
-
-Example:
-
-Latin
-  Regional Mexicano
-  Cumbia
-  Vallenato
-
-This avoids mixing Latin and non-Latin genre contexts.
-
----
 
 # 9. Alias Support
 

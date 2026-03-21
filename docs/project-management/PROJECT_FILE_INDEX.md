@@ -185,69 +185,15 @@ plantilla de encabezado común con:
 • Responsable
 • Última actualización
 
---------------------------------------------------
-9. DOCUMENTACIÓN DE GOBERNANZA GLOBAL
---------------------------------------------------
-
 docs/governance/GLOBAL_RULES.md
-
-Define reglas transversales que aplican a múltiples
-componentes del repositorio.
-
-Este archivo es la ubicación canónica para reglas
-que afectan más de un subsistema.
-
-Ejemplos de reglas de alcance global:
-
-• comportamiento taxonómico
-• lógica de clasificación
-• procedimientos de validación
-• restricciones de repositorio
-
---------------------------------------------------
-
-PRINCIPIO DE UBICACIÓN DE REGLAS
-
-Si una regla aplica a un solo archivo o subsistema,
 debe vivir en ese archivo específico.
-
-Si una regla aplica a múltiples archivos o subsistemas,
 debe ubicarse en:
-
 docs/governance/GLOBAL_RULES.md
-
-Otros documentos pueden referenciar la regla,
 pero no deben duplicarla.
-
---------------------------------------------------
-
-PRINCIPIO DE CARGA DE REGLAS
-
-Cuando se evalúen reglas del repositorio
-(por ejemplo durante reconstrucción o validación),
-siempre deben cargarse:
-
-1. docs/governance/GLOBAL_RULES.md
-2. docs/governance/SYSTEM_CONTRACT.md
-
-GLOBAL_RULES.md contiene reglas canónicas.
-
-SYSTEM_CONTRACT.md contiene reglas obligatorias del sistema.
-
---------------------------------------------------
-
-PRINCIPIO DE PRECEDENCIA GLOBAL
-
 docs/governance/GLOBAL_RULES.md es la fuente canónica
 para reglas transversales.
-
-Si existe conflicto entre un documento local y GLOBAL_RULES.md
-sobre una regla transversal, GLOBAL_RULES.md tiene precedencia.
-
-Los archivos locales pueden especializar implementación,
 pero no deben contradecir reglas globales.
 
---------------------------------------------------
 10. DOCUMENTACIÓN DE CONTEXTO
 --------------------------------------------------
 

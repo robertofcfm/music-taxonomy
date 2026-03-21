@@ -170,20 +170,14 @@ Criterios de no injerencia (deben cumplirse todos):
 
 --------------------------------------------------
 
+
 MANDATORY
 
-- docs/governance/GLOBAL_RULES.md
-  Razón: contiene reglas transversales con impacto directo en estructura,
-  nombrado y dominio de la taxonomía maestra.
+• docs/governance/SYSTEM_CONTRACT.md
+  Razón: define restricciones obligatorias de estructura, tipos de nodo y requerimientos explícitos de validación.
 
-- docs/governance/SYSTEM_CONTRACT.md
-  Razón: define restricciones obligatorias de estructura, tipos de nodo,
-  aislamiento Latin y requerimientos explícitos de validación.
-
-- docs/governance/TAXONOMY_RULES.md
-  Razón: documento estructural principal para raíz, jerarquía, hojas,
-  distinción de hermanos, cohesión, profundidad, nodos General/Atomic,
-  rama Latin y política clone/híbridos.
+• docs/governance/TAXONOMY_RULES.md
+  Razón: documento estructural principal para raíz, jerarquía, hojas, distinción de hermanos, cohesión, profundidad, nodos General/Atomic y política clone/híbridos.
 
 - docs/governance/TAXONOMY_DEPTH_POLICY.md
   Razón: define límites y balance de profundidad verificables.
@@ -352,11 +346,6 @@ CAPA 1 — Reglas deterministas (script)
   DESCRIPTION: Términos ambiguos prohibidos en nombres de nodo.
   CHECK: Lista de prohibidos y variantes normalizadas.
 
-- MVET-L1-010
-  FB: FB-04
-  SEVERITY: FATAL
-  DESCRIPTION: Separación de dominio Latin en reglas estructurales declaradas.
-  CHECK: Rama Latin presente y sin contradicciones de estructura base.
 
 CAPA 2 — Reglas semánticas (IA)
 
@@ -404,20 +393,9 @@ CAPA 2 — Reglas semánticas (IA)
   DESCRIPTION: Candidatos de fusión de nodos hermanos.
   CHECK: Evidencia de solapamiento alto entre hermanos.
 
-- MVET-L2-008
-  FB: FB-04
-  SEVERITY: FATAL
-  DESCRIPTION: Violación semántica de separación Latin y no-Latin.
-  CHECK: Hallazgo explícito de mezcla de dominios incompatibles, excluyendo nodos clone.
 
 Reglas condicionales (activas en post-cambio y pre-release):
 
-- MVET-C-001
-  FB: FB-06
-  LAYER: 2
-  SEVERITY: WARNING
-  DESCRIPTION: Revisión global de cambios estructurales recientes.
-  CHECK: Confirmación de revisión integral de efectos colaterales.
 
 - MVET-C-002
   FB: FB-06

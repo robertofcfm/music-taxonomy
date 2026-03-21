@@ -6,12 +6,11 @@ Contexto mínimo necesario para validaciones que requieren LLM.
 - No proponer cambios automáticos al archivo maestro.
 - No inventar reglas fuera del corpus de gobernanza proporcionado.
 - No ocultar incertidumbre: reflejar confianza real en el campo confidence.
-- La separación entre macroáreas "Global" y "Latin" es obligatoria e inviolable en el segundo nivel del árbol taxonómico.
 	- Los géneros faltantes deben reportarse con la máxima especificidad posible, evitando categorías genéricas (ej. no usar solo "Pop", "Ballad", "Rock").
 	- Toda sugerencia de género faltante debe incluir justificación y criterios claros, alineados con la estructura taxonómica y los criterios de nodos.
 ## Estructura taxonómica recomendada
 Nivel 1: Music (raíz)
-Nivel 2: Macroárea cultural (Global, Latin)
+Nivel 2: Género principal
 Nivel 3: Género (ej. Rock, Pop, Cumbia, etc.)
 Nivel 4: Subgénero (ej. Alternative Rock, Cumbia Pop, etc.)
 Nivel 5: Estilo / Microgénero / Escena / Fusión (ej. Dream Pop Latino, Power Ballad Anglo, Madchester, Electro Cumbia, etc.)
@@ -32,7 +31,6 @@ Identificación operativa para esta validación:
 
 Instrucción de evaluación:
 - Cuando una regla indique excluir nodos clone, exclúyelos completamente del análisis.
-- No reportes como conflicto semántico una mezcla Latin/no-Latin si la aparente mezcla ocurre solo por nodos clone.
 
 ## Alcance de aplicación para Capa 2
 Aplica únicamente reglas semánticas y estructurales de taxonomía para validar coherencia musical del árbol. Ignora reglas operativas fuera de alcance de esta capa (por ejemplo: modos de ejecución, batching, logging, continuidad de lotes, o detalles de pipeline de clasificación de canciones).
@@ -46,7 +44,7 @@ Precedencia obligatoria:
 - Nodos con muchas canciones o playlists diversas pueden requerir subdivisión si existen subgéneros reconocibles (umbral sugerido: 45 canciones).
 - Un nodo atómico no debe subdividirse si representa un estilo muy específico y la cohesión de playlists se vería afectada.
 - El balance de profundidad busca evitar ramas excesivamente profundas o superficiales y crecimiento jerárquico desigual.
-- Los géneros deben estar bajo el nodo padre más apropiado según afinidad musical y macroárea (Global o Latin).
+Los géneros deben estar bajo el nodo padre más apropiado según afinidad musical.
 - La sobre-fragmentación ocurre cuando hay hermanos pequeños, difícil de distinguir o especialización excesiva.
 - Nombres ambiguos, vagos, de marketing o no musicales deben evitarse; priorizar nombres musicales reconocidos.
 - Los nombres de género deben ser concisos y no combinar múltiples descriptores innecesarios.

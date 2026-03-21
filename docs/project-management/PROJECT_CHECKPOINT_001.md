@@ -130,17 +130,7 @@ Nodo terminal que no debe expandirse más.
 
 ---
 
-# Estrategia de Géneros Latin
 
-La música Latin se maneja como rama separada.
-
-Si una canción es Latin:
-
-Sus géneros deben seleccionarse del subárbol Latin.
-
-Esto evita mezclar contextos Latin y no-Latin.
-
----
 
 # Estrategia de Versionado
 
