@@ -14,8 +14,10 @@ _No se detectaron errores fatales._
 
 ## Advertencias
 
-- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene cuatro hijos (Synthpop, Downtempo, Drum And Bass, Big Beat). Se recomienda monitorear si aparecen más subgéneros relevantes.
-- **[ARBOL-LLM-004]** La rama 'Pop' tiene subdivisión suficiente, pero se recomienda monitorear la utilidad y claridad de 'Pop (General)' como nodo catch-all, para evitar ambigüedad en la clasificación.
+- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero se recomienda monitorear la claridad entre 'Folk Rock', 'Soft Rock' y 'Alternative Rock', ya que pueden solaparse en algunos casos.
+- **[ARBOL-LLM-004]** La rama 'Pop' tiene subdivisión suficiente, pero se recomienda monitorear la utilidad y claridad de 'Pop (General)' como nodo catch-all, y la distinción entre 'Indie Pop', 'Psychedelic Pop' y 'Singer-Songwriter Pop'.
+- **[ARBOL-LLM-004]** La rama 'Classical' ha crecido con subgéneros ('Film Score', 'Solo Instrumental', 'Orchestral'). Se recomienda monitorear si requieren criterios diferenciados o subdivisión adicional.
+- **[ARBOL-LLM-004]** La rama 'Regional Mexicano' ahora incluye 'Banda' y 'Ranchera'. Se recomienda monitorear la claridad de criterios entre estos subgéneros y con 'Norteño' y 'Texano'.
 
 ## OK
 
