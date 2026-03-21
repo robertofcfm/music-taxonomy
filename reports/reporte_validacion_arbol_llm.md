@@ -14,7 +14,8 @@ _No se detectaron errores fatales._
 
 ## Advertencias
 
-- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene tres hijos (Synthpop, Downtempo, Drum And Bass). Se recomienda monitorear si aparecen más subgéneros relevantes.
+- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene cuatro hijos (Synthpop, Downtempo, Drum And Bass, Big Beat). Se recomienda monitorear si aparecen más subgéneros relevantes.
+- **[ARBOL-LLM-004]** La rama 'Pop' tiene subdivisión suficiente, pero se recomienda monitorear la utilidad y claridad de 'Pop (General)' como nodo catch-all, para evitar ambigüedad en la clasificación.
 
 ## OK
 

@@ -1,0 +1,60 @@
+{
+  "generos_faltantes": [
+    {
+      "numero_cancion": 14,
+      "titulo": "Gonna Fly Now",
+      "artista": "Bill Conti",
+      "sugerencia": "Agregar subgénero 'Soundtrack' o 'Música de Cine' bajo Classical o rama específica si se justifica por volumen.",
+      "justificacion": "Tema instrumental de película, no encaja en los géneros actuales."
+    },
+    {
+      "numero_cancion": 58,
+      "titulo": "A Horse with No Name",
+      "artista": "America",
+      "sugerencia": "Agregar subgénero 'Folk Rock' o 'Folk' si se justifica por volumen y estilo.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 60,
+      "titulo": "You Should All Be Murdered",
+      "artista": "Another Sunny Day",
+      "sugerencia": "Agregar subgénero 'Indie Pop' o 'Twee Pop' si se justifica por volumen y estilo.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 63,
+      "titulo": "Escapee",
+      "artista": "Architecture in Helsinki",
+      "sugerencia": "Agregar subgénero 'Indie Pop' si se justifica por volumen y estilo.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 71,
+      "titulo": "Bolero Falaz",
+      "artista": "Aterciopelados",
+      "sugerencia": "Agregar subgénero 'Rock Alternativo Latino' o 'Latin Alternative' si se justifica por volumen y estilo.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 78,
+      "titulo": "Secret Enchanted Broccoli Forest",
+      "artista": "Babe Rainbow",
+      "sugerencia": "Agregar subgénero 'Psychedelic Pop' o 'Neo-Psychedelia' si se justifica por volumen y estilo.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 79,
+      "titulo": "Te Presumo",
+      "artista": "Banda Sinaloense de El Recodo de Don Cruz Lizarraga",
+      "sugerencia": "Agregar subgénero 'Banda' bajo Regional Mexicano.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    },
+    {
+      "numero_cancion": 80,
+      "titulo": "De Ti Enamorado",
+      "artista": "Banda Sinaloense MS de Sergio Lizárraga",
+      "sugerencia": "Agregar subgénero 'Banda' bajo Regional Mexicano.",
+      "justificacion": "No existe actualmente en la taxonomía, pero sería el subgénero adecuado."
+    }
+  ]
+}
