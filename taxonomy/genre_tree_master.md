@@ -3,17 +3,21 @@ Music
     Rock
       Alternative Rock
       Hard Rock
-      Post Punk
+        Power Ballad
+      Post-Punk
       Soft Rock
+      Reggae Rock
     Pop
-      Art Pop
+      Sophisti-Pop
     Electronic
+      Synthpop
+      Downtempo
       Drum And Bass
     Soul
       Pop Soul
-    Reggae
-      Reggae Rock
   Latin
+    Regional Mexicano
+      Norteño
+    Vallenato
     Cumbia
       Cumbia Pop
-    Vallenato

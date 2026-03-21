@@ -26,3 +26,27 @@
 - **Pop**
   - Canciones: "The Day Of The Greys - 4hero"
   - Justificación: No existe un nodo para electrónica experimental o drum and bass. Se recomienda crear un nodo específico para estos géneros.
+
+# Reporte de Géneros Faltantes (Agrupado)
+
+## Power Ballad
+- Crazy, Aerosmith
+- Cryin', Aerosmith
+- Dream On, Aerosmith
+- Fly Away From Here, Aerosmith
+- Hole In My Soul, Aerosmith
+- I Don't Want to Miss a Thing (From 'Armageddon' Soundtrack), Aerosmith
+
+## Synthpop
+- Take on Me, A-Ha
+
+## French House
+- Sexy Boy, Air
+
+## Electronica
+- Surfing on a Rocket, Air
+
+## Norteño
+- El Circo, Albert Zamora Y Talento
+- Quien Mas Te Adora, Albert Zamora Y Talento
+- Tu Carcel, Albert Zamora Y Talento

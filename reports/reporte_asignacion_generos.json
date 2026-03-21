@@ -48,5 +48,27 @@
       "canciones": ["Dos Culpables - Adriana Lucia", "Enamórate Como Yo - Adriana Lucia", "Llegaste Tú - Adriana Lucia", "Olvidarte Es Imposible (Te Amaría) - Adriana Lucia"],
       "justificacion": "No existe un nodo para 'Tropical' en la taxonomía actual. Se recomienda crearlo."
     }
+  ],
+  "Power Ballad": [
+    {"title": "Crazy", "artist": "Aerosmith"},
+    {"title": "Cryin'", "artist": "Aerosmith"},
+    {"title": "Dream On", "artist": "Aerosmith"},
+    {"title": "Fly Away From Here", "artist": "Aerosmith"},
+    {"title": "Hole In My Soul", "artist": "Aerosmith"},
+    {"title": "I Don't Want to Miss a Thing (From 'Armageddon' Soundtrack)", "artist": "Aerosmith"}
+  ],
+  "Synthpop": [
+    {"title": "Take on Me", "artist": "A-Ha"}
+  ],
+  "French House": [
+    {"title": "Sexy Boy", "artist": "Air"}
+  ],
+  "Electronica": [
+    {"title": "Surfing on a Rocket", "artist": "Air"}
+  ],
+  "Norteño": [
+    {"title": "El Circo", "artist": "Albert Zamora Y Talento"},
+    {"title": "Quien Mas Te Adora", "artist": "Albert Zamora Y Talento"},
+    {"title": "Tu Carcel", "artist": "Albert Zamora Y Talento"}
   ]
 }
