@@ -3,7 +3,7 @@
 Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
 
 --- INSTRUCCIONES ---
-1. Antes de cualquier validación, escanea el archivo de criterios genre_tree_node_criteria.json
+1. [IA_MANUAL] Antes de cualquier validación, escanea el archivo de criterios genre_tree_node_criteria.json
   - Si detectas criterios definidos para nodos inexistentes, o nodos sin criterios corrigelo
 2. Toma el árbol de géneros musicales desde:
   taxonomy/genre_tree_master.md
@@ -13,8 +13,8 @@ Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de v
   governance/reglas_globales_llm.md
   governance/reglas_validacion_arbol_llm.md
 5. Utiliza el archivo taxonomy/genre_tree_node_criteria.json como ayuda para interpretar criterios y validar los nodos.
-6. Evalúa TU MISMO COMO LLM SIN CREAR ARCHIVOS DETERMINISTICOS cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
-7. Genera dos archivos como respuesta de la evaluacion de TODAS las reglas:
+6. [IA_MANUAL] Evalúa cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
+7. [IA_MANUAL] Genera dos archivos como respuesta de la evaluacion de TODAS las reglas:
    - Un reporte en JSON con el formato exacto que produce el script de validación determinista (errores, advertencias, ok, detalle, timestamp).
    - Un reporte en Markdown con el mismo formato y secciones que el script (errores, advertencias, reglas validadas, archivos utilizados, fecha).
    Estos se generaran en la carpeta reports con los nombres reporte_validacion_arbol_llm.json y reporte_validacion_arbol_llm.md

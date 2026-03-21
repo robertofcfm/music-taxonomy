@@ -27,12 +27,11 @@ aplicando el contexto y los criterios.
   - Incluye en el reporte el criterio y justificación detallada para cada género faltante o criterio mejorable sugerido, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
 7b. [IA_MANUAL] Itera el proceso de asignación y validación de géneros para cada canción, deteniéndote y reportando en cuanto se detecten 5 géneros faltantes, o bien informa el estado cada 10 canciones procesadas durante pruebas. No inventes procesos, no desarrolles flujos automáticos ni realices inferencias fuera de lo explicitado en estas instrucciones. El procedimiento debe seguirse exactamente como se describe, sin atajos ni malabares.
 
-9. Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
+9. [IA_MANUAL] Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
    - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el género específico sugerido y su justificación.
    - El segundo debe presentar la misma información en formato Markdown, siguiendo el formato de los reportes previos.
    - No incluyas explicaciones, ejemplos ni comentarios adicionales fuera de los dos reportes.
    - No se permite mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación.
-10. Genera archivos de respuesta como se indicó previamente en los documentos leídos.
 
 Nota: Para el match de géneros, la comparación debe ser insensible a mayúsculas/minúsculas y flexible ante conectores equivalentes ("and", "And", "&", "y"). Si el género sugerido y el del árbol son equivalentes bajo esta normalización, se considerarán un match válido.
 
