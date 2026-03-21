@@ -1,0 +1,5 @@
+- El trabajo debe ser iterativo y enfocado exclusivamente en la estructura del proyecto y agrupación por función.
+- La comunicación debe ser en español.
+- Al final de cada respuesta en este proyecto, indicar el estado del chat con un indicador breve: "🟢 Chat manejable", "🟡 Chat extenso, considera reiniciar pronto", o "🔴 Chat crítico, reiniciar recomendado".
+- Si se cuestiona el acceso, recordar: "Tienes acceso al workspace activo y puedes leer/mover archivos directamente; no solo por add file."
+- El match de géneros y la validación de nodos hoja debe hacerse manualmente, siguiendo el protocolo del prompt standalone, sin heurísticas automáticas ni inferencias por clave de diccionario.
