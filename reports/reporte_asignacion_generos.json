@@ -24,29 +24,34 @@
   ],
   "generos_faltantes": [
     {
-      "sugerencia": "Pop",
-      "canciones": ["The Day Of The Greys - 4hero"],
-      "justificacion": "No existe un nodo para electrónica experimental o drum and bass. Se recomienda crear un nodo específico para estos géneros."
+      "sugerencia": "Classical",
+      "canciones": ["Ballade No. 1 in G Minor, Op. 23 - Arturo Benedetti Michelangeli"],
+      "justificacion": "No existe un nodo para música clásica en la taxonomía actual. Se recomienda crear un nodo 'Classical' bajo Music > Global."
     },
     {
-      "sugerencia": "Hard Rock",
-      "canciones": ["Back In Black - AC/DC", "Highway to Hell - AC/DC", "Thunderstruck - AC/DC"],
-      "justificacion": "No existe un nodo para 'Hard Rock' en la taxonomía actual. Se recomienda crearlo."
+      "sugerencia": "Disco",
+      "canciones": ["How Deep Is Your Love - Bee Gees", "More Than A Woman - Bee Gees", "Night Fever - Bee Gees", "Stayin' Alive - Bee Gees", "You Should Be Dancing - Bee Gees"],
+      "justificacion": "No existe un nodo para 'Disco' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Pop."
     },
     {
-      "sugerencia": "Post Punk",
-      "canciones": ["Post Traumatic Love - Actors"],
-      "justificacion": "No existe un nodo para 'Post Punk' en la taxonomía actual. Se recomienda crearlo."
+      "sugerencia": "R&B/Soul",
+      "canciones": ["Killing Me Softly With His Song - Fugees"],
+      "justificacion": "No existe un nodo para 'R&B/Soul' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Soul."
     },
     {
-      "sugerencia": "Pop Soul",
-      "canciones": ["Rolling in the Deep - Adele"],
-      "justificacion": "No existe un nodo para 'Pop Soul' en la taxonomía actual. Se recomienda crearlo."
+      "sugerencia": "Dance Pop",
+      "canciones": ["Billie Jean - Michael Jackson"],
+      "justificacion": "No existe un nodo para 'Dance Pop' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Pop."
     },
     {
-      "sugerencia": "Tropical",
-      "canciones": ["Dos Culpables - Adriana Lucia", "Enamórate Como Yo - Adriana Lucia", "Llegaste Tú - Adriana Lucia", "Olvidarte Es Imposible (Te Amaría) - Adriana Lucia"],
-      "justificacion": "No existe un nodo para 'Tropical' en la taxonomía actual. Se recomienda crearlo."
+      "sugerencia": "Tango",
+      "canciones": ["La Cumparsita - Carlos Gardel"],
+      "justificacion": "No existe un nodo para 'Tango' en la taxonomía actual. Se recomienda crearlo bajo Music > Latin."
+    },
+    {
+      "sugerencia": "Jazz",
+      "canciones": ["Take Five - Dave Brubeck"],
+      "justificacion": "No existe un nodo para 'Jazz' en la taxonomía actual. Se recomienda crearlo bajo Music > Global."
     }
   ],
   "Power Ballad": [

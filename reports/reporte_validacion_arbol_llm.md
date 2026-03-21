@@ -1,6 +1,6 @@
 # Reporte de Validación Árbol LLM
 
-**Fecha:** 2026-03-20  
+**Fecha:** 2026-03-21  
 **Versión:** 1.0
 
 ## Archivos utilizados
@@ -14,7 +14,7 @@ _No se detectaron errores fatales._
 
 ## Advertencias
 
-- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' solo tiene un hijo ('Drum And Bass'). Considerar expansión si existen más subgéneros relevantes.
+- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene tres hijos (Synthpop, Downtempo, Drum And Bass). Se recomienda monitorear si aparecen más subgéneros relevantes.
 - **[ARBOL-LLM-009]** No se detectan nodos con exceso de canciones o playlists diversas, pero se recomienda monitorear 'Rock' y 'Latin' si crecen en volumen.
 
 ## OK
@@ -24,7 +24,7 @@ _No se detectaron errores fatales._
 - No se detectan casos de sobre-fragmentación.
 - No se detectan nodos hoja que requieran subdivisión adicional.
 - No se detectan candidatos claros de reubicación o fusión jerárquica.
-- No se detectan solapamientos relevantes entre Art Rock, Alternative Rock y Grunge tras la mejora de criterios.
+- No se detectan solapamientos relevantes entre géneros tras la mejora de criterios.
 
 ## Reglas validadas
 

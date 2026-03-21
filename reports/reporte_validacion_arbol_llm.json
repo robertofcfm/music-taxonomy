@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-20T00:00:00Z",
+  "timestamp": "2026-03-21T00:00:00Z",
   "version": "1.0",
   "archivos_utilizados": [
     "taxonomy/genre_tree_master.md",
@@ -11,7 +11,7 @@
   "advertencias": [
     {
       "id": "ARBOL-LLM-004",
-      "detalle": "La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' solo tiene un hijo ('Drum And Bass'). Considerar expansión si existen más subgéneros relevantes."
+      "detalle": "La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene tres hijos (Synthpop, Downtempo, Drum And Bass). Se recomienda monitorear si aparecen más subgéneros relevantes."
     },
     {
       "id": "ARBOL-LLM-009",
@@ -24,7 +24,7 @@
     "No se detectan casos de sobre-fragmentación.",
     "No se detectan nodos hoja que requieran subdivisión adicional.",
     "No se detectan candidatos claros de reubicación o fusión jerárquica.",
-    "No se detectan solapamientos relevantes entre Art Rock, Alternative Rock y Grunge tras la mejora de criterios."
+    "No se detectan solapamientos relevantes entre géneros tras la mejora de criterios."
   ],
   "reglas_validadas": [
     "ARBOL-LLM-001",
