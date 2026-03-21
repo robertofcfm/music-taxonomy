@@ -4,8 +4,7 @@ Aquí se colocarán únicamente las reglas que requieren interpretación o razon
 
 
 ## Principios y estructura taxonómica obligatoria
-- La estructura del árbol debe seguir: Music (raíz) > Macroárea (Global, Latin) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
-- La separación entre macroáreas "Global" y "Latin" es inviolable en el segundo nivel.
+- La estructura del árbol debe seguir: Music (raíz) > Género > Subgénero > Estilo/Microgénero/Escena/Fusión.
 - Los géneros faltantes deben reportarse con la máxima especificidad posible, evitando categorías genéricas (ej. no usar solo "Pop", "Ballad", "Rock").
 - Toda sugerencia de género faltante debe incluir justificación y criterios claros, alineados con el contexto operativo y los criterios de nodos.
 - No se permite inventar géneros fuera de la lógica taxonómica y los criterios definidos.
@@ -37,10 +36,6 @@ Aquí se colocarán únicamente las reglas que requieren interpretación o razon
   descripcion: "¿Hay candidatos de reubicación, fusión o agrupación jerárquica?"
   severidad: WARNING
   prompt: "Propón nodos que encajarían mejor bajo otro padre, que deberían fusionarse o que justificarían la creación de un nodo agrupador intermedio."
-- id: ARBOL-LLM-007
-  descripcion: "¿Se respeta la separación Latin/no-Latin?"
-  severidad: FATAL
-  prompt: "Detecta cualquier mezcla de géneros Latin y no-Latin que contraríe la separación de dominio obligatoria, excluyendo nodos clone."
 - id: ARBOL-LLM-008
   descripcion: "¿Existen redundancias o alias históricos entre géneros?"
   severidad: WARNING

@@ -24,34 +24,72 @@
   ],
   "generos_faltantes": [
     {
-      "sugerencia": "Classical",
-      "canciones": ["Ballade No. 1 in G Minor, Op. 23 - Arturo Benedetti Michelangeli"],
-      "justificacion": "No existe un nodo para música clásica en la taxonomía actual. Se recomienda crear un nodo 'Classical' bajo Music > Global."
+      "sugerencia": "Tropical/Cumbia",
+      "canciones": [
+        "Cada Vez Que Resuelles - Conjunto Oro",
+        "La Decision - Conjunto Oro",
+        "Llore - Conjunto Oro",
+        "Quiero Que Me Abraces - Conjunto Oro",
+        "Vete a Buscar Aquel - Conjunto Oro"
+      ],
+      "justificacion": "No existe un nodo específico para 'Tropical' o 'Cumbia' bajo este nombre. Validar si corresponde a Cumbia existente o crear nodo 'Tropical'."
     },
     {
-      "sugerencia": "Disco",
-      "canciones": ["How Deep Is Your Love - Bee Gees", "More Than A Woman - Bee Gees", "Night Fever - Bee Gees", "Stayin' Alive - Bee Gees", "You Should Be Dancing - Bee Gees"],
-      "justificacion": "No existe un nodo para 'Disco' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Pop."
+      "sugerencia": "Hip Hop",
+      "canciones": [
+        "Amnesia - Control Machete",
+        "Andamos Armados - Control Machete",
+        "Así Son Mis Días - Control Machete",
+        "Cheve - Control Machete",
+        "Comprendes, Mendes? - Control Machete",
+        "Danzón - Control Machete",
+        "Humanos Mexicanos - Control Machete",
+        "Ileso - Control Machete",
+        "Si Señor - Control Machete",
+        "Gangsta's Paradise (feat. L.V.) - Coolio"
+      ],
+      "justificacion": "No existe nodo para 'Hip Hop' o 'Rap' en la taxonomía actual. Se recomienda crear nodo 'Hip Hop' bajo Music > Global."
     },
     {
-      "sugerencia": "R&B/Soul",
-      "canciones": ["Killing Me Softly With His Song - Fugees"],
-      "justificacion": "No existe un nodo para 'R&B/Soul' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Soul."
+      "sugerencia": "Grupero/Tejano",
+      "canciones": [
+        "Como olvidarte - Costumbre",
+        "Cuanto te amo - Costumbre",
+        "Esperare - Costumbre",
+        "Estar enamorado - Costumbre",
+        "Estar Enamorado (En Vivo) - Costumbre",
+        "Fantasia - Costumbre",
+        "Fantasía (En Vivo) - Costumbre",
+        "Quiera Dios (En Vivo) - Costumbre",
+        "Quiero Decirte - Costumbre",
+        "Quiero Decirte (En Vivo) - Costumbre",
+        "Y Ya Despues - Costumbre"
+      ],
+      "justificacion": "No existe nodo para 'Grupero' o 'Tejano' en la taxonomía actual. Se recomienda crear nodo bajo Music > Latin."
     },
     {
-      "sugerencia": "Dance Pop",
-      "canciones": ["Billie Jean - Michael Jackson"],
-      "justificacion": "No existe un nodo para 'Dance Pop' en la taxonomía actual. Se recomienda crearlo bajo Music > Global > Pop."
+      "sugerencia": "Blues Rock",
+      "canciones": [
+        "Sunshine Of Your Love - Cream"
+      ],
+      "justificacion": "No existe nodo para 'Blues Rock' o 'Psychedelic Rock' en la taxonomía actual. Se recomienda crear nodo 'Blues Rock' bajo Music > Global > Rock."
     },
     {
-      "sugerencia": "Tango",
-      "canciones": ["La Cumparsita - Carlos Gardel"],
-      "justificacion": "No existe un nodo para 'Tango' en la taxonomía actual. Se recomienda crearlo bajo Music > Latin."
+      "sugerencia": "Roots Rock",
+      "canciones": [
+        "Fortunate Son - Creedence Clearwater Revival",
+        "Have You Ever Seen The Rain - Creedence Clearwater Revival",
+        "Proud Mary - Creedence Clearwater Revival"
+      ],
+      "justificacion": "No existe nodo para 'Roots Rock' o 'Swamp Rock' en la taxonomía actual. Se recomienda crear nodo 'Roots Rock' bajo Music > Global > Rock."
     },
     {
-      "sugerencia": "Jazz",
-      "canciones": ["Take Five - Dave Brubeck"],
-      "justificacion": "No existe un nodo para 'Jazz' en la taxonomía actual. Se recomienda crearlo bajo Music > Global."
+      "sugerencia": "Pop Latino",
+      "canciones": [
+        "Azul - Cristian",
+        "No Podras - Cristian"
+      ],
+      "justificacion": "No existe nodo para 'Pop Latino' o 'Balada' en la taxonomía actual. Se recomienda crear nodo 'Pop Latino' bajo Music > Latin."
     }
   ],
   "Power Ballad": [
