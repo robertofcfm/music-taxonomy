@@ -4,9 +4,9 @@ Music
       Alternative Rock
       Soft Rock
     Pop
-      Art Pop 
+      Art Pop
     Reggae
-      Reggae Rock   
+      Reggae Rock
   Latin
     Cumbia
       Cumbia Pop

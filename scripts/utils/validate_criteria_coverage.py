@@ -9,13 +9,22 @@ with open('taxonomy/genre_tree_master.md', encoding='utf-8') as f:
 def extract_paths(lines):
     paths = []
     stack = []
-    for line in lines:
+    for idx, line in enumerate(lines):
         indent = len(line) - len(line.lstrip())
         name = line.strip()
         level = indent // 2
         stack = stack[:level]
         stack.append(name)
-        paths.append(' > '.join(stack))
+        # Solo agregar si la raíz es 'Music'
+        if stack and stack[0] == 'Music':
+            # Es hoja si la siguiente línea tiene menor o igual indentación
+            is_leaf = True
+            if idx + 1 < len(lines):
+                next_indent = len(lines[idx + 1]) - len(lines[idx + 1].lstrip())
+                if next_indent > indent:
+                    is_leaf = False
+            if is_leaf:
+                paths.append(' > '.join(stack))
     return paths
 
 with open('taxonomy/genre_tree_node_criteria.json', encoding='utf-8') as f:
