@@ -172,16 +172,6 @@ Indicadores:
 En estos casos, la taxonomía puede requerir simplificación.
 
 --------------------------------------------------
-12. VALIDACIÓN DE RAMA LATIN
---------------------------------------------------
-
-Verifica que los géneros Latin permanezcan
-dentro de la rama Latin.
-
-Las canciones clasificadas como Latin no deben
-usar géneros fuera de esa rama.
-
---------------------------------------------------
 13. CONSISTENCIA DE NOMBRADO
 --------------------------------------------------
 

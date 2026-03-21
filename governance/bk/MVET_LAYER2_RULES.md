@@ -20,15 +20,6 @@ Este archivo ha sido migrado. Las reglas de validación semántica de Capa 2 han
 }
 <!-- MVET:LAYER2_RULE_END -->
 
-<!-- MVET:LAYER2_RULE_START -->
-{
-  "rule_id": "MVET-L2-008",
-  "fb": "FB-04",
-  "severity": "FATAL",
-  "description": "Violacion semantica de separacion Latin y no-Latin.",
-  "check": "Detecta cualquier evidencia de mezcla de generos Latin y no-Latin que contrarie la separacion de dominio obligatoria, excluyendo nodos clone."
-}
-<!-- MVET:LAYER2_RULE_END -->
 
 <!-- MVET:LAYER2_RULE_START -->
 {

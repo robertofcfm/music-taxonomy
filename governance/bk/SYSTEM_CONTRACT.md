@@ -123,24 +123,6 @@ Los nodos agrupadores estructurales:
 - no deben asumirse por defecto como destino preferente de playlists
 - deben priorizar clasificación y evaluación en hijos cuando existan hijos musicalmente distinguibles
 
---------------------------------------------------
-4. REGLA DE LA RAMA LATIN
---------------------------------------------------
-
-La música latina existe dentro de una rama Latin dedicada.
-
-Si una canción es Latin:
-
-Los géneros deben seleccionarse solo dentro de la rama Latin.
-
-Si una canción no es Latin:
-
-Los géneros no deben seleccionarse dentro de la rama Latin.
-
-Esta regla evita mezclar estilos Latin y no-Latin que comparten
-nombre de género pero producen distinta coherencia de playlists.
-
---------------------------------------------------
 5. REGLA DE ASIGNACIÓN DE GÉNERO
 --------------------------------------------------
 

@@ -26,8 +26,7 @@ Propietario del proyecto
 Este documento define qué archivos deben tratarse como
 RULES en el proyecto.
 
-Ayuda a evitar mezclar reglas globales, reglas de dominio
-y reglas operativas en una sola carga monolítica.
+Ayuda a evitar mezclar reglas de dominio y reglas operativas en una sola carga monolítica.
 
 --------------------------------------------------
 2. REGLAS NUCLEARES (NIVEL 1)
@@ -35,7 +34,6 @@ y reglas operativas en una sola carga monolítica.
 
 Estas reglas se consideran base de gobernanza general:
 
-- docs/governance/GLOBAL_RULES.md
 - docs/governance/SYSTEM_CONTRACT.md
 
 Uso recomendado:
@@ -100,7 +98,6 @@ No deben tratarse como RULES canónicas:
 Para sesión nueva de "prompt que genera prompt":
 
 - cargar AI_PROMPT_SYSTEM_RULES.md
-- sumar GLOBAL_RULES.md solo si hay decisiones transversales
 - sumar SYSTEM_CONTRACT.md solo si hay impacto de comportamiento sistémico
 - no cargar reglas de taxonomía si el objetivo es genérico de prompt
 

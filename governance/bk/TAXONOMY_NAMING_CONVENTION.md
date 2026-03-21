@@ -48,31 +48,7 @@ permanezcan no ambiguos.
 3. REGLA DE IDIOMA
 --------------------------------------------------
 
-Fuera de la rama Latin, los nombres de género deben
-escribirse en inglés.
-
-Ejemplos:
-
-Rock
-Alternative Rock
-Dream Pop
-Heavy Metal
-
-Dentro de la rama Latin se permiten nombres en español
-cuando el género pertenece a tradiciones musicales latinas.
-
-Ejemplos:
-
-Vallenato
-Norteño
-Banda
-Ranchero
-
-También puede usarse inglés dentro de la rama Latin
-cuando el nombre del género esté ampliamente reconocido
 en inglés.
-
---------------------------------------------------
 4. EVITAR TÉRMINOS AMBIGUOS
 --------------------------------------------------
 
@@ -85,12 +61,7 @@ No se permiten los siguientes tipos de nombres:
 • etiquetas de marketing
 • descriptores no musicales
 
-Ejemplos de nombres inválidos:
 
-Latin Style
-Mixed Music
-Various Genres
-Latin Rhythms
 
 --------------------------------------------------
 5. TITLE CASE

@@ -103,26 +103,6 @@ Los géneros atómicos representan estilos donde
 subdividir más crearía distinciones artificiales.
 
 --------------------------------------------------
-11. ESTRUCTURA DE RAMA LATIN
---------------------------------------------------
-
-La música Latin existe en una rama dedicada.
-
-Ejemplo:
-
-Music
-  Latin
-    Latin Rock
-    Latin Pop
-    Regional Latin
-
-Los géneros dentro de Latin representan estilos
-propios de tradiciones musicales latinas.
-
-Las canciones clasificadas como Latin deben usar
-esta rama.
-
---------------------------------------------------
 12. REGLA DE NOMBRADO DE GÉNEROS
 --------------------------------------------------
 

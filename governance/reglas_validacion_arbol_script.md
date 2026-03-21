@@ -24,9 +24,6 @@ Aquí se colocarán únicamente las reglas que pueden ser validadas de forma det
   severidad: WARNING
   logica: "Ejecutar checklist de coherencia, balance y facilidad de uso."
 - id: ARBOL-S-003
-  descripcion: "Fuera de la rama Latin, los nombres de género deben estar en inglés; dentro de Latin, se permite español o inglés reconocido."
-  severidad: WARNING
-  logica: "Verificar idioma de los nombres según la rama."
 - id: ARBOL-S-004
   descripcion: "Todos los nombres de género deben estar en Title Case."
   severidad: WARNING
