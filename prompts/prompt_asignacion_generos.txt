@@ -18,7 +18,7 @@ aplicando el contexto y los criterios.
 6. Utiliza el archivo catalog/songs_raw.csv para tomar la lista de canciones a procesar.
 
 7. [IA_MANUAL] Para cada canción, identifica el o los géneros predominantes a los que pertenece, considerando únicamente aquellos que definen el carácter musical principal de la obra. La asignación debe buscar el nivel más específico posible dentro de la taxonomía, evitando categorías genéricas (ejemplo incorrecto: "Pop", "Rock", "Latin"; ejemplo correcto: "Hard Rock", "Grunge", "Vallenato", "Banda").
-  - Si el género predominante no existe en el árbol, repórtalo explícitamente como "género faltante" y sugiere el camino taxonómico más específico posible, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
+  - Si el género predominante no existe en el árbol, repórtalo explícitamente como "género faltante" y sugiere el subgénero, rama o etiqueta más específica que permitiría clasificar la canción correctamente. Fundamenta la propuesta en los criterios de nodos, el carácter musical de la obra y el contexto operativo. La sugerencia debe ser concreta y orientada a la mejora de la taxonomía, para que pueda ser agregada y utilizada en futuras validaciones.
   - Si el género existe bajo un nombre equivalente o sinónimo, debe hacerse el match y documentar la equivalencia.
   - Si el género existe en el árbol pero el criterio de su nodo es ambiguo, insuficiente o no cubre claramente el caso, repórtalo como “criterio mejorable” y sugiere la mejora concreta al criterio del nodo para que incluya el caso observado.
   - Evalúa siempre si el nodo encontrado es lo suficientemente específico para evitar disonancias; si no lo es, sugiere la subdivisión o ajuste necesario.
@@ -28,7 +28,7 @@ aplicando el contexto y los criterios.
 7b. [IA_MANUAL] Itera el proceso de asignación y validación de géneros para cada canción, deteniéndote y reportando en cuanto se detecten 5 géneros faltantes, o bien informa el estado cada 10 canciones procesadas durante pruebas. No inventes procesos, no desarrolles flujos automáticos ni realices inferencias fuera de lo explicitado en estas instrucciones. El procedimiento debe seguirse exactamente como se describe, sin atajos ni malabares.
 
 9. [IA_MANUAL] Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
-   - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el género específico sugerido y su justificación.
+  - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el subgénero o rama sugerida y su justificación. En caso de género faltante, la sugerencia debe indicar explícitamente cuál sería el subgénero o rama a agregar para permitir la clasificación precisa.
    - El segundo debe presentar la misma información en formato Markdown, siguiendo el formato de los reportes previos.
    - No incluyas explicaciones, ejemplos ni comentarios adicionales fuera de los dos reportes.
    - No se permite mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación.

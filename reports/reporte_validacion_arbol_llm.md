@@ -15,11 +15,9 @@ _No se detectaron errores fatales._
 ## Advertencias
 
 - **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero 'Electronic' ahora tiene tres hijos (Synthpop, Downtempo, Drum And Bass). Se recomienda monitorear si aparecen más subgéneros relevantes.
-- **[ARBOL-LLM-009]** No se detectan nodos con exceso de canciones o playlists diversas, pero se recomienda monitorear 'Rock' y 'Latin' si crecen en volumen.
 
 ## OK
 
-- Separación Latin/no-Latin respetada.
 - No se detectan nombres ambiguos, vagos o no musicales.
 - No se detectan casos de sobre-fragmentación.
 - No se detectan nodos hoja que requieran subdivisión adicional.
