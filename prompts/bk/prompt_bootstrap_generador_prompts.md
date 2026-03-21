@@ -55,16 +55,16 @@ Regla de presupuesto:
 - Si el ajuste no logra cobertura suficiente, devolver "NADA" y faltantes.
 
 Registros obligatorios:
-- docs/context/CONTEXT_REGISTRY.md
-- docs/governance/RULES_REGISTRY.md
+- context/CONTEXT_REGISTRY.md
+- governance/RULES_REGISTRY.md
 
 Soporte condicional para tareas de prompts:
-- docs/context/AI_PROMPT_SYSTEM_CONTEXT.md
-- docs/governance/AI_PROMPT_SYSTEM_RULES.md
+- context/AI_PROMPT_SYSTEM_CONTEXT.md
+- governance/AI_PROMPT_SYSTEM_RULES.md
 
 Reglas nucleares transversales para tareas de prompts:
-- docs/governance/GLOBAL_RULES.md
-- docs/governance/SYSTEM_CONTRACT.md
+- governance/GLOBAL_RULES.md
+- governance/SYSTEM_CONTRACT.md
 
 Política de uso:
 - Por defecto en tareas de prompting, clasificar GLOBAL_RULES y

@@ -1,23 +1,17 @@
 {
   "version": "1.0",
   "nodes": [
-    {
-      "node_path": "Music",
-      "membership_criteria": "Nodo raíz que agrupa todos los géneros musicales del proyecto. No debe clasificarse directamente canciones aquí; sirve solo como agrupador principal.",
-      "exclusion_criteria": "Excluir cualquier género específico o subgénero. No usar para playlists ni clasificación directa.",
-      "reference_examples": ["Global", "Latin"]
-    },
-    {
-      "node_path": "Music > Global",
-      "membership_criteria": "Macroárea que agrupa géneros musicales de tradición global, anglosajona o internacional, no latinos. Incluye géneros como Rock, Electronic, Pop internacional, etc.",
-      "exclusion_criteria": "Excluir géneros de raíz latina o regional hispanoamericana, salvo fusiones explícitas.",
-      "reference_examples": ["Rock", "Electronic", "Pop"]
-    },
-    {
-      "node_path": "Music > Latin",
-      "membership_criteria": "Macroárea que agrupa géneros musicales de tradición latina y regionales hispanoamericanos. Incluye géneros como Salsa, Cumbia, Regional Mexicano, etc.",
-      "exclusion_criteria": "Excluir géneros de raíz global o anglosajona, salvo fusiones explícitas.",
-      "reference_examples": ["Salsa", "Cumbia", "Regional Mexicano"]
-    }
+    { "node_path": "Music", "membership_criteria": "Raíz de la taxonomía musical. No debe clasificarse música aquí.", "exclusion_criteria": "Excluir cualquier género específico o subgénero.", "reference_examples": [] },
+    { "node_path": "Music > Global", "membership_criteria": "Macroárea de géneros globales, anglosajones o internacionales. Incluye Rock, Pop, Reggae, etc.", "exclusion_criteria": "Excluir géneros latinos o regionales.", "reference_examples": ["Rock", "Pop", "Reggae"] },
+    { "node_path": "Music > Global > Rock", "membership_criteria": "Género que agrupa todos los subgéneros de Rock internacional. No debe clasificarse música aquí directamente.", "exclusion_criteria": "Excluir Rock latino o fusiones con géneros latinos.", "reference_examples": ["Alternative Rock", "Soft Rock"] },
+    { "node_path": "Music > Global > Rock > Alternative Rock", "membership_criteria": "Subgénero de Rock con enfoque alternativo, experimental y no convencional.", "exclusion_criteria": "Excluir otros subgéneros de Rock.", "reference_examples": ["Radiohead"] },
+    { "node_path": "Music > Global > Rock > Soft Rock", "membership_criteria": "Subgénero de Rock con sonido suave y melódico.", "exclusion_criteria": "Excluir otros subgéneros de Rock.", "reference_examples": ["Chicago"] },
+    { "node_path": "Music > Global > Pop", "membership_criteria": "Género que agrupa todos los subgéneros de Pop internacional. No debe clasificarse música aquí directamente.", "exclusion_criteria": "Excluir Pop latino o regional.", "reference_examples": ["Art Pop"] },
+    { "node_path": "Music > Global > Pop > Art Pop", "membership_criteria": "Subgénero de Pop con enfoque artístico y experimental.", "exclusion_criteria": "Excluir otros subgéneros de Pop.", "reference_examples": ["Kate Bush"] },
+    { "node_path": "Music > Global > Reggae", "membership_criteria": "Género que agrupa todos los subgéneros de Reggae internacional. No debe clasificarse música aquí directamente.", "exclusion_criteria": "Excluir Reggae latino o fusiones con géneros latinos.", "reference_examples": ["Reggae Rock"] },
+    { "node_path": "Music > Global > Reggae > Reggae Rock", "membership_criteria": "Subgénero que fusiona elementos de Reggae y Rock internacional.", "exclusion_criteria": "Excluir fusiones con géneros latinos.", "reference_examples": ["The Police"] },
+    { "node_path": "Music > Latin", "membership_criteria": "Macroárea de géneros latinos y regionales hispanoamericanos.", "exclusion_criteria": "Excluir géneros globales o anglosajones.", "reference_examples": ["Cumbia"] },
+    { "node_path": "Music > Latin > Cumbia", "membership_criteria": "Género que agrupa todos los subgéneros de Cumbia latina y regional. No debe clasificarse música aquí directamente.", "exclusion_criteria": "Excluir Cumbia fusionada con géneros globales.", "reference_examples": ["Cumbia Pop"] },
+    { "node_path": "Music > Latin > Cumbia > Cumbia Pop", "membership_criteria": "Subgénero de Cumbia con influencias del Pop latino.", "exclusion_criteria": "Excluir otros subgéneros de Cumbia.", "reference_examples": ["Agapornis"] }
   ]
 }
