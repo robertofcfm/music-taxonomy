@@ -61,5 +61,12 @@
     { "node_path": "Music > Folk > Latin Folk > Trova", "membership_criteria": "Canciones de autor de raíz latinoamericana, con énfasis en la poesía, la crítica social y la autoría personal. Instrumentación acústica, voz principal y acompañamiento sencillo.", "exclusion_criteria": "Folk tradicional sin autoría reconocida, pop balada, o canciones sin contenido lírico introspectivo.", "reference_examples": ["Silvio Rodríguez - Ojalá", "Pablo Milanés - Yolanda"] },
     { "node_path": "Music > Folk > Latin Folk > Flamenco Pop", "membership_criteria": "Canciones de estructura pop que incorporan elementos rítmicos, melódicos o de instrumentación propios del flamenco (palmas, guitarra española, cajón, compás flamenco, giros melódicos característicos), pero con producción, arreglos y enfoque comercial/pop. La voz puede emplear técnicas flamencas, pero la canción mantiene formato de canción popular y accesibilidad pop.", "exclusion_criteria": "Flamenco puro (cante jondo, bulerías, soleá, etc.), pop sin elementos flamencos claros, fusiones donde el flamenco no sea predominante o solo anecdótico.", "reference_examples": ["Rosalía - Pienso en tu mirá", "Niña Pastori - Cai", "Ketama - No estamos locos", "Chambao - Pokito a Poko"] },
     { "node_path": "Music > Bolero", "membership_criteria": "Género romántico latinoamericano, de tempo lento, letras sentimentales y estructura de canción popular. Instrumentación típica: guitarra, percusión suave, ocasionalmente metales o cuerdas.", "exclusion_criteria": "Baladas pop, rancheras, o canciones románticas sin la métrica y cadencia del bolero.", "reference_examples": ["Los Panchos - Sabor a Mí", "Luis Miguel - La Gloria Eres Tú"] }
+    ,
+    {
+      "node_path": "Music > Metal > Heavy Metal",
+      "membership_criteria": "Metal tradicional caracterizado por riffs de guitarra potentes, batería marcada, bajo sólido y voces generalmente agresivas o potentes. Enfatiza la energía, la actitud y la estructura clásica del metal de los años 70 y 80. Incluye bandas y canciones que definen el sonido clásico del heavy metal, sin énfasis épico/melódico extremo ni velocidad sobresaliente.",
+      "exclusion_criteria": "No asignar si la canción corresponde a subgéneros más específicos como Power Metal, Speed Metal, Thrash Metal, o si carece de los elementos clásicos del heavy metal. No asignar a canciones de hard rock o metal alternativo.",
+      "reference_examples": ["Iron Maiden - The Number of the Beast", "Judas Priest - Breaking the Law", "Black Sabbath - Iron Man"]
+    }
   ]
 }

@@ -7,13 +7,17 @@ songs_raw = 'catalog/songs_raw.csv'
 songs_with_genres = 'catalog/songs_with_genres.csv'
 output_json = 'reports/canciones_nuevas.json'
 
+
+def normaliza(texto):
+    return texto.replace('"', '').replace("'", '').strip().lower()
+
 try:
     # Leer canciones ya procesadas
     procesadas = set()
     with open(songs_with_genres, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            key = (row['title'].strip().lower(), row['artist'].strip().lower())
+            key = (normaliza(row['title']), normaliza(row['artist']))
             procesadas.add(key)
     print(f"Canciones procesadas: {len(procesadas)}")
 
@@ -24,7 +28,7 @@ try:
         reader = csv.DictReader(f)
         for row in reader:
             total_raw += 1
-            key = (row['title'].strip().lower(), row['artist'].strip().lower())
+            key = (normaliza(row['title']), normaliza(row['artist']))
             if key not in procesadas:
                 nuevas.append({"title": row['title'], "artist": row['artist']})
     print(f"Total canciones en songs_raw.csv: {total_raw}")

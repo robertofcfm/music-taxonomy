@@ -12,6 +12,7 @@ Music
     Reggae Rock
   Metal
     Power Metal
+    Heavy Metal
   Hip Hop
     Hip Hop (Standard)
     West Coast
