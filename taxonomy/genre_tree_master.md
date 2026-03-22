@@ -8,6 +8,7 @@ Music
     Roots Rock
     Soft Rock
     Folk Rock
+    Psychedelic Rock
     Reggae Rock
   Metal
     Power Metal
@@ -27,12 +28,14 @@ Music
     Downtempo
     Drum And Bass
     Big Beat
+  Ska
+  Funk
   Disco
     Hi-NRG
   Soul
     Pop Soul
   Classical
-    Film Score
+    Score
     Solo Instrumental
     Orchestral
   Regional Mexicano
@@ -40,6 +43,10 @@ Music
     Texano
     Ranchera
     Banda
-  Vallenato
+  Folk
+    Latin Folk
+      Vallenato
+      Trova
+  Bolero
   Cumbia
     Cumbia Pop
