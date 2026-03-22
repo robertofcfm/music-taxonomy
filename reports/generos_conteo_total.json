@@ -1,7 +1,7 @@
 [
   {
     "genre": "Music",
-    "count": 40
+    "count": 49
   },
   {
     "genre": "Music > Rock",
@@ -16,7 +16,31 @@
     "count": 7
   },
   {
+    "genre": "Music > Regional Mexicano",
+    "count": 6
+  },
+  {
+    "genre": "Music > Pop",
+    "count": 6
+  },
+  {
+    "genre": "Music > Cumbia",
+    "count": 5
+  },
+  {
+    "genre": "Music > Folk > Latin Folk",
+    "count": 5
+  },
+  {
+    "genre": "Music > Folk",
+    "count": 5
+  },
+  {
     "genre": "Music > Electronic",
+    "count": 5
+  },
+  {
+    "genre": "Music > Pop > Pop Ballad",
     "count": 5
   },
   {
@@ -24,47 +48,39 @@
     "count": 5
   },
   {
-    "genre": "Music > Cumbia",
-    "count": 5
-  },
-  {
     "genre": "Music > Folk > Latin Folk > Vallenato",
     "count": 4
-  },
-  {
-    "genre": "Music > Folk",
-    "count": 4
-  },
-  {
-    "genre": "Music > Folk > Latin Folk",
-    "count": 4
-  },
-  {
-    "genre": "Music > Rock > Soft Rock",
-    "count": 3
   },
   {
     "genre": "Music > Regional Mexicano > Norteño",
     "count": 3
   },
   {
-    "genre": "Music > Regional Mexicano",
+    "genre": "Music > Regional Mexicano > Ranchera",
     "count": 3
   },
   {
-    "genre": "Music > Electronic > Downtempo",
-    "count": 2
+    "genre": "Music > Rock > Soft Rock",
+    "count": 3
   },
   {
     "genre": "Music > Electronic > Synthpop",
     "count": 2
   },
   {
-    "genre": "Music > Rock > Blues Rock",
-    "count": 1
+    "genre": "Music > Electronic > Downtempo",
+    "count": 2
   },
   {
     "genre": "Music > Rock > Post-Punk",
+    "count": 1
+  },
+  {
+    "genre": "Music > Pop > Pop (Standard)",
+    "count": 1
+  },
+  {
+    "genre": "Music > Soul",
     "count": 1
   },
   {
@@ -80,7 +96,11 @@
     "count": 1
   },
   {
-    "genre": "Music > Pop",
+    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
     "count": 1
   },
   {
@@ -92,15 +112,7 @@
     "count": 1
   },
   {
-    "genre": "Music > Pop > Pop Ballad",
-    "count": 1
-  },
-  {
-    "genre": "Music > Electronic > Drum And Bass",
-    "count": 1
-  },
-  {
-    "genre": "Music > Soul",
+    "genre": "Music > Rock > Blues Rock",
     "count": 1
   }
 ]
