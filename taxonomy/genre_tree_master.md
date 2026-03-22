@@ -47,6 +47,7 @@ Music
     Latin Folk
       Vallenato
       Trova
+      Flamenco Pop
   Bolero
   Cumbia
     Cumbia Pop
