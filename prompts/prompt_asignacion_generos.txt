@@ -1,3 +1,10 @@
+14. [IA_MANUAL] Para detectar nodos saturados en la taxonomía, utiliza el script scripts/generos_saturados.py. Este script debe:
+  - Leer el archivo catalog/songs_with_genres.csv.
+  - Contar el número de canciones asignadas a cada género.
+  - Generar un archivo JSON en reports/generos_saturados.json con los géneros que superan el umbral X (por defecto X=45, ajustable en el script).
+  - Mostrar en consola una lista legible para el usuario con los géneros saturados y su conteo.
+  - El formato del JSON debe ser una lista de objetos: [{"genre": "...", "count": N}, ...]
+  - El valor de X puede ajustarse según el tamaño del catálogo y la granularidad deseada.
 # Prompt LLM Capa 2: Validación de Árbol de Géneros Musicales
 
 Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
@@ -30,11 +37,21 @@ aplicando el contexto y los criterios.
   - Incluye en el reporte el criterio y justificación detallada para cada género faltante o criterio mejorable sugerido, fundamentando la propuesta en los criterios de nodos y el contexto operativo.
 7b. [IA_MANUAL] Itera el proceso de asignación y validación de géneros para cada canción, deteniéndote y reportando en cuanto se detecten 5 géneros faltantes, o bien informa el estado cada 10 canciones procesadas durante pruebas. No inventes procesos, no desarrolles flujos automáticos ni realices inferencias fuera de lo explicitado en estas instrucciones. El procedimiento debe seguirse exactamente como se describe, sin atajos ni malabares.
 
-9. [IA_MANUAL] Genera únicamente dos reportes finales (uno en JSON y uno en Markdown):
-  - El primero debe listar, para cada canción, el género asignado (al nivel más específico posible) o el reporte de género no encontrado, agrupando las canciones sin género bajo el subgénero o rama sugerida y su justificación. En caso de género faltante, la sugerencia debe indicar explícitamente cuál sería el subgénero o rama a agregar para permitir la clasificación precisa.
-   - El segundo debe presentar la misma información en formato Markdown, siguiendo el formato de los reportes previos.
-   - No incluyas explicaciones, ejemplos ni comentarios adicionales fuera de los dos reportes.
-   - No se permite mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación.
+
+9. [IA_MANUAL] Genera dos reportes finales por cada lote procesado (uno en JSON y uno en Markdown):
+  - Ambos reportes deben contener la información detallada de la asignación de género para cada canción del lote, o el género buscado y no encontrado, junto con la justificación técnica (sonora y de consenso) utilizada para la decisión.
+  - El reporte JSON está orientado a procesos automáticos y el Markdown al usuario, pero la información debe ser equivalente en ambos, solo adaptando el formato.
+  - El detalle por lote debe quedar explícito en ambos reportes, con una fila/registro por cada asignación canción-género.
+  - No incluyas explicaciones, ejemplos ni comentarios adicionales fuera de los dos reportes.
+  - No se permite mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación.
+
+10. [IA_MANUAL] El archivo catalog/songs_with_genres.csv debe estructurarse con un registro por combinación canción/género (una fila por cada asignación), usando los campos: title, artist, genre. Si una canción tiene más de un género, debe aparecer en varias filas, una por cada género asignado. No se debe usar un campo de géneros separados por delimitadores.
+
+11. [IA_MANUAL] El campo genre debe usarse como nombre estándar para la columna de género en todos los reportes y archivos de salida, para evitar ambigüedades.
+
+12. [IA_MANUAL] El campo justificación puede omitirse en el archivo songs_with_genres.csv para evitar crecimiento innecesario del archivo, pero debe estar presente en los reportes de validación para trazabilidad y revisión.
+
+13. [IA_MANUAL] Cada ajuste o cambio en el proceso debe quedar documentado en este prompt para asegurar trazabilidad y consistencia en futuras ejecuciones.
 
 Nota: Para el match de géneros, la comparación debe ser insensible a mayúsculas/minúsculas y flexible ante conectores equivalentes ("and", "And", "&", "y"). Si el género sugerido y el del árbol son equivalentes bajo esta normalización, se considerarán un match válido.
 
