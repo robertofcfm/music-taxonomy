@@ -11,7 +11,7 @@
   "advertencias": [
     {
       "id": "ARBOL-LLM-004",
-      "detalle": "La rama 'Rock' tiene subdivisión suficiente, pero se recomienda monitorear la claridad entre 'Folk Rock', 'Soft Rock', 'Blues Rock', 'Roots Rock' y 'Alternative Rock', ya que pueden solaparse en algunos casos."
+      "detalle": "La rama 'Rock' tiene subdivisión suficiente, pero se recomienda monitorear la claridad entre 'Folk Rock', 'Soft Rock', 'Blues Rock', 'Roots Rock', 'Psychedelic Rock' y 'Alternative Rock', ya que pueden solaparse en algunos casos."
     },
     {
       "id": "ARBOL-LLM-004",
@@ -19,7 +19,7 @@
     },
     {
       "id": "ARBOL-LLM-004",
-      "detalle": "La rama 'Classical' ha crecido con subgéneros ('Film Score', 'Solo Instrumental', 'Orchestral'). Se recomienda monitorear si requieren criterios diferenciados o subdivisión adicional." 
+      "detalle": "La rama 'Classical' ha crecido con subgéneros ('Score', 'Solo Instrumental', 'Orchestral'). Se recomienda monitorear si requieren criterios diferenciados o subdivisión adicional." 
     },
     {
       "id": "ARBOL-LLM-004",
@@ -27,7 +27,7 @@
     },
     {
       "id": "ARBOL-LLM-004",
-      "detalle": "Se agregaron ramas nuevas: 'Metal', 'Hip Hop', 'Disco' y subgéneros asociados. Se recomienda definir criterios para estos géneros y monitorear posibles solapamientos, especialmente en 'Hip Hop' (West Coast, Boom Bap, Trap) y 'Disco' (Hi-NRG)."
+      "detalle": "Se agregaron ramas nuevas: 'Metal', 'Hip Hop', 'Disco', 'Ska', 'Funk', 'Folk', 'Bolero' y subgéneros asociados. Se recomienda definir criterios para estos géneros y monitorear posibles solapamientos, especialmente en 'Hip Hop' (West Coast, Boom Bap, Trap), 'Disco' (Hi-NRG), 'Folk' (Latin Folk, Vallenato, Trova) y la relación entre 'Bolero' y otros géneros latinos." 
     }
   ],
   "ok": [

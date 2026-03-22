@@ -14,11 +14,11 @@ _No se detectaron errores fatales._
 
 ## Advertencias
 
-- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero se recomienda monitorear la claridad entre 'Folk Rock', 'Soft Rock', 'Blues Rock', 'Roots Rock' y 'Alternative Rock', ya que pueden solaparse en algunos casos.
+- **[ARBOL-LLM-004]** La rama 'Rock' tiene subdivisión suficiente, pero se recomienda monitorear la claridad entre 'Folk Rock', 'Soft Rock', 'Blues Rock', 'Roots Rock', 'Psychedelic Rock' y 'Alternative Rock', ya que pueden solaparse en algunos casos.
 - **[ARBOL-LLM-004]** La rama 'Pop' tiene subdivisión suficiente, pero se recomienda monitorear la utilidad y claridad de 'Pop (Standard)' como nodo catch-all, y la distinción entre 'Indie Pop', 'Psychedelic Pop', 'Singer-Songwriter Pop' y 'Pop Ballad'.
-- **[ARBOL-LLM-004]** La rama 'Classical' ha crecido con subgéneros ('Film Score', 'Solo Instrumental', 'Orchestral'). Se recomienda monitorear si requieren criterios diferenciados o subdivisión adicional.
+- **[ARBOL-LLM-004]** La rama 'Classical' ha crecido con subgéneros ('Score', 'Solo Instrumental', 'Orchestral'). Se recomienda monitorear si requieren criterios diferenciados o subdivisión adicional.
 - **[ARBOL-LLM-004]** La rama 'Regional Mexicano' ahora incluye 'Banda' y 'Ranchera'. Se recomienda monitorear la claridad de criterios entre estos subgéneros y con 'Norteño' y 'Texano'.
-- **[ARBOL-LLM-004]** Se agregaron ramas nuevas: 'Metal', 'Hip Hop', 'Disco' y subgéneros asociados. Se recomienda definir criterios para estos géneros y monitorear posibles solapamientos, especialmente en 'Hip Hop' (West Coast, Boom Bap, Trap) y 'Disco' (Hi-NRG).
+- **[ARBOL-LLM-004]** Se agregaron ramas nuevas: 'Metal', 'Hip Hop', 'Disco', 'Ska', 'Funk', 'Folk', 'Bolero' y subgéneros asociados. Se recomienda definir criterios para estos géneros y monitorear posibles solapamientos, especialmente en 'Hip Hop' (West Coast, Boom Bap, Trap), 'Disco' (Hi-NRG), 'Folk' (Latin Folk, Vallenato, Trova) y la relación entre 'Bolero' y otros géneros latinos.
 
 ## OK
 
