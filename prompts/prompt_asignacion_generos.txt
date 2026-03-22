@@ -1,3 +1,4 @@
+15. [IA_MANUAL] Para seleccionar canciones a procesar en cada lote, primero ejecuta el script scripts/filtrar_canciones_nuevas.py. Este script genera el archivo reports/canciones_nuevas.json, que contiene únicamente las canciones (por título y artista) que aún no han sido procesadas ni asignadas a ningún género. La IA_MANUAL debe consumir exclusivamente este archivo para armar los lotes, evitando así reprocesar canciones y optimizando recursos.
 14. [IA_MANUAL] Para detectar nodos saturados en la taxonomía, utiliza el script scripts/generos_saturados.py. Este script debe:
   - Leer el archivo catalog/songs_with_genres.csv.
   - Contar el número de canciones asignadas a cada género.
