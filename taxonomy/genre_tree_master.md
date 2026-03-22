@@ -4,20 +4,31 @@ Music
     Hard Rock
       Power Ballad
     Post-Punk
+    Blues Rock
+    Roots Rock
     Soft Rock
     Folk Rock
     Reggae Rock
+  Metal
+    Power Metal
+  Hip Hop
+    Hip Hop (Standard)
+    West Coast
+    Boom Bap
+    Trap
   Pop
     Indie Pop
     Pop Ballad
     Singer-Songwriter Pop
     Psychedelic Pop
-    Pop (General)
+    Pop (Standard)
   Electronic
     Synthpop
     Downtempo
     Drum And Bass
     Big Beat
+  Disco
+    Hi-NRG
   Soul
     Pop Soul
   Classical
