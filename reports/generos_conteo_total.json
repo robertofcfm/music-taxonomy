@@ -1,0 +1,86 @@
+[
+  {
+    "genre": "Music",
+    "count": 30
+  },
+  {
+    "genre": "Music > Rock",
+    "count": 16
+  },
+  {
+    "genre": "Music > Rock > Hard Rock",
+    "count": 12
+  },
+  {
+    "genre": "Music > Rock > Hard Rock > Power Ballad",
+    "count": 7
+  },
+  {
+    "genre": "Music > Cumbia",
+    "count": 5
+  },
+  {
+    "genre": "Music > Cumbia > Cumbia Pop",
+    "count": 5
+  },
+  {
+    "genre": "Music > Folk > Latin Folk > Vallenato",
+    "count": 4
+  },
+  {
+    "genre": "Music > Folk > Latin Folk",
+    "count": 4
+  },
+  {
+    "genre": "Music > Folk",
+    "count": 4
+  },
+  {
+    "genre": "Music > Electronic",
+    "count": 2
+  },
+  {
+    "genre": "Music > Rock > Soft Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Disco",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
+    "count": 1
+  },
+  {
+    "genre": "Music > Soul",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Reggae Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Post-Punk",
+    "count": 1
+  },
+  {
+    "genre": "Music > Pop > Pop Ballad",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Folk Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Soul > Pop Soul",
+    "count": 1
+  },
+  {
+    "genre": "Music > Pop",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Synthpop",
+    "count": 1
+  }
+]
