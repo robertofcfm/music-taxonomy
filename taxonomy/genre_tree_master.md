@@ -5,6 +5,7 @@ Music
       Power Ballad
     Post-Punk
     Blues Rock
+    Pop Punk
     Roots Rock
     Soft Rock
     Folk Rock
