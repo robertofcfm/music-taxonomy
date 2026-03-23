@@ -1,26 +1,38 @@
 [
   {
     "genre": "Music",
-    "count": 59
+    "count": 69
   },
   {
     "genre": "Music > Rock",
-    "count": 25
+    "count": 26
   },
   {
     "genre": "Music > Rock > Hard Rock",
     "count": 13
   },
   {
+    "genre": "Music > Regional Mexicano",
+    "count": 12
+  },
+  {
+    "genre": "Music > Regional Mexicano > Norteño",
+    "count": 9
+  },
+  {
     "genre": "Music > Pop",
-    "count": 8
+    "count": 9
   },
   {
     "genre": "Music > Rock > Hard Rock > Power Ballad",
     "count": 7
   },
   {
-    "genre": "Music > Regional Mexicano",
+    "genre": "Music > Electronic",
+    "count": 6
+  },
+  {
+    "genre": "Music > Pop > Pop Ballad",
     "count": 6
   },
   {
@@ -32,31 +44,23 @@
     "count": 6
   },
   {
-    "genre": "Music > Pop > Pop Ballad",
-    "count": 6
-  },
-  {
     "genre": "Music > Folk > Latin Folk",
     "count": 6
-  },
-  {
-    "genre": "Music > Cumbia > Cumbia Pop",
-    "count": 5
-  },
-  {
-    "genre": "Music > Electronic",
-    "count": 5
   },
   {
     "genre": "Music > Folk > Latin Folk > Vallenato",
     "count": 5
   },
   {
-    "genre": "Music > Rock > Alternative Rock",
-    "count": 4
+    "genre": "Music > Cumbia > Cumbia Pop",
+    "count": 5
   },
   {
-    "genre": "Music > Regional Mexicano > Norteño",
+    "genre": "Music > Rock > Alternative Rock",
+    "count": 5
+  },
+  {
+    "genre": "Music > Regional Mexicano > Ranchera",
     "count": 3
   },
   {
@@ -64,15 +68,7 @@
     "count": 3
   },
   {
-    "genre": "Music > Regional Mexicano > Ranchera",
-    "count": 3
-  },
-  {
-    "genre": "Music > Electronic > Synthpop",
-    "count": 2
-  },
-  {
-    "genre": "Music > Electronic > Downtempo",
+    "genre": "Music > Pop > Indie Pop",
     "count": 2
   },
   {
@@ -80,27 +76,19 @@
     "count": 2
   },
   {
-    "genre": "Music > Metal",
+    "genre": "Music > Electronic > Downtempo",
+    "count": 2
+  },
+  {
+    "genre": "Music > Electronic > Synthpop",
+    "count": 2
+  },
+  {
+    "genre": "Music > Classical",
     "count": 1
   },
   {
-    "genre": "Music > Electronic > Drum And Bass",
-    "count": 1
-  },
-  {
-    "genre": "Music > Pop > Indie Pop",
-    "count": 1
-  },
-  {
-    "genre": "Music > Disco",
-    "count": 1
-  },
-  {
-    "genre": "Music > Soul",
-    "count": 1
-  },
-  {
-    "genre": "Music > Pop > Pop (Standard)",
+    "genre": "Music > Classical > Solo Instrumental",
     "count": 1
   },
   {
@@ -108,7 +96,39 @@
     "count": 1
   },
   {
+    "genre": "Music > Rock > Reggae Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Soul",
+    "count": 1
+  },
+  {
+    "genre": "Music > Metal",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Big Beat",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
+    "count": 1
+  },
+  {
+    "genre": "Music > Pop > Pop (Standard)",
+    "count": 1
+  },
+  {
+    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
+    "count": 1
+  },
+  {
     "genre": "Music > Metal > Heavy Metal",
+    "count": 1
+  },
+  {
+    "genre": "Music > Disco",
     "count": 1
   },
   {
@@ -116,15 +136,7 @@
     "count": 1
   },
   {
-    "genre": "Music > Rock > Reggae Rock",
-    "count": 1
-  },
-  {
     "genre": "Music > Rock > Blues Rock",
-    "count": 1
-  },
-  {
-    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
     "count": 1
   }
 ]
