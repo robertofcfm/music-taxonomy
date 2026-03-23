@@ -34,14 +34,15 @@ try:
     print(f"Total canciones en songs_raw.csv: {total_raw}")
     print(f"Canciones nuevas detectadas: {len(nuevas)}")
 
-    # Guardar resultado en JSON
+    # Guardar solo las primeras 20 canciones nuevas en JSON
+    lote = nuevas[:20]
     os.makedirs(os.path.dirname(output_json), exist_ok=True)
     with open(output_json, 'w', encoding='utf-8') as f:
-        json.dump(nuevas, f, ensure_ascii=False, indent=2)
+        json.dump(lote, f, ensure_ascii=False, indent=2)
 
-    if nuevas:
-        print("Ejemplo de canciones nuevas:")
-        for c in nuevas[:10]:
+    if lote:
+        print("Ejemplo de canciones nuevas (lote actual):")
+        for c in lote:
             print(f"- {c['title']} / {c['artist']}")
     else:
         print("No hay canciones nuevas para procesar.")
