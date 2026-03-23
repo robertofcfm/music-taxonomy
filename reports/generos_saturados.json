@@ -1,9 +1,34 @@
 [
   {
-    "nodo": "Music",
-    "total": 130,
+    "nodo": "Music > Rock",
+    "total": 62,
     "exactos": 0,
-    "de_paso": 130,
+    "de_paso": 62,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music",
+    "total": 169,
+    "exactos": 0,
+    "de_paso": 169,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
