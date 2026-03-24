@@ -1,9 +1,34 @@
 [
   {
-    "nodo": "Music > Rock",
-    "total": 112,
+    "nodo": "Music > Regional Mexicano",
+    "total": 46,
     "exactos": 0,
-    "de_paso": 112,
+    "de_paso": 46,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 118,
+    "exactos": 0,
+    "de_paso": 118,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -26,9 +51,9 @@
   },
   {
     "nodo": "Music",
-    "total": 269,
+    "total": 289,
     "exactos": 0,
-    "de_paso": 269,
+    "de_paso": 289,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
