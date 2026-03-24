@@ -1,9 +1,84 @@
 [
   {
-    "nodo": "Music > Rock",
-    "total": 150,
+    "nodo": "Music",
+    "total": 411,
     "exactos": 0,
-    "de_paso": 150,
+    "de_paso": 411,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano",
+    "total": 98,
+    "exactos": 0,
+    "de_paso": 98,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano > Texano",
+    "total": 49,
+    "exactos": 49,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 151,
+    "exactos": 0,
+    "de_paso": 151,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -48,55 +123,5 @@
       }
     ],
     "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Regional Mexicano",
-    "total": 94,
-    "exactos": 0,
-    "de_paso": 94,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
-    "nodo": "Music",
-    "total": 391,
-    "exactos": 0,
-    "de_paso": 391,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
   }
 ]
