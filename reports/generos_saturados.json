@@ -1,9 +1,9 @@
 [
   {
     "nodo": "Music > Regional Mexicano",
-    "total": 46,
+    "total": 47,
     "exactos": 0,
-    "de_paso": 46,
+    "de_paso": 47,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -25,10 +25,35 @@
     ]
   },
   {
-    "nodo": "Music > Rock",
-    "total": 118,
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 47,
+    "exactos": 47,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Man in the Box",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "No Excuses",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Alternative Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 309,
     "exactos": 0,
-    "de_paso": 118,
+    "de_paso": 309,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -50,10 +75,10 @@
     ]
   },
   {
-    "nodo": "Music",
-    "total": 289,
+    "nodo": "Music > Rock",
+    "total": 122,
     "exactos": 0,
-    "de_paso": 289,
+    "de_paso": 122,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
