@@ -1,9 +1,9 @@
 [
   {
-    "nodo": "Music",
-    "total": 189,
+    "nodo": "Music > Rock",
+    "total": 88,
     "exactos": 0,
-    "de_paso": 189,
+    "de_paso": 88,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -25,10 +25,10 @@
     ]
   },
   {
-    "nodo": "Music > Rock",
-    "total": 76,
+    "nodo": "Music",
+    "total": 209,
     "exactos": 0,
-    "de_paso": 76,
+    "de_paso": 209,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
