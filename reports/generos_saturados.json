@@ -1,9 +1,9 @@
 [
   {
     "nodo": "Music > Rock",
-    "total": 147,
+    "total": 150,
     "exactos": 0,
-    "de_paso": 147,
+    "de_paso": 150,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -51,9 +51,9 @@
   },
   {
     "nodo": "Music > Regional Mexicano",
-    "total": 79,
+    "total": 94,
     "exactos": 0,
-    "de_paso": 79,
+    "de_paso": 94,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -76,9 +76,9 @@
   },
   {
     "nodo": "Music",
-    "total": 371,
+    "total": 391,
     "exactos": 0,
-    "de_paso": 371,
+    "de_paso": 391,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [

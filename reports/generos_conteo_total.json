@@ -1,15 +1,15 @@
 [
   {
     "genre": "Music",
-    "count": 371
+    "count": 391
   },
   {
     "genre": "Music > Rock",
-    "count": 147
+    "count": 150
   },
   {
     "genre": "Music > Regional Mexicano",
-    "count": 79
+    "count": 94
   },
   {
     "genre": "Music > Rock > Alternative Rock",
@@ -20,12 +20,16 @@
     "count": 45
   },
   {
+    "genre": "Music > Regional Mexicano > Norteño",
+    "count": 43
+  },
+  {
     "genre": "Music > Rock > Hard Rock",
     "count": 35
   },
   {
     "genre": "Music > Pop",
-    "count": 33
+    "count": 34
   },
   {
     "genre": "Music > Folk",
@@ -37,10 +41,6 @@
   },
   {
     "genre": "Music > Folk > Latin Folk",
-    "count": 28
-  },
-  {
-    "genre": "Music > Regional Mexicano > Norteño",
     "count": 28
   },
   {
@@ -64,11 +64,11 @@
     "count": 14
   },
   {
-    "genre": "Music > Electronic > Synthpop",
-    "count": 13
+    "genre": "Music > Disco",
+    "count": 14
   },
   {
-    "genre": "Music > Disco",
+    "genre": "Music > Electronic > Synthpop",
     "count": 13
   },
   {
@@ -84,11 +84,11 @@
     "count": 11
   },
   {
-    "genre": "Music > Rock > Soft Rock",
-    "count": 8
+    "genre": "Music > Rock > Roots Rock",
+    "count": 10
   },
   {
-    "genre": "Music > Rock > Roots Rock",
+    "genre": "Music > Rock > Soft Rock",
     "count": 8
   },
   {
@@ -104,6 +104,10 @@
     "count": 6
   },
   {
+    "genre": "Music > Rock > Blues Rock",
+    "count": 5
+  },
+  {
     "genre": "Music > Soul",
     "count": 5
   },
@@ -116,6 +120,10 @@
     "count": 5
   },
   {
+    "genre": "Music > Pop > Pop (Standard)",
+    "count": 5
+  },
+  {
     "genre": "Music > Metal > Heavy Metal",
     "count": 5
   },
@@ -124,16 +132,16 @@
     "count": 5
   },
   {
-    "genre": "Music > Rock > Blues Rock",
-    "count": 4
-  },
-  {
     "genre": "Music > Rock > Folk Rock",
     "count": 4
   },
   {
-    "genre": "Music > Pop > Pop (Standard)",
-    "count": 4
+    "genre": "Music > Disco > Hi-NRG",
+    "count": 3
+  },
+  {
+    "genre": "Music > Rock > Pop Punk",
+    "count": 3
   },
   {
     "genre": "Music > Regional Mexicano > Ranchera",
@@ -148,23 +156,43 @@
     "count": 3
   },
   {
-    "genre": "Music > Disco > Hi-NRG",
-    "count": 3
-  },
-  {
-    "genre": "Music > Rock > Pop Punk",
-    "count": 3
-  },
-  {
     "genre": "Music > Pop > Singer-Songwriter Pop",
     "count": 2
+  },
+  {
+    "genre": "Music > Hip Hop > Boom Bap",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Orchestral",
+    "count": 1
+  },
+  {
+    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
+    "count": 1
+  },
+  {
+    "genre": "Music > Hip Hop > Trap",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Psychedelic Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Solo Instrumental",
+    "count": 1
   },
   {
     "genre": "Music > Rock > Reggae Rock",
     "count": 1
   },
   {
-    "genre": "Music > Electronic > Drum And Bass",
+    "genre": "Music > Classical > Score",
     "count": 1
   },
   {
@@ -173,34 +201,6 @@
   },
   {
     "genre": "Music > Electronic > Big Beat",
-    "count": 1
-  },
-  {
-    "genre": "Music > Hip Hop > Trap",
-    "count": 1
-  },
-  {
-    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
-    "count": 1
-  },
-  {
-    "genre": "Music > Classical > Orchestral",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Psychedelic Rock",
-    "count": 1
-  },
-  {
-    "genre": "Music > Classical > Score",
-    "count": 1
-  },
-  {
-    "genre": "Music > Classical > Solo Instrumental",
-    "count": 1
-  },
-  {
-    "genre": "Music > Hip Hop > Boom Bap",
     "count": 1
   }
 ]
