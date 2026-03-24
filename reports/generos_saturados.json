@@ -1,9 +1,34 @@
 [
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 47,
+    "nodo": "Music",
+    "total": 330,
     "exactos": 0,
-    "de_paso": 47,
+    "de_paso": 330,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano",
+    "total": 63,
+    "exactos": 0,
+    "de_paso": 63,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -50,35 +75,10 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music",
-    "total": 309,
-    "exactos": 0,
-    "de_paso": 309,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Rock",
-    "total": 122,
+    "total": 125,
     "exactos": 0,
-    "de_paso": 122,
+    "de_paso": 125,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
