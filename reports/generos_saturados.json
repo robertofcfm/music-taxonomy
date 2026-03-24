@@ -1,9 +1,9 @@
 [
   {
-    "nodo": "Music",
-    "total": 330,
+    "nodo": "Music > Rock",
+    "total": 147,
     "exactos": 0,
-    "de_paso": 330,
+    "de_paso": 147,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -25,34 +25,9 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 63,
-    "exactos": 0,
-    "de_paso": 63,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Rock > Alternative Rock",
-    "total": 47,
-    "exactos": 47,
+    "total": 55,
+    "exactos": 55,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -75,10 +50,35 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock",
-    "total": 125,
+    "nodo": "Music > Regional Mexicano",
+    "total": 79,
     "exactos": 0,
-    "de_paso": 125,
+    "de_paso": 79,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music",
+    "total": 371,
+    "exactos": 0,
+    "de_paso": 371,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
