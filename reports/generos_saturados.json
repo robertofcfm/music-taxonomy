@@ -1,30 +1,5 @@
 [
   {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 57,
-    "exactos": 57,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Jaded",
-        "artist": "Aerosmith",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Man in the Box",
-        "artist": "Alice In Chains",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "No Excuses",
-        "artist": "Alice In Chains",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Rock",
     "total": 157,
     "exactos": 0,
@@ -75,6 +50,31 @@
     "ejemplos_de_paso": []
   },
   {
+    "nodo": "Music > Regional Mexicano",
+    "total": 99,
+    "exactos": 0,
+    "de_paso": 99,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
     "nodo": "Music",
     "total": 431,
     "exactos": 0,
@@ -100,28 +100,28 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 99,
-    "exactos": 0,
-    "de_paso": 99,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 57,
+    "exactos": 57,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "Man in the Box",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "No Excuses",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Alternative Rock"
       }
-    ]
+    ],
+    "ejemplos_de_paso": []
   }
 ]

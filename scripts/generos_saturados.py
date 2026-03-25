@@ -3,6 +3,26 @@ import csv
 import json
 from collections import defaultdict
 
+def extraer_ramas_arbol(path):
+    """
+    Lee el archivo genre_tree_master.md y devuelve una lista de paths completos (ramas).
+    """
+    ramas = []
+    stack = []
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            stripped = line.rstrip('\n')
+            if not stripped.strip():
+                continue
+            indent = len(stripped) - len(stripped.lstrip(' '))
+            nivel = indent // 2
+            nombre = stripped.strip()
+            if len(stack) > nivel:
+                stack = stack[:nivel]
+            stack.append(nombre)
+            ramas.append(' > '.join(stack))
+    return ramas
+
 # Parámetro de umbral
 X = 45  # Puedes ajustar este valor según necesidad
 
@@ -89,6 +109,30 @@ with open(output_md, 'w', encoding='utf-8') as f:
 
 
 # Presentación legible para usuario
+
+# --- Comparar ramas del árbol con prefijos de géneros ---
+arbol_path = 'taxonomy/genre_tree_master.md'
+ramas_arbol = set(extraer_ramas_arbol(arbol_path))
+ramas_en_datos = set(all_prefixes)
+
+ramas_presentes = ramas_arbol & ramas_en_datos
+ramas_faltantes = ramas_arbol - ramas_en_datos
+ramas_sobrantes = ramas_en_datos - ramas_arbol
+
+print("\n--- Comparación ramas del árbol vs. datos ---")
+print(f"Total ramas en árbol: {len(ramas_arbol)}")
+print(f"Ramas presentes en datos: {len(ramas_presentes)}")
+print(f"Ramas faltantes en datos: {len(ramas_faltantes)}")
+if ramas_faltantes:
+    print("\nLista de ramas faltantes:")
+    for rama in sorted(ramas_faltantes):
+        print(f"- {rama}")
+
+print(f"\nRamas sobrantes en datos (no existen en árbol): {len(ramas_sobrantes)}")
+if ramas_sobrantes:
+    print("\nLista de ramas sobrantes:")
+    for rama in sorted(ramas_sobrantes):
+        print(f"- {rama}")
 
 # Ordenar la lista de géneros alfabéticamente por node path
 all_genres_sorted = sorted(all_genres, key=lambda x: x['genre'])
