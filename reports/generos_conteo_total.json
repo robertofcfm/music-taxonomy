@@ -1,11 +1,11 @@
 [
   {
     "genre": "Music",
-    "count": 492
+    "count": 531
   },
   {
     "genre": "Music > Rock",
-    "count": 187
+    "count": 218
   },
   {
     "genre": "Music > Regional Mexicano",
@@ -13,6 +13,10 @@
   },
   {
     "genre": "Music > Rock > Hard Rock",
+    "count": 68
+  },
+  {
+    "genre": "Music > Rock > Alternative Rock",
     "count": 50
   },
   {
@@ -25,7 +29,7 @@
   },
   {
     "genre": "Music > Pop",
-    "count": 45
+    "count": 47
   },
   {
     "genre": "Music > Folk",
@@ -40,36 +44,32 @@
     "count": 42
   },
   {
-    "genre": "Music > Rock > Alternative Rock",
-    "count": 42
-  },
-  {
     "genre": "Music > Hip Hop",
-    "count": 35
-  },
-  {
-    "genre": "Music > Electronic",
-    "count": 31
+    "count": 36
   },
   {
     "genre": "Music > Rock > Post-Punk",
-    "count": 29
+    "count": 33
   },
   {
-    "genre": "Music > Rock > Indie Rock",
-    "count": 23
+    "genre": "Music > Electronic",
+    "count": 32
   },
   {
     "genre": "Music > Rock > Hard Rock > Power Ballad",
-    "count": 23
+    "count": 28
+  },
+  {
+    "genre": "Music > Rock > Indie Rock",
+    "count": 24
   },
   {
     "genre": "Music > Electronic > Synthpop",
-    "count": 21
+    "count": 22
   },
   {
     "genre": "Music > Pop > Pop Ballad",
-    "count": 17
+    "count": 18
   },
   {
     "genre": "Music > Disco",
@@ -81,7 +81,7 @@
   },
   {
     "genre": "Music > Pop > Indie Pop",
-    "count": 13
+    "count": 14
   },
   {
     "genre": "Music > Hip Hop > West Coast",
@@ -101,6 +101,10 @@
   },
   {
     "genre": "Music > Hip Hop > Boom Bap",
+    "count": 9
+  },
+  {
+    "genre": "Music > Pop > Psychedelic Pop",
     "count": 8
   },
   {
@@ -108,8 +112,8 @@
     "count": 8
   },
   {
-    "genre": "Music > Pop > Psychedelic Pop",
-    "count": 8
+    "genre": "Music > Soul",
+    "count": 7
   },
   {
     "genre": "Music > Metal",
@@ -124,15 +128,11 @@
     "count": 7
   },
   {
-    "genre": "Music > Soul",
-    "count": 7
-  },
-  {
-    "genre": "Music > Metal > Heavy Metal",
+    "genre": "Music > Rock > Blues Rock",
     "count": 6
   },
   {
-    "genre": "Music > Rock > Blues Rock",
+    "genre": "Music > Metal > Heavy Metal",
     "count": 6
   },
   {
@@ -140,11 +140,11 @@
     "count": 6
   },
   {
-    "genre": "Music > Pop > Pop (Standard)",
+    "genre": "Music > Cumbia > Cumbia Pop",
     "count": 5
   },
   {
-    "genre": "Music > Cumbia > Cumbia Pop",
+    "genre": "Music > Pop > Pop (Standard)",
     "count": 5
   },
   {
@@ -153,6 +153,10 @@
   },
   {
     "genre": "Music > Rock > Pop Punk",
+    "count": 4
+  },
+  {
+    "genre": "Music > Ska",
     "count": 4
   },
   {
@@ -180,7 +184,19 @@
     "count": 2
   },
   {
-    "genre": "Music > Rock > Reggae Rock",
+    "genre": "Music > Folk > Traditional Folk",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Solo Instrumental",
+    "count": 1
+  },
+  {
+    "genre": "Music > Metal > Power Metal",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Score",
     "count": 1
   },
   {
@@ -192,27 +208,15 @@
     "count": 1
   },
   {
-    "genre": "Music > Hip Hop > Trap",
-    "count": 1
-  },
-  {
-    "genre": "Music > Folk > Traditional Folk",
-    "count": 1
-  },
-  {
-    "genre": "Music > Classical > Score",
-    "count": 1
-  },
-  {
-    "genre": "Music > Metal > Power Metal",
-    "count": 1
-  },
-  {
     "genre": "Music > Folk > Latin Folk > Flamenco Pop",
     "count": 1
   },
   {
-    "genre": "Music > Classical > Solo Instrumental",
+    "genre": "Music > Hip Hop > Trap",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Reggae Rock",
     "count": 1
   },
   {
