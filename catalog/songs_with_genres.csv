@@ -50,16 +50,16 @@ Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia 
 "Y, ¿Si fuera ella?",Alejandro Sanz,Music > Pop > Pop Ballad
 Sexo Pudor Y Lágrimas,Aleks Syntek,Music > Pop > Pop Ballad
 Anhelos,Alfredo Gutierrez,Music > Folk > Latin Folk > Vallenato
-Man in the Box,Alice In Chains,Music > Rock > Alternative Rock
-No Excuses,Alice In Chains,Music > Rock > Alternative Rock
-Rooster (2022 Remaster),Alice In Chains,Music > Rock > Alternative Rock
+Man in the Box,Alice In Chains,Music > Rock > Grunge
+No Excuses,Alice In Chains,Music > Rock > Grunge
+Rooster (2022 Remaster),Alice In Chains,Music > Rock > Grunge
 We Die Young,Alice In Chains,Music > Metal > Heavy Metal
 Metalingus,Alter Bridge,Music > Rock > Hard Rock
 A Horse with No Name,America,Music > Rock > Folk Rock
 La Cumbia Sampuesana,Aniceto Molina,Music > Cumbia
 You Should All Be Murdered,Another Sunny Day,Music > Pop > Indie Pop
 Cold Rock the Mic,Apollo 440,Music > Electronic > Big Beat
-The Suburbs,Arcade Fire,Music > Rock > Alternative Rock
+The Suburbs,Arcade Fire,Music > Rock > Indie Rock
 Escapee,Architecture in Helsinki,Music > Pop > Indie Pop
 Adúltera,Arnulfo Jr. "Rey Y As",Music > Regional Mexicano > Norteño
 Perdona Mi Franqueza,Arnulfo Jr. "Rey Y As",Music > Regional Mexicano > Norteño
@@ -90,7 +90,7 @@ Space Song,Beach House,Music > Pop > Psychedelic Pop
 Devils Haircut,Beck,Music > Rock > Alternative Rock
 Gamma Ray,Beck,Music > Rock > Blues Rock
 Loser,Beck,Music > Rock > Alternative Rock
-Ramona,Beck,Music > Rock > Alternative Rock
+Ramona,Beck,Music > Rock > Indie Rock
 How Deep Is Your Love,Bee Gees,Music > Soul > Pop Soul
 More Than A Woman,Bee Gees,Music > Disco
 Night Fever,Bee Gees,Music > Disco
@@ -127,17 +127,17 @@ Distintos Destinos,Binomio De Oro De América,Music > Folk > Latin Folk > Vallen
 "Vovió el Dolor","Binomio De Oro De América","Music > Folk > Latin Folk > Vallenato"
 "Last Year's Disco Guitars","Bishop Morocco","Music > Rock > Post-Punk"
 "Hurricane Jane","Black Kids","Music > Pop > Indie Pop"
-"O Katrina!","Black Lips","Music > Rock > Alternative Rock"
+"O Katrina!","Black Lips","Music > Rock > Indie Rock"
 "Iron Man","Black Sabbath","Music > Metal > Heavy Metal"
 "Paranoid","Black Sabbath","Music > Metal > Heavy Metal"
-"No Rain","Blind Melon","Music > Rock > Alternative Rock"
+"No Rain","Blind Melon","Music > Rock > Indie Rock"
 "First Date","blink-182","Music > Rock > Pop Punk"
 "It's Getting Boring By The Sea","Blood Red Shoes","Music > Rock > Alternative Rock"
 "Season Song","Blue States","Music > Electronic > Downtempo"
-"Beetlebum","Blur","Music > Rock > Alternative Rock"
-"Coffee & TV","Blur","Music > Rock > Alternative Rock"
+"Beetlebum","Blur","Music > Rock > Indie Rock"
+"Coffee & TV","Blur","Music > Rock > Indie Rock"
 "Song 2","Blur","Music > Rock > Alternative Rock"
-"Duvet","bôa","Music > Rock > Alternative Rock"
+"Duvet","bôa","Music > Rock > Indie Rock"
 "The Times They Are A-Changin'","Bob Dylan","Music > Folk > Traditional Folk"
 "A Tu Lado","Bobby Pulido","Music > Regional Mexicano > Texano"
 "Abrázame Y Bésame","Bobby Pulido","Music > Regional Mexicano > Texano"
@@ -161,13 +161,13 @@ Distintos Destinos,Binomio De Oro De América,Music > Folk > Latin Folk > Vallen
 "The Book Lovers","Broadcast","Music > Pop > Psychedelic Pop"
 "Smalltown Boy","Bronski Beat","Music > Electronic > Synthpop"
 "(Everything I Do) I Do It For You","Bryan Adams","Music > Rock > Hard Rock > Power Ballad"
-"Liar","Built To Spill","Music > Rock > Alternative Rock"
+"Liar","Built To Spill","Music > Rock > Indie Rock"
 "Alicia","Bunbury","Music > Rock > Alternative Rock"
 "Salomé","Bunbury","Music > Rock > Alternative Rock"
 "Salute da Gods!!","Busta Rhymes","Music > Hip Hop > Boom Bap"
 "Ever Fallen in Love (With Someone You Shouldn't've?)","Buzzcocks","Music > Rock > Pop Punk"
 "What Do I Get?","Buzzcocks","Music > Rock > Pop Punk"
-"Eres","Café Tacvba","Music > Rock > Alternative Rock"
+"Eres","Café Tacvba","Music > Rock > Indie Rock"
 "La ingrata","Café Tacvba","Music > Rock > Alternative Rock"
 "Las flores","Café Tacvba","Music > Rock > Alternative Rock"
 "Las persianas","Café Tacvba","Music > Rock > Alternative Rock"
@@ -197,14 +197,14 @@ Distintos Destinos,Binomio De Oro De América,Music > Folk > Latin Folk > Vallen
 "Wicked Game","Chris Isaak","Music > Rock > Soft Rock"
 "You Owe Me Some Kind of Love","Chris Isaak","Music > Rock > Soft Rock"
 "You Never Can Tell","Chuck Berry","Music > Rock > Roots Rock"
-"Apocalypse","Cigarettes After Sex","Music > Rock > Alternative Rock"
-"Walking With Thee","Clinic","Music > Rock > Alternative Rock"
+"Apocalypse","Cigarettes After Sex","Music > Rock > Indie Rock"
+"Walking With Thee","Clinic","Music > Rock > Indie Rock"
 "Confetti","Cold Cave","Music > Electronic > Synthpop"
-"Clocks","Coldplay","Music > Rock > Alternative Rock"
-"In My Place","Coldplay","Music > Rock > Alternative Rock"
+"Clocks","Coldplay","Music > Rock > Indie Rock"
+"In My Place","Coldplay","Music > Rock > Indie Rock"
 "The Scientist","Coldplay","Music > Pop > Pop Ballad"
-"Yellow","Coldplay","Music > Rock > Alternative Rock"
-"Horse Race","Colourmusic","Music > Rock > Alternative Rock"
+"Yellow","Coldplay","Music > Rock > Indie Rock"
+"Horse Race","Colourmusic","Music > Rock > Indie Rock"
 "Cada Vez Que Resuelles","Conjunto Oro","Music > Regional Mexicano > Norteño"
 "La Decision","Conjunto Oro","Music > Regional Mexicano > Norteño"
 "Llore","Conjunto Oro","Music > Regional Mexicano > Norteño"
@@ -245,7 +245,7 @@ Have You Ever Seen The Rain,Creedence Clearwater Revival,Music > Rock > Roots Ro
 Proud Mary,Creedence Clearwater Revival,Music > Rock > Roots Rock
 Azul,Cristian,Music > Pop > Pop (Standard)
 No Podras,Cristian,Music > Pop > Pop (Standard)
-Groove Is in the Heart / California Girls,Crocodiles,Music > Rock > Alternative Rock
+Groove Is in the Heart / California Girls,Crocodiles,Music > Rock > Indie Rock
 I Wanna Kill,Crocodiles,Music > Rock > Post-Punk
 Mirrors,Crocodiles,Music > Rock > Post-Punk
 Stoned to Death,Crocodiles,Music > Rock > Post-Punk
@@ -281,7 +281,7 @@ Tengo Ganas,David Lee Garza,Music > Regional Mexicano > Texano
 "You Spin Me Round (Like a Record)",Dead Or Alive,Music > Disco > Hi-NRG
 Girls,Death In Vegas,Music > Electronic > Downtempo
 "Rush, Rush",Debbie Harry,Music > Disco > Hi-NRG
-Desire Lines,Deerhunter,Music > Rock > Alternative Rock
+Desire Lines,Deerhunter,Music > Rock > Indie Rock
 "My Own Summer (Shove It)",Deftones,Music > Metal > Heavy Metal
 Return Of The Tres,Delinquent Habits,Music > Hip Hop > Hip Hop (Standard)
 Tres Delinquentes,Delinquent Habits,Music > Hip Hop > Hip Hop (Standard)
@@ -294,14 +294,14 @@ Under Your Spell,Desire,Music > Electronic > Synthpop
 Here With Me,Dido,Music > Pop > Pop Ballad
 Thank You,Dido,Music > Pop > Pop Ballad
 Circles,Digitalism,Music > Electronic > Synthpop
-Doused,DIIV,Music > Rock > Alternative Rock
-Feel The Pain,Dinosaur Jr.,Music > Rock > Alternative Rock
+Doused,DIIV,Music > Rock > Indie Rock
+Feel The Pain,Dinosaur Jr.,Music > Rock > Indie Rock
 No Le Faltes a Mí Corazón,Diomedes Dionisio Diaz,Music > Folk > Latin Folk > Vallenato
 Found You,Django Django,Music > Pop > Indie Pop
 Hail Bop,Django Django,Music > Pop > Psychedelic Pop
 Right the Wrongs,Django Django,Music > Pop > Psychedelic Pop
 The Real Me,Dover,Music > Rock > Alternative Rock
-Kingdom Of Rust,Doves,Music > Rock > Alternative Rock
+Kingdom Of Rust,Doves,Music > Rock > Indie Rock
 Forgot About Dre,Dr. Dre,Music > Hip Hop > West Coast
 Still D.R.E.,Dr. Dre,Music > Hip Hop > West Coast
 The Next Episode,Dr. Dre,Music > Hip Hop > West Coast
@@ -457,17 +457,17 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Botella Tras Botella","Gera MX","Music > Hip Hop > Hip Hop (Standard)"
 "Baker Street","Gerry Rafferty","Music > Rock > Soft Rock"
 "Mi Historia Entre Tus Dedos","Gianluca Grignani","Music > Pop > Pop Ballad"
-"The World Is Yours","Glasvegas","Music > Rock > Alternative Rock"
+"The World Is Yours","Glasvegas","Music > Rock > Indie Rock"
 "I Will Survive","Gloria Gaynor","Music > Disco"
 "Crazy","Gnarls Barkley","Music > Soul > Pop Soul"
-"Bring It On","Gomez","Music > Rock > Alternative Rock"
+"Bring It On","Gomez","Music > Rock > Indie Rock"
 "19-2000","Gorillaz","Music > Hip Hop > Hip Hop (Standard)"
 "Clint Eastwood","Gorillaz","Music > Hip Hop > Hip Hop (Standard)"
 "Feel Good Inc (featuring De La Soul)","Gorillaz","Music > Hip Hop > Hip Hop (Standard)"
 "Lake Zurich","Gorillaz","Music > Electronic > Synthpop"
 "Rhinestone Eyes","Gorillaz","Music > Electronic > Synthpop"
 "Somebody That I Used To Know","Gotye","Music > Pop > Indie Pop"
-"A.M. 180","Grandaddy","Music > Rock > Alternative Rock"
+"A.M. 180","Grandaddy","Music > Rock > Indie Rock"
 "Basket Case","Green Day","Music > Rock > Pop Punk"
 "Lilium (From ''Elfen Lied'')","Grissini Project","Music > Classical > Orchestral"
 "Mourning Sound","Grizzly Bear","Music > Pop > Indie Pop"
