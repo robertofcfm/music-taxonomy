@@ -1,9 +1,9 @@
 [
   {
-    "nodo": "Music > Rock",
-    "total": 157,
+    "nodo": "Music",
+    "total": 472,
     "exactos": 0,
-    "de_paso": 157,
+    "de_paso": 472,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -21,6 +21,31 @@
         "title": "What's Up?",
         "artist": "4 Non Blondes",
         "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano",
+    "total": 99,
+    "exactos": 0,
+    "de_paso": 99,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
       }
     ]
   },
@@ -50,35 +75,10 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 99,
+    "nodo": "Music > Rock",
+    "total": 171,
     "exactos": 0,
-    "de_paso": 99,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
-    "nodo": "Music",
-    "total": 431,
-    "exactos": 0,
-    "de_paso": 431,
+    "de_paso": 171,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -101,8 +101,8 @@
   },
   {
     "nodo": "Music > Rock > Alternative Rock",
-    "total": 57,
-    "exactos": 57,
+    "total": 67,
+    "exactos": 67,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [

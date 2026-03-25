@@ -141,5 +141,6 @@ for g in all_genres_sorted:
     print(f"- {g['genre']}: {g['count']} canciones")
 
 print(f"\nReporte de géneros saturados (umbral: {X}):\n")
-for r in reporte:
+# Ordenar reporte alfabéticamente por el path del nodo
+for r in sorted(reporte, key=lambda x: x['nodo']):
     print(f"- {r['nodo']}: Total={r['total']} | Exactos={r['exactos']} | De paso={r['de_paso']} | Clasificación={r['clasificacion']}")
