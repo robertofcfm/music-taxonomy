@@ -1,6 +1,8 @@
 Music
   Rock
     Alternative Rock
+    Indie Rock
+    Grunge
     Hard Rock
       Power Ballad
     Post-Punk
@@ -46,6 +48,7 @@ Music
     Ranchera
     Banda
   Folk
+    Traditional Folk
     Latin Folk
       Vallenato
       Trova
