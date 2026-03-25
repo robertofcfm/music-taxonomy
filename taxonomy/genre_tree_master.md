@@ -4,6 +4,7 @@ Music
     Indie Rock
     Grunge
     Hard Rock
+      Hard Rock (Standard)
       Power Ballad
     Post-Punk
     Blues Rock

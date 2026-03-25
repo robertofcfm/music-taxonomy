@@ -1,15 +1,15 @@
 [
   {
     "genre": "Music",
-    "count": 551
+    "count": 571
   },
   {
     "genre": "Music > Rock",
-    "count": 233
+    "count": 241
   },
   {
     "genre": "Music > Regional Mexicano",
-    "count": 108
+    "count": 116
   },
   {
     "genre": "Music > Rock > Hard Rock",
@@ -17,11 +17,11 @@
   },
   {
     "genre": "Music > Regional Mexicano > Texano",
-    "count": 54
+    "count": 62
   },
   {
     "genre": "Music > Rock > Alternative Rock",
-    "count": 50
+    "count": 53
   },
   {
     "genre": "Music > Regional Mexicano > Norteño",
@@ -29,23 +29,27 @@
   },
   {
     "genre": "Music > Pop",
-    "count": 47
+    "count": 48
   },
   {
     "genre": "Music > Folk",
-    "count": 45
+    "count": 47
   },
   {
     "genre": "Music > Folk > Latin Folk",
-    "count": 44
+    "count": 46
   },
   {
     "genre": "Music > Rock > Post-Punk",
-    "count": 43
+    "count": 44
   },
   {
     "genre": "Music > Folk > Latin Folk > Vallenato",
-    "count": 42
+    "count": 44
+  },
+  {
+    "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)",
+    "count": 40
   },
   {
     "genre": "Music > Hip Hop",
@@ -57,7 +61,7 @@
   },
   {
     "genre": "Music > Rock > Indie Rock",
-    "count": 29
+    "count": 31
   },
   {
     "genre": "Music > Rock > Hard Rock > Power Ballad",
@@ -69,7 +73,7 @@
   },
   {
     "genre": "Music > Pop > Pop Ballad",
-    "count": 18
+    "count": 19
   },
   {
     "genre": "Music > Disco",
@@ -88,16 +92,16 @@
     "count": 12
   },
   {
-    "genre": "Music > Cumbia",
+    "genre": "Music > Rock > Soft Rock",
     "count": 11
   },
   {
-    "genre": "Music > Rock > Soft Rock",
-    "count": 10
+    "genre": "Music > Rock > Roots Rock",
+    "count": 11
   },
   {
-    "genre": "Music > Rock > Roots Rock",
-    "count": 10
+    "genre": "Music > Cumbia",
+    "count": 11
   },
   {
     "genre": "Music > Hip Hop > Boom Bap",
@@ -108,15 +112,19 @@
     "count": 8
   },
   {
+    "genre": "Music > Metal",
+    "count": 8
+  },
+  {
     "genre": "Music > Rock > Folk Rock",
     "count": 8
   },
   {
-    "genre": "Music > Metal",
+    "genre": "Music > Soul > Pop Soul",
     "count": 7
   },
   {
-    "genre": "Music > Electronic > Downtempo",
+    "genre": "Music > Metal > Heavy Metal",
     "count": 7
   },
   {
@@ -124,27 +132,23 @@
     "count": 7
   },
   {
-    "genre": "Music > Soul > Pop Soul",
+    "genre": "Music > Electronic > Downtempo",
     "count": 7
-  },
-  {
-    "genre": "Music > Rock > Blues Rock",
-    "count": 6
   },
   {
     "genre": "Music > Classical",
     "count": 6
   },
   {
-    "genre": "Music > Metal > Heavy Metal",
+    "genre": "Music > Rock > Blues Rock",
     "count": 6
   },
   {
-    "genre": "Music > Cumbia > Cumbia Pop",
+    "genre": "Music > Pop > Pop (Standard)",
     "count": 5
   },
   {
-    "genre": "Music > Pop > Pop (Standard)",
+    "genre": "Music > Cumbia > Cumbia Pop",
     "count": 5
   },
   {
@@ -152,19 +156,19 @@
     "count": 4
   },
   {
-    "genre": "Music > Classical > Orchestral",
-    "count": 4
-  },
-  {
     "genre": "Music > Ska",
     "count": 4
   },
   {
-    "genre": "Music > Regional Mexicano > Banda",
+    "genre": "Music > Classical > Orchestral",
+    "count": 4
+  },
+  {
+    "genre": "Music > Disco > Hi-NRG",
     "count": 3
   },
   {
-    "genre": "Music > Rock > Grunge",
+    "genre": "Music > Regional Mexicano > Banda",
     "count": 3
   },
   {
@@ -172,23 +176,39 @@
     "count": 3
   },
   {
-    "genre": "Music > Disco > Hi-NRG",
+    "genre": "Music > Rock > Grunge",
     "count": 3
-  },
-  {
-    "genre": "Music > Electronic > Big Beat",
-    "count": 2
   },
   {
     "genre": "Music > Pop > Singer-Songwriter Pop",
     "count": 2
   },
   {
-    "genre": "Music > Classical > Solo Instrumental",
+    "genre": "Music > Electronic > Big Beat",
+    "count": 2
+  },
+  {
+    "genre": "Music > Rock > Psychedelic Rock",
+    "count": 1
+  },
+  {
+    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
+    "count": 1
+  },
+  {
+    "genre": "Music > Metal > Heavy Metal > Heavy Metal (Standard)",
+    "count": 1
+  },
+  {
+    "genre": "Music > Rock > Reggae Rock",
     "count": 1
   },
   {
     "genre": "Music > Classical > Score",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Solo Instrumental",
     "count": 1
   },
   {
@@ -200,27 +220,15 @@
     "count": 1
   },
   {
-    "genre": "Music > Hip Hop > Trap",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Reggae Rock",
-    "count": 1
-  },
-  {
-    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Psychedelic Rock",
-    "count": 1
-  },
-  {
     "genre": "Music > Folk > Latin Folk > Trova",
     "count": 1
   },
   {
     "genre": "Music > Folk > Traditional Folk",
+    "count": 1
+  },
+  {
+    "genre": "Music > Hip Hop > Trap",
     "count": 1
   }
 ]
