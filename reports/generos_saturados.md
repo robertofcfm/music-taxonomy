@@ -1,5 +1,25 @@
 # Reporte de Géneros Saturados (umbral: 45)
 
+## Music > Regional Mexicano > Texano
+- Total canciones con este prefijo: 49
+- Coincidencia exacta (Nodo saturado): 49
+- Solo de paso: 0
+- Clasificación: **Nodo saturado**
+  - Ejemplos exactos:
+    - A Tu Lado — Bobby Pulido
+    - Abrázame Y Bésame — Bobby Pulido
+    - Desvelado — Bobby Pulido
+
+## Music > Regional Mexicano
+- Total canciones con este prefijo: 103
+- Coincidencia exacta (Nodo saturado): 0
+- Solo de paso: 103
+- Clasificación: **Género de Paso**
+  - Ejemplos de paso:
+    - El Circo — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
+    - Quien Mas Te Adora — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
+    - Tu Carcel — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
+
 ## Music > Rock
 - Total canciones con este prefijo: 186
 - Coincidencia exacta (Nodo saturado): 0
@@ -24,25 +44,15 @@
     - Crazy — Aerosmith (Music > Rock > Hard Rock > Power Ballad)
     - Cryin' — Aerosmith (Music > Rock > Hard Rock > Power Ballad)
 
-## Music > Rock > Alternative Rock
-- Total canciones con este prefijo: 67
-- Coincidencia exacta (Nodo saturado): 67
-- Solo de paso: 0
-- Clasificación: **Nodo saturado**
-  - Ejemplos exactos:
-    - Jaded — Aerosmith
-    - Man in the Box — Alice In Chains
-    - No Excuses — Alice In Chains
-
-## Music > Regional Mexicano > Texano
-- Total canciones con este prefijo: 49
-- Coincidencia exacta (Nodo saturado): 49
-- Solo de paso: 0
-- Clasificación: **Nodo saturado**
-  - Ejemplos exactos:
-    - A Tu Lado — Bobby Pulido
-    - Abrázame Y Bésame — Bobby Pulido
-    - Desvelado — Bobby Pulido
+## Music
+- Total canciones con este prefijo: 492
+- Coincidencia exacta (Nodo saturado): 0
+- Solo de paso: 492
+- Clasificación: **Género de Paso**
+  - Ejemplos de paso:
+    - I'm Not In Love — 10cc (Music > Rock > Soft Rock)
+    - Love Song — 311 (Music > Rock > Reggae Rock)
+    - What's Up? — 4 Non Blondes (Music > Rock > Folk Rock)
 
 ## Music > Regional Mexicano > Norteño
 - Total canciones con este prefijo: 48
@@ -53,24 +63,4 @@
     - El Circo — Albert Zamora Y Talento
     - Quien Mas Te Adora — Albert Zamora Y Talento
     - Tu Carcel — Albert Zamora Y Talento
-
-## Music > Regional Mexicano
-- Total canciones con este prefijo: 103
-- Coincidencia exacta (Nodo saturado): 0
-- Solo de paso: 103
-- Clasificación: **Género de Paso**
-  - Ejemplos de paso:
-    - El Circo — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
-    - Quien Mas Te Adora — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
-    - Tu Carcel — Albert Zamora Y Talento (Music > Regional Mexicano > Norteño)
-
-## Music
-- Total canciones con este prefijo: 492
-- Coincidencia exacta (Nodo saturado): 0
-- Solo de paso: 492
-- Clasificación: **Género de Paso**
-  - Ejemplos de paso:
-    - I'm Not In Love — 10cc (Music > Rock > Soft Rock)
-    - Love Song — 311 (Music > Rock > Reggae Rock)
-    - What's Up? — 4 Non Blondes (Music > Rock > Folk Rock)
 
