@@ -1,6 +1,7 @@
 import csv
 import json
 import os
+import unicodedata
 
 # Archivos de entrada y salida (rutas relativas al root del proyecto)
 songs_raw = 'catalog/songs_raw.csv'
@@ -9,6 +10,8 @@ output_json = 'reports/canciones_nuevas.json'
 
 
 def normaliza(texto):
+    # Normaliza a Unicode NFC para evitar diferencias entre ñ compuesta y precompuesta
+    texto = unicodedata.normalize('NFC', texto)
     return texto.replace('"', '').replace("'", '').strip().lower()
 
 try:
