@@ -1,12 +1,11 @@
 [
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 177,
-    "exactos": 0,
-    "de_paso": 177,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
+    "nodo": "Music > Regional Mexicano > Norteño",
+    "total": 77,
+    "exactos": 77,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
         "title": "El Circo",
         "artist": "Albert Zamora Y Talento",
@@ -21,6 +20,32 @@
         "title": "Tu Carcel",
         "artist": "Albert Zamora Y Talento",
         "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 284,
+    "exactos": 0,
+    "de_paso": 284,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
       }
     ]
   },
@@ -50,134 +75,9 @@
     ]
   },
   {
-    "nodo": "Music > Rock",
-    "total": 284,
-    "exactos": 0,
-    "de_paso": 284,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Regional Mexicano > Norteño",
-    "total": 67,
-    "exactos": 67,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music",
-    "total": 751,
-    "exactos": 0,
-    "de_paso": 751,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Folk",
-    "total": 90,
-    "exactos": 0,
-    "de_paso": 90,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 73,
-    "exactos": 0,
-    "de_paso": 73,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 85,
-    "exactos": 85,
+    "total": 112,
+    "exactos": 112,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -195,31 +95,6 @@
         "title": "Llegaste Tú",
         "artist": "Adriana Lucia",
         "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 61,
-    "exactos": 61,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Jaded",
-        "artist": "Aerosmith",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
       }
     ],
     "ejemplos_de_paso": []
@@ -250,10 +125,35 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 88,
+    "nodo": "Music > Regional Mexicano > Texano",
+    "total": 104,
+    "exactos": 104,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Folk",
+    "total": 117,
     "exactos": 0,
-    "de_paso": 88,
+    "de_paso": 117,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -275,28 +175,128 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano > Texano",
-    "total": 102,
-    "exactos": 102,
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 61,
+    "exactos": 61,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
       }
     ],
     "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 73,
+    "exactos": 0,
+    "de_paso": 73,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano",
+    "total": 189,
+    "exactos": 0,
+    "de_paso": 189,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music",
+    "total": 790,
+    "exactos": 0,
+    "de_paso": 790,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 115,
+    "exactos": 0,
+    "de_paso": 115,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ]
   }
 ]
