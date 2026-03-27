@@ -8,15 +8,7 @@
     "artist": "Metallica"
   },
   {
-    "title": "Bleeding Me",
-    "artist": "Metallica"
-  },
-  {
     "title": "Carpe Diem Baby",
-    "artist": "Metallica"
-  },
-  {
-    "title": "Creeping Death",
     "artist": "Metallica"
   },
   {
@@ -56,10 +48,6 @@
     "artist": "Metallica"
   },
   {
-    "title": "Enter Sandman",
-    "artist": "Metallica"
-  },
-  {
     "title": "Escape",
     "artist": "Metallica"
   },
@@ -77,6 +65,18 @@
   },
   {
     "title": "For Whom The Bell Tolls",
+    "artist": "Metallica"
+  },
+  {
+    "title": "Frantic",
+    "artist": "Metallica"
+  },
+  {
+    "title": "Fuel",
+    "artist": "Metallica"
+  },
+  {
+    "title": "Fuel",
     "artist": "Metallica"
   }
 ]
