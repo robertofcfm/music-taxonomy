@@ -15,8 +15,9 @@ Music
     Psychedelic Rock
     Reggae Rock
   Metal
-    Power Metal
     Heavy Metal
+    Thrash Metal
+    Power Metal
   Hip Hop
     Hip Hop (Standard)
     West Coast
