@@ -1,11 +1,12 @@
 [
   {
-    "nodo": "Music > Regional Mexicano > Norteño",
-    "total": 66,
-    "exactos": 66,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
+    "nodo": "Music > Regional Mexicano",
+    "total": 177,
+    "exactos": 0,
+    "de_paso": 177,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
       {
         "title": "El Circo",
         "artist": "Albert Zamora Y Talento",
@@ -21,33 +22,7 @@
         "artist": "Albert Zamora Y Talento",
         "genre": "Music > Regional Mexicano > Norteño"
       }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 72,
-    "exactos": 72,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
+    ]
   },
   {
     "nodo": "Music > Pop",
@@ -75,10 +50,10 @@
     ]
   },
   {
-    "nodo": "Music",
-    "total": 731,
+    "nodo": "Music > Rock",
+    "total": 284,
     "exactos": 0,
-    "de_paso": 731,
+    "de_paso": 284,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -100,10 +75,60 @@
     ]
   },
   {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 75,
+    "nodo": "Music > Regional Mexicano > Norteño",
+    "total": 67,
+    "exactos": 67,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 751,
     "exactos": 0,
-    "de_paso": 75,
+    "de_paso": 751,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Folk",
+    "total": 90,
+    "exactos": 0,
+    "de_paso": 90,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -123,31 +148,6 @@
         "genre": "Music > Folk > Latin Folk > Vallenato"
       }
     ]
-  },
-  {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 50,
-    "exactos": 50,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      }
-    ],
-    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Rock > Hard Rock",
@@ -175,9 +175,34 @@
     ]
   },
   {
+    "nodo": "Music > Folk > Latin Folk > Vallenato",
+    "total": 85,
+    "exactos": 85,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
     "nodo": "Music > Rock > Alternative Rock",
-    "total": 60,
-    "exactos": 60,
+    "total": 61,
+    "exactos": 61,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -200,35 +225,35 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock",
-    "total": 283,
-    "exactos": 0,
-    "de_paso": 283,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 50,
+    "exactos": 50,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       }
-    ]
+    ],
+    "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Folk",
-    "total": 77,
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 88,
     "exactos": 0,
-    "de_paso": 77,
+    "de_paso": 88,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -251,8 +276,8 @@
   },
   {
     "nodo": "Music > Regional Mexicano > Texano",
-    "total": 98,
-    "exactos": 98,
+    "total": 102,
+    "exactos": 102,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -273,30 +298,5 @@
       }
     ],
     "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Regional Mexicano",
-    "total": 172,
-    "exactos": 0,
-    "de_paso": 172,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
   }
 ]
