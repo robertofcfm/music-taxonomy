@@ -9,7 +9,7 @@ Dime Quién,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia Pop
 Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia Pop
 Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia Pop
 Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia Pop
-"Dancing Queen",ABBA,Music > Disco
+"Dancing Queen",ABBA,Music > Rhythmic > Disco
 "The Winner Takes It All",ABBA,Music > Pop > Pop Ballad
 "Back In Black",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
 "Highway to Hell",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
@@ -82,7 +82,7 @@ Mi Mayor Anhelo,Banda Sinaloense MS de Sergio Lizárraga,Music > Regional Mexica
 "Can't Get Enough Of Your Love, Babe",Barry White,Music > Soul > Pop Soul
 Just The Way You Are,Barry White,Music > Soul > Pop Soul
 "Never, Never Gonna Give Ya Up",Barry White,Music > Soul > Pop Soul
-"You're The First, The Last, My Everything",Barry White,Music > Disco
+"You're The First, The Last, My Everything",Barry White,Music > Rhythmic > Disco
 Dark Entries,Bauhaus,Music > Rock > Post-Punk
 Kick in the Eye,Bauhaus,Music > Rock > Post-Punk
 Myth,Beach House,Music > Pop > Psychedelic Pop
@@ -92,10 +92,10 @@ Gamma Ray,Beck,Music > Rock > Blues Rock
 Loser,Beck,Music > Rock > Alternative Rock
 Ramona,Beck,Music > Rock > Indie Rock
 How Deep Is Your Love,Bee Gees,Music > Soul > Pop Soul
-More Than A Woman,Bee Gees,Music > Disco
-Night Fever,Bee Gees,Music > Disco
-Stayin' Alive,Bee Gees,Music > Disco
-You Should Be Dancing,Bee Gees,Music > Disco
+More Than A Woman,Bee Gees,Music > Rhythmic > Disco
+Night Fever,Bee Gees,Music > Rhythmic > Disco
+Stayin' Alive,Bee Gees,Music > Rhythmic > Disco
+You Should Be Dancing,Bee Gees,Music > Rhythmic > Disco
 Take My Breath Away,Berlin,Music > Pop > Pop Ballad
 El Preso,Bernardo Y Sus Compadres,Music > Cumbia
 La Cama de Piedra,Bernardo Y Sus Compadres,Music > Regional Mexicano > Norteño
@@ -154,10 +154,10 @@ Distintos Destinos,Binomio De Oro De América,Music > Folk > Latin Folk > Vallen
 "Bed Of Roses","Bon Jovi","Music > Rock > Hard Rock > Power Ballad"
 "Livin' On A Prayer","Bon Jovi","Music > Rock > Hard Rock > Power Ballad"
 "El Abandonado","Boni Mauricio Y Maximos","Music > Regional Mexicano > Norteño"
-"Heaven Must Have Sent You","Bonnie Pointer","Music > Disco"
+"Heaven Must Have Sent You","Bonnie Pointer","Music > Rhythmic > Disco"
 "Holding Out for a Hero","Bonnie Tyler","Music > Rock > Hard Rock > Power Ballad"
 "Total Eclipse of the Heart","Bonnie Tyler","Music > Rock > Hard Rock > Power Ballad"
-"Can't Take My Eyes Off You","Boys Town Gang","Music > Disco > Hi-NRG"
+"Can't Take My Eyes Off You","Boys Town Gang","Music > Rhythmic > Disco"
 "The Book Lovers","Broadcast","Music > Pop > Psychedelic Pop"
 "Smalltown Boy","Bronski Beat","Music > Electronic > Synthpop"
 "(Everything I Do) I Do It For You","Bryan Adams","Music > Rock > Hard Rock > Power Ballad"
@@ -265,7 +265,7 @@ Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Music > Hip Hop > West Coast
 Siempre Peligroso,Cypress Hill,Music > Hip Hop > West Coast
 Tequila (Tequila Sunrise),Cypress Hill,Music > Hip Hop > West Coast
 Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Music > Hip Hop > West Coast
-Get Lucky,Daft Punk feat. Pharrell Williams,Music > Disco
+Get Lucky,Daft Punk feat. Pharrell Williams,Music > Rhythmic > Disco
 Get Out of Control,Daniel Ash,Music > Rock > Post-Punk
 Sunset Gun,Danse Society,Music > Rock > Post-Punk
 Mother,Danzig,Music > Metal > Heavy Metal
@@ -278,9 +278,9 @@ Ziggy Stardust,David Bowie,Music > Rock > Hard Rock > Hard Rock (Standard)
 Mi Pequeño Lucero,David Lee Garza,Music > Regional Mexicano > Texano
 Tengo Ganas,David Lee Garza,Music > Regional Mexicano > Texano
 "Adagio for Strings, Op. 11",David Parry,Music > Classical > Orchestral
-"You Spin Me Round (Like a Record)",Dead Or Alive,Music > Disco > Hi-NRG
+"You Spin Me Round (Like a Record)",Dead Or Alive,Music > Rhythmic > Disco > Hi-NRG
 Girls,Death In Vegas,Music > Electronic > Downtempo
-"Rush, Rush",Debbie Harry,Music > Disco > Hi-NRG
+"Rush, Rush",Debbie Harry,Music > Rhythmic > Disco > Hi-NRG
 Desire Lines,Deerhunter,Music > Rock > Indie Rock
 "My Own Summer (Shove It)",Deftones,Music > Metal > Heavy Metal
 Return Of The Tres,Delinquent Habits,Music > Hip Hop > Boom Bap
@@ -328,8 +328,8 @@ Coming Down,Dum Dum Girls,Music > Pop > Psychedelic Pop
 Cautionary Tale,Dylan LeBlanc,Music > Rock > Roots Rock
 Hotel California,Eagles,Music > Rock > Soft Rock
 Hotel California,Eagles,Music > Rock > Roots Rock
-Boogie Wonderland,"Earth, Wind & Fire",Music > Disco
-September,"Earth, Wind & Fire",Music > Disco
+Boogie Wonderland,"Earth, Wind & Fire",Music > Rhythmic > Disco
+September,"Earth, Wind & Fire",Music > Rhythmic > Disco
 Bring on the Dancing Horses,Echo And The Bunnymen,Music > Rock > Post-Punk
 Bring on the Dancing Horses,Echo And The Bunnymen,Music > Rock > Alternative Rock
 In the Margins,Echo And The Bunnymen,Music > Rock > Post-Punk
@@ -388,7 +388,7 @@ Y Aquí Estoy,El Poder Del Norte,Music > Regional Mexicano > Norteño
 Las piedras rodantes,El Tri,Music > Rock > Roots Rock
 Pobre soñador,El Tri,Music > Rock > Roots Rock
 Triste canción,El Tri,Music > Rock > Blues Rock
-Last Train to London,Electric Light Orchestra,Music > Disco
+Last Train to London,Electric Light Orchestra,Music > Rhythmic > Disco
 Mr. Blue Sky,Electric Light Orchestra,Music > Pop > Pop (Standard)
 A Real Hero,Electric Youth,Music > Electronic > Synthpop
 Eclipse,Emilio Navaira,Music > Regional Mexicano > Texano
@@ -458,7 +458,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Baker Street","Gerry Rafferty","Music > Rock > Soft Rock"
 "Mi Historia Entre Tus Dedos","Gianluca Grignani","Music > Pop > Pop Ballad"
 "The World Is Yours","Glasvegas","Music > Rock > Indie Rock"
-"I Will Survive","Gloria Gaynor","Music > Disco"
+"I Will Survive","Gloria Gaynor","Music > Rhythmic > Disco"
 "Crazy","Gnarls Barkley","Music > Soul > Pop Soul"
 "Crazy","Gnarls Barkley","Music > R&B"
 "Bring It On","Gomez","Music > Rock > Indie Rock"
@@ -613,7 +613,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Ruby","Kaiser Chiefs","Music > Rock > Indie Rock"
 "The Angry Mob","Kaiser Chiefs","Music > Rock > Indie Rock"
 "Dust in the Wind","Kansas","Music > Rock > Folk Rock"
-"I'm Your Boogie Man","KC And The Sunshine Band","Music > Disco"
+"I'm Your Boogie Man","KC And The Sunshine Band","Music > Rhythmic > Disco"
 "Somewhere Only We Know","Keane","Music > Pop > Pop Ballad"
 "Danger Zone (From ""Top Gun"" Original Soundtrack)","Kenny Loggins","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Drive That Fast","Kitchens Of Distinction","Music > Rock > Indie Rock"
@@ -1268,7 +1268,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Love Fade","Tamaryn","Music > Rock > Psychedelic Rock"
 "Softcore","Tamaryn","Music > Rock > Psychedelic Rock"
 "Feels Like We Only Go Backwards","Tame Impala","Music > Rock > Psychedelic Rock"
-"Heaven Must Be Missing An Angel","Tavares","Music > Disco"
+"Heaven Must Be Missing An Angel","Tavares","Music > Rhythmic > Disco"
 "Everybody Wants To Rule The World","Tears For Fears","Music > Electronic > Synthpop"
 "Everybody Wants To Rule The World","Tears For Fears","Music > Pop > Pop (Standard)"
 "Head Over Heels","Tears For Fears","Music > Electronic > Synthpop"
@@ -1407,7 +1407,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Under Cover of Darkness","The Strokes","Music > Rock > Alternative Rock"
 "Hands","The Ting Tings","Music > Electronic > Synthpop"
 "Hands","The Ting Tings","Music > Pop > Pop (Standard)"
-"Disco Inferno","The Trammps","Music > Disco"
+"Disco Inferno","The Trammps","Music > Rhythmic > Disco"
 "Bitter Sweet Symphony","The Verve","Music > Rock > Alternative Rock"
 "Bitter Sweet Symphony","The Verve","Music > Rock > Progressive Rock"
 "One Headlight","The Wallflowers","Music > Rock > Roots Rock"
@@ -1506,7 +1506,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Joker And The Thief","Wolfmother","Music > Rock > Hard Rock"
 "Roundabout","Yes","Music > Rock > Progressive Rock"
 "I. Prélude","Yo-Yo Ma","Music > Classical > Solo Instrumental"
-"If I Can't Have You","Yvonne Elliman","Music > Disco"
+"If I Can't Have You","Yvonne Elliman","Music > Rhythmic > Disco"
 "Labios Rotos","Zoé","Music > Rock > Psychedelic Rock"
 "Luna","Zoé","Music > Rock > Psychedelic Rock"
 "Nada","Zoé","Music > Rock > Psychedelic Rock"
