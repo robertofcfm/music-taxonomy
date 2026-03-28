@@ -1,8 +1,8 @@
 [
   {
     "nodo": "Music > Rock > Indie Rock",
-    "total": 50,
-    "exactos": 50,
+    "total": 60,
+    "exactos": 60,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -25,84 +25,9 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Metal > Heavy Metal",
-    "total": 72,
-    "exactos": 72,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "We Die Young",
-        "artist": "Alice In Chains",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 73,
-    "exactos": 0,
-    "de_paso": 73,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Metal",
-    "total": 96,
-    "exactos": 0,
-    "de_paso": 96,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "We Die Young",
-        "artist": "Alice In Chains",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Rock > Alternative Rock",
-    "total": 67,
-    "exactos": 67,
+    "total": 71,
+    "exactos": 71,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -126,9 +51,9 @@
   },
   {
     "nodo": "Music",
-    "total": 948,
+    "total": 969,
     "exactos": 0,
-    "de_paso": 948,
+    "de_paso": 969,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -148,31 +73,6 @@
         "genre": "Music > Rock > Folk Rock"
       }
     ]
-  },
-  {
-    "nodo": "Music > Regional Mexicano > Texano",
-    "total": 107,
-    "exactos": 107,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      }
-    ],
-    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Folk > Latin Folk",
@@ -225,54 +125,54 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock",
-    "total": 301,
-    "exactos": 0,
-    "de_paso": 301,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
+    "nodo": "Music > Regional Mexicano > Norteño",
+    "total": 94,
+    "exactos": 94,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
       }
-    ]
+    ],
+    "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Pop",
-    "total": 69,
-    "exactos": 0,
-    "de_paso": 69,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 53,
+    "exactos": 53,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       }
-    ]
+    ],
+    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Folk",
@@ -300,26 +200,51 @@
     ]
   },
   {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 50,
-    "exactos": 50,
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 73,
+    "exactos": 0,
+    "de_paso": 73,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Metal > Heavy Metal",
+    "total": 72,
+    "exactos": 72,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "We Die Young",
+        "artist": "Alice In Chains",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       }
     ],
     "ejemplos_de_paso": []
@@ -350,28 +275,103 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano > Norteño",
-    "total": 94,
-    "exactos": 94,
+    "nodo": "Music > Regional Mexicano > Texano",
+    "total": 107,
+    "exactos": 107,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
       },
       {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
       },
       {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
       }
     ],
     "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Metal",
+    "total": 96,
+    "exactos": 0,
+    "de_paso": 96,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "We Die Young",
+        "artist": "Alice In Chains",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Pop",
+    "total": 69,
+    "exactos": 0,
+    "de_paso": 69,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 320,
+    "exactos": 0,
+    "de_paso": 320,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
   }
 ]
