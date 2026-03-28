@@ -1,9 +1,84 @@
 [
   {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 143,
+    "nodo": "Music > Pop",
+    "total": 124,
     "exactos": 0,
-    "de_paso": 143,
+    "de_paso": 124,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 85,
+    "exactos": 0,
+    "de_paso": 85,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
+    "total": 49,
+    "exactos": 49,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 147,
+    "exactos": 0,
+    "de_paso": 147,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -25,54 +100,54 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 231,
-    "exactos": 0,
-    "de_paso": 231,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Pop > Pop Ballad",
-    "total": 46,
-    "exactos": 46,
+    "nodo": "Music > Folk > Latin Folk > Vallenato",
+    "total": 140,
+    "exactos": 140,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       }
     ],
     "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Folk",
+    "total": 152,
+    "exactos": 0,
+    "de_paso": 152,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ]
   },
   {
     "nodo": "Music > Regional Mexicano > Norteño",
@@ -95,31 +170,6 @@
         "title": "Tu Carcel",
         "artist": "Albert Zamora Y Talento",
         "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
-    "total": 48,
-    "exactos": 48,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
       }
     ],
     "ejemplos_de_paso": []
@@ -150,34 +200,9 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Psychedelic Rock",
-    "total": 46,
-    "exactos": 46,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Heroes",
-        "artist": "David Bowie",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "Somebody To Love",
-        "artist": "Jefferson Airplane",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "White Rabbit",
-        "artist": "Jefferson Airplane",
-        "genre": "Music > Rock > Psychedelic Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Rock > Indie Rock",
-    "total": 118,
-    "exactos": 118,
+    "total": 122,
+    "exactos": 122,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -195,6 +220,31 @@
         "title": "O Katrina!",
         "artist": "Black Lips",
         "genre": "Music > Rock > Indie Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Psychedelic Rock",
+    "total": 54,
+    "exactos": 54,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Heroes",
+        "artist": "David Bowie",
+        "genre": "Music > Rock > Psychedelic Rock"
+      },
+      {
+        "title": "Somebody To Love",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
+      },
+      {
+        "title": "White Rabbit",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
       }
     ],
     "ejemplos_de_paso": []
@@ -226,9 +276,9 @@
   },
   {
     "nodo": "Music > Electronic",
-    "total": 64,
+    "total": 77,
     "exactos": 0,
-    "de_paso": 64,
+    "de_paso": 77,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -250,113 +300,62 @@
     ]
   },
   {
-    "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 136,
-    "exactos": 136,
+    "nodo": "Music > Electronic > Synthpop",
+    "total": 53,
+    "exactos": 53,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "I Ran (So Far Away)",
+        "artist": "A Flock Of Seagulls",
+        "genre": "Music > Electronic > Synthpop"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Take on Me",
+        "artist": "A-Ha",
+        "genre": "Music > Electronic > Synthpop"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Smalltown Boy",
+        "artist": "Bronski Beat",
+        "genre": "Music > Electronic > Synthpop"
       }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 97,
-    "exactos": 97,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Regional Mexicano > Texano",
-    "total": 113,
-    "exactos": 113,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 143,
-    "exactos": 143,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Jaded",
-        "artist": "Aerosmith",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Pop",
-    "total": 110,
+    "nodo": "Music > Regional Mexicano",
+    "total": 235,
     "exactos": 0,
-    "de_paso": 110,
+    "de_paso": 235,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Pop > Pop Ballad",
+    "total": 51,
+    "exactos": 51,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
       {
         "title": "The Winner Takes It All",
         "artist": "ABBA",
@@ -372,32 +371,8 @@
         "artist": "Alejandro Sanz",
         "genre": "Music > Pop > Pop Ballad"
       }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 84,
-    "exactos": 0,
-    "de_paso": 84,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ]
+    ],
+    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Rock > Grunge",
@@ -425,10 +400,85 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music",
-    "total": 1417,
+    "nodo": "Music > Regional Mexicano > Texano",
+    "total": 116,
+    "exactos": 116,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 153,
+    "exactos": 153,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 111,
+    "exactos": 111,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 678,
     "exactos": 0,
-    "de_paso": 1417,
+    "de_paso": 678,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -450,35 +500,10 @@
     ]
   },
   {
-    "nodo": "Music > Folk",
-    "total": 147,
+    "nodo": "Music",
+    "total": 1500,
     "exactos": 0,
-    "de_paso": 147,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock",
-    "total": 639,
-    "exactos": 0,
-    "de_paso": 639,
+    "de_paso": 1500,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
