@@ -1,155 +1,5 @@
 [
   {
-    "nodo": "Music > Electronic",
-    "total": 47,
-    "exactos": 0,
-    "de_paso": 47,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "The Day Of The Greys",
-        "artist": "4hero",
-        "genre": "Music > Electronic > Drum And Bass"
-      },
-      {
-        "title": "I Ran (So Far Away)",
-        "artist": "A Flock Of Seagulls",
-        "genre": "Music > Electronic > Synthpop"
-      },
-      {
-        "title": "Take on Me",
-        "artist": "A-Ha",
-        "genre": "Music > Electronic > Synthpop"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Pop",
-    "total": 70,
-    "exactos": 0,
-    "de_paso": 70,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 53,
-    "exactos": 53,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 74,
-    "exactos": 0,
-    "de_paso": 74,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock",
-    "total": 345,
-    "exactos": 0,
-    "de_paso": 345,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Indie Rock",
-    "total": 62,
-    "exactos": 62,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "The Suburbs",
-        "artist": "Arcade Fire",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Ramona",
-        "artist": "Beck",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "O Katrina!",
-        "artist": "Black Lips",
-        "genre": "Music > Rock > Indie Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Regional Mexicano > Texano",
     "total": 110,
     "exactos": 110,
@@ -175,77 +25,52 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Folk",
-    "total": 139,
+    "nodo": "Music > Pop",
+    "total": 72,
     "exactos": 0,
-    "de_paso": 139,
+    "de_paso": 72,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
       }
     ]
   },
   {
-    "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 132,
-    "exactos": 132,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music",
-    "total": 1009,
+    "nodo": "Music > Electronic",
+    "total": 49,
     "exactos": 0,
-    "de_paso": 1009,
+    "de_paso": 49,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "The Day Of The Greys",
+        "artist": "4hero",
+        "genre": "Music > Electronic > Drum And Bass"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "I Ran (So Far Away)",
+        "artist": "A Flock Of Seagulls",
+        "genre": "Music > Electronic > Synthpop"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Take on Me",
+        "artist": "A-Ha",
+        "genre": "Music > Electronic > Synthpop"
       }
     ]
   },
@@ -275,6 +100,56 @@
     ]
   },
   {
+    "nodo": "Music > Rock",
+    "total": 363,
+    "exactos": 0,
+    "de_paso": 363,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Metal > Heavy Metal",
+    "total": 73,
+    "exactos": 73,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "We Die Young",
+        "artist": "Alice In Chains",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
     "nodo": "Music > Regional Mexicano > Norteño",
     "total": 94,
     "exactos": 94,
@@ -298,31 +173,6 @@
       }
     ],
     "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Metal",
-    "total": 97,
-    "exactos": 0,
-    "de_paso": 97,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "We Die Young",
-        "artist": "Alice In Chains",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ]
   },
   {
     "nodo": "Music > Rock > Alternative Rock",
@@ -350,12 +200,163 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Metal > Heavy Metal",
-    "total": 73,
-    "exactos": 72,
-    "de_paso": 1,
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 54,
+    "exactos": 54,
+    "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
+      {
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Indie Rock",
+    "total": 66,
+    "exactos": 66,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "The Suburbs",
+        "artist": "Arcade Fire",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "Ramona",
+        "artist": "Beck",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "O Katrina!",
+        "artist": "Black Lips",
+        "genre": "Music > Rock > Indie Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk > Vallenato",
+    "total": 132,
+    "exactos": 132,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 1033,
+    "exactos": 0,
+    "de_paso": 1033,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 137,
+    "exactos": 0,
+    "de_paso": 137,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 74,
+    "exactos": 0,
+    "de_paso": 74,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Metal",
+    "total": 97,
+    "exactos": 0,
+    "de_paso": 97,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
       {
         "title": "We Die Young",
         "artist": "Alice In Chains",
@@ -371,20 +372,13 @@
         "artist": "Black Sabbath",
         "genre": "Music > Metal > Heavy Metal"
       }
-    ],
-    "ejemplos_de_paso": [
-      {
-        "title": "Ace of Spades",
-        "artist": "Motörhead",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard) | Music > Metal > Heavy Metal"
-      }
     ]
   },
   {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 137,
+    "nodo": "Music > Folk",
+    "total": 139,
     "exactos": 0,
-    "de_paso": 137,
+    "de_paso": 139,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [

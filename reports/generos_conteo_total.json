@@ -1,11 +1,11 @@
 [
   {
     "genre": "Music",
-    "count": 1009
+    "count": 1033
   },
   {
     "genre": "Music > Rock",
-    "count": 345
+    "count": 363
   },
   {
     "genre": "Music > Regional Mexicano",
@@ -49,19 +49,19 @@
   },
   {
     "genre": "Music > Pop",
-    "count": 70
+    "count": 72
   },
   {
     "genre": "Music > Rock > Indie Rock",
-    "count": 62
+    "count": 66
   },
   {
     "genre": "Music > Rock > Post-Punk",
-    "count": 53
+    "count": 54
   },
   {
     "genre": "Music > Electronic",
-    "count": 47
+    "count": 49
   },
   {
     "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)",
@@ -76,39 +76,39 @@
     "count": 33
   },
   {
-    "genre": "Music > Rock > Hard Rock > Power Ballad",
-    "count": 29
+    "genre": "Music > Rock > Grunge",
+    "count": 32
   },
   {
     "genre": "Music > Pop > Pop Ballad",
-    "count": 28
+    "count": 30
+  },
+  {
+    "genre": "Music > Rock > Hard Rock > Power Ballad",
+    "count": 29
   },
   {
     "genre": "Music > Metal > Thrash Metal",
     "count": 23
   },
   {
-    "genre": "Music > Rock > Grunge",
-    "count": 20
-  },
-  {
     "genre": "Music > Hip Hop > Hip Hop (Standard)",
     "count": 19
-  },
-  {
-    "genre": "Music > Pop > Indie Pop",
-    "count": 16
   },
   {
     "genre": "Music > Disco",
     "count": 16
   },
   {
-    "genre": "Music > Rock > Soft Rock",
-    "count": 14
+    "genre": "Music > Pop > Indie Pop",
+    "count": 16
   },
   {
     "genre": "Music > Pop > Pop (Standard)",
+    "count": 14
+  },
+  {
+    "genre": "Music > Rock > Soft Rock",
     "count": 14
   },
   {
@@ -120,11 +120,11 @@
     "count": 12
   },
   {
-    "genre": "Music > Cumbia",
+    "genre": "Music > Rock > Roots Rock",
     "count": 11
   },
   {
-    "genre": "Music > Rock > Roots Rock",
+    "genre": "Music > Cumbia",
     "count": 11
   },
   {
@@ -144,19 +144,19 @@
     "count": 9
   },
   {
-    "genre": "Music > Rock > Blues Rock",
-    "count": 8
-  },
-  {
     "genre": "Music > Pop > Psychedelic Pop",
     "count": 8
   },
   {
-    "genre": "Music > Soul",
+    "genre": "Music > Rock > Blues Rock",
     "count": 8
   },
   {
     "genre": "Music > Soul > Pop Soul",
+    "count": 8
+  },
+  {
+    "genre": "Music > Soul",
     "count": 8
   },
   {
@@ -168,10 +168,6 @@
     "count": 6
   },
   {
-    "genre": "Music > Ska",
-    "count": 5
-  },
-  {
     "genre": "Music > Cumbia > Cumbia Pop",
     "count": 5
   },
@@ -181,6 +177,14 @@
   },
   {
     "genre": "Music > Rock > Pop Punk",
+    "count": 5
+  },
+  {
+    "genre": "Music > Ska",
+    "count": 5
+  },
+  {
+    "genre": "Music > Electronic > House",
     "count": 4
   },
   {
@@ -188,15 +192,11 @@
     "count": 4
   },
   {
-    "genre": "Music > Electronic > House",
-    "count": 4
-  },
-  {
-    "genre": "Music > Regional Mexicano > Ranchera",
+    "genre": "Music > Disco > Hi-NRG",
     "count": 3
   },
   {
-    "genre": "Music > Disco > Hi-NRG",
+    "genre": "Music > Regional Mexicano > Ranchera",
     "count": 3
   },
   {
@@ -212,15 +212,7 @@
     "count": 2
   },
   {
-    "genre": "Music > Electronic > Synthpop | Music > Electronic > House",
-    "count": 2
-  },
-  {
     "genre": "Music > R&B",
-    "count": 2
-  },
-  {
-    "genre": "Music > Electronic > Synthpop | Music > Electronic",
     "count": 2
   },
   {
@@ -228,51 +220,15 @@
     "count": 2
   },
   {
-    "genre": "Music > Folk > Latin Folk > Trova",
+    "genre": "Music > Folk > Latin Folk > Trova Cubana",
     "count": 2
-  },
-  {
-    "genre": "Music > Electronic > Synthpop | Music",
-    "count": 2
-  },
-  {
-    "genre": "Music > Rock > Hard Rock > Hard Rock (Standard) | Music > Metal",
-    "count": 1
-  },
-  {
-    "genre": "Music > Classical > Solo Instrumental",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Hard Rock > Hard Rock (Standard) | Music",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Hard Rock > Hard Rock (Standard) | Music > Metal > Heavy Metal",
-    "count": 1
-  },
-  {
-    "genre": "Music > Hip Hop > Hip Hop (Standard) | Music > R&B",
-    "count": 1
-  },
-  {
-    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
-    "count": 1
-  },
-  {
-    "genre": "Music > Hip Hop > Hip Hop (Standard) | Music",
-    "count": 1
-  },
-  {
-    "genre": "Music > Rock > Reggae Rock",
-    "count": 1
   },
   {
     "genre": "Music > Funk",
     "count": 1
   },
   {
-    "genre": "Music > Metal > Power Metal",
+    "genre": "Music > Rock > Reggae Rock",
     "count": 1
   },
   {
@@ -281,6 +237,18 @@
   },
   {
     "genre": "Music > Electronic > Drum And Bass",
+    "count": 1
+  },
+  {
+    "genre": "Music > Metal > Power Metal",
+    "count": 1
+  },
+  {
+    "genre": "Music > Classical > Solo Instrumental",
+    "count": 1
+  },
+  {
+    "genre": "Music > Folk > Latin Folk > Flamenco Pop",
     "count": 1
   }
 ]
