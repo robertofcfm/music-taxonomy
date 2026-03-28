@@ -1,65 +1,67 @@
 Music
+  Classical
+    Orchestral
+    Score
+    Solo Instrumental
+  Electronic
+    Big Beat
+    Downtempo
+    Drum And Bass
+    House
+    Synthpop
+  Hip Hop
+    Boom Bap
+    Hip Hop (Standard)
+    Trap
+    West Coast
+  Metal
+    Heavy Metal
+    Industrial Metal
+    Power Metal
+    Thrash Metal
+  Pop
+    Indie Pop
+    Pop (Standard)
+    Pop Ballad
+    Psychedelic Pop
+    Singer-Songwriter Pop
+  Rhythmic
+    Disco
+      Hi-NRG
+    Funk
+    R&B
+    Ska
+    Soul
+      Pop Soul
   Rock
     Alternative Rock
-    Indie Rock
+    Blues Rock
+    Folk Rock
     Grunge
     Hard Rock
       Hard Rock (Standard)
       Power Ballad
-    Post-Punk
-    Blues Rock
+    Indie Rock
     Pop Punk
+    Post-Punk
+    Progressive Rock
+    Psychedelic Rock
+    Reggae Rock
     Roots Rock
     Soft Rock
-    Folk Rock
-    Psychedelic Rock
-    Progressive Rock
-    Reggae Rock
-  Metal
-    Heavy Metal
-    Thrash Metal
-    Industrial Metal
-    Power Metal
-  Hip Hop
-    Hip Hop (Standard)
-    West Coast
-    Boom Bap
-    Trap
-  Pop
-    Indie Pop
-    Pop Ballad
-    Singer-Songwriter Pop
-    Psychedelic Pop
-    Pop (Standard)
-  Electronic
-    Synthpop
-    Downtempo
-    Drum And Bass
-    Big Beat
-    House
-  Ska
-  Funk
-  Disco
-    Hi-NRG
-  Soul
-    Pop Soul
-  R&B
-  Classical
-    Score
-    Solo Instrumental
-    Orchestral
-  Regional Mexicano
-    Norteño
-    Texano
-    Ranchera
-    Banda
-  Folk
-    Traditional Folk
-    Latin Folk
-      Vallenato
-      Trova Cubana
-      Latin Folk Pop
-      Flamenco Pop
-  Bolero
-  Cumbia
-    Cumbia Pop
+  Roots
+    Bolero
+    Cumbia
+      Cumbia Pop
+    Folk
+      Traditional Folk
+      Latin Folk
+        Flamenco Pop
+        Latin Folk Pop
+        Trova Cubana
+        Vallenato
+    Regional Mexicano
+      Banda
+      Norteño
+      Ranchera
+      Texano
