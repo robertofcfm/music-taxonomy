@@ -54,12 +54,12 @@ Music
     Cumbia
       Cumbia Pop
     Folk
-      Traditional Folk
       Latin Folk
         Flamenco Pop
         Latin Folk Pop
         Trova Cubana
         Vallenato
+      Traditional Folk
     Regional Mexicano
       Banda
       Norteño
