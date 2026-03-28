@@ -13,6 +13,7 @@ Music
     Soft Rock
     Folk Rock
     Psychedelic Rock
+    Progressive Rock
     Reggae Rock
   Metal
     Heavy Metal
