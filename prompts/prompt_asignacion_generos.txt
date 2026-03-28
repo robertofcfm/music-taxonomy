@@ -1,3 +1,5 @@
+# ACTUALIZACIÓN IMPORTANTE (27/03/2026)
+- Antes de procesar cada lote de canciones nuevas, se debe ejecutar el script scripts/filtrar_canciones_nuevas.py para asegurar que reports/canciones_nuevas.json esté actualizado y refleje el estado real de las canciones pendientes. Este paso es obligatorio en cada iteración, no solo al inicio del proceso. La IA_MANUAL debe verificar y ejecutar este script ANTES de tomar el siguiente lote.
 
 # Prompt LLM Capa 2: Validación de Árbol de Géneros Musicales
 
