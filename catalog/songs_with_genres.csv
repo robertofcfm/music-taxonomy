@@ -15,7 +15,7 @@ Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,Music > Cumbia > Cumbia 
 "Highway to Hell",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
 "Thunderstruck",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
 "Post Traumatic Love",Actors,Music > Rock > Post-Punk
-"Rolling in the Deep",Adele,Music > Soul > Pop Soul
+"Rolling in the Deep",Adele,Music > Rhythmic > Soul > Pop Soul
 "Dos Culpables",Adriana Lucia,Music > Folk > Latin Folk > Vallenato
 "Enamórate Como Yo",Adriana Lucia,Music > Folk > Latin Folk > Vallenato
 "Llegaste Tú",Adriana Lucia,Music > Folk > Latin Folk > Vallenato
@@ -80,8 +80,8 @@ Te Presumo,Banda Sinaloense de El Recodo de Don Cruz Lizarraga,Music > Regional 
 De Ti Enamorado,Banda Sinaloense MS de Sergio Lizárraga,Music > Regional Mexicano > Banda
 Mi Mayor Anhelo,Banda Sinaloense MS de Sergio Lizárraga,Music > Regional Mexicano > Banda
 "Can't Get Enough Of Your Love, Babe",Barry White,Music > Soul > Pop Soul
-Just The Way You Are,Barry White,Music > Soul > Pop Soul
-"Never, Never Gonna Give Ya Up",Barry White,Music > Soul > Pop Soul
+Just The Way You Are,Barry White,Music > Rhythmic > Soul > Pop Soul
+"Never, Never Gonna Give Ya Up",Barry White,Music > Rhythmic > Soul > Pop Soul
 "You're The First, The Last, My Everything",Barry White,Music > Rhythmic > Disco
 Dark Entries,Bauhaus,Music > Rock > Post-Punk
 Kick in the Eye,Bauhaus,Music > Rock > Post-Punk
@@ -91,7 +91,7 @@ Devils Haircut,Beck,Music > Rock > Alternative Rock
 Gamma Ray,Beck,Music > Rock > Blues Rock
 Loser,Beck,Music > Rock > Alternative Rock
 Ramona,Beck,Music > Rock > Indie Rock
-How Deep Is Your Love,Bee Gees,Music > Soul > Pop Soul
+How Deep Is Your Love,Bee Gees,Music > Rhythmic > Soul > Pop Soul
 More Than A Woman,Bee Gees,Music > Rhythmic > Disco
 Night Fever,Bee Gees,Music > Rhythmic > Disco
 Stayin' Alive,Bee Gees,Music > Rhythmic > Disco
@@ -439,7 +439,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Pumped Up Kicks","Foster The People","Music > Pop > Indie Pop"
 "Shuggie","Foxygen","Music > Pop > Psychedelic Pop"
 "space girl","Frances Forever","Music > Pop > Indie Pop"
-"Vida Loca","Francisco Céspedes","Music > Soul > Pop Soul"
+"Vida Loca","Francisco Céspedes","Music > Rhythmic > Soul > Pop Soul"
 "I Heard Ramona Sing","Frank Black","Music > Rock > Alternative Rock"
 "Swoon","Fujiya & Miyagi","Music > Electronic > Downtempo"
 "Scooby Snacks","Fun Lovin' Criminals","Music > Hip Hop > Hip Hop (Standard)"
@@ -524,10 +524,10 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Melancholy","Human Tetris","Music > Rock > Post-Punk"
 "Gardenia","Iggy Pop","Music > Rock > Alternative Rock"
 "Sunday","Iggy Pop","Music > Rock > Alternative Rock"
-"Amargo Adiós","Inspector","Music > Ska"
-"Amnesia","Inspector","Music > Ska"
-"Es Por Ti","Inspector","Music > Ska"
-"Y Que","Inspector","Music > Ska"
+"Amargo Adiós","Inspector","Music > Rhythmic > Ska"
+"Amnesia","Inspector","Music > Rhythmic > Ska"
+"Es Por Ti","Inspector","Music > Rhythmic > Ska"
+"Y Que","Inspector","Music > Rhythmic > Ska"
 "All the Rage Back Home","Interpol","Music > Rock > Post-Punk"
 "C'mere","Interpol","Music > Rock > Post-Punk"
 "Evil","Interpol","Music > Rock > Post-Punk"
@@ -734,7 +734,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Un Solo Cuerpo","Los Chiches Vallenatos","Music > Folk > Latin Folk > Vallenato"
 "Voy a Olvidarte","Los Chiches Vallenatos","Music > Folk > Latin Folk > Vallenato"
 "Tú y Yo","Los Compadres","Music > Folk > Latin Folk > Vallenato"
-"Gema","Los Dandys","Music > Bolero"
+"Gema","Los Dandys","Music > Roots > Bolero"
 "A besitos","Los Diablitos","Music > Folk > Latin Folk > Vallenato"
 "Busca Un Confidente","Los Diablitos","Music > Folk > Latin Folk > Vallenato"
 "Cuando Casi Te Olvidaba","Los Diablitos","Music > Folk > Latin Folk > Vallenato"
@@ -808,7 +808,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Mary Lee","Los Traileros Del Norte","Music > Regional Mexicano > Norteño"
 "Ni Tu Amigo Ni Tu Amante","Los Traileros Del Norte","Music > Regional Mexicano > Norteño"
 "Quisiera Ser Una Lágrima","Los Traileros Del Norte","Music > Regional Mexicano > Norteño"
-"Poquita Fe (Sin Fe)","Los Tres Reyes","Music > Bolero"
+"Poquita Fe (Sin Fe)","Los Tres Reyes","Music > Roots > Bolero"
 "Con Quien Andaras","Los Valbuena","Music > Folk > Latin Folk > Vallenato"
 "Dime Dime","Los Valbuena","Music > Folk > Latin Folk > Vallenato"
 "Me Equivoque Contigo","Los Valbuena","Music > Folk > Latin Folk > Vallenato"
@@ -819,15 +819,15 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Tu Fotografia","Los Valbuena","Music > Folk > Latin Folk > Vallenato"
 "Y Si Me Marcho","Los Valbuena","Music > Folk > Latin Folk > Vallenato"
 "Perfect Day","Lou Reed","Music > Rock > Soft Rock"
-"What A Wonderful World","Louis Armstrong","Music > Soul > Pop Soul"
+"What A Wonderful World","Louis Armstrong","Music > Rhythmic > Soul > Pop Soul"
 "No Big Deal","Love and Rockets","Music > Rock > Alternative Rock"
 "Shelf Life","Love and Rockets","Music > Rock > Alternative Rock"
 "So Alive","Love and Rockets","Music > Rock > Indie Rock"
 "Muero por Verla","Luis Mateus","Music > Folk > Latin Folk > Vallenato"
 "Sin Ti No Hay Vida","Luis Mateus","Music > Folk > Latin Folk > Vallenato"
 "Culpable O No","Luis Miguel","Music > Pop > Pop Ballad"
-"La Gloria Eres Tu","Luis Miguel","Music > Bolero"
-"Por Debajo De La Mesa","Luis Miguel","Music > Bolero"
+"La Gloria Eres Tu","Luis Miguel","Music > Roots > Bolero"
+"Por Debajo De La Mesa","Luis Miguel","Music > Roots > Bolero"
 "Tengo Todo Excepto a Ti","Luis Miguel","Music > Pop > Pop Ballad"
 "Inalcanzable","Luis Miguel Fuentes","Music > Regional Mexicano > Texano"
 "Chao Chao Amor","Luis Y Julian","Music > Regional Mexicano > Norteño"
@@ -838,8 +838,8 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Golgotha Tenement Blues","Machines Of Loving Grace","Music > Metal > Industrial Metal"
 "Our House","Madness","Music > Pop > Pop (Standard)"
 "Lo Pasado, Pasado","Maldita Vecindad y Los Hijos del 5to Patio","Music > Rock > Alternative Rock"
-"Kumbala","Maldita Vecindad Y Los Hijos Del Quinto Patio","Music > Bolero"
-"Pachuco","Maldita Vecindad Y Los Hijos Del Quinto Patio","Music > Ska"
+"Kumbala","Maldita Vecindad Y Los Hijos Del Quinto Patio","Music > Roots > Bolero"
+"Pachuco","Maldita Vecindad Y Los Hijos Del Quinto Patio","Music > Rhythmic > Ska"
 "Solín","Maldita Vecindad Y Los Hijos Del Quinto Patio","Music > Rock > Alternative Rock"
 "En El Muelle de San Blas","Mana","Music > Rock > Soft Rock"
 "Mariposa Traicionera","Mana","Music > Rock > Soft Rock"
@@ -1037,8 +1037,8 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Mama, I'm Coming Home","Ozzy Osbourne","Music > Rock > Hard Rock > Power Ballad"
 "El Breve Espacio en Que No Estás","Pablo Milanes","Music > Folk > Latin Folk > Trova Cubana"
 "No Me Conoces Aún","Palomo","Music > Regional Mexicano > Texano"
-"La Carencia","Panteón Rococó","Music > Ska"
-"La Dosis Perfecta","Panteón Rococó","Music > Ska"
+"La Carencia","Panteón Rococó","Music > Rhythmic > Ska"
+"La Dosis Perfecta","Panteón Rococó","Music > Rhythmic > Ska"
 "Revolution Is My Name","Pantera","Music > Metal > Heavy Metal"
 "Last Resort","Papa Roach","Music > Metal > Heavy Metal"
 "Nineteen Hundred And Eighty Five","Paul McCartney","Music > Rock > Soft Rock"
@@ -1180,7 +1180,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Living Dead Girl","Rob Zombie","Music > Metal > Industrial Metal"
 "Scum Of The Earth","Rob Zombie","Music > Metal > Industrial Metal"
 "Clubbed to Death","Robert D","Music > Electronic > Big Beat"
-"Killing Me Softly With His Song","Roberta Flack","Music > Soul > Pop Soul"
+"Killing Me Softly With His Song","Roberta Flack","Music > Rhythmic > Soul > Pop Soul"
 "More Than This","Roxy Music","Music > Rock > Soft Rock"
 "In Dreams","Roy Orbison","Music > Pop > Pop Ballad"
 "You Got It","Roy Orbison","Music > Pop > Pop (Standard)"
@@ -1421,7 +1421,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "1517","The Whitest Boy Alive","Music > Pop > Indie Pop"
 "The Seeker","The Who","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Time of the Season","The Zombies","Music > Rock > Psychedelic Rock"
-"Pobre de Ti","Tijuana No!","Music > Ska"
+"Pobre de Ti","Tijuana No!","Music > Rhythmic > Ska"
 "Lagrimas de Sangre","Tony De La Rosa","Music > Regional Mexicano > Texano"
 "Me Piden","Tony De La Rosa","Music > Regional Mexicano > Texano"
 "Sigue Siendo La Misma","Tony De La Rosa","Music > Regional Mexicano > Texano"
@@ -1451,7 +1451,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Folk > Latin Folk > Vallenato
 "Orchestral Suite No. 3 in D Major, BWV 1068: II. Air ""On a G String"" (Arr. for Piano)","Various Interprets","Music > Classical > Solo Instrumental"
 "Por Gustarte","Various Interprets","Music > Folk > Latin Folk > Vallenato"
 "Preso","Various Interprets","Music > Pop > Pop Ballad"
-"El Esqueleto","Victimas Del Doctor Cerebro","Music > Ska"
+"El Esqueleto","Victimas Del Doctor Cerebro","Music > Rhythmic > Ska"
 "Color Me Once","Violent Femmes","Music > Rock > Indie Rock"
 "Color Me Once","Violent Femmes","Music > Folk > Traditional Folk"
 "Where Do You Run To","Vivian Girls","Music > Rock > Indie Rock"
