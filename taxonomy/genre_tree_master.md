@@ -55,7 +55,8 @@ Music
     Traditional Folk
     Latin Folk
       Vallenato
-      Trova
+      Trova Cubana
+      Latin Folk Pop
       Flamenco Pop
   Bolero
   Cumbia
