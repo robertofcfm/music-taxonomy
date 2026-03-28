@@ -18,6 +18,7 @@ Music
   Metal
     Heavy Metal
     Thrash Metal
+    Industrial Metal
     Power Metal
   Hip Hop
     Hip Hop (Standard)
