@@ -34,12 +34,14 @@ Music
     Downtempo
     Drum And Bass
     Big Beat
+    House
   Ska
   Funk
   Disco
     Hi-NRG
   Soul
     Pop Soul
+  R&B
   Classical
     Score
     Solo Instrumental
