@@ -1,55 +1,5 @@
 [
   {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 50,
-    "exactos": 50,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      },
-      {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Regional Mexicano > Norteño",
-    "total": 94,
-    "exactos": 94,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Rock > Hard Rock",
     "total": 73,
     "exactos": 0,
@@ -75,84 +25,34 @@
     ]
   },
   {
-    "nodo": "Music > Regional Mexicano > Texano",
-    "total": 107,
-    "exactos": 107,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Regional Mexicano > Texano"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Pop",
-    "total": 64,
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 129,
     "exactos": 0,
-    "de_paso": 64,
+    "de_paso": 129,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock",
-    "total": 294,
-    "exactos": 0,
-    "de_paso": 294,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       }
     ]
   },
   {
     "nodo": "Music > Rock > Alternative Rock",
-    "total": 66,
-    "exactos": 66,
+    "total": 67,
+    "exactos": 67,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -175,52 +75,52 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 126,
-    "exactos": 126,
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 50,
+    "exactos": 50,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
       }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music",
-    "total": 849,
+    "nodo": "Music > Metal",
+    "total": 53,
     "exactos": 0,
-    "de_paso": 849,
+    "de_paso": 53,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "We Die Young",
+        "artist": "Alice In Chains",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       }
     ]
   },
@@ -229,31 +129,6 @@
     "total": 131,
     "exactos": 0,
     "de_paso": 131,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 129,
-    "exactos": 0,
-    "de_paso": 129,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -300,9 +175,34 @@
     ]
   },
   {
+    "nodo": "Music > Regional Mexicano > Norteño",
+    "total": 94,
+    "exactos": 94,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
     "nodo": "Music > Rock > Indie Rock",
-    "total": 47,
-    "exactos": 47,
+    "total": 48,
+    "exactos": 48,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -320,6 +220,131 @@
         "title": "O Katrina!",
         "artist": "Black Lips",
         "genre": "Music > Rock > Indie Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Pop",
+    "total": 65,
+    "exactos": 0,
+    "de_paso": 65,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk > Vallenato",
+    "total": 126,
+    "exactos": 126,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 888,
+    "exactos": 0,
+    "de_paso": 888,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 299,
+    "exactos": 0,
+    "de_paso": 299,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano > Texano",
+    "total": 107,
+    "exactos": 107,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Regional Mexicano > Texano"
       }
     ],
     "ejemplos_de_paso": []
