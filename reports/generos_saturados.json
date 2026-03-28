@@ -1,153 +1,53 @@
 [
   {
-    "nodo": "Music > Rock > Indie Rock",
-    "total": 60,
-    "exactos": 60,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "The Suburbs",
-        "artist": "Arcade Fire",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Ramona",
-        "artist": "Beck",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "O Katrina!",
-        "artist": "Black Lips",
-        "genre": "Music > Rock > Indie Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 71,
-    "exactos": 71,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Jaded",
-        "artist": "Aerosmith",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music",
-    "total": 969,
+    "nodo": "Music > Electronic",
+    "total": 47,
     "exactos": 0,
-    "de_paso": 969,
+    "de_paso": 47,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "The Day Of The Greys",
+        "artist": "4hero",
+        "genre": "Music > Electronic > Drum And Bass"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "I Ran (So Far Away)",
+        "artist": "A Flock Of Seagulls",
+        "genre": "Music > Electronic > Synthpop"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Take on Me",
+        "artist": "A-Ha",
+        "genre": "Music > Electronic > Synthpop"
       }
     ]
   },
   {
-    "nodo": "Music > Folk > Latin Folk",
-    "total": 133,
+    "nodo": "Music > Pop",
+    "total": 70,
     "exactos": 0,
-    "de_paso": 133,
+    "de_paso": 70,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
       }
     ]
-  },
-  {
-    "nodo": "Music > Folk > Latin Folk > Vallenato",
-    "total": 130,
-    "exactos": 130,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Regional Mexicano > Norteño",
-    "total": 94,
-    "exactos": 94,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ],
-    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Rock > Post-Punk",
@@ -175,35 +75,10 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Folk",
-    "total": 135,
-    "exactos": 0,
-    "de_paso": 135,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Rock > Hard Rock",
-    "total": 73,
+    "total": 74,
     "exactos": 0,
-    "de_paso": 73,
+    "de_paso": 74,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -225,59 +100,59 @@
     ]
   },
   {
-    "nodo": "Music > Metal > Heavy Metal",
-    "total": 72,
-    "exactos": 72,
+    "nodo": "Music > Rock",
+    "total": 345,
+    "exactos": 0,
+    "de_paso": 345,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Indie Rock",
+    "total": 62,
+    "exactos": 62,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "We Die Young",
-        "artist": "Alice In Chains",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "The Suburbs",
+        "artist": "Arcade Fire",
+        "genre": "Music > Rock > Indie Rock"
       },
       {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "Ramona",
+        "artist": "Beck",
+        "genre": "Music > Rock > Indie Rock"
       },
       {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "O Katrina!",
+        "artist": "Black Lips",
+        "genre": "Music > Rock > Indie Rock"
       }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Regional Mexicano",
-    "total": 209,
-    "exactos": 0,
-    "de_paso": 209,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Regional Mexicano > Texano",
-    "total": 107,
-    "exactos": 107,
+    "total": 110,
+    "exactos": 110,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
@@ -300,10 +175,135 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Metal",
-    "total": 96,
+    "nodo": "Music > Folk",
+    "total": 139,
     "exactos": 0,
-    "de_paso": 96,
+    "de_paso": 139,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Folk > Latin Folk > Vallenato",
+    "total": 132,
+    "exactos": 132,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 1009,
+    "exactos": 0,
+    "de_paso": 1009,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano",
+    "total": 213,
+    "exactos": 0,
+    "de_paso": 213,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Regional Mexicano > Norteño",
+    "total": 94,
+    "exactos": 94,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Regional Mexicano > Norteño"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Metal",
+    "total": 97,
+    "exactos": 0,
+    "de_paso": 97,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -325,52 +325,83 @@
     ]
   },
   {
-    "nodo": "Music > Pop",
-    "total": 69,
-    "exactos": 0,
-    "de_paso": 69,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 76,
+    "exactos": 76,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Metal > Heavy Metal",
+    "total": 73,
+    "exactos": 72,
+    "de_paso": 1,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "We Die Young",
+        "artist": "Alice In Chains",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      }
+    ],
     "ejemplos_de_paso": [
       {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
+        "title": "Ace of Spades",
+        "artist": "Motörhead",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard) | Music > Metal > Heavy Metal"
       }
     ]
   },
   {
-    "nodo": "Music > Rock",
-    "total": 320,
+    "nodo": "Music > Folk > Latin Folk",
+    "total": 137,
     "exactos": 0,
-    "de_paso": 320,
+    "de_paso": 137,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Folk > Latin Folk > Vallenato"
       }
     ]
   }
