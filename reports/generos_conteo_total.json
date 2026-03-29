@@ -1,11 +1,11 @@
 [
   {
     "genre": "Music",
-    "count": 1492
+    "count": 1491
   },
   {
     "genre": "Music > Rock",
-    "count": 704
+    "count": 699
   },
   {
     "genre": "Music > Roots",
@@ -14,10 +14,6 @@
   {
     "genre": "Music > Roots > Regional Mexicano",
     "count": 236
-  },
-  {
-    "genre": "Music > Rock > Alternative Rock",
-    "count": 163
   },
   {
     "genre": "Music > Roots > Folk",
@@ -33,7 +29,11 @@
   },
   {
     "genre": "Music > Rock > Indie Rock",
-    "count": 128
+    "count": 140
+  },
+  {
+    "genre": "Music > Rock > Alternative Rock",
+    "count": 140
   },
   {
     "genre": "Music > Pop",
@@ -57,11 +57,11 @@
   },
   {
     "genre": "Music > Rock > Hard Rock",
-    "count": 88
+    "count": 89
   },
   {
     "genre": "Music > Rock > Psychedelic Rock",
-    "count": 59
+    "count": 62
   },
   {
     "genre": "Music > Metal > Heavy Metal",
@@ -73,27 +73,27 @@
   },
   {
     "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)",
-    "count": 50
+    "count": 51
   },
   {
     "genre": "Music > Pop > Indie Pop",
     "count": 48
   },
   {
-    "genre": "Music > Electronic",
-    "count": 46
+    "genre": "Music > Rhythmic",
+    "count": 47
   },
   {
     "genre": "Music > Pop > Pop Ballad",
     "count": 46
   },
   {
-    "genre": "Music > Hip Hop",
-    "count": 44
+    "genre": "Music > Electronic",
+    "count": 46
   },
   {
-    "genre": "Music > Rhythmic",
-    "count": 43
+    "genre": "Music > Hip Hop",
+    "count": 44
   },
   {
     "genre": "Music > Rock > Hard Rock > Power Ballad",
@@ -128,16 +128,12 @@
     "count": 16
   },
   {
-    "genre": "Music > Rock > Roots Rock",
+    "genre": "Music > Rock > Progressive Rock",
     "count": 15
   },
   {
-    "genre": "Music > Rock > Progressive Rock",
-    "count": 14
-  },
-  {
-    "genre": "Music > Rock > Folk Rock",
-    "count": 13
+    "genre": "Music > Rock > Roots Rock",
+    "count": 15
   },
   {
     "genre": "Music > Metal > Alternative Metal",
@@ -148,20 +144,36 @@
     "count": 13
   },
   {
-    "genre": "Music > Hip Hop > Pop Rap",
-    "count": 12
+    "genre": "Music > Rhythmic > Ska",
+    "count": 13
   },
   {
-    "genre": "Music > Electronic > Downtempo",
-    "count": 11
+    "genre": "Music > Rock > Folk Rock",
+    "count": 13
+  },
+  {
+    "genre": "Music > Hip Hop > Pop Rap",
+    "count": 12
   },
   {
     "genre": "Music > Roots > Cumbia",
     "count": 11
   },
   {
+    "genre": "Music > Electronic > Downtempo",
+    "count": 11
+  },
+  {
+    "genre": "Music > Rock > Pop Punk",
+    "count": 10
+  },
+  {
     "genre": "Music > Rhythmic > Soul",
     "count": 10
+  },
+  {
+    "genre": "Music > Hip Hop > Hip Hop (Classic)",
+    "count": 9
   },
   {
     "genre": "Music > Pop > Singer-Songwriter Pop",
@@ -172,22 +184,6 @@
     "count": 9
   },
   {
-    "genre": "Music > Rhythmic > Ska",
-    "count": 9
-  },
-  {
-    "genre": "Music > Hip Hop > Hip Hop (Classic)",
-    "count": 9
-  },
-  {
-    "genre": "Music > Rock > Pop Punk",
-    "count": 9
-  },
-  {
-    "genre": "Music > Rhythmic > Soul > Pop Soul",
-    "count": 8
-  },
-  {
     "genre": "Music > Pop > Psychedelic Pop",
     "count": 8
   },
@@ -196,11 +192,11 @@
     "count": 8
   },
   {
-    "genre": "Music > Pop > Pop (Standard)",
-    "count": 7
+    "genre": "Music > Rhythmic > Soul > Pop Soul",
+    "count": 8
   },
   {
-    "genre": "Music > Classical > Score",
+    "genre": "Music > Pop > Pop (Standard)",
     "count": 7
   },
   {
@@ -208,8 +204,8 @@
     "count": 7
   },
   {
-    "genre": "Music > Electronic > House",
-    "count": 6
+    "genre": "Music > Classical > Score",
+    "count": 7
   },
   {
     "genre": "Music > Electronic > Big Beat",
@@ -220,11 +216,11 @@
     "count": 6
   },
   {
-    "genre": "Music > Roots > Bolero",
-    "count": 5
+    "genre": "Music > Electronic > House",
+    "count": 6
   },
   {
-    "genre": "Music > Rhythmic > Funk",
+    "genre": "Music > Roots > Bolero",
     "count": 5
   },
   {
@@ -233,6 +229,10 @@
   },
   {
     "genre": "Music > Roots > Cumbia > Cumbia Pop",
+    "count": 5
+  },
+  {
+    "genre": "Music > Rhythmic > Funk",
     "count": 5
   },
   {
@@ -252,7 +252,7 @@
     "count": 2
   },
   {
-    "genre": "Music > Electronic > Drum And Bass",
+    "genre": "Music > Hip Hop > Trap",
     "count": 1
   },
   {
@@ -260,7 +260,7 @@
     "count": 1
   },
   {
-    "genre": "Music > Hip Hop > Trap",
+    "genre": "Music > Rock > Reggae Rock",
     "count": 1
   },
   {
@@ -268,7 +268,7 @@
     "count": 1
   },
   {
-    "genre": "Music > Rock > Reggae Rock",
+    "genre": "Music > Electronic > Drum And Bass",
     "count": 1
   }
 ]
