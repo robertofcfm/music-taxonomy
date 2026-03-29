@@ -19,6 +19,11 @@ Music
     Power Metal
     Thrash Metal
   Pop
+    Indie Pop
+    Pop (Standard)
+    Pop Ballad
+    Psychedelic Pop
+    Singer-Songwriter Pop
   Rhythmic
     Disco
     Funk

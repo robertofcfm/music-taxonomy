@@ -37,11 +37,15 @@ with open(input_csv, encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
         rows.append(row)
-genres = [row['genre'] for row in rows]
+
+# Solo géneros no vacíos ni nulos
+genres = [row['genre'] for row in rows if row.get('genre') and row['genre'].strip()]
 
 # Obtener todos los prefijos posibles
 all_prefixes = set()
 for genre in genres:
+    if not genre:
+        continue
     parts = genre.split(' > ')
     for i in range(1, len(parts)+1):
         prefix = ' > '.join(parts[:i])
@@ -62,7 +66,7 @@ saturados = [
 reporte = []
 for entry in saturados:
     nodo = entry['genre']
-    canciones_con_prefijo = [row for row in rows if nodo in row['genre']]
+    canciones_con_prefijo = [row for row in rows if row.get('genre') and nodo in row['genre']]
     exactos = [row for row in canciones_con_prefijo if row['genre'] == nodo]
     de_paso = [row for row in canciones_con_prefijo if row['genre'] != nodo]
     clasificacion = "Nodo saturado" if len(exactos) > 0 else "Género de Paso"

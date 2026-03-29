@@ -1,5 +1,230 @@
 [
   {
+    "nodo": "Music > Rock > Indie Rock",
+    "total": 128,
+    "exactos": 128,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "The Suburbs",
+        "artist": "Arcade Fire",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "Ramona",
+        "artist": "Beck",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "O Katrina!",
+        "artist": "Black Lips",
+        "genre": "Music > Rock > Indie Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
+    "total": 49,
+    "exactos": 49,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Roots > Folk > Latin Folk > Vallenato",
+    "total": 143,
+    "exactos": 143,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Metal",
+    "total": 114,
+    "exactos": 0,
+    "de_paso": 114,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Mother",
+        "artist": "Danzig",
+        "genre": "Music > Metal > Heavy Metal"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Pop > Indie Pop",
+    "total": 48,
+    "exactos": 48,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "You Should All Be Murdered",
+        "artist": "Another Sunny Day",
+        "genre": "Music > Pop > Indie Pop"
+      },
+      {
+        "title": "Escapee",
+        "artist": "Architecture in Helsinki",
+        "genre": "Music > Pop > Indie Pop"
+      },
+      {
+        "title": "Shark Smile",
+        "artist": "Big Thief",
+        "genre": "Music > Pop > Indie Pop"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Roots",
+    "total": 407,
+    "exactos": 0,
+    "de_paso": 407,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dime Porque",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+      },
+      {
+        "title": "Dime Quién",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+      },
+      {
+        "title": "Fuiste Mala",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Roots > Regional Mexicano > Norteño",
+    "total": 105,
+    "exactos": 105,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 704,
+    "exactos": 0,
+    "de_paso": 704,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
+    "nodo": "Music",
+    "total": 1492,
+    "exactos": 0,
+    "de_paso": 1492,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
+      },
+      {
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      }
+    ]
+  },
+  {
     "nodo": "Music > Metal > Heavy Metal",
     "total": 58,
     "exactos": 58,
@@ -25,54 +250,29 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Roots > Folk",
-    "total": 155,
+    "nodo": "Music > Pop",
+    "total": 118,
     "exactos": 0,
-    "de_paso": 155,
+    "de_paso": 118,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
       }
     ]
-  },
-  {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 160,
-    "exactos": 160,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Jaded",
-        "artist": "Aerosmith",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Roots > Folk > Latin Folk",
@@ -125,51 +325,26 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock",
-    "total": 699,
-    "exactos": 0,
-    "de_paso": 699,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Roots > Regional Mexicano > Texano",
-    "total": 116,
-    "exactos": 116,
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 163,
+    "exactos": 163,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
+        "title": "Jaded",
+        "artist": "Aerosmith",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
       },
       {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Alternative Rock"
       }
     ],
     "ejemplos_de_paso": []
@@ -200,185 +375,29 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Indie Rock",
-    "total": 128,
-    "exactos": 128,
+    "nodo": "Music > Roots > Regional Mexicano > Texano",
+    "total": 116,
+    "exactos": 116,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "The Suburbs",
-        "artist": "Arcade Fire",
-        "genre": "Music > Rock > Indie Rock"
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
       },
       {
-        "title": "Ramona",
-        "artist": "Beck",
-        "genre": "Music > Rock > Indie Rock"
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
       },
       {
-        "title": "O Katrina!",
-        "artist": "Black Lips",
-        "genre": "Music > Rock > Indie Rock"
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
       }
     ],
     "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Pop > Pop Ballad",
-    "total": 51,
-    "exactos": 51,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Roots > Regional Mexicano > Norteño",
-    "total": 105,
-    "exactos": 105,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Metal",
-    "total": 114,
-    "exactos": 0,
-    "de_paso": 114,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Mother",
-        "artist": "Danzig",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Pop > Indie Pop",
-    "total": 46,
-    "exactos": 46,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "You Should All Be Murdered",
-        "artist": "Another Sunny Day",
-        "genre": "Music > Pop > Indie Pop"
-      },
-      {
-        "title": "Escapee",
-        "artist": "Architecture in Helsinki",
-        "genre": "Music > Pop > Indie Pop"
-      },
-      {
-        "title": "Shark Smile",
-        "artist": "Big Thief",
-        "genre": "Music > Pop > Indie Pop"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 86,
-    "exactos": 1,
-    "de_paso": 85,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Joker And The Thief",
-        "artist": "Wolfmother",
-        "genre": "Music > Rock > Hard Rock"
-      }
-    ],
-    "ejemplos_de_paso": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ]
-  },
-  {
-    "nodo": "Music",
-    "total": 1497,
-    "exactos": 0,
-    "de_paso": 1497,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
   },
   {
     "nodo": "Music > Rock > Grunge",
@@ -406,12 +425,19 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
-    "total": 49,
-    "exactos": 49,
-    "de_paso": 0,
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 88,
+    "exactos": 1,
+    "de_paso": 87,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
+      {
+        "title": "Joker And The Thief",
+        "artist": "Wolfmother",
+        "genre": "Music > Rock > Hard Rock"
+      }
+    ],
+    "ejemplos_de_paso": [
       {
         "title": "Back In Black",
         "artist": "AC/DC",
@@ -427,31 +453,80 @@
         "artist": "AC/DC",
         "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
       }
+    ]
+  },
+  {
+    "nodo": "Music > Pop > Pop Ballad",
+    "total": 46,
+    "exactos": 46,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
+      }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Roots",
-    "total": 406,
+    "nodo": "Music > Roots > Regional Mexicano",
+    "total": 236,
     "exactos": 0,
-    "de_paso": 406,
+    "de_paso": 236,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "Dime Porque",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
       },
       {
-        "title": "Dime Quién",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
       },
       {
-        "title": "Fuiste Mala",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Roots > Folk",
+    "total": 155,
+    "exactos": 0,
+    "de_paso": 155,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
       }
     ]
   },
@@ -477,81 +552,6 @@
         "title": "Take on Me",
         "artist": "A-Ha",
         "genre": "Music > Electronic > Synthpop"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Roots > Folk > Latin Folk > Vallenato",
-    "total": 143,
-    "exactos": 143,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Roots > Regional Mexicano",
-    "total": 235,
-    "exactos": 0,
-    "de_paso": 235,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      },
-      {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Pop",
-    "total": 133,
-    "exactos": 0,
-    "de_paso": 133,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Rolling in the Deep",
-        "artist": "Adele",
-        "genre": "Music > Pop > Pop (Standard)"
-      },
-      {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
       }
     ]
   }
