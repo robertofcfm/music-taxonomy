@@ -199,7 +199,7 @@ Distintos Destinos,Binomio De Oro De América,Music > Roots > Folk > Latin Folk 
 "You Never Can Tell","Chuck Berry","Music > Rock > Roots Rock"
 "Apocalypse","Cigarettes After Sex","Music > Rock > Indie Rock"
 "Walking With Thee","Clinic","Music > Rock > Indie Rock"
-"Confetti","Cold Cave","Music > Electronic > Synthpop"
+"Confetti","Cold Cave","Music > Pop > Indie Pop"
 "Clocks","Coldplay","Music > Rock > Indie Rock"
 "In My Place","Coldplay","Music > Rock > Indie Rock"
 "The Scientist","Coldplay","Music > Pop > Pop Ballad"
@@ -250,14 +250,14 @@ I Wanna Kill,Crocodiles,Music > Rock > Post-Punk
 Mirrors,Crocodiles,Music > Rock > Post-Punk
 Stoned to Death,Crocodiles,Music > Rock > Post-Punk
 Wait Until Tomorrow,Crocodiles,Music > Rock > Post-Punk
-Don't Dream It's Over,Crowded House,Music > Electronic > Synthpop
+Don't Dream It's Over,Crowded House,Music > Rock > Indie Rock
 Not In Love,Crystal Castles,Music > Electronic > Downtempo
 Shake the Shackles,Crystal Stilts,Music > Rock > Post-Punk
 Star Crawl,Crystal Stilts,Music > Rock > Post-Punk
 Still as the Night,Crystal Stilts,Music > Rock > Post-Punk
 Cara de Pizza,Cuca,Music > Rock > Hard Rock > Hard Rock (Standard)
 El Son del Dolor,Cuca,Music > Rock > Hard Rock > Hard Rock (Standard)
-Where I'm Going,Cut Copy,Music > Electronic > Synthpop
+Where I'm Going,Cut Copy,Music > Pop > Indie Pop
 Time After Time,Cyndi Lauper,Music > Pop > Pop Ballad
 (Rap) Superstar,Cypress Hill,Music > Hip Hop > West Coast
 (Rock) Superstar,Cypress Hill,Music > Hip Hop > West Coast
@@ -293,7 +293,7 @@ Sweetest Perfection,Depeche Mode,Music > Electronic > Synthpop
 Under Your Spell,Desire,Music > Electronic > Synthpop
 Here With Me,Dido,Music > Pop > Pop Ballad
 Thank You,Dido,Music > Pop > Pop Ballad
-Circles,Digitalism,Music > Electronic > Synthpop
+Circles,Digitalism,Music > Pop > Indie Pop
 Doused,DIIV,Music > Rock > Indie Rock
 Feel The Pain,Dinosaur Jr.,Music > Rock > Indie Rock
 No Le Faltes a Mí Corazón,Diomedes Dionisio Diaz,Music > Roots > Folk > Latin Folk > Vallenato
@@ -433,7 +433,6 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Slow Ride","Foghat","Music > Rock > Blues Rock"
 "Big Me","Foo Fighters","Music > Rock > Alternative Rock"
 "Times Like These","Foo Fighters","Music > Rock > Alternative Rock"
-"Call It What You Want","Foster The People","Music > Electronic > Synthpop"
 "Call It What You Want","Foster The People","Music > Pop > Indie Pop"
 "Coming of Age","Foster The People","Music > Pop > Indie Pop"
 "Pumped Up Kicks","Foster The People","Music > Pop > Indie Pop"
@@ -464,8 +463,8 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "19-2000","Gorillaz","Music > Electronic > Big Beat"
 "Clint Eastwood","Gorillaz","Music > Electronic > Downtempo"
 "Feel Good Inc (featuring De La Soul)","Gorillaz","Music > Rock > Alternative Rock"
-"Lake Zurich","Gorillaz","Music > Electronic > Synthpop"
-"Rhinestone Eyes","Gorillaz","Music > Electronic > Synthpop"
+"Lake Zurich","Gorillaz","Music > Rock > Alternative Rock"
+"Rhinestone Eyes","Gorillaz","Music > Rock > Alternative Rock"
 "Somebody That I Used To Know","Gotye","Music > Pop > Indie Pop"
 "A.M. 180","Grandaddy","Music > Rock > Indie Rock"
 "Basket Case","Green Day","Music > Rock > Pop Punk"
@@ -670,11 +669,11 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Luna de Miel","La Tropa f","Music > Roots > Regional Mexicano > Texano"
 "Luna de Miel (Live)","La Tropa f","Music > Roots > Regional Mexicano > Texano"
 "No Soy Perfecto (Live)","La Tropa f","Music > Roots > Regional Mexicano > Texano"
-"Ghosts","Ladytron","Music > Electronic > Synthpop"
+"Ghosts","Ladytron","Music > Pop > Indie Pop"
 "A Punto De Marcharme","Lalo Mora","Music > Roots > Regional Mexicano > Banda"
 "Self Control","Laura Branigan","Music > Electronic > Synthpop"
 "american dream","LCD Soundsystem","Music > Electronic > Downtempo"
-"I Can Change","LCD Soundsystem","Music > Electronic > Synthpop"
+"I Can Change","LCD Soundsystem","Music > Rock > Indie Rock"
 "Someone Great","LCD Soundsystem","Music > Electronic > Downtempo"
 "Immigrant Song","Led Zeppelin","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Stairway to Heaven","Led Zeppelin","Music > Rock > Hard Rock > Power Ballad"
@@ -932,14 +931,14 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Wherever I May Roam","Metallica","Music > Metal > Heavy Metal"
 "Whiskey In The Jar","Metallica","Music > Metal > Heavy Metal"
 "Black Sheep","Metric","Music > Rock > Indie Rock"
-"Little Dark Age","MGMT","Music > Electronic > Synthpop"
-"Time to Pretend","MGMT","Music > Electronic > Synthpop"
+"Little Dark Age","MGMT","Music > Pop > Indie Pop"
+"Time to Pretend","MGMT","Music > Pop > Indie Pop"
 "Beat It","Michael Jackson","Music > Pop > Pop (Standard)"
 "Billie Jean","Michael Jackson","Music > Rhythmic > Funk"
 "Smooth Criminal","Michael Jackson","Music > Pop > Pop (Standard)"
 "Thriller","Michael Jackson","Music > Pop > Pop (Standard)"
-"Shadows","Midnight Juggernauts","Music > Electronic > Synthpop"
-"Virago","Midnight Juggernauts","Music > Electronic > Synthpop"
+"Shadows","Midnight Juggernauts","Music > Pop > Indie Pop"
+"Virago","Midnight Juggernauts","Music > Pop > Indie Pop"
 "Si tú no vuelves","Miguel Bosé","Music > Pop > Pop Ballad"
 "Ayúdame a Olvidarla","Miguel Morales","Music > Roots > Folk > Latin Folk > Vallenato"
 "Mi Diosa Humana","Miguel Morales","Music > Roots > Folk > Latin Folk > Vallenato"
@@ -1260,16 +1259,13 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Presiento Que Voy A Llorar","Talismanes De Fermin Canales","Music > Roots > Regional Mexicano > Norteño"
 "Psycho Killer","Talking Heads","Music > Rock > Post-Punk"
 "Psycho Killer (2005 Remaster)","Talking Heads","Music > Rock > Post-Punk"
-"Sax and Violins","Talking Heads","Music > Rock > Alternative Rock"
-"Sax and Violins","Talking Heads","Music > Electronic > Synthpop"
+"Sax and Violins","Talking Heads","Music > Rock > Indie Rock"
 "Love Fade","Tamaryn","Music > Rock > Psychedelic Rock"
 "Softcore","Tamaryn","Music > Rock > Psychedelic Rock"
 "Feels Like We Only Go Backwards","Tame Impala","Music > Rock > Psychedelic Rock"
 "Heaven Must Be Missing An Angel","Tavares","Music > Rhythmic > Disco"
-"Everybody Wants To Rule The World","Tears For Fears","Music > Electronic > Synthpop"
-"Everybody Wants To Rule The World","Tears For Fears","Music > Pop > Pop (Standard)"
-"Head Over Heels","Tears For Fears","Music > Electronic > Synthpop"
-"Head Over Heels","Tears For Fears","Music > Pop > Pop (Standard)"
+"Everybody Wants To Rule The World","Tears For Fears","Music > Pop > Indie Pop"
+"Head Over Heels","Tears For Fears","Music > Pop > Indie Pop"
 "Marquee Moon (Edit)","Television","Music > Rock > Post-Punk"
 "Hunger Strike","Temple Of The Dog","Music > Rock > Grunge"
 "Say Hello 2 Heaven","Temple Of The Dog","Music > Rock > Grunge"
@@ -1335,7 +1331,6 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "The W.A.N.D.","The Flaming Lips","Music > Rock > Psychedelic Rock"
 "Waterfall","The Fresh & Onlys","Music > Rock > Indie Rock"
 "Iris","THE GOO GOO DOLLS","Music > Rock > Hard Rock > Power Ballad"
-"Mute City (From \"F-Zero\")","The Greatest Bits","Music > Electronic > Synthpop"
 "Mute City (From \"F-Zero\")","The Greatest Bits","Music > Classical > Score"
 "Keep Your Eyes Ahead","The Helio Sequence","Music > Rock > Indie Rock"
 "It's Dawning","The Holydrug Couple","Music > Rock > Psychedelic Rock"
@@ -1371,7 +1366,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Every Breath You Take","The Police","Music > Rock > Soft Rock"
 "Every Breath You Take","The Police","Music > Rock > Post-Punk"
 "Soldier Girl","The Polyphonic Spree","Music > Pop > Indie Pop"
-"Love My Way","The Psychedelic Furs","Music > Electronic > Synthpop"
+"Love My Way","The Psychedelic Furs","Music > Rock > Indie Rock"
 "Love My Way","The Psychedelic Furs","Music > Rock > Post-Punk"
 "Sister Europe","The Psychedelic Furs","Music > Rock > Post-Punk"
 "The Ghost in You","The Psychedelic Furs","Music > Rock > Soft Rock"
@@ -1402,8 +1397,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Reptilia","The Strokes","Music > Rock > Alternative Rock"
 "The Adults Are Talking","The Strokes","Music > Rock > Alternative Rock"
 "Under Cover of Darkness","The Strokes","Music > Rock > Alternative Rock"
-"Hands","The Ting Tings","Music > Electronic > Synthpop"
-"Hands","The Ting Tings","Music > Pop > Pop (Standard)"
+"Hands","The Ting Tings","Music > Rock > Indie Rock"
 "Disco Inferno","The Trammps","Music > Rhythmic > Disco"
 "Bitter Sweet Symphony","The Verve","Music > Rock > Alternative Rock"
 "Bitter Sweet Symphony","The Verve","Music > Rock > Progressive Rock"
@@ -1454,28 +1448,16 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Where Do You Run To","Vivian Girls","Music > Rock > Indie Rock"
 "Low Rider","War","Music > Rhythmic > Funk"
 "A Place To Hide","White Lies","Music > Rock > Post-Punk"
-"A Place To Hide","White Lies","Music > Electronic > Synthpop"
 "Am I Really Going To Die","White Lies","Music > Rock > Post-Punk"
-"Am I Really Going To Die","White Lies","Music > Electronic > Synthpop"
 "Death","White Lies","Music > Rock > Post-Punk"
-"Death","White Lies","Music > Electronic > Synthpop"
 "Farewell To The Fairground","White Lies","Music > Rock > Post-Punk"
-"Farewell To The Fairground","White Lies","Music > Electronic > Synthpop"
 "Fire And Wings","White Lies","Music > Rock > Post-Punk"
-"Fire And Wings","White Lies","Music > Electronic > Synthpop"
 "Getting Even","White Lies","Music > Rock > Post-Punk"
-"Getting Even","White Lies","Music > Electronic > Synthpop"
 "Hold Back Your Love","White Lies","Music > Rock > Post-Punk"
-"Hold Back Your Love","White Lies","Music > Electronic > Synthpop"
-"Is My Love Enough?","White Lies","Music > Electronic > Synthpop"
 "Is My Love Enough?","White Lies","Music > Rock > Post-Punk"
 "Kick Me","White Lies","Music > Rock > Post-Punk"
-"Kick Me","White Lies","Music > Electronic > Synthpop"
 "Time To Give","White Lies","Music > Rock > Post-Punk"
-"Time To Give","White Lies","Music > Electronic > Synthpop"
 "To Lose My Life","White Lies","Music > Rock > Post-Punk"
-"To Lose My Life","White Lies","Music > Electronic > Synthpop"
-"Tokyo","White Lies","Music > Electronic > Synthpop"
 "Tokyo","White Lies","Music > Rock > Post-Punk"
 "I Have Nothing","Whitney Houston","Music > Pop > Pop Ballad"
 "I Will Always Love You","Whitney Houston","Music > Pop > Pop Ballad"
@@ -1495,7 +1477,6 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Nocturne","Wild Nothing","Music > Pop > Indie Pop"
 "Paradise","Wild Nothing","Music > Rock > Psychedelic Rock"
 "Paradise","Wild Nothing","Music > Pop > Indie Pop"
-"Partners in Motion","Wild Nothing","Music > Electronic > Synthpop"
 "Partners in Motion","Wild Nothing","Music > Pop > Indie Pop"
 "Ella Es Mi Vida","Wilfran Castillo","Music > Roots > Folk > Latin Folk > Vallenato"
 "Ella Se Llevó Mi Vida","Wilfran Castillo","Music > Roots > Folk > Latin Folk > Vallenato"

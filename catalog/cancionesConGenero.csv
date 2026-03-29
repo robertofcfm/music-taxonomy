@@ -2,8 +2,8 @@ title,artist,genre
 I'm Not In Love,10cc,Music > Rock
 Love Song,311,Music > Rock
 What's Up?,4 Non Blondes,Music > Rock
-The Day Of The Greys,4hero,Music > Electronic
-I Ran (So Far Away),A Flock Of Seagulls,Music > Electronic
+The Day Of The Greys,4hero,Music > Electronic > Drum And Bass
+I Ran (So Far Away),A Flock Of Seagulls,Music > Electronic > Synthpop
 Dime Porque,A.B. Quintanilla III Y Los Kumbia Kings,Music > Roots
 Dime Quién,A.B. Quintanilla III Y Los Kumbia Kings,Music > Roots
 Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,Music > Roots
@@ -31,9 +31,9 @@ Hole In My Soul,Aerosmith,Music > Rock
 "I Don't Want to Miss a Thing (From Armageddon"" Soundtrack)""",Aerosmith,Music > Rock
 Jaded,Aerosmith,Music > Rock
 Pink,Aerosmith,Music > Rock
-Take on Me,A-Ha,Music > Electronic
-Sexy Boy,Air,Music > Electronic
-Surfing on a Rocket,Air,Music > Electronic
+Take on Me,A-Ha,Music > Electronic > Synthpop
+Sexy Boy,Air,Music > Electronic > Downtempo
+Surfing on a Rocket,Air,Music > Electronic > Downtempo
 Lost In Love,Air Supply,Music > Rock
 El Circo,Albert Zamora Y Talento,Music > Roots
 Quien Mas Te Adora,Albert Zamora Y Talento,Music > Roots
@@ -58,7 +58,7 @@ Metalingus,Alter Bridge,Music > Rock
 A Horse with No Name,America,Music > Rock
 La Cumbia Sampuesana,Aniceto Molina,Music > Roots
 You Should All Be Murdered,Another Sunny Day,Music > Pop
-Cold Rock the Mic,Apollo 440,Music > Electronic
+Cold Rock the Mic,Apollo 440,Music > Electronic > Big Beat
 The Suburbs,Arcade Fire,Music > Rock
 Escapee,Architecture in Helsinki,Music > Pop
 Adúltera,"Arnulfo Jr. ""Rey Y As""",Music > Roots
@@ -133,7 +133,7 @@ Paranoid,Black Sabbath,Music > Metal
 No Rain,Blind Melon,Music > Rock
 First Date,blink-182,Music > Rock
 It's Getting Boring By The Sea,Blood Red Shoes,Music > Rock
-Season Song,Blue States,Music > Electronic
+Season Song,Blue States,Music > Electronic > Downtempo
 Beetlebum,Blur,Music > Rock
 Coffee & TV,Blur,Music > Rock
 Song 2,Blur,Music > Rock
@@ -159,12 +159,12 @@ Holding Out for a Hero,Bonnie Tyler,Music > Rock
 Total Eclipse of the Heart,Bonnie Tyler,Music > Rock
 Can't Take My Eyes Off You,Boys Town Gang,Music > Rhythmic > Disco
 The Book Lovers,Broadcast,Music > Pop
-Smalltown Boy,Bronski Beat,Music > Electronic
+Smalltown Boy,Bronski Beat,Music > Electronic > Synthpop
 (Everything I Do) I Do It For You,Bryan Adams,Music > Rock
 Liar,Built To Spill,Music > Rock
 Alicia,Bunbury,Music > Rock
 Salomé,Bunbury,Music > Rock
-Salute da Gods!!,Busta Rhymes,Music > Hip Hop
+Salute da Gods!!,Busta Rhymes,Music > Hip Hop > Boom Bap
 Ever Fallen in Love (With Someone You Shouldn't've?),Buzzcocks,Music > Rock
 What Do I Get?,Buzzcocks,Music > Rock
 Eres,Café Tacvba,Music > Rock
@@ -183,8 +183,8 @@ Nubes,Caifanes,Music > Rock
 Viento,Caifanes,Music > Rock
 Dance With Me,Cameron Avery,Music > Pop
 La Planta,Caos,Music > Rock
-La Pelotona,Cartel De Santa,Music > Hip Hop
-Todas Mueren por Mí,Cartel De Santa,Music > Hip Hop
+La Pelotona,Cartel De Santa,Music > Hip Hop > West Coast
+Todas Mueren por Mí,Cartel De Santa,Music > Hip Hop > West Coast
 All By Myself,Céline Dion,Music > Pop
 My Heart Will Go On,Céline Dion,Music > Pop
 Al pensar en ti,Celso Piña y su Ronda Bogotá,Music > Roots
@@ -199,7 +199,7 @@ You Owe Me Some Kind of Love,Chris Isaak,Music > Rock
 You Never Can Tell,Chuck Berry,Music > Rock
 Apocalypse,Cigarettes After Sex,Music > Rock
 Walking With Thee,Clinic,Music > Rock
-Confetti,Cold Cave,Music > Electronic
+Confetti,Cold Cave,Music > Pop
 Clocks,Coldplay,Music > Rock
 In My Place,Coldplay,Music > Rock
 The Scientist,Coldplay,Music > Pop
@@ -210,16 +210,16 @@ La Decision,Conjunto Oro,Music > Roots
 Llore,Conjunto Oro,Music > Roots
 Quiero Que Me Abraces,Conjunto Oro,Music > Roots
 Vete a Buscar Aquel,Conjunto Oro,Music > Roots
-Amnesia,Control Machete,Music > Hip Hop
-Andamos Armados,Control Machete,Music > Hip Hop
-Así Son Mis Días,Control Machete,Music > Hip Hop
-Cheve,Control Machete,Music > Hip Hop
-"Comprendes, Mendes?",Control Machete,Music > Hip Hop
-Danzón,Control Machete,Music > Hip Hop
-Humanos Mexicanos,Control Machete,Music > Hip Hop
-Ileso,Control Machete,Music > Hip Hop
-Si Señor,Control Machete,Music > Hip Hop
-Gangsta's Paradise (feat. L.V.),Coolio,Music > Hip Hop
+Amnesia,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Andamos Armados,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Así Son Mis Días,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Cheve,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+"Comprendes, Mendes?",Control Machete,Music > Hip Hop > Boom Bap
+Danzón,Control Machete,Music > Hip Hop > Boom Bap
+Humanos Mexicanos,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Ileso,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Si Señor,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Gangsta's Paradise (feat. L.V.),Coolio,Music > Hip Hop > West Coast
 Como olvidarte,Costumbre,Music > Roots
 Cuanto te amo,Costumbre,Music > Roots
 Esperare,Costumbre,Music > Roots
@@ -250,21 +250,21 @@ I Wanna Kill,Crocodiles,Music > Rock
 Mirrors,Crocodiles,Music > Rock
 Stoned to Death,Crocodiles,Music > Rock
 Wait Until Tomorrow,Crocodiles,Music > Rock
-Don't Dream It's Over,Crowded House,Music > Electronic
-Not In Love,Crystal Castles,Music > Electronic
+Don't Dream It's Over,Crowded House,Music > Rock
+Not In Love,Crystal Castles,Music > Electronic > Downtempo
 Shake the Shackles,Crystal Stilts,Music > Rock
 Star Crawl,Crystal Stilts,Music > Rock
 Still as the Night,Crystal Stilts,Music > Rock
 Cara de Pizza,Cuca,Music > Rock
 El Son del Dolor,Cuca,Music > Rock
-Where I'm Going,Cut Copy,Music > Electronic
+Where I'm Going,Cut Copy,Music > Pop
 Time After Time,Cyndi Lauper,Music > Pop
-(Rap) Superstar,Cypress Hill,Music > Hip Hop
-(Rock) Superstar,Cypress Hill,Music > Hip Hop
-Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Music > Hip Hop
-Siempre Peligroso,Cypress Hill,Music > Hip Hop
-Tequila (Tequila Sunrise),Cypress Hill,Music > Hip Hop
-Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Music > Hip Hop
+(Rap) Superstar,Cypress Hill,Music > Hip Hop > West Coast
+(Rock) Superstar,Cypress Hill,Music > Hip Hop > West Coast
+Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Music > Hip Hop > West Coast
+Siempre Peligroso,Cypress Hill,Music > Hip Hop > West Coast
+Tequila (Tequila Sunrise),Cypress Hill,Music > Hip Hop > West Coast
+Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Music > Hip Hop > West Coast
 Get Lucky,Daft Punk feat. Pharrell Williams,Music > Rhythmic > Disco
 Get Out of Control,Daniel Ash,Music > Rock
 Sunset Gun,Danse Society,Music > Rock
@@ -279,21 +279,21 @@ Mi Pequeño Lucero,David Lee Garza,Music > Roots
 Tengo Ganas,David Lee Garza,Music > Roots
 "Adagio for Strings, Op. 11",David Parry,Music > Classical
 You Spin Me Round (Like a Record),Dead Or Alive,Music > Rhythmic > Disco
-Girls,Death In Vegas,Music > Electronic
+Girls,Death In Vegas,Music > Electronic > Downtempo
 "Rush, Rush",Debbie Harry,Music > Rhythmic > Disco
 Desire Lines,Deerhunter,Music > Rock
 My Own Summer (Shove It),Deftones,Music > Metal
-Return Of The Tres,Delinquent Habits,Music > Hip Hop
-Tres Delinquentes,Delinquent Habits,Music > Hip Hop
-Enjoy the Silence,Depeche Mode,Music > Electronic
-Never Let Me Down Again,Depeche Mode,Music > Electronic
-Personal Jesus,Depeche Mode,Music > Electronic
-Stripped,Depeche Mode,Music > Electronic
-Sweetest Perfection,Depeche Mode,Music > Electronic
-Under Your Spell,Desire,Music > Electronic
+Return Of The Tres,Delinquent Habits,Music > Hip Hop > Boom Bap
+Tres Delinquentes,Delinquent Habits,Music > Hip Hop > Boom Bap
+Enjoy the Silence,Depeche Mode,Music > Electronic > Synthpop
+Never Let Me Down Again,Depeche Mode,Music > Electronic > Synthpop
+Personal Jesus,Depeche Mode,Music > Electronic > Synthpop
+Stripped,Depeche Mode,Music > Electronic > Synthpop
+Sweetest Perfection,Depeche Mode,Music > Electronic > Synthpop
+Under Your Spell,Desire,Music > Electronic > Synthpop
 Here With Me,Dido,Music > Pop
 Thank You,Dido,Music > Pop
-Circles,Digitalism,Music > Electronic
+Circles,Digitalism,Music > Pop
 Doused,DIIV,Music > Rock
 Feel The Pain,Dinosaur Jr.,Music > Rock
 No Le Faltes a Mí Corazón,Diomedes Dionisio Diaz,Music > Roots
@@ -302,11 +302,11 @@ Hail Bop,Django Django,Music > Pop
 Right the Wrongs,Django Django,Music > Pop
 The Real Me,Dover,Music > Rock
 Kingdom Of Rust,Doves,Music > Rock
-Forgot About Dre,Dr. Dre,Music > Hip Hop
-Still D.R.E.,Dr. Dre,Music > Hip Hop
-The Next Episode,Dr. Dre,Music > Hip Hop
+Forgot About Dre,Dr. Dre,Music > Hip Hop > West Coast
+Still D.R.E.,Dr. Dre,Music > Hip Hop > West Coast
+The Next Episode,Dr. Dre,Music > Hip Hop > West Coast
 Through The Fire And Flames,Dragonforce,Music > Metal
-Money In The Grave,Drake,Music > Hip Hop
+Money In The Grave,Drake,Music > Hip Hop > Trap
 ¿Cómo Evitar?,Duelo,Music > Roots
 ¿Qué Hubiera Sido De Mi Vida?,Duelo,Music > Roots
 Acostumbrándome,Duelo,Music > Roots
@@ -390,19 +390,19 @@ Pobre soñador,El Tri,Music > Rock
 Triste canción,El Tri,Music > Rock
 Last Train to London,Electric Light Orchestra,Music > Rhythmic > Disco
 Mr. Blue Sky,Electric Light Orchestra,Music > Pop
-A Real Hero,Electric Youth,Music > Electronic
+A Real Hero,Electric Youth,Music > Electronic > Synthpop
 Eclipse,Emilio Navaira,Music > Roots
 Ella Es Así,Emilio Navaira,Music > Roots
 Suficiente Amor,Emilio Navaira,Music > Roots
 Ya No Me Pones Atención,Emilio Navaira,Music > Roots
-Kill You,Eminem,Music > Hip Hop
-Lose Yourself,Eminem,Music > Hip Hop
-Sing For The Moment,Eminem,Music > Hip Hop
-Stan,Eminem,Music > Hip Hop
-Superman,Eminem,Music > Hip Hop
-The Real Slim Shady,Eminem,Music > Hip Hop
-The Way I Am,Eminem,Music > Hip Hop
-Without Me,Eminem,Music > Hip Hop
+Kill You,Eminem,Music > Hip Hop > Pop Rap
+Lose Yourself,Eminem,Music > Hip Hop > Boom Bap
+Sing For The Moment,Eminem,Music > Hip Hop > Pop Rap
+Stan,Eminem,Music > Hip Hop > Boom Bap
+Superman,Eminem,Music > Hip Hop > Pop Rap
+The Real Slim Shady,Eminem,Music > Hip Hop > Pop Rap
+The Way I Am,Eminem,Music > Hip Hop > Boom Bap
+Without Me,Eminem,Music > Hip Hop > Pop Rap
 Tears in Heaven,Eric Clapton,Music > Rock
 Eras Diferente,Erick Escobar,Music > Roots
 Eres Lo Contrario,Erick Escobar,Music > Roots
@@ -433,7 +433,6 @@ Hoy Tengo Miedo,Fobia,Music > Rock
 Slow Ride,Foghat,Music > Rock
 Big Me,Foo Fighters,Music > Rock
 Times Like These,Foo Fighters,Music > Rock
-Call It What You Want,Foster The People,Music > Electronic
 Call It What You Want,Foster The People,Music > Pop
 Coming of Age,Foster The People,Music > Pop
 Pumped Up Kicks,Foster The People,Music > Pop
@@ -441,31 +440,31 @@ Shuggie,Foxygen,Music > Pop
 space girl,Frances Forever,Music > Pop
 Vida Loca,Francisco Céspedes,Music > Rhythmic > Soul
 I Heard Ramona Sing,Frank Black,Music > Rock
-Swoon,Fujiya & Miyagi,Music > Electronic
-Scooby Snacks,Fun Lovin' Criminals,Music > Hip Hop
+Swoon,Fujiya & Miyagi,Music > Electronic > Downtempo
+Scooby Snacks,Fun Lovin' Criminals,Music > Rock
 I Think I'm Paranoid,Garbage,Music > Rock
 Only Happy When It Rains,Garbage,Music > Rock
 Starman,Garbage,Music > Rock
 Vow,Garbage,Music > Rock
-Cars,Gary Numan,Music > Electronic
-Down in the Park,Gary Numan,Music > Electronic
-M.E.,Gary Numan,Music > Electronic
-Metal,Gary Numan,Music > Electronic
+Cars,Gary Numan,Music > Electronic > Synthpop
+Down in the Park,Gary Numan,Music > Electronic > Synthpop
+M.E.,Gary Numan,Music > Electronic > Synthpop
+Metal,Gary Numan,Music > Electronic > Synthpop
 Elysium,Gavin Greenaway,Music > Classical
 Honor Him,Gavin Greenaway,Music > Classical
 My Sweet Lord,George Harrison,Music > Rock
-Botella Tras Botella,Gera MX,Music > Hip Hop
+Botella Tras Botella,Gera MX,Music > Hip Hop > Pop Rap
 Baker Street,Gerry Rafferty,Music > Rock
 Mi Historia Entre Tus Dedos,Gianluca Grignani,Music > Pop
 The World Is Yours,Glasvegas,Music > Rock
 I Will Survive,Gloria Gaynor,Music > Rhythmic > Disco
 Crazy,Gnarls Barkley,Music > Rhythmic > Soul
 Bring It On,Gomez,Music > Rock
-19-2000,Gorillaz,Music > Electronic
-Clint Eastwood,Gorillaz,Music > Electronic
+19-2000,Gorillaz,Music > Electronic > Big Beat
+Clint Eastwood,Gorillaz,Music > Electronic > Downtempo
 Feel Good Inc (featuring De La Soul),Gorillaz,Music > Rock
-Lake Zurich,Gorillaz,Music > Electronic
-Rhinestone Eyes,Gorillaz,Music > Electronic
+Lake Zurich,Gorillaz,Music > Rock
+Rhinestone Eyes,Gorillaz,Music > Rock
 Somebody That I Used To Know,Gotye,Music > Pop
 A.M. 180,Grandaddy,Music > Rock
 Basket Case,Green Day,Music > Rock
@@ -518,8 +517,8 @@ Maldito duende,Héroes del Silencio,Music > Rock
 Malibu,Hole,Music > Rock
 The Reason,Hoobastank,Music > Rock
 Shine On,House Of Love,Music > Rock
-Jump Around,House Of Pain,Music > Hip Hop
-Don't You Want Me,Human League,Music > Electronic
+Jump Around,House Of Pain,Music > Hip Hop > Boom Bap
+Don't You Want Me,Human League,Music > Electronic > Synthpop
 Melancholy,Human Tetris,Music > Rock
 Gardenia,Iggy Pop,Music > Rock
 Sunday,Iggy Pop,Music > Rock
@@ -670,16 +669,16 @@ Yo Te Amare,La Mafia,Music > Roots
 Luna de Miel,La Tropa f,Music > Roots
 Luna de Miel (Live),La Tropa f,Music > Roots
 No Soy Perfecto (Live),La Tropa f,Music > Roots
-Ghosts,Ladytron,Music > Electronic
+Ghosts,Ladytron,Music > Pop
 A Punto De Marcharme,Lalo Mora,Music > Roots
-Self Control,Laura Branigan,Music > Electronic
-american dream,LCD Soundsystem,Music > Electronic
-I Can Change,LCD Soundsystem,Music > Electronic
-Someone Great,LCD Soundsystem,Music > Electronic
+Self Control,Laura Branigan,Music > Electronic > Synthpop
+american dream,LCD Soundsystem,Music > Electronic > Downtempo
+I Can Change,LCD Soundsystem,Music > Rock
+Someone Great,LCD Soundsystem,Music > Electronic > Downtempo
 Immigrant Song,Led Zeppelin,Music > Rock
 Stairway to Heaven,Led Zeppelin,Music > Rock
 Whole Lotta Love,Led Zeppelin,Music > Rock
-Por Mi México,Lefty Sm,Music > Hip Hop
+Por Mi México,Lefty Sm,Music > Hip Hop > Pop Rap
 Brillas,Leon Larregui,Music > Pop
 Hallelujah,Leonard Cohen,Music > Roots
 You And Me,Lifehouse,Music > Pop
@@ -830,10 +829,10 @@ Por Debajo De La Mesa,Luis Miguel,Music > Roots
 Tengo Todo Excepto a Ti,Luis Miguel,Music > Pop
 Inalcanzable,Luis Miguel Fuentes,Music > Roots
 Chao Chao Amor,Luis Y Julian,Music > Roots
-Grandes Ligas,Lupillo Rivera,Music > Hip Hop
+Grandes Ligas,Lupillo Rivera,Music > Hip Hop > Pop Rap
 Cómo Olvidarte,Luz Mabel,Music > Roots
-U Can't Touch This,M.C. Hammer,Music > Hip Hop
-Midnight City,M83,Music > Electronic
+U Can't Touch This,M.C. Hammer,Music > Hip Hop > West Coast
+Midnight City,M83,Music > Electronic > Synthpop
 Golgotha Tenement Blues,Machines Of Loving Grace,Music > Metal
 Our House,Madness,Music > Pop
 "Lo Pasado, Pasado",Maldita Vecindad y Los Hijos del 5to Patio,Music > Rock
@@ -932,25 +931,25 @@ Welcome Home (Sanitarium),Metallica,Music > Metal
 Wherever I May Roam,Metallica,Music > Metal
 Whiskey In The Jar,Metallica,Music > Metal
 Black Sheep,Metric,Music > Rock
-Little Dark Age,MGMT,Music > Electronic
-Time to Pretend,MGMT,Music > Electronic
+Little Dark Age,MGMT,Music > Pop
+Time to Pretend,MGMT,Music > Pop
 Beat It,Michael Jackson,Music > Pop
 Billie Jean,Michael Jackson,Music > Rhythmic > Funk
 Smooth Criminal,Michael Jackson,Music > Pop
 Thriller,Michael Jackson,Music > Pop
-Shadows,Midnight Juggernauts,Music > Electronic
-Virago,Midnight Juggernauts,Music > Electronic
+Shadows,Midnight Juggernauts,Music > Pop
+Virago,Midnight Juggernauts,Music > Pop
 Si tú no vuelves,Miguel Bosé,Music > Pop
 Ayúdame a Olvidarla,Miguel Morales,Music > Roots
 Mi Diosa Humana,Miguel Morales,Music > Roots
 Por Un Beso De Tu Boca,Miguel Morales,Music > Roots
 Sirena Encantada,Miguel Morales,Music > Roots
-Éxtasis,Millonario & W. Corona,Music > Hip Hop
+Éxtasis,Millonario & W. Corona,Music > Hip Hop > Pop Rap
 Monk,Mini Mansions,Music > Rock
 Vertigo,Mini Mansions,Music > Rock
 Edgar Allan Poe Was a Hardcore Dancer,Modern Aquatic,Music > Rock
 I Melt With You,Modern English,Music > Rock
-Lady,Modjo,Music > Electronic
+Lady,Modjo,Music > Electronic > House
 Судно (Борис Рыжий),Molchat Doma,Music > Rock
 Frijolero,Molotov,Music > Rock
 Gimme Tha Power,Molotov,Music > Rock
@@ -979,20 +978,20 @@ El Color de Tus Ojos,Natalia Jiménez,Music > Roots
 Soledad y el Mar,Natalia Lafourcade,Music > Roots
 Tú Sí Sabes Quererme,Natalia Lafourcade,Music > Roots
 Torn,Natalie Imbruglia,Music > Pop
-Calabria 2008,Natasja,Music > Electronic
+Calabria 2008,Natasja,Music > Electronic > House
 Cómo Duele,Negami,Music > Roots
 Dicen Por Ahi,Negami,Music > Roots
 Y No Lo Acepto,Negami,Music > Roots
 Harvest Moon,Neil Young,Music > Rock
-Dilemma,Nelly,Music > Hip Hop
-Ride Wit Me,Nelly,Music > Hip Hop
+Dilemma,Nelly,Music > Hip Hop > Pop Rap
+Ride Wit Me,Nelly,Music > Hip Hop > Pop Rap
 Ajena,Nelson Velasquez,Music > Roots
 Casualidad,Nelson Velasquez,Music > Roots
-Age of Consent,New Order,Music > Electronic
-Bizarre Love Triangle,New Order,Music > Electronic
-Bizarre Love Triangle,New Order,Music > Electronic
-Temptation,New Order,Music > Electronic
-Temptation,New Order,Music > Electronic
+Age of Consent,New Order,Music > Electronic > Synthpop
+Bizarre Love Triangle,New Order,Music > Electronic > Synthpop
+Bizarre Love Triangle,New Order,Music > Electronic > House
+Temptation,New Order,Music > Electronic > Synthpop
+Temptation,New Order,Music > Electronic > House
 Red Right Hand,Nick Cave & The Bad Seeds,Music > Rock
 Dead Souls,Nine Inch Nails,Music > Rock
 About A Girl,Nirvana,Music > Rock
@@ -1067,7 +1066,7 @@ Loco,Pesado,Music > Roots
 Mundo de amor,Pesado,Music > Roots
 My Body Is A Cage,Peter Gabriel,Music > Rock
 My Body Is A Cage,Peter Gabriel,Music > Rock
-Major Tom (Coming Home),Peter Schilling,Music > Electronic
+Major Tom (Coming Home),Peter Schilling,Music > Electronic > Synthpop
 Lisztomania,Phoenix,Music > Pop
 "Another Brick in the Wall, Pt. 2",Pink Floyd,Music > Rock
 Comfortably Numb,Pink Floyd,Music > Rock
@@ -1095,7 +1094,7 @@ Zond,Pond,Music > Rock
 Head In The Sand,Pop Unknown,Music > Rock
 Got It All (This Can't Be Living Now),Portugal. The Man,Music > Rock
 Cigarette Duet,Princess Chelsea,Music > Pop
-I'll Be Missing You (feat. Faith Evans & 112),Puff Daddy,Music > Hip Hop
+I'll Be Missing You (feat. Faith Evans & 112),Puff Daddy,Music > Hip Hop > Pop Rap
 Babies,Pulp,Music > Rock
 Bar Italia,Pulp,Music > Rock
 Common People,Pulp,Music > Rock
@@ -1106,7 +1105,7 @@ Monday Morning,Pulp,Music > Rock
 Something Changed,Pulp,Music > Rock
 Sorted For E's & Wizz,Pulp,Music > Rock
 Underwear,Pulp,Music > Rock
-Goodbye Horses - Single,Q Lazzarus,Music > Electronic
+Goodbye Horses - Single,Q Lazzarus,Music > Electronic > Synthpop
 Another One Bites The Dust,Queen,Music > Rhythmic > Funk
 Bohemian Rhapsody,Queen,Music > Rock
 Don't Stop Me Now,Queen,Music > Pop
@@ -1176,7 +1175,7 @@ Right Here Waiting,Richard Marx,Music > Pop
 Dragula,Rob Zombie,Music > Metal
 Living Dead Girl,Rob Zombie,Music > Metal
 Scum Of The Earth,Rob Zombie,Music > Metal
-Clubbed to Death,Robert D,Music > Electronic
+Clubbed to Death,Robert D,Music > Electronic > Big Beat
 Killing Me Softly With His Song,Roberta Flack,Music > Rhythmic > Soul
 More Than This,Roxy Music,Music > Rock
 In Dreams,Roy Orbison,Music > Pop
@@ -1186,7 +1185,7 @@ Alice Isn't Playing,Sad Lovers & Giants,Music > Rock
 Colourless Dream,Sad Lovers & Giants,Music > Rock
 Landslide,Sad Lovers & Giants,Music > Rock
 Things We Never Did,Sad Lovers and Giants,Music > Rock
-Played-A-Live (The Bongo Song),Safri Duo,Music > Electronic
+Played-A-Live (The Bongo Song),Safri Duo,Music > Electronic > House
 Cold Cold Man,Saint Motel,Music > Rock
 My Type,Saint Motel,Music > Pop
 Origami,Saint Motel,Music > Rock
@@ -1226,7 +1225,7 @@ Fallen in Love,Smith Westerns,Music > Rock
 Only One,Smith Westerns,Music > Rock
 Smile,Smith Westerns,Music > Rock
 Still New,Smith Westerns,Music > Rock
-Low Five,Sneaker Pimps,Music > Electronic
+Low Five,Sneaker Pimps,Music > Electronic > Downtempo
 De Música Ligera,Soda Stereo,Music > Rock
 En La Ciudad De La Furia,Soda Stereo,Music > Rock
 En La Ciudad De La Furia,Soda Stereo,Music > Rock
@@ -1261,26 +1260,23 @@ Presiento Que Voy A Llorar,Talismanes De Fermin Canales,Music > Roots
 Psycho Killer,Talking Heads,Music > Rock
 Psycho Killer (2005 Remaster),Talking Heads,Music > Rock
 Sax and Violins,Talking Heads,Music > Rock
-Sax and Violins,Talking Heads,Music > Electronic
 Love Fade,Tamaryn,Music > Rock
 Softcore,Tamaryn,Music > Rock
 Feels Like We Only Go Backwards,Tame Impala,Music > Rock
 Heaven Must Be Missing An Angel,Tavares,Music > Rhythmic > Disco
-Everybody Wants To Rule The World,Tears For Fears,Music > Electronic
 Everybody Wants To Rule The World,Tears For Fears,Music > Pop
-Head Over Heels,Tears For Fears,Music > Electronic
 Head Over Heels,Tears For Fears,Music > Pop
 Marquee Moon (Edit),Television,Music > Rock
 Hunger Strike,Temple Of The Dog,Music > Rock
 Say Hello 2 Heaven,Temple Of The Dog,Music > Rock
 Move With the Season,Temples,Music > Rock
-La Plaga,Tha Mexakinz,Music > Hip Hop
+La Plaga,Tha Mexakinz,Music > Hip Hop > Hip Hop (Classic)
 House of the Rising Sun,The Animals,Music > Rock
 House of the Rising Sun,The Animals,Music > Roots
 Private Idaho,The B-52's,Music > Rock
 Rock Lobster,The B-52's,Music > Rock
 Half Believing,The Black Angels,Music > Rock
-I Gotta Feeling,The Black Eyed Peas,Music > Electronic
+I Gotta Feeling,The Black Eyed Peas,Music > Electronic > House
 I Gotta Feeling,The Black Eyed Peas,Music > Pop
 Gold on the Ceiling,The Black Keys,Music > Rock
 Lonely Boy,The Black Keys,Music > Rock
@@ -1295,9 +1291,9 @@ In Answer,The Chameleons,Music > Rock
 Second Skin,The Chameleons,Music > Rock
 Swamp Thing,The Chameleons,Music > Rock
 Tears,The Chameleons,Music > Rock
-Hey Boy Hey Girl,The Chemical Brothers,Music > Electronic
-Out Of Control,The Chemical Brothers,Music > Electronic
-The Golden Path,The Chemical Brothers,Music > Electronic
+Hey Boy Hey Girl,The Chemical Brothers,Music > Electronic > Big Beat
+Out Of Control,The Chemical Brothers,Music > Electronic > Big Beat
+The Golden Path,The Chemical Brothers,Music > Electronic > Big Beat
 Antenna,The Church,Music > Rock
 Antenna,The Church,Music > Rock
 Destination,The Church,Music > Rock
@@ -1335,7 +1331,6 @@ Race for the Prize,The Flaming Lips,Music > Rock
 The W.A.N.D.,The Flaming Lips,Music > Rock
 Waterfall,The Fresh & Onlys,Music > Rock
 Iris,THE GOO GOO DOLLS,Music > Rock
-"Mute City (From \F-Zero\"")""",The Greatest Bits,Music > Electronic
 "Mute City (From \F-Zero\"")""",The Greatest Bits,Music > Classical
 Keep Your Eyes Ahead,The Helio Sequence,Music > Rock
 It's Dawning,The Holydrug Couple,Music > Rock
@@ -1371,7 +1366,7 @@ The Captain,The Phoenix Foundation,Music > Rock
 Every Breath You Take,The Police,Music > Rock
 Every Breath You Take,The Police,Music > Rock
 Soldier Girl,The Polyphonic Spree,Music > Pop
-Love My Way,The Psychedelic Furs,Music > Electronic
+Love My Way,The Psychedelic Furs,Music > Rock
 Love My Way,The Psychedelic Furs,Music > Rock
 Sister Europe,The Psychedelic Furs,Music > Rock
 The Ghost in You,The Psychedelic Furs,Music > Rock
@@ -1402,8 +1397,7 @@ Machu Picchu,The Strokes,Music > Rock
 Reptilia,The Strokes,Music > Rock
 The Adults Are Talking,The Strokes,Music > Rock
 Under Cover of Darkness,The Strokes,Music > Rock
-Hands,The Ting Tings,Music > Electronic
-Hands,The Ting Tings,Music > Pop
+Hands,The Ting Tings,Music > Rock
 Disco Inferno,The Trammps,Music > Rhythmic > Disco
 Bitter Sweet Symphony,The Verve,Music > Rock
 Bitter Sweet Symphony,The Verve,Music > Rock
@@ -1436,12 +1430,12 @@ Wolf Like Me,TV On The Radio,Music > Rock
 An Cat Dubh,U2,Music > Rock
 "Hold Me, Thrill Me, Kiss Me, Kill Me",U2,Music > Rock
 No Line On The Horizon,U2,Music > Rock
-Hold My Hand,Unkle,Music > Electronic
+Hold My Hand,Unkle,Music > Electronic > Downtempo
 "Girl, You'll Be a Woman Soon",Urge Overkill,Music > Rock
 "Girl, You'll Be a Woman Soon",Urge Overkill,Music > Pop
 Young,Vacations,Music > Pop
 Soy Así,Valentín Elizalde,Music > Roots
-Ice Ice Baby,Vanilla Ice,Music > Hip Hop
+Ice Ice Baby,Vanilla Ice,Music > Hip Hop > Hip Hop (Classic)
 Ay Hombe,Various Interprets,Music > Roots
 Llévame En Tus Sueños,Various Interprets,Music > Roots
 No Podrán Separarnos,Various Interprets,Music > Roots
@@ -1454,28 +1448,16 @@ Color Me Once,Violent Femmes,Music > Roots
 Where Do You Run To,Vivian Girls,Music > Rock
 Low Rider,War,Music > Rhythmic > Funk
 A Place To Hide,White Lies,Music > Rock
-A Place To Hide,White Lies,Music > Electronic
 Am I Really Going To Die,White Lies,Music > Rock
-Am I Really Going To Die,White Lies,Music > Electronic
 Death,White Lies,Music > Rock
-Death,White Lies,Music > Electronic
 Farewell To The Fairground,White Lies,Music > Rock
-Farewell To The Fairground,White Lies,Music > Electronic
 Fire And Wings,White Lies,Music > Rock
-Fire And Wings,White Lies,Music > Electronic
 Getting Even,White Lies,Music > Rock
-Getting Even,White Lies,Music > Electronic
 Hold Back Your Love,White Lies,Music > Rock
-Hold Back Your Love,White Lies,Music > Electronic
-Is My Love Enough?,White Lies,Music > Electronic
 Is My Love Enough?,White Lies,Music > Rock
 Kick Me,White Lies,Music > Rock
-Kick Me,White Lies,Music > Electronic
 Time To Give,White Lies,Music > Rock
-Time To Give,White Lies,Music > Electronic
 To Lose My Life,White Lies,Music > Rock
-To Lose My Life,White Lies,Music > Electronic
-Tokyo,White Lies,Music > Electronic
 Tokyo,White Lies,Music > Rock
 I Have Nothing,Whitney Houston,Music > Pop
 I Will Always Love You,Whitney Houston,Music > Pop
@@ -1495,7 +1477,6 @@ Nocturne,Wild Nothing,Music > Rock
 Nocturne,Wild Nothing,Music > Pop
 Paradise,Wild Nothing,Music > Rock
 Paradise,Wild Nothing,Music > Pop
-Partners in Motion,Wild Nothing,Music > Electronic
 Partners in Motion,Wild Nothing,Music > Pop
 Ella Es Mi Vida,Wilfran Castillo,Music > Roots
 Ella Se Llevó Mi Vida,Wilfran Castillo,Music > Roots
