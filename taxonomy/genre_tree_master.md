@@ -16,6 +16,7 @@ Music
     Trap
     West Coast
   Metal
+    Alternative Metal
     Heavy Metal
     Industrial Metal
     Power Metal
