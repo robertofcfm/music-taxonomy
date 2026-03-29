@@ -31,6 +31,20 @@ Music
     Ska
     Soul
   Rock
+    Hard Rock
+      Hard Rock (Standard)
+      Power Ballad
+    Indie Rock
+    Post-Punk
+    Alternative Rock (reducido)
+    Psychedelic Rock
+    Grunge
+    Progressive Rock
+    Blues Rock
+    Folk Rock
+    Roots Rock
+    Soft Rock
+    Pop Punk
   Roots
     Bolero
     Cumbia
