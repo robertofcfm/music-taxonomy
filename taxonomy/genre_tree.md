@@ -2,6 +2,11 @@ Music
   Classical
   Electronic
   Hip Hop
+    Boom Bap
+    Hip Hop (Classic)
+    Pop Rap
+    Trap
+    West Coast
   Metal
   Pop
   Rhythmic

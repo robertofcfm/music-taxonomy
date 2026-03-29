@@ -11,7 +11,8 @@ Music
     Synthpop
   Hip Hop
     Boom Bap
-    Hip Hop (Standard)
+    Hip Hop (Classic)
+    Pop Rap
     Trap
     West Coast
   Metal

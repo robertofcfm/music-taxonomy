@@ -210,15 +210,15 @@ Distintos Destinos,Binomio De Oro De América,Music > Roots > Folk > Latin Folk 
 "Llore","Conjunto Oro","Music > Roots > Regional Mexicano > Norteño"
 Quiero Que Me Abraces,Conjunto Oro,Music > Roots > Regional Mexicano > Norteño
 Vete a Buscar Aquel,Conjunto Oro,Music > Roots > Regional Mexicano > Norteño
-Amnesia,Control Machete,Music > Hip Hop > Hip Hop (Standard)
-Andamos Armados,Control Machete,Music > Hip Hop > Hip Hop (Standard)
-Así Son Mis Días,Control Machete,Music > Hip Hop > Hip Hop (Standard)
-Cheve,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Amnesia,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Andamos Armados,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Así Son Mis Días,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Cheve,Control Machete,Music > Hip Hop > Hip Hop (Classic)
 "Comprendes, Mendes?",Control Machete,Music > Hip Hop > Boom Bap
 Danzón,Control Machete,Music > Hip Hop > Boom Bap
-Humanos Mexicanos,Control Machete,Music > Hip Hop > Hip Hop (Standard)
-Ileso,Control Machete,Music > Hip Hop > Hip Hop (Standard)
-Si Señor,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Humanos Mexicanos,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Ileso,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Si Señor,Control Machete,Music > Hip Hop > Hip Hop (Classic)
 Gangsta's Paradise (feat. L.V.),Coolio,Music > Hip Hop > West Coast
 Como olvidarte,Costumbre,Music > Roots > Regional Mexicano > Texano
 Cuanto te amo,Costumbre,Music > Roots > Regional Mexicano > Texano
@@ -395,14 +395,14 @@ Eclipse,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ella Es Así,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Suficiente Amor,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ya No Me Pones Atención,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
-Kill You,Eminem,Music > Hip Hop > Hip Hop (Standard)
+Kill You,Eminem,Music > Hip Hop > Pop Rap
 Lose Yourself,Eminem,Music > Hip Hop > Boom Bap
-Sing For The Moment,Eminem,Music > Hip Hop > Hip Hop (Standard)
+Sing For The Moment,Eminem,Music > Hip Hop > Pop Rap
 Stan,Eminem,Music > Hip Hop > Boom Bap
-Superman,Eminem,Music > Hip Hop > Hip Hop (Standard)
-The Real Slim Shady,Eminem,Music > Hip Hop > Hip Hop (Standard)
+Superman,Eminem,Music > Hip Hop > Pop Rap
+The Real Slim Shady,Eminem,Music > Hip Hop > Pop Rap
 The Way I Am,Eminem,Music > Hip Hop > Boom Bap
-Without Me,Eminem,Music > Hip Hop > Hip Hop (Standard)
+Without Me,Eminem,Music > Hip Hop > Pop Rap
 Tears in Heaven,Eric Clapton,Music > Rock > Soft Rock
 Eras Diferente,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 Eres Lo Contrario,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
@@ -442,7 +442,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Vida Loca","Francisco Céspedes","Music > Rhythmic > Soul > Pop Soul"
 "I Heard Ramona Sing","Frank Black","Music > Rock > Alternative Rock"
 "Swoon","Fujiya & Miyagi","Music > Electronic > Downtempo"
-"Scooby Snacks","Fun Lovin' Criminals","Music > Hip Hop > Hip Hop (Standard)"
+"Scooby Snacks","Fun Lovin' Criminals","Music > Rock > Alternative Rock"
 "I Think I'm Paranoid","Garbage","Music > Rock > Alternative Rock"
 "Only Happy When It Rains","Garbage","Music > Rock > Alternative Rock"
 "Starman","Garbage","Music > Rock > Alternative Rock"
@@ -454,7 +454,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Elysium","Gavin Greenaway","Music > Classical > Orchestral"
 "Honor Him","Gavin Greenaway","Music > Classical > Orchestral"
 "My Sweet Lord","George Harrison","Music > Rock > Folk Rock"
-"Botella Tras Botella","Gera MX","Music > Hip Hop > Hip Hop (Standard)"
+"Botella Tras Botella","Gera MX","Music > Hip Hop > Pop Rap"
 "Baker Street","Gerry Rafferty","Music > Rock > Soft Rock"
 "Mi Historia Entre Tus Dedos","Gianluca Grignani","Music > Pop > Pop Ballad"
 "The World Is Yours","Glasvegas","Music > Rock > Indie Rock"
@@ -679,7 +679,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Immigrant Song","Led Zeppelin","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Stairway to Heaven","Led Zeppelin","Music > Rock > Hard Rock > Power Ballad"
 "Whole Lotta Love","Led Zeppelin","Music > Rock > Blues Rock"
-"Por Mi México","Lefty Sm","Music > Hip Hop > Hip Hop (Standard)"
+"Por Mi México","Lefty Sm","Music > Hip Hop > Pop Rap"
 "Brillas","Leon Larregui","Music > Pop > Indie Pop"
 "Hallelujah","Leonard Cohen","Music > Roots > Folk > Traditional Folk"
 "You And Me","Lifehouse","Music > Pop > Pop Ballad"
@@ -830,7 +830,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Tengo Todo Excepto a Ti","Luis Miguel","Music > Pop > Pop Ballad"
 "Inalcanzable","Luis Miguel Fuentes","Music > Roots > Regional Mexicano > Texano"
 "Chao Chao Amor","Luis Y Julian","Music > Roots > Regional Mexicano > Norteño"
-"Grandes Ligas","Lupillo Rivera","Music > Hip Hop > Hip Hop (Standard)"
+"Grandes Ligas","Lupillo Rivera","Music > Hip Hop > Pop Rap"
 "Cómo Olvidarte","Luz Mabel","Music > Roots > Folk > Latin Folk > Vallenato"
 "U Can't Touch This","M.C. Hammer","Music > Hip Hop > West Coast"
 "Midnight City","M83","Music > Electronic > Synthpop"
@@ -945,7 +945,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Mi Diosa Humana","Miguel Morales","Music > Roots > Folk > Latin Folk > Vallenato"
 "Por Un Beso De Tu Boca","Miguel Morales","Music > Roots > Folk > Latin Folk > Vallenato"
 "Sirena Encantada","Miguel Morales","Music > Roots > Folk > Latin Folk > Vallenato"
-"Éxtasis","Millonario & W. Corona","Music > Hip Hop > Hip Hop (Standard)"
+"Éxtasis","Millonario & W. Corona","Music > Hip Hop > Pop Rap"
 "Monk","Mini Mansions","Music > Rock > Indie Rock"
 "Vertigo","Mini Mansions","Music > Rock > Indie Rock"
 "Edgar Allan Poe Was a Hardcore Dancer","Modern Aquatic","Music > Rock > Indie Rock"
@@ -984,8 +984,8 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Dicen Por Ahi","Negami","Music > Roots > Regional Mexicano > Texano"
 "Y No Lo Acepto","Negami","Music > Roots > Regional Mexicano > Texano"
 "Harvest Moon","Neil Young","Music > Rock > Folk Rock"
-"Dilemma","Nelly","Music > Hip Hop > Hip Hop (Standard)"
-"Ride Wit Me","Nelly","Music > Hip Hop > Hip Hop (Standard)"
+"Dilemma","Nelly","Music > Hip Hop > Pop Rap"
+"Ride Wit Me","Nelly","Music > Hip Hop > Pop Rap"
 "Ajena","Nelson Velasquez","Music > Roots > Folk > Latin Folk > Vallenato"
 "Casualidad","Nelson Velasquez","Music > Roots > Folk > Latin Folk > Vallenato"
 "Age of Consent","New Order","Music > Electronic > Synthpop"
@@ -1095,7 +1095,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Head In The Sand","Pop Unknown","Music > Rock > Indie Rock"
 "Got It All (This Can't Be Living Now)","Portugal. The Man","Music > Rock > Indie Rock"
 "Cigarette Duet","Princess Chelsea","Music > Pop > Indie Pop"
-"I'll Be Missing You (feat. Faith Evans & 112)","Puff Daddy","Music > Hip Hop > Hip Hop (Standard)"
+"I'll Be Missing You (feat. Faith Evans & 112)","Puff Daddy","Music > Hip Hop > Pop Rap"
 "Babies","Pulp","Music > Rock > Indie Rock"
 "Bar Italia","Pulp","Music > Rock > Indie Rock"
 "Common People","Pulp","Music > Rock > Indie Rock"
@@ -1274,7 +1274,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Hunger Strike","Temple Of The Dog","Music > Rock > Grunge"
 "Say Hello 2 Heaven","Temple Of The Dog","Music > Rock > Grunge"
 "Move With the Season","Temples","Music > Rock > Psychedelic Rock"
-"La Plaga","Tha Mexakinz","Music > Hip Hop > Hip Hop (Standard)"
+"La Plaga","Tha Mexakinz","Music > Hip Hop > Hip Hop (Classic)"
 "House of the Rising Sun","The Animals","Music > Rock > Blues Rock"
 "House of the Rising Sun","The Animals","Music > Roots > Folk > Traditional Folk"
 "Private Idaho","The B-52's","Music > Rock > Post-Punk"
@@ -1441,7 +1441,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Girl, You'll Be a Woman Soon","Urge Overkill","Music > Pop > Pop Ballad"
 "Young","Vacations","Music > Pop > Indie Pop"
 "Soy Así","Valentín Elizalde","Music > Roots > Regional Mexicano > Banda"
-"Ice Ice Baby","Vanilla Ice","Music > Hip Hop > Hip Hop (Standard)"
+"Ice Ice Baby","Vanilla Ice","Music > Hip Hop > Hip Hop (Classic)"
 "Ay Hombe","Various Interprets","Music > Roots > Folk > Latin Folk > Vallenato"
 "Llévame En Tus Sueños","Various Interprets","Music > Roots > Folk > Latin Folk > Vallenato"
 "No Podrán Separarnos","Various Interprets","Music > Roots > Folk > Latin Folk > Vallenato"
