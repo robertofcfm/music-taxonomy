@@ -53,7 +53,7 @@ Anhelos,Alfredo Gutierrez,Music > Roots
 Man in the Box,Alice In Chains,Music > Rock
 No Excuses,Alice In Chains,Music > Rock
 Rooster (2022 Remaster),Alice In Chains,Music > Rock
-We Die Young,Alice In Chains,Music > Metal
+We Die Young,Alice In Chains,Music > Rock
 Metalingus,Alter Bridge,Music > Rock
 A Horse with No Name,America,Music > Rock
 La Cumbia Sampuesana,Aniceto Molina,Music > Roots
@@ -128,8 +128,8 @@ Vovió el Dolor,Binomio De Oro De América,Music > Roots
 Last Year's Disco Guitars,Bishop Morocco,Music > Rock
 Hurricane Jane,Black Kids,Music > Pop
 O Katrina!,Black Lips,Music > Rock
-Iron Man,Black Sabbath,Music > Metal
-Paranoid,Black Sabbath,Music > Metal
+Iron Man,Black Sabbath,Music > Metal > Heavy Metal
+Paranoid,Black Sabbath,Music > Metal > Heavy Metal
 No Rain,Blind Melon,Music > Rock
 First Date,blink-182,Music > Rock
 It's Getting Boring By The Sea,Blood Red Shoes,Music > Rock
@@ -268,7 +268,7 @@ Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Music > Hip Hop > West Coast
 Get Lucky,Daft Punk feat. Pharrell Williams,Music > Rhythmic > Disco
 Get Out of Control,Daniel Ash,Music > Rock
 Sunset Gun,Danse Society,Music > Rock
-Mother,Danzig,Music > Metal
+Mother,Danzig,Music > Metal > Heavy Metal
 Heroes,David Bowie,Music > Rock
 New Killer Star,David Bowie,Music > Rock
 Space Oddity,David Bowie,Music > Rock
@@ -282,7 +282,7 @@ You Spin Me Round (Like a Record),Dead Or Alive,Music > Rhythmic > Disco
 Girls,Death In Vegas,Music > Electronic > Downtempo
 "Rush, Rush",Debbie Harry,Music > Rhythmic > Disco
 Desire Lines,Deerhunter,Music > Rock
-My Own Summer (Shove It),Deftones,Music > Metal
+My Own Summer (Shove It),Deftones,Music > Metal > Alternative Metal
 Return Of The Tres,Delinquent Habits,Music > Hip Hop > Boom Bap
 Tres Delinquentes,Delinquent Habits,Music > Hip Hop > Boom Bap
 Enjoy the Silence,Depeche Mode,Music > Electronic > Synthpop
@@ -305,7 +305,7 @@ Kingdom Of Rust,Doves,Music > Rock
 Forgot About Dre,Dr. Dre,Music > Hip Hop > West Coast
 Still D.R.E.,Dr. Dre,Music > Hip Hop > West Coast
 The Next Episode,Dr. Dre,Music > Hip Hop > West Coast
-Through The Fire And Flames,Dragonforce,Music > Metal
+Through The Fire And Flames,Dragonforce,Music > Metal > Power Metal
 Money In The Grave,Drake,Music > Hip Hop > Trap
 ¿Cómo Evitar?,Duelo,Music > Roots
 ¿Qué Hubiera Sido De Mi Vida?,Duelo,Music > Roots
@@ -414,7 +414,7 @@ Si Puedes Perdonarme,Erick Escobar,Music > Roots
 Toma de Mí,Erick Escobar,Music > Roots
 Ven a Hacer el Amor Conmigo,Erick Escobar,Music > Roots
 Voy a Hacerme el Loco,Erick Escobar,Music > Roots
-Bring Me To Life,Evanescence,Music > Metal
+Bring Me To Life,Evanescence,Music > Metal > Alternative Metal
 My Immortal,Evanescence,Music > Pop
 No One There (feat. Julian Casablancas),Exhibition,Music > Rock
 More Than Words,Extreme,Music > Pop
@@ -557,7 +557,7 @@ Sueña,Intocable,Music > Roots
 Un Desengaño,Intocable,Music > Roots
 Vete Ya,Intocable,Music > Roots
 Ya Estoy Cansado,Intocable,Music > Roots
-The Number of the Beast,Iron Maiden,Music > Metal
+The Number of the Beast,Iron Maiden,Music > Metal > Heavy Metal
 Comprendeme,Ivan Villazon,Music > Roots
 No Me Pidas Que Te Olvide,Ivan Villazon,Music > Roots
 Glazin',Jacuzzi Boys,Music > Rock
@@ -617,8 +617,8 @@ Somewhere Only We Know,Keane,Music > Pop
 Drive That Fast,Kitchens Of Distinction,Music > Rock
 "He Holds Her, He Needs Her",Kitchens Of Distinction,Music > Rock
 Railwayed,Kitchens Of Distinction,Music > Rock
-Falling Away from Me,Korn,Music > Metal
-Somebody Someone,Korn,Music > Metal
+Falling Away from Me,Korn,Music > Metal > Alternative Metal
+Somebody Someone,Korn,Music > Metal > Alternative Metal
 Bad Voodoo,Kreeps,Music > Rock
 Dead Man Walking,Kreeps,Music > Rock
 Dead Sled,Kreeps,Music > Rock
@@ -682,14 +682,14 @@ Por Mi México,Lefty Sm,Music > Hip Hop > Pop Rap
 Brillas,Leon Larregui,Music > Pop
 Hallelujah,Leonard Cohen,Music > Roots
 You And Me,Lifehouse,Music > Pop
-My Generation,Limp Bizkit,Music > Metal
-My Way,Limp Bizkit,Music > Metal
-Nookie,Limp Bizkit,Music > Metal
-Rollin' (Air Raid Vehicle),Limp Bizkit,Music > Metal
-Take A Look Around,Limp Bizkit,Music > Metal
-Crawling,Linkin Park,Music > Metal
-In the End,Linkin Park,Music > Metal
-One Step Closer,Linkin Park,Music > Metal
+My Generation,Limp Bizkit,Music > Metal > Alternative Metal
+My Way,Limp Bizkit,Music > Metal > Alternative Metal
+Nookie,Limp Bizkit,Music > Metal > Alternative Metal
+Rollin' (Air Raid Vehicle),Limp Bizkit,Music > Metal > Alternative Metal
+Take A Look Around,Limp Bizkit,Music > Metal > Alternative Metal
+Crawling,Linkin Park,Music > Metal > Alternative Metal
+In the End,Linkin Park,Music > Metal > Alternative Metal
+One Step Closer,Linkin Park,Music > Metal > Alternative Metal
 Now We Are Free,Lisa Gerrard,Music > Classical
 Lo Que Queda De Ti,LMT,Music > Roots
 "Orchestral Suite No. 3 in D Major, BWV 1068: II. Air",London Philharmonic Orchestra,Music > Classical
@@ -833,7 +833,7 @@ Grandes Ligas,Lupillo Rivera,Music > Hip Hop > Pop Rap
 Cómo Olvidarte,Luz Mabel,Music > Roots
 U Can't Touch This,M.C. Hammer,Music > Hip Hop > West Coast
 Midnight City,M83,Music > Electronic > Synthpop
-Golgotha Tenement Blues,Machines Of Loving Grace,Music > Metal
+Golgotha Tenement Blues,Machines Of Loving Grace,Music > Metal > Industrial Metal
 Our House,Madness,Music > Pop
 "Lo Pasado, Pasado",Maldita Vecindad y Los Hijos del 5to Patio,Music > Rock
 Kumbala,Maldita Vecindad Y Los Hijos Del Quinto Patio,Music > Roots
@@ -844,92 +844,92 @@ Mariposa Traicionera,Mana,Music > Rock
 Me Vale,Mana,Music > Rock
 Sex & Candy,Marcy Playground,Music > Rock
 Te Prometo,Maria Jose Ospino,Music > Roots
-The Beautiful People,Marilyn Manson,Music > Metal
+The Beautiful People,Marilyn Manson,Music > Metal > Industrial Metal
 Pegasus Fantasy,Mauren Mendo,Music > Pop
 Siempre Enamorada,Mayra Arguelles,Music > Roots
 Fade Into You,Mazzy Star,Music > Rock
 Time Baby III,Medicine,Music > Rock
-Angry Again,Megadeth,Music > Metal
-Captive Honour,Megadeth,Music > Metal
-Symphony Of Destruction,Megadeth,Music > Metal
+Angry Again,Megadeth,Music > Metal > Thrash Metal
+Captive Honour,Megadeth,Music > Metal > Thrash Metal
+Symphony Of Destruction,Megadeth,Music > Metal > Thrash Metal
 I Follow You,Melody's Echo Chamber,Music > Rock
 "Some Time Alone, Alone",Melody's Echo Chamber,Music > Rock
 Show Me How (Album V),Men I Trust,Music > Pop
 Goddess on a Hiway,Mercury Rev,Music > Rock
-- Human,Metallica,Music > Metal
-(Anesthesia) Pulling Teeth,Metallica,Music > Metal
-...And Justice for All,Metallica,Music > Metal
-2 x 4,Metallica,Music > Metal
-Ain't My Bitch,Metallica,Music > Metal
-Am I Evil?,Metallica,Music > Metal
-Astronomy,Metallica,Music > Metal
-"Atlas, Rise!",Metallica,Music > Metal
-Battery,Metallica,Music > Metal
-Better Than You,Metallica,Music > Metal
-Blackened,Metallica,Music > Metal
-Bleeding Me,Metallica,Music > Metal
-Carpe Diem Baby,Metallica,Music > Metal
-Creeping Death,Metallica,Music > Metal
-Cure,Metallica,Music > Metal
-Cyanide,Metallica,Music > Metal
-Devil's Dance,Metallica,Music > Metal
-"Die, Die My Darling",Metallica,Music > Metal
-Disposable Heroes,Metallica,Music > Metal
-Don't Tread on Me,Metallica,Music > Metal
-Dyers Eve,Metallica,Music > Metal
-Enter Sandman,Metallica,Music > Metal
-Escape,Metallica,Music > Metal
-Eye of the Beholder,Metallica,Music > Metal
-Fade To Black,Metallica,Music > Metal
-Fight Fire With Fire,Metallica,Music > Metal
-For Whom The Bell Tolls,Metallica,Music > Metal
-Frantic,Metallica,Music > Metal
-Fuel,Metallica,Music > Metal
-Harvester of Sorrow,Metallica,Music > Metal
-Hero Of The Day,Metallica,Music > Metal
-Hit The Lights,Metallica,Music > Metal
-Holier Than Thou,Metallica,Music > Metal
-I Disappear,Metallica,Music > Metal
-Jump In The Fire,Metallica,Music > Metal
-King Nothing,Metallica,Music > Metal
-Loverman,Metallica,Music > Metal
-Low Man's Lyric,Metallica,Music > Metal
-Master Of Puppets,Metallica,Music > Metal
-My Friend of Misery,Metallica,Music > Metal
-No Leaf Clover,Metallica,Music > Metal
-Nothing Else Matters,Metallica,Music > Metal
-Of Wolf And Man,Metallica,Music > Metal
-One,Metallica,Music > Metal
-Orion,Metallica,Music > Metal
-Outlaw Torn,Metallica,Music > Metal
-Ride The Lightning,Metallica,Music > Metal
-Ronnie,Metallica,Music > Metal
-Sabbra Cadabra,Metallica,Music > Metal
-Sad But True,Metallica,Music > Metal
-Seek & Destroy,Metallica,Music > Metal
-Slither,Metallica,Music > Metal
-Some Kind Of Monster,Metallica,Music > Metal
-St. Anger,Metallica,Music > Metal
-The Call Of Ktulu,Metallica,Music > Metal
-The Day That Never Comes,Metallica,Music > Metal
+- Human,Metallica,Music > Metal > Heavy Metal
+(Anesthesia) Pulling Teeth,Metallica,Music > Metal > Thrash Metal
+...And Justice for All,Metallica,Music > Metal > Thrash Metal
+2 x 4,Metallica,Music > Metal > Heavy Metal
+Ain't My Bitch,Metallica,Music > Metal > Heavy Metal
+Am I Evil?,Metallica,Music > Metal > Heavy Metal
+Astronomy,Metallica,Music > Metal > Heavy Metal
+"Atlas, Rise!",Metallica,Music > Metal > Heavy Metal
+Battery,Metallica,Music > Metal > Thrash Metal
+Better Than You,Metallica,Music > Metal > Heavy Metal
+Blackened,Metallica,Music > Metal > Thrash Metal
+Bleeding Me,Metallica,Music > Metal > Heavy Metal
+Carpe Diem Baby,Metallica,Music > Metal > Heavy Metal
+Creeping Death,Metallica,Music > Metal > Thrash Metal
+Cure,Metallica,Music > Metal > Heavy Metal
+Cyanide,Metallica,Music > Metal > Heavy Metal
+Devil's Dance,Metallica,Music > Metal > Heavy Metal
+"Die, Die My Darling",Metallica,Music > Metal > Heavy Metal
+Disposable Heroes,Metallica,Music > Metal > Thrash Metal
+Don't Tread on Me,Metallica,Music > Metal > Heavy Metal
+Dyers Eve,Metallica,Music > Metal > Thrash Metal
+Enter Sandman,Metallica,Music > Metal > Heavy Metal
+Escape,Metallica,Music > Metal > Heavy Metal
+Eye of the Beholder,Metallica,Music > Metal > Thrash Metal
+Fade To Black,Metallica,Music > Metal > Heavy Metal
+Fight Fire With Fire,Metallica,Music > Metal > Thrash Metal
+For Whom The Bell Tolls,Metallica,Music > Metal > Heavy Metal
+Frantic,Metallica,Music > Metal > Heavy Metal
+Fuel,Metallica,Music > Metal > Heavy Metal
+Harvester of Sorrow,Metallica,Music > Metal > Thrash Metal
+Hero Of The Day,Metallica,Music > Metal > Heavy Metal
+Hit The Lights,Metallica,Music > Metal > Thrash Metal
+Holier Than Thou,Metallica,Music > Metal > Thrash Metal
+I Disappear,Metallica,Music > Metal > Heavy Metal
+Jump In The Fire,Metallica,Music > Metal > Thrash Metal
+King Nothing,Metallica,Music > Metal > Heavy Metal
+Loverman,Metallica,Music > Metal > Heavy Metal
+Low Man's Lyric,Metallica,Music > Metal > Heavy Metal
+Master Of Puppets,Metallica,Music > Metal > Thrash Metal
+My Friend of Misery,Metallica,Music > Metal > Heavy Metal
+No Leaf Clover,Metallica,Music > Metal > Heavy Metal
+Nothing Else Matters,Metallica,Music > Metal > Heavy Metal
+Of Wolf And Man,Metallica,Music > Metal > Heavy Metal
+One,Metallica,Music > Metal > Thrash Metal
+Orion,Metallica,Music > Metal > Heavy Metal
+Outlaw Torn,Metallica,Music > Metal > Heavy Metal
+Ride The Lightning,Metallica,Music > Metal > Thrash Metal
+Ronnie,Metallica,Music > Metal > Heavy Metal
+Sabbra Cadabra,Metallica,Music > Metal > Heavy Metal
+Sad But True,Metallica,Music > Metal > Heavy Metal
+Seek & Destroy,Metallica,Music > Metal > Thrash Metal
+Slither,Metallica,Music > Metal > Heavy Metal
+Some Kind Of Monster,Metallica,Music > Metal > Heavy Metal
+St. Anger,Metallica,Music > Metal > Heavy Metal
+The Call Of Ktulu,Metallica,Music > Metal > Heavy Metal
+The Day That Never Comes,Metallica,Music > Metal > Heavy Metal
 The Ecstasy Of Gold,Metallica,Music > Classical
-The Frayed Ends of Sanity,Metallica,Music > Metal
-The God That Failed,Metallica,Music > Metal
-The House Jack Built,Metallica,Music > Metal
-The Memory Remains,Metallica,Music > Metal
-The Outlaw Torn,Metallica,Music > Metal
-The Shortest Straw,Metallica,Music > Metal
-The Thing That Should Not Be,Metallica,Music > Metal
-To Live is to Die,Metallica,Music > Metal
-The Unforgiven,Metallica,Music > Metal
-The Unforgiven II,Metallica,Music > Metal
-The Unforgiven III,Metallica,Music > Metal
-Through the Never,Metallica,Music > Metal
-Turn The Page,Metallica,Music > Metal
-Until It Sleeps,Metallica,Music > Metal
-Welcome Home (Sanitarium),Metallica,Music > Metal
-Wherever I May Roam,Metallica,Music > Metal
-Whiskey In The Jar,Metallica,Music > Metal
+The Frayed Ends of Sanity,Metallica,Music > Metal > Thrash Metal
+The God That Failed,Metallica,Music > Metal > Heavy Metal
+The House Jack Built,Metallica,Music > Metal > Heavy Metal
+The Memory Remains,Metallica,Music > Metal > Heavy Metal
+The Outlaw Torn,Metallica,Music > Metal > Heavy Metal
+The Shortest Straw,Metallica,Music > Metal > Thrash Metal
+The Thing That Should Not Be,Metallica,Music > Metal > Heavy Metal
+To Live is to Die,Metallica,Music > Metal > Heavy Metal
+The Unforgiven,Metallica,Music > Metal > Heavy Metal
+The Unforgiven II,Metallica,Music > Metal > Heavy Metal
+The Unforgiven III,Metallica,Music > Metal > Heavy Metal
+Through the Never,Metallica,Music > Metal > Thrash Metal
+Turn The Page,Metallica,Music > Metal > Heavy Metal
+Until It Sleeps,Metallica,Music > Metal > Heavy Metal
+Welcome Home (Sanitarium),Metallica,Music > Metal > Heavy Metal
+Wherever I May Roam,Metallica,Music > Metal > Heavy Metal
+Whiskey In The Jar,Metallica,Music > Metal > Heavy Metal
 Black Sheep,Metric,Music > Rock
 Little Dark Age,MGMT,Music > Pop
 Time to Pretend,MGMT,Music > Pop
@@ -967,7 +967,7 @@ I Can Cry,Moses Gunn Collective,Music > Rock
 Shalala,Moses Gunn Collective,Music > Rock
 Ghost,Motorama,Music > Rock
 Ace of Spades,Motörhead,Music > Rock
-Ace of Spades,Motörhead,Music > Metal
+Ace of Spades,Motörhead,Music > Metal > Heavy Metal
 Pink Cigarette,Mr. Bungle,Music > Rock
 Knights of Cydonia,Muse,Music > Rock
 Knights of Cydonia,Muse,Music > Rock
@@ -1036,8 +1036,8 @@ El Breve Espacio en Que No Estás,Pablo Milanes,Music > Roots
 No Me Conoces Aún,Palomo,Music > Roots
 La Carencia,Panteón Rococó,Music > Rhythmic > Ska
 La Dosis Perfecta,Panteón Rococó,Music > Rhythmic > Ska
-Revolution Is My Name,Pantera,Music > Metal
-Last Resort,Papa Roach,Music > Metal
+Revolution Is My Name,Pantera,Music > Metal > Thrash Metal
+Last Resort,Papa Roach,Music > Metal > Alternative Metal
 Nineteen Hundred And Eighty Five,Paul McCartney,Music > Rock
 I Don't Want to Wait,Paula Cole,Music > Pop
 1998 (Delicious),Peace,Music > Rock
@@ -1153,28 +1153,27 @@ The Bends,Radiohead,Music > Rock
 True Love Waits,Radiohead,Music > Rock
 Weird Fishes / Arpeggi,Radiohead,Music > Rock
 Nos Sorprendió la Mañana,Ramiro Delgado,Music > Roots
-Alter Mann,Rammstein,Music > Metal
-Amerika,Rammstein,Music > Metal
-Deutschland,Rammstein,Music > Metal
-Du hast,Rammstein,Music > Metal
-Engel,Rammstein,Music > Metal
-Feuer frei!,Rammstein,Music > Metal
-Ich will,Rammstein,Music > Metal
-Links 2 3 4,Rammstein,Music > Metal
-Mutter,Rammstein,Music > Metal
-Mutter,Rammstein,Music > Metal
+Alter Mann,Rammstein,Music > Metal > Industrial Metal
+Amerika,Rammstein,Music > Metal > Industrial Metal
+Deutschland,Rammstein,Music > Metal > Industrial Metal
+Du hast,Rammstein,Music > Metal > Industrial Metal
+Engel,Rammstein,Music > Metal > Industrial Metal
+Feuer frei!,Rammstein,Music > Metal > Industrial Metal
+Ich will,Rammstein,Music > Metal > Industrial Metal
+Links 2 3 4,Rammstein,Music > Metal > Industrial Metal
+Mutter,Rammstein,Music > Metal > Industrial Metal
 Seemann,Rammstein,Music > Rock
-Sehnsucht,Rammstein,Music > Metal
-Sonne,Rammstein,Music > Metal
-Stripped,Rammstein,Music > Metal
-Te quiero puta!,Rammstein,Music > Metal
+Sehnsucht,Rammstein,Music > Metal > Industrial Metal
+Sonne,Rammstein,Music > Metal > Industrial Metal
+Stripped,Rammstein,Music > Metal > Industrial Metal
+Te quiero puta!,Rammstein,Music > Metal > Industrial Metal
 Californication,Red Hot Chili Peppers,Music > Rock
 Otherside,Red Hot Chili Peppers,Music > Rock
 Me Va a Extrañar (Unchain My Heart),Ricardo Montaner,Music > Pop
 Right Here Waiting,Richard Marx,Music > Pop
-Dragula,Rob Zombie,Music > Metal
-Living Dead Girl,Rob Zombie,Music > Metal
-Scum Of The Earth,Rob Zombie,Music > Metal
+Dragula,Rob Zombie,Music > Metal > Industrial Metal
+Living Dead Girl,Rob Zombie,Music > Metal > Industrial Metal
+Scum Of The Earth,Rob Zombie,Music > Metal > Industrial Metal
 Clubbed to Death,Robert D,Music > Electronic > Big Beat
 Killing Me Softly With His Song,Roberta Flack,Music > Rhythmic > Soul
 More Than This,Roxy Music,Music > Rock
