@@ -15,7 +15,7 @@ Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,Music > Roots > Cumbia >
 "Highway to Hell",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
 "Thunderstruck",AC/DC,Music > Rock > Hard Rock > Hard Rock (Standard)
 "Post Traumatic Love",Actors,Music > Rock > Post-Punk
-"Rolling in the Deep",Adele,Music > Pop > Pop (Standard)
+"Rolling in the Deep",Adele,Music > Rhythmic > Soul
 "Dos Culpables",Adriana Lucia,Music > Roots > Folk > Latin Folk > Vallenato
 "Enamórate Como Yo",Adriana Lucia,Music > Roots > Folk > Latin Folk > Vallenato
 "Llegaste Tú",Adriana Lucia,Music > Roots > Folk > Latin Folk > Vallenato
@@ -45,7 +45,7 @@ Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,Music > Roots > Cumbia >
 "Me Dedique a Perderte",Alejandro Fernandez A Duo Con Amaia Montero,Music > Pop > Pop Ballad
 "Amiga mía",Alejandro Sanz,Music > Pop > Pop Ballad
 "Corazón partío",Alejandro Sanz,Music > Roots > Folk > Latin Folk > Flamenco Pop
-"Pisando fuerte",Alejandro Sanz,Music > Pop > Pop (Standard)
+"Pisando fuerte",Alejandro Sanz,Music > Pop > Singer-Songwriter Pop
 "Si tú me miras",Alejandro Sanz,Music > Pop > Pop Ballad
 "Y, ¿Si fuera ella?",Alejandro Sanz,Music > Pop > Pop Ballad
 Sexo Pudor Y Lágrimas,Aleks Syntek,Music > Pop > Pop Ballad
@@ -243,7 +243,7 @@ With Arms Wide Open,Creed,Music > Rock > Hard Rock > Power Ballad
 Fortunate Son,Creedence Clearwater Revival,Music > Rock > Roots Rock
 Have You Ever Seen The Rain,Creedence Clearwater Revival,Music > Rock > Roots Rock
 Proud Mary,Creedence Clearwater Revival,Music > Rock > Roots Rock
-Azul,Cristian,Music > Pop > Pop (Standard)
+Azul,Cristian,Music > Rhythmic > Funk
 No Podras,Cristian,Music > Pop > Pop (Standard)
 Groove Is in the Heart / California Girls,Crocodiles,Music > Rock > Indie Rock
 I Wanna Kill,Crocodiles,Music > Rock > Post-Punk
@@ -272,7 +272,7 @@ Mother,Danzig,Music > Metal > Heavy Metal
 "Heroes",David Bowie,Music > Rock > Psychedelic Rock
 New Killer Star,David Bowie,Music > Rock > Alternative Rock
 Space Oddity,David Bowie,Music > Rock > Folk Rock
-Starman,David Bowie,Music > Pop > Pop (Standard)
+Starman,David Bowie,Music > Rock > Alternative Rock
 The Man Who Sold the World,David Bowie,Music > Rock > Hard Rock > Hard Rock (Standard)
 Ziggy Stardust,David Bowie,Music > Rock > Hard Rock > Hard Rock (Standard)
 Mi Pequeño Lucero,David Lee Garza,Music > Roots > Regional Mexicano > Texano
@@ -389,7 +389,7 @@ Las piedras rodantes,El Tri,Music > Rock > Roots Rock
 Pobre soñador,El Tri,Music > Rock > Roots Rock
 Triste canción,El Tri,Music > Rock > Blues Rock
 Last Train to London,Electric Light Orchestra,Music > Rhythmic > Disco
-Mr. Blue Sky,Electric Light Orchestra,Music > Pop > Pop (Standard)
+Mr. Blue Sky,Electric Light Orchestra,Music > Rock > Progressive Rock
 A Real Hero,Electric Youth,Music > Electronic > Synthpop
 Eclipse,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ella Es Así,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
@@ -584,7 +584,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "A Pesar De Todo","Jimmy Gonzalez Y Grupo Mazz","Music > Roots > Regional Mexicano > Texano"
 "Quién Iba A Pensar","Jimmy Gonzalez Y Grupo Mazz","Music > Roots > Regional Mexicano > Texano"
 "Cantares","Joan Manuel Serrat","Music > Roots > Folk > Latin Folk > Trova Cubana"
-"One Of Us","Joan Osborne","Music > Pop > Pop (Standard)"
+"One Of Us","Joan Osborne","Music > Pop > Singer-Songwriter Pop"
 "With A Little Help From My Friends","Joe Cocker","Music > Rock > Blues Rock"
 "Summer Song","Joe Satriani","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Surfing with the Alien","Joe Satriani","Music > Rock > Hard Rock > Hard Rock (Standard)"
@@ -935,7 +935,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Time to Pretend","MGMT","Music > Pop > Indie Pop"
 "Beat It","Michael Jackson","Music > Pop > Pop (Standard)"
 "Billie Jean","Michael Jackson","Music > Rhythmic > Funk"
-"Smooth Criminal","Michael Jackson","Music > Pop > Pop (Standard)"
+"Smooth Criminal","Michael Jackson","Music > Rhythmic > Funk"
 "Thriller","Michael Jackson","Music > Pop > Pop (Standard)"
 "Shadows","Midnight Juggernauts","Music > Pop > Indie Pop"
 "Virago","Midnight Juggernauts","Music > Pop > Indie Pop"
@@ -977,7 +977,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "El Color de Tus Ojos","Natalia Jiménez","Music > Roots > Regional Mexicano > Banda"
 "Soledad y el Mar","Natalia Lafourcade","Music > Roots > Folk > Latin Folk > Latin Folk Pop"
 "Tú Sí Sabes Quererme","Natalia Lafourcade","Music > Roots > Folk > Latin Folk > Latin Folk Pop"
-"Torn","Natalie Imbruglia","Music > Pop > Pop (Standard)"
+"Torn","Natalie Imbruglia","Music > Rock > Indie Rock"
 "Calabria 2008","Natasja","Music > Electronic > House"
 "Cómo Duele","Negami","Music > Roots > Regional Mexicano > Texano"
 "Dicen Por Ahi","Negami","Music > Roots > Regional Mexicano > Texano"
@@ -1108,9 +1108,9 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Goodbye Horses - Single","Q Lazzarus","Music > Electronic > Synthpop"
 "Another One Bites The Dust","Queen","Music > Rhythmic > Funk"
 "Bohemian Rhapsody","Queen","Music > Rock > Progressive Rock"
-"Don't Stop Me Now","Queen","Music > Pop > Pop (Standard)"
-"I Want To Break Free","Queen","Music > Pop > Pop (Standard)"
-"Radio Ga Ga","Queen","Music > Pop > Pop (Standard)"
+"Don't Stop Me Now","Queen","Music > Rock > Hard Rock (Standard)"
+"I Want To Break Free","Music > Rock > Alternative Rock"
+"Radio Ga Ga","Queen","Music > Rock > Alternative Rock"
 "Somebody To Love","Queen","Music > Rock > Soft Rock"
 "Under Pressure","Queen","Music > Rock > Soft Rock"
 "We Are The Champions","Queen","Music > Rock > Hard Rock > Power Ballad"
@@ -1178,7 +1178,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Killing Me Softly With His Song","Roberta Flack","Music > Rhythmic > Soul > Pop Soul"
 "More Than This","Roxy Music","Music > Rock > Soft Rock"
 "In Dreams","Roy Orbison","Music > Pop > Pop Ballad"
-"You Got It","Roy Orbison","Music > Pop > Pop (Standard)"
+"You Got It","Roy Orbison","Music > Pop > Singer-Songwriter Pop"
 "No Pienso Despertar","Ruben De La Cruz","Music > Roots > Regional Mexicano > Norteño"
 "Alice Isn't Playing","Sad Lovers & Giants","Music > Rock > Post-Punk"
 "Colourless Dream","Sad Lovers & Giants","Music > Rock > Post-Punk"
@@ -1186,7 +1186,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Things We Never Did","Sad Lovers and Giants","Music > Rock > Post-Punk"
 "Played-A-Live (The Bongo Song)","Safri Duo","Music > Electronic > House"
 "Cold Cold Man","Saint Motel","Music > Rock > Indie Rock"
-"My Type","Saint Motel","Music > Pop > Pop (Standard)"
+"My Type","Saint Motel","Music > Pop > Indie Pop"
 "Origami","Saint Motel","Music > Rock > Indie Rock"
 "Estoy Enamorada De Ti","Salomón Robles Y Sus Legendarios","Music > Roots > Regional Mexicano > Norteño"
 "Niña Mía","Salomón Robles Y Sus Legendarios","Music > Roots > Regional Mexicano > Norteño"
@@ -1247,8 +1247,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Wicked Garden","Stone Temple Pilots","Music > Rock > Grunge"
 "Mr. Roboto","Styx","Music > Rock > Progressive Rock"
 "Cursed Mirror","Superchunk","Music > Rock > Indie Rock"
-"Breakfast In America","Supertramp","Music > Pop > Pop (Standard)"
-"Breakfast In America","Supertramp","Music > Rock > Progressive Rock"
+"Breakfast In America","Supertramp","Music > Rock > Soft Rock"
 "Eye of the Tiger","Survivor","Music > Rock > Hard Rock > Hard Rock (Standard)"
 "Aerials","System Of A Down","Music > Rock > Alternative Rock"
 "Chop Suey!","System Of A Down","Music > Rock > Alternative Rock"
@@ -1276,14 +1275,12 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Rock Lobster","The B-52's","Music > Rock > Post-Punk"
 "Half Believing","The Black Angels","Music > Rock > Psychedelic Rock"
 "I Gotta Feeling","The Black Eyed Peas","Music > Electronic > House"
-"I Gotta Feeling","The Black Eyed Peas","Music > Pop > Pop (Standard)"
 "Gold on the Ceiling","The Black Keys","Music > Rock > Blues Rock"
 "Lonely Boy","The Black Keys","Music > Rock > Blues Rock"
 "Tighten Up","The Black Keys","Music > Rock > Blues Rock"
 "Sleazy Bed Track","The Bluetones","Music > Rock > Indie Rock"
 "Wherever You Will Go","The Calling","Music > Rock > Hard Rock > Power Ballad"
-"My Favourite Game","The Cardigans","Music > Rock > Indie Rock"
-"My Favourite Game","The Cardigans","Music > Pop > Pop (Standard)"
+"My Favourite Game","The Cardigans","Music > Pop > Indie Pop"
 "Anyone Alive?","The Chameleons","Music > Rock > Post-Punk"
 "Don't Fall","The Chameleons","Music > Rock > Post-Punk"
 "In Answer","The Chameleons","Music > Rock > Post-Punk"
@@ -1320,8 +1317,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Pictures Of You","The Cure","Music > Rock > Post-Punk"
 "Somewhere","The Danse Society","Music > Rock > Post-Punk"
 "Lost in the Plot","The Dears","Music > Rock > Indie Rock"
-"What a Fool Believes","The Doobie Brothers","Music > Rock > Soft Rock"
-"What a Fool Believes","The Doobie Brothers","Music > Pop > Pop (Standard)"
+"What a Fool Believes","The Doobie Brothers","Music > Rhythmic > Soul"
 "Break on Through (To the Other Side)","The Doors","Music > Rock > Psychedelic Rock"
 "Light My Fire","The Doors","Music > Rock > Psychedelic Rock"
 "Riders On The Storm","The Doors","Music > Rock > Psychedelic Rock"
