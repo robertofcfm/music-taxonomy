@@ -35,6 +35,8 @@ def cargar_arbol_generos(path):
     return arbol, padres
 
 def encontrar_genero_valido(genero, ramas):
+    if not genero:
+        return ''
     partes = [p.strip() for p in genero.split('>')]
     for i in range(len(partes), 0, -1):
         rama = ' > '.join(partes[:i])
@@ -60,7 +62,9 @@ def procesar_canciones(input_csv, arbol_path, output_csv):
         writer = csv.DictWriter(fout, fieldnames=['title', 'artist', 'genre'])
         writer.writeheader()
         for row in reader:
-            genero_original = row['genre']
+            genero_original = row.get('genre')
+            if not genero_original or not genero_original.strip():
+                continue
             genero_valido = encontrar_genero_valido(genero_original, ramas)
             writer.writerow({'title': row['title'], 'artist': row['artist'], 'genre': genero_valido})
             conteo[genero_valido] += 1

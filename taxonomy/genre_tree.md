@@ -32,3 +32,17 @@ Music
     Soul
   Rock
   Roots
+    Bolero
+    Cumbia
+    Folk
+      Latin Folk
+        Flamenco Pop
+        Latin Folk Pop
+        Trova Cubana
+        Vallenato
+      Traditional Folk
+    Regional Mexicano
+      Banda
+      Norteño
+      Ranchera
+      Texano
