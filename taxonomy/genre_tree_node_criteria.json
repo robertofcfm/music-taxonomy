@@ -32,16 +32,6 @@
       ]
     },
     {
-      "node_path": "Music > Classical > Score",
-      "membership_criteria": "Obras instrumentales compuestas específicamente para acompañar y enfatizar la narrativa visual de películas, series de TV o videojuegos. Incluye música incidental, temas principales y suites creadas para medios audiovisuales.",
-      "exclusion_criteria": "Música clásica no compuesta para medios audiovisuales, canciones con letra, o piezas populares reutilizadas en soundtracks.",
-      "reference_examples": [
-        "John Williams - Star Wars Main Title",
-        "Nobuo Uematsu - Final Fantasy VII Main Theme",
-        "Ramin Djawadi - Game of Thrones Main Title"
-      ]
-    },
-    {
       "node_path": "Music > Classical > Solo Instrumental",
       "membership_criteria": "Obras clásicas interpretadas por un solo instrumento (piano, violín, guitarra, etc.), con o sin acompañamiento mínimo. Enfatiza la destreza técnica y expresiva del intérprete.",
       "exclusion_criteria": "Obras de conjunto, música popular o piezas con acompañamiento orquestal prominente.",
@@ -533,7 +523,7 @@
       ]
     },
     {
-      "node_path": "Music > Funk",
+      "node_path": "Music > Rhythmic > Funk",
       "membership_criteria": "Género afroamericano basado en grooves rítmicos, líneas de bajo prominentes, guitarras sincopadas, metales y énfasis en el ritmo y la danza. Letras suelen ser festivas, sociales o de empoderamiento.",
       "exclusion_criteria": "Soul puro, disco, R&B contemporáneo o rock sin groove funk.",
       "reference_examples": [
@@ -587,6 +577,52 @@
         "Emilio Navaira - Ya No Me Pones Atención",
         "Albert Zamora Y Talento - El Circo"
       ]
+    }
+    ,
+    {
+      "node_path": "Score",
+      "membership_criteria": "Obras instrumentales compuestas específicamente para acompañar y enfatizar la narrativa visual de películas, series de TV o videojuegos. Incluye música incidental, temas principales y suites creadas para medios audiovisuales.",
+      "exclusion_criteria": "Música clásica no compuesta para medios audiovisuales, canciones con letra, o piezas populares reutilizadas en soundtracks.",
+      "reference_examples": [
+        "John Williams - Star Wars Main Title",
+        "Nobuo Uematsu - Final Fantasy VII Main Theme",
+        "Ramin Djawadi - Game of Thrones Main Title"
+      ]
+    }
+    ,
+    {
+      "node_path": "Choral",
+      "membership_criteria": "Obras interpretadas por coro, con o sin acompañamiento instrumental. Puede incluir música sacra, profana o experimental.",
+      "exclusion_criteria": "Obras solistas, de cámara o sin participación coral significativa.",
+      "reference_examples": []
+    }
+    ,
+    {
+      "node_path": "Pop Rap",
+      "membership_criteria": "Canciones que fusionan elementos de rap y pop, con enfoque en melodía y estribillos pegadizos, pero con versos rapeados.",
+      "exclusion_criteria": "Rap puro sin elementos pop, pop sin versos rapeados.",
+      "reference_examples": []
+    }
+    ,
+    {
+      "node_path": "Score > Film",
+      "membership_criteria": "Música compuesta específicamente para películas, enfatizando la narrativa visual y emocional del cine.",
+      "exclusion_criteria": "Música de videojuegos, series o reutilizada de otros medios.",
+      "reference_examples": []
+    }
+    ,
+    {
+      "node_path": "Score > Game",
+      "membership_criteria": "Música compuesta específicamente para videojuegos, enfatizando la interacción y la ambientación lúdica.",
+      "exclusion_criteria": "Música de películas, series o reutilizada de otros medios.",
+      "reference_examples": []
+    }
+    ,
+    {
+      "node_path": "Score > Series",
+      "membership_criteria": "Música compuesta específicamente para series de televisión, enfatizando la narrativa episódica y la identidad sonora de la serie.",
+      "exclusion_criteria": "Música de películas, videojuegos o reutilizada de otros medios.",
+      "reference_examples": []
     }
   ]
 }

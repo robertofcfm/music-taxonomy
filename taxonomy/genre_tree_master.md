@@ -1,8 +1,9 @@
 Music
   Classical
     Orchestral
-    Score
+    Chamber
     Solo Instrumental
+    Choral
   Electronic
     Big Beat
     Downtempo
@@ -67,3 +68,7 @@ Music
       Norteño
       Ranchera
       Texano
+  Score
+    Film
+    Game
+    Series

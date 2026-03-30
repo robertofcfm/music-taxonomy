@@ -60,3 +60,4 @@ Music
       Norteño
       Ranchera
       Texano
+  Score

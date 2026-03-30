@@ -1,75 +1,75 @@
 [
   {
-    "nodo": "Music > Roots > Regional Mexicano",
-    "total": 236,
+    "nodo": "Music",
+    "total": 1493,
     "exactos": 0,
-    "de_paso": 236,
+    "de_paso": 1493,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock"
       },
       {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "Love Song",
+        "artist": "311",
+        "genre": "Music > Rock > Reggae Rock"
       },
       {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
       }
     ]
   },
   {
-    "nodo": "Music > Roots > Folk > Latin Folk",
-    "total": 150,
+    "nodo": "Music > Metal",
+    "total": 115,
     "exactos": 0,
-    "de_paso": 150,
+    "de_paso": 115,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+        "title": "Mother",
+        "artist": "Danzig",
+        "genre": "Music > Metal > Heavy Metal"
       }
     ]
   },
   {
-    "nodo": "Music > Roots > Regional Mexicano > Norteño",
-    "total": 105,
-    "exactos": 105,
+    "nodo": "Music > Rock > Indie Rock",
+    "total": 134,
+    "exactos": 134,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "El Circo",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "The Suburbs",
+        "artist": "Arcade Fire",
+        "genre": "Music > Rock > Indie Rock"
       },
       {
-        "title": "Quien Mas Te Adora",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Indie Rock"
       },
       {
-        "title": "Tu Carcel",
-        "artist": "Albert Zamora Y Talento",
-        "genre": "Music > Roots > Regional Mexicano > Norteño"
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Indie Rock"
       }
     ],
     "ejemplos_de_paso": []
@@ -100,10 +100,85 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music",
-    "total": 1491,
+    "nodo": "Music > Roots > Folk",
+    "total": 155,
     "exactos": 0,
-    "de_paso": 1491,
+    "de_paso": 155,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Roots > Folk > Latin Folk",
+    "total": 150,
+    "exactos": 0,
+    "de_paso": 150,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 157,
+    "exactos": 157,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Devils Haircut",
+        "artist": "Beck",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Loser",
+        "artist": "Beck",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Alicia",
+        "artist": "Bunbury",
+        "genre": "Music > Rock > Alternative Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 705,
+    "exactos": 0,
+    "de_paso": 705,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
@@ -123,6 +198,31 @@
         "genre": "Music > Rock > Folk Rock"
       }
     ]
+  },
+  {
+    "nodo": "Music > Rock > Psychedelic Rock",
+    "total": 59,
+    "exactos": 59,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Heroes",
+        "artist": "David Bowie",
+        "genre": "Music > Rock > Psychedelic Rock"
+      },
+      {
+        "title": "Somebody To Love",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
+      },
+      {
+        "title": "White Rabbit",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Pop",
@@ -150,31 +250,6 @@
     ]
   },
   {
-    "nodo": "Music > Rock > Indie Rock",
-    "total": 140,
-    "exactos": 140,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "The Suburbs",
-        "artist": "Arcade Fire",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Indie Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Roots > Regional Mexicano > Texano",
     "total": 116,
     "exactos": 116,
@@ -195,81 +270,6 @@
         "title": "Desvelado",
         "artist": "Bobby Pulido",
         "genre": "Music > Roots > Regional Mexicano > Texano"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rhythmic",
-    "total": 47,
-    "exactos": 0,
-    "de_paso": 47,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dancing Queen",
-        "artist": "ABBA",
-        "genre": "Music > Rhythmic > Disco"
-      },
-      {
-        "title": "Rolling in the Deep",
-        "artist": "Adele",
-        "genre": "Music > Rhythmic > Soul"
-      },
-      {
-        "title": "Can't Get Enough Of Your Love, Babe",
-        "artist": "Barry White",
-        "genre": "Music > Rhythmic > Soul > Pop Soul"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Roots > Folk > Latin Folk > Vallenato",
-    "total": 143,
-    "exactos": 143,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Psychedelic Rock",
-    "total": 62,
-    "exactos": 62,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Afuera",
-        "artist": "Caifanes",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "La Célula Que Explota",
-        "artist": "Caifanes",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "Nubes",
-        "artist": "Caifanes",
-        "genre": "Music > Rock > Psychedelic Rock"
       }
     ],
     "ejemplos_de_paso": []
@@ -300,129 +300,54 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Metal > Heavy Metal",
-    "total": 58,
-    "exactos": 58,
+    "nodo": "Music > Roots > Folk > Latin Folk > Vallenato",
+    "total": 143,
+    "exactos": 143,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
       },
       {
-        "title": "Mother",
-        "artist": "Danzig",
-        "genre": "Music > Metal > Heavy Metal"
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
       }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Post-Punk",
-    "total": 111,
-    "exactos": 111,
+    "nodo": "Music > Roots > Regional Mexicano > Norteño",
+    "total": 105,
+    "exactos": 105,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Post Traumatic Love",
-        "artist": "Actors",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
       },
       {
-        "title": "Dark Entries",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
       },
       {
-        "title": "Kick in the Eye",
-        "artist": "Bauhaus",
-        "genre": "Music > Rock > Post-Punk"
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
       }
     ],
     "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Roots",
-    "total": 407,
-    "exactos": 0,
-    "de_paso": 407,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dime Porque",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
-      },
-      {
-        "title": "Dime Quién",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
-      },
-      {
-        "title": "Fuiste Mala",
-        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
-        "genre": "Music > Roots > Cumbia > Cumbia Pop"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock",
-    "total": 699,
-    "exactos": 0,
-    "de_paso": 699,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Metal",
-    "total": 114,
-    "exactos": 0,
-    "de_paso": 114,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Mother",
-        "artist": "Danzig",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ]
   },
   {
     "nodo": "Music > Rock > Grunge",
@@ -450,31 +375,6 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 140,
-    "exactos": 140,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Devils Haircut",
-        "artist": "Beck",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Loser",
-        "artist": "Beck",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Alicia",
-        "artist": "Bunbury",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Pop > Pop Ballad",
     "total": 46,
     "exactos": 46,
@@ -495,6 +395,81 @@
         "title": "Amiga mía",
         "artist": "Alejandro Sanz",
         "genre": "Music > Pop > Pop Ballad"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Roots > Regional Mexicano",
+    "total": 236,
+    "exactos": 0,
+    "de_paso": 236,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "El Circo",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Quien Mas Te Adora",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      },
+      {
+        "title": "Tu Carcel",
+        "artist": "Albert Zamora Y Talento",
+        "genre": "Music > Roots > Regional Mexicano > Norteño"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Post-Punk",
+    "total": 111,
+    "exactos": 111,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Post Traumatic Love",
+        "artist": "Actors",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Dark Entries",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      },
+      {
+        "title": "Kick in the Eye",
+        "artist": "Bauhaus",
+        "genre": "Music > Rock > Post-Punk"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Metal > Heavy Metal",
+    "total": 59,
+    "exactos": 59,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Mother",
+        "artist": "Danzig",
+        "genre": "Music > Metal > Heavy Metal"
       }
     ],
     "ejemplos_de_paso": []
@@ -531,31 +506,6 @@
     ]
   },
   {
-    "nodo": "Music > Roots > Folk",
-    "total": 155,
-    "exactos": 0,
-    "de_paso": 155,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
     "nodo": "Music > Electronic",
     "total": 46,
     "exactos": 0,
@@ -577,6 +527,31 @@
         "title": "Take on Me",
         "artist": "A-Ha",
         "genre": "Music > Electronic > Synthpop"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Roots",
+    "total": 407,
+    "exactos": 0,
+    "de_paso": 407,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dime Porque",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+      },
+      {
+        "title": "Dime Quién",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
+      },
+      {
+        "title": "Fuiste Mala",
+        "artist": "A.B. Quintanilla III Y Los Kumbia Kings",
+        "genre": "Music > Roots > Cumbia > Cumbia Pop"
       }
     ]
   }
