@@ -10,30 +10,15 @@ file2 = os.path.join("catalog", "songs_raw.csv")
 
 
 def normalize_text(text):
+    import re
+    text = str(text)
     text = text.strip().lower()
-    text = unicodedata.normalize('NFD', text)
-    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
-    # Normalizar comillas dobles y escapadas
-    text = text.replace('\\"', '"')  # \" -> "
-    text = text.replace('""', '"')   # "" -> "
-    text = text.replace('“', '"').replace('”', '"')
-    # Quitar comillas dobles al inicio y final
-    if text.startswith('"') and text.endswith('"'):
-        text = text[1:-1]
-    # Quitar comillas dobles sueltas al final de la cadena
-    text = text.rstrip('"')
-    # Quitar comillas dobles sueltas antes de paréntesis de cierre
-    import re
-    text = re.sub(r'\)"$', ')', text)
-    # Quitar espacios extra dentro de paréntesis
-    import re
-    text = re.sub(r'\(\s+', '(', text)
-    text = re.sub(r'\s+\)', ')', text)
-    # Quitar comillas dobles sueltas dentro de paréntesis
-    text = re.sub(r'\((.*?)\)', lambda m: '(' + m.group(1).replace('"', '') + ')', text)
-    # Quitar comillas dobles sueltas al final de palabras
-    text = re.sub(r'"([\s\)])', r'\1', text)
-    text = text.replace('\\', '')  # Quitar barras invertidas sobrantes
+    text = unicodedata.normalize('NFKD', text)
+    text = ''.join([c for c in text if not unicodedata.combining(c)])
+    # Elimina cualquier tipo de comillas (simples, dobles, dobles dobles, escapadas) y barras invertidas
+    text = re.sub(r'["\'\u201c\u201d\u2018\u2019\\]', '', text)
+    # Reemplaza múltiples espacios internos por uno solo
+    text = re.sub(r'\s+', ' ', text)
     return text
 
 def load_title_artist_set(filepath):

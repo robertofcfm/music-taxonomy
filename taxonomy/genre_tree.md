@@ -36,7 +36,7 @@ Music
       Power Ballad
     Indie Rock
     Post-Punk
-    Alternative Rock (reducido)
+    Alternative Rock
     Psychedelic Rock
     Grunge
     Progressive Rock
