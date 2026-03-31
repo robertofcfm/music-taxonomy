@@ -1,11 +1,11 @@
 [
   {
     "genre": "Music",
-    "count": 1493
+    "count": 1491
   },
   {
     "genre": "Music > Rock",
-    "count": 705
+    "count": 703
   },
   {
     "genre": "Music > Roots",
@@ -17,7 +17,7 @@
   },
   {
     "genre": "Music > Rock > Alternative Rock",
-    "count": 157
+    "count": 156
   },
   {
     "genre": "Music > Roots > Folk",
@@ -80,11 +80,11 @@
     "count": 48
   },
   {
-    "genre": "Music > Pop > Pop Ballad",
+    "genre": "Music > Electronic",
     "count": 46
   },
   {
-    "genre": "Music > Electronic",
+    "genre": "Music > Pop > Pop Ballad",
     "count": 46
   },
   {
@@ -132,15 +132,15 @@
     "count": 14
   },
   {
-    "genre": "Music > Metal > Alternative Metal",
-    "count": 13
-  },
-  {
     "genre": "Music > Hip Hop > West Coast",
     "count": 13
   },
   {
     "genre": "Music > Rock > Folk Rock",
+    "count": 13
+  },
+  {
+    "genre": "Music > Metal > Alternative Metal",
     "count": 13
   },
   {
@@ -164,7 +164,7 @@
     "count": 10
   },
   {
-    "genre": "Music > Pop > Singer-Songwriter Pop",
+    "genre": "Music > Rock > Pop Punk",
     "count": 9
   },
   {
@@ -172,11 +172,11 @@
     "count": 9
   },
   {
-    "genre": "Music > Rock > Pop Punk",
+    "genre": "Music > Hip Hop > Hip Hop (Classic)",
     "count": 9
   },
   {
-    "genre": "Music > Hip Hop > Hip Hop (Classic)",
+    "genre": "Music > Pop > Singer-Songwriter Pop",
     "count": 9
   },
   {
@@ -184,7 +184,7 @@
     "count": 9
   },
   {
-    "genre": "Music > Roots > Regional Mexicano > Ranchera",
+    "genre": "Music > Rhythmic > Soul > Pop Soul",
     "count": 8
   },
   {
@@ -192,7 +192,7 @@
     "count": 8
   },
   {
-    "genre": "Music > Rhythmic > Soul > Pop Soul",
+    "genre": "Music > Roots > Regional Mexicano > Ranchera",
     "count": 8
   },
   {
@@ -204,15 +204,15 @@
     "count": 7
   },
   {
-    "genre": "Music > Electronic > House",
-    "count": 6
-  },
-  {
     "genre": "Music > Electronic > Big Beat",
     "count": 6
   },
   {
-    "genre": "Music > Rhythmic > Funk",
+    "genre": "Music > Electronic > House",
+    "count": 6
+  },
+  {
+    "genre": "Music > Score > Film",
     "count": 5
   },
   {
@@ -220,11 +220,7 @@
     "count": 5
   },
   {
-    "genre": "Music > Classical",
-    "count": 5
-  },
-  {
-    "genre": "Music > Score > Film",
+    "genre": "Music > Rhythmic > Funk",
     "count": 5
   },
   {
@@ -232,15 +228,19 @@
     "count": 5
   },
   {
+    "genre": "Music > Classical",
+    "count": 5
+  },
+  {
     "genre": "Music > Roots > Folk > Traditional Folk",
     "count": 5
   },
   {
-    "genre": "Music > Roots > Folk > Latin Folk > Trova Cubana",
+    "genre": "Music > Score > Game",
     "count": 4
   },
   {
-    "genre": "Music > Score > Game",
+    "genre": "Music > Roots > Folk > Latin Folk > Trova Cubana",
     "count": 4
   },
   {
@@ -248,7 +248,7 @@
     "count": 3
   },
   {
-    "genre": "Music > Roots > Folk > Latin Folk > Latin Folk Pop",
+    "genre": "Music > Rhythmic > Disco > Hi-NRG",
     "count": 2
   },
   {
@@ -256,19 +256,15 @@
     "count": 2
   },
   {
-    "genre": "Music > Rhythmic > Disco > Hi-NRG",
+    "genre": "Music > Roots > Folk > Latin Folk > Latin Folk Pop",
     "count": 2
-  },
-  {
-    "genre": "Music > Electronic > Drum And Bass",
-    "count": 1
   },
   {
     "genre": "Music > Score > Series",
     "count": 1
   },
   {
-    "genre": "Music > Roots > Folk > Latin Folk > Flamenco Pop",
+    "genre": "Music > Rock > Soft Rock\\",
     "count": 1
   },
   {
@@ -280,7 +276,11 @@
     "count": 1
   },
   {
-    "genre": "Music > Rock > Reggae Rock",
+    "genre": "Music > Roots > Folk > Latin Folk > Flamenco Pop",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
     "count": 1
   }
 ]

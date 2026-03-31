@@ -1,78 +1,78 @@
 [
   {
-    "nodo": "Music",
-    "total": 1493,
+    "nodo": "Music > Electronic",
+    "total": 46,
     "exactos": 0,
-    "de_paso": 1493,
+    "de_paso": 46,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "The Day Of The Greys",
+        "artist": "4hero",
+        "genre": "Music > Electronic > Drum And Bass"
+      },
+      {
+        "title": "I Ran (So Far Away)",
+        "artist": "A Flock Of Seagulls",
+        "genre": "Music > Electronic > Synthpop"
+      },
+      {
+        "title": "Take on Me",
+        "artist": "A-Ha",
+        "genre": "Music > Electronic > Synthpop"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Alternative Rock",
+    "total": 156,
+    "exactos": 156,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Devils Haircut",
+        "artist": "Beck",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Loser",
+        "artist": "Beck",
+        "genre": "Music > Rock > Alternative Rock"
+      },
+      {
+        "title": "Alicia",
+        "artist": "Bunbury",
+        "genre": "Music > Rock > Alternative Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music",
+    "total": 1491,
+    "exactos": 0,
+    "de_paso": 1491,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
         "title": "I'm Not In Love",
         "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
+        "genre": "Music > Rock > Soft Rock\\"
       },
       {
         "title": "What's Up?",
         "artist": "4 Non Blondes",
         "genre": "Music > Rock > Folk Rock"
+      },
+      {
+        "title": "The Day Of The Greys",
+        "artist": "4hero",
+        "genre": "Music > Electronic > Drum And Bass"
       }
     ]
-  },
-  {
-    "nodo": "Music > Metal",
-    "total": 115,
-    "exactos": 0,
-    "de_paso": 115,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Mother",
-        "artist": "Danzig",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Indie Rock",
-    "total": 134,
-    "exactos": 134,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "The Suburbs",
-        "artist": "Arcade Fire",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Bolero Falaz",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Indie Rock"
-      },
-      {
-        "title": "Florecita Rockera",
-        "artist": "Aterciopelados",
-        "genre": "Music > Rock > Indie Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Pop > Indie Pop",
@@ -125,181 +125,6 @@
     ]
   },
   {
-    "nodo": "Music > Roots > Folk > Latin Folk",
-    "total": 150,
-    "exactos": 0,
-    "de_paso": 150,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "Dos Culpables",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Enamórate Como Yo",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      },
-      {
-        "title": "Llegaste Tú",
-        "artist": "Adriana Lucia",
-        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Alternative Rock",
-    "total": 157,
-    "exactos": 157,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Devils Haircut",
-        "artist": "Beck",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Loser",
-        "artist": "Beck",
-        "genre": "Music > Rock > Alternative Rock"
-      },
-      {
-        "title": "Alicia",
-        "artist": "Bunbury",
-        "genre": "Music > Rock > Alternative Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock",
-    "total": 705,
-    "exactos": 0,
-    "de_paso": 705,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "I'm Not In Love",
-        "artist": "10cc",
-        "genre": "Music > Rock > Soft Rock"
-      },
-      {
-        "title": "Love Song",
-        "artist": "311",
-        "genre": "Music > Rock > Reggae Rock"
-      },
-      {
-        "title": "What's Up?",
-        "artist": "4 Non Blondes",
-        "genre": "Music > Rock > Folk Rock"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Rock > Psychedelic Rock",
-    "total": 59,
-    "exactos": 59,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Heroes",
-        "artist": "David Bowie",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "Somebody To Love",
-        "artist": "Jefferson Airplane",
-        "genre": "Music > Rock > Psychedelic Rock"
-      },
-      {
-        "title": "White Rabbit",
-        "artist": "Jefferson Airplane",
-        "genre": "Music > Rock > Psychedelic Rock"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Pop",
-    "total": 118,
-    "exactos": 0,
-    "de_paso": 118,
-    "clasificacion": "Género de Paso",
-    "ejemplos_exactos": [],
-    "ejemplos_de_paso": [
-      {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Me Dedique a Perderte",
-        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
-        "genre": "Music > Pop > Pop Ballad"
-      },
-      {
-        "title": "Amiga mía",
-        "artist": "Alejandro Sanz",
-        "genre": "Music > Pop > Pop Ballad"
-      }
-    ]
-  },
-  {
-    "nodo": "Music > Roots > Regional Mexicano > Texano",
-    "total": 116,
-    "exactos": 116,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "A Tu Lado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Abrázame Y Bésame",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
-      },
-      {
-        "title": "Desvelado",
-        "artist": "Bobby Pulido",
-        "genre": "Music > Roots > Regional Mexicano > Texano"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
-    "total": 51,
-    "exactos": 51,
-    "de_paso": 0,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Back In Black",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Highway to Hell",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      },
-      {
-        "title": "Thunderstruck",
-        "artist": "AC/DC",
-        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
     "nodo": "Music > Roots > Folk > Latin Folk > Vallenato",
     "total": 143,
     "exactos": 143,
@@ -350,37 +175,119 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Rock > Grunge",
-    "total": 54,
-    "exactos": 54,
+    "nodo": "Music > Rock > Psychedelic Rock",
+    "total": 59,
+    "exactos": 59,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
       {
-        "title": "Man in the Box",
-        "artist": "Alice In Chains",
-        "genre": "Music > Rock > Grunge"
+        "title": "Heroes",
+        "artist": "David Bowie",
+        "genre": "Music > Rock > Psychedelic Rock"
       },
       {
-        "title": "No Excuses",
-        "artist": "Alice In Chains",
-        "genre": "Music > Rock > Grunge"
+        "title": "Somebody To Love",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
       },
       {
-        "title": "Rooster (2022 Remaster)",
-        "artist": "Alice In Chains",
-        "genre": "Music > Rock > Grunge"
+        "title": "White Rabbit",
+        "artist": "Jefferson Airplane",
+        "genre": "Music > Rock > Psychedelic Rock"
       }
     ],
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Pop > Pop Ballad",
-    "total": 46,
-    "exactos": 46,
+    "nodo": "Music > Roots > Folk > Latin Folk",
+    "total": 150,
+    "exactos": 0,
+    "de_paso": 150,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "Dos Culpables",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Enamórate Como Yo",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      },
+      {
+        "title": "Llegaste Tú",
+        "artist": "Adriana Lucia",
+        "genre": "Music > Roots > Folk > Latin Folk > Vallenato"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Hard Rock",
+    "total": 89,
+    "exactos": 1,
+    "de_paso": 88,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Joker And The Thief",
+        "artist": "Wolfmother",
+        "genre": "Music > Rock > Hard Rock"
+      }
+    ],
+    "ejemplos_de_paso": [
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Highway to Hell",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      },
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Rock > Indie Rock",
+    "total": 134,
+    "exactos": 134,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
+      {
+        "title": "The Suburbs",
+        "artist": "Arcade Fire",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "Bolero Falaz",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Indie Rock"
+      },
+      {
+        "title": "Florecita Rockera",
+        "artist": "Aterciopelados",
+        "genre": "Music > Rock > Indie Rock"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Pop",
+    "total": 118,
+    "exactos": 0,
+    "de_paso": 118,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
       {
         "title": "The Winner Takes It All",
         "artist": "ABBA",
@@ -396,8 +303,7 @@
         "artist": "Alejandro Sanz",
         "genre": "Music > Pop > Pop Ballad"
       }
-    ],
-    "ejemplos_de_paso": []
+    ]
   },
   {
     "nodo": "Music > Roots > Regional Mexicano",
@@ -450,44 +356,12 @@
     "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Metal > Heavy Metal",
-    "total": 59,
-    "exactos": 59,
+    "nodo": "Music > Rock > Hard Rock > Hard Rock (Standard)",
+    "total": 51,
+    "exactos": 51,
     "de_paso": 0,
     "clasificacion": "Nodo saturado",
     "ejemplos_exactos": [
-      {
-        "title": "Iron Man",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Paranoid",
-        "artist": "Black Sabbath",
-        "genre": "Music > Metal > Heavy Metal"
-      },
-      {
-        "title": "Mother",
-        "artist": "Danzig",
-        "genre": "Music > Metal > Heavy Metal"
-      }
-    ],
-    "ejemplos_de_paso": []
-  },
-  {
-    "nodo": "Music > Rock > Hard Rock",
-    "total": 89,
-    "exactos": 1,
-    "de_paso": 88,
-    "clasificacion": "Nodo saturado",
-    "ejemplos_exactos": [
-      {
-        "title": "Joker And The Thief",
-        "artist": "Wolfmother",
-        "genre": "Music > Rock > Hard Rock"
-      }
-    ],
-    "ejemplos_de_paso": [
       {
         "title": "Back In Black",
         "artist": "AC/DC",
@@ -503,32 +377,58 @@
         "artist": "AC/DC",
         "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
       }
-    ]
+    ],
+    "ejemplos_de_paso": []
   },
   {
-    "nodo": "Music > Electronic",
-    "total": 46,
+    "nodo": "Music > Metal",
+    "total": 115,
     "exactos": 0,
-    "de_paso": 46,
+    "de_paso": 115,
     "clasificacion": "Género de Paso",
     "ejemplos_exactos": [],
     "ejemplos_de_paso": [
       {
-        "title": "The Day Of The Greys",
-        "artist": "4hero",
-        "genre": "Music > Electronic > Drum And Bass"
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "I Ran (So Far Away)",
-        "artist": "A Flock Of Seagulls",
-        "genre": "Music > Electronic > Synthpop"
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
       },
       {
-        "title": "Take on Me",
-        "artist": "A-Ha",
-        "genre": "Music > Electronic > Synthpop"
+        "title": "Mother",
+        "artist": "Danzig",
+        "genre": "Music > Metal > Heavy Metal"
       }
     ]
+  },
+  {
+    "nodo": "Music > Roots > Regional Mexicano > Texano",
+    "total": 116,
+    "exactos": 116,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "A Tu Lado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Abrázame Y Bésame",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
+      },
+      {
+        "title": "Desvelado",
+        "artist": "Bobby Pulido",
+        "genre": "Music > Roots > Regional Mexicano > Texano"
+      }
+    ],
+    "ejemplos_de_paso": []
   },
   {
     "nodo": "Music > Roots",
@@ -554,5 +454,105 @@
         "genre": "Music > Roots > Cumbia > Cumbia Pop"
       }
     ]
+  },
+  {
+    "nodo": "Music > Rock > Grunge",
+    "total": 54,
+    "exactos": 54,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Man in the Box",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Grunge"
+      },
+      {
+        "title": "No Excuses",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Grunge"
+      },
+      {
+        "title": "Rooster (2022 Remaster)",
+        "artist": "Alice In Chains",
+        "genre": "Music > Rock > Grunge"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Pop > Pop Ballad",
+    "total": 46,
+    "exactos": 46,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "The Winner Takes It All",
+        "artist": "ABBA",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Me Dedique a Perderte",
+        "artist": "Alejandro Fernandez A Duo Con Amaia Montero",
+        "genre": "Music > Pop > Pop Ballad"
+      },
+      {
+        "title": "Amiga mía",
+        "artist": "Alejandro Sanz",
+        "genre": "Music > Pop > Pop Ballad"
+      }
+    ],
+    "ejemplos_de_paso": []
+  },
+  {
+    "nodo": "Music > Rock",
+    "total": 703,
+    "exactos": 0,
+    "de_paso": 703,
+    "clasificacion": "Género de Paso",
+    "ejemplos_exactos": [],
+    "ejemplos_de_paso": [
+      {
+        "title": "I'm Not In Love",
+        "artist": "10cc",
+        "genre": "Music > Rock > Soft Rock\\"
+      },
+      {
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "genre": "Music > Rock > Folk Rock"
+      },
+      {
+        "title": "Back In Black",
+        "artist": "AC/DC",
+        "genre": "Music > Rock > Hard Rock > Hard Rock (Standard)"
+      }
+    ]
+  },
+  {
+    "nodo": "Music > Metal > Heavy Metal",
+    "total": 59,
+    "exactos": 59,
+    "de_paso": 0,
+    "clasificacion": "Nodo saturado",
+    "ejemplos_exactos": [
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "genre": "Music > Metal > Heavy Metal"
+      },
+      {
+        "title": "Mother",
+        "artist": "Danzig",
+        "genre": "Music > Metal > Heavy Metal"
+      }
+    ],
+    "ejemplos_de_paso": []
   }
 ]
