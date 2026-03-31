@@ -1,6 +1,8 @@
+
 import requests
 import csv
 import time
+import os
 
 # ==============================
 # CONFIGURACIÓN QOBUZ
