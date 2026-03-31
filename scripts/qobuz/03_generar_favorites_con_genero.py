@@ -69,16 +69,16 @@ def normalizar_texto(texto):
 
 def cargar_generos_dict(path):
     """Carga dos diccionarios: por (title, artist) y por isrc si está disponible."""
-    generos_title_artist = {}
-    generos_isrc = {}
+    generos_title_artist = defaultdict(list)
+    generos_isrc = defaultdict(list)
     with open(path, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             key = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
             genero = row['genre'].strip()
-            generos_title_artist[key] = genero
+            generos_title_artist[key].append(genero)
             if 'isrc' in row and row['isrc']:
-                generos_isrc[row['isrc'].strip()] = genero
+                generos_isrc[row['isrc'].strip()].append(genero)
     return generos_title_artist, generos_isrc
 
 def main():
@@ -93,25 +93,34 @@ def main():
         writer.writeheader()
         for row in reader:
             key_norm = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
-            # Match SOLO por título y artista
-            genero = generos_title_artist.get(key_norm, '')
-            genero_valido = encontrar_genero_valido(genero, ramas) if genero else ''
-            # Elimina comillas dobles de cada valor antes de escribir
-            clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
-            if not genero_valido:
+            generos = generos_title_artist.get(key_norm, [])
+            # Si hay varios géneros, escribir una fila por cada uno
+            if generos:
+                for genero in generos:
+                    genero_valido = encontrar_genero_valido(genero, ramas) if genero else ''
+                    clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
+                    writer.writerow({
+                        'title': clean_row['title'],
+                        'artist': clean_row['artist'],
+                        'album': clean_row['album'],
+                        'isrc': clean_row['isrc'],
+                        'genre': genero_valido.replace('"', '') if isinstance(genero_valido, str) else genero_valido
+                    })
+            else:
+                clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
                 canciones_sin_genero.append({
                     'title': clean_row['title'],
                     'artist': clean_row['artist'],
                     'album': clean_row['album'],
                     'isrc': clean_row['isrc']
                 })
-            writer.writerow({
-                'title': clean_row['title'],
-                'artist': clean_row['artist'],
-                'album': clean_row['album'],
-                'isrc': clean_row['isrc'],
-                'genre': genero_valido.replace('"', '') if isinstance(genero_valido, str) else genero_valido
-            })
+                writer.writerow({
+                    'title': clean_row['title'],
+                    'artist': clean_row['artist'],
+                    'album': clean_row['album'],
+                    'isrc': clean_row['isrc'],
+                    'genre': ''
+                })
 
     # Reporte en pantalla
     cantidad = len(canciones_sin_genero)
