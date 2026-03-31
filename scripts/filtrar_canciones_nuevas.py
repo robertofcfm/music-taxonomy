@@ -31,14 +31,30 @@ try:
     # Leer todas las canciones y filtrar nuevas
     nuevas = []
     total_raw = 0
+    claves_raw = set()
+    duplicados_raw = 0
+    registros_duplicados = []
     with open(songs_raw, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             total_raw += 1
             key = (normaliza(row['title']), normaliza(row['artist']))
+            if key in claves_raw:
+                duplicados_raw += 1
+                registros_duplicados.append({"title": row['title'], "artist": row['artist']})
+            else:
+                claves_raw.add(key)
             if key not in procesadas:
                 nuevas.append({"title": row['title'], "artist": row['artist']})
     print(f"Total canciones en songs_raw.csv: {total_raw}")
+    print(f"Canciones únicas en songs_raw.csv: {len(claves_raw)}")
+    print(f"Duplicados en songs_raw.csv: {duplicados_raw}")
+    if registros_duplicados:
+        print("Ejemplos de registros duplicados:")
+        for reg in registros_duplicados[:10]:
+            print(f"- {reg['title']} / {reg['artist']}")
+        if len(registros_duplicados) > 10:
+            print(f"... y {len(registros_duplicados) - 10} más")
     print(f"Canciones nuevas detectadas: {len(nuevas)}")
 
     # Guardar solo las primeras 20 canciones nuevas en JSON
