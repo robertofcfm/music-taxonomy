@@ -108,6 +108,16 @@
       ]
     },
     {
+      "node_path": "Music > Hip Hop > Hip Hop (Classic)",
+      "membership_criteria": "Hip hop producido y lanzado principalmente entre finales de los 70 y mediados de los 90, caracterizado por el uso de samples, scratching, rimas complejas y temáticas urbanas. Incluye la llamada 'old school' y 'golden era' del hip hop.",
+      "exclusion_criteria": "Producciones posteriores a mediados de los 90, o estilos que encajan mejor en subgéneros como Boom Bap, Trap, West Coast, etc.",
+      "reference_examples": [
+        "Grandmaster Flash & The Furious Five - The Message",
+        "Run DMC - It's Like That",
+        "Eric B. & Rakim - Paid in Full"
+      ]
+    },
+    {
       "node_path": "Music > Hip Hop > Hip Hop (Standard)",
       "membership_criteria": "Canciones de hip hop que no cumplen los criterios de ningún subgénero hijo (por ejemplo, West Coast, Boom Bap, Trap, etc.). Nodo de respaldo ('catch-all') para hip hop general.",
       "exclusion_criteria": "No asignar si la canción puede clasificarse en algún subgénero hijo de Hip Hop.",
@@ -577,10 +587,9 @@
         "Emilio Navaira - Ya No Me Pones Atención",
         "Albert Zamora Y Talento - El Circo"
       ]
-    }
-    ,
+    },
     {
-      "node_path": "Score",
+      "node_path": "Music > Score",
       "membership_criteria": "Obras instrumentales compuestas específicamente para acompañar y enfatizar la narrativa visual de películas, series de TV o videojuegos. Incluye música incidental, temas principales y suites creadas para medios audiovisuales.",
       "exclusion_criteria": "Música clásica no compuesta para medios audiovisuales, canciones con letra, o piezas populares reutilizadas en soundtracks.",
       "reference_examples": [
@@ -588,41 +597,46 @@
         "Nobuo Uematsu - Final Fantasy VII Main Theme",
         "Ramin Djawadi - Game of Thrones Main Title"
       ]
-    }
-    ,
+    },
     {
-      "node_path": "Choral",
+      "node_path": "Music > Choral",
       "membership_criteria": "Obras interpretadas por coro, con o sin acompañamiento instrumental. Puede incluir música sacra, profana o experimental.",
       "exclusion_criteria": "Obras solistas, de cámara o sin participación coral significativa.",
       "reference_examples": []
-    }
-    ,
+    },
     {
-      "node_path": "Pop Rap",
+      "node_path": "Music > Hip Hop > Pop Rap",
       "membership_criteria": "Canciones que fusionan elementos de rap y pop, con enfoque en melodía y estribillos pegadizos, pero con versos rapeados.",
       "exclusion_criteria": "Rap puro sin elementos pop, pop sin versos rapeados.",
       "reference_examples": []
-    }
-    ,
+    },
     {
-      "node_path": "Score > Film",
+      "node_path": "Music > Score > Film",
       "membership_criteria": "Música compuesta específicamente para películas, enfatizando la narrativa visual y emocional del cine.",
       "exclusion_criteria": "Música de videojuegos, series o reutilizada de otros medios.",
       "reference_examples": []
-    }
-    ,
+    },
     {
-      "node_path": "Score > Game",
+      "node_path": "Music > Score > Game",
       "membership_criteria": "Música compuesta específicamente para videojuegos, enfatizando la interacción y la ambientación lúdica.",
       "exclusion_criteria": "Música de películas, series o reutilizada de otros medios.",
       "reference_examples": []
-    }
-    ,
+    },
     {
-      "node_path": "Score > Series",
+      "node_path": "Music > Score > Series",
       "membership_criteria": "Música compuesta específicamente para series de televisión, enfatizando la narrativa episódica y la identidad sonora de la serie.",
       "exclusion_criteria": "Música de películas, videojuegos o reutilizada de otros medios.",
       "reference_examples": []
+    },
+    {
+      "node_path": "Music > Metal > Alternative Metal",
+      "membership_criteria": "Metal que fusiona elementos del metal tradicional con influencias de géneros alternativos como el rock alternativo, funk, grunge, hip hop o electrónica. Suele presentar estructuras no convencionales, experimentación sonora, cambios de dinámica y una actitud innovadora. El groove puede ser variado, con riffs pesados pero también pasajes melódicos o rítmicos inusuales.",
+      "exclusion_criteria": "Metal tradicional sin elementos alternativos claros, o estilos que encajan mejor en subgéneros definidos como Heavy Metal, Industrial Metal, Nu Metal, etc.",
+      "reference_examples": [
+        "Tool - Schism",
+        "Faith No More - Epic",
+        "Deftones - My Own Summer (Shove It)"
+      ]
     }
   ]
 }
