@@ -88,36 +88,44 @@ def main():
     with open('catalog/favorites_qobuz.csv', encoding='utf-8') as fin, \
          open('catalog/cancionesConGenero.csv', 'w', encoding='utf-8', newline='') as fout:
         reader = csv.DictReader(fin)
-        fieldnames = ['title', 'artist', 'album', 'isrc', 'genre']
+        # Añadir los nuevos campos
+        fieldnames = ['title', 'title_version', 'artist', 'album', 'album_version', 'isrc', 'genre']
         writer = csv.DictWriter(fout, fieldnames=fieldnames)
         writer.writeheader()
         for row in reader:
             key_norm = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
             generos = generos_title_artist.get(key_norm, [])
-            # Si hay varios géneros, escribir una fila por cada uno
+            # Limpiar campos y obtener versiones si existen
+            clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
+            title_version = clean_row.get('title_version', '')
+            album_version = clean_row.get('album_version', '')
             if generos:
                 for genero in generos:
                     genero_valido = encontrar_genero_valido(genero, ramas) if genero else ''
-                    clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
                     writer.writerow({
                         'title': clean_row['title'],
+                        'title_version': title_version,
                         'artist': clean_row['artist'],
                         'album': clean_row['album'],
+                        'album_version': album_version,
                         'isrc': clean_row['isrc'],
                         'genre': genero_valido.replace('"', '') if isinstance(genero_valido, str) else genero_valido
                     })
             else:
-                clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
                 canciones_sin_genero.append({
                     'title': clean_row['title'],
+                    'title_version': title_version,
                     'artist': clean_row['artist'],
                     'album': clean_row['album'],
+                    'album_version': album_version,
                     'isrc': clean_row['isrc']
                 })
                 writer.writerow({
                     'title': clean_row['title'],
+                    'title_version': title_version,
                     'artist': clean_row['artist'],
                     'album': clean_row['album'],
+                    'album_version': album_version,
                     'isrc': clean_row['isrc'],
                     'genre': ''
                 })

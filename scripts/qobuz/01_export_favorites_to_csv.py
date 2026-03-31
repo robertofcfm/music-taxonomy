@@ -46,32 +46,59 @@ def main():
     activas = []
     inactivas = []
     for track in favoritos:
-        # Una canción está inactiva si tiene el campo 'isrc' vacío o si el campo 'album' está vacío o si el campo 'title' está vacío
         title = track.get("title", "")
+        title_version = track.get("version", "")
         artist = track.get("performer", {}).get("name", "")
         album = track.get("album", {}).get("title", "")
+        album_version = track.get("album", {}).get("version", "")
         isrc = track.get("isrc", "")
-        # Consideramos inactiva si falta title, artist, album o isrc, o si el track tiene un campo 'is_available' y es False
+        genre = track.get("genre", "") if "genre" in track else ""
         is_available = track.get("is_available", True)
+        row = {
+            "title": title,
+            "title_version": title_version,
+            "artist": artist,
+            "album": album,
+            "album_version": album_version,
+            "isrc": isrc,
+            "genre": genre
+        }
         if not title or not artist or not album or not isrc or not is_available:
-            inactivas.append({"title": title, "artist": artist, "album": album, "isrc": isrc})
+            inactivas.append(row)
         else:
-            activas.append({"title": title, "artist": artist, "album": album, "isrc": isrc})
+            activas.append(row)
 
-    # Guardar solo las activas en el archivo principal
+
+    # Guardar solo las activas en el archivo principal con los campos requeridos
     with open(output_path, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["title", "artist", "album", "isrc"])
+        writer.writerow(["title", "title_version", "artist", "album", "album_version", "isrc", "genre"])
         for track in activas:
-            writer.writerow([track["title"], track["artist"], track["album"], track["isrc"]])
+            writer.writerow([
+                track["title"],
+                track["title_version"],
+                track["artist"],
+                track["album"],
+                track["album_version"],
+                track["isrc"],
+                track["genre"]
+            ])
 
-    # Guardar las inactivas en un archivo aparte
+    # Guardar las inactivas en un archivo aparte (mismos campos)
     output_inactivas = os.path.join(output_dir, "favorites_qobuz_inactivas.csv")
     with open(output_inactivas, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["title", "artist", "album", "isrc"])
+        writer.writerow(["title", "title_version", "artist", "album", "album_version", "isrc", "genre"])
         for track in inactivas:
-            writer.writerow([track["title"], track["artist"], track["album"], track["isrc"]])
+            writer.writerow([
+                track["title"],
+                track["title_version"],
+                track["artist"],
+                track["album"],
+                track["album_version"],
+                track["isrc"],
+                track["genre"]
+            ])
 
     print(f"Archivo {output_path} generado correctamente.")
     print(f"Canciones activas: {len(activas)}")
