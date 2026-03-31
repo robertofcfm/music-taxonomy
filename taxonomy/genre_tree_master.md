@@ -49,7 +49,6 @@ Music
     Post-Punk
     Progressive Rock
     Psychedelic Rock
-    Reggae Rock
     Roots Rock
     Soft Rock
   Roots
