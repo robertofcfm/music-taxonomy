@@ -52,6 +52,26 @@ def main():
     set1 = load_title_artist_set(file1)
     set2 = load_title_artist_set(file2)
 
+    # Comparación adicional con songs_with_genres.csv
+    file4 = os.path.join("catalog", "songs_with_genres.csv")
+    set4 = load_title_artist_set(file4)
+
+    only_in_1_4 = set1 - set4
+    only_in_4_1 = set4 - set1
+
+    print("\nComparando favorites_qobuz.csv vs songs_with_genres.csv:")
+    if not only_in_1_4 and not only_in_4_1:
+        print("Los archivos están correctamente sincronizados.")
+    else:
+        if only_in_1_4:
+            print("En favorites_qobuz.csv pero NO en songs_with_genres.csv:")
+            for t, a in sorted(only_in_1_4):
+                print(f"  - {t} | {a}")
+        if only_in_4_1:
+            print("En songs_with_genres.csv pero NO en favorites_qobuz.csv:")
+            for t, a in sorted(only_in_4_1):
+                print(f"  - {t} | {a}")
+
     only_in_1 = set1 - set2
     only_in_2 = set2 - set1
 
