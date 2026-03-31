@@ -1,9 +1,38 @@
 import csv
 from collections import defaultdict
-import sys
+
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from scripts.generar_canciones_con_genero import cargar_arbol_generos, encontrar_genero_valido
+def cargar_arbol_generos(path):
+    """Carga un árbol de géneros desde un archivo markdown. Devuelve (ramas, set_todos_los_generos)."""
+    generos = set()
+    ramas = set()
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            # Considera como género válido la última parte después de '>' o el texto completo
+            if '>' in line:
+                genero = line.split('>')[-1].strip()
+            else:
+                genero = line
+            generos.add(genero)
+            ramas.add(genero)
+    return ramas, generos
+
+def encontrar_genero_valido(genero, ramas):
+    """Devuelve el género si está en ramas, si no, intenta buscarlo ignorando mayúsculas/minúsculas y espacios."""
+    if not genero:
+        return ''
+    genero = genero.strip()
+    if genero in ramas:
+        return genero
+    # Búsqueda flexible
+    genero_norm = genero.lower().replace(' ', '')
+    for r in ramas:
+        if genero_norm == r.lower().replace(' ', ''):
+            return r
+    return ''
 
 import unicodedata
 
@@ -23,18 +52,22 @@ def normalizar_texto(texto):
     return texto
 
 def cargar_generos_dict(path):
-    """Carga un diccionario {(title, artist): genre} desde songs_with_genres.csv, normalizando claves"""
-    generos = {}
+    """Carga dos diccionarios: por (title, artist) y por isrc si está disponible."""
+    generos_title_artist = {}
+    generos_isrc = {}
     with open(path, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             key = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
-            generos[key] = row['genre'].strip()
-    return generos
+            genero = row['genre'].strip()
+            generos_title_artist[key] = genero
+            if 'isrc' in row and row['isrc']:
+                generos_isrc[row['isrc'].strip()] = genero
+    return generos_title_artist, generos_isrc
 
 def main():
     ramas, _ = cargar_arbol_generos('taxonomy/genre_tree.md')
-    generos_dict = cargar_generos_dict('catalog/songs_with_genres.csv')
+    generos_title_artist, generos_isrc = cargar_generos_dict('catalog/songs_with_genres.csv')
     canciones_sin_genero = []
     with open('catalog/favorites_qobuz.csv', encoding='utf-8') as fin, \
          open('catalog/cancionesConGenero.csv', 'w', encoding='utf-8', newline='') as fout:
@@ -44,7 +77,12 @@ def main():
         writer.writeheader()
         for row in reader:
             key_norm = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
-            genero = generos_dict.get(key_norm, '')
+            isrc = row.get('isrc', '').strip()
+            # Buscar primero por ISRC si está disponible
+            genero = generos_isrc.get(isrc, '') if isrc else ''
+            # Si no hay match por ISRC, buscar por título/artista
+            if not genero:
+                genero = generos_title_artist.get(key_norm, '')
             genero_valido = encontrar_genero_valido(genero, ramas) if genero else ''
             # Elimina comillas dobles de cada valor antes de escribir
             clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}

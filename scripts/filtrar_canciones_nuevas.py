@@ -4,7 +4,7 @@ import os
 import unicodedata
 
 # Archivos de entrada y salida (rutas relativas al root del proyecto)
-songs_raw = 'catalog/songs_raw.csv'
+songs_raw = 'catalog/favorites_qobuz.csv'
 songs_with_genres = 'catalog/songs_with_genres.csv'
 output_json = 'reports/canciones_nuevas.json'
 
@@ -38,21 +38,21 @@ try:
         reader = csv.DictReader(f)
         for row in reader:
             total_raw += 1
-            key = (normaliza(row['title']), normaliza(row['artist']))
+            key = (normaliza(row['title']), normaliza(row['artist']), normaliza(row.get('isrc','')))
             if key in claves_raw:
                 duplicados_raw += 1
-                registros_duplicados.append({"title": row['title'], "artist": row['artist']})
+                registros_duplicados.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
             else:
                 claves_raw.add(key)
-            if key not in procesadas:
-                nuevas.append({"title": row['title'], "artist": row['artist']})
-    print(f"Total canciones en songs_raw.csv: {total_raw}")
-    print(f"Canciones únicas en songs_raw.csv: {len(claves_raw)}")
-    print(f"Duplicados en songs_raw.csv: {duplicados_raw}")
+            if (normaliza(row['title']), normaliza(row['artist'])) not in procesadas:
+                nuevas.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
+    print(f"Total canciones en favorites_qobuz.csv: {total_raw}")
+    print(f"Canciones únicas en favorites_qobuz.csv: {len(claves_raw)}")
+    print(f"Duplicados en favorites_qobuz.csv: {duplicados_raw}")
     if registros_duplicados:
         print("Ejemplos de registros duplicados:")
         for reg in registros_duplicados[:10]:
-            print(f"- {reg['title']} / {reg['artist']}")
+            print(f"- {reg['title']} / {reg['artist']} / {reg['isrc']}")
         if len(registros_duplicados) > 10:
             print(f"... y {len(registros_duplicados) - 10} más")
     print(f"Canciones nuevas detectadas: {len(nuevas)}")
@@ -66,7 +66,7 @@ try:
     if lote:
         print("Ejemplo de canciones nuevas (lote actual):")
         for c in lote:
-            print(f"- {c['title']} / {c['artist']}")
+            print(f"- {c['title']} / {c['artist']} / {c['isrc']}")
     else:
         print("No hay canciones nuevas para procesar.")
 except Exception as e:
