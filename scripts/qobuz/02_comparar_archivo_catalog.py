@@ -5,7 +5,7 @@ import unicodedata
 
 # Rutas de los archivos
 file1 = os.path.join("catalog", "favorites_qobuz.csv")
-file2 = os.path.join("catalog", "songs_raw.csv")
+
 
 
 
@@ -35,7 +35,7 @@ def load_title_artist_set(filepath):
 def main():
 
     set1 = load_title_artist_set(file1)
-    set2 = load_title_artist_set(file2)
+
 
     # Comparación adicional con songs_with_genres.csv
     file4 = os.path.join("catalog", "songs_with_genres.csv")
@@ -57,21 +57,7 @@ def main():
             for t, a in sorted(only_in_4_1):
                 print(f"  - {t} | {a}")
 
-    only_in_1 = set1 - set2
-    only_in_2 = set2 - set1
 
-    print("\nComparando favorites_qobuz.csv vs songs_raw.csv:")
-    if not only_in_1 and not only_in_2:
-        print("Los archivos están correctamente sincronizados.")
-    else:
-        if only_in_1:
-            print("En favorites_qobuz.csv pero NO en songs_raw.csv:")
-            for t, a in sorted(only_in_1):
-                print(f"  - {t} | {a}")
-        if only_in_2:
-            print("En songs_raw.csv pero NO en favorites_qobuz.csv:")
-            for t, a in sorted(only_in_2):
-                print(f"  - {t} | {a}")
 
     # Comparación adicional con cancionesConGenero.csv
     file3 = os.path.join("catalog", "cancionesConGenero.csv")

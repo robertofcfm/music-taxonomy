@@ -42,16 +42,42 @@ def main():
     output_dir = "catalog"
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, "favorites_qobuz.csv")
+
+    activas = []
+    inactivas = []
+    for track in favoritos:
+        # Una canción está inactiva si tiene el campo 'isrc' vacío o si el campo 'album' está vacío o si el campo 'title' está vacío
+        title = track.get("title", "")
+        artist = track.get("performer", {}).get("name", "")
+        album = track.get("album", {}).get("title", "")
+        isrc = track.get("isrc", "")
+        # Consideramos inactiva si falta title, artist, album o isrc, o si el track tiene un campo 'is_available' y es False
+        is_available = track.get("is_available", True)
+        if not title or not artist or not album or not isrc or not is_available:
+            inactivas.append({"title": title, "artist": artist, "album": album, "isrc": isrc})
+        else:
+            activas.append({"title": title, "artist": artist, "album": album, "isrc": isrc})
+
+    # Guardar solo las activas en el archivo principal
     with open(output_path, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["title", "artist", "album", "isrc"])
-        for track in favoritos:
-            title = track.get("title", "")
-            artist = track.get("performer", {}).get("name", "")
-            album = track.get("album", {}).get("title", "")
-            isrc = track.get("isrc", "")
-            writer.writerow([title, artist, album, isrc])
+        for track in activas:
+            writer.writerow([track["title"], track["artist"], track["album"], track["isrc"]])
+
+    # Guardar las inactivas en un archivo aparte
+    output_inactivas = os.path.join(output_dir, "favorites_qobuz_inactivas.csv")
+    with open(output_inactivas, "w", newline='', encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["title", "artist", "album", "isrc"])
+        for track in inactivas:
+            writer.writerow([track["title"], track["artist"], track["album"], track["isrc"]])
+
     print(f"Archivo {output_path} generado correctamente.")
+    print(f"Canciones activas: {len(activas)}")
+    print(f"Canciones NO disponibles: {len(inactivas)}")
+    if inactivas:
+        print(f"Archivo con canciones no disponibles: {output_inactivas}")
 
 if __name__ == "__main__":
     main()

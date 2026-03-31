@@ -6,18 +6,23 @@ def cargar_arbol_generos(path):
     """Carga un árbol de géneros desde un archivo markdown. Devuelve (ramas, set_todos_los_generos)."""
     generos = set()
     ramas = set()
+    stack = []  # (nivel, nombre)
     with open(path, encoding='utf-8') as f:
         for line in f:
-            line = line.strip()
-            if not line or line.startswith('#'):
+            if not line.strip() or line.strip().startswith('#'):
                 continue
-            # Considera como género válido la última parte después de '>' o el texto completo
-            if '>' in line:
-                genero = line.split('>')[-1].strip()
-            else:
-                genero = line
-            generos.add(genero)
-            ramas.add(genero)
+            # Detecta nivel de indentación (2 espacios por nivel)
+            raw = line.rstrip('\n')
+            nivel = len(raw) - len(raw.lstrip(' '))
+            nombre = raw.strip()
+            # Ajusta la pila al nivel actual
+            while stack and stack[-1][0] >= nivel:
+                stack.pop()
+            stack.append((nivel, nombre))
+            # Construye la ruta completa
+            ruta = ' > '.join([n for _, n in stack])
+            ramas.add(ruta)
+            generos.add(nombre)
     return ramas, generos
 
 def encontrar_genero_valido(genero, ramas):
@@ -25,31 +30,42 @@ def encontrar_genero_valido(genero, ramas):
     if not genero:
         return ''
     genero = genero.strip()
-    if genero in ramas:
-        return genero
-    # Búsqueda flexible
-    genero_norm = genero.lower().replace(' ', '')
-    for r in ramas:
-        if genero_norm == r.lower().replace(' ', ''):
-            return r
+    # Probar la rama completa y luego ir quitando desde el final
+    partes = [p.strip() for p in genero.split('>')]
+    for i in range(len(partes), 0, -1):
+        rama = ' > '.join(partes[:i])
+        if rama in ramas:
+            return rama
+        # Búsqueda flexible: sin espacios y minúsculas
+        rama_norm = rama.lower().replace(' ', '')
+        for r in ramas:
+            if rama_norm == r.lower().replace(' ', ''):
+                return r
     return ''
 
 import unicodedata
 
 import re
 def normalizar_texto(texto):
-    # Quita cualquier tipo de comillas, normaliza unicode, minúsculas y elimina espacios dobles
+    # Normaliza: elimina comillas, espacios extra, deja solo letras/números/tildes, minúsculas
     if texto is None:
         return ''
     texto = str(texto)
-    # Elimina cualquier tipo de comillas (simples, dobles, dobles dobles, escapadas) y barras invertidas
-    texto = re.sub(r'["\'\u201c\u201d\u2018\u2019\\]', '', texto)
+    # Elimina comillas dobles al inicio y final
+    if texto.startswith('"') and texto.endswith('"'):
+        texto = texto[1:-1]
+    # Elimina todos los signos de puntuación y símbolos Unicode de forma robusta
+    import string
+    texto = ''.join(c for c in texto if unicodedata.category(c)[0] not in ('P', 'S'))
+    # Normaliza unicode y minúsculas
     texto = texto.strip().lower()
     texto = unicodedata.normalize('NFKD', texto)
     texto = ''.join([c for c in texto if not unicodedata.combining(c)])
+    # Elimina cualquier carácter que no sea letra, número, tilde o espacio
+    texto = re.sub(r'[^a-z0-9áéíóúüñ\s]', '', texto)
     # Reemplaza múltiples espacios internos por uno solo
     texto = re.sub(r'\s+', ' ', texto)
-    return texto
+    return texto.strip()
 
 def cargar_generos_dict(path):
     """Carga dos diccionarios: por (title, artist) y por isrc si está disponible."""
@@ -67,7 +83,7 @@ def cargar_generos_dict(path):
 
 def main():
     ramas, _ = cargar_arbol_generos('taxonomy/genre_tree.md')
-    generos_title_artist, generos_isrc = cargar_generos_dict('catalog/songs_with_genres.csv')
+    generos_title_artist, _ = cargar_generos_dict('catalog/songs_with_genres.csv')
     canciones_sin_genero = []
     with open('catalog/favorites_qobuz.csv', encoding='utf-8') as fin, \
          open('catalog/cancionesConGenero.csv', 'w', encoding='utf-8', newline='') as fout:
@@ -77,12 +93,8 @@ def main():
         writer.writeheader()
         for row in reader:
             key_norm = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
-            isrc = row.get('isrc', '').strip()
-            # Buscar primero por ISRC si está disponible
-            genero = generos_isrc.get(isrc, '') if isrc else ''
-            # Si no hay match por ISRC, buscar por título/artista
-            if not genero:
-                genero = generos_title_artist.get(key_norm, '')
+            # Match SOLO por título y artista
+            genero = generos_title_artist.get(key_norm, '')
             genero_valido = encontrar_genero_valido(genero, ramas) if genero else ''
             # Elimina comillas dobles de cada valor antes de escribir
             clean_row = {k: (v.replace('"', '') if isinstance(v, str) else v) for k, v in row.items()}
