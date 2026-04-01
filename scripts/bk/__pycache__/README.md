@@ -1,1 +1,0 @@
-Backup de archivos pyc.
