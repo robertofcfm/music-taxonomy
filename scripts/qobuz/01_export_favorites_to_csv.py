@@ -54,6 +54,7 @@ def main():
         isrc = track.get("isrc", "")
         genre = track.get("genre", "") if "genre" in track else ""
         is_available = track.get("is_available", True)
+        streamable = track.get("streamable", True)
         row = {
             "title": title,
             "title_version": title_version,
@@ -63,7 +64,8 @@ def main():
             "isrc": isrc,
             "genre": genre
         }
-        if not title or not artist or not album or not isrc or not is_available:
+        # Ahora también se considera 'streamable' para marcar inactivas
+        if (not title or not artist or not album or not isrc or not is_available or not streamable):
             inactivas.append(row)
         else:
             activas.append(row)
