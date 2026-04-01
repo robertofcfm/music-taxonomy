@@ -107,6 +107,42 @@ def main():
     print(f"Canciones NO disponibles: {len(inactivas)}")
     if inactivas:
         print(f"Archivo con canciones no disponibles: {output_inactivas}")
+    
+    # ==============================
+    # VALIDACIÓN DE ISRC DUPLICADOS
+    # ==============================
+    isrc_count = {}
+    for track in activas:
+        isrc = track.get("isrc", "SIN_ISRC")
+        isrc_count[isrc] = isrc_count.get(isrc, 0) + 1
+
+    duplicados = [isrc for isrc, count in isrc_count.items() if count > 1 and isrc != "SIN_ISRC"]
+
+    if duplicados:
+        print("\n🚨 Se encontraron ISRC duplicados en las canciones activas:")
+        print(f"Cantidad de ISRC duplicados: {len(duplicados)}")
+        for d in duplicados:
+            print(f" - {d} (apariciones: {isrc_count[d]})")
+
+        # Generar CSV con los duplicados
+        output_duplicados = os.path.join(output_dir, "favorites_qobuz_duplicados_isrc.csv")
+        with open(output_duplicados, "w", newline='', encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["title", "title_version", "artist", "album", "album_version", "isrc", "genre"])
+            for track in activas:
+                if track.get("isrc", "SIN_ISRC") in duplicados:
+                    writer.writerow([
+                        track["title"],
+                        track["title_version"],
+                        track["artist"],
+                        track["album"],
+                        track["album_version"],
+                        track["isrc"],
+                        track["genre"]
+                    ])
+        print(f"Archivo con duplicados generado: {output_duplicados}\n")
+    else:
+        print("No se encontraron ISRC duplicados en las canciones activas.\n")
 
 if __name__ == "__main__":
     main()
