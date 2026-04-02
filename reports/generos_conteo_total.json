@@ -41,7 +41,7 @@
   },
   {
     "genre": "Music > Metal",
-    "count": 115
+    "count": 116
   },
   {
     "genre": "Music > Roots > Regional Mexicano > Texano",
@@ -60,11 +60,11 @@
     "count": 89
   },
   {
-    "genre": "Music > Metal > Heavy Metal",
+    "genre": "Music > Rock > Psychedelic Rock",
     "count": 59
   },
   {
-    "genre": "Music > Rock > Psychedelic Rock",
+    "genre": "Music > Metal > Heavy Metal",
     "count": 59
   },
   {
@@ -80,16 +80,16 @@
     "count": 48
   },
   {
-    "genre": "Music > Pop > Pop Ballad",
-    "count": 46
-  },
-  {
     "genre": "Music > Electronic",
     "count": 46
   },
   {
+    "genre": "Music > Pop > Pop Ballad",
+    "count": 46
+  },
+  {
     "genre": "Music > Hip Hop",
-    "count": 44
+    "count": 43
   },
   {
     "genre": "Music > Rhythmic",
@@ -124,6 +124,10 @@
     "count": 18
   },
   {
+    "genre": "Music > Hip Hop > Pop Rap",
+    "count": 16
+  },
+  {
     "genre": "Music > Rock > Roots Rock",
     "count": 15
   },
@@ -132,27 +136,23 @@
     "count": 14
   },
   {
+    "genre": "Music > Metal > Alternative Metal",
+    "count": 14
+  },
+  {
     "genre": "Music > Rock > Folk Rock",
     "count": 13
   },
   {
-    "genre": "Music > Metal > Alternative Metal",
-    "count": 13
-  },
-  {
-    "genre": "Music > Hip Hop > West Coast",
-    "count": 13
-  },
-  {
-    "genre": "Music > Hip Hop > Pop Rap",
+    "genre": "Music > Hip Hop > Hip Hop (Standard)",
     "count": 12
   },
   {
-    "genre": "Music > Electronic > Downtempo",
+    "genre": "Music > Roots > Cumbia",
     "count": 11
   },
   {
-    "genre": "Music > Roots > Cumbia",
+    "genre": "Music > Electronic > Downtempo",
     "count": 11
   },
   {
@@ -164,28 +164,16 @@
     "count": 10
   },
   {
-    "genre": "Music > Pop > Singer-Songwriter Pop",
+    "genre": "Music > Rhythmic > Ska",
     "count": 9
   },
   {
-    "genre": "Music > Hip Hop > Hip Hop (Classic)",
+    "genre": "Music > Pop > Singer-Songwriter Pop",
     "count": 9
   },
   {
     "genre": "Music > Rock > Pop Punk",
     "count": 9
-  },
-  {
-    "genre": "Music > Rhythmic > Ska",
-    "count": 9
-  },
-  {
-    "genre": "Music > Hip Hop > Boom Bap",
-    "count": 9
-  },
-  {
-    "genre": "Music > Roots > Regional Mexicano > Ranchera",
-    "count": 8
   },
   {
     "genre": "Music > Rhythmic > Soul > Pop Soul",
@@ -196,11 +184,23 @@
     "count": 8
   },
   {
+    "genre": "Music > Roots > Regional Mexicano > Ranchera",
+    "count": 8
+  },
+  {
+    "genre": "Music > Hip Hop > Boom Bap",
+    "count": 7
+  },
+  {
     "genre": "Music > Pop > Pop (Standard)",
     "count": 7
   },
   {
-    "genre": "Music > Electronic > Big Beat",
+    "genre": "Music > Hip Hop > West Coast",
+    "count": 7
+  },
+  {
+    "genre": "Music > Roots > Regional Mexicano > Banda",
     "count": 6
   },
   {
@@ -208,23 +208,11 @@
     "count": 6
   },
   {
-    "genre": "Music > Roots > Regional Mexicano > Banda",
+    "genre": "Music > Electronic > Big Beat",
     "count": 6
   },
   {
-    "genre": "Music > Score > Film",
-    "count": 5
-  },
-  {
-    "genre": "Music > Classical",
-    "count": 5
-  },
-  {
     "genre": "Music > Rhythmic > Funk",
-    "count": 5
-  },
-  {
-    "genre": "Music > Roots > Folk > Traditional Folk",
     "count": 5
   },
   {
@@ -236,6 +224,18 @@
     "count": 5
   },
   {
+    "genre": "Music > Classical",
+    "count": 5
+  },
+  {
+    "genre": "Music > Roots > Folk > Traditional Folk",
+    "count": 5
+  },
+  {
+    "genre": "Music > Score > Film",
+    "count": 5
+  },
+  {
     "genre": "Music > Score > Game",
     "count": 4
   },
@@ -244,11 +244,11 @@
     "count": 4
   },
   {
-    "genre": "Music > Classical > Orchestral",
+    "genre": "Music > Classical > Solo Instrumental",
     "count": 3
   },
   {
-    "genre": "Music > Classical > Solo Instrumental",
+    "genre": "Music > Classical > Orchestral",
     "count": 2
   },
   {
@@ -268,15 +268,15 @@
     "count": 1
   },
   {
-    "genre": "Music > Electronic > Drum And Bass",
-    "count": 1
-  },
-  {
     "genre": "Music > Roots > Folk > Latin Folk > Flamenco Pop",
     "count": 1
   },
   {
     "genre": "Music > Metal > Power Metal",
+    "count": 1
+  },
+  {
+    "genre": "Music > Electronic > Drum And Bass",
     "count": 1
   }
 ]

@@ -38,6 +38,15 @@ Puede crecer en función del catálogo.
 
 Definen cómo asignar una canción a un nodo.
 
+### 3.4 Fuentes autoritativas de validación
+
+Para validar estructura y clasificación se usarán como fuente principal:
+
+* `taxonomy/genre_tree_master.md` para la estructura del árbol
+* `catalog/songs_with_genres.csv` para la asignación actual de géneros
+
+Archivos derivados u operativos (por ejemplo exports intermedios, diffs o listas de sincronización) no deben usarse como fuente principal para auditoría estructural, salvo que la tarea lo pida explícitamente.
+
 ---
 
 ## 4. Política de expansión del blueprint
@@ -99,6 +108,40 @@ Ejemplos:
 Regla:
 
 > Nunca asignar canciones a nodos contenedor.
+
+### 7.3 Nodos fallback
+
+Son nodos asignables de soporte. Se usan cuando una canción pertenece claramente a una rama, pero no puede resolverse con suficiente certeza a un subnodo más específico existente.
+
+Ejemplos:
+
+* Hip Hop (Standard)
+* Pop (Standard)
+* Score
+
+Reglas:
+
+* No deben usarse por comodidad
+* No deben absorber canciones que sí cumplen criterios de un hijo específico
+* Deben mantenerse como soporte, no como destino principal
+
+### 7.4 Nodos híbridos anclados
+
+Son nodos asignables donde existe una base dominante clara y una influencia secundaria estructural, recurrente y taxonómicamente útil.
+
+Ejemplos:
+
+* Blues Rock
+* Folk Rock
+* Cumbia Pop
+* Alternative Metal
+
+Un nodo híbrido anclado solo debe existir si:
+
+* La base principal sigue siendo inequívoca y determina la rama
+* La influencia secundaria afecta de forma estructural el groove, arreglo, fraseo o identidad
+* La mezcla aparece de forma repetible y mejora decisiones de clasificación
+* Puede definirse positivamente, no solo como excepción o mezcla vaga
 
 ---
 

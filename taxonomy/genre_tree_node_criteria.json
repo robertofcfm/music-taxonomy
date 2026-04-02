@@ -566,8 +566,8 @@
     },
     {
       "node_path": "Music > Score",
-      "membership_criteria": "Incluye reinterpretaciones (covers, arreglos, versiones) siempre que la identidad compositiva original se mantenga reconocible y no se transforme en otro sistema dominante.",
-      "exclusion_criteria": "Reinterpretaciones que transforman completamente la obra hacia música clásica, pop u otro sistema donde el origen audiovisual deja de ser dominante.",
+      "membership_criteria": "Obras compuestas para medios audiovisuales, o reinterpretaciones reconocibles de esas obras, siempre que la identidad compositiva original y el origen audiovisual sigan siendo dominantes. Este nodo debe usarse solo como fallback cuando la obra pertenece claramente a Score, pero no puede determinarse con suficiente certeza si corresponde a Film, Game o Series.",
+      "exclusion_criteria": "No asignar si puede identificarse con suficiente certeza el medio audiovisual de origen (usar Film, Game o Series). Excluir reinterpretaciones que transformen completamente la obra hacia música clásica, pop u otro sistema donde el origen audiovisual deja de ser dominante.",
       "reference_examples": [
         "John Williams - Star Wars Main Title",
         "Nobuo Uematsu - Final Fantasy VII Main Theme",
@@ -587,20 +587,20 @@
     },
     {
       "node_path": "Music > Score > Film",
-      "membership_criteria": "Música compuesta específicamente para películas, enfatizando la narrativa visual y emocional del cine.",
-      "exclusion_criteria": "Música de videojuegos, series o reutilizada de otros medios.",
+      "membership_criteria": "Música compuesta específicamente para películas, o reinterpretaciones reconocibles de obras originadas en cine, donde la identidad audiovisual cinematográfica siga siendo dominante. Enfatiza la narrativa visual y emocional del cine.",
+      "exclusion_criteria": "Música de videojuegos o series. Excluir reinterpretaciones cuya transformación sea tan fuerte que el origen cinematográfico deje de ser dominante.",
       "reference_examples": []
     },
     {
       "node_path": "Music > Score > Game",
-      "membership_criteria": "Música compuesta específicamente para videojuegos, enfatizando la interacción y la ambientación lúdica.",
-      "exclusion_criteria": "Música de películas, series o reutilizada de otros medios.",
+      "membership_criteria": "Música compuesta específicamente para videojuegos, o reinterpretaciones reconocibles de obras originadas en videojuegos, donde la identidad lúdica/interactiva siga siendo dominante. Enfatiza la ambientación y función propias del medio.",
+      "exclusion_criteria": "Música de películas o series. Excluir reinterpretaciones cuya transformación sea tan fuerte que el origen en videojuego deje de ser dominante.",
       "reference_examples": []
     },
     {
       "node_path": "Music > Score > Series",
-      "membership_criteria": "Música compuesta específicamente para series de televisión, enfatizando la narrativa episódica y la identidad sonora de la serie.",
-      "exclusion_criteria": "Música de películas, videojuegos o reutilizada de otros medios.",
+      "membership_criteria": "Música compuesta específicamente para series de televisión, anime u otras obras seriadas, o reinterpretaciones reconocibles de esas obras, donde la identidad episódica siga siendo dominante. Enfatiza la narrativa serial y la identidad sonora de la serie.",
+      "exclusion_criteria": "Música de películas o videojuegos. Excluir reinterpretaciones cuya transformación sea tan fuerte que el origen serial deje de ser dominante.",
       "reference_examples": []
     },
     {
