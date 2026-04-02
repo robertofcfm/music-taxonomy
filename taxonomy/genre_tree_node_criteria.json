@@ -590,8 +590,8 @@
     },
     {
       "node_path": "Music > Score",
-      "membership_criteria": "Obras instrumentales compuestas específicamente para acompañar y enfatizar la narrativa visual de películas, series de TV o videojuegos. Incluye música incidental, temas principales y suites creadas para medios audiovisuales.",
-      "exclusion_criteria": "Música clásica no compuesta para medios audiovisuales, canciones con letra, o piezas populares reutilizadas en soundtracks.",
+      "membership_criteria": "Incluye reinterpretaciones (covers, arreglos, versiones) siempre que la identidad compositiva original se mantenga reconocible y no se transforme en otro sistema dominante.",
+      "exclusion_criteria": "Reinterpretaciones que transforman completamente la obra hacia música clásica, pop u otro sistema donde el origen audiovisual deja de ser dominante.",
       "reference_examples": [
         "John Williams - Star Wars Main Title",
         "Nobuo Uematsu - Final Fantasy VII Main Theme",

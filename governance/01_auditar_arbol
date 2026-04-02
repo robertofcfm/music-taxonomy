@@ -1,0 +1,280 @@
+# Music Taxonomy Governance (v1)
+
+## 1. Propósito del sistema
+
+Este sistema tiene como objetivo clasificar música de forma consistente, útil y escalable para navegación y reproducción, basado en criterios auditables.
+
+No busca representar todo el universo musical, sino modelar de forma precisa el espacio musical relevante para la colección del usuario.
+
+---
+
+## 2. Principios fundamentales
+
+1. La clasificación se basa en el **groove dominante**.
+2. En caso de conflicto:
+
+   * groove > instrumentación > estructura > producción
+3. Elementos secundarios (idioma, estética, temática, cultura) no determinan la clasificación.
+4. El sistema prioriza **consistencia operativa** sobre exactitud académica.
+5. La clasificación debe ser **estable en el tiempo** (evitar reclasificaciones innecesarias).
+
+---
+
+## 3. Arquitectura del sistema
+
+El sistema se compone de tres elementos:
+
+### 3.1 Blueprint (árbol maestro)
+
+Define la estructura ideal de clasificación.
+Es independiente del catálogo, pero evoluciona de forma controlada.
+
+### 3.2 Árbol dinámico (instancia)
+
+Representa la implementación real en la biblioteca (Qobuz).
+Puede crecer en función del catálogo.
+
+### 3.3 Reglas de clasificación (criteria)
+
+Definen cómo asignar una canción a un nodo.
+
+---
+
+## 4. Política de expansión del blueprint
+
+Un nodo puede agregarse al blueprint si cumple al menos uno de los siguientes:
+
+1. Es estructural al sistema (necesario para coherencia global)
+2. Ya existe en la colección
+3. Es altamente probable en la evolución de la colección
+
+---
+
+## 5. Política de no-expansión
+
+No se agregan nodos que:
+
+* Representen géneros fuera del interés del usuario
+* Sean subgéneros extremadamente nicho sin valor práctico
+* Introduzcan complejidad sin mejorar decisiones de clasificación
+
+Ejemplos:
+
+* Tradiciones musicales no consumidas
+* Micro-subgéneros altamente especializados
+
+---
+
+## 6. Reglas de profundidad
+
+* Nivel 1: completo y estable (sistemas de groove)
+* Nivel 2: balanceado entre ramas principales
+* Nivel 3: solo se agrega si aporta diferenciación real
+
+Ninguna rama de nivel 1 debe quedar subdefinida estructuralmente.
+
+---
+
+## 7. Tipos de nodos
+
+### 7.1 Nodos asignables
+
+Pueden recibir canciones directamente.
+
+Ejemplos:
+
+* House
+* Boom Bap
+* Indie Rock
+
+### 7.2 Nodos contenedor
+
+Solo organizan subgéneros, no reciben canciones.
+
+Ejemplos:
+
+* Folk
+* Hard Rock
+
+Regla:
+
+> Nunca asignar canciones a nodos contenedor.
+
+---
+
+## 8. Manejo de ambigüedad
+
+Cuando una canción puede pertenecer a múltiples nodos:
+
+1. Evaluar groove dominante
+2. Evaluar sistema rítmico principal
+3. Evaluar estructura solo si el groove no es concluyente
+
+Casos comunes:
+
+* Pop vs Rhythmic:
+
+  * Si el groove define la canción → Rhythmic
+  * Si la estructura domina → Pop
+
+* Electronic vs Pop:
+
+  * Si el beat es programado dominante → Electronic
+  * Si la estructura pop domina → Pop
+
+* Roots vs moderno:
+
+  * Si hay groove moderno → NO clasificar en Roots
+
+---
+
+## 9. Consistencia y mantenimiento
+
+* Evitar crear nodos por excepción
+* Evitar duplicación conceptual
+* Revisar periódicamente nodos saturados
+* Consolidar si dos nodos cumplen la misma función
+
+---
+
+## 10. Evolución del sistema
+
+El sistema debe evolucionar bajo estas reglas:
+
+* Cambios estructurales deben justificarse
+* Evitar cambios retroactivos masivos
+* Preferir ajustes incrementales
+* Documentar decisiones relevantes
+
+---
+
+## 11. Criterio de calidad del sistema
+
+Un sistema bien mantenido cumple:
+
+* Clasificación rápida (sin duda excesiva)
+* Baja ambigüedad
+* Navegación intuitiva
+* Escalabilidad sin rediseño
+
+---
+
+## 12. Anti-patrones a evitar
+
+* Clasificar por cultura en lugar de groove
+* Crear subgéneros innecesarios
+* Mezclar criterios (época + estilo sin control)
+* Sobre-especialización
+* Rediseños frecuentes del árbol
+
+---
+
+## 13. Definición de éxito
+
+El sistema es exitoso si:
+
+* Permite encontrar música fácilmente
+* Mantiene coherencia a lo largo del tiempo
+* Reduce la fricción al clasificar nuevas canciones
+* No requiere reestructuración frecuente
+
+---
+
+## 14. Modelo de evaluación por pertenencia
+
+La clasificación no se basa en elegir el mejor nodo entre varios, sino en evaluar si una canción cumple con los criterios de un nodo específico.
+
+Para cada evaluación:
+
+- No se compara contra otros nodos
+- Solo se determina si la canción pertenece al nodo evaluado
+
+Resultados posibles:
+
+1. Cumple criterios → la canción se mantiene en el nodo
+2. No cumple criterios → se documenta la razón y se evalúa posteriormente su ubicación
+
+Este enfoque evita ambigüedad y decisiones relativas.
+
+---
+
+## 15. Sistema de puntuación de pertenencia
+
+Cada canción evaluada contra un nodo recibe una puntuación:
+
+- 90–100: Encaje perfecto
+- 70–89: Encaje fuerte (válido)
+- 50–69: Borderline (requiere revisión)
+- <50: No pertenece
+
+La puntuación permite:
+
+- Detectar nodos débiles
+- Identificar canciones inestables
+- Prevenir reclasificaciones frecuentes
+
+---
+
+## 16. Regla de estabilidad
+
+El sistema prioriza estabilidad sobre perfección.
+
+Una canción no debe moverse entre nodos si:
+
+- Cumple suficientemente los criterios (≥70)
+- No existe una violación clara de criterios
+
+Solo se reclasifica si:
+
+- No cumple criterios del nodo actual
+- Existe evidencia clara de mejor pertenencia
+
+---
+
+## 17. Identidad de nodo
+
+Cada nodo debe tener una identidad clara e independiente.
+
+Un nodo es válido si:
+
+- Puede definirse sin referencia a otros nodos
+- Tiene criterios propios claros
+- No depende de exclusión de otros nodos para existir
+
+---
+
+## 18. Regla anti-paraguas
+
+Los nodos fallback (ej. "Alternative Rock", "Hard Rock (Standard)", "Pop (Standard)") no deben absorber una proporción excesiva de canciones.
+
+Se consideran nodos de soporte, no destinos principales.
+
+Indicadores de problema:
+
+- Un nodo fallback contiene más del 30–40% de las canciones de su rama
+- Se usa por falta de definición en otros nodos
+
+Acciones correctivas:
+
+- Refinar criterios de subgéneros existentes
+- Crear nuevos nodos si hay patrones claros
+- Reasignar canciones mal clasificadas
+
+---
+
+## 19. Regla para Score
+
+Una obra pertenece a Score si:
+
+- Fue compuesta para un medio audiovisual
+- Su identidad compositiva proviene de ese contexto
+
+Las reinterpretaciones (covers) se mantienen en Score si:
+
+- Conservan la identidad compositiva original
+- No transforman la obra hacia otro sistema dominante (ej. Classical puro)
+
+La clasificación se basa en el origen de la obra, no en la versión específica.
+
+---
+

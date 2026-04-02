@@ -63,6 +63,33 @@ try:
     with open(output_json, 'w', encoding='utf-8') as f:
         json.dump(lote, f, ensure_ascii=False, indent=2)
 
+
+    # Guardar el detalle completo de canciones nuevas en CSV
+    detalle_csv = 'reports/canciones_nuevas_detalle.csv'
+    with open(detalle_csv, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['title', 'artist', 'isrc'])
+        writer.writeheader()
+        for c in nuevas:
+            writer.writerow(c)
+    print(f"Reporte de canciones nuevas generado: {detalle_csv} ({len(nuevas)} canciones)")
+
+    # Si hay diferencia, guardar los pares (title, artist) de favorites_qobuz.csv que no están en songs_with_genres.csv
+    if len(claves_raw) != len(procesadas):
+        faltantes = []
+        with open(songs_raw, encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                key = (normaliza(row['title']), normaliza(row['artist']))
+                if key not in procesadas:
+                    faltantes.append({'title': row['title'], 'artist': row['artist'], 'isrc': row.get('isrc','')})
+        faltantes_csv = 'reports/canciones_faltantes_title_artist.csv'
+        with open(faltantes_csv, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=['title', 'artist', 'isrc'])
+            writer.writeheader()
+            for c in faltantes:
+                writer.writerow(c)
+        print(f"Reporte de pares (title, artist) faltantes generado: {faltantes_csv} ({len(faltantes)} canciones)")
+
     if lote:
         print("Ejemplo de canciones nuevas (lote actual):")
         for c in lote:
