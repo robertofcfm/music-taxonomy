@@ -9,6 +9,7 @@ Music
   Hip Hop
     Boom Bap
     Hip Hop (Classic)
+    Hip Hop (Standard)
     Pop Rap
     Trap
     West Coast

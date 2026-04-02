@@ -1,4 +1,17 @@
 title,artist,album,isrc,genre
+Lose Yourself,Eminem,8 Mile,USIR10211559,Hip Hop > Hip Hop (Standard)
+Kill You,Eminem,The Marshall Mathers LP,USIR10000580,Hip Hop > Hip Hop (Standard)
+Stan,Eminem,The Marshall Mathers LP,USIR10001280,Hip Hop > Hip Hop (Standard)
+The Way I Am,Eminem,The Marshall Mathers LP,USIR10000589,Hip Hop > Hip Hop (Standard)
+Cheve,Control Machete,Mucho Barato,MXF119903600,Hip Hop > Hip Hop (Standard)
+Andamos Armados,Control Machete,Mucho Barato,MXF119903598,Hip Hop > Hip Hop (Standard)
+Humanos Mexicanos,Control Machete,Mucho Barato,MXF119903606,Hip Hop > Hip Hop (Standard)
+Así Son Mis Días,Control Machete,Mucho Barato,MXF119903599,Hip Hop > Hip Hop (Standard)
+Si Señor,Control Machete,"Artilleria Pesada,  Presenta:",MXF119900204,Hip Hop > Hip Hop (Standard)
+Amnesia,Control Machete,Un Tributo,MXF019800948,Hip Hop > Hip Hop (Standard)
+Ileso,Control Machete,"Artilleria Pesada,  Presenta:",MXF119900208,Hip Hop > Hip Hop (Standard)
+La Pelotona,Cartel De Santa,Cartel De Santa,MXF010200377,Hip Hop > Hip Hop (Standard)
+Todas Mueren por Mí,Cartel De Santa,Cartel De Santa,MXF010200367,Hip Hop > Hip Hop (Standard)
 Elysium,Gavin Greenaway,Gladiator: 20th Anniversary Edition,USUMC0000067,Score
 In the House - In a Heartbeat,John Murphy,In the House - In a Heartbeat,QMLPR1200035,Score
 Honor Him,Gavin Greenaway,Gladiator: 20th Anniversary Edition,USUMC0000052,Score
@@ -1429,7 +1442,6 @@ Crawling,Linkin Park,Hybrid Theory,USWB11201115,Metal > Alternative Metal
 One Step Closer,Linkin Park,Hybrid Theory,USWB11201112,Metal > Alternative Metal
 Take A Look Around,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10000604,Metal > Alternative Metal
 Last Resort,Papa Roach,20/20,ZZOPM2002585,Metal > Alternative Metal
-Todas Mueren por Mí,Cartel De Santa,Cartel De Santa,MXF010200367,Hip Hop > West Coast
 (Rock) Superstar,Cypress Hill,Skull & Bones,USSM10000994,Hip Hop > West Coast
 Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907165,Hip Hop > West Coast
 Tequila (Tequila Sunrise),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907173,Hip Hop > West Coast
@@ -1437,13 +1449,10 @@ Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Los Grandes Éxitos En Español 
 Forgot About Dre,Dr. Dre,2001,USIR19915077,Hip Hop > West Coast
 Still D.R.E.,Dr. Dre,2001,USIR19905031,Hip Hop > West Coast
 The Next Episode,Dr. Dre,2001,USIR19915078,Hip Hop > West Coast
-La Pelotona,Cartel De Santa,Cartel De Santa,MXF010200377,Hip Hop > West Coast
 Gangsta's Paradise (feat. L.V.),Coolio,Gangsta's Paradise,USTB12000152,Hip Hop > West Coast
 (Rap) Superstar,Cypress Hill,Skull & Bones,USSM10000993,Hip Hop > West Coast
 Siempre Peligroso,Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907175,Hip Hop > West Coast
-U Can't Touch This,M.C. Hammer,Please Hammer Don't Hurt 'Em,USCA29000294,Hip Hop > West Coast
 Money In The Grave,Drake,The Best In The World Pack,USCM51900314,Hip Hop > Trap
-Kill You,Eminem,The Marshall Mathers LP,USIR10000580,Hip Hop > Pop Rap
 Sing For The Moment,Eminem,The Eminem Show,USIR10211061,Hip Hop > Pop Rap
 Superman,Eminem,The Eminem Show,USIR10211062,Hip Hop > Pop Rap
 The Real Slim Shady,Eminem,The Marshall Mathers LP,USIR10000448,Hip Hop > Pop Rap
@@ -1455,23 +1464,14 @@ Grandes Ligas,Lupillo Rivera,Grandes Ligas,QM6MZ2143141,Hip Hop > Pop Rap
 Dilemma,Nelly,Nellyville,USUR10200370,Hip Hop > Pop Rap
 Ride Wit Me,Nelly,Country Grammar,USUR10000183,Hip Hop > Pop Rap
 I'll Be Missing You (feat. Faith Evans & 112),Puff Daddy,No Way Out,USBB41400049,Hip Hop > Pop Rap
-Andamos Armados,Control Machete,Mucho Barato,MXF119903598,Hip Hop > Hip Hop (Classic)
-Así Son Mis Días,Control Machete,Mucho Barato,MXF119903599,Hip Hop > Hip Hop (Classic)
-Cheve,Control Machete,Mucho Barato,MXF119903600,Hip Hop > Hip Hop (Classic)
-Humanos Mexicanos,Control Machete,Mucho Barato,MXF119903606,Hip Hop > Hip Hop (Classic)
-Ileso,Control Machete,"Artilleria Pesada,  Presenta:",MXF119900208,Hip Hop > Hip Hop (Classic)
+U Can't Touch This,M.C. Hammer,Please Hammer Don't Hurt 'Em,USCA29000294,Hip Hop > Pop Rap
 La Plaga,Tha Mexakinz,Tha Mexakinz,USHM92212743,Hip Hop > Hip Hop (Classic)
-Amnesia,Control Machete,Un Tributo,MXF019800948,Hip Hop > Hip Hop (Classic)
-Si Señor,Control Machete,"Artilleria Pesada,  Presenta:",MXF119900204,Hip Hop > Hip Hop (Classic)
 Ice Ice Baby,Vanilla Ice,To The Extreme,USCA29001810,Hip Hop > Hip Hop (Classic)
 Salute da Gods!!,Busta Rhymes,Anarchy,USEE10000741,Hip Hop > Boom Bap
 "Comprendes, Mendes?",Control Machete,Mucho Barato,MXF119903597,Hip Hop > Boom Bap
 Danzón,Control Machete,"Artilleria Pesada,  Presenta:",MXF110110003,Hip Hop > Boom Bap
 Return Of The Tres,Delinquent Habits,Merry Go Round,USAK10100470,Hip Hop > Boom Bap
 Tres Delinquentes,Delinquent Habits,"Hip-Hop Legacy, Vol. 6",FR0Z50023251,Hip Hop > Boom Bap
-Stan,Eminem,The Marshall Mathers LP,USIR10001280,Hip Hop > Boom Bap
-The Way I Am,Eminem,The Marshall Mathers LP,USIR10000589,Hip Hop > Boom Bap
-Lose Yourself,Eminem,8 Mile,USIR10211559,Hip Hop > Boom Bap
 Jump Around,House Of Pain,House of Pain (Fine Malt Lyrics) [30 Years],USTB12100088,Hip Hop > Boom Bap
 Take on Me,A-Ha,Hunting High and Low,USWB11506571,Electronic > Synthpop
 Enjoy the Silence,Depeche Mode,The Singles 86-98,GBAJH9800146,Electronic > Synthpop
