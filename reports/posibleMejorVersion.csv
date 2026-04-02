@@ -1,4 +1,7 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+GBMYF2000174,349183543,Something About You,,1453797,Eyedress,Something About You,Studio,,16,44.1,2,True
+COC019823506,252372678,Tres Noches,,2253565,Jesus Manuel,Fantastico,Studio,,16,44.1,2,True
+MXF151900128,293788145,Me Vale ,2019 Remasterizado,81833,Mana,¿Dónde Jugarán Los Niños? ,Studio,2019 Remasterizado,24,96.0,2,True
 USWB11901049,62578008,La Grange ,2019 Remaster,56332,ZZ Top,Goin' 50,Studio,,16,44.1,2,True
 USUM71021483,401068874,Breakfast In America,Remastered 2026,50242,Supertramp,Breakfast In America,Studio,Remastered 2026,24,192.0,2,True
 GBAMC9700003,95785441,Devil's Dance,,62542,Metallica,Reload,Studio,,24,96.0,2,True
@@ -419,7 +422,6 @@ USC4R1605373,36430848,Losing My Religion,,43839,R.E.M.,Out Of Time,Remix,25th An
 GBAYE0001581,33932088,I Might Be Wrong,,43840,Radiohead,Amnesiac,Studio,,16,44.1,2,True
 GBAYE0001582,33932089,Knives Out,,43840,Radiohead,Amnesiac,Studio,,16,44.1,2,True
 USA2B1605773,48640236,Swoon,,326979,Fujiya & Miyagi,Fujiya & Miyagi,Studio,,16,44.1,2,True
-GBMYF2000174,142222274,Something About You,,1453797,Eyedress,Something About You,Studio,,16,44.1,2,True
 QZFZ31973933,133466203,Show Me How (Album V),,3550494,Men I Trust,Oncle Jazz,Studio,,24,96.0,2,True
 NLF057790003,265583826,If I Can't Have You,,62500,Yvonne Elliman,Night Flight,Studio,,16,44.1,2,True
 FR2X41822299,48545203,La Cumbia Sampuesana ,Cumbia Cienaguera,635577,Aniceto Molina,Cumbias Solo Hits ,Studio,Colombiana Colombiana,16,44.1,2,True
@@ -1037,7 +1039,6 @@ USRE11600554,35615398,Basket Case,,53549,Green Day,Dookie,Studio,,24,192.0,2,Tru
 USAR11700308,44849703,I Will Always Love You,Film Version,62399,Whitney Houston,I Wish You Love: More From The Bodyguard,Cover,,24,48.0,2,True
 USAR11700303,44849697,I Have Nothing,Film Version,62399,Whitney Houston,I Wish You Love: More From The Bodyguard,Cover,,24,48.0,2,True
 MXF019300323,218617,Pobre de Ti,,208537,Tijuana No!,Rock En Español - Lo Mejor De Tijuana No!,Studio,,16,44.1,2,True
-GBAKW7000101,81327205,The Seeker,Edit,45964,The Who,The Who Hits 50,Remix,Deluxe,24,44.1,2,True
 USRH12101325,129937766,Riders On The Storm ,2021 Remaster,41736,The Doors,L.A. Woman ,Remix,50th Anniversary Deluxe Edition,24,192.0,2,True
 USRH11605707,37709337,The End ,2017 Remaster,41736,The Doors,The Doors ,Remix,50th Anniversary Deluxe Edition,24,192.0,2,True
 USRH11605702,37709332,Light My Fire ,2017 Remaster,41736,The Doors,The Doors ,Remix,50th Anniversary Deluxe Edition,24,192.0,2,True
@@ -1264,7 +1265,6 @@ MXF061100006,4692083,Labios Rotos,En Vivo Desde México / 2010,23917102,Zoé,MTV
 USMC10300331,3874769,Eres,Album Version,310664,Café Tacvba,Cuatro Caminos,Cover,,16,44.1,2,True
 ARFSB0700930,408469,De Música Ligera,Remasterizado 2007,192609,Soda Stereo,Me Verás Volver (Hits & Más),Studio,Remasterizado 2007,16,44.1,2,True
 MXF140300196,416702,Que Lloro,,192777,Sin Bandera,Hasta Ahora,Studio,,16,44.1,2,True
-MXF159200071,2671267,Me Vale,,81833,Mana,¿Dónde Jugarán Los Niños?,Studio,,16,44.1,2,True
 MXF158700021,39859149,Triste canción,,421326,El Tri,Simplemente,Studio,,16,44.1,2,True
 MXF159300048,2973453,Pobre soñador,,421326,El Tri,25 años,Studio,,16,44.1,2,True
 MXF159400040,20062159,Las piedras rodantes,,421326,El Tri,Una rola para los minusválidos,Studio,,16,44.1,2,True
@@ -1465,6 +1465,7 @@ USUM71803922,51041335,November Rain,Piano Version / 1986 Sound City Session,5483
 GBAAP2400107,294692172,Smalltown Boy ,ABSOLUTE. Extended Rework,409561,Bronski Beat,The Age of Consent ,Remix,40 Year Anniversary Edition,24,44.1,2,False
 GBAAP2400107,269290980,Smalltown Boy ,ABSOLUTE. Extended Rework,409561,Bronski Beat,Smalltown Boy ,Remix,ABSOLUTE. Rework,24,44.1,2,False
 USUM71803918,51041331,Back Off Bitch,1986 Sound City Session,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False
+GB5KW2202119,381307639,I Think I'm Paranoid,,53677,Garbage,Anthology,Studio,,24,44.1,2,False
 USZXT2350762,203339149,Sit Down,Orchestral Version,45297,James,Be Opened By The Wonderful,Cover,Orchestral Version,24,48.0,2,False
 GBCAD2300788,248761847,Monkey Gone to Heaven,Mark Goodier Session (18th August 1990),384655,Pixies,"Pixies at the BBC, 1988-91",Studio,,24,96.0,2,False
 USQX91801089,50631687,I. Prélude,,31220,Yo-Yo Ma,Six Evolutions - Bach: Cello Suites,Studio,,24,96.0,2,False
@@ -1476,6 +1477,7 @@ USQX91801124,50631717,I. Prélude,,31220,Yo-Yo Ma,Six Evolutions - Bach: Cello S
 USUM71417640,28168305,Fade Into You,The Avener Rework,47362,Mazzy Star,The Wanderings Of The Avener,Studio,,24,44.1,2,False
 USUM71417640,21445504,Fade Into You,The Avener Rework,47362,Mazzy Star,The Wanderings Of The Avener,Studio,,24,44.1,2,False
 USRC11701291,42260155,Take It or Leave It ,Unpeeled,111979,Cage The Elephant,Unpeeled,Studio,Unpeeled,24,48.0,2,False
+GB5KW2202113,381307633,Only Happy When It Rains,,53677,Garbage,Anthology,Studio,,24,44.1,2,False
 GX3EQ2000001,154370524,Just Like Honey,2021 EL Inocente version,458148,The Jesus And Mary Chain,Just Like Honey (2021 EL Inocente version),Cover,,24,48.0,2,False
 USSM11704875,43314604,You Got It,,23781,Roy Orbison,A Love So Beautiful: Roy Orbison & The Royal Philharmonic Orchestra,Studio,,24,96.0,2,False
 USV128900001,34877009,You Got It,,23781,Roy Orbison,The Ultimate Collection,Studio,,24,44.1,2,False
@@ -1487,7 +1489,6 @@ QZHZ62056777,159077870,Sirena Encantada,,239331,Miguel Morales,Miguel Morales Co
 QZHZ62056773,159077867,Mi Diosa  Humana,,239331,Miguel Morales,Miguel Morales Concierto Online,Studio,,24,48.0,2,False
 MXF152500235,313934587,Nunca Niegues Que Te Amo,,3634604,Los Inquietos Del Vallenato,Vallenatos Norteños,Studio,,24,48.0,2,False
 USUG12103089,146264751,Dream On,,47437,Aerosmith,1971: The Road Starts Hear,Studio,,24,192.0,2,False
-GBUM72204806,218888112,The Seeker,Original Single A-Side Mix,45964,The Who,Who’s Next : Life House,Remix,Super Deluxe,24,96.0,2,False
 QZHZ62056770,159077865,Ayúdame a Olvidarla,,239331,Miguel Morales,Miguel Morales Concierto Online,Studio,,24,48.0,2,False
 MXF152100794,337821883,Mariposa Traicionera,,81833,Mana,Noches De Cantina,Studio,,24,48.0,2,False
 MXF152100794,138713510,Mariposa Traicionera,,81833,Mana,Mariposa Traicionera,Studio,,24,48.0,2,False
@@ -1503,7 +1504,6 @@ MX5332500256,362636895,Amnesia ,Sonando desde el Auditorio Nacional,2331925,Insp
 USUM71310619,11801006,The Man Who Sold The World,Live & Loud,46708,Nirvana,In Utero,Live,20th Anniversary Super Deluxe,24,44.1,2,False
 QZMEM2213306,166083641,Círculo de Amor,,210754,El Gran Silencio,Un Gran Homenaje,Studio,,24,48.0,2,False
 ES5020600360,285848907,Lucha de Gigantes,,73030,Nacha Pop,La Edad De Oro Sinfónica,Studio,,24,96.0,2,False
-MXF151900128,293788145,Me Vale ,2019 Remasterizado,81833,Mana,¿Dónde Jugarán Los Niños? ,Studio,2019 Remasterizado,24,96.0,2,False
 QZHZ62176796,154009879,Es por Ti,,2331925,Inspector,Es por Ti,Studio,,24,48.0,2,False
 MX5332400170,275419860,Es Por Ti ,Sonando Desde El Auditorio Nacional,2331925,Inspector,Es Por Ti ,Studio,Sonando Desde El Auditorio Nacional,24,48.0,2,False
 MX5332400170,359774608,Es Por Ti ,Sonando Desde El Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
