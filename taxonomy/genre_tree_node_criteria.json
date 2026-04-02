@@ -136,6 +136,26 @@
       "exclusion_criteria": "No asignar por región, idioma o artista. No usar para hip hop latino, internacional, crossover o genérico sin características sonoras West Coast claras."
     },
     {
+      "node_path": "Music > Jazz",
+      "membership_criteria": "Música basada en lenguaje jazz: swing o flexibilidad rítmica característica, fraseo interpretativo, armonía derivada de la tradición jazz, interacción entre intérpretes y énfasis en expresión, improvisación o lectura de standard. Este nodo funciona como entrada general o fallback para obras claramente jazz que aún no requieren un subgénero más específico dentro de la rama.",
+      "exclusion_criteria": "Soul, pop vocal, big band/pop orquestal sin lenguaje jazz dominante, blues sin desarrollo jazz claro, o cualquier obra donde el groove principal pertenezca más claramente a Pop, Rhythmic, Classical o Score.",
+      "reference_examples": [
+        "Miles Davis - So What",
+        "Dave Brubeck - Take Five",
+        "Louis Armstrong - What A Wonderful World"
+      ]
+    },
+    {
+      "node_path": "Music > Jazz > Vocal Jazz",
+      "membership_criteria": "Obras centradas en interpretación vocal dentro de la tradición jazz o standard americano, con fraseo flexible, acompañamiento acústico u orquestal de lenguaje jazz y énfasis en la interpretación vocal por encima del groove pop o soul. Puede incluir baladas, standards y canciones de crooner siempre que la identidad jazz vocal sea dominante.",
+      "exclusion_criteria": "Pop Ballad, Soul o Pop Soul con groove moderno dominante, bolero, score vocal, o canciones donde la voz sea principal pero el lenguaje armónico y rítmico no sea claramente jazz.",
+      "reference_examples": [
+        "Louis Armstrong - What A Wonderful World",
+        "Ella Fitzgerald - Dream a Little Dream of Me",
+        "Chet Baker - My Funny Valentine"
+      ]
+    },
+    {
       "node_path": "Music > Metal",
       "membership_criteria": "Música basada en riffs de guitarra altamente distorsionados, con énfasis en peso, agresividad y precisión rítmica. El groove es más denso y pesado que el rock.",
       "exclusion_criteria": "Hard Rock sin suficiente peso, o música donde la agresividad no es dominante.",
