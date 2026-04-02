@@ -1,4 +1,6 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+GB5KW2202113,381307633,Only Happy When It Rains,,53677,Garbage,Anthology,Studio,,24,44.1,2,True
+GB5KW2202119,381307639,I Think I'm Paranoid,,53677,Garbage,Anthology,Studio,,24,44.1,2,True
 GBMYF2000174,349183543,Something About You,,1453797,Eyedress,Something About You,Studio,,16,44.1,2,True
 COC019823506,252372678,Tres Noches,,2253565,Jesus Manuel,Fantastico,Studio,,16,44.1,2,True
 MXF151900128,293788145,Me Vale ,2019 Remasterizado,81833,Mana,¿Dónde Jugarán Los Niños? ,Studio,2019 Remasterizado,24,96.0,2,True
@@ -373,7 +375,6 @@ USWB10502860,173672239,Psycho Killer (2005 Remaster),,135918,Talking Heads,OK Bo
 GB7GZ1000033,345439626,Our House,,85999,Madness,The Rise & Fall,Studio,,16,44.1,2,True
 USUMC0000067,93470068,Elysium,"From ""Gladiator"" Soundtrack",46267,Gavin Greenaway,Gladiator: 20th Anniversary Edition,Studio,,16,44.1,2,True
 DEN120003765,4754912,Mutter,,129639,Rammstein,Mutter,Studio,,16,44.1,2,True
-USAL19800023,54378428,I Think I'm Paranoid,,53677,Garbage,Absolute Garbage,Studio,,16,44.1,2,True
 DED579704010,209979949,Du hast,,129639,Rammstein,Sehnsucht,Studio,Remastered 2023,24,44.1,2,True
 DEUM71900524,61710055,Deutschland,,129639,Rammstein,Rammstein,Studio,,16,44.1,2,True
 GBCSG1400020,49426824,Horse Race,,390967,Colourmusic,May You Marry Rich,Studio,,16,44.1,2,True
@@ -611,7 +612,6 @@ USSM18300449,91145116,Holding Out for a Hero ,"From ""Footloose"" Soundtrack",10
 USIR10001123,25847710,My Generation,,72882,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,Studio,,16,44.1,2,True
 MXF140100380,13206782,Entra en Mi Vida,,192777,Sin Bandera,Sin Bandera,Studio,,16,44.1,2,True
 USSM17200399,28187766,Mr. Blue Sky,,122906,Electric Light Orchestra,Out of the Blue,Studio,,24,192.0,2,True
-USGF19500403,54378423,Only Happy When It Rains,,53677,Garbage,Absolute Garbage,Studio,,16,44.1,2,True
 USEE19900312,97535470,Kiss Me,,151870,Sixpence None The Richer,Sixpence None The Richer,Studio,,16,44.1,2,True
 USBL10100287,210523,Azul,,205214,Cristian,Grandes Hits,Studio,,16,44.1,2,True
 MXF140100230,13581966,Por El Amor De Una Mujer ,(La Firma A Duo Con Intocable),256838,La Firma,10 de Colección,Studio,,16,44.1,2,True
@@ -1465,7 +1465,6 @@ USUM71803922,51041335,November Rain,Piano Version / 1986 Sound City Session,5483
 GBAAP2400107,294692172,Smalltown Boy ,ABSOLUTE. Extended Rework,409561,Bronski Beat,The Age of Consent ,Remix,40 Year Anniversary Edition,24,44.1,2,False
 GBAAP2400107,269290980,Smalltown Boy ,ABSOLUTE. Extended Rework,409561,Bronski Beat,Smalltown Boy ,Remix,ABSOLUTE. Rework,24,44.1,2,False
 USUM71803918,51041331,Back Off Bitch,1986 Sound City Session,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False
-GB5KW2202119,381307639,I Think I'm Paranoid,,53677,Garbage,Anthology,Studio,,24,44.1,2,False
 USZXT2350762,203339149,Sit Down,Orchestral Version,45297,James,Be Opened By The Wonderful,Cover,Orchestral Version,24,48.0,2,False
 GBCAD2300788,248761847,Monkey Gone to Heaven,Mark Goodier Session (18th August 1990),384655,Pixies,"Pixies at the BBC, 1988-91",Studio,,24,96.0,2,False
 USQX91801089,50631687,I. Prélude,,31220,Yo-Yo Ma,Six Evolutions - Bach: Cello Suites,Studio,,24,96.0,2,False
@@ -1477,7 +1476,6 @@ USQX91801124,50631717,I. Prélude,,31220,Yo-Yo Ma,Six Evolutions - Bach: Cello S
 USUM71417640,28168305,Fade Into You,The Avener Rework,47362,Mazzy Star,The Wanderings Of The Avener,Studio,,24,44.1,2,False
 USUM71417640,21445504,Fade Into You,The Avener Rework,47362,Mazzy Star,The Wanderings Of The Avener,Studio,,24,44.1,2,False
 USRC11701291,42260155,Take It or Leave It ,Unpeeled,111979,Cage The Elephant,Unpeeled,Studio,Unpeeled,24,48.0,2,False
-GB5KW2202113,381307633,Only Happy When It Rains,,53677,Garbage,Anthology,Studio,,24,44.1,2,False
 GX3EQ2000001,154370524,Just Like Honey,2021 EL Inocente version,458148,The Jesus And Mary Chain,Just Like Honey (2021 EL Inocente version),Cover,,24,48.0,2,False
 USSM11704875,43314604,You Got It,,23781,Roy Orbison,A Love So Beautiful: Roy Orbison & The Royal Philharmonic Orchestra,Studio,,24,96.0,2,False
 USV128900001,34877009,You Got It,,23781,Roy Orbison,The Ultimate Collection,Studio,,24,44.1,2,False
