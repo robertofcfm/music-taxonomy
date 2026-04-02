@@ -93,24 +93,14 @@
       ]
     },
     {
-      "node_path": "Music > Hip Hop > Hip Hop (Standard)",
-      "membership_criteria": "Canciones que cumplen claramente con los criterios de Hip Hop (beat programado, rap dominante), pero no presentan una identidad estilística suficientemente definida para clasificarse en subgéneros como Boom Bap, Trap o West Coast.",
-      "exclusion_criteria": "No asignar si la canción cumple claramente con los criterios de un subgénero específico. No usar como fallback para canciones mal clasificadas o fuera del sistema Hip Hop."
-    },
-    {
       "node_path": "Music > Hip Hop > Boom Bap",
-      "membership_criteria": "Hip hop basado en patrones rítmicos boom bap clásicos (kick-snare marcado), uso de samples y estética de los 90. Groove rígido y repetitivo.",
-      "exclusion_criteria": "Hip hop moderno, cinematic, trap o con estructuras narrativas/experimentales que no mantengan el patrón boom bap."
-    },
-    {
-      "node_path": "Music > Hip Hop > Hip Hop (Classic)",
-      "membership_criteria": "Hip hop producido principalmente entre finales de los 70 y mediados de los 90, con estética old school o golden era (samples, scratching, estructuras clásicas).",
-      "exclusion_criteria": "No asignar canciones fuera de este periodo temporal, incluso si el estilo es similar. No usar como nodo fallback."
+        "membership_criteria": "Hip hop basado en patrón boom bap reconocible: kick-snare marcado, sampleo central, loop rígido y groove repetitivo. La pertenencia depende del comportamiento rítmico y de la estética de beat, no solo de la época.",
+        "exclusion_criteria": "Hip hop sin patrón boom bap claro, trap, West Coast/G-funk o canciones donde domine una estructura pop con hooks melódicos prominentes."
     },
     {
       "node_path": "Music > Hip Hop > Hip Hop (Standard)",
-      "membership_criteria": "Canciones de hip hop que no cumplen los criterios de ningún subgénero hijo (por ejemplo, West Coast, Boom Bap, Trap, etc.). Nodo de respaldo ('catch-all') para hip hop general.",
-      "exclusion_criteria": "No asignar si la canción puede clasificarse en algún subgénero hijo de Hip Hop.",
+        "membership_criteria": "Canciones que cumplen claramente con los criterios generales de Hip Hop (beat programado o loop dominante con rap al frente), pero no presentan una identidad estilística suficientemente definida para clasificarse con seguridad en Boom Bap, Pop Rap, Trap o West Coast. Es un nodo fallback estricto de soporte, no un destino por comodidad.",
+        "exclusion_criteria": "No asignar si la canción cumple claramente con los criterios de un subgénero hijo de Hip Hop. No usar como fallback para canciones mal clasificadas o fuera del sistema Hip Hop.",
       "reference_examples": []
     },
     {
@@ -124,8 +114,8 @@
     },
     {
       "node_path": "Music > Hip Hop > West Coast",
-      "membership_criteria": "Hip hop con groove y producción característicos del estilo West Coast/G-funk: líneas de bajo funk, sintetizadores melódicos, tempo relajado y estética sonora californiana.",
-      "exclusion_criteria": "No asignar por región, idioma o artista. No usar para hip hop latino, internacional o genérico sin características sonoras West Coast claras."
+      "membership_criteria": "Hip hop con groove y producción claramente West Coast/G-funk: líneas de bajo derivadas del funk, sintetizadores melódicos prominentes, tempo relajado y una identidad sonora californiana reconocible. La pertenencia se determina por rasgos sonoros, no por procedencia, canon o escena.",
+      "exclusion_criteria": "No asignar por región, idioma o artista. No usar para hip hop latino, internacional, crossover o genérico sin características sonoras West Coast claras."
     },
     {
       "node_path": "Music > Metal",
