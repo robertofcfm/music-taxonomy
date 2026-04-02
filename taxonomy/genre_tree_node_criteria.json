@@ -32,12 +32,30 @@
       ]
     },
     {
+      "node_path": "Music > Classical > Chamber",
+      "membership_criteria": "Obras clásicas interpretadas por ensambles pequeños, donde cada parte instrumental mantiene independencia clara y no hay masa orquestal completa. Incluye cuartetos, tríos, quintetos, sonatas de cámara y otras formaciones reducidas.",
+      "exclusion_criteria": "Obras para orquesta completa, piezas para un solo instrumento como foco principal, o repertorio coral donde la voz colectiva sea el elemento dominante.",
+      "reference_examples": [
+        "Ludwig van Beethoven - String Quartet No. 14",
+        "Franz Schubert - Piano Quintet in A Major 'Trout'"
+      ]
+    },
+    {
       "node_path": "Music > Classical > Solo Instrumental",
       "membership_criteria": "Obras clásicas interpretadas por un solo instrumento (piano, violín, guitarra, etc.), con o sin acompañamiento mínimo. Enfatiza la destreza técnica y expresiva del intérprete.",
       "exclusion_criteria": "Obras de conjunto, música popular o piezas con acompañamiento orquestal prominente.",
       "reference_examples": [
         "Frédéric Chopin - Nocturne Op. 9 No. 2",
         "Andrés Segovia - Asturias"
+      ]
+    },
+    {
+      "node_path": "Music > Classical > Choral",
+      "membership_criteria": "Obras clásicas donde el coro o ensamble vocal es el elemento principal, con o sin acompañamiento instrumental. Incluye repertorio sacro, profano o concertante siempre que la identidad coral sea dominante.",
+      "exclusion_criteria": "Obras puramente instrumentales, piezas solistas sin protagonismo coral, o música audiovisual donde la función principal sea score y no repertorio coral clásico.",
+      "reference_examples": [
+        "Wolfgang Amadeus Mozart - Requiem",
+        "George Frideric Handel - Messiah"
       ]
     },
     {
@@ -573,12 +591,6 @@
         "Nobuo Uematsu - Final Fantasy VII Main Theme",
         "Ramin Djawadi - Game of Thrones Main Title"
       ]
-    },
-    {
-      "node_path": "Music > Choral",
-      "membership_criteria": "Obras interpretadas por coro, con o sin acompañamiento instrumental. Puede incluir música sacra, profana o experimental.",
-      "exclusion_criteria": "Obras solistas, de cámara o sin participación coral significativa.",
-      "reference_examples": []
     },
     {
       "node_path": "Music > Hip Hop > Pop Rap",
