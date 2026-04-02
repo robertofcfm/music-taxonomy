@@ -295,3 +295,54 @@ Si la canción puede sostenerse sin el groove y sigue funcionando como canción 
 ---
 
 Las baladas o canciones de tempo medio donde la melodía y estructura dominan, aunque tengan elementos soul, deben clasificarse fuera de Rhythmic.
+
+---
+
+Si una canción cumple claramente con el nodo padre pero no encaja de forma consistente en ningún subgénero hijo, debe asignarse al nodo "(Standard)" correspondiente.
+
+El nodo "(Standard)" no es un fallback genérico, sino una clasificación válida cuando no hay identidad subgenérica dominante.
+
+---
+
+No se debe forzar la asignación a un subgénero específico si la canción no cumple claramente sus criterios.
+
+Es preferible usar un nodo "(Standard)" o mantener la clasificación en un nivel superior antes que asignar incorrectamente.
+
+---
+
+La clasificación debe basarse exclusivamente en características musicales audibles (groove, estructura, producción), no en metadata como región, idioma, artista o contexto cultural.
+
+---
+
+Si una canción no cumple con los criterios del nodo actual, debe marcarse como "fuera de nodo" en lugar de forzar su permanencia dentro de la rama.
+
+---
+
+Un nodo no debe utilizarse como contenedor genérico para canciones que no encajan en otros nodos.
+
+Si un nodo comienza a acumular canciones heterogéneas:
+→ se está usando incorrectamente
+→ o falta un nodo (solo si cumple criterios de creación)
+
+---
+
+Una canción no debe cambiar frecuentemente entre nodos.
+
+Si una canción fluctúa:
+→ el problema está en los criterios, no en la canción
+→ ajustar definición del nodo
+
+---
+
+Score ≥ 85 → asignación estable  
+Score 70–84 → borderline, monitorear  
+Score < 70 → asignación incorrecta, requiere acción
+
+---
+
+Un nuevo nodo solo debe crearse si:
+
+1. Hay múltiples canciones (≥5) que no encajan en nodos existentes
+2. Comparten identidad musical clara
+3. El nodo no depende de cultura, idioma o artista
+4. Reduce ambigüedad, no la aumenta

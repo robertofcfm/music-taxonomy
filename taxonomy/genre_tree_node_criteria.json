@@ -93,29 +93,19 @@
       ]
     },
     {
-      "node_path": "Music > Hip Hop",
-      "membership_criteria": "Música basada en groove rítmico programado, uso de samples y predominio del rap como elemento central. El ritmo es sincopado y construido digitalmente.",
-      "exclusion_criteria": "R&B sin predominio de rap, pop con elementos urbanos, o electrónica sin estructura hip hop.",
-      "reference_examples": []
+      "node_path": "Music > Hip Hop > Hip Hop (Standard)",
+      "membership_criteria": "Canciones que cumplen claramente con los criterios de Hip Hop (beat programado, rap dominante), pero no presentan una identidad estilística suficientemente definida para clasificarse en subgéneros como Boom Bap, Trap o West Coast.",
+      "exclusion_criteria": "No asignar si la canción cumple claramente con los criterios de un subgénero específico. No usar como fallback para canciones mal clasificadas o fuera del sistema Hip Hop."
     },
     {
       "node_path": "Music > Hip Hop > Boom Bap",
-      "membership_criteria": "Hip hop con bases rítmicas marcadas, uso de samples de soul/jazz y rimas complejas. Popular en la costa este de EE.UU. en los 90.",
-      "exclusion_criteria": "Trap, West Coast, o hip hop sin el ritmo característico boom bap.",
-      "reference_examples": [
-        "Nas - N.Y. State of Mind",
-        "Gang Starr - Mass Appeal"
-      ]
+      "membership_criteria": "Hip hop basado en patrones rítmicos boom bap clásicos (kick-snare marcado), uso de samples y estética de los 90. Groove rígido y repetitivo.",
+      "exclusion_criteria": "Hip hop moderno, cinematic, trap o con estructuras narrativas/experimentales que no mantengan el patrón boom bap."
     },
     {
       "node_path": "Music > Hip Hop > Hip Hop (Classic)",
-      "membership_criteria": "Hip hop producido y lanzado principalmente entre finales de los 70 y mediados de los 90, caracterizado por el uso de samples, scratching, rimas complejas y temáticas urbanas. Incluye la llamada 'old school' y 'golden era' del hip hop.",
-      "exclusion_criteria": "Producciones posteriores a mediados de los 90, o estilos que encajan mejor en subgéneros como Boom Bap, Trap, West Coast, etc.",
-      "reference_examples": [
-        "Grandmaster Flash & The Furious Five - The Message",
-        "Run DMC - It's Like That",
-        "Eric B. & Rakim - Paid in Full"
-      ]
+      "membership_criteria": "Hip hop producido principalmente entre finales de los 70 y mediados de los 90, con estética old school o golden era (samples, scratching, estructuras clásicas).",
+      "exclusion_criteria": "No asignar canciones fuera de este periodo temporal, incluso si el estilo es similar. No usar como nodo fallback."
     },
     {
       "node_path": "Music > Hip Hop > Hip Hop (Standard)",
@@ -134,12 +124,8 @@
     },
     {
       "node_path": "Music > Hip Hop > West Coast",
-      "membership_criteria": "Hip hop originado en la costa oeste de EE.UU., caracterizado por ritmos funk, producción pulida y letras sobre la vida urbana californiana.",
-      "exclusion_criteria": "Hip hop de otras regiones, estilos sin la estética West Coast.",
-      "reference_examples": [
-        "2Pac - California Love",
-        "Dr. Dre - The Next Episode"
-      ]
+      "membership_criteria": "Hip hop con groove y producción característicos del estilo West Coast/G-funk: líneas de bajo funk, sintetizadores melódicos, tempo relajado y estética sonora californiana.",
+      "exclusion_criteria": "No asignar por región, idioma o artista. No usar para hip hop latino, internacional o genérico sin características sonoras West Coast claras."
     },
     {
       "node_path": "Music > Metal",
@@ -606,9 +592,8 @@
     },
     {
       "node_path": "Music > Hip Hop > Pop Rap",
-      "membership_criteria": "Canciones que fusionan elementos de rap y pop, con enfoque en melodía y estribillos pegadizos, pero con versos rapeados.",
-      "exclusion_criteria": "Rap puro sin elementos pop, pop sin versos rapeados.",
-      "reference_examples": []
+      "membership_criteria": "Canciones con rap que incorporan estructura pop clara (verso-estribillo), hooks melódicos prominentes y accesibilidad comercial.",
+      "exclusion_criteria": "Hip hop puro sin estructura pop dominante, incluso si es popular o melódico."
     },
     {
       "node_path": "Music > Score > Film",

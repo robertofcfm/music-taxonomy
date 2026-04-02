@@ -182,8 +182,8 @@ Distintos Destinos,Binomio De Oro De América,Music > Roots > Folk > Latin Folk 
 "Viento","Caifanes","Music > Rock > Alternative Rock"
 "Dance With Me","Cameron Avery","Music > Pop > Indie Pop"
 "La Planta","Caos","Music > Rock > Alternative Rock"
-"La Pelotona","Cartel De Santa","Music > Hip Hop > West Coast"
-"Todas Mueren por Mí","Cartel De Santa","Music > Hip Hop > West Coast"
+"La Pelotona","Cartel De Santa","Music > Hip Hop > Hip Hop (Standard)"
+"Todas Mueren por Mí","Cartel De Santa","Music > Hip Hop > Hip Hop (Standard)"
 "All By Myself","Céline Dion","Music > Pop > Pop Ballad"
 "My Heart Will Go On","Céline Dion","Music > Pop > Pop Ballad"
 "Al pensar en ti","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia"
@@ -209,15 +209,15 @@ Distintos Destinos,Binomio De Oro De América,Music > Roots > Folk > Latin Folk 
 "Llore","Conjunto Oro","Music > Roots > Regional Mexicano > Norteño"
 Quiero Que Me Abraces,Conjunto Oro,Music > Roots > Regional Mexicano > Norteño
 Vete a Buscar Aquel,Conjunto Oro,Music > Roots > Regional Mexicano > Norteño
-Amnesia,Control Machete,Music > Hip Hop > Hip Hop (Classic)
-Andamos Armados,Control Machete,Music > Hip Hop > Hip Hop (Classic)
-Así Son Mis Días,Control Machete,Music > Hip Hop > Hip Hop (Classic)
-Cheve,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Amnesia,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Andamos Armados,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Así Son Mis Días,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Cheve,Control Machete,Music > Hip Hop > Hip Hop (Standard)
 "Comprendes, Mendes?",Control Machete,Music > Hip Hop > Boom Bap
 Danzón,Control Machete,Music > Hip Hop > Boom Bap
-Humanos Mexicanos,Control Machete,Music > Hip Hop > Hip Hop (Classic)
-Ileso,Control Machete,Music > Hip Hop > Hip Hop (Classic)
-Si Señor,Control Machete,Music > Hip Hop > Hip Hop (Classic)
+Humanos Mexicanos,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Ileso,Control Machete,Music > Hip Hop > Hip Hop (Standard)
+Si Señor,Control Machete,Music > Hip Hop > Hip Hop (Standard)
 Gangsta's Paradise (feat. L.V.),Coolio,Music > Hip Hop > West Coast
 Como olvidarte,Costumbre,Music > Roots > Regional Mexicano > Texano
 Cuanto te amo,Costumbre,Music > Roots > Regional Mexicano > Texano
@@ -394,13 +394,13 @@ Eclipse,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ella Es Así,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Suficiente Amor,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ya No Me Pones Atención,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
-Kill You,Eminem,Music > Hip Hop > Pop Rap
-Lose Yourself,Eminem,Music > Hip Hop > Boom Bap
+Kill You,Eminem,Music > Hip Hop > Hip Hop (Standard)
+Lose Yourself,Eminem,Music > Hip Hop > Hip Hop (Standard)
 Sing For The Moment,Eminem,Music > Hip Hop > Pop Rap
-Stan,Eminem,Music > Hip Hop > Boom Bap
+Stan,Eminem,Music > Hip Hop > Hip Hop (Standard)
 Superman,Eminem,Music > Hip Hop > Pop Rap
 The Real Slim Shady,Eminem,Music > Hip Hop > Pop Rap
-The Way I Am,Eminem,Music > Hip Hop > Boom Bap
+The Way I Am,Eminem,Music > Hip Hop > Hip Hop (Standard)
 Without Me,Eminem,Music > Hip Hop > Pop Rap
 Tears in Heaven,Eric Clapton,Music > Rock > Soft Rock
 Eras Diferente,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
@@ -829,7 +829,7 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Chao Chao Amor","Luis Y Julian","Music > Roots > Regional Mexicano > Norteño"
 "Grandes Ligas","Lupillo Rivera","Music > Hip Hop > Pop Rap"
 "Cómo Olvidarte","Luz Mabel","Music > Roots > Folk > Latin Folk > Vallenato"
-"U Can't Touch This","M.C. Hammer","Music > Hip Hop > West Coast"
+"U Can't Touch This","M.C. Hammer","Music > Hip Hop > Pop Rap"
 "Midnight City","M83","Music > Electronic > Synthpop"
 "Golgotha Tenement Blues","Machines Of Loving Grace","Music > Metal > Industrial Metal"
 "Our House","Madness","Music > Pop > Pop (Standard)"
