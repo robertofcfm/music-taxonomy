@@ -1,4 +1,5 @@
 title,artist,album,isrc,genre
+What A Wonderful World,Louis Armstrong,What A Wonderful World,USMC16758823,Jazz
 Kill You,Eminem,The Marshall Mathers LP,USIR10000580,Hip Hop > Hip Hop (Standard)
 The Way I Am,Eminem,The Marshall Mathers LP,USIR10000589,Hip Hop > Hip Hop (Standard)
 Cheve,Control Machete,Mucho Barato,MXF119903600,Hip Hop > Hip Hop (Standard)
@@ -428,6 +429,7 @@ Por Debajo De La Mesa,Luis Miguel,Romances,USWI19700001,Roots > Bolero
 La Gloria Eres Tu,Luis Miguel,Romances,USWI19700004,Roots > Bolero
 Poquita Fe (Sin Fe),Los Tres Reyes,Lo Mejor de Lo Mejor de RCA Victor,MXF019800537,Roots > Bolero
 Gema,Los Dandys,Coleccion Original,MXF018400002,Roots > Bolero
+Vida Loca,Francisco Céspedes,Vida Loca,MXF159700061,Roots > Bolero
 Breakfast In America,Supertramp,Breakfast In America,USUM71021483,Rock > Soft Rock
 No Surprises,Radiohead,OK Computer OKNOTOK 1997 2017,GBBKS1700193,Rock > Soft Rock
 Somebody To Love,Queen,Greatest Hits,GBUM71029613,Rock > Soft Rock
@@ -1146,9 +1148,7 @@ Only Happy When It Rains,Garbage,Anthology,GB5KW2202113,Rock > Alternative Rock
 Me Vale,Mana,¿Dónde Jugarán Los Niños?,MXF151900128,Rock > Alternative Rock
 Rolling in the Deep,Adele,21,GBBKS1000335,Rhythmic > Soul
 What a Fool Believes,The Doobie Brothers,Minute by Minute,USRH11600651,Rhythmic > Soul
-Vida Loca,Francisco Céspedes,Vida Loca,MXF159700061,Rhythmic > Soul
 Crazy,Gnarls Barkley,St. Elsewhere,USAT20611041,Rhythmic > Soul
-What A Wonderful World,Louis Armstrong,What A Wonderful World,USMC16758823,Rhythmic > Soul
 Killing Me Softly With His Song,Roberta Flack,Killing Me Softly,USAT21205974,Rhythmic > Soul
 "Can't Get Enough Of Your Love, Babe",Barry White,Barry White's Greatest Hits,USPR37400013,Rhythmic > Soul
 "Never, Never Gonna Give Ya Up",Barry White,Barry White's Greatest Hits,USPR37382014,Rhythmic > Soul

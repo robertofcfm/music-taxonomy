@@ -13,7 +13,6 @@ Music
     Trap
     West Coast
   Jazz
-    Vocal Jazz
   Metal
     Alternative Metal
     Heavy Metal
