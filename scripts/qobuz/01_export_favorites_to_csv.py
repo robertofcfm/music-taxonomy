@@ -3,6 +3,13 @@ import requests
 import csv
 import time
 import os
+import pandas as pd
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from utils_posible_mejor_version import (
+    normalize_for_match, classify_track_type, compare_quality, normalize_title, normalize_artist
+)
 
 # ==============================
 # CONFIGURACIÓN QOBUZ
@@ -143,6 +150,107 @@ def main():
         print(f"Archivo con duplicados generado: {output_duplicados}\n")
     else:
         print("No se encontraron ISRC duplicados en las canciones activas.\n")
+
+    
+    # ==============================
+    # NUEVA FUNCIONALIDAD: POSIBLE MEJOR VERSIÓN
+    # ==============================
+    mejor_version_registros = []
+    for track in favoritos:
+        # Extraer datos clave
+        isrc = track.get("isrc", "")
+        track_id = track.get("id", "")
+        title = track.get("title", "")
+        version = track.get("version", "")
+        artist = track.get("performer", {}).get("name", "")
+        artist_id = track.get("performer", {}).get("id", "")
+        album = track.get("album", {}).get("title", "")
+        album_version = track.get("album", {}).get("version", "")
+        tipo_disco = classify_track_type(track)
+        bit_depth = track.get("maximum_bit_depth")
+        sampling_rate = track.get("maximum_sampling_rate")
+        channel_count = track.get("maximum_channel_count")
+        registro = {
+            "ISRC": isrc,
+            "Id Titulo": track_id,
+            "Título": title,
+            "Versión del título": version,
+            "Id Artista": artist_id,
+            "Artista": artist,
+            "Disco": album,
+            "Tipo Disco": tipo_disco,
+            "Versión del disco": album_version,
+            "maximum_bit_depth": bit_depth,
+            "maximum_sampling_rate": sampling_rate,
+            "maximum_channel_count": channel_count,
+            "Es favorito": True
+        }
+        mejor_version_registros.append(registro)
+
+    # Búsqueda de coincidencias en Qobuz para cada favorito
+    def search_track_qobuz(title, artist, limit=10):
+        params = {**PARAMS_AUTH, "query": f"{title} {artist}", "type": "tracks", "limit": limit}
+        try:
+            response = requests.get(f"{BASE_URL}/catalog/search", headers=HEADERS, params=params, timeout=10)
+            response.raise_for_status()
+            return response.json().get("tracks", {}).get("items", [])
+        except Exception:
+            return []
+
+    total_favs = len(favoritos)
+    for idx, fav in enumerate(favoritos, 1):
+        title = fav.get("title", "")
+        artist = fav.get("performer", {}).get("name", "")
+        tipo_disco = classify_track_type(fav)
+        track_id = fav.get("id", "")
+        if not title or not artist:
+            print(f"[{idx}/{total_favs}] Saltando favorito sin título o artista.")
+            continue
+        print(f"[{idx}/{total_favs}] Buscando mejores versiones para: '{title}' - '{artist}' ({tipo_disco})")
+        norm_title = normalize_for_match(title)
+        norm_artist = normalize_for_match(artist)
+        search_results = search_track_qobuz(title, artist, limit=10)
+        encontrados = 0
+        for res in search_results:
+            if res.get("id", "") == track_id:
+                continue
+            if classify_track_type(res) != tipo_disco:
+                continue
+            if normalize_for_match(res.get("title", "")) != norm_title:
+                continue
+            if normalize_for_match(res.get("performer", {}).get("name", "")) != norm_artist:
+                continue
+            # Comparar calidad
+            if compare_quality(fav, res) == 1:
+                registro = {
+                    "ISRC": res.get("isrc", ""),
+                    "Id Titulo": res.get("id", ""),
+                    "Título": res.get("title", ""),
+                    "Versión del título": res.get("version", ""),
+                    "Id Artista": res.get("performer", {}).get("id", ""),
+                    "Artista": res.get("performer", {}).get("name", ""),
+                    "Disco": res.get("album", {}).get("title", ""),
+                    "Tipo Disco": classify_track_type(res),
+                    "Versión del disco": res.get("album", {}).get("version", ""),
+                    "maximum_bit_depth": res.get("maximum_bit_depth"),
+                    "maximum_sampling_rate": res.get("maximum_sampling_rate"),
+                    "maximum_channel_count": res.get("maximum_channel_count"),
+                    "Es favorito": False
+                }
+                mejor_version_registros.append(registro)
+                encontrados += 1
+        print(f"   → {encontrados} mejores versiones agregadas para este favorito.")
+
+    # Guardar DataFrame en CSV
+    df_mejor = pd.DataFrame(mejor_version_registros, columns=[
+        "ISRC", "Id Titulo", "Título", "Versión del título", "Id Artista", "Artista",
+        "Disco", "Tipo Disco", "Versión del disco", "maximum_bit_depth",
+        "maximum_sampling_rate", "maximum_channel_count", "Es favorito"
+    ])
+    output_mejor = os.path.join("reports", "posibleMejorVersion.csv")
+    os.makedirs("reports", exist_ok=True)
+    df_mejor.to_csv(output_mejor, index=False, encoding="utf-8")
+    print(f"Archivo generado: {output_mejor}")
 
 if __name__ == "__main__":
     main()
