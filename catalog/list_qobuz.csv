@@ -1,4 +1,21 @@
 title,artist,album,isrc,genre
+Last Resort,Papa Roach,20/20,ZZOPM2002585,Metal > Nu Metal
+In the End,Linkin Park,Hybrid Theory,USWB11201118,Metal > Nu Metal
+Crawling,Linkin Park,Hybrid Theory,USWB11201115,Metal > Nu Metal
+One Step Closer,Linkin Park,Hybrid Theory,USWB11201112,Metal > Nu Metal
+My Way,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001177,Metal > Nu Metal
+Somebody Someone,Korn,Issues,USSM19922488,Metal > Nu Metal
+Rollin' (Air Raid Vehicle),Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001170,Metal > Nu Metal
+My Generation,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001123,Metal > Nu Metal
+Falling Away from Me,Korn,Issues,USSM19922479,Metal > Nu Metal
+Jet Pilot,System Of A Down,Toxicity,USSM10107254,Metal > Nu Metal
+Revolution Is My Name,Pantera,Reinventing the Steel,USRH12002862,Metal > Nu Metal
+Nookie,Limp Bizkit,Significant Other,USIR19902308,Metal > Nu Metal
+(Rock) Superstar,Cypress Hill,Skull & Bones,USSM10000994,Metal > Nu Metal
+Take A Look Around,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10000604,Metal > Nu Metal
+Prison Song,System Of A Down,Toxicity,USSM10107251,Metal > Nu Metal
+Chop Suey!,System Of A Down,Toxicity,USSM10107256,Metal > Nu Metal
+Toxicity,System Of A Down,Toxicity,USSM10107262,Metal > Nu Metal
 What A Wonderful World,Louis Armstrong,What A Wonderful World,USMC16758823,Jazz
 Kill You,Eminem,The Marshall Mathers LP,USIR10000580,Hip Hop > Hip Hop (Standard)
 The Way I Am,Eminem,The Marshall Mathers LP,USIR10000589,Hip Hop > Hip Hop (Standard)
@@ -891,7 +908,6 @@ Knockin' On Heaven's Door,Guns N' Roses,Use Your Illusion II,USGF19142004,Rock >
 Paradise City,Guns N' Roses,Appetite For Destruction,USGF18714806,Rock > Hard Rock
 Rocket Queen,Guns N' Roses,Appetite For Destruction,USGF18714812,Rock > Hard Rock
 Sweet Child O' Mine,Guns N' Roses,Appetite For Destruction,USGF18714809,Rock > Hard Rock
-Ace of Spades,Motörhead,Ace of Spades,GB5KW1904841,Rock > Hard Rock
 Wicked Garden,Stone Temple Pilots,Core,USAT21702677,Rock > Grunge
 Plush,Stone Temple Pilots,Core,USAT21702683,Rock > Grunge
 Creep,Stone Temple Pilots,Core,USAT21702681,Rock > Grunge
@@ -1079,10 +1095,6 @@ De Música Ligera,Soda Stereo,Me Verás Volver (Hits & Más),ARFSB0700930,Rock >
 Sugar Kane,Sonic Youth,Dirty,USIR19948507,Rock > Alternative Rock
 Super Bon Bon,Soul Coughing,Irresistible Bliss,GBANC9600001,Rock > Alternative Rock
 Aerials,System Of A Down,Toxicity,USSM10107264,Rock > Alternative Rock
-Chop Suey!,System Of A Down,Toxicity,USSM10107256,Rock > Alternative Rock
-Jet Pilot,System Of A Down,Toxicity,USSM10107254,Rock > Alternative Rock
-Prison Song,System Of A Down,Toxicity,USSM10107251,Rock > Alternative Rock
-Toxicity,System Of A Down,Toxicity,USSM10107262,Rock > Alternative Rock
 Stay Free,The Clash,Give 'Em Enough Rope,GBARL1200720,Rock > Alternative Rock
 Animal Instinct,The Cranberries,Bury The Hatchet,USIR29900001,Rock > Alternative Rock
 Dreams,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",USIR29300080,Rock > Alternative Rock
@@ -1330,7 +1342,6 @@ Seek & Destroy,Metallica,Kill 'Em All,QMKHM1600034,Metal > Thrash Metal
 The Frayed Ends of Sanity,Metallica,…And Justice for All,QMKHM1700141,Metal > Thrash Metal
 The Shortest Straw,Metallica,…And Justice for All,QMKHM1700139,Metal > Thrash Metal
 Through the Never,Metallica,Metallica,QMKHM1900007,Metal > Thrash Metal
-Revolution Is My Name,Pantera,Reinventing the Steel,USRH12002862,Metal > Thrash Metal
 Battery,Metallica,S&M,GBAMC9900025,Metal > Thrash Metal
 One,Metallica,S&M,GBAMC9900022,Metal > Thrash Metal
 Master Of Puppets,Metallica,S&M,GBAMC9900006,Metal > Thrash Metal
@@ -1432,18 +1443,6 @@ Sad But True,Metallica,Metallica,QMKHM1900015,Metal > Heavy Metal
 Nothing Else Matters,Metallica,Metallica,QMKHM1900013,Metal > Heavy Metal
 My Own Summer (Shove It),Deftones,Around the Fur,USRE11600084,Metal > Alternative Metal
 Bring Me To Life,Evanescence,Fallen,USWU30200093,Metal > Alternative Metal
-Falling Away from Me,Korn,Issues,USSM19922479,Metal > Alternative Metal
-Somebody Someone,Korn,Issues,USSM19922488,Metal > Alternative Metal
-My Generation,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001123,Metal > Alternative Metal
-My Way,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001177,Metal > Alternative Metal
-Nookie,Limp Bizkit,Significant Other,USIR19902308,Metal > Alternative Metal
-Rollin' (Air Raid Vehicle),Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001170,Metal > Alternative Metal
-In the End,Linkin Park,Hybrid Theory,USWB11201118,Metal > Alternative Metal
-Crawling,Linkin Park,Hybrid Theory,USWB11201115,Metal > Alternative Metal
-One Step Closer,Linkin Park,Hybrid Theory,USWB11201112,Metal > Alternative Metal
-Take A Look Around,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10000604,Metal > Alternative Metal
-Last Resort,Papa Roach,20/20,ZZOPM2002585,Metal > Alternative Metal
-(Rock) Superstar,Cypress Hill,Skull & Bones,USSM10000994,Metal > Alternative Metal
 Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907165,Hip Hop > West Coast
 Tequila (Tequila Sunrise),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907173,Hip Hop > West Coast
 Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907162,Hip Hop > West Coast
