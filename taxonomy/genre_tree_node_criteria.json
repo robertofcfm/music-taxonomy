@@ -251,11 +251,12 @@
     },
     {
       "node_path": "Music > Pop > Psychedelic Pop",
-      "membership_criteria": "Pop con influencias psicodélicas: uso de efectos sonoros, letras surrealistas, armonías inusuales y experimentación sonora.",
-      "exclusion_criteria": "Psychedelic Rock puro, pop sin elementos psicodélicos.",
+      "membership_criteria": "Pop donde la estructura melódica y la lógica de canción siguen siendo dominantes, pero aparecen rasgos psicodélicos claros: texturas brumosas o expansivas, efectos sonoros, armonías inusuales, sensación onírica y experimentación tímbrica. Puede incluir guitarras o sintetizadores, siempre que la identidad principal siga siendo pop y no rock de banda expansivo.",
+      "exclusion_criteria": "Psychedelic Rock cuando el groove y la identidad principal pertenezcan claramente a un sistema rock de banda, pop sin elementos psicodélicos claros, o canciones donde la psicodelia sea solo decorativa sin afectar la identidad del tema.",
       "reference_examples": [
         "Babe Rainbow - Secret Enchanted Broccoli Forest",
-        "The Beatles - Strawberry Fields Forever"
+        "The Beatles - Strawberry Fields Forever",
+        "Beach House - Myth"
       ]
     },
     {
