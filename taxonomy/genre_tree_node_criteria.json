@@ -110,6 +110,15 @@
         "Pet Shop Boys - West End Girls"
       ]
     },
+      {
+        "node_path": "Music > Hip Hop",
+        "membership_criteria": "Música cuyo centro identitario descansa en un beat programado o loop dominante y en una entrega vocal rappeada o claramente hablada-rítmica. La sensación principal debe pertenecer al sistema Hip Hop, aunque existan elementos melódicos, atmosféricos o de crossover.",
+        "exclusion_criteria": "Pop con rap accesorio o cameo, electrónica donde la atmósfera o el pulso sintético sean más determinantes que el rap, rhythmic/funk sin lógica rap dominante, o rock/alternative con spoken vocals pero sin base hip hop clara.",
+        "reference_examples": [
+          "Eminem - Lose Yourself",
+          "Coolio - Gangsta's Paradise"
+        ]
+      },
     {
       "node_path": "Music > Hip Hop > Boom Bap",
         "membership_criteria": "Hip hop basado en patrón boom bap reconocible: kick-snare marcado, sampleo central, loop rígido y groove repetitivo. La pertenencia depende del comportamiento rítmico y de la estética de beat, no solo de la época.",
