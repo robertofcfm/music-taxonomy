@@ -519,17 +519,6 @@
       ]
     },
     {
-      "node_path": "Music > Roots > Folk > Latin Folk > Flamenco Pop",
-      "membership_criteria": "Canciones de estructura pop que incorporan elementos rítmicos, melódicos o de instrumentación propios del flamenco (palmas, guitarra española, cajón, compás flamenco, giros melódicos característicos), pero con producción, arreglos y enfoque comercial/pop. La voz puede emplear técnicas flamencas, pero la canción mantiene formato de canción popular y accesibilidad pop.",
-      "exclusion_criteria": "Flamenco puro (cante jondo, bulerías, soleá, etc.), pop sin elementos flamencos claros, fusiones donde el flamenco no sea predominante o solo anecdótico.",
-      "reference_examples": [
-        "Rosalía - Pienso en tu mirá",
-        "Niña Pastori - Cai",
-        "Ketama - No estamos locos",
-        "Chambao - Pokito a Poko"
-      ]
-    },
-    {
       "node_path": "Music > Roots > Folk > Latin Folk > Latin Folk Pop",
       "membership_criteria": "Canciones que combinan elementos del folk latino (instrumentación acústica, raíces tradicionales) con estructura, producción y sensibilidad pop. Incluye arreglos más ricos, instrumentación variada y enfoque melódico accesible. La producción puede ser moderna y la canción mantiene formato pop.",
       "exclusion_criteria": "Trova tradicional (minimalista y centrada en la lírica), folk puro sin producción moderna, o pop sin elementos claros de raíz folk.",

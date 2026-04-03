@@ -50,7 +50,6 @@ Music
     Cumbia
     Folk
       Latin Folk
-        Flamenco Pop
         Latin Folk Pop
         Trova Cubana
         Vallenato
