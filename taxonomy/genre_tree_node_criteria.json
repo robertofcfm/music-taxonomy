@@ -103,11 +103,12 @@
     },
     {
       "node_path": "Music > Electronic > Synthpop",
-      "membership_criteria": "Pop electrónico basado en sintetizadores, melodías pegadizas y producción pulida.",
-      "exclusion_criteria": "Electrónica experimental, techno, o pop sin base electrónica.",
+      "membership_criteria": "Pop electrónico basado en sintetizadores, beats programados o pulsos electrónicos claramente estructurales, melodías pegadizas y producción pulida. Debe sentirse primero como canción pop sostenida por una arquitectura sintética/electrónica dominante, aunque conserve sensibilidad new wave, darkwave, indie o alternativa.",
+      "exclusion_criteria": "Electrónica experimental, techno, house, o pop donde la base electrónica sea secundaria frente a una lógica de banda/indie pop más orgánica. Excluir también canciones donde la estética sintética exista, pero el centro identitario siga perteneciendo más a Rock o a Pop no electrónico.",
       "reference_examples": [
         "A-ha - Take on Me",
-        "Pet Shop Boys - West End Girls"
+        "Pet Shop Boys - West End Girls",
+        "Ladytron - Ghosts"
       ]
     },
       {
@@ -226,8 +227,8 @@
     },
     {
       "node_path": "Music > Pop > Indie Pop",
-      "membership_criteria": "Canciones con groove pop dominante, melodías accesibles y estética alternativa o independiente. Puede haber guitarras, pero la estructura y el ritmo son claramente pop.",
-      "exclusion_criteria": "Rock con groove de banda dominante, o música donde el ritmo no sea pop.",
+      "membership_criteria": "Canciones con estructura pop claramente dominante, melodías accesibles y una sensibilidad alternativa/independiente perceptible en timbre, arreglo o enfoque estético. Puede haber guitarras o sintetizadores, pero la obra debe sentirse primero como pop y solo de manera secundaria como rock o electrónica.",
+      "exclusion_criteria": "Rock con groove de banda dominante, synthpop o electrónica con beat programado claramente rector, pop mainstream o sophisti-pop sin identidad alternativa dominante, o música donde el ritmo no sea pop.",
       "reference_examples": [
         "Clairo - Sofia",
         "Cigarettes After Sex - Apocalypse"
@@ -241,8 +242,8 @@
     },
     {
       "node_path": "Music > Pop > Pop Ballad",
-      "membership_criteria": "Baladas de tempo lento o medio, con estructura pop, letras emotivas y enfoque en la melodía y la voz. Suele incluir arreglos suaves y producción pulida. Este nodo se usará para baladas pop en cualquier idioma o procedencia (incluyendo español, inglés, latino, etc.), sin crear subdivisiones específicas como 'Ballad Pop Latin'.",
-      "exclusion_criteria": "Baladas rock (Power Ballad), baladas de otros géneros (soul, ranchera, etc.), o canciones pop rápidas.",
+      "membership_criteria": "Baladas de tempo lento o medio con estructura pop, enfoque en melodía y voz, y una identidad claramente centrada en canción pop emotiva más que en groove o en una lógica fuerte de banda. Puede incluir arreglos suaves, pianos, cuerdas o producción pulida, siempre que la sensación principal siga siendo de balada pop.",
+      "exclusion_criteria": "Baladas rock (Power Ballad), soft rock o alternative rock cuando la identidad de banda sea estructuralmente dominante, baladas de otros géneros (soul, ranchera, etc.), o canciones pop rápidas.",
       "reference_examples": [
         "Celine Dion - My Heart Will Go On",
         "Westlife - Flying Without Wings"
@@ -259,8 +260,8 @@
     },
     {
       "node_path": "Music > Pop > Singer-Songwriter Pop",
-      "membership_criteria": "Canciones pop compuestas e interpretadas principalmente por el propio artista, con énfasis en la autoría personal, letras introspectivas y arreglos sencillos.",
-      "exclusion_criteria": "Pop producido en masa sin autoría personal clara, folk puro, o baladas sin enfoque en la composición del intérprete.",
+      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica o folk tradicional.",
+      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk puro, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
       "reference_examples": [
         "Ed Sheeran - Thinking Out Loud",
         "Taylor Swift - Love Story"
