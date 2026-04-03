@@ -535,17 +535,10 @@ Sitting Up On Our Crane,Pond,Man It Feels Like Space Again,AUUM71401713,Rock > P
 Waiting Around For Grace,Pond,Man It Feels Like Space Again,AUUM71401708,Rock > Psychedelic Rock
 Zond,Pond,Man It Feels Like Space Again,AUUM71401711,Rock > Psychedelic Rock
 "Paint It, Black",The Rolling Stones,Aftermath,USA171010213,Rock > Psychedelic Rock
-Paradise,Wild Nothing,Nocturne,GBBRP1235608,Rock > Psychedelic Rock
-Nocturne,Wild Nothing,Nocturne,GBBRP1235603,Rock > Psychedelic Rock
 Lucky,Radiohead,OK Computer OKNOTOK 1997 2017,GBBKS1700194,Rock > Psychedelic Rock
-Foyer,Wild Nothing,Foyer,QMMZN1901757,Rock > Psychedelic Rock
-Adore,Wild Nothing,Life of Pause,QMMZN1300922,Rock > Psychedelic Rock
-Letting Go,Wild Nothing,Indigo,QMMZN1801611,Rock > Psychedelic Rock
 I Wanna Be Adored,The Stone Roses,The Stone Roses,GBAHJ9500039,Rock > Psychedelic Rock
 I Am The Resurrection,The Stone Roses,The Stone Roses,GBAHJ9500041,Rock > Psychedelic Rock
-Chinatown,Wild Nothing,Gemini,US8YA1010079,Rock > Psychedelic Rock
 Antenna,The Church,Starfish,USAR10001042,Rock > Psychedelic Rock
-Blue Wings,Wild Nothing,Blue Wings,QMMZN1901724,Rock > Psychedelic Rock
 Hombre Sintetizador,Zurdok,Hombre Sintetizador,MXF119900229,Rock > Psychedelic Rock
 Soñé,Zoé,MTV Unplugged Música De Fondo,MXF061100003,Rock > Psychedelic Rock
 Black Hole Sun,Soundgarden,Superunknown,USAM19400007,Rock > Psychedelic Rock
@@ -1157,6 +1150,7 @@ I Think I'm Paranoid,Garbage,Anthology,GB5KW2202119,Rock > Alternative Rock
 Only Happy When It Rains,Garbage,Anthology,GB5KW2202113,Rock > Alternative Rock
 Me Vale,Mana,¿Dónde Jugarán Los Niños?,MXF151900128,Rock > Alternative Rock
 In the End,Linkin Park,Hybrid Theory,USWB11201118,Rock > Alternative Rock
+Don't Speak,No Doubt,Tragic Kingdom,USIR19500279,Rock > Alternative Rock
 Rolling in the Deep,Adele,21,GBBKS1000335,Rhythmic > Soul
 What a Fool Believes,The Doobie Brothers,Minute by Minute,USRH11600651,Rhythmic > Soul
 Crazy,Gnarls Barkley,St. Elsewhere,USAT20611041,Rhythmic > Soul
@@ -1197,12 +1191,9 @@ You Should Be Dancing,Bee Gees,Timeless - The All-Time Greatest Hits,NLF05769002
 You Spin Me Round (Like a Record),Dead Or Alive,Youthquake,GBBBM8502013,Rhythmic > Disco
 "You're The First, The Last, My Everything",Barry White,Barry White's Greatest Hits,USPR37400014,Rhythmic > Disco
 "Rush, Rush",Debbie Harry,Once More Into The Bleach,USCA28300110,Rhythmic > Disco
-Eyes Without A Face,Billy Idol,Rebel Yell,USCH38400023,Pop > Singer-Songwriter Pop
-The Scientist,Coldplay,A Rush of Blood to the Head,GBAYE1600192,Pop > Singer-Songwriter Pop
 One Of Us,Joan Osborne,Relish,USPR39500200,Pop > Singer-Songwriter Pop
 Beautiful Boy (Darling Boy),John Lennon,Double Fantasy,USTO11000021,Pop > Singer-Songwriter Pop
 Imagine,John Lennon,Imagine,GBAYE1000769,Pop > Singer-Songwriter Pop
-You Got It,Roy Orbison,Mystery Girl,USLIC0701008,Pop > Singer-Songwriter Pop
 Pisando fuerte,Alejandro Sanz,Viviendo deprisa,ES5159106001,Pop > Singer-Songwriter Pop
 Fuentes de Ortiz,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813584,Pop > Singer-Songwriter Pop
 Acurrucar,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813589,Pop > Singer-Songwriter Pop
@@ -1214,6 +1205,13 @@ Shuggie,Foxygen,We Are the 21st Century Ambassadors of Peace & Magic,US38Y132270
 Coming Down,Dum Dum Girls,Only in Dreams,USSUB1395027,Pop > Psychedelic Pop
 Space Song,Beach House,Depression Cherry,USSUB1512223,Pop > Psychedelic Pop
 The Book Lovers,Broadcast,Maida Vale Sessions,GBBPW2100030,Pop > Psychedelic Pop
+Adore,Wild Nothing,Life of Pause,QMMZN1300922,Pop > Psychedelic Pop
+Blue Wings,Wild Nothing,Blue Wings,QMMZN1901724,Pop > Psychedelic Pop
+Chinatown,Wild Nothing,Gemini,US8YA1010079,Pop > Psychedelic Pop
+Foyer,Wild Nothing,Foyer,QMMZN1901757,Pop > Psychedelic Pop
+Letting Go,Wild Nothing,Indigo,QMMZN1801611,Pop > Psychedelic Pop
+Nocturne,Wild Nothing,Nocturne,GBBRP1235603,Pop > Psychedelic Pop
+Paradise,Wild Nothing,Nocturne,GBBRP1235608,Pop > Psychedelic Pop
 Si tú me miras,Alejandro Sanz,Si Tu Me Miras,ES5159306001,Pop > Pop Ballad
 Time After Time,Cyndi Lauper,She's So Unusual,USSM18300650,Pop > Pop Ballad
 My Immortal,Evanescence,Fallen,USWU30200104,Pop > Pop Ballad
@@ -1226,7 +1224,6 @@ Sueños Rotos,La 5a Estación,El Mundo Se Equivoca,MXF010600420,Pop > Pop Ballad
 You And Me,Lifehouse,Lifehouse,USDW10500001,Pop > Pop Ballad
 Culpable O No,Luis Miguel,Busca Una Mujer,USWI18800034,Pop > Pop Ballad
 Tengo Todo Excepto a Ti,Luis Miguel,20 Años,USWI19600185,Pop > Pop Ballad
-Don't Speak,No Doubt,Tragic Kingdom,USIR19500279,Pop > Pop Ballad
 I Don't Want to Wait,Paula Cole,This Fire,USWB19600586,Pop > Pop Ballad
 Me Va a Extrañar (Unchain My Heart),Ricardo Montaner,Las Mejores Canciones De Ricardo Montaner,USWI19900053,Pop > Pop Ballad
 Right Here Waiting,Richard Marx,Repeat Offender,USEM38900208,Pop > Pop Ballad
@@ -1234,8 +1231,6 @@ Antología,Shakira,Pies Descalzos,COS019500013,Pop > Pop Ballad
 Kilómetros,Sin Bandera,Hasta Ahora,MXF140100408,Pop > Pop Ballad
 Que Lloro,Sin Bandera,Hasta Ahora,MXF140300196,Pop > Pop Ballad
 Te Vi Venir,Sin Bandera,Hasta Ahora,MXF140100412,Pop > Pop Ballad
-Linger,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",USIR29300085,Pop > Pop Ballad
-When You're Gone,The Cranberries,To The Faithful Departed,USIR29600117,Pop > Pop Ballad
 Unchained Melody,The Righteous Brothers,The Very Best Of The Righteous Brothers - Unchained Melody,USPG16590023,Pop > Pop Ballad
 Un nuevo amor,Tranzas,Por Siempre,US3Z40407801,Pop > Pop Ballad
 "Girl, You'll Be a Woman Soon",Urge Overkill,Stull,USTG39208601,Pop > Pop Ballad
@@ -1261,6 +1256,7 @@ Take My Breath Away,Berlin,Top Gun - Motion Picture Soundtrack (Special Expanded
 Ya Ves,Selena,Ven Conmigo,USEL19000645,Pop > Pop Ballad
 You're Still The One,Shania Twain,Come On Over,USMR19887499,Pop > Pop Ballad
 Azul,Cristian,Grandes Hits,USBL10100287,Pop > Pop Ballad
+The Scientist,Coldplay,A Rush of Blood to the Head,GBAYE1600192,Pop > Pop Ballad
 No Podras,Cristian,Agua Nueva,USUL19700138,Pop > Pop (Standard)
 Dan Dan Kokoro Hikareteku (From Dragonball Gt) [Japanese Vocal Version] [feat. Dai],Japan Daisuki,Anime Shōnen Boy,DEY340403445,Pop > Pop (Standard)
 Too Late For Goodbyes,Julian Lennon,Valotte,GBAAA8400024,Pop > Pop (Standard)
@@ -1269,14 +1265,14 @@ Thriller,Michael Jackson,Thriller,USSM19902989,Pop > Pop (Standard)
 Our House,Madness,The Rise & Fall,GB7GZ1000033,Pop > Pop (Standard)
 Pegasus Fantasy,Mauren mendo,"Star Talent Anime Concert, Vol. 1",MXF171304159,Pop > Pop (Standard)
 I Gotta Feeling,The Black Eyed Peas,THE E.N.D. (THE ENERGY NEVER DIES),USUM70965169,Pop > Pop (Standard)
+Everybody Wants To Rule The World,Tears For Fears,Songs From The Big Chair,GBF088590110,Pop > Pop (Standard)
+Head Over Heels,Tears For Fears,Songs From The Big Chair,GBF088590130,Pop > Pop (Standard)
+Eyes Without A Face,Billy Idol,Rebel Yell,USCH38400023,Pop > Pop (Standard)
+You Got It,Roy Orbison,Mystery Girl,USLIC0701008,Pop > Pop (Standard)
 You Should All Be Murdered,Another Sunny Day,London Weekend,GBMFU0600054,Pop > Indie Pop
 Escapee,Architecture in Helsinki,Moment Bends,GBUM71100361,Pop > Indie Pop
-Shark Smile,Big Thief,Capacity,US2U61725502,Pop > Indie Pop
 Hurricane Jane,Black Kids,Partie Traumatic,GBUM70803624,Pop > Indie Pop
 Dance With Me,Cameron Avery,"Ripe Dreams, Pipe Dreams",USEP41630013,Pop > Indie Pop
-Confetti,Cold Cave,Cherish The Light Years,USMTD1101273,Pop > Indie Pop
-Where I'm Going,Cut Copy,Zonoscope,AUUM71001982,Pop > Indie Pop
-Circles,Digitalism,"I Love You, Dude",GBUM71102277,Pop > Indie Pop
 Found You,Django Django,Born Under Saturn,GBMVH1500060,Pop > Indie Pop
 Call It What You Want,Foster The People,Torches,USSM11101700,Pop > Indie Pop
 Coming of Age,Foster The People,Supermodel,USSM11305799,Pop > Indie Pop
@@ -1286,36 +1282,22 @@ Somebody That I Used To Know,Gotye,Making Mirrors,AUZS21100040,Pop > Indie Pop
 Mourning Sound,Grizzly Bear,Painted Ruins,USRC11700982,Pop > Indie Pop
 Walk The River,Guillemots,Walk The River,GBUM71029386,Pop > Indie Pop
 Swing Lynn,Harmless,I'm Sure,TCACS1610798,Pop > Indie Pop
-Ghosts,Ladytron,Velocifero,CAN110800033,Pop > Indie Pop
 Brillas,Leon Larregui,Solstis - De León Larregui,MXF061200432,Pop > Indie Pop
 Show Me How (Album V),Men I Trust,Oncle Jazz,QZFZ31973933,Pop > Indie Pop
-Little Dark Age,MGMT,Little Dark Age,USSM11707035,Pop > Indie Pop
-Time to Pretend,MGMT,Oracular Spectacular,USSM10702127,Pop > Indie Pop
-Shadows,Midnight Juggernauts,Shadows,AUIO05000188,Pop > Indie Pop
-Virago,Midnight Juggernauts,The Crystal Axis,AUIB21000007,Pop > Indie Pop
 Lisztomania,Phoenix,Wolfgang Amadeus Phoenix,FR31Q0900001,Pop > Indie Pop
 Cigarette Duet,Princess Chelsea,Lil' Golden Book,NZLC01100011,Pop > Indie Pop
 My Type,Saint Motel,My Type EP,GBAYE1400856,Pop > Indie Pop
 Kiss Me,Sixpence None The Richer,Sixpence None The Richer,USEE19900312,Pop > Indie Pop
-Everybody Wants To Rule The World,Tears For Fears,Songs From The Big Chair,GBF088590110,Pop > Indie Pop
-Head Over Heels,Tears For Fears,Songs From The Big Chair,GBF088590130,Pop > Indie Pop
 Just Like Heaven,The Cure,"Kiss Me, Kiss Me, Kiss Me (Deluxe Edition)",GBALB8700003,Pop > Indie Pop
 California Girls,The Magnetic Fields,Distortion,USNO10750702,Pop > Indie Pop
 Between Something and Nothing,The Ocean Blue,The Ocean Blue,USRE10100001,Pop > Indie Pop
 1517,The Whitest Boy Alive,Rules,DEKM50902007,Pop > Indie Pop
 Young,Vacations,Vibes,SEYOK1669274,Pop > Indie Pop
-Adore,Wild Nothing,Life of Pause,QMMZN1300922,Pop > Indie Pop
-Blue Wings,Wild Nothing,Blue Wings,QMMZN1901724,Pop > Indie Pop
-Chinatown,Wild Nothing,Gemini,US8YA1010079,Pop > Indie Pop
-Letting Go,Wild Nothing,Indigo,QMMZN1801611,Pop > Indie Pop
-Nocturne,Wild Nothing,Nocturne,GBBRP1235603,Pop > Indie Pop
 Partners in Motion,Wild Nothing,Indigo,QMMZN1801613,Pop > Indie Pop
 All My Little Words,The Magnetic Fields,69 Love Songs,USMRG0345070,Pop > Indie Pop
 Strange Powers,The Magnetic Fields,Holiday,USMRG0345051,Pop > Indie Pop
 My Favourite Game,The Cardigans,My Favourite Game,SEBKB9802010,Pop > Indie Pop
 Friday I'm In Love,The Cure,Wish,GBALB9200002,Pop > Indie Pop
-Foyer,Wild Nothing,Foyer,QMMZN1901757,Pop > Indie Pop
-Paradise,Wild Nothing,Nocturne,GBBRP1235608,Pop > Indie Pop
 Soldier Girl,The Polyphonic Spree,The Beginning Stages Of ...,GBFFS0200029,Pop > Indie Pop
 Angry Again,Megadeth,Hidden Treasures,USNPD9500002,Metal > Thrash Metal
 Captive Honour,Megadeth,Countdown To Extinction,USCA29200067,Metal > Thrash Metal
@@ -1496,6 +1478,14 @@ Stripped,Depeche Mode,Black Celebration,GBAJH0602660,Electronic > Synthpop
 Down in the Park,Gary Numan,Replicas,GBAZP9700053,Electronic > Synthpop
 Don't You Want Me,Human League,Dare!,GBAAA0200924,Electronic > Synthpop
 Bizarre Love Triangle,New Order,Brotherhood,GBCRL2400057,Electronic > Synthpop
+Circles,Digitalism,"I Love You, Dude",GBUM71102277,Electronic > Synthpop
+Confetti,Cold Cave,Cherish The Light Years,USMTD1101273,Electronic > Synthpop
+Ghosts,Ladytron,Velocifero,CAN110800033,Electronic > Synthpop
+Little Dark Age,MGMT,Little Dark Age,USSM11707035,Electronic > Synthpop
+Shadows,Midnight Juggernauts,Shadows,AUIO05000188,Electronic > Synthpop
+Time to Pretend,MGMT,Oracular Spectacular,USSM10702127,Electronic > Synthpop
+Virago,Midnight Juggernauts,The Crystal Axis,AUIB21000007,Electronic > Synthpop
+Where I'm Going,Cut Copy,Zonoscope,AUUM71001982,Electronic > Synthpop
 Lady,Modjo,Modjo,FR9W10100535,Electronic > House
 Calabria 2008,Natasja,Legacy (1974-2007),DKBR20801502,Electronic > House
 Played-A-Live (The Bongo Song),Safri Duo,Episode ll,DKBKA0100501,Electronic > House

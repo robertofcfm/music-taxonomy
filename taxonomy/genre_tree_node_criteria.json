@@ -541,12 +541,13 @@
     },
     {
       "node_path": "Music > Roots > Folk > Latin Folk > Trova Cubana",
-      "membership_criteria": "Canciones de autor de tradición latinoamericana (especialmente cubana), con fuerte énfasis en la lírica, poesía e interpretación vocal. Instrumentación predominantemente acústica (voz + guitarra), con estructura minimalista y enfoque en el mensaje. Puede incluir variantes de la Nueva Trova en otros países si mantienen este enfoque.",
-      "exclusion_criteria": "Canciones con producción moderna o arreglos pop predominantes, instrumentación amplia, o enfoque melódico/comercial por encima del contenido lírico. Excluir folk pop moderno o baladas producidas.",
+      "membership_criteria": "Canciones de autor de tradición latinoamericana, especialmente vinculadas a la trova cubana y a corrientes afines de canción de autor hispanohablante, con fuerte énfasis en la lírica, poesía e interpretación vocal. Instrumentación predominantemente acústica (voz + guitarra), estructura minimalista y enfoque en el mensaje. Puede incluir variantes no cubanas si conservan claramente ese marco trovador sobrio y literario.",
+      "exclusion_criteria": "Canciones con producción moderna o arreglos pop predominantes, instrumentación amplia, o enfoque melódico/comercial por encima del contenido lírico. Excluir folk pop moderno, baladas producidas o cantautor pop donde la lógica pop pese más que el formato trovador.",
       "reference_examples": [
         "Silvio Rodríguez - Ojalá",
         "Pablo Milanés - Yolanda",
-        "Fernando Delgadillo - Hoy Ten Miedo De Mi"
+        "Fernando Delgadillo - Hoy Ten Miedo De Mi",
+        "Joan Manuel Serrat - Cantares"
       ]
     },
     {
@@ -599,7 +600,7 @@
       "membership_criteria": "Groove: polka/corrido rígido y lineal. Sensación: directa, tradicional. Acordeón: melódico, no dominante técnico. Teclado: decorativo (si existe). Clave: ritmo manda. Si hay duda con Texano, priorizar groove rígido, instrumentación tradicional y ausencia de virtuosismo técnico en acordeón/teclado.",
       "exclusion_criteria": "Banda, mariachi, o géneros fuera del norteño. Si la producción es moderna, el groove es swing/pop-country, o el teclado es protagonista/estructural, considerar Texano.",
       "reference_examples": [
-        "Intocable - Fuerte No Soy",
+        "Albert Zamora Y Talento - El Circo",
         "Los Tucanes de Tijuana - La Chona",
         "Albert Zamora Y Talento - Tu Carcel"
       ]
@@ -620,7 +621,7 @@
       "reference_examples": [
         "Selena - Bidi Bidi Bom Bom",
         "Emilio Navaira - Ya No Me Pones Atención",
-        "Albert Zamora Y Talento - El Circo"
+        "Intocable - Fuerte No Soy"
       ]
     },
     {
