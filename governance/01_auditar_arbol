@@ -57,6 +57,23 @@ Un nodo puede agregarse al blueprint si cumple al menos uno de los siguientes:
 2. Ya existe en la colección
 3. Es altamente probable en la evolución de la colección
 
+### 4.1 Ramas exploratorias
+
+Una rama exploratoria puede abrirse de forma controlada cuando existe una identidad musical clara y útil, pero la colección todavía no tiene suficiente profundidad para justificar una subestructura amplia.
+
+Reglas:
+
+* Debe abrirse con la menor cantidad de nodos posible
+* El primer nodo hijo debe responder a una necesidad de clasificación real, no preventiva
+* No debe convertirse en excusa para poblar subgéneros especulativos
+* Su expansión posterior requiere evidencia adicional en el catálogo
+* Si no crece o no mejora decisiones de clasificación, debe mantenerse mínima
+
+Caso vigente:
+
+* `Music > Jazz` se considera actualmente una rama exploratoria en expansión controlada
+* `Music > Jazz > Vocal Jazz` es su primer nodo específico validado
+
 ---
 
 ## 5. Política de no-expansión
