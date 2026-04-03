@@ -9,39 +9,50 @@ def normalize_for_match(text):
     text = re.sub(r'[^a-z0-9]', '', text)
     return text
 
+def normalize_for_keyword_search(text):
+    if not text:
+        return ""
+    text = text.lower()
+    text = ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+    text = re.sub(r'[^a-z0-9]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+def contains_keyword(text, keywords):
+    searchable_text = f" {normalize_for_keyword_search(text)} "
+    for keyword in keywords:
+        normalized_keyword = normalize_for_keyword_search(keyword)
+        if normalized_keyword and f" {normalized_keyword} " in searchable_text:
+            return True
+    return False
+
 def classify_track_type(track):
-    track_title = (track.get("title") or "").lower()
-    version_title = (track.get("version") or "").lower()
+    track_title = track.get("title") or ""
+    version_title = track.get("version") or ""
     album_data = track.get("album") or {}
-    album_version = (album_data.get("version") or "").lower()
+    album_version = album_data.get("version") or ""
     all_text = f"{track_title} {version_title} {album_version}"
     live_keywords = [
         "live", "en vivo", "vivo", "concierto", "directo", "unplugged",
         "mtv unplugged", "live at", "live from", "live in", "live version",
         "recorded live", "grabado en vivo", "ao vivo"
     ]
-    cover_keywords = ["cover", "tribute", "version", "interpret", "revisited"]
+    cover_keywords = ["cover", "tribute", "cover version", "interpret", "revisited"]
     demo_keywords = ["demo", "rough", "early version", "pre-production"]
     remix_keywords = [
         "remix", "mix", "edit", "dub", "extended", "club mix",
-        "radio edit", "single version", "album version"
+        "radio edit"
     ]
     acoustic_keywords = ["acoustic", "acústico", "unplugged", "stripped", "piano version"]
-    for keyword in live_keywords:
-        if keyword in all_text:
-            return "Live"
-    for keyword in cover_keywords:
-        if keyword in all_text:
-            return "Cover"
-    for keyword in demo_keywords:
-        if keyword in all_text:
-            return "Demo"
-    for keyword in remix_keywords:
-        if keyword in all_text:
-            return "Remix"
-    for keyword in acoustic_keywords:
-        if keyword in all_text:
-            return "Acoustic"
+    if contains_keyword(all_text, live_keywords):
+        return "Live"
+    if contains_keyword(all_text, cover_keywords):
+        return "Cover"
+    if contains_keyword(all_text, demo_keywords):
+        return "Demo"
+    if contains_keyword(all_text, remix_keywords):
+        return "Remix"
+    if contains_keyword(all_text, acoustic_keywords):
+        return "Acoustic"
     return "Studio"
 
 def compare_quality(original, candidate):

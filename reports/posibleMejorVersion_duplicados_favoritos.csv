@@ -1,11 +1,9 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito,Titulo Normalizado,Cantidad Duplicados,Clave Duplicado
-USHM82396666,258460785,Estar Enamorado (En Vivo),,311726,Costumbre,En Vivo Desde la Arena Monterrey,Studio,,24,44.1,2,True,estarenamorado,2,estarenamorado|311726|studio
-USWL10400089,2683062,Estar enamorado,,311726,Costumbre,Fantasia,Studio,,16,44.1,2,True,estarenamorado,2,estarenamorado|311726|studio
-USWL10400090,2683065,Fantasia,,311726,Costumbre,Fantasia,Studio,,16,44.1,2,True,fantasia,2,fantasia|311726|studio
-USHM82396677,258460796,Fantasía (En Vivo),,311726,Costumbre,En Vivo Desde la Arena Monterrey,Studio,,24,44.1,2,True,fantasia,2,fantasia|311726|studio
-QZW9K2399420,237373855,Luna de Miel,,69575,La Tropa f,Luna de Miel,Studio,,24,44.1,2,True,lunademiel,2,lunademiel|69575|studio
-USHM81606872,81878497,Luna de Miel (Live),,69575,La Tropa f,Live & Reloaded,Studio,,16,44.1,2,True,lunademiel,2,lunademiel|69575|studio
-USRH12302157,289312966,Psycho Killer ,2024 Remaster,135918,Talking Heads,Talking Heads: 77 (Super Deluxe Edition) ,Studio,2024 Remaster,24,96.0,2,True,psychokiller,2,psychokiller|135918|studio
-USWB10502860,173672239,Psycho Killer (2005 Remaster),,135918,Talking Heads,OK Boomers - Top Tunes,Studio,,16,44.1,2,True,psychokiller,2,psychokiller|135918|studio
-USHR10129402,54697115,Quiero Decirte,,311726,Costumbre,Dejame Ser,Studio,Pop,16,44.1,2,True,quierodecirte,2,quierodecirte|311726|studio
-USHM82396678,258460797,Quiero Decirte (En Vivo),,311726,Costumbre,En Vivo Desde la Arena Monterrey,Studio,,24,44.1,2,True,quierodecirte,2,quierodecirte|311726|studio
+USGF19142013,173775451,Don't Cry,Alternate Lyrics  / 2022 Remaster,54838,Guns N' Roses,Use Your Illusion II,Studio,,24,96.0,2,True,dontcry,2,dontcry|54838|studio
+USGF19141504,173779639,Don't Cry (Original),,54838,Guns N' Roses,Use Your Illusion I,Studio,,24,96.0,2,True,dontcry,2,dontcry|54838|studio
+QMKHM1900008,123452394,Nothing Else Matters,Remastered 2021,62542,Metallica,Metallica,Studio,Remastered 2021,24,96.0,2,True,nothingelsematters,2,nothingelsematters|62542|studio
+QMKHM1900013,123588804,Nothing Else Matters,Elevator Version,62542,Metallica,Metallica,Studio,Remastered Deluxe Box Set - Explicit,24,44.1,2,True,nothingelsematters,2,nothingelsematters|62542|studio
+USSM10000993,52605,(Rap) Superstar,LP Version,149154,Cypress Hill,Skull & Bones,Studio,,16,44.1,2,True,superstar,2,superstar|149154|studio
+USSM10000994,52619,(Rock) Superstar,Explicit LP Version,149154,Cypress Hill,Skull & Bones,Studio,,16,44.1,2,True,superstar,2,superstar|149154|studio
+USGF18714810,50895733,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction,Studio,,24,192.0,2,True,yourecrazy,2,yourecrazy|54838|studio
+USGF18819807,755620,You're Crazy,,54838,Guns N' Roses,G N' R Lies,Studio,,16,44.1,2,True,yourecrazy,2,yourecrazy|54838|studio
