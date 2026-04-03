@@ -75,8 +75,8 @@
     },
     {
       "node_path": "Music > Electronic > Downtempo",
-      "membership_criteria": "Electrónica de tempo lento, atmósfera relajada y arreglos ambientales.",
-      "exclusion_criteria": "Dance, techno, o electrónica de tempo rápido.",
+      "membership_criteria": "Electrónica de tempo lento o medio-lento donde la atmósfera contemplativa, cinematográfica o ambiental domina sobre el impulso de pista. Puede incluir beats suaves o pesados pero contenidos, texturas envolventes y arreglos espaciales, siempre que la sensación principal no sea de empuje bailable continuo.",
+      "exclusion_criteria": "Dance, house, techno o electrónica de tempo rápido. Excluir big beat con breakbeats pesados dominantes, hip hop con rap al frente, y canciones electrónicas o indietrónicas donde la estructura pop o de banda pese más que la atmósfera downtempo.",
       "reference_examples": [
         "Air - All I Need",
         "Massive Attack - Teardrop"
@@ -93,8 +93,8 @@
     },
     {
       "node_path": "Music > Electronic > House",
-      "membership_criteria": "Música electrónica basada en un ritmo constante 4/4 (four-on-the-floor), con bombo en cada pulso, orientada al baile. Groove repetitivo, hipnótico y continuo, con uso de sintetizadores, samples y estructuras cíclicas. La energía se construye mediante capas y variaciones progresivas.",
-      "exclusion_criteria": "Disco (instrumentación orgánica y estética 70s/80s), Synthpop (estructura de canción pop tradicional con versos/estribillos claros), Techno o electrónica experimental sin groove house definido.",
+      "membership_criteria": "Música electrónica basada de forma dominante en un ritmo constante 4/4 (four-on-the-floor), con bombo en cada pulso, orientada al baile y sostenida por un groove repetitivo, hipnótico y continuo. La identidad debe descansar principalmente en el pulso house y en una construcción por capas, variaciones y repetición, más que en una forma de canción pop tradicional.",
+      "exclusion_criteria": "Disco (instrumentación orgánica y estética 70s/80s), Synthpop o dance-pop con estructura de canción tradicional claramente dominante, techno o electrónica experimental sin groove house definido, y canciones de club/pop donde el estribillo o el formato himno pesen más que el pulso house continuo.",
       "reference_examples": [
         "Modjo - Lady",
         "Daft Punk - One More Time",
