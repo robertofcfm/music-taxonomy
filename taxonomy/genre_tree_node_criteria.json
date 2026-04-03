@@ -337,8 +337,8 @@
     },
     {
       "node_path": "Music > Rock > Alternative Rock",
-      "membership_criteria": "Nodo fallback para canciones de rock que no encajan claramente en ningún subgénero específico existente (como Indie Rock, Grunge, Post-Punk, etc.), pero mantienen instrumentación y estructura de rock.",
-      "exclusion_criteria": "No asignar si la canción encaja claramente en un subgénero más específico.",
+      "membership_criteria": "Nodo fallback para canciones de rock con identidad alternativa clara o híbrida que no encajan limpiamente en ningún subgénero específico existente. Debe usarse cuando la obra conserva estructura e instrumentación de rock, pero no responde con claridad a la lógica melódica/jangle de Indie Rock, ni a la tensión angular y bajo dominante de Post-Punk, ni a otros subgéneros más definidos.",
+      "exclusion_criteria": "No asignar si la canción encaja claramente en un subgénero más específico. Excluir especialmente Indie Rock melódico o jangle, Post-Punk o post-punk revival con pulso tenso y bajo protagonista, Grunge, Hard Rock, Pop Punk, Psychedelic Rock y Roots Rock.",
       "reference_examples": [
         "Radiohead - Creep"
       ]
@@ -387,8 +387,8 @@
     },
     {
       "node_path": "Music > Rock > Hard Rock > Power Ballad",
-      "membership_criteria": "Baladas de tempo lento o medio interpretadas por bandas de Hard Rock, con estructura emocional, crescendos, arreglos potentes y estribillos intensos.",
-      "exclusion_criteria": "Baladas pop, canciones sin instrumentación rock dominante, o piezas sin desarrollo dinámico característico.",
+      "membership_criteria": "Baladas o semi-baladas de tempo lento o medio interpretadas por bandas o artistas de hard rock, con estructura emocional clara, desarrollo dinámico, crescendos y estribillos intensos. La identidad debe descansar en el arco de balada rock y no solo en un coro grande o en una producción épica.",
+      "exclusion_criteria": "Baladas pop, canciones sin instrumentación rock dominante, piezas sin desarrollo dinámico característico, o himnos rock de tempo alto/impulso frontal donde domina más el riff y la energía continua que la lógica de balada.",
       "reference_examples": [
         "Bon Jovi - Always",
         "Guns N' Roses - November Rain",
@@ -397,8 +397,8 @@
     },
     {
       "node_path": "Music > Rock > Indie Rock",
-      "membership_criteria": "Rock con groove tradicional no pesado, sin riff dominante, con enfoque melódico y accesible. Mantiene estructura de banda, pero evita la agresividad del hard rock o grunge.",
-      "exclusion_criteria": "Rock pesado, grunge, hard rock, o canciones con groove claramente pop.",
+      "membership_criteria": "Rock de banda con enfoque melódico, guitarras limpias o moderadamente saturadas, sensación alternativa/college/jangle y peso medio o ligero. La identidad descansa más en melodía, textura guitarrera y canción que en riffs pesados o en la tensión rítmica oscura del Post-Punk.",
+      "exclusion_criteria": "Rock pesado, grunge, hard rock, o canciones con groove claramente pop. Excluir también piezas dominadas por bajo protagonista, guitarras angulares, pulso repetitivo o atmósfera sombría propia de Post-Punk, así como híbridos alternativos que no tengan identidad indie clara.",
       "reference_examples": [
         "Arctic Monkeys - Do I Wanna Know?",
         "Blur - Coffee & TV"
@@ -416,8 +416,8 @@
     },
     {
       "node_path": "Music > Rock > Post-Punk",
-      "membership_criteria": "Obras derivadas del punk, con mayor experimentación, atmósferas oscuras, uso de sintetizadores y bajo prominente.",
-      "exclusion_criteria": "Punk clásico, new wave, o géneros sin la influencia post-punk.",
+      "membership_criteria": "Rock derivado del punk o de su revival, con tensión rítmica contenida, bajo prominente, guitarras angulares o frías, patrones repetitivos y atmósfera sombría, seca o nocturna. Incluye post-punk revival cuando ese pulso y esa arquitectura dominan sobre la melodía indie convencional.",
+      "exclusion_criteria": "Punk clásico, new wave, o géneros sin la influencia post-punk. Excluir Indie Rock melódico/jangle sin tensión angular clara, Synthpop donde el andamiaje electrónico domine, y Alternative Rock fallback cuando la canción no muestre de forma estable la gramática post-punk.",
       "reference_examples": [
         "Joy Division - Love Will Tear Us Apart",
         "Bauhaus - Dark Entries"
@@ -441,15 +441,6 @@
       "reference_examples": [
         "Pink Floyd - Comfortably Numb",
         "The Doors - Riders on the Storm"
-      ]
-    },
-    {
-      "node_path": "Music > Rock > Reggae Rock",
-      "membership_criteria": "Fusión de elementos de rock y reggae, con ritmo sincopado y uso de instrumentación rock.",
-      "exclusion_criteria": "Reggae puro, ska, o rock sin influencia reggae.",
-      "reference_examples": [
-        "The Police - Walking on the Moon",
-        "311 - Love Song"
       ]
     },
     {
