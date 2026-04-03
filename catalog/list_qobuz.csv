@@ -1,6 +1,5 @@
 title,artist,album,isrc,genre
 Last Resort,Papa Roach,20/20,ZZOPM2002585,Metal > Nu Metal
-In the End,Linkin Park,Hybrid Theory,USWB11201118,Metal > Nu Metal
 Crawling,Linkin Park,Hybrid Theory,USWB11201115,Metal > Nu Metal
 One Step Closer,Linkin Park,Hybrid Theory,USWB11201112,Metal > Nu Metal
 My Way,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001177,Metal > Nu Metal
@@ -9,7 +8,6 @@ Rollin' (Air Raid Vehicle),Limp Bizkit,Chocolate Starfish And The Hot Dog Flavor
 My Generation,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10001123,Metal > Nu Metal
 Falling Away from Me,Korn,Issues,USSM19922479,Metal > Nu Metal
 Jet Pilot,System Of A Down,Toxicity,USSM10107254,Metal > Nu Metal
-Revolution Is My Name,Pantera,Reinventing the Steel,USRH12002862,Metal > Nu Metal
 Nookie,Limp Bizkit,Significant Other,USIR19902308,Metal > Nu Metal
 (Rock) Superstar,Cypress Hill,Skull & Bones,USSM10000994,Metal > Nu Metal
 Take A Look Around,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,USIR10000604,Metal > Nu Metal
@@ -1094,7 +1092,6 @@ El Cuarto Oscuro,Skunk D.F.,Equilibrio,ES8242340102,Rock > Alternative Rock
 De Música Ligera,Soda Stereo,Me Verás Volver (Hits & Más),ARFSB0700930,Rock > Alternative Rock
 Sugar Kane,Sonic Youth,Dirty,USIR19948507,Rock > Alternative Rock
 Super Bon Bon,Soul Coughing,Irresistible Bliss,GBANC9600001,Rock > Alternative Rock
-Aerials,System Of A Down,Toxicity,USSM10107264,Rock > Alternative Rock
 Stay Free,The Clash,Give 'Em Enough Rope,GBARL1200720,Rock > Alternative Rock
 Animal Instinct,The Cranberries,Bury The Hatchet,USIR29900001,Rock > Alternative Rock
 Dreams,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",USIR29300080,Rock > Alternative Rock
@@ -1159,6 +1156,7 @@ Vow,Garbage,Garbage,GB5KW2000742,Rock > Alternative Rock
 I Think I'm Paranoid,Garbage,Anthology,GB5KW2202119,Rock > Alternative Rock
 Only Happy When It Rains,Garbage,Anthology,GB5KW2202113,Rock > Alternative Rock
 Me Vale,Mana,¿Dónde Jugarán Los Niños?,MXF151900128,Rock > Alternative Rock
+In the End,Linkin Park,Hybrid Theory,USWB11201118,Rock > Alternative Rock
 Rolling in the Deep,Adele,21,GBBKS1000335,Rhythmic > Soul
 What a Fool Believes,The Doobie Brothers,Minute by Minute,USRH11600651,Rhythmic > Soul
 Crazy,Gnarls Barkley,St. Elsewhere,USAT20611041,Rhythmic > Soul
@@ -1441,8 +1439,10 @@ Of Wolf And Man,Metallica,S&M,GBAMC9900007,Metal > Heavy Metal
 The Call Of Ktulu,Metallica,S&M,GBAMC9900005,Metal > Heavy Metal
 Sad But True,Metallica,Metallica,QMKHM1900015,Metal > Heavy Metal
 Nothing Else Matters,Metallica,Metallica,QMKHM1900013,Metal > Heavy Metal
+Revolution Is My Name,Pantera,Reinventing the Steel,USRH12002862,Metal > Heavy Metal
 My Own Summer (Shove It),Deftones,Around the Fur,USRE11600084,Metal > Alternative Metal
 Bring Me To Life,Evanescence,Fallen,USWU30200093,Metal > Alternative Metal
+Aerials,System Of A Down,Toxicity,USSM10107264,Metal > Alternative Metal
 Dr. Dedoverde (Dr. Greenthumb),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907165,Hip Hop > West Coast
 Tequila (Tequila Sunrise),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907173,Hip Hop > West Coast
 Yo Quiero Fumar (I Wanna Get High),Cypress Hill,Los Grandes Éxitos En Español (Spanish Greatest Hits),USSM19907162,Hip Hop > West Coast
