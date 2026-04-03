@@ -8,6 +8,7 @@ from utils_posible_mejor_version import normalize_for_match
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion.csv')
 OUTPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_duplicados_favoritos.csv')
+EXCLUDED_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_duplicados_excluidos.csv')
 
 
 def cargar_registros(path):
@@ -33,7 +34,15 @@ def construir_clave(row):
     )
 
 
-def encontrar_duplicados(registros):
+def obtener_clave_duplicado(row):
+    clave_existente = (row.get('Clave Duplicado', '') or '').strip()
+    if clave_existente:
+        return clave_existente
+    titulo_normalizado, id_artista, tipo_disco = construir_clave(row)
+    return f'{titulo_normalizado}|{id_artista}|{tipo_disco}'
+
+
+def agrupar_duplicados(registros):
     grupos = {}
     for row in registros:
         if not es_favorito(row.get('Es favorito')):
@@ -41,16 +50,47 @@ def encontrar_duplicados(registros):
         clave = construir_clave(row)
         grupos.setdefault(clave, []).append(row)
 
+    return {clave: grupo for clave, grupo in grupos.items() if len(grupo) >= 2}
+
+
+def cargar_bloques_excluidos(path):
+    if not os.path.exists(path):
+        return set()
+
+    registros, _ = cargar_registros(path)
+    bloques = set()
+    bloque_actual = []
+    clave_actual = None
+
+    for row in registros:
+        clave = obtener_clave_duplicado(row)
+        if clave != clave_actual and bloque_actual:
+            bloques.add((clave_actual, tuple(sorted(bloque_actual))))
+            bloque_actual = []
+        clave_actual = clave
+        bloque_actual.append((row.get('Id Titulo', '') or '').strip())
+
+    if bloque_actual:
+        bloques.add((clave_actual, tuple(sorted(bloque_actual))))
+
+    return bloques
+
+
+def encontrar_duplicados(registros, bloques_excluidos):
+    grupos = agrupar_duplicados(registros)
+
     duplicados = []
     for clave, grupo in grupos.items():
-        if len(grupo) < 2:
-            continue
         titulo_normalizado, id_artista, tipo_disco = clave
+        clave_duplicado = f'{titulo_normalizado}|{id_artista}|{tipo_disco}'
+        ids_grupo = tuple(sorted((row.get('Id Titulo', '') or '').strip() for row in grupo))
+        if (clave_duplicado, ids_grupo) in bloques_excluidos:
+            continue
         for row in grupo:
             row_con_metadatos = dict(row)
             row_con_metadatos['Titulo Normalizado'] = titulo_normalizado
             row_con_metadatos['Cantidad Duplicados'] = str(len(grupo))
-            row_con_metadatos['Clave Duplicado'] = f'{titulo_normalizado}|{id_artista}|{tipo_disco}'
+            row_con_metadatos['Clave Duplicado'] = clave_duplicado
             duplicados.append(row_con_metadatos)
 
     duplicados.sort(
@@ -79,7 +119,8 @@ def guardar_reporte(path, fieldnames, registros):
 
 def main():
     registros, fieldnames = cargar_registros(INPUT_FILE)
-    duplicados = encontrar_duplicados(registros)
+    bloques_excluidos = cargar_bloques_excluidos(EXCLUDED_FILE)
+    duplicados = encontrar_duplicados(registros, bloques_excluidos)
     guardar_reporte(OUTPUT_FILE, fieldnames, duplicados)
     print(f'Reporte generado: {OUTPUT_FILE}')
     print(f'Registros duplicados exportados: {len(duplicados)}')
