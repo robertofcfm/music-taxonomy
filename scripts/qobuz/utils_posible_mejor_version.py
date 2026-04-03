@@ -10,10 +10,11 @@ def normalize_for_match(text):
     return text
 
 def classify_track_type(track):
+    track_title = (track.get("title") or "").lower()
     version_title = (track.get("version") or "").lower()
     album_data = track.get("album") or {}
     album_version = (album_data.get("version") or "").lower()
-    all_text = f"{version_title} {album_version}"
+    all_text = f"{track_title} {version_title} {album_version}"
     live_keywords = [
         "live", "en vivo", "vivo", "concierto", "directo", "unplugged",
         "mtv unplugged", "live at", "live from", "live in", "live version",
