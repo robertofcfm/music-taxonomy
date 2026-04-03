@@ -116,8 +116,8 @@
         "membership_criteria": "Música cuyo centro identitario descansa en un beat programado o loop dominante y en una entrega vocal rappeada o claramente hablada-rítmica. La sensación principal debe pertenecer al sistema Hip Hop, aunque existan elementos melódicos, atmosféricos o de crossover.",
         "exclusion_criteria": "Pop con rap accesorio o cameo, electrónica donde la atmósfera o el pulso sintético sean más determinantes que el rap, rhythmic/funk sin lógica rap dominante, o rock/alternative con spoken vocals pero sin base hip hop clara.",
         "reference_examples": [
-          "Eminem - Lose Yourself",
-          "Coolio - Gangsta's Paradise"
+          "The Sugarhill Gang - Rapper's Delight",
+          "Run-D.M.C. - It's Tricky"
         ]
       },
     {
@@ -152,7 +152,7 @@
       "reference_examples": [
         "Miles Davis - So What",
         "Dave Brubeck - Take Five",
-        "Louis Armstrong - What A Wonderful World"
+        "Duke Ellington - Take the A Train"
       ]
     },
     {
@@ -280,7 +280,7 @@
       "exclusion_criteria": "Pop bailable sin groove disco, house, o géneros electrónicos posteriores.",
       "reference_examples": [
         "Bee Gees - Stayin' Alive",
-        "Dead Or Alive - You Spin Me Round"
+        "Gloria Gaynor - I Will Survive"
       ]
     },
     {
@@ -439,7 +439,7 @@
       "membership_criteria": "Canciones de rock con fuerte influencia psicodélica: uso de efectos sonoros, estructuras experimentales, letras surrealistas y atmósferas expansivas.",
       "exclusion_criteria": "Rock tradicional, pop psicodélico o géneros sin elementos psicodélicos claros.",
       "reference_examples": [
-        "Pink Floyd - Comfortably Numb",
+        "Jimi Hendrix - Purple Haze",
         "The Doors - Riders on the Storm"
       ]
     },
