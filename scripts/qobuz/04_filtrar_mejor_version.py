@@ -29,10 +29,18 @@ def filtrar_excluidos(registros, ids_excluir):
 
 # Filtrar favoritos según condición
 def filtrar_favoritos(registros):
-    # Agrupar por (Título, Artista)
+    ids_favoritos = {
+        r['Id Titulo']
+        for r in registros
+        if r['Es favorito'] == 'True'
+    }
+
+    # Agrupar por (Título, Artista, Tipo Disco) para no mezclar Studio/Live/etc.
     agrupados = {}
     for r in registros:
-        key = (r['Título'], r['Artista'])
+        if r['Es favorito'] == 'False' and r['Id Titulo'] in ids_favoritos:
+            continue
+        key = (r['Título'], r['Artista'], r['Tipo Disco'])
         agrupados.setdefault(key, []).append(r)
     resultado = []
     for key, grupo in agrupados.items():

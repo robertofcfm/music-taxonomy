@@ -46,6 +46,7 @@ def get_all_favorites():
 # ==============================
 def main():
     favoritos = get_all_favorites()
+    favorite_track_ids = {str(track.get("id", "")) for track in favoritos if track.get("id", "")}
     output_dir = "catalog"
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, "favorites_qobuz.csv")
@@ -216,6 +217,8 @@ def main():
             encontrados = 0
             for res in search_results:
                 if res.get("id", "") == track_id:
+                    continue
+                if str(res.get("id", "")) in favorite_track_ids:
                     continue
                 if classify_track_type(res) != tipo_disco:
                     continue
