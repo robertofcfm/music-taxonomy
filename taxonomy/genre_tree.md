@@ -17,6 +17,7 @@ Music
     Alternative Metal
     Heavy Metal
     Industrial Metal
+    Nu Metal
     Power Metal
     Thrash Metal
   Pop

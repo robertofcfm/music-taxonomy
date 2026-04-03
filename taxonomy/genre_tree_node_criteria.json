@@ -190,6 +190,16 @@
       ]
     },
     {
+      "node_path": "Music > Metal > Nu Metal",
+      "membership_criteria": "Metal de groove pesado, sincopado y repetitivo, usualmente centrado en riffs graves o chugging, con fuerte impronta 90s/2000s y mezcla estructural de metal con hip hop, alternative rock, funk o estética urbana. Puede incluir rap, canto melódico tenso, gritos o combinaciones de estos, siempre que la identidad principal siga siendo de metal moderno, denso y rítmicamente machacante.",
+      "exclusion_criteria": "Alternative Metal amplio sin identidad nu metal clara, rap rock o alternative rock donde el peso metal no sea dominante, Industrial Metal con componente mecánico/electrónico central, o cualquier caso que encaje con mayor claridad en Heavy Metal, Thrash Metal o Power Metal.",
+      "reference_examples": [
+        "Korn - Falling Away from Me",
+        "Limp Bizkit - My Way",
+        "Linkin Park - One Step Closer"
+      ]
+    },
+    {
       "node_path": "Music > Metal > Thrash Metal",
       "membership_criteria": "Metal caracterizado por alta velocidad, riffs agresivos y repetitivos (palm muting), batería con patrones rápidos (thrash beat) y una ejecución rítmica intensa y constante. Prioriza ataque, velocidad y precisión rítmica sobre melodía.",
       "exclusion_criteria": "Metal de tempo medio sin agresividad rítmica (Heavy Metal), metal melódico o épico (Power Metal), o cualquier estilo donde la velocidad y agresividad no sean dominantes.",
@@ -646,8 +656,8 @@
     },
     {
       "node_path": "Music > Metal > Alternative Metal",
-      "membership_criteria": "Metal que fusiona elementos del metal tradicional con influencias de géneros alternativos como el rock alternativo, funk, grunge, hip hop o electrónica. Suele presentar estructuras no convencionales, experimentación sonora, cambios de dinámica y una actitud innovadora. El groove puede ser variado, con riffs pesados pero también pasajes melódicos o rítmicos inusuales.",
-      "exclusion_criteria": "Metal tradicional sin elementos alternativos claros, o estilos que encajan mejor en subgéneros definidos como Heavy Metal, Industrial Metal, Nu Metal, etc.",
+      "membership_criteria": "Metal de base claramente pesada que incorpora de forma estructural rasgos alternativos, grunge, experimentales, atmosféricos, progresivos o híbridos, siempre que el peso de los riffs, la agresividad y la identidad metal sigan siendo dominantes. Debe sentirse como una variante híbrida del sistema Metal, no solo como rock alternativo endurecido.",
+      "exclusion_criteria": "Metal tradicional sin rasgos alternativos claros, Nu Metal con identidad rítmica/groove claramente definida, Industrial Metal con componente mecánico/electrónico dominante, o canciones donde la estructura alternativa, pop o rap pese más que la identidad metal. Excluir también los casos que encajan con mayor claridad en Heavy Metal, Thrash Metal o Power Metal.",
       "reference_examples": [
         "Tool - Schism",
         "Faith No More - Epic",
