@@ -2,32 +2,11 @@
 
 Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
 
---- INSTRUCCIONES ---
-1. [IA_MANUAL] Antes de cualquier validación, escanea el archivo de criterios genre_tree_node_criteria.json
-  - Si detectas criterios definidos para nodos inexistentes, o nodos sin criterios corrigelo
-2. Toma el árbol de géneros musicales desde:
-  taxonomy/genre_tree_master.md
-3. Toma el contexto operativo y definiciones desde:
-  context/contexto_validacion_arbol_llm.md
-4. Toma las reglas de validación LLM desde:
-  governance/reglas_globales_llm.md
-  governance/reglas_validacion_arbol_llm.md
-5. Utiliza el archivo taxonomy/genre_tree_node_criteria.json como ayuda para interpretar criterios y validar los nodos.
-6. [IA_MANUAL] Evalúa cada una de las reglas LLM sobre el árbol, aplicando el contexto y los criterios.
-7. [IA_MANUAL] Genera dos archivos como respuesta de la evaluacion de TODAS las reglas:
-   - Un reporte en JSON con el formato exacto que produce el script de validación determinista (errores, advertencias, ok, detalle, timestamp).
-   - Un reporte en Markdown con el mismo formato y secciones que el script (errores, advertencias, reglas validadas, archivos utilizados, fecha).
-   Estos se generaran en la carpeta reports con los nombres reporte_validacion_arbol_llm.json y reporte_validacion_arbol_llm.md
-   No es necesario mostrarlos en pantalla y los ejemplos son eso ejemplos estos no se incluyen solo lo real
+usa lo indicado en los siguientes archivos como informacion valiosa
+governance/01_auditar_arbol
+taxonomy/genre_tree_master.md
+taxonomy/genre_tree_node_criteria.json
 
---- FORMATO DE RESPUESTA ---
-La respuesta debe contener únicamente:
-1. El JSON de reporte de validación.
-2. El Markdown de reporte de validación.
-
-No incluyas explicaciones adicionales ni comentarios fuera de los dos reportes.
-
-
-PROCESA este prompt y responde únicamente con los dos reportes (JSON y Markdown) generados tras evaluar todas las reglas LLM sobre el árbol, usando el contexto y las reglas indicadas.
-MUY IMPORTANTE 
-no se deben mostrar ejemplos bajo ninguna circunstancia, solo los reportes reales generados por la validación
+En este flujo la tarea es que ejecutes el script filtrar_canciones_nuevas.py y 
+de las canciones que responde este script y con las instrucciones de los archivos anteriores 
+asignes nodo ya sea nuevo o de los existentes en songs_with_genres.csv
