@@ -1,5 +1,5 @@
 node_path,level,node_name,canciones_exactas,canciones_acumuladas
-Music,0,Music,0,1455
+Music,0,Music,0,1470
 Music > Classical,1,Classical,5,5
 Music > Electronic,1,Electronic,0,53
 Music > Electronic > Big Beat,2,Big Beat,5,5
@@ -33,8 +33,8 @@ Music > Rhythmic > Funk,2,Funk,4,4
 Music > Rhythmic > R&B,2,R&B,0,0
 Music > Rhythmic > Ska,2,Ska,9,9
 Music > Rhythmic > Soul,2,Soul,8,8
-Music > Rock,1,Rock,0,651
-Music > Rock > Alternative Rock,2,Alternative Rock,135,135
+Music > Rock,1,Rock,0,657
+Music > Rock > Alternative Rock,2,Alternative Rock,139,139
 Music > Rock > Blues Rock,2,Blues Rock,20,20
 Music > Rock > Folk Rock,2,Folk Rock,13,13
 Music > Rock > Grunge,2,Grunge,52,52
@@ -45,19 +45,21 @@ Music > Rock > Post-Punk,2,Post-Punk,108,108
 Music > Rock > Progressive Rock,2,Progressive Rock,10,10
 Music > Rock > Psychedelic Rock,2,Psychedelic Rock,48,48
 Music > Rock > Roots Rock,2,Roots Rock,15,15
-Music > Rock > Soft Rock,2,Soft Rock,27,27
-Music > Roots,1,Roots,0,406
+Music > Rock > Soft Rock,2,Soft Rock,29,29
+Music > Roots,1,Roots,0,415
 Music > Roots > Bolero,2,Bolero,6,6
-Music > Roots > Cumbia,2,Cumbia,11,11
-Music > Roots > Folk,2,Folk,0,155
-Music > Roots > Folk > Latin Folk,3,Latin Folk,0,152
+Music > Roots > Cumbia,2,Cumbia,2,12
+Music > Roots > Cumbia > Cumbia Vallenata,3,Cumbia Vallenata,5,5
+Music > Roots > Cumbia > Cumbia Pop,3,Cumbia Pop,5,5
+Music > Roots > Folk,2,Folk,0,162
+Music > Roots > Folk > Latin Folk,3,Latin Folk,0,159
 Music > Roots > Folk > Latin Folk > Latin Folk Pop,4,Latin Folk Pop,3,3
 Music > Roots > Folk > Latin Folk > Trova Cubana,4,Trova Cubana,4,4
-Music > Roots > Folk > Latin Folk > Vallenato,4,Vallenato,145,145
+Music > Roots > Folk > Latin Folk > Vallenato,4,Vallenato,152,152
 Music > Roots > Folk > Traditional Folk,3,Traditional Folk,3,3
-Music > Roots > Regional Mexicano,2,Regional Mexicano,0,234
+Music > Roots > Regional Mexicano,2,Regional Mexicano,0,235
 Music > Roots > Regional Mexicano > Banda,3,Banda,6,6
 Music > Roots > Regional Mexicano > Norteño,3,Norteño,105,105
 Music > Roots > Regional Mexicano > Ranchera,3,Ranchera,8,8
-Music > Roots > Regional Mexicano > Texano,3,Texano,115,115
+Music > Roots > Regional Mexicano > Texano,3,Texano,116,116
 Music > Score,1,Score,10,10

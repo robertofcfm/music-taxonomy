@@ -55,7 +55,7 @@ Rooster (2022 Remaster),Alice In Chains,Music > Rock > Grunge
 We Die Young,Alice In Chains,Music > Rock > Grunge
 Metalingus,Alter Bridge,Music > Rock > Hard Rock > Hard Rock (Standard)
 A Horse with No Name,America,Music > Rock > Folk Rock
-La Cumbia Sampuesana,Aniceto Molina,Music > Roots > Cumbia
+La Cumbia Sampuesana,Aniceto Molina,Music > Roots > Cumbia > Cumbia Vallenata
 You Should All Be Murdered,Another Sunny Day,Music > Pop > Indie Pop
 Cold Rock the Mic,Apollo 440,Music > Electronic > Big Beat
 The Suburbs,Arcade Fire,Music > Rock > Indie Rock
@@ -96,7 +96,7 @@ Night Fever,Bee Gees,Music > Rhythmic > Disco
 Stayin' Alive,Bee Gees,Music > Rhythmic > Disco
 You Should Be Dancing,Bee Gees,Music > Rhythmic > Disco
 Take My Breath Away,Berlin,Music > Pop > Pop Ballad
-El Preso,Bernardo Y Sus Compadres,Music > Roots > Cumbia
+El Preso,Bernardo Y Sus Compadres,Music > Roots > Cumbia > Cumbia Norteña
 La Cama de Piedra,Bernardo Y Sus Compadres,Music > Roots > Regional Mexicano > Norteño
 Piece of My Heart,Big Brother & The Holding Company,Music > Rock > Blues Rock
 Shark Smile,Big Thief,Music > Rock > Folk Rock
@@ -185,10 +185,11 @@ Distintos Destinos,Binomio De Oro De América,Music > Roots > Folk > Latin Folk 
 "Todas Mueren por Mí","Cartel De Santa","Music > Hip Hop > Hip Hop (Standard)"
 "All By Myself","Céline Dion","Music > Pop > Pop Ballad"
 "My Heart Will Go On","Céline Dion","Music > Pop > Pop Ballad"
-"Al pensar en ti","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia"
-"Aunque no sea conmigo (feat. Café Tacvba)","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia"
-"Cumbia poder","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia"
-"Cumbia sobre el río / Interludio","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia"
+"Al pensar en ti","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia > Cumbia Vallenata"
+"Aunque no sea conmigo (feat. Café Tacvba)","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia > Cumbia Vallenata"
+"Cumbia poder","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia > Cumbia Vallenata"
+"Cumbia sobre el río / Interludio","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia > Cumbia Vallenata"
+"Macondo","Celso Piña y su Ronda Bogotá","Music > Roots > Cumbia > Cumbia Vallenata"
 "Blue Hotel","Chris Isaak","Music > Rock > Roots Rock"
 "Fade Away","Chris Isaak","Music > Rock > Roots Rock"
 "Lie To Me","Chris Isaak","Music > Rock > Soft Rock"
@@ -389,6 +390,7 @@ Mr. Blue Sky,Electric Light Orchestra,Music > Rock > Progressive Rock
 A Real Hero,Electric Youth,Music > Electronic > Synthpop
 Eclipse,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ella Es Así,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
+Juntos,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Suficiente Amor,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Ya No Me Pones Atención,Emilio Navaira,Music > Roots > Regional Mexicano > Texano
 Kill You,Eminem,Music > Hip Hop > Hip Hop (Standard)
@@ -810,6 +812,13 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Triste Verano","Los Valbuena","Music > Roots > Folk > Latin Folk > Vallenato"
 "Tu Fotografia","Los Valbuena","Music > Roots > Folk > Latin Folk > Vallenato"
 "Y Si Me Marcho","Los Valbuena","Music > Roots > Folk > Latin Folk > Vallenato"
+"A Las Tres","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Cariño Mío","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Ese Amor","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Mentiras","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Muchacha Encantadora","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Sal Y Agua","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
+"Si Me Quisiste Tanto","Los Vallenatos De La Cumbia","Music > Roots > Folk > Latin Folk > Vallenato"
 "Perfect Day","Lou Reed","Music > Rock > Soft Rock"
 "What A Wonderful World","Louis Armstrong","Music > Jazz > Vocal Jazz"
 "No Big Deal","Love and Rockets","Music > Rock > Alternative Rock"
@@ -1271,12 +1280,18 @@ Puedes Hacerme Feliz,Erick Escobar,Music > Roots > Folk > Latin Folk > Vallenato
 "Under the Milky Way","The Church","Music > Rock > Psychedelic Rock"
 "Stay Free","The Clash","Music > Rock > Roots Rock"
 "Animal Instinct","The Cranberries","Music > Rock > Alternative Rock"
+"Delilah","The Cranberries","Music > Rock > Alternative Rock"
 "Dreams","The Cranberries","Music > Rock > Alternative Rock"
+"Dying In The Sun","The Cranberries","Music > Rock > Soft Rock"
+"Free To Decide","The Cranberries","Music > Rock > Alternative Rock"
+"Just My Imagination","The Cranberries","Music > Rock > Alternative Rock"
 "Linger","The Cranberries","Music > Rock > Soft Rock"
+"Loud And Clear","The Cranberries","Music > Rock > Alternative Rock"
 "Promises","The Cranberries","Music > Rock > Alternative Rock"
 "Salvation","The Cranberries","Music > Rock > Alternative Rock"
 "Saving Grace","The Cranberries","Music > Rock > Alternative Rock"
 "When You're Gone","The Cranberries","Music > Rock > Soft Rock"
+"You And Me","The Cranberries","Music > Rock > Soft Rock"
 "Zombie","The Cranberries","Music > Rock > Alternative Rock"
 "A Forest","The Cure","Music > Rock > Post-Punk"
 "Burn","The Cure","Music > Rock > Post-Punk"

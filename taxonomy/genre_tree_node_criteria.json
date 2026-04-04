@@ -479,10 +479,19 @@
     {
       "node_path": "Music > Roots > Cumbia",
       "membership_criteria": "Género bailable de origen colombiano, con ritmo sincopado y uso de instrumentos de percusión y vientos. Solo debe asignarse este nodo si la canción no cumple los criterios de ningún subgénero o estilo más específico dentro de Cumbia.",
-      "exclusion_criteria": "Vallenato, salsa, o cumbia fusionada con pop/rock sin predominio del ritmo cumbia. No asignar este nodo si existe un subgénero aplicable en la taxonomía.",
+      "exclusion_criteria": "Vallenato, salsa, o cumbia fusionada con pop/rock sin predominio del ritmo cumbia. Excluir también variantes donde la base siga siendo inequívocamente cumbia pero la impronta vallenata sea estructural y estable, en cuyo caso usar Cumbia Vallenata. No asignar este nodo si existe un subgénero aplicable en la taxonomía.",
       "reference_examples": [
         "La Sonora Dinamita - Escándalo",
-        "Celso Piña - Cumbia Sobre el Río"
+        "Aniceto Molina - La Cumbia Sampuesana"
+      ]
+    },
+    {
+      "node_path": "Music > Roots > Cumbia > Cumbia Vallenata",
+      "membership_criteria": "Cumbia cuya base rítmica sigue siendo claramente de cumbia, pero con una impronta vallenata estructural y recurrente en acordeón, fraseo, arreglo o identidad general. Debe sentirse primero como cumbia y solo de manera secundaria como derivación del universo vallenato.",
+      "exclusion_criteria": "Vallenato propiamente dicho donde la lógica principal ya no sea de cumbia, cumbia tradicional sin impronta vallenata clara, o cumbia pop donde la estructura pop y la producción comercial dominen sobre la interacción cumbia-acordeón vallenato.",
+      "reference_examples": [
+        "Celso Piña - Cumbia Sobre el Río",
+        "Celso Piña - Cumbia Poder"
       ]
     },
     {
@@ -492,6 +501,14 @@
       "reference_examples": [
         "Rombai - Noche Loca",
         "Agapornis - Persiana Americana"
+      ]
+    },
+    {
+      "node_path": "Music > Roots > Cumbia > Cumbia Norteña",
+      "membership_criteria": "Cumbia cuya base rítmica sigue siendo claramente cumbia, pero interpretada con impronta norteña o tex-mex estructural: acordeón y ensamble regional mexicano dominantes, fraseo y arreglo de banda norteña/tejana, y una identidad híbrida donde el groove principal no deja de ser cumbia.",
+      "exclusion_criteria": "Norteño o Texano puros donde el groove principal ya no sea cumbia, cumbia colombiana sin impronta regional mexicana clara, o cumbia pop donde domine la estructura pop por encima de la lógica de ensamble norteño.",
+      "reference_examples": [
+        "Bernardo Y Sus Compadres - El Preso"
       ]
     },
     {
