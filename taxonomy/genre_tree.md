@@ -48,9 +48,9 @@ Music
   Roots
     Bolero
     Cumbia
-      Cumbia Vallenata
-      Cumbia Pop
       Cumbia Norteña
+      Cumbia Pop
+      Cumbia Vallenata
     Folk
       Latin Folk
         Latin Folk Pop

@@ -1,4 +1,19 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+USIR29600118,4368747,Free To Decide,Album Version,40588,The Cranberries,To The Faithful Departed (The Complete Sessions 1996-1997),Studio,,16,44.1,2,True
+USIR29900013,46554641,Dying In The Sun,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
+USIR29900011,46554639,Delilah,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
+USIR29900005,46554633,Just My Imagination,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
+USIR29900004,46554632,You And Me,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
+USIR29900002,46554630,Loud And Clear,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
+MXUM72000776,87218025,Si Me Quisiste Tanto,,4135314,Los Vallenatos De La Cumbia,Recordando Un Amor,Studio,,16,44.1,2,True
+MXUM70904329,87209241,Mentiras,,4135314,Los Vallenatos De La Cumbia,Mentiras,Studio,,16,44.1,2,True
+USDS19700402,86109771,A Las Tres,,4135314,Los Vallenatos De La Cumbia,El Calor De Tu Piel,Studio,,16,44.1,2,True
+USDS10711738,86109764,Cariño Mío,,4135314,Los Vallenatos De La Cumbia,El Calor De Tu Piel,Studio,,16,44.1,2,True
+USDS19700408,86109765,Ese Amor,,4135314,Los Vallenatos De La Cumbia,El Calor De Tu Piel,Studio,,16,44.1,2,True
+USDS19700400,86109770,Sal Y Agua,,4135314,Los Vallenatos De La Cumbia,El Calor De Tu Piel,Studio,,16,44.1,2,True
+MXUM70904334,87218323,Muchacha Encantadora,,4135314,Los Vallenatos De La Cumbia,Muchacha Encantadora,Studio,,16,44.1,2,True
+MXF169900216,2584292,Macondo,,360613,Celso Piña y su Ronda Bogotá,Una aventura más,Studio,,16,44.1,2,True
+USEL19200164,4662878,Juntos,,128059,Emilio Navaira,Los Mejor De Los Mejor-12 Super Exitos,Studio,,16,44.1,2,True
 GBY2T1600309,173059215,Every You Every Me,Single Version,43837,Placebo,A Place for Us to Dream,Studio,,24,44.1,2,True
 GB5KW2000704,386342275,I Think I'm Paranoid,Remastered 2018,53677,Garbage,Version 2.0,Studio,20th Anniversary Edition / Remastered 2018,24,96.0,2,True
 GB5KW2000738,381794747,Only Happy When It Rains,Remastered 2015,53677,Garbage,Garbage,Studio,20th Anniversary Edition / Remastered 2015,24,96.0,2,True
@@ -1499,6 +1514,7 @@ QZMZ92148897,152442291,Amnesia,,2331925,Inspector,Amnesia,Studio,,24,48.0,2,Fals
 QZMZ92148985,152096156,Amnesia,,2331925,Inspector,"A2Í 5Uena!, Vol 2",Studio,,24,48.0,2,False
 MX5332500256,359774604,Amnesia ,Sonando desde el Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
 MX5332500256,362636895,Amnesia ,Sonando desde el Auditorio Nacional,2331925,Inspector,Amnesia ,Studio,Sonando desde el Auditorio Nacional,24,48.0,2,False
+DELV42000635,387783621,Wind of Change,,62488,Scorpions,From The First Sting,Studio,,24,44.1,2,False
 FR2X42535318,354841993,Un Minuto Mas,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
 USUM71310619,11801006,The Man Who Sold The World,Live & Loud,46708,Nirvana,In Utero,Live,20th Anniversary Super Deluxe,24,44.1,2,False
 USTC30737306,125432992,Nuestra Canción,,170804,La Mafia,Nuevamente,Studio,,24,44.1,2,False
@@ -1514,6 +1530,7 @@ MX5332500222,340259632,Y Que ,Sonando desde el Auditorio Nacional,2331925,Inspec
 QZMZ92126668,153437372,Y Qué,,2331925,Inspector,Y Qué,Studio,,24,48.0,2,False
 MX5332500222,359774607,Y Que ,Sonando desde el Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
 QZMZ92126668,152096152,Y Qué,,2331925,Inspector,"A2Í 5Uena!, Vol 2",Studio,,24,48.0,2,False
+QZNJY2538984,348975307,Lo Que Queda de Ti,,832300,LMT,"Live Sessions, Vol. 1",Studio,,24,48.0,2,False
 FR10S2221773,144098374,Sexo Pudor y Lagrimas,Banda Sonora De la Película,68081,Aleks Syntek,Sexo Pudor y Lagrimas,Studio,Banda Sonora De la Película,24,48.0,2,False
 FR2X42535316,354841991,Viviendo En Mi,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
 FR2X42535319,354841994,Un Beso,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
