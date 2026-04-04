@@ -4,9 +4,9 @@ import os
 
 # Archivos de entrada y salida (rutas absolutas basadas en la ubicación del script)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion.csv')
+INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_03.csv')
 EXCLUDE_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_Excluidos.csv')
-OUTPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_final.csv')
+OUTPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion.csv')
 
 # Leer IDs a excluir
 def cargar_ids_excluir(path):
@@ -35,20 +35,14 @@ def filtrar_favoritos(registros):
         if r['Es favorito'] == 'True'
     }
 
-    # Agrupar por (Título, Artista, Tipo Disco) para no mezclar Studio/Live/etc.
-    agrupados = {}
-    for r in registros:
-        if r['Es favorito'] == 'False' and r['Id Titulo'] in ids_favoritos:
-            continue
-        key = (r['Título'], r['Artista'], r['Tipo Disco'])
-        agrupados.setdefault(key, []).append(r)
     resultado = []
-    for key, grupo in agrupados.items():
-        no_favoritos = [r for r in grupo if r['Es favorito'] == 'False']
-        if no_favoritos:
-            # Si hay al menos un False, incluir todos los de esa combinación (True y False)
-            resultado.extend(grupo)
-        # Si no hay ningún False, no se incluye ninguno de esa combinación
+    for r in registros:
+        if r['Es favorito'] == 'True':
+            resultado.append(r)
+            continue
+        if r['Id Titulo'] in ids_favoritos:
+            continue
+        resultado.append(r)
     return resultado
 
 def main():

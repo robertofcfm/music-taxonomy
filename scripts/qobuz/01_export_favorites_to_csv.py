@@ -253,7 +253,7 @@ def main():
             "Disco", "Tipo Disco", "Versión del disco", "maximum_bit_depth",
             "maximum_sampling_rate", "maximum_channel_count", "Es favorito"
         ])
-        output_mejor = os.path.join("reports", "posibleMejorVersion.csv")
+        output_mejor = os.path.join("reports", "posibleMejorVersion_01.csv")
         os.makedirs("reports", exist_ok=True)
         df_mejor.to_csv(output_mejor, index=False, encoding="utf-8")
         print(f"Archivo generado: {output_mejor}")

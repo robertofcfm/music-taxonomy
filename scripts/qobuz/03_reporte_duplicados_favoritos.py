@@ -6,8 +6,9 @@ from utils_posible_mejor_version import normalize_for_match
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion.csv')
-OUTPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_duplicados_favoritos.csv')
+INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_01.csv')
+OUTPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_03.csv')
+DUPLICATES_REPORT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_duplicados_favoritos.csv')
 EXCLUDED_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_duplicados_excluidos.csv')
 
 
@@ -15,6 +16,25 @@ def cargar_registros(path):
     with open(path, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         return list(reader), reader.fieldnames
+
+
+def cargar_ids_excluidos(path):
+    if not os.path.exists(path):
+        return set()
+
+    registros, _ = cargar_registros(path)
+    return {
+        (row.get('Id Titulo', '') or '').strip()
+        for row in registros
+        if (row.get('Id Titulo', '') or '').strip()
+    }
+
+
+def guardar_registros(path, fieldnames, registros):
+    with open(path, 'w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(registros)
 
 
 def es_favorito(valor):
@@ -105,6 +125,16 @@ def encontrar_duplicados(registros, bloques_excluidos):
     return duplicados
 
 
+def filtrar_registros_para_paso_03(registros, ids_excluidos):
+    if not ids_excluidos:
+        return registros
+
+    return [
+        row for row in registros
+        if (row.get('Id Titulo', '') or '').strip() not in ids_excluidos
+    ]
+
+
 def guardar_reporte(path, fieldnames, registros):
     output_fields = list(fieldnames) + [
         'Titulo Normalizado',
@@ -119,10 +149,15 @@ def guardar_reporte(path, fieldnames, registros):
 
 def main():
     registros, fieldnames = cargar_registros(INPUT_FILE)
+    ids_excluidos = cargar_ids_excluidos(EXCLUDED_FILE)
+    registros_filtrados = filtrar_registros_para_paso_03(registros, ids_excluidos)
+    guardar_registros(OUTPUT_FILE, fieldnames, registros_filtrados)
     bloques_excluidos = cargar_bloques_excluidos(EXCLUDED_FILE)
-    duplicados = encontrar_duplicados(registros, bloques_excluidos)
-    guardar_reporte(OUTPUT_FILE, fieldnames, duplicados)
-    print(f'Reporte generado: {OUTPUT_FILE}')
+    duplicados = encontrar_duplicados(registros_filtrados, bloques_excluidos)
+    guardar_reporte(DUPLICATES_REPORT_FILE, fieldnames, duplicados)
+    print(f'Archivo intermedio generado: {OUTPUT_FILE}')
+    print(f'Reporte generado: {DUPLICATES_REPORT_FILE}')
+    print(f'Registros excluidos en paso 03: {len(registros) - len(registros_filtrados)}')
     print(f'Registros duplicados exportados: {len(duplicados)}')
 
 
