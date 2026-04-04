@@ -3,6 +3,8 @@ import csv
 import os
 import unicodedata
 
+from utils_posible_mejor_version import normalize_for_match
+
 # Archivos de entrada y salida (rutas absolutas basadas en la ubicación del script)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(BASE_DIR, '../../reports/posibleMejorVersion_03.csv')
@@ -29,7 +31,10 @@ def cargar_registros(path):
 
 # Filtrar registros excluidos
 def filtrar_excluidos(registros, ids_excluir):
-    return [r for r in registros if r['Id Titulo'] not in ids_excluir]
+    return [
+        r for r in registros
+        if r['Es favorito'] == 'True' or r['Id Titulo'] not in ids_excluir
+    ]
 
 # Filtrar favoritos según condición
 def filtrar_favoritos(registros):
@@ -56,25 +61,28 @@ def normalizar_para_ordenar(texto):
     return ''.join(c for c in texto if unicodedata.category(c) != 'Mn')
 
 
-def filtrar_combinaciones_con_multiples_registros(registros):
-    conteos = {}
+def normalizar_para_agrupar(texto):
+    return normalize_for_match(texto or '')
+
+
+def filtrar_combinaciones_con_candidato(registros):
+    grupos_con_candidato = set()
     for row in registros:
         clave = (
-            normalizar_para_ordenar(row.get('Título', '')),
-            normalizar_para_ordenar(row.get('Artista', '')),
-            normalizar_para_ordenar(row.get('Tipo Disco', '')),
+            normalizar_para_agrupar(row.get('Título', '')),
+            normalizar_para_agrupar(row.get('Artista', '')),
+            normalizar_para_agrupar(row.get('Tipo Disco', '')),
         )
-        conteos[clave] = conteos.get(clave, 0) + 1
+        if row.get('Es favorito', '') == 'False':
+            grupos_con_candidato.add(clave)
 
     return [
         row for row in registros
-        if conteos[
-            (
-                normalizar_para_ordenar(row.get('Título', '')),
-                normalizar_para_ordenar(row.get('Artista', '')),
-                normalizar_para_ordenar(row.get('Tipo Disco', '')),
-            )
-        ] >= 2
+        if (
+            normalizar_para_agrupar(row.get('Título', '')),
+            normalizar_para_agrupar(row.get('Artista', '')),
+            normalizar_para_agrupar(row.get('Tipo Disco', '')),
+        ) in grupos_con_candidato
     ]
 
 
@@ -94,12 +102,15 @@ def main():
     registros, fieldnames = cargar_registros(INPUT_FILE)
     filtrados = filtrar_excluidos(registros, ids_excluir)
     resultado = filtrar_favoritos(filtrados)
-    resultado = filtrar_combinaciones_con_multiples_registros(resultado)
+    resultado = filtrar_combinaciones_con_candidato(resultado)
     resultado = ordenar_registros(resultado)
     with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(resultado)
+    print(f'IDs excluidos cargados: {len(ids_excluir)}')
+    print(f'Registros False excluidos por archivo: {len(registros) - len(filtrados)}')
+    print(f'Registros generados: {len(resultado)}')
 
 if __name__ == '__main__':
     main()
