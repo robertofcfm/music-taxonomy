@@ -18,18 +18,6 @@ def cargar_registros(path):
         return list(reader), reader.fieldnames
 
 
-def cargar_ids_excluidos(path):
-    if not os.path.exists(path):
-        return set()
-
-    registros, _ = cargar_registros(path)
-    return {
-        (row.get('Id Titulo', '') or '').strip()
-        for row in registros
-        if (row.get('Id Titulo', '') or '').strip()
-    }
-
-
 def guardar_registros(path, fieldnames, registros):
     with open(path, 'w', newline='', encoding='utf-8') as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -125,16 +113,6 @@ def encontrar_duplicados(registros, bloques_excluidos):
     return duplicados
 
 
-def filtrar_registros_para_paso_03(registros, ids_excluidos):
-    if not ids_excluidos:
-        return registros
-
-    return [
-        row for row in registros
-        if (row.get('Id Titulo', '') or '').strip() not in ids_excluidos
-    ]
-
-
 def guardar_reporte(path, fieldnames, registros):
     output_fields = list(fieldnames) + [
         'Titulo Normalizado',
@@ -149,15 +127,12 @@ def guardar_reporte(path, fieldnames, registros):
 
 def main():
     registros, fieldnames = cargar_registros(INPUT_FILE)
-    ids_excluidos = cargar_ids_excluidos(EXCLUDED_FILE)
-    registros_filtrados = filtrar_registros_para_paso_03(registros, ids_excluidos)
-    guardar_registros(OUTPUT_FILE, fieldnames, registros_filtrados)
+    guardar_registros(OUTPUT_FILE, fieldnames, registros)
     bloques_excluidos = cargar_bloques_excluidos(EXCLUDED_FILE)
-    duplicados = encontrar_duplicados(registros_filtrados, bloques_excluidos)
+    duplicados = encontrar_duplicados(registros, bloques_excluidos)
     guardar_reporte(DUPLICATES_REPORT_FILE, fieldnames, duplicados)
     print(f'Archivo intermedio generado: {OUTPUT_FILE}')
     print(f'Reporte generado: {DUPLICATES_REPORT_FILE}')
-    print(f'Registros excluidos en paso 03: {len(registros) - len(registros_filtrados)}')
     print(f'Registros duplicados exportados: {len(duplicados)}')
 
 
