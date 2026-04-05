@@ -1,4 +1,10 @@
 title,artist,album,isrc,genre
+Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100016,Roots > Cumbia > Cumbia Pop
+Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900118,Roots > Cumbia > Cumbia Pop
+Dime Porque,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100021,Roots > Cumbia > Cumbia Pop
+Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900116,Roots > Cumbia > Cumbia Pop
+Dime Quién,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900110,Roots > Cumbia > Cumbia Pop
+El Preso,Bernardo Y Sus Compadres,Bailando en Texas,USPWN0810045,Roots > Cumbia > Cumbia Norteña
 Last Resort,Papa Roach,20/20,ZZOPM2002585,Metal > Nu Metal
 Crawling,Linkin Park,Hybrid Theory,USWB11201115,Metal > Nu Metal
 One Step Closer,Linkin Park,Hybrid Theory,USWB11201112,Metal > Nu Metal
@@ -422,6 +428,13 @@ Seca Tus Lagrimas,Silvio Brito y Osmel Meriño,Con Mas Sentimiento,ES71G1752655,
 Olvídate que yo Existí,William Carrascal,La Caimana,QZYFZ2410717,Roots > Folk > Latin Folk > Vallenato
 Inalcanzable,Luis Miguel Fuentes,Inalcanzable,COF010601984,Roots > Folk > Latin Folk > Vallenato
 La Huella de Tu Amor,Erick Escobar,La Decisión Vallenata: la Huella de Tu Amor,COF010011065,Roots > Folk > Latin Folk > Vallenato
+A Las Tres,Los Vallenatos De La Cumbia,El Calor De Tu Piel,USDS19700402,Roots > Folk > Latin Folk > Vallenato
+Cariño Mío,Los Vallenatos De La Cumbia,El Calor De Tu Piel,USDS10711738,Roots > Folk > Latin Folk > Vallenato
+Ese Amor,Los Vallenatos De La Cumbia,El Calor De Tu Piel,USDS19700408,Roots > Folk > Latin Folk > Vallenato
+Mentiras,Los Vallenatos De La Cumbia,Mentiras,MXUM70904329,Roots > Folk > Latin Folk > Vallenato
+Muchacha Encantadora,Los Vallenatos De La Cumbia,Muchacha Encantadora,MXUM70904334,Roots > Folk > Latin Folk > Vallenato
+Sal Y Agua,Los Vallenatos De La Cumbia,El Calor De Tu Piel,USDS19700400,Roots > Folk > Latin Folk > Vallenato
+Si Me Quisiste Tanto,Los Vallenatos De La Cumbia,Recordando Un Amor,MXUM72000776,Roots > Folk > Latin Folk > Vallenato
 Cantares,Joan Manuel Serrat,24 Paginas Inolvidables,ES5020000250,Roots > Folk > Latin Folk > Trova Cubana
 El Breve Espacio en Que No Estás,Pablo Milanes,"Pablo Milanés, In Memoriam (1943-2022)",PEMG91209011,Roots > Folk > Latin Folk > Trova Cubana
 Ojala,Silvio Rodriguez,Cuando Digo Futuro,QM6P41525744,Roots > Folk > Latin Folk > Trova Cubana
@@ -429,17 +442,12 @@ Hoy Ten Miedo De Mi,Fernando Delgadillo,Con Cierto Aire a Ti,MXF600600428,Roots 
 Soledad y el Mar,Natalia Lafourcade,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",MXF011600417,Roots > Folk > Latin Folk > Latin Folk Pop
 Tú Sí Sabes Quererme,Natalia Lafourcade,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",MXF011600414,Roots > Folk > Latin Folk > Latin Folk Pop
 Corazón partío,Alejandro Sanz,Más,ES5159706045,Roots > Folk > Latin Folk > Latin Folk Pop
-La Cumbia Sampuesana,Aniceto Molina,Cumbias Solo Hits,FR2X41822299,Roots > Cumbia
-Cumbia sobre el río / Interludio,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001112,Roots > Cumbia
-Cumbia poder,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001121,Roots > Cumbia
-El Preso,Bernardo Y Sus Compadres,Bailando en Texas,USPWN0810045,Roots > Cumbia
-Al pensar en ti,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001117,Roots > Cumbia
-Aunque no sea conmigo (feat. Café Tacvba),Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001118,Roots > Cumbia
-Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900118,Roots > Cumbia
-Dime Quién,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900110,Roots > Cumbia
-Te Quiero A Tí,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900116,Roots > Cumbia
-Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100016,Roots > Cumbia
-Dime Porque,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100021,Roots > Cumbia
+La Cumbia Sampuesana,Aniceto Molina,Cumbias Solo Hits,FR2X41822299,Roots > Cumbia > Cumbia Vallenata
+Cumbia sobre el río / Interludio,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001112,Roots > Cumbia > Cumbia Vallenata
+Cumbia poder,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001121,Roots > Cumbia > Cumbia Vallenata
+Al pensar en ti,Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001117,Roots > Cumbia > Cumbia Vallenata
+Aunque no sea conmigo (feat. Café Tacvba),Celso Piña y su Ronda Bogotá,Barrio Bravo,MXF160001118,Roots > Cumbia > Cumbia Vallenata
+Macondo,Celso Piña y su Ronda Bogotá,Una aventura más,MXF169900216,Roots > Cumbia > Cumbia Vallenata
 Kumbala,Maldita Vecindad Y Los Hijos Del Quinto Patio,El Circo,MXF010000815,Roots > Bolero
 Por Debajo De La Mesa,Luis Miguel,Romances,USWI19700001,Roots > Bolero
 La Gloria Eres Tu,Luis Miguel,Romances,USWI19700004,Roots > Bolero
@@ -473,6 +481,8 @@ How to Fight Lonliness,Wilco,What's Your 20? Essential Tracks 1994 - 2014,USNO11
 When You're Gone,The Cranberries,To The Faithful Departed,USIR29600117,Rock > Soft Rock
 Linger,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",USIR29300085,Rock > Soft Rock
 Disarm,The Smashing Pumpkins,Siamese Dream,USVI21100151,Rock > Soft Rock
+Dying In The Sun,The Cranberries,Bury The Hatchet,USIR29900013,Rock > Soft Rock
+You And Me,The Cranberries,Bury The Hatchet,USIR29900004,Rock > Soft Rock
 You Never Can Tell,Chuck Berry,You Never Can Tell / Brenda Lee,FRX452254822,Rock > Roots Rock
 Blue Hotel,Chris Isaak,Chris Isaak,USRE19902102,Rock > Roots Rock
 Cautionary Tale,Dylan LeBlanc,Cautionary Tale,QMHFC1500023,Rock > Roots Rock
@@ -1097,6 +1107,10 @@ Zombie,The Cranberries,No Need To Argue,USUM72009888,Rock > Alternative Rock
 Only Happy When It Rains,Garbage,Garbage,GB5KW2000738,Rock > Alternative Rock
 I Think I'm Paranoid,Garbage,Version 2.0,GB5KW2000704,Rock > Alternative Rock
 Every You Every Me,Placebo,A Place for Us to Dream,GBY2T1600309,Rock > Alternative Rock
+Delilah,The Cranberries,Bury The Hatchet,USIR29900011,Rock > Alternative Rock
+Free To Decide,The Cranberries,To The Faithful Departed (The Complete Sessions 1996-1997),USIR29600118,Rock > Alternative Rock
+Just My Imagination,The Cranberries,Bury The Hatchet,USIR29900005,Rock > Alternative Rock
+Loud And Clear,The Cranberries,Bury The Hatchet,USIR29900002,Rock > Alternative Rock
 Rolling in the Deep,Adele,21,GBBKS1000335,Rhythmic > Soul
 What a Fool Believes,The Doobie Brothers,Minute by Minute,USRH11600651,Rhythmic > Soul
 Crazy,Gnarls Barkley,St. Elsewhere,USAT20611041,Rhythmic > Soul

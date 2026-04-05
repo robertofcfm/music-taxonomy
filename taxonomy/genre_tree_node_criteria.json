@@ -504,14 +504,6 @@
       ]
     },
     {
-      "node_path": "Music > Roots > Cumbia > Cumbia Norteña",
-      "membership_criteria": "Cumbia cuya base rítmica sigue siendo claramente cumbia, pero interpretada con impronta norteña o tex-mex estructural: acordeón y ensamble regional mexicano dominantes, fraseo y arreglo de banda norteña/tejana, y una identidad híbrida donde el groove principal no deja de ser cumbia.",
-      "exclusion_criteria": "Norteño o Texano puros donde el groove principal ya no sea cumbia, cumbia colombiana sin impronta regional mexicana clara, o cumbia pop donde domine la estructura pop por encima de la lógica de ensamble norteño.",
-      "reference_examples": [
-        "Bernardo Y Sus Compadres - El Preso"
-      ]
-    },
-    {
       "node_path": "Music > Roots > Folk",
       "membership_criteria": "Nodo contenedor para subgéneros folk. No debe asignarse directamente.",
       "exclusion_criteria": "No asignar este nodo bajo ninguna circunstancia.",

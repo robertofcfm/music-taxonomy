@@ -48,9 +48,10 @@ Music > Rock > Roots Rock,2,Roots Rock,15,15
 Music > Rock > Soft Rock,2,Soft Rock,29,29
 Music > Roots,1,Roots,0,415
 Music > Roots > Bolero,2,Bolero,6,6
-Music > Roots > Cumbia,2,Cumbia,2,12
-Music > Roots > Cumbia > Cumbia Vallenata,3,Cumbia Vallenata,5,5
+Music > Roots > Cumbia,2,Cumbia,0,12
+Music > Roots > Cumbia > Cumbia Norteña,3,Cumbia Norteña,1,1
 Music > Roots > Cumbia > Cumbia Pop,3,Cumbia Pop,5,5
+Music > Roots > Cumbia > Cumbia Vallenata,3,Cumbia Vallenata,6,6
 Music > Roots > Folk,2,Folk,0,162
 Music > Roots > Folk > Latin Folk,3,Latin Folk,0,159
 Music > Roots > Folk > Latin Folk > Latin Folk Pop,4,Latin Folk Pop,3,3
