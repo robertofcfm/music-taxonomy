@@ -1,4 +1,8 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+GBBKS1000351,108819107,Someone Like You,,53389,Adele,21,Studio,,16,44.1,2,True
+USSM18100335,32199562,Maybe This Time,,322,Engelbert Humperdinck,Don't You Love Me Anymore,Studio,,16,44.1,2,True
+GBBBM8400006,98436501,Smooth Operator,,103073,Sade,Diamond Life,Studio,,16,44.1,2,True
+USIR20400639,183733573,Como Yo Nadie Te Ha Amado,,45063,Bon Jovi,Como Yo Nadie Te Ha Amado (This Ain't A Love Song),Studio,,16,44.1,2,True
 USIR29600118,4368747,Free To Decide,Album Version,40588,The Cranberries,To The Faithful Departed (The Complete Sessions 1996-1997),Studio,,16,44.1,2,True
 USIR29900013,46554641,Dying In The Sun,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
 USIR29900011,46554639,Delilah,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
@@ -911,7 +915,6 @@ SEBKB9802010,3964223,My Favourite Game,,36439,The Cardigans,My Favourite Game,St
 USGF19141501,173779636,Right Next Door To Hell,,54838,Guns N' Roses,Use Your Illusion I,Studio,,24,96.0,2,True
 USGF19141503,173779638,Live And Let Die,,54838,Guns N' Roses,Use Your Illusion I,Live,,24,96.0,2,True
 US3Z40407801,74146476,Un nuevo amor,,4016013,Tranzas,Por Siempre,Studio,,16,44.1,2,True
-USPWN0810045,76431198,El Preso,,4701611,Bernardo Y Sus Compadres,Bailando en Texas,Studio,,16,44.1,2,True
 USPWN0810038,76431195,La Cama de Piedra,,4701611,Bernardo Y Sus Compadres,Bailando en Texas,Studio,,16,44.1,2,True
 USZUP1011688,71723580,Cuatro Paredes,,942842,Los Garcia Bros.,"Los Garcia Bros. Coleccion de Oro Tejano: Sabes Amor, Dos Carnales, El Pachuco, A Puro Dolor, Popurri Ranchero, Lobo Herido, Y Mas Exitos",Studio,,16,44.1,2,True
 USSD19600618,5060665,La Carta Que Nunca Envie,Album Version,170877,Los Palominos,Mis Favoritas,Studio,,16,44.1,2,True
