@@ -1,4 +1,7 @@
 title,artist,album,isrc,genre
+Fuentes de Ortiz,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813584,Roots > Folk > Contemporary Folk
+Acurrucar,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813589,Roots > Folk > Contemporary Folk
+Hallelujah,Leonard Cohen,Various Positions,USSM10026643,Roots > Folk > Contemporary Folk
 Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100016,Roots > Cumbia > Cumbia Pop
 Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900118,Roots > Cumbia > Cumbia Pop
 Dime Porque,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100021,Roots > Cumbia > Cumbia Pop
@@ -286,8 +289,6 @@ Mi Mayor Anhelo,Banda Sinaloense MS de Sergio Lizárraga,Mi Mayor Anhelo,USDS108
 Te Presumo,Banda Sinaloense de El Recodo de Don Cruz Lizarraga,Te Presumo,USFI20806177,Roots > Regional Mexicano > Banda
 De Ti Enamorado,Banda Sinaloense MS de Sergio Lizárraga,Amor Enfermo,USUM71100580,Roots > Regional Mexicano > Banda
 Soy Así,Valentín Elizalde,Soy Así,MXF110500087,Roots > Regional Mexicano > Banda
-Hallelujah,Leonard Cohen,Various Positions,USSM10026643,Roots > Folk > Traditional Folk
-The Sound of Silence,Simon & Garfunkel,Sounds Of Silence,USSM16401131,Roots > Folk > Traditional Folk
 The Times They Are A-Changin',Bob Dylan,The Times They Are A-Changin',USSM10007452,Roots > Folk > Traditional Folk
 Tres Noches,Jesus Manuel,Fantastico,COC019823506,Roots > Folk > Latin Folk > Vallenato
 Quiero Que Seas Mi Estrella,Binomio De Oro De América,Más Cerca De Ti,COC019924098,Roots > Folk > Latin Folk > Vallenato
@@ -489,6 +490,7 @@ Linger,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",USIR293000
 Disarm,The Smashing Pumpkins,Siamese Dream,USVI21100151,Rock > Soft Rock
 Dying In The Sun,The Cranberries,Bury The Hatchet,USIR29900013,Rock > Soft Rock
 You And Me,The Cranberries,Bury The Hatchet,USIR29900004,Rock > Soft Rock
+Hard to Say I'M Sorry / Get Away,Chicago,Chicago 16,USWB11301873,Rock > Soft Rock
 You Never Can Tell,Chuck Berry,You Never Can Tell / Brenda Lee,FRX452254822,Rock > Roots Rock
 Blue Hotel,Chris Isaak,Chris Isaak,USRE19902102,Rock > Roots Rock
 Cautionary Tale,Dylan LeBlanc,Cautionary Tale,QMHFC1500023,Rock > Roots Rock
@@ -552,6 +554,7 @@ Antenna,The Church,Starfish,USAR10001042,Rock > Psychedelic Rock
 Hombre Sintetizador,Zurdok,Hombre Sintetizador,MXF119900229,Rock > Psychedelic Rock
 Soñé,Zoé,MTV Unplugged Música De Fondo,MXF061100003,Rock > Psychedelic Rock
 Black Hole Sun,Soundgarden,Superunknown,USAM19400007,Rock > Psychedelic Rock
+A Whiter Shade of Pale,Procol Harum,A Whiter Shade of Pale,GBBWX0701000,Rock > Psychedelic Rock
 Time,Pink Floyd,The Dark Side Of The Moon (50th Anniversary),GBN9Y2200018,Rock > Progressive Rock
 Comfortably Numb,Pink Floyd,A Foot in the Door: The Best of Pink Floyd,GBN9Y1100113,Rock > Progressive Rock
 "Another Brick in the Wall, Pt. 2",Pink Floyd,A Foot in the Door: The Best of Pink Floyd,GBN9Y1100099,Rock > Progressive Rock
@@ -959,6 +962,8 @@ Mykonos,Fleet Foxes,Sun Giant EP,USSUB0878104,Rock > Folk Rock
 A Horse with No Name,America,America,USWB11304213,Rock > Folk Rock
 Dust in the Wind,Kansas,Point Of Know Return,USSM10103196,Rock > Folk Rock
 Shark Smile,Big Thief,Capacity,US2U61725502,Rock > Folk Rock
+The Sound of Silence,Simon & Garfunkel,Sounds Of Silence,USSM16401131,Rock > Folk Rock
+California Dreamin',The Mamas & The Papas,Greatest Hits:  The Mamas & The Papas,USMC16532697,Rock > Folk Rock
 La Grange,ZZ Top,Goin' 50,USWB11901049,Rock > Blues Rock
 Lonely Boy,The Black Keys,El Camino,USNO11500536,Rock > Blues Rock
 Gold on the Ceiling,The Black Keys,El Camino,USNO11500538,Rock > Blues Rock
@@ -1163,8 +1168,6 @@ One Of Us,Joan Osborne,Relish,USPR39500200,Pop > Singer-Songwriter Pop
 Beautiful Boy (Darling Boy),John Lennon,Double Fantasy,USTO11000021,Pop > Singer-Songwriter Pop
 Imagine,John Lennon,Imagine,GBAYE1000769,Pop > Singer-Songwriter Pop
 Pisando fuerte,Alejandro Sanz,Viviendo deprisa,ES5159106001,Pop > Singer-Songwriter Pop
-Fuentes de Ortiz,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813584,Pop > Singer-Songwriter Pop
-Acurrucar,Ed Maverick,mix pa llorar en tu cuarto,QZBRF1813589,Pop > Singer-Songwriter Pop
 Secret Enchanted Broccoli Forest,Babe Rainbow,The Babe Rainbow EP,AUDJ01401086,Pop > Psychedelic Pop
 Myth,Beach House,Bloom,USSUB1202101,Pop > Psychedelic Pop
 Hail Bop,Django Django,Django Django,GBMVH1100600,Pop > Psychedelic Pop
@@ -1226,6 +1229,7 @@ Azul,Cristian Castro,Grandes Hits,USBL10100287,Pop > Pop Ballad
 The Scientist,Coldplay,A Rush of Blood to the Head,GBAYE1600192,Pop > Pop Ballad
 Someone Like You,Adele,21,GBBKS1000351,Pop > Pop Ballad
 Maybe This Time,Engelbert Humperdinck,Don't You Love Me Anymore,USSM18100335,Pop > Pop Ballad
+Alone Again (Naturally),Gilbert O'sullivan,Alone Again,GBEQJ0400002,Pop > Pop Ballad
 No Podras,Cristian Castro,Agua Nueva,USUL19700138,Pop > Pop (Standard)
 Too Late For Goodbyes,Julian Lennon,Valotte,GBAAA8400024,Pop > Pop (Standard)
 Beat It,Michael Jackson,Thriller,USSM19902990,Pop > Pop (Standard)
