@@ -10,3 +10,5 @@ taxonomy/genre_tree_node_criteria.json
 En este flujo la tarea es que ejecutes el script filtrar_canciones_nuevas.py y 
 de las canciones que responde este script y con las instrucciones de los archivos anteriores 
 asignes nodo ya sea nuevo o de los existentes en songs_with_genres.csv
+
+Si es un nodo existente muestra la regla de gobernanza 15 del sistema de puntuación de pertenencia
