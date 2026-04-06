@@ -55,8 +55,7 @@ Music
         Latin Folk Pop
         Trova Cubana
         Vallenato
-      Traditional Folk
-      Contemporary Folk
+      Folk (Standard)
     Regional Mexicano
       Banda
       Norteño

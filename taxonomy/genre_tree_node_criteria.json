@@ -271,8 +271,8 @@
     },
     {
       "node_path": "Music > Pop > Singer-Songwriter Pop",
-      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica, folk tradicional o folk contemporáneo.",
-      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk puro, folk contemporáneo con sensibilidad folk más fuerte que la lógica pop, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
+      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica o folk claro dentro de Roots.",
+      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk claro dentro de Roots con identidad folk más fuerte que la lógica pop, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
       "reference_examples": [
         "Ed Sheeran - Thinking Out Loud",
         "Taylor Swift - Love Story"
@@ -521,12 +521,9 @@
     },
     {
       "node_path": "Music > Roots > Folk > Latin Folk",
-      "membership_criteria": "Música tradicional de países latinoamericanos, con raíces indígenas, africanas y europeas. Incluye géneros como son, huayno, chacarera, zamba, etc. Instrumentación acústica y letras sobre la vida, la tierra y la identidad.",
-      "exclusion_criteria": "Folk anglosajón, pop folk, o fusiones donde el elemento latino no sea predominante.",
-      "reference_examples": [
-        "Mercedes Sosa - Alfonsina y el Mar",
-        "Inti-Illimani - El Pueblo Unido Jamás Será Vencido"
-      ]
+      "membership_criteria": "Nodo contenedor para subgéneros de folk latino. Organiza músicas de raíz folk latinoamericana cuando la clasificación útil ya depende de un hijo específico como Latin Folk Pop, Trova Cubana o Vallenato.",
+      "exclusion_criteria": "No asignar canciones directamente a este nodo mientras exista un subgénero hijo aplicable. No usar como fallback operativo.",
+      "reference_examples": []
     },
     {
       "node_path": "Music > Roots > Folk > Latin Folk > Latin Folk Pop",
@@ -559,19 +556,11 @@
       ]
     },
     {
-      "node_path": "Music > Roots > Folk > Traditional Folk",
-      "membership_criteria": "Música folclórica de transmisión oral, propia de una región o cultura, interpretada con instrumentos tradicionales y sin estructura de banda moderna. Voz y acompañamiento acústico predominante, sin groove de banda (sin batería/bajo estructural). La identidad debe descansar en una raíz tradicional clara y no solo en austeridad acústica o cercanía estética con el folk.",
-      "exclusion_criteria": "Folk fusionado con rock/pop, canciones con batería o estructura de banda, folk contemporáneo, o música de autor moderna sin raíz tradicional clara.",
+      "node_path": "Music > Roots > Folk > Folk (Standard)",
+      "membership_criteria": "Nodo fallback para canciones con identidad folk clara dentro de Roots cuando no existe evidencia suficiente o necesidad operativa para resolverlas en un subnodo más específico. Debe cubrir canciones de base acústica u orgánica, centralidad de la voz, continuidad reconocible con una tradición folk heredada y ausencia de groove pop, rock o electrónico dominante. Incluye tanto folk tradicional como folk moderno de continuidad clara con la tradición cuando la separación fina aún no mejora la clasificación.",
+      "exclusion_criteria": "No asignar si la canción encaja claramente en Latin Folk o alguno de sus hijos, ni si la lógica principal ya pertenece mejor a Pop, Rock, Rhythmic o Electronic. Excluir también casos donde la identidad sea de cantautor pop más que de folk, o donde la estructura de banda moderna domine sobre la raíz folk.",
       "reference_examples": [
-        "The Dubliners - Whiskey in the Jar",
-        "Bob Dylan - The Times They Are A-Changin'"
-      ]
-    },
-    {
-      "node_path": "Music > Roots > Folk > Contemporary Folk",
-      "membership_criteria": "Canciones modernas de identidad folk clara, generalmente acústicas o semiacústicas, centradas en voz, letra, timbre orgánico y sensibilidad intimista, sin requerir raíz tradicional heredada y sin estructura de banda rock dominante. El pulso puede existir, pero no debe sentirse como groove pop o rock rector.",
-      "exclusion_criteria": "Folk tradicional de raíz cultural clara, canciones con batería y lógica de banda dominantes, o canciones cuya identidad principal sea pop autoral accesible más que folk contemporáneo.",
-      "reference_examples": [
+        "Bob Dylan - The Times They Are A-Changin'",
         "Leonard Cohen - Hallelujah",
         "Ed Maverick - Acurrucar"
       ]
