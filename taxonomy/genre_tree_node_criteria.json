@@ -183,8 +183,8 @@
     },
     {
       "node_path": "Music > Metal > Heavy Metal",
-      "membership_criteria": "Metal caracterizado por riffs de guitarra potentes, tempo medio, estructuras claras y énfasis en groove sólido y peso rítmico sin velocidad extrema. Representa el metal clásico y variantes que no presentan características dominantes de subgéneros más específicos como Thrash o Power Metal.",
-      "exclusion_criteria": "No asignar si la canción presenta velocidad elevada, riffs agresivos y repetitivos tipo thrash (Thrash Metal), o énfasis melódico/épico con alta velocidad (Power Metal). Excluir hard rock sin suficiente peso metal.",
+      "membership_criteria": "Metal tradicional o clásico centrado en riffs memorables y pesados, base rítmica firme, tempo medio o medio-rápido y estructuras relativamente directas. La identidad debe descansar primero en el peso del riff, el empuje metal clásico y la solidez del groove, no en velocidad extrema, mecanicismo industrial, hibridez alternativa marcada ni elevación heroico-melódica como motor principal.",
+      "exclusion_criteria": "No asignar si dominan el ataque veloz y el palm muting agresivo (Thrash Metal), la elevación melódica/heroica y el carácter himno o grandilocuente como centro identitario (Power Metal), la mecánica industrial/electrónica (Industrial Metal), la lógica urbana o chugging moderno (Nu Metal), o una hibridez alternativa/experimental claramente estructural (Alternative Metal). Excluir hard rock sin suficiente peso metal.",
       "reference_examples": [
         "Black Sabbath - Iron Man",
         "Iron Maiden - The Number of the Beast"
@@ -222,11 +222,12 @@
     },
     {
       "node_path": "Music > Metal > Power Metal",
-      "membership_criteria": "Metal caracterizado por alta velocidad, melodías épicas, armonías elevadas y un enfoque en lo grandilocuente y virtuoso. Combina velocidad con énfasis melódico claro.",
-      "exclusion_criteria": "Metal enfocado en agresividad rítmica sin énfasis melódico (Thrash Metal), o metal de tempo medio sin carácter épico (Heavy Metal).",
+      "membership_criteria": "Metal donde la identidad principal descansa en impulso melódico ascendente, sensación épica o heroica, armonías elevadas y una presentación grandilocuente o himnoica. La velocidad alta es frecuente pero no obligatoria: también puede pertenecer aquí el power metal de tempo medio si la elevación melódica, el carácter triunfal y la teatralidad épica pesan más que el riffing tradicional de Heavy Metal.",
+      "exclusion_criteria": "No asignar si la canción se sostiene principalmente por peso de riff y tradición metal clásica sin elevación melódica dominante (Heavy Metal), por agresión rítmica y ataque continuo (Thrash Metal), o por hibridez alternativa, nu metal o componente industrial más centrales que la épica melódica. No usar para cualquier metal \"épico\" si la identidad musical real no excede el marco de Heavy Metal.",
       "reference_examples": [
         "Dragonforce - Through the Fire and Flames",
-        "Helloween - Eagle Fly Free"
+        "Helloween - Eagle Fly Free",
+        "Sabaton - The Last Stand"
       ]
     },
     {
@@ -656,8 +657,8 @@
     },
     {
       "node_path": "Music > Metal > Alternative Metal",
-      "membership_criteria": "Metal de base claramente pesada que incorpora de forma estructural rasgos alternativos, grunge, experimentales, atmosféricos, progresivos o híbridos, siempre que el peso de los riffs, la agresividad y la identidad metal sigan siendo dominantes. Debe sentirse como una variante híbrida del sistema Metal, no solo como rock alternativo endurecido.",
-      "exclusion_criteria": "Metal tradicional sin rasgos alternativos claros, Nu Metal con identidad rítmica/groove claramente definida, Industrial Metal con componente mecánico/electrónico dominante, o canciones donde la estructura alternativa, pop o rap pese más que la identidad metal. Excluir también los casos que encajan con mayor claridad en Heavy Metal, Thrash Metal o Power Metal.",
+      "membership_criteria": "Metal de base pesada cuya identidad surge de una desviación estructural respecto al metal tradicional mediante rasgos alternativos, experimentales, atmosféricos o progresivos claramente integrados en riffs, dinámica, armonía o textura. Debe sentirse como metal híbrido o no tradicional de forma positiva y reconocible, no como simple metal genérico pendiente de mejor ubicación.",
+      "exclusion_criteria": "No usar como contenedor para cualquier metal dudoso. Excluir metal tradicional o clásico (Heavy Metal), power metal melódico o heroico, thrash, nu metal con groove urbano o chugging dominante, industrial metal mecanizado, y rock alternativo endurecido donde la identidad metal no sea claramente dominante. La hibridez debe ser estructural, no decorativa.",
       "reference_examples": [
         "Tool - Schism",
         "Faith No More - Epic",
