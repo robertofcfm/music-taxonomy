@@ -56,6 +56,7 @@ Music
         Trova Cubana
         Vallenato
       Traditional Folk
+      Contemporary Folk
     Regional Mexicano
       Banda
       Norteño

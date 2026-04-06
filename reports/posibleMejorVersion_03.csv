@@ -1,4 +1,8 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+USWB11301873,11092725,Hard to Say I'M Sorry / Get Away,,118769,Chicago,Chicago 16,Studio,,24,192.0,2,True
+GBEQJ0400002,386576247,Alone Again (Naturally),,115676,Gilbert O'sullivan,Alone Again,Studio,The EP,16,44.1,2,True
+GBBWX0701000,206051050,A Whiter Shade of Pale,Original Single Version (2007 Remaster),75825,Procol Harum,A Whiter Shade of Pale,Studio,Original Single Version (2007 Remaster),16,44.1,2,True
+USMC16532697,112885038,California Dreamin',Single Version,51303,The Mamas & The Papas,Greatest Hits:  The Mamas & The Papas,Studio,,24,96.0,2,True
 QZML42000003,102643788,Take Five,,49410,The Dave Brubeck Quartet,Time Outtakes,Studio,,24,48.0,2,True
 FR8X00601128,26155009,La vie en rose,,46484,Louis Armstrong,"Louis Armstrong, une anthologie 1945 / 1955",Studio,,24,44.1,2,True
 USF095800030,63530362,Cheek To Cheek,,24811,Ella Fitzgerald,Ella Fitzgerald Sings The Irving Berlin Song Book,Studio,,24,192.0,2,True
@@ -1479,6 +1483,7 @@ USSM19801613,2719930,Take My Breath Away,"Love Theme From ""Top Gun""",45695,Ber
 USSM18600108,2719914,"Danger Zone (From ""Top Gun"" Original Soundtrack)",Album Version,73106,Kenny Loggins,Top Gun - Motion Picture Soundtrack (Special Expanded Edition),Studio,,24,44.1,2,True
 USIR29900008,46554636,Saving Grace,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
 GBUM71029604,138731318,Bohemian Rhapsody,Remastered 2011,43821,Queen,A Night At The Opera,Studio,Remastered 2011,24,96.0,2,True
+GB5KW2401199,387301983,Alone Again (Naturally),Songbook Version,115676,Gilbert O'sullivan,Songbook,Studio,,24,44.1,2,False
 QMRSZ2200646,381791121,La Grange,,56332,ZZ Top,RAW,Studio,"From ""That Little Ol' Band From Texas""",24,96.0,2,False
 USEE10100338,95786994,Creeping Death,Live In Mexico City/Mexico/1993,62542,Metallica,Live Sh*t: Binge & Purge,Live,Live In Mexico City,24,96.0,2,False
 GBAAP2400106,269290979,Smalltown Boy ,ABSOLUTE. Rework,409561,Bronski Beat,Smalltown Boy ,Studio,ABSOLUTE. Rework,24,44.1,2,False

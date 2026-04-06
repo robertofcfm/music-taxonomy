@@ -271,8 +271,8 @@
     },
     {
       "node_path": "Music > Pop > Singer-Songwriter Pop",
-      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica o folk tradicional.",
-      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk puro, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
+      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica, folk tradicional o folk contemporáneo.",
+      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk puro, folk contemporáneo con sensibilidad folk más fuerte que la lógica pop, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
       "reference_examples": [
         "Ed Sheeran - Thinking Out Loud",
         "Taylor Swift - Love Story"
@@ -560,11 +560,20 @@
     },
     {
       "node_path": "Music > Roots > Folk > Traditional Folk",
-      "membership_criteria": "Música folclórica de transmisión oral, propia de una región o cultura, interpretada con instrumentos tradicionales y sin estructura de banda moderna. Voz y acompañamiento acústico predominante, sin groove de banda (sin batería/bajo estructural).",
-      "exclusion_criteria": "Folk fusionado con rock/pop, canciones con batería o estructura de banda, o música de autor moderna sin raíz tradicional clara.",
+      "membership_criteria": "Música folclórica de transmisión oral, propia de una región o cultura, interpretada con instrumentos tradicionales y sin estructura de banda moderna. Voz y acompañamiento acústico predominante, sin groove de banda (sin batería/bajo estructural). La identidad debe descansar en una raíz tradicional clara y no solo en austeridad acústica o cercanía estética con el folk.",
+      "exclusion_criteria": "Folk fusionado con rock/pop, canciones con batería o estructura de banda, folk contemporáneo, o música de autor moderna sin raíz tradicional clara.",
       "reference_examples": [
         "The Dubliners - Whiskey in the Jar",
         "Bob Dylan - The Times They Are A-Changin'"
+      ]
+    },
+    {
+      "node_path": "Music > Roots > Folk > Contemporary Folk",
+      "membership_criteria": "Canciones modernas de identidad folk clara, generalmente acústicas o semiacústicas, centradas en voz, letra, timbre orgánico y sensibilidad intimista, sin requerir raíz tradicional heredada y sin estructura de banda rock dominante. El pulso puede existir, pero no debe sentirse como groove pop o rock rector.",
+      "exclusion_criteria": "Folk tradicional de raíz cultural clara, canciones con batería y lógica de banda dominantes, o canciones cuya identidad principal sea pop autoral accesible más que folk contemporáneo.",
+      "reference_examples": [
+        "Leonard Cohen - Hallelujah",
+        "Ed Maverick - Acurrucar"
       ]
     },
     {
