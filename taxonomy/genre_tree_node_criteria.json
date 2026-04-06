@@ -156,6 +156,16 @@
       ]
     },
     {
+      "node_path": "Music > Jazz > Instrumental Jazz",
+      "membership_criteria": "Obras de lenguaje jazz donde la identidad principal descansa en interpretación instrumental, interacción de ensamble, improvisación, swing o flexibilidad rítmica y armonía jazz, sin voz protagonista sostenida. Funciona como nodo asignable de soporte para jazz instrumental claro cuando todavía no existe en el árbol un subnodo estilístico más específico que aporte una mejora operativa real.",
+      "exclusion_criteria": "Jazz vocal con cantante claramente protagónico (usar Vocal Jazz), obras audiovisuales cuyo origen cinematográfico o serial siga dominando por encima del lenguaje musical, o piezas donde el groove principal pertenezca mejor a otro sistema como Pop, Rhythmic, Rock, Classical o Score.",
+      "reference_examples": [
+        "Miles Davis - So What",
+        "Dave Brubeck Quartet - Take Five",
+        "Benny Goodman - Sing, Sing, Sing"
+      ]
+    },
+    {
       "node_path": "Music > Jazz > Vocal Jazz",
       "membership_criteria": "Obras centradas en interpretación vocal dentro de la tradición jazz o standard americano, con fraseo flexible, acompañamiento acústico u orquestal de lenguaje jazz y énfasis en la interpretación vocal por encima del groove pop o soul. Puede incluir baladas, standards y canciones de crooner siempre que la identidad jazz vocal sea dominante.",
       "exclusion_criteria": "Pop Ballad, Soul o Pop Soul con groove moderno dominante, bolero, score vocal, o canciones donde la voz sea principal pero el lenguaje armónico y rítmico no sea claramente jazz.",

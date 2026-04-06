@@ -1,0 +1,65 @@
+node_path,level,node_name,canciones_exactas,canciones_acumuladas
+Music,0,Music,0,1473
+Music > Classical,1,Classical,5,5
+Music > Electronic,1,Electronic,0,53
+Music > Electronic > Big Beat,2,Big Beat,5,5
+Music > Electronic > Downtempo,2,Downtempo,12,12
+Music > Electronic > Drum And Bass,2,Drum And Bass,1,1
+Music > Electronic > House,2,House,3,3
+Music > Electronic > Synthpop,2,Synthpop,32,32
+Music > Hip Hop,1,Hip Hop,0,45
+Music > Hip Hop > Boom Bap,2,Boom Bap,7,7
+Music > Hip Hop > Hip Hop (Standard),2,Hip Hop (Standard),14,14
+Music > Hip Hop > Pop Rap,2,Pop Rap,16,16
+Music > Hip Hop > Trap,2,Trap,1,1
+Music > Hip Hop > West Coast,2,West Coast,7,7
+Music > Jazz,1,Jazz,1,1
+Music > Metal,1,Metal,0,141
+Music > Metal > Alternative Metal,2,Alternative Metal,3,3
+Music > Metal > Heavy Metal,2,Heavy Metal,76,76
+Music > Metal > Industrial Metal,2,Industrial Metal,18,18
+Music > Metal > Nu Metal,2,Nu Metal,15,15
+Music > Metal > Power Metal,2,Power Metal,1,1
+Music > Metal > Thrash Metal,2,Thrash Metal,28,28
+Music > Pop,1,Pop,0,105
+Music > Pop > Indie Pop,2,Indie Pop,28,28
+Music > Pop > Pop (Standard),2,Pop (Standard),10,10
+Music > Pop > Pop Ballad,2,Pop Ballad,46,46
+Music > Pop > Psychedelic Pop,2,Psychedelic Pop,15,15
+Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,6,6
+Music > Rhythmic,1,Rhythmic,0,41
+Music > Rhythmic > Disco,2,Disco,19,19
+Music > Rhythmic > Funk,2,Funk,4,4
+Music > Rhythmic > R&B,2,R&B,0,0
+Music > Rhythmic > Ska,2,Ska,9,9
+Music > Rhythmic > Soul,2,Soul,9,9
+Music > Rock,1,Rock,0,658
+Music > Rock > Alternative Rock,2,Alternative Rock,139,139
+Music > Rock > Blues Rock,2,Blues Rock,20,20
+Music > Rock > Folk Rock,2,Folk Rock,13,13
+Music > Rock > Grunge,2,Grunge,52,52
+Music > Rock > Hard Rock,2,Hard Rock,90,90
+Music > Rock > Indie Rock,2,Indie Rock,125,125
+Music > Rock > Pop Punk,2,Pop Punk,9,9
+Music > Rock > Post-Punk,2,Post-Punk,108,108
+Music > Rock > Progressive Rock,2,Progressive Rock,10,10
+Music > Rock > Psychedelic Rock,2,Psychedelic Rock,48,48
+Music > Rock > Roots Rock,2,Roots Rock,15,15
+Music > Rock > Soft Rock,2,Soft Rock,29,29
+Music > Roots,1,Roots,0,414
+Music > Roots > Bolero,2,Bolero,6,6
+Music > Roots > Cumbia,2,Cumbia,0,11
+Music > Roots > Cumbia > Cumbia Pop,3,Cumbia Pop,5,5
+Music > Roots > Cumbia > Cumbia Vallenata,3,Cumbia Vallenata,6,6
+Music > Roots > Folk,2,Folk,0,162
+Music > Roots > Folk > Latin Folk,3,Latin Folk,0,159
+Music > Roots > Folk > Latin Folk > Latin Folk Pop,4,Latin Folk Pop,3,3
+Music > Roots > Folk > Latin Folk > Trova Cubana,4,Trova Cubana,4,4
+Music > Roots > Folk > Latin Folk > Vallenato,4,Vallenato,152,152
+Music > Roots > Folk > Traditional Folk,3,Traditional Folk,3,3
+Music > Roots > Regional Mexicano,2,Regional Mexicano,0,235
+Music > Roots > Regional Mexicano > Banda,3,Banda,6,6
+Music > Roots > Regional Mexicano > Norteño,3,Norteño,105,105
+Music > Roots > Regional Mexicano > Ranchera,3,Ranchera,8,8
+Music > Roots > Regional Mexicano > Texano,3,Texano,116,116
+Music > Score,1,Score,10,10

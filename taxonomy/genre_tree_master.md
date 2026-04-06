@@ -17,6 +17,7 @@ Music
     Trap
     West Coast
   Jazz
+    Instrumental Jazz
     Vocal Jazz
   Metal
     Alternative Metal
