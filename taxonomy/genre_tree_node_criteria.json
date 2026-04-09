@@ -272,8 +272,8 @@
     },
     {
       "node_path": "Music > Pop > Singer-Songwriter Pop",
-      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos suelen ser sobrios o contenidos, y la sensación principal debe ser de canción pop personal antes que de banda de rock, balada genérica o folk claro dentro de Roots.",
-      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk claro dentro de Roots con identidad folk más fuerte que la lógica pop, o canciones donde la identidad principal sea rock, soft rock o alternative rock.",
+      "membership_criteria": "Canciones pop de enfoque autoral e íntimo, centradas en la voz, la melodía y una impronta personal reconocible. Los arreglos pueden ser sobrios o contenidos, pero la sensación principal debe seguir siendo de canción pop personal: la forma pop, la accesibilidad melódica y la lógica de canción pesan más que una tradición folk heredada o que un sistema de banda rock.",
+      "exclusion_criteria": "No asignar solo porque el artista escriba sus canciones. Excluir pop de banda con identidad grupal dominante, baladas genéricas sin impronta autoral clara, folk claro dentro de Roots con identidad folk más fuerte que la lógica pop, o canciones donde la identidad principal sea rock, soft rock, alternative rock o Latin Folk Singer-Songwriter.",
       "reference_examples": [
         "Ed Sheeran - Thinking Out Loud",
         "Taylor Swift - Love Story"
@@ -365,8 +365,8 @@
     },
     {
       "node_path": "Music > Rock > Folk Rock",
-      "membership_criteria": "Canciones que fusionan elementos del folk tradicional con la instrumentación y estructura del rock. Letras introspectivas, uso frecuente de guitarras acústicas y eléctricas.",
-      "exclusion_criteria": "Folk puro sin elementos de rock, rock sin influencia folk.",
+      "membership_criteria": "Canciones que fusionan elementos del folk tradicional con la instrumentación y estructura del rock. Deben sentirse primero como rock de banda, con batería, bajo y guitarras estructurales, aunque con herencia melódica, lírica o tímbrica folk perceptible. La base rítmica y la organización formal pertenecen a Rock, no a Roots.",
+      "exclusion_criteria": "Folk puro sin elementos de rock, rock sin influencia folk, o canciones acústicas/autorales donde la raíz folk domine sin que la lógica de banda rock sea estructural.",
       "reference_examples": [
         "America - A Horse with No Name",
         "Bob Dylan - Like a Rolling Stone"
@@ -522,14 +522,14 @@
     },
     {
       "node_path": "Music > Roots > Folk > Latin Folk",
-      "membership_criteria": "Nodo contenedor para subgéneros de folk latino. Organiza músicas de raíz folk latinoamericana cuando la clasificación útil ya depende de un hijo específico como Latin Folk Pop, Trova Cubana o Vallenato.",
+      "membership_criteria": "Nodo contenedor para subgéneros de folk latino. Organiza músicas de raíz folk latinoamericana cuando la clasificación útil ya depende de un hijo específico como Latin Folk Pop, Latin Folk Singer-Songwriter o Vallenato.",
       "exclusion_criteria": "No asignar canciones directamente a este nodo mientras exista un subgénero hijo aplicable. No usar como fallback operativo.",
       "reference_examples": []
     },
     {
       "node_path": "Music > Roots > Folk > Latin Folk > Latin Folk Pop",
-      "membership_criteria": "Canciones que combinan elementos del folk latino (instrumentación acústica, raíces tradicionales) con estructura, producción y sensibilidad pop. Incluye arreglos más ricos, instrumentación variada y enfoque melódico accesible. La producción puede ser moderna y la canción mantiene formato pop.",
-      "exclusion_criteria": "Trova tradicional (minimalista y centrada en la lírica), folk puro sin producción moderna, o pop sin elementos claros de raíz folk.",
+      "membership_criteria": "Canciones que combinan elementos del folk latino (instrumentación acústica, raíces tradicionales, giros melódicos o color cultural reconocible) con estructura, producción y sensibilidad pop. Deben seguir ancladas en Latin Folk, pero con un acabado más amplio, melódico o moderno que en un formato austero de canción de autor. La producción puede ser moderna y la canción mantiene formato pop. Si el arreglo, la amplitud melódica o la producción expanden claramente la canción más allá del formato sobrio de autor, este nodo tiene prioridad sobre Latin Folk Singer-Songwriter.",
+      "exclusion_criteria": "Latin Folk Singer-Songwriter con enfoque austero, centrado en la lírica y arreglos contenidos, folk puro sin producción moderna, o pop sin elementos claros de raíz folk. Excluir también casos donde la lógica principal ya sea Singer-Songwriter Pop sin anclaje folk latino suficiente. No usar si la sobriedad del arreglo, la centralidad del texto y el acompañamiento contenido siguen siendo el rasgo dominante.",
       "reference_examples": [
         "Natalia Lafourcade - Tú Sí Sabes Quererme",
         "Jorge Drexler - Todo Se Transforma",
@@ -537,9 +537,9 @@
       ]
     },
     {
-      "node_path": "Music > Roots > Folk > Latin Folk > Trova Cubana",
-      "membership_criteria": "Canciones de autor de tradición latinoamericana, especialmente vinculadas a la trova cubana y a corrientes afines de canción de autor hispanohablante, con fuerte énfasis en la lírica, poesía e interpretación vocal. Instrumentación predominantemente acústica (voz + guitarra), estructura minimalista y enfoque en el mensaje. Puede incluir variantes no cubanas si conservan claramente ese marco trovador sobrio y literario.",
-      "exclusion_criteria": "Canciones con producción moderna o arreglos pop predominantes, instrumentación amplia, o enfoque melódico/comercial por encima del contenido lírico. Excluir folk pop moderno, baladas producidas o cantautor pop donde la lógica pop pese más que el formato trovador.",
+      "node_path": "Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter",
+      "membership_criteria": "Canciones de autor de raíz folk latinoamericana donde la identidad principal descansa en la lírica, la interpretación vocal y un acompañamiento acústico u orgánico sobrio. Deben sentirse primero como folk latino autoral antes que como pop producido o balada genérica. Incluye la trova cubana y corrientes afines de canción de autor hispanohablante cuando conservan austeridad arreglística, centralidad del texto, impronta personal y una raíz folk reconocible. Si el arreglo sigue siendo contenido y el texto mantiene el peso principal, este nodo tiene prioridad sobre Latin Folk Pop.",
+      "exclusion_criteria": "Canciones con producción moderna o arreglos pop predominantes, instrumentación amplia, o enfoque melódico/comercial por encima del texto. Excluir Latin Folk Pop, baladas producidas o cantautor pop donde la lógica pop pese más que la raíz folk, y obras donde la identidad principal sea Vallenato, Bolero, Pop o Singer-Songwriter Pop. No usar cuando el acabado melódico y la expansión del arreglo ya desbordan el formato sobrio de canción de autor.",
       "reference_examples": [
         "Silvio Rodríguez - Ojalá",
         "Pablo Milanés - Yolanda",
@@ -558,8 +558,8 @@
     },
     {
       "node_path": "Music > Roots > Folk > Folk (Standard)",
-      "membership_criteria": "Nodo fallback para canciones con identidad folk clara dentro de Roots cuando no existe evidencia suficiente o necesidad operativa para resolverlas en un subnodo más específico. Debe cubrir canciones de base acústica u orgánica, centralidad de la voz, continuidad reconocible con una tradición folk heredada y ausencia de groove pop, rock o electrónico dominante. Incluye tanto folk tradicional como folk moderno de continuidad clara con la tradición cuando la separación fina aún no mejora la clasificación.",
-      "exclusion_criteria": "No asignar si la canción encaja claramente en Latin Folk o alguno de sus hijos, ni si la lógica principal ya pertenece mejor a Pop, Rock, Rhythmic o Electronic. Excluir también casos donde la identidad sea de cantautor pop más que de folk, o donde la estructura de banda moderna domine sobre la raíz folk.",
+      "membership_criteria": "Nodo fallback para canciones con identidad folk clara dentro de Roots cuando no existe evidencia suficiente o necesidad operativa para resolverlas en un subnodo más específico. Debe cubrir canciones de base acústica u orgánica, centralidad de la voz, continuidad reconocible con una tradición folk heredada y ausencia de groove pop, rock o electrónico dominante. Incluye tanto folk tradicional como folk moderno de continuidad clara con la tradición, incluso si hay perfil autoral, cuando la separación fina aún no mejora la clasificación.",
+      "exclusion_criteria": "No asignar si la canción encaja claramente en Latin Folk o alguno de sus hijos, ni si la lógica principal ya pertenece mejor a Pop, Rock, Rhythmic o Electronic. Excluir también casos donde la identidad sea de cantautor pop más que de folk, o donde la estructura de banda moderna domine sobre la raíz folk. No usar si existe una pertenencia clara a Latin Folk Singer-Songwriter.",
       "reference_examples": [
         "Bob Dylan - The Times They Are A-Changin'",
         "Leonard Cohen - Hallelujah",

@@ -81,3 +81,45 @@ Toda ejecución debe generar un reporte estructurado con:
 - Faltantes críticos (si aplica) con propuesta de criterios
 - Control de ejecución y estado final
 - Indicador de capacidad (🟢/🟡/🔴)
+
+--------------------------------------------------
+TABLA CORTA DE DECISIÓN: FOLK Y CANCIÓN AUTORAL
+--------------------------------------------------
+
+Usar esta tabla para resolver ambigüedad entre nodos cercanos cuando una canción parezca moverse entre folk, pop autoral y cruces latinos.
+
+1. Folk (Standard)
+- Usar cuando domina una identidad folk clara dentro de Roots.
+- Debe sentirse como continuidad con tradición folk heredada, base acústica u orgánica y poca lógica pop o rock.
+- No usar si la canción encaja claramente en Latin Folk o si la lógica principal ya es Pop, Rock o Electronic.
+
+2. Latin Folk Pop
+- Usar cuando hay raíz folk latina clara, pero con estructura, producción o accesibilidad pop ya visibles.
+- La canción sigue anclada en Latin Folk, pero el acabado es más melódico, amplio o moderno que en un formato austero de canción de autor.
+- No usar si domina una austeridad trovadoresca o si el peso principal ya es de Pop sin raíz folk suficientemente clara.
+
+3. Folk Rock
+- Usar cuando la herencia folk existe, pero la base estructural ya es Rock.
+- Deben mandar la lógica de banda, la instrumentación rock y el sistema rítmico de Rock.
+- No usar para folk acústico puro ni para pop autoral íntimo sin base rock estructural.
+
+4. Singer-Songwriter Pop
+- Usar cuando la canción es autoral, íntima y personal, pero sigue perteneciendo primero a Pop.
+- La melodía, la forma de canción pop y la sensibilidad accesible pesan más que una raíz folk heredada.
+- No usar solo porque el artista sea cantautor; si la raíz folk domina, resolver en Roots.
+
+5. Latin Folk Singer-Songwriter
+- Usar cuando la canción pertenece claramente a una tradición de canción de autor de raíz folk latinoamericana.
+- Deben pesar la lírica, la voz, el acompañamiento sobrio y la impronta personal antes que la producción pop.
+- Incluye trova cubana y corrientes afines cuando el tema conserva austeridad arreglística y centralidad del texto.
+- No usar si la canción ya funciona mejor como Latin Folk Pop, Pop Ballad o Singer-Songwriter Pop.
+
+Micro-regla de desempate entre Latin Folk Pop y Latin Folk Singer-Songwriter:
+- Si el arreglo sigue siendo sobrio, contenido y centrado en voz, texto y acompañamiento acústico/orgánico, priorizar `Latin Folk Singer-Songwriter`.
+- Si el acabado melódico, la amplitud del arreglo o la producción expanden claramente la canción más allá del formato austero de autor, priorizar `Latin Folk Pop`.
+
+Regla de desempate:
+- Si domina la raíz folk heredada, clasificar en Roots.
+- Si domina la forma pop personal, clasificar en Pop.
+- Si domina la lógica de banda, clasificar en Rock.
+- Si el caso es latino y autoral, priorizar revisar primero Latin Folk Singer-Songwriter contra Latin Folk Pop antes de caer en Singer-Songwriter Pop.

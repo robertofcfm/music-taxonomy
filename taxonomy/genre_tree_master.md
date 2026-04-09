@@ -63,7 +63,7 @@ Music
     Folk
       Latin Folk
         Latin Folk Pop
-        Trova Cubana
+        Latin Folk Singer-Songwriter
         Vallenato
       Folk (Standard)
     Regional Mexicano
