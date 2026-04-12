@@ -53,5 +53,71 @@
     "score": 98,
     "score_band": "Encaje perfecto",
     "justification": "Encaje canonico con Folk (Standard); continuidad directa con precedentes folk del catalogo."
+  },
+  {
+    "title": "Coincidir",
+    "artist": "Mexicanto",
+    "isrc": "MXF600700003",
+    "assigned_node": "Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 95,
+    "score_band": "Encaje perfecto",
+    "justification": "Cancion de autor hispanohablante con acompanamiento sobrio, centralidad del texto e identidad de folk latino autoral."
+  },
+  {
+    "title": "¿Y Cómo Es Él?",
+    "artist": "José Luis Perales",
+    "isrc": "ES5151901025",
+    "assigned_node": "Music > Pop > Pop Ballad",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 91,
+    "score_band": "Encaje perfecto",
+    "justification": "Balada de tempo medio-lento centrada en melodia y voz; la identidad principal es de cancion pop emotiva, no de folk ni de rock."
+  },
+  {
+    "title": "Contigo Aprendí",
+    "artist": "Armando Manzanero",
+    "isrc": "MXF016700436",
+    "assigned_node": "Music > Roots > Bolero",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 98,
+    "score_band": "Encaje perfecto",
+    "justification": "Pertenece con claridad al sistema bolero por cadencia romantica, tradicion latinoamericana y lenguaje canonico del genero."
+  },
+  {
+    "title": "Te Amo",
+    "artist": "Franco De Vita",
+    "isrc": "VES018800013",
+    "assigned_node": "Music > Pop > Pop Ballad",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 84,
+    "score_band": "Encaje fuerte",
+    "justification": "Con la evidencia disponible se sostiene como balada pop: foco en voz y melodia, sin anclaje folk o bolero claro; la impronta autoral no basta para Singer-Songwriter Pop."
+  },
+  {
+    "title": "Santa Lucia",
+    "artist": "Miguel Rios",
+    "isrc": "ES5700500781",
+    "assigned_node": "Music > Rock > Soft Rock",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 72,
+    "score_band": "Encaje fuerte",
+    "justification": "Se mantiene provisionalmente en Soft Rock por contexto rock interno del catalogo y perfil melodico suave, pero el encaje es debil y Pop Ballad sigue siendo alternativa cercana."
+  },
+  {
+    "title": "Si tú no estas",
+    "artist": "Rosana",
+    "isrc": "ES6330300130",
+    "assigned_node": "Music > Pop > Singer-Songwriter Pop",
+    "node_status": "existente",
+    "governance_rule": "Regla 15",
+    "score": 90,
+    "score_band": "Encaje perfecto",
+    "justification": "Cancion pop de impronta autoral e intima, con voz y melodia al centro; la logica pop personal pesa mas que una raiz folk especifica."
   }
 ]

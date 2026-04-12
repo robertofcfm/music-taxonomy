@@ -1,4 +1,10 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+MXF600700003,74713614,Coincidir,,2626143,Mexicanto,XX Aniversario - Grandes Éxitos,Studio,,16,44.1,2,True
+ES5151901025,77039051,¿Y Cómo Es Él?,Versión 2019,91002,José Luis Perales,Mirándote a los ojos,Studio,"Recuerdos, retratos y melodías perdidas",24,44.1,2,True
+MXF016700436,13361064,Contigo Aprendí,,44313,Armando Manzanero,20 Exitos Originales,Studio,,16,44.1,2,True
+VES018800013,47223813,Te Amo,,107244,Franco De Vita,Al Norte Del Sur,Studio,,16,44.1,2,True
+ES5700500781,44896684,Santa Lucia,Remastered 2005,235680,Miguel Rios,Rocanrol Bumerang,Studio,,16,44.1,2,True
+ES6330300130,2697780,Si tú no estas,,129655,Rosana,Lunas rotas,Studio,,16,44.1,2,True
 USJ5G1093206,2307250,The Gardener,,344754,The Tallest Man On Earth,Shallow Grave,Studio,,16,44.1,2,True
 USAM17902302,7613606,Boat On The River,,62578,Styx,Cornerstone,Studio,,16,44.1,2,True
 USSM16500041,48359,Turn! Turn! Turn! (To Everything There Is a Season),Album Version,148670,The Byrds,Turn! Turn! Turn!,Studio,,16,44.1,2,True
@@ -1542,6 +1548,7 @@ USSM19801613,2719930,Take My Breath Away,"Love Theme From ""Top Gun""",45695,Ber
 USSM18600108,2719914,"Danger Zone (From ""Top Gun"" Original Soundtrack)",Album Version,73106,Kenny Loggins,Top Gun - Motion Picture Soundtrack (Special Expanded Edition),Studio,,24,44.1,2,True
 USIR29900008,46554636,Saving Grace,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
 GBUM71029604,138731318,Bohemian Rhapsody,Remastered 2011,43821,Queen,A Night At The Opera,Studio,Remastered 2011,24,96.0,2,True
+MXF012500286,333769146,Contigo Aprendí,,44313,Armando Manzanero,Desde el Cielo,Studio,,24,48.0,2,False
 GB5KW2401199,387301983,Alone Again (Naturally),Songbook Version,115676,Gilbert O'sullivan,Songbook,Studio,,24,44.1,2,False
 QMRSZ2200646,381791121,La Grange,,56332,ZZ Top,RAW,Studio,"From ""That Little Ol' Band From Texas""",24,96.0,2,False
 USEE10100338,95786994,Creeping Death,Live In Mexico City/Mexico/1993,62542,Metallica,Live Sh*t: Binge & Purge,Live,Live In Mexico City,24,96.0,2,False
