@@ -1,5 +1,4 @@
 genre,num_canciones
-Music > Rhythmic > Funk,4
 Music > Classical,5
 Music > Roots > Cumbia > Cumbia Pop,5
 Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,5
@@ -17,6 +16,7 @@ Music > Roots > Folk > Folk (Standard),8
 Music > Roots > Regional Mexicano > Ranchera,8
 Music > Electronic > House,9
 Music > Metal > Alternative Metal,9
+Music > Rhythmic > Funk,9
 Music > Rhythmic > Ska,9
 Music > Rhythmic > Soul,9
 Music > Rock > Pop Punk,9
@@ -32,8 +32,8 @@ Music > Rock > Roots Rock,15
 Music > Metal > Nu Metal,16
 Music > Rock > Folk Rock,16
 Music > Hip Hop > Pop Rap,18
-Music > Rhythmic > Disco,19
 Music > Metal > Industrial Metal,20
+Music > Rhythmic > Disco,20
 Music > Rock > Blues Rock,20
 Music > Metal > Thrash Metal,28
 Music > Pop > Indie Pop,28
