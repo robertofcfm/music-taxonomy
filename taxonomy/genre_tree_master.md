@@ -1,9 +1,10 @@
 Music
   Classical
-    Orchestral
     Chamber
-    Solo Instrumental
     Choral
+    Concertante
+    Orchestral
+    Solo Instrumental
   Electronic
     Big Beat
     Downtempo

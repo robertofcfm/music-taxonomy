@@ -23,6 +23,28 @@ PARAMS_AUTH = {"user_auth_token": USER_TOKEN}
 # ==============================
 # FUNCIONES
 # ==============================
+def get_track_artist(track):
+    performer = (track.get("performer") or {}).get("name", "").strip()
+    if performer:
+        return performer
+
+    album_artist = ((track.get("album") or {}).get("artist") or {}).get("name", "").strip()
+    if album_artist:
+        return album_artist
+
+    performers = (track.get("performers") or "").strip()
+    if performers:
+        for performer_info in performers.split(" - "):
+            parts = [part.strip() for part in performer_info.split(",") if part.strip()]
+            if len(parts) >= 2 and "MainArtist" in parts[1:]:
+                return parts[0]
+        first_performer = performers.split(" - ", 1)[0].split(",", 1)[0].strip()
+        if first_performer:
+            return first_performer
+
+    return ""
+
+
 def get_all_favorites():
     print("Descargando favoritos completos...")
     limit, offset, all_tracks = 100, 0, []
@@ -56,7 +78,7 @@ def main():
     for track in favoritos:
         title = track.get("title", "")
         title_version = track.get("version", "")
-        artist = track.get("performer", {}).get("name", "")
+        artist = get_track_artist(track)
         album = track.get("album", {}).get("title", "")
         album_version = track.get("album", {}).get("version", "")
         isrc = track.get("isrc", "")
@@ -166,7 +188,7 @@ def main():
             track_id = track.get("id", "")
             title = track.get("title", "")
             version = track.get("version", "")
-            artist = track.get("performer", {}).get("name", "")
+            artist = get_track_artist(track)
             artist_id = track.get("performer", {}).get("id", "")
             album = track.get("album", {}).get("title", "")
             album_version = track.get("album", {}).get("version", "")
@@ -204,7 +226,7 @@ def main():
         total_favs = len(favoritos)
         for idx, fav in enumerate(favoritos, 1):
             title = fav.get("title", "")
-            artist = fav.get("performer", {}).get("name", "")
+            artist = get_track_artist(fav)
             tipo_disco = classify_track_type(fav)
             track_id = fav.get("id", "")
             if not title or not artist:
@@ -224,7 +246,7 @@ def main():
                     continue
                 if normalize_for_match(res.get("title", "")) != norm_title:
                     continue
-                if normalize_for_match(res.get("performer", {}).get("name", "")) != norm_artist:
+                if normalize_for_match(get_track_artist(res)) != norm_artist:
                     continue
                 # Comparar calidad
                 if compare_quality(fav, res) == 1:
@@ -234,7 +256,7 @@ def main():
                         "Título": res.get("title", ""),
                         "Versión del título": res.get("version", ""),
                         "Id Artista": res.get("performer", {}).get("id", ""),
-                        "Artista": res.get("performer", {}).get("name", ""),
+                        "Artista": get_track_artist(res),
                         "Disco": res.get("album", {}).get("title", ""),
                         "Tipo Disco": classify_track_type(res),
                         "Versión del disco": res.get("album", {}).get("version", ""),
