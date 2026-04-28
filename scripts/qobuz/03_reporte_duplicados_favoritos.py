@@ -61,38 +61,26 @@ def agrupar_duplicados(registros):
     return {clave: grupo for clave, grupo in grupos.items() if len(grupo) >= 2}
 
 
-def cargar_bloques_excluidos(path):
+def cargar_claves_excluidas(path):
     if not os.path.exists(path):
         return set()
 
     registros, _ = cargar_registros(path)
-    bloques = set()
-    bloque_actual = []
-    clave_actual = None
-
-    for row in registros:
-        clave = obtener_clave_duplicado(row)
-        if clave != clave_actual and bloque_actual:
-            bloques.add((clave_actual, tuple(sorted(bloque_actual))))
-            bloque_actual = []
-        clave_actual = clave
-        bloque_actual.append((row.get('Id Titulo', '') or '').strip())
-
-    if bloque_actual:
-        bloques.add((clave_actual, tuple(sorted(bloque_actual))))
-
-    return bloques
+    return {
+        obtener_clave_duplicado(row)
+        for row in registros
+        if obtener_clave_duplicado(row)
+    }
 
 
-def encontrar_duplicados(registros, bloques_excluidos):
+def encontrar_duplicados(registros, claves_excluidas):
     grupos = agrupar_duplicados(registros)
 
     duplicados = []
     for clave, grupo in grupos.items():
         titulo_normalizado, id_artista, tipo_disco = clave
         clave_duplicado = f'{titulo_normalizado}|{id_artista}|{tipo_disco}'
-        ids_grupo = tuple(sorted((row.get('Id Titulo', '') or '').strip() for row in grupo))
-        if (clave_duplicado, ids_grupo) in bloques_excluidos:
+        if clave_duplicado in claves_excluidas:
             continue
         for row in grupo:
             row_con_metadatos = dict(row)
@@ -128,8 +116,8 @@ def guardar_reporte(path, fieldnames, registros):
 def main():
     registros, fieldnames = cargar_registros(INPUT_FILE)
     guardar_registros(OUTPUT_FILE, fieldnames, registros)
-    bloques_excluidos = cargar_bloques_excluidos(EXCLUDED_FILE)
-    duplicados = encontrar_duplicados(registros, bloques_excluidos)
+    claves_excluidas = cargar_claves_excluidas(EXCLUDED_FILE)
+    duplicados = encontrar_duplicados(registros, claves_excluidas)
     guardar_reporte(DUPLICATES_REPORT_FILE, fieldnames, duplicados)
     print(f'Archivo intermedio generado: {OUTPUT_FILE}')
     print(f'Reporte generado: {DUPLICATES_REPORT_FILE}')
