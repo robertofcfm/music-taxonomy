@@ -9,14 +9,34 @@ songs_with_genres = 'catalog/songs_with_genres.csv'
 output_json = 'reports/canciones_nuevas.json'
 
 
+def elimina_tildes_ortograficas(texto):
+    descompuesto = unicodedata.normalize('NFD', texto)
+    caracteres = []
+    for indice, caracter in enumerate(descompuesto):
+        if not unicodedata.combining(caracter):
+            caracteres.append(caracter)
+            continue
+
+        base = descompuesto[indice - 1] if indice > 0 else ''
+        # Conserva la ñ/Ñ, pero elimina otros acentos ortográficos.
+        if caracter == '\u0303' and base.lower() == 'n':
+            caracteres.append(caracter)
+
+    return unicodedata.normalize('NFC', ''.join(caracteres))
+
+
 def normaliza(texto):
+    if texto is None:
+        return ''
+
     # Normaliza a Unicode NFC para evitar diferencias entre ñ compuesta y precompuesta
-    texto = unicodedata.normalize('NFC', texto)
+    texto = unicodedata.normalize('NFC', str(texto))
+    texto = elimina_tildes_ortograficas(texto)
     # Elimina cualquier tipo de comillas (rectas y tipográficas)
     caracteres_a_eliminar = ['"', "'", '“', '”', '‘', '’', '«', '»', '`', '´', '\\', '/']
     for c in caracteres_a_eliminar:
         texto = texto.replace(c, '')
-    return texto.strip().lower()
+    return ' '.join(texto.split()).casefold()
 
 try:
     # Leer canciones ya procesadas

@@ -1,10 +1,11 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+QMFMF1569815,137776676,La Cumbia del Amor,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,True
+USASN1401757,137776668,Vuelve,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,True
 MXF169900214,2584290,Y nos dieron las diez,,360613,Celso Piña y su Ronda Bogotá,Una aventura más,Studio,,16,44.1,2,True
 QMFMF2133818,143460604,Martha la Reina,,256474,Lisandro Meza,Cumbia De Amor,Studio,,16,44.1,2,True
 PYC842507696,402937677,Cumbia Hexagonal,En Vivo,9186308,Paco Silva y su Tropa Colombiana,39 Aniversario,Live,En Vivo,16,44.1,2,True
 MX1491100025,170375970,Como el viento ,En Vivo Desde El Auditorio Nacional,360626,Celso Piña,Éxitos En Vivo,Live,,16,44.1,2,True
 MXUM70904333,65364484,Fanny,,4135314,Los Vallenatos De La Cumbia,Lo Más Escuchado De,Studio,,16,44.1,2,True
-USASN1401733,184300482,La Cumbia del Amor,,256474,Lisandro Meza,Antología de la Cumbia,Studio,,16,44.1,2,True
 MXUM70801662,54339919,Mi Razón De Ser,,1501712,La Tropa Vallenata,Los Caminos De La Vida,Studio,,16,44.1,2,True
 USDXS1903922,58790906,Regresa,,4302854,El Kombo Kolombia,Regresa,Studio,,24,96.0,2,True
 MXUM62100001,405666936,Botella Tras Botella,,3554675,Gera MX,Botella Tras Botella,Studio,,24,44.1,2,True
@@ -1577,7 +1578,6 @@ USSM19801613,2719930,Take My Breath Away,"Love Theme From ""Top Gun""",45695,Ber
 USSM18600108,2719914,"Danger Zone (From ""Top Gun"" Original Soundtrack)",Album Version,73106,Kenny Loggins,Top Gun - Motion Picture Soundtrack (Special Expanded Edition),Studio,,24,44.1,2,True
 USIR29900008,46554636,Saving Grace,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
 GBUM71029604,138731318,Bohemian Rhapsody,Remastered 2011,43821,Queen,A Night At The Opera,Studio,Remastered 2011,24,96.0,2,True
-QMFMF1569815,137776676,La Cumbia del Amor,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,False
 MXF012500286,333769146,Contigo Aprendí,,44313,Armando Manzanero,Desde el Cielo,Studio,,24,48.0,2,False
 GB5KW2401199,387301983,Alone Again (Naturally),Songbook Version,115676,Gilbert O'sullivan,Songbook,Studio,,24,44.1,2,False
 QMRSZ2200646,381791121,La Grange,,56332,ZZ Top,RAW,Studio,"From ""That Little Ol' Band From Texas""",24,96.0,2,False
