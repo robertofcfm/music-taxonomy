@@ -1,4 +1,12 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+MXF169900214,2584290,Y nos dieron las diez,,360613,Celso Piña y su Ronda Bogotá,Una aventura más,Studio,,16,44.1,2,True
+QMFMF2133818,143460604,Martha la Reina,,256474,Lisandro Meza,Cumbia De Amor,Studio,,16,44.1,2,True
+PYC842507696,402937677,Cumbia Hexagonal,En Vivo,9186308,Paco Silva y su Tropa Colombiana,39 Aniversario,Live,En Vivo,16,44.1,2,True
+MX1491100025,170375970,Como el viento ,En Vivo Desde El Auditorio Nacional,360626,Celso Piña,Éxitos En Vivo,Live,,16,44.1,2,True
+MXUM70904333,65364484,Fanny,,4135314,Los Vallenatos De La Cumbia,Lo Más Escuchado De,Studio,,16,44.1,2,True
+USASN1401733,184300482,La Cumbia del Amor,,256474,Lisandro Meza,Antología de la Cumbia,Studio,,16,44.1,2,True
+MXUM70801662,54339919,Mi Razón De Ser,,1501712,La Tropa Vallenata,Los Caminos De La Vida,Studio,,16,44.1,2,True
+USDXS1903922,58790906,Regresa,,4302854,El Kombo Kolombia,Regresa,Studio,,24,96.0,2,True
 MXUM62100001,405666936,Botella Tras Botella,,3554675,Gera MX,Botella Tras Botella,Studio,,24,44.1,2,True
 USSUB0983403,407819433,About A Girl,,46708,Nirvana,Bleach,Studio,Deluxe Edition,24,96.0,2,True
 USSUB1827306,407824880,Keep Your Eyes Ahead,Remastered,73099,The Helio Sequence,Keep Your Eyes Ahead,Studio,Deluxe Edition,16,44.1,2,True
@@ -11,12 +19,11 @@ USSUB0877706,407819293,He Doesn't Know Why,,111528,Fleet Foxes,Fleet Foxes,Studi
 USSUB0877702,407819289,White Winter Hymnal,,111528,Fleet Foxes,Fleet Foxes,Studio,,24,88.2,2,True
 GBUM81200011,387304013,New Town Velocity,,208476,Johnny Marr,Spirit Power: The Best of Johnny Marr,Studio,,24,96.0,2,True
 USSUB0878104,407823469,Mykonos,,111528,Fleet Foxes,First Collection 2006-2009,Studio,,24,88.2,2,True
-GBBBA0441810,6825990,II. Largo,,35135,Janine Jansen,Vivaldi: The Four Seasons,Studio,,24,96.0,2,True
+GBBBA0441810,6825990,"Vivaldi: The Four Seasons: Winter, Violin Concerto in F Minor, RV 297, Op. 8 No. 4: II. Largo",,35135,Janine Jansen,Vivaldi: The Four Seasons,Studio,,24,96.0,2,True
 GBAYC1400135,372631922,"Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",,24128,Herbert von Karajan,Beethoven: The 9 Symphonies,Studio,,24,96.0,2,True
 GBAYC1103979,6415021,"Swan Lake, Op. 20, Act II: No. 10, Scene. Moderato",,,André Previn,Tchaikovsky: Swan Lake (2011 - Remaster),Studio,2011 Remastered Version,24,44.1,2,True
 FR0V61511601,28006341,Gymnopédie No. 1,,64599,Bruno Fontaine,Erik Satie (Deluxe),Studio,,24,96.0,2,True
 USBC19802655,22851993,"Nocturnes, Op. 9: No. 2 in E-Flat Major. Andante",,18240,Arthur Rubinstein,Chopin : Nocturnes (1999 remastered),Studio,,24,96.0,2,True
-DEN962000991,100703618,"Beethoven: Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 ""Moonlight"": I. Adagio sostenuto",Recorded 2020,289938,Daniel Barenboim,Beethoven: Piano Sonatas Nos. 13-19,Studio,,24,96.0,2,True
 MXF600600022,74722334,Te Doy Una Cancion,,5565968,Silvio Rodriguez and Pablo Milanes,Silvio Rodriguez y Pablo Milanes,Studio,,16,44.1,2,True
 MXF600900407,170109308,No Me Pidas Ser Tu Amigo,,956357,Fernando Delgadillo,Primer Estrella de la Tarde,Studio,,16,44.1,2,True
 MXF110310026,124780227,El Amor De Mi Vida,,31522,Pablo Milanes,Vengo Naciendo,Studio,,16,44.1,2,True
@@ -225,10 +232,10 @@ GBUM71029610,137192565,Don't Stop Me Now,Remastered 2011,43821,Queen,Greatest Hi
 GBN9Y2200018,193171338,Time,2023 Remaster,38324,Pink Floyd,The Dark Side Of The Moon (50th Anniversary),Studio,2023 Remaster,24,192.0,2,True
 GBCCS1000077,17985381,Nineteen Hundred And Eighty Five,2010 Remaster,35554,Paul McCartney,Band On The Run,Studio,Archive Collection,24,96.0,2,True
 ZZOPM2002585,110597831,Last Resort,2020,62575,Papa Roach,20/20,Studio,,24,96.0,2,True
-GBQCP1400109,335473946,Wonderwall ,Remastered,118681,Oasis,Time Flies... 1994-2009 ,Studio,Remastered,24,96.0,2,True
-GBQCP2000014,335473947,Stop Crying Your Heart Out ,Remastered,118681,Oasis,Time Flies... 1994-2009 ,Studio,Remastered,24,96.0,2,True
-GBQCP1600012,335473952,Stand by Me ,Remastered,118681,Oasis,Time Flies... 1994-2009 ,Studio,Remastered,24,96.0,2,True
-GBQCP1400110,335473950,Don't Look Back in Anger ,Remastered,118681,Oasis,Time Flies... 1994-2009 ,Studio,Remastered,24,96.0,2,True
+GBQCP1400109,335473946,Wonderwall,Remastered,118681,Oasis,Time Flies... 1994-2009,Studio,Remastered,24,96.0,2,True
+GBQCP2000014,335473947,Stop Crying Your Heart Out,Remastered,118681,Oasis,Time Flies... 1994-2009,Studio,Remastered,24,96.0,2,True
+GBQCP1600012,335473952,Stand by Me,Remastered,118681,Oasis,Time Flies... 1994-2009,Studio,Remastered,24,96.0,2,True
+GBQCP1400110,335473950,Don't Look Back in Anger,Remastered,118681,Oasis,Time Flies... 1994-2009,Studio,Remastered,24,96.0,2,True
 TCAFJ2175840,158145918,I Can Cry,,9634112,Moses Gunn Collective,Dr Moses Love Hospital,Studio,,24,44.1,2,True
 QMKHM1900015,123588744,Sad But True,"August 13th, 1990, Demo",62542,Metallica,Metallica,Demo,Remastered Deluxe Box Set - Explicit,24,44.1,2,True
 QMKHM1900013,123588804,Nothing Else Matters,Elevator Version,62542,Metallica,Metallica,Studio,Remastered Deluxe Box Set - Explicit,24,44.1,2,True
@@ -333,7 +340,7 @@ CAC222400019,265938862,My Heart Will Go On,,90147,Céline Dion,I AM: CELINE DION
 CAC222400078,265938863,All By Myself,,90147,Céline Dion,I AM: CELINE DION (Original Motion Picture Soundtrack),Studio,,24,44.1,2,True
 GBCEL1900047,61082203,What Do I Get?,,71785,Buzzcocks,Singles Going Steady,Studio,2019 Remastered Version,24,96.0,2,True
 GBCEL1800236,55495883,Ever Fallen in Love (With Someone You Shouldn't've?),,71785,Buzzcocks,Love Bites,Studio,2018 Remastered Version,24,96.0,2,True
-GBAAP1812339,294692167,Smalltown Boy ,Remaster,409561,Bronski Beat,The Age of Consent ,Studio,40 Year Anniversary Edition,16,44.1,2,True
+GBAAP1812339,294692167,Smalltown Boy,Remaster,409561,Bronski Beat,The Age of Consent,Studio,40 Year Anniversary Edition,16,44.1,2,True
 GBBPW2100030,148994376,The Book Lovers,,235726,Broadcast,Maida Vale Sessions,Studio,,24,44.1,2,True
 USPR38619998,52324089,Livin' On A Prayer,,45063,Bon Jovi,Slippery When Wet,Studio,,24,96.0,2,True
 GBAYE1400841,19201296,Song 2,,38319,Blur,Blur,Studio,,24,96.0,2,True
@@ -343,7 +350,7 @@ US2U61725502,271165653,Shark Smile,,3574755,Big Thief,Capacity,Studio,,24,44.1,2
 NLF057690020,116314830,You Should Be Dancing,,106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
 NLF057790034,116314832,Stayin' Alive,"From ""Saturday Night Fever"" Soundtrack",106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
 NLF057790035,116314833,Night Fever,"From ""Saturday Night Fever"" Soundtrack",106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
-NLF057790033,116314834,More Than A Woman,,106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
+NLF057790033,116314834,More Than A Woman,"From ""Saturday Night Fever"" Soundtrack",106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
 NLF057790012,116314831,How Deep Is Your Love,,106004,Bee Gees,Timeless - The All-Time Greatest Hits,Studio,,24,96.0,2,True
 US3841000029,386694227,Ramona,,37921,Beck,Everybody's Gotta Learn Sometime,Studio,,24,44.1,2,True
 GBAZP1100121,17761698,Kick in the Eye,Remix Single Remastered 2008,99661,Bauhaus,Singles,Remix,,24,96.0,2,True
@@ -1570,15 +1577,16 @@ USSM19801613,2719930,Take My Breath Away,"Love Theme From ""Top Gun""",45695,Ber
 USSM18600108,2719914,"Danger Zone (From ""Top Gun"" Original Soundtrack)",Album Version,73106,Kenny Loggins,Top Gun - Motion Picture Soundtrack (Special Expanded Edition),Studio,,24,44.1,2,True
 USIR29900008,46554636,Saving Grace,,40588,The Cranberries,Bury The Hatchet,Studio,,16,44.1,2,True
 GBUM71029604,138731318,Bohemian Rhapsody,Remastered 2011,43821,Queen,A Night At The Opera,Studio,Remastered 2011,24,96.0,2,True
+QMFMF1569815,137776676,La Cumbia del Amor,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,False
 MXF012500286,333769146,Contigo Aprendí,,44313,Armando Manzanero,Desde el Cielo,Studio,,24,48.0,2,False
 GB5KW2401199,387301983,Alone Again (Naturally),Songbook Version,115676,Gilbert O'sullivan,Songbook,Studio,,24,44.1,2,False
 QMRSZ2200646,381791121,La Grange,,56332,ZZ Top,RAW,Studio,"From ""That Little Ol' Band From Texas""",24,96.0,2,False
 QMRSZ2200646,372574794,La Grange,,56332,ZZ Top,La Grange,Studio,"From ""RAW: That Little Ol' Band From Texas"" Original Soundtrack",24,96.0,2,False
 USEE10100338,95786994,Creeping Death,Live In Mexico City/Mexico/1993,62542,Metallica,Live Sh*t: Binge & Purge,Live,Live In Mexico City,24,96.0,2,False
-GBAAP2400106,269290979,Smalltown Boy ,ABSOLUTE. Rework,409561,Bronski Beat,Smalltown Boy ,Studio,ABSOLUTE. Rework,24,44.1,2,False
+GBAAP2400106,269290979,Smalltown Boy,ABSOLUTE. Rework,409561,Bronski Beat,Smalltown Boy,Studio,ABSOLUTE. Rework,24,44.1,2,False
 USUM71803918,51041331,Back Off Bitch,1986 Sound City Session,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False
 GBUM72204121,202251945,11 O'Clock Tick Tock,Songs Of Surrender,35222,U2,Songs Of Surrender,Studio,,24,48.0,2,False
-GBAAP2200214,188312414,Lips Like Sugar ,"WHYT Radio Session, 1997",322732,Echo And The Bunnymen,Evergreen ,Studio,25 Year Anniversary Edition,24,44.1,2,False
+GBAAP2200214,188312414,Lips Like Sugar,"WHYT Radio Session, 1997",322732,Echo And The Bunnymen,Evergreen,Studio,25 Year Anniversary Edition,24,44.1,2,False
 CAN112201228,187374260,Swing Lynn,Sped Up Version,4474617,Harmless,Swing Lynn,Studio,Sped Up Version,24,48.0,2,False
 CAN112300456,198750537,Duvet,Sped Up Version,23203105,bôa,Duvet,Studio,,24,48.0,2,False
 CAN112300455,198750539,Duvet,Slowed Down Version,23203105,bôa,Duvet,Studio,,24,48.0,2,False

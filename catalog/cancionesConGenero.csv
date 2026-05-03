@@ -1,4 +1,12 @@
 title,title_version,artist,album,album_version,isrc,genre
+Y nos dieron las diez,,Celso Piña y su Ronda Bogotá,Una aventura más,,MXF169900214,
+Martha la Reina,,Lisandro Meza,Cumbia De Amor,,QMFMF2133818,
+Cumbia Hexagonal,En Vivo,Paco Silva y su Tropa Colombiana,39 Aniversario,En Vivo,PYC842507696,
+Como el viento ,En Vivo Desde El Auditorio Nacional,Celso Piña,Éxitos En Vivo,,MX1491100025,
+Fanny,,Los Vallenatos De La Cumbia,Lo Más Escuchado De,,MXUM70904333,
+La Cumbia del Amor,,Lisandro Meza,Antología de la Cumbia,,USASN1401733,
+Mi Razón De Ser,,La Tropa Vallenata,Los Caminos De La Vida,,MXUM70801662,
+Regresa,,El Kombo Kolombia,Regresa,,USDXS1903922,
 Botella Tras Botella,,Gera MX,Botella Tras Botella,,MXUM62100001,Music > Hip Hop > Pop Rap
 About A Girl,,Nirvana,Bleach,Deluxe Edition,USSUB0983403,Music > Rock > Grunge
 Keep Your Eyes Ahead,Remastered,The Helio Sequence,Keep Your Eyes Ahead,Deluxe Edition,USSUB1827306,Music > Rock > Indie Rock
@@ -11,7 +19,7 @@ He Doesn't Know Why,,Fleet Foxes,Fleet Foxes,,USSUB0877706,Music > Rock > Folk R
 White Winter Hymnal,,Fleet Foxes,Fleet Foxes,,USSUB0877702,Music > Rock > Folk Rock
 New Town Velocity,,Johnny Marr,Spirit Power: The Best of Johnny Marr,,GBUM81200011,Music > Rock > Indie Rock
 Mykonos,,Fleet Foxes,First Collection 2006-2009,,USSUB0878104,Music > Rock > Folk Rock
-II. Largo,,Janine Jansen,Vivaldi: The Four Seasons,,GBBBA0441810,Music > Classical
+"Vivaldi: The Four Seasons: Winter, Violin Concerto in F Minor, RV 297, Op. 8 No. 4: II. Largo",,Janine Jansen,Vivaldi: The Four Seasons,,GBBBA0441810,
 "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",,Herbert von Karajan,Beethoven: The 9 Symphonies,,GBAYC1400135,Music > Classical
 "Swan Lake, Op. 20, Act II: No. 10, Scene. Moderato",,André Previn,Tchaikovsky: Swan Lake (2011 - Remaster),2011 Remastered Version,GBAYC1103979,Music > Classical
 Gymnopédie No. 1,,Bruno Fontaine,Erik Satie (Deluxe),,FR0V61511601,Music > Classical
@@ -224,10 +232,10 @@ Don't Stop Me Now,Remastered 2011,Queen,Greatest Hits,,GBUM71029610,Music > Rock
 Time,2023 Remaster,Pink Floyd,The Dark Side Of The Moon (50th Anniversary),2023 Remaster,GBN9Y2200018,Music > Rock > Progressive Rock
 Nineteen Hundred And Eighty Five,2010 Remaster,Paul McCartney,Band On The Run,Archive Collection,GBCCS1000077,Music > Rock > Soft Rock
 Last Resort,2020,Papa Roach,20/20,,ZZOPM2002585,Music > Metal > Nu Metal
-Wonderwall ,Remastered,Oasis,Time Flies... 1994-2009 ,Remastered,GBQCP1400109,Music > Rock > Indie Rock
-Stop Crying Your Heart Out ,Remastered,Oasis,Time Flies... 1994-2009 ,Remastered,GBQCP2000014,Music > Rock > Indie Rock
-Stand by Me ,Remastered,Oasis,Time Flies... 1994-2009 ,Remastered,GBQCP1600012,Music > Rock > Indie Rock
-Don't Look Back in Anger ,Remastered,Oasis,Time Flies... 1994-2009 ,Remastered,GBQCP1400110,Music > Rock > Indie Rock
+Wonderwall,Remastered,Oasis,Time Flies... 1994-2009,Remastered,GBQCP1400109,Music > Rock > Indie Rock
+Stop Crying Your Heart Out,Remastered,Oasis,Time Flies... 1994-2009,Remastered,GBQCP2000014,Music > Rock > Indie Rock
+Stand by Me,Remastered,Oasis,Time Flies... 1994-2009,Remastered,GBQCP1600012,Music > Rock > Indie Rock
+Don't Look Back in Anger,Remastered,Oasis,Time Flies... 1994-2009,Remastered,GBQCP1400110,Music > Rock > Indie Rock
 I Can Cry,,Moses Gunn Collective,Dr Moses Love Hospital,,TCAFJ2175840,Music > Rock > Indie Rock
 Sad But True,"August 13th, 1990, Demo",Metallica,Metallica,Remastered Deluxe Box Set - Explicit,QMKHM1900015,Music > Metal > Heavy Metal
 Nothing Else Matters,Elevator Version,Metallica,Metallica,Remastered Deluxe Box Set - Explicit,QMKHM1900013,Music > Metal > Heavy Metal
@@ -332,7 +340,7 @@ My Heart Will Go On,,Céline Dion,I AM: CELINE DION (Original Motion Picture Sou
 All By Myself,,Céline Dion,I AM: CELINE DION (Original Motion Picture Soundtrack),,CAC222400078,Music > Pop > Pop Ballad
 What Do I Get?,,Buzzcocks,Singles Going Steady,2019 Remastered Version,GBCEL1900047,Music > Rock > Pop Punk
 Ever Fallen in Love (With Someone You Shouldn't've?),,Buzzcocks,Love Bites,2018 Remastered Version,GBCEL1800236,Music > Rock > Pop Punk
-Smalltown Boy ,Remaster,Bronski Beat,The Age of Consent ,40 Year Anniversary Edition,GBAAP1812339,Music > Electronic > Synthpop
+Smalltown Boy,Remaster,Bronski Beat,The Age of Consent,40 Year Anniversary Edition,GBAAP1812339,Music > Electronic > Synthpop
 The Book Lovers,,Broadcast,Maida Vale Sessions,,GBBPW2100030,Music > Pop > Psychedelic Pop
 Livin' On A Prayer,,Bon Jovi,Slippery When Wet,,USPR38619998,Music > Rock > Hard Rock
 Song 2,,Blur,Blur,,GBAYE1400841,Music > Rock > Indie Rock
@@ -342,7 +350,7 @@ Shark Smile,,Big Thief,Capacity,,US2U61725502,Music > Rock > Folk Rock
 You Should Be Dancing,,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057690020,Music > Rhythmic > Disco
 Stayin' Alive,From Saturday Night Fever Soundtrack,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057790034,Music > Rhythmic > Disco
 Night Fever,From Saturday Night Fever Soundtrack,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057790035,Music > Rhythmic > Disco
-More Than A Woman,,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057790033,Music > Rhythmic > Disco
+More Than A Woman,From Saturday Night Fever Soundtrack,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057790033,Music > Rhythmic > Disco
 How Deep Is Your Love,,Bee Gees,Timeless - The All-Time Greatest Hits,,NLF057790012,Music > Rhythmic > Soul
 Ramona,,Beck,Everybody's Gotta Learn Sometime,,US3841000029,Music > Rock > Indie Rock
 Kick in the Eye,Remix Single Remastered 2008,Bauhaus,Singles,,GBAZP1100121,Music > Rock > Post-Punk
