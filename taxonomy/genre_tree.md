@@ -54,6 +54,7 @@ Music
       Latin Folk
         Latin Folk Pop
         Latin Folk Singer-Songwriter
+        Latin Folk (Standard)
         Vallenato
       Folk (Standard)
     Regional Mexicano

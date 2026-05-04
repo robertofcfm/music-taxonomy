@@ -1,0 +1,16 @@
+# Prompt LLM Capa 2: Validación de Árbol de Géneros Musicales
+
+Eres un validador experto en taxonomía musical. Realiza la siguiente tarea de validación semántica y estructural:
+
+usa lo indicado en los siguientes archivos como informacion valiosa
+governance/01_auditar_arbol
+taxonomy/genre_tree_master.md
+taxonomy/genre_tree_node_criteria.json
+
+En este flujo la tarea es que ejecutes el script 12_reporte_generos_ascendente.py y 
+tomes el primer nodo con menos canciones de este script y con las instrucciones de los archivos anteriores 
+
+Ejecutar lo siguiente
+- Evaluar las canciones actuales del nodo creando una tabla con su clasificacion y agregando la clasificacion
+- Si no hay algun ajuste que realizar al nodo, proponer 15 canciones que pertenezcan a este nodo y sean representativas del nodo. 
+  Aclarando que estas deben ser nuevas, 

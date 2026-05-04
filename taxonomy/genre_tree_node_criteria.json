@@ -548,6 +548,15 @@
       ]
     },
     {
+      "node_path": "Music > Roots > Folk > Latin Folk > Latin Folk (Standard)",
+      "membership_criteria": "Nodo fallback asignable para canciones con identidad folk latinoamericana clara dentro de Roots cuando no presentan suficiente expansión pop para clasificarse con seguridad en Latin Folk Pop, ni suficiente austeridad autoral y centralidad del texto para Latin Folk Singer-Songwriter. Debe cubrir casos de raíz tradicional o folk latino general donde la instrumentación orgánica, el color cultural reconocible y la continuidad con una tradición folk heredada sean claros, pero la subdivisión fina todavía no mejore la decisión operativa. Es un nodo de soporte estricto, no un destino por comodidad.",
+      "exclusion_criteria": "No asignar si la canción encaja claramente en Latin Folk Pop, Latin Folk Singer-Songwriter o Vallenato. Excluir también bolero, cantautor pop, balada pop, pop de raíz ligera sin anclaje folk suficiente, y cualquier caso donde la lógica principal pertenezca mejor a Pop, Rock, Rhythmic o Electronic. No usar para canciones simplemente ambiguas si existe evidencia clara de pertenencia a un hijo más específico.",
+      "reference_examples": [
+        "Natalia Lafourcade - La Llorona",
+        "Chavela Vargas - La Llorona"
+      ]
+    },
+    {
       "node_path": "Music > Roots > Folk > Latin Folk > Vallenato",
       "membership_criteria": "Música tradicional de la región caribe colombiana, con acordeón, caja y guacharaca.",
       "exclusion_criteria": "Cumbia, salsa, o géneros fuera del vallenato.",
