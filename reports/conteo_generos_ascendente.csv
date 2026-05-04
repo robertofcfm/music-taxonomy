@@ -1,10 +1,11 @@
 genre,num_canciones
-Music > Roots > Folk > Latin Folk > Latin Folk Pop,4
+Music > Rhythmic > R&B,0
+Music > Roots > Folk > Latin Folk > Latin Folk (Standard),1
+Music > Roots > Folk > Latin Folk > Latin Folk Pop,5
 Music > Roots > Regional Mexicano > Banda,6
 Music > Electronic > Drum And Bass,7
 Music > Hip Hop > Boom Bap,7
 Music > Hip Hop > West Coast,7
-Music > Pop > Singer-Songwriter Pop,7
 Music > Hip Hop > Trap,8
 Music > Jazz,8
 Music > Roots > Folk > Folk (Standard),8
@@ -16,19 +17,20 @@ Music > Rhythmic > Funk,9
 Music > Rhythmic > Ska,9
 Music > Rhythmic > Soul,9
 Music > Rock > Pop Punk,9
-Music > Roots > Bolero,9
 Music > Electronic > Big Beat,10
 Music > Metal > Power Metal,10
 Music > Pop > Pop (Standard),10
+Music > Pop > Singer-Songwriter Pop,10
 Music > Rock > Progressive Rock,10
+Music > Roots > Bolero,10
 Music > Score,10
 Music > Roots > Cumbia > Cumbia Pop,11
 Music > Electronic > Downtempo,12
-Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,12
 Music > Roots > Cumbia > Cumbia Vallenata,13
 Music > Hip Hop > Hip Hop (Standard),14
 Music > Pop > Psychedelic Pop,15
 Music > Rock > Roots Rock,15
+Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,15
 Music > Metal > Nu Metal,16
 Music > Rock > Folk Rock,16
 Music > Hip Hop > Pop Rap,18
@@ -36,7 +38,7 @@ Music > Metal > Industrial Metal,20
 Music > Rhythmic > Disco,20
 Music > Rock > Blues Rock,20
 Music > Metal > Thrash Metal,28
-Music > Pop > Indie Pop,28
+Music > Pop > Indie Pop,29
 Music > Rock > Soft Rock,31
 Music > Electronic > Synthpop,33
 Music > Pop > Pop Ballad,50

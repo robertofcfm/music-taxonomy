@@ -1,5 +1,5 @@
 node_path,level,node_name,canciones_exactas,canciones_acumuladas
-Music,0,Music,0,1579
+Music,0,Music,0,1588
 Music > Classical,1,Classical,9,9
 Music > Electronic,1,Electronic,0,71
 Music > Electronic > Big Beat,2,Big Beat,10,10
@@ -21,12 +21,12 @@ Music > Metal > Industrial Metal,2,Industrial Metal,20,20
 Music > Metal > Nu Metal,2,Nu Metal,16,16
 Music > Metal > Power Metal,2,Power Metal,10,10
 Music > Metal > Thrash Metal,2,Thrash Metal,28,28
-Music > Pop,1,Pop,0,111
-Music > Pop > Indie Pop,2,Indie Pop,28,28
+Music > Pop,1,Pop,0,114
+Music > Pop > Indie Pop,2,Indie Pop,29,29
 Music > Pop > Pop (Standard),2,Pop (Standard),10,10
 Music > Pop > Pop Ballad,2,Pop Ballad,50,50
 Music > Pop > Psychedelic Pop,2,Psychedelic Pop,15,15
-Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,8,8
+Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,10,10
 Music > Rhythmic,1,Rhythmic,0,47
 Music > Rhythmic > Disco,2,Disco,20,20
 Music > Rhythmic > Funk,2,Funk,9,9
@@ -46,15 +46,16 @@ Music > Rock > Progressive Rock,2,Progressive Rock,10,10
 Music > Rock > Psychedelic Rock,2,Psychedelic Rock,50,50
 Music > Rock > Roots Rock,2,Roots Rock,15,15
 Music > Rock > Soft Rock,2,Soft Rock,31,31
-Music > Roots,1,Roots,0,446
-Music > Roots > Bolero,2,Bolero,8,8
+Music > Roots,1,Roots,0,452
+Music > Roots > Bolero,2,Bolero,10,10
 Music > Roots > Cumbia,2,Cumbia,0,24
 Music > Roots > Cumbia > Cumbia Pop,3,Cumbia Pop,11,11
 Music > Roots > Cumbia > Cumbia Vallenata,3,Cumbia Vallenata,13,13
-Music > Roots > Folk,2,Folk,0,179
-Music > Roots > Folk > Latin Folk,3,Latin Folk,0,171
-Music > Roots > Folk > Latin Folk > Latin Folk Pop,4,Latin Folk Pop,6,6
-Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,4,Latin Folk Singer-Songwriter,11,11
+Music > Roots > Folk,2,Folk,0,183
+Music > Roots > Folk > Latin Folk,3,Latin Folk,0,175
+Music > Roots > Folk > Latin Folk > Latin Folk Pop,4,Latin Folk Pop,5,5
+Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,4,Latin Folk Singer-Songwriter,15,15
+Music > Roots > Folk > Latin Folk > Latin Folk (Standard),4,Latin Folk (Standard),1,1
 Music > Roots > Folk > Latin Folk > Vallenato,4,Vallenato,154,154
 Music > Roots > Folk > Folk (Standard),3,Folk (Standard),8,8
 Music > Roots > Regional Mexicano,2,Regional Mexicano,0,235

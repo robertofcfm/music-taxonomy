@@ -1,4 +1,15 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+MXUM72301046,220350794,Wacha Checa,,1973882,Caloncho,Wacha Checa,Studio,,24,96.0,2,True
+QM7282446403,277916158,Una Playa En Nayarit,,1692950,Little Jesus,El Show Debe Continuar,Studio,,24,48.0,2,True
+ARC571502633,279243453,Duda Morena,,23243797,Churupaca,Churupaca,Studio,,16,44.1,2,True
+ARFSB0700709,44423081,Anoche Soñé Contigo,,255979,Kevin Johansen,Logo,Studio,,16,44.1,2,True
+MXF151100224,22319407,¡Corre!,,381698,Jesse & Joy,¿Con Quién Se Queda El Perro?,Studio,All DSPs Exc. iTunes,16,44.1,2,True
+MXF012100059,121480812,La Llorona,,148515,Natalia Lafourcade,"Un Canto por México, Vol. II",Studio,,24,48.0,2,True
+MXF011200092,6374319,La Fugitiva,,869136,Natalia Lafourcade a Dueto con Kevin Johansen,Mujer Divina - Homenaje a Agustín Lara,Studio,,16,44.1,2,True
+QZHN82693842,389694270,Cuando Se Prenden las Farolas,,30783949,Canto Bajito,La Casa Abierta,Studio,,16,44.1,2,True
+USSD12100862,205939192,Volverte a Ver,,1194968,Monsieur Periné,Bolero Apocalíptico,Studio,,24,44.1,2,True
+COSO11800041,49437462,Bailar Contigo,,1194968,Monsieur Periné,Encanto Tropical,Studio,,16,44.1,2,True
+USDP21108419,377272496,Disfruto,,378241,Carla Morrison,Déjenme Llorar,Studio,Deluxe Edition,16,44.1,2,True
 QMFMF1569815,137776676,La Cumbia del Amor,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,True
 USASN1401757,137776668,Vuelve,,256474,Lisandro Meza,63 Años de Vida Artística,Studio,,24,96.0,2,True
 MXF169900214,2584290,Y nos dieron las diez,,360613,Celso Piña y su Ronda Bogotá,Una aventura más,Studio,,16,44.1,2,True
@@ -81,7 +92,6 @@ COSO11500079,118181406,Nuestra Canción,,1194968,Monsieur Periné,Caja de Músic
 MXUM71502002,26329861,Tu Falta De Querer,,1610770,Mon Laferte,Mon Laferte,Studio,Vol. 1,16,44.1,2,True
 MXF012000007,92742052,Nunca Es Suficiente,,148515,Natalia Lafourcade,"Un Canto por México, Vol. 1",Studio,,24,48.0,2,True
 MXF012000005,92742048,Hasta la Raíz,,148515,Natalia Lafourcade,"Un Canto por México, Vol. 1",Studio,,24,48.0,2,True
-MXUM72301141,284625249,Disfruto,,19340381,Sindicato Del Ritmo,Disfruto,Studio,,24,48.0,2,True
 MXF011200096,6374323,"Amor, Amor de Mis Amores",,897411,Natalia Lafourcade a Dueto con Devendra Banhart,Mujer Divina - Homenaje a Agustín Lara,Studio,,16,44.1,2,True
 QZZEC2466600,312624357,"sueña lindo, corazón",,14174583,Macario Martínez,"sueña lindo, corazón / nuestra casa en el mar",Studio,,16,44.1,2,True
 USSM11806660,52159660,SICKO MODE,,905242,Travis Scott,ASTROWORLD,Studio,,24,88.2,2,True
