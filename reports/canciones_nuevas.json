@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "title": "Ho Hey",
+    "artist": "The Lumineers",
+    "isrc": "USDMG1260805"
+  },
+  {
+    "title": "Rasputin",
+    "artist": "Boney M.",
+    "isrc": "DED167800008"
+  },
+  {
+    "title": "Stereo Love",
+    "artist": "Edward Maya",
+    "isrc": "ROCMA2413377"
+  },
+  {
+    "title": "Can't Hold Us (feat. Ray Dalton)",
+    "artist": "Macklemore",
+    "isrc": "GMM881200002"
+  },
+  {
+    "title": "Me and the Devil",
+    "artist": "Soap&Skin",
+    "isrc": "BEP011300085"
+  },
+  {
+    "title": "In This Shirt",
+    "artist": "The Irrepressibles",
+    "isrc": "GBUM70916171"
+  },
+  {
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "isrc": "GBAHS1700023"
+  },
+  {
+    "title": "Feeling Good",
+    "artist": "Michael Bublé",
+    "isrc": "USRE11300257"
+  },
+  {
+    "title": "Just the Two of Us (feat. Bill Withers)",
+    "artist": "Grover Washington Jr.",
+    "isrc": "USEE10185194"
+  },
+  {
+    "title": "Lonely",
+    "artist": "Akon",
+    "isrc": "USUR10400235"
+  },
+  {
+    "title": "Get You (feat. Kali Uchis)",
+    "artist": "Daniel Caesar",
+    "isrc": "TCACR1690004"
+  },
+  {
+    "title": "Kill Bill",
+    "artist": "SZA",
+    "isrc": "USRC12204584"
+  },
+  {
+    "title": "After Hours",
+    "artist": "The Weeknd",
+    "isrc": "USUG12000586"
+  },
+  {
+    "title": "Stand By Me",
+    "artist": "Ben E. King",
+    "isrc": "USAT21205862"
+  },
+  {
+    "title": "When a Man Loves a Woman",
+    "artist": "Percy Sledge",
+    "isrc": "USAT21502286"
+  }
+]

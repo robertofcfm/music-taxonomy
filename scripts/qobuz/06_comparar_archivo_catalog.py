@@ -1,6 +1,7 @@
 
 import csv
 import os
+import sys
 import unicodedata
 
 # Rutas de los archivos
@@ -12,6 +13,7 @@ file1 = os.path.join("catalog", "favorites_qobuz.csv")
 def normalize_text(text):
     import re
     text = str(text)
+    text = text.lstrip('\ufeff')
     text = text.strip().lower()
     text = unicodedata.normalize('NFKD', text)
     text = ''.join([c for c in text if not unicodedata.combining(c)])
@@ -23,16 +25,23 @@ def normalize_text(text):
 
 def load_title_artist_set(filepath):
     result = set()
-    with open(filepath, encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
+        if reader.fieldnames:
+            reader.fieldnames = [fn.strip().strip('"').strip("'") if fn else fn for fn in reader.fieldnames]
         for row in reader:
-            title = normalize_text(row.get("title", ""))
-            artist = normalize_text(row.get("artist", ""))
+            row_clean = { (k or '').strip().strip('"').strip("'"): v for k, v in row.items() }
+            title = normalize_text(row_clean.get("title", ""))
+            artist = normalize_text(row_clean.get("artist", ""))
             if title and artist:
                 result.add((title, artist))
     return result
 
 def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
     set1 = load_title_artist_set(file1)
 

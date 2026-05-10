@@ -1,19 +1,19 @@
 node_path,level,node_name,canciones_exactas,canciones_acumuladas
-Music,0,Music,0,1588
+Music,0,Music,0,1603
 Music > Classical,1,Classical,9,9
-Music > Electronic,1,Electronic,0,71
+Music > Electronic,1,Electronic,0,73
 Music > Electronic > Big Beat,2,Big Beat,10,10
-Music > Electronic > Downtempo,2,Downtempo,12,12
+Music > Electronic > Downtempo,2,Downtempo,13,13
 Music > Electronic > Drum And Bass,2,Drum And Bass,7,7
-Music > Electronic > House,2,House,9,9
+Music > Electronic > House,2,House,10,10
 Music > Electronic > Synthpop,2,Synthpop,33,33
-Music > Hip Hop,1,Hip Hop,0,54
+Music > Hip Hop,1,Hip Hop,0,55
 Music > Hip Hop > Boom Bap,2,Boom Bap,7,7
-Music > Hip Hop > Hip Hop (Standard),2,Hip Hop (Standard),14,14
+Music > Hip Hop > Hip Hop (Standard),2,Hip Hop (Standard),15,15
 Music > Hip Hop > Pop Rap,2,Pop Rap,18,18
 Music > Hip Hop > Trap,2,Trap,8,8
 Music > Hip Hop > West Coast,2,West Coast,7,7
-Music > Jazz,1,Jazz,8,8
+Music > Jazz,1,Jazz,10,10
 Music > Metal,1,Metal,0,159
 Music > Metal > Alternative Metal,2,Alternative Metal,9,9
 Music > Metal > Heavy Metal,2,Heavy Metal,76,76
@@ -21,22 +21,22 @@ Music > Metal > Industrial Metal,2,Industrial Metal,20,20
 Music > Metal > Nu Metal,2,Nu Metal,16,16
 Music > Metal > Power Metal,2,Power Metal,10,10
 Music > Metal > Thrash Metal,2,Thrash Metal,28,28
-Music > Pop,1,Pop,0,114
+Music > Pop,1,Pop,0,116
 Music > Pop > Indie Pop,2,Indie Pop,29,29
-Music > Pop > Pop (Standard),2,Pop (Standard),10,10
-Music > Pop > Pop Ballad,2,Pop Ballad,50,50
+Music > Pop > Pop (Standard),2,Pop (Standard),11,11
+Music > Pop > Pop Ballad,2,Pop Ballad,51,51
 Music > Pop > Psychedelic Pop,2,Psychedelic Pop,15,15
 Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,10,10
-Music > Rhythmic,1,Rhythmic,0,47
-Music > Rhythmic > Disco,2,Disco,20,20
+Music > Rhythmic,1,Rhythmic,0,54
+Music > Rhythmic > Disco,2,Disco,21,21
 Music > Rhythmic > Funk,2,Funk,9,9
-Music > Rhythmic > R&B,2,R&B,0,0
+Music > Rhythmic > R&B,2,R&B,4,4
 Music > Rhythmic > Ska,2,Ska,9,9
-Music > Rhythmic > Soul,2,Soul,9,9
-Music > Rock,1,Rock,0,664
+Music > Rhythmic > Soul,2,Soul,11,11
+Music > Rock,1,Rock,0,665
 Music > Rock > Alternative Rock,2,Alternative Rock,139,139
 Music > Rock > Blues Rock,2,Blues Rock,20,20
-Music > Rock > Folk Rock,2,Folk Rock,16,16
+Music > Rock > Folk Rock,2,Folk Rock,17,17
 Music > Rock > Grunge,2,Grunge,52,52
 Music > Rock > Hard Rock,2,Hard Rock,90,90
 Music > Rock > Indie Rock,2,Indie Rock,124,124

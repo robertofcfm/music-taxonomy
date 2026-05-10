@@ -1,4 +1,8 @@
 title,artist,album,isrc,genre
+Lonely,Akon,Trouble,USUR10400235,Rhythmic > R&B
+Get You (feat. Kali Uchis),Daniel Caesar,Get You - Single,TCACR1690004,Rhythmic > R&B
+Kill Bill,SZA,SOS Deluxe: LANA,USRC12204584,Rhythmic > R&B
+After Hours,The Weeknd,After Hours (Explicit),USUG12000586,Rhythmic > R&B
 La Llorona,Natalia Lafourcade,"Un Canto por México, Vol. II",MXF012100059,Roots > Folk > Latin Folk > Latin Folk (Standard)
 Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100016,Roots > Cumbia > Cumbia Pop
 Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900118,Roots > Cumbia > Cumbia Pop
@@ -35,6 +39,8 @@ La vie en rose,Louis Armstrong,"Louis Armstrong, une anthologie 1945 / 1955",FR8
 "Sing, Sing, Sing",Benny Goodman,"Sing, Sing, Sing",BET231531811,Jazz
 So What,Miles Davis,Kind Of Blue,USSM15900113,Jazz
 Take Five,The Dave Brubeck Quartet,Time Outtakes,QZML42000003,Jazz
+Feeling Good,Michael Bublé,It's Time,USRE11300257,Jazz
+Just the Two of Us (feat. Bill Withers),Grover Washington Jr.,Winelight,USEE10185194,Jazz
 Kill You,Eminem,The Marshall Mathers LP,USIR10000580,Hip Hop > Hip Hop (Standard)
 The Way I Am,Eminem,The Marshall Mathers LP,USIR10000589,Hip Hop > Hip Hop (Standard)
 Cheve,Control Machete,Mucho Barato,MXF119903600,Hip Hop > Hip Hop (Standard)
@@ -49,6 +55,7 @@ Todas Mueren por Mí,Cartel De Santa,Cartel De Santa,MXF010200367,Hip Hop > Hip 
 (Rap) Superstar,Cypress Hill,Skull & Bones,USSM10000993,Hip Hop > Hip Hop (Standard)
 Clint Eastwood,Gorillaz,Gorillaz,GBAYE1400468,Hip Hop > Hip Hop (Standard)
 Feel Good Inc (featuring De La Soul),Gorillaz,Demon Days,GBAYE1400422,Hip Hop > Hip Hop (Standard)
+Can't Hold Us (feat. Ray Dalton),Macklemore,The Heist,GMM881200002,Hip Hop > Hip Hop (Standard)
 Elysium,Gavin Greenaway,Gladiator: 20th Anniversary Edition,USUMC0000067,Score
 In the House - In a Heartbeat,John Murphy,In the House - In a Heartbeat,QMLPR1200035,Score
 Honor Him,Gavin Greenaway,Gladiator: 20th Anniversary Edition,USUMC0000052,Score
@@ -1004,6 +1011,7 @@ Turn! Turn! Turn! (To Everything There Is a Season),The Byrds,Turn! Turn! Turn!,
 Mykonos,Fleet Foxes,First Collection 2006-2009,USSUB0878104,Rock > Folk Rock
 He Doesn't Know Why,Fleet Foxes,Fleet Foxes,USSUB0877706,Rock > Folk Rock
 White Winter Hymnal,Fleet Foxes,Fleet Foxes,USSUB0877702,Rock > Folk Rock
+Ho Hey,The Lumineers,The Lumineers (Deluxe Edition),USDMG1260805,Rock > Folk Rock
 La Grange,ZZ Top,Goin' 50,USWB11901049,Rock > Blues Rock
 Lonely Boy,The Black Keys,El Camino,USNO11500536,Rock > Blues Rock
 Gold on the Ceiling,The Black Keys,El Camino,USNO11500538,Rock > Blues Rock
@@ -1172,6 +1180,8 @@ Killing Me Softly With His Song,Roberta Flack,Killing Me Softly,USAT21205974,Rhy
 Just The Way You Are,Barry White,The Man,USIR20300436,Rhythmic > Soul
 How Deep Is Your Love,Bee Gees,Timeless - The All-Time Greatest Hits,NLF057790012,Rhythmic > Soul
 Smooth Operator,Sade,Diamond Life,GBBBM8400006,Rhythmic > Soul
+Stand By Me,Ben E. King,Don't Play That Song,USAT21401614,Rhythmic > Soul
+When a Man Loves a Woman,Percy Sledge,The Best of Percy Sledge,USAT21502286,Rhythmic > Soul
 Amargo Adiós,Inspector,Alma En Fuego,MXF110200231,Rhythmic > Ska
 Amnesia,Inspector,Alma En Fuego,MXF110200229,Rhythmic > Ska
 Es Por Ti,Inspector,Inspector,MXF600900156,Rhythmic > Ska
@@ -1210,6 +1220,7 @@ You Spin Me Round (Like a Record),Dead Or Alive,Youthquake,GBBBM8502013,Rhythmic
 "You're The First, The Last, My Everything",Barry White,Barry White's Greatest Hits,USPR37400014,Rhythmic > Disco
 "Rush, Rush",Debbie Harry,Once More Into The Bleach,USCA28300110,Rhythmic > Disco
 Funkytown,Lipps Inc.,Funkytown,USIR20200431,Rhythmic > Disco
+Rasputin,Boney M.,Nightflight to Venus,DED167800008,Rhythmic > Disco
 One Of Us,Joan Osborne,Relish,USPR39500200,Pop > Singer-Songwriter Pop
 Beautiful Boy (Darling Boy),John Lennon,Double Fantasy,USTO11000021,Pop > Singer-Songwriter Pop
 Imagine,John Lennon,Imagine,GBAYE1000769,Pop > Singer-Songwriter Pop
@@ -1285,6 +1296,7 @@ Alone Again (Naturally),Gilbert O'sullivan,Alone Again,GBEQJ0400002,Pop > Pop Ba
 Tu Falta De Querer,Mon Laferte,Mon Laferte,MXUM71502002,Pop > Pop Ballad
 ¿Y Cómo Es Él?,José Luis Perales,Mirándote a los ojos,ES5151901025,Pop > Pop Ballad
 Te Amo,Franco De Vita,Al Norte Del Sur,VES018800013,Pop > Pop Ballad
+Perfect,Ed Sheeran,÷,GBAHS1700023,Pop > Pop Ballad
 No Podras,Cristian Castro,Agua Nueva,USUL19700138,Pop > Pop (Standard)
 Too Late For Goodbyes,Julian Lennon,Valotte,GBAAA8400024,Pop > Pop (Standard)
 Beat It,Michael Jackson,Thriller,USSM19902990,Pop > Pop (Standard)
@@ -1295,6 +1307,7 @@ Everybody Wants To Rule The World,Tears For Fears,Songs From The Big Chair,GBF08
 Head Over Heels,Tears For Fears,Songs From The Big Chair,GBF088590130,Pop > Pop (Standard)
 Eyes Without A Face,Billy Idol,Rebel Yell,USCH38400023,Pop > Pop (Standard)
 You Got It,Roy Orbison,Mystery Girl,USLIC0701008,Pop > Pop (Standard)
+In This Shirt,The Irrepressibles,Mirror Mirror,GBUM70916171,Pop > Pop (Standard)
 You Should All Be Murdered,Another Sunny Day,London Weekend,GBMFU0600054,Pop > Indie Pop
 Escapee,Architecture in Helsinki,Moment Bends,GBUM71100361,Pop > Indie Pop
 Hurricane Jane,Black Kids,Partie Traumatic,GBUM70803624,Pop > Indie Pop
@@ -1549,6 +1562,7 @@ Get Get Down,Paul Johnson,Get Get Down,QMLA71300087,Electronic > House
 Sandstorm,Darude,Sandstorm,FISGC9900001,Electronic > House
 The Launch,DJ Jean,The Launch,NLB869900001,Electronic > House
 Magic Orgasm,Scorsi,Magic Orgasm,BXD302200004,Electronic > House
+Stereo Love,Edward Maya,Stereo Love Deluxe,ROCMA2413377,Electronic > House
 The Day Of The Greys,4hero,Creating Patterns,GBF080100192,Electronic > Drum And Bass
 Stompbox,The Qemists,Join The Q,GBCFB0700502,Electronic > Drum And Bass
 Why We Lose,Cartoon,Why We Lose,GB2LD0902007,Electronic > Drum And Bass
@@ -1568,6 +1582,7 @@ Girls,Death In Vegas,Milk It,GBARL0200154,Electronic > Downtempo
 Hold My Hand,Unkle,Trance O.S.T.,GBPYR0700053,Electronic > Downtempo
 Clubbed to Death,Robert D,Superhero vs Sci-Fi,GBXWM1605355,Electronic > Downtempo
 Lake Zurich,Gorillaz,The Now Now,GBAYE1800462,Electronic > Downtempo
+Me and the Devil,Soap&Skin,Sugarbread,BEP011300085,Electronic > Downtempo
 Cold Rock the Mic,Apollo 440,Gettin' High On Your Own Supply,GBBBM9902106,Electronic > Big Beat
 19-2000,Gorillaz,Gorillaz,GBAYE1400474,Electronic > Big Beat
 The Golden Path,The Chemical Brothers,Brotherhood,GBAAA0300496,Electronic > Big Beat

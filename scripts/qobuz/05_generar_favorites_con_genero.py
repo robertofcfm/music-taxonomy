@@ -71,14 +71,24 @@ def cargar_generos_dict(path):
     """Carga dos diccionarios: por (title, artist) y por isrc si está disponible."""
     generos_title_artist = defaultdict(list)
     generos_isrc = defaultdict(list)
-    with open(path, encoding='utf-8') as f:
+    with open(path, encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            key = (normalizar_texto(row['title']), normalizar_texto(row['artist']))
-            genero = row['genre'].strip()
+            # Normaliza las claves para manejar BOM y comillas en los nombres de columnas
+            row_clean = {}
+            for k, v in row.items():
+                key_clean = k.strip().strip('"') if k else k
+                row_clean[key_clean] = v
+            
+            title = row_clean.get('title', '')
+            artist = row_clean.get('artist', '')
+            genre = row_clean.get('genre', '')
+            
+            key = (normalizar_texto(title), normalizar_texto(artist))
+            genero = genre.strip()
             generos_title_artist[key].append(genero)
-            if 'isrc' in row and row['isrc']:
-                generos_isrc[row['isrc'].strip()].append(genero)
+            if 'isrc' in row_clean and row_clean['isrc']:
+                generos_isrc[row_clean['isrc'].strip()].append(genero)
     return generos_title_artist, generos_isrc
 
 def main():
