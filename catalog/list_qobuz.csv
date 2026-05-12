@@ -552,6 +552,7 @@ Have You Ever Seen The Rain,Creedence Clearwater Revival,Pendulum,USFI87000066,R
 Proud Mary,Creedence Clearwater Revival,Bayou Country,USFI86900049,Rock > Roots Rock
 Hotel California,Eagles,Hotel California,USEE11300195,Rock > Roots Rock
 Stay Free,The Clash,Give 'Em Enough Rope,GBARL1200720,Rock > Roots Rock
+Johnny B. Goode,Chuck Berry,Chuck Berry's Greatest Hits,QM6N21926339,Rock > Roots Rock
 Race for the Prize,The Flaming Lips,The Soft Bulletin,USWB11602529,Rock > Psychedelic Rock
 The W.A.N.D.,The Flaming Lips,At War with the Mystics,USWB11602540,Rock > Psychedelic Rock
 Subterranean Homesick Alien,Radiohead,OK Computer OKNOTOK 1997 2017,GBBKS1700186,Rock > Psychedelic Rock
@@ -651,7 +652,7 @@ Leif Erikson,Interpol,Turn On The Bright Lights,USMTD1203108,Rock > Post-Punk
 Dead Disco Dancer,O. Children,O. Children,GB4BW0900003,Rock > Post-Punk
 Melancholy,Human Tetris,Memorabilia,TCADP1817588,Rock > Post-Punk
 Pictures Of You,The Cure,Disintegration,GBUM71000205,Rock > Post-Punk
-Lips Like Sugar,Echo And The Bunnymen,Echo & The Bunnymen,GBAHT0003955,Rock > Post-Punk
+Lips Like Sugar,Echo And The Bunnymen,Echo & The Bunnymen (Expanded) [2008 Remaster],GBAHT0003955,Rock > Post-Punk
 Getting Even,White Lies,BIG TV,GBUM71303133,Rock > Post-Punk
 Get Out of Control,Daniel Ash,Foolish Thing Desire,GBAZP9200018,Rock > Post-Punk
 Perfume,The Jesus And Mary Chain,Munki,GBAAW9800066,Rock > Post-Punk
@@ -1171,6 +1172,8 @@ Delilah,The Cranberries,Bury The Hatchet,USIR29900011,Rock > Alternative Rock
 Free To Decide,The Cranberries,To The Faithful Departed (The Complete Sessions 1996-1997),USIR29600118,Rock > Alternative Rock
 Just My Imagination,The Cranberries,Bury The Hatchet,USIR29900005,Rock > Alternative Rock
 Loud And Clear,The Cranberries,Bury The Hatchet,USIR29900002,Rock > Alternative Rock
+Mary On A Cross,Ghost,Seven Inches of Satanic Panic,USC4R1902750,Rock > Alternative Rock
+Beggin',Måneskin,Chosen,ITB001700846,Rock > Alternative Rock
 Rolling in the Deep,Adele,21,GBBKS1000335,Rhythmic > Soul
 What a Fool Believes,The Doobie Brothers,Minute by Minute,USRH11600651,Rhythmic > Soul
 Crazy,Gnarls Barkley,St. Elsewhere,USAT20611041,Rhythmic > Soul
@@ -1182,6 +1185,7 @@ How Deep Is Your Love,Bee Gees,Timeless - The All-Time Greatest Hits,NLF05779001
 Smooth Operator,Sade,Diamond Life,GBBBM8400006,Rhythmic > Soul
 Stand By Me,Ben E. King,Don't Play That Song,USAT21401614,Rhythmic > Soul
 When a Man Loves a Woman,Percy Sledge,The Best of Percy Sledge,USAT21502286,Rhythmic > Soul
+Careless Whisper,George Michael,Careless Whisper EP,GBARL0601610,Rhythmic > Soul
 Amargo Adiós,Inspector,Alma En Fuego,MXF110200231,Rhythmic > Ska
 Amnesia,Inspector,Alma En Fuego,MXF110200229,Rhythmic > Ska
 Es Por Ti,Inspector,Inspector,MXF600900156,Rhythmic > Ska
@@ -1221,6 +1225,7 @@ You Spin Me Round (Like a Record),Dead Or Alive,Youthquake,GBBBM8502013,Rhythmic
 "Rush, Rush",Debbie Harry,Once More Into The Bleach,USCA28300110,Rhythmic > Disco
 Funkytown,Lipps Inc.,Funkytown,USIR20200431,Rhythmic > Disco
 Rasputin,Boney M.,Nightflight to Venus,DED167800008,Rhythmic > Disco
+Gimme! Gimme! Gimme! (A Man After Midnight),ABBA,The Singles,SEAYD7901120,Rhythmic > Disco
 One Of Us,Joan Osborne,Relish,USPR39500200,Pop > Singer-Songwriter Pop
 Beautiful Boy (Darling Boy),John Lennon,Double Fantasy,USTO11000021,Pop > Singer-Songwriter Pop
 Imagine,John Lennon,Imagine,GBAYE1000769,Pop > Singer-Songwriter Pop
@@ -1297,6 +1302,7 @@ Tu Falta De Querer,Mon Laferte,Mon Laferte,MXUM71502002,Pop > Pop Ballad
 ¿Y Cómo Es Él?,José Luis Perales,Mirándote a los ojos,ES5151901025,Pop > Pop Ballad
 Te Amo,Franco De Vita,Al Norte Del Sur,VES018800013,Pop > Pop Ballad
 Perfect,Ed Sheeran,÷,GBAHS1700023,Pop > Pop Ballad
+Another Love,Tom Odell,Long Way Down,GBARL1300107,Pop > Pop Ballad
 No Podras,Cristian Castro,Agua Nueva,USUL19700138,Pop > Pop (Standard)
 Too Late For Goodbyes,Julian Lennon,Valotte,GBAAA8400024,Pop > Pop (Standard)
 Beat It,Michael Jackson,Thriller,USSM19902990,Pop > Pop (Standard)
@@ -1308,6 +1314,7 @@ Head Over Heels,Tears For Fears,Songs From The Big Chair,GBF088590130,Pop > Pop 
 Eyes Without A Face,Billy Idol,Rebel Yell,USCH38400023,Pop > Pop (Standard)
 You Got It,Roy Orbison,Mystery Girl,USLIC0701008,Pop > Pop (Standard)
 In This Shirt,The Irrepressibles,Mirror Mirror,GBUM70916171,Pop > Pop (Standard)
+Love Me Like You Do,Ellie Goulding,Delirium,GBUM71507204,Pop > Pop (Standard)
 You Should All Be Murdered,Another Sunny Day,London Weekend,GBMFU0600054,Pop > Indie Pop
 Escapee,Architecture in Helsinki,Moment Bends,GBUM71100361,Pop > Indie Pop
 Hurricane Jane,Black Kids,Partie Traumatic,GBUM70803624,Pop > Indie Pop
@@ -1553,6 +1560,7 @@ Where I'm Going,Cut Copy,Zonoscope,AUUM71001982,Electronic > Synthpop
 I Can Change,LCD Soundsystem,This Is Happening,US4GE1000023,Electronic > Synthpop
 Rhinestone Eyes,Gorillaz,Plastic Beach,GBAYE1400435,Electronic > Synthpop
 Heathens,twenty one pilots,Heathens,USAT21601930,Electronic > Synthpop
+Forever Young,Alphaville,Forever Young,DEA621800676,Electronic > Synthpop
 Lady,Modjo,Modjo,FR9W10100535,Electronic > House
 Calabria 2008,Natasja,Legacy (1974-2007),DKBR20801502,Electronic > House
 Played-A-Live (The Bongo Song),Safri Duo,Episode ll,DKBKA0100501,Electronic > House
@@ -1563,6 +1571,7 @@ Sandstorm,Darude,Sandstorm,FISGC9900001,Electronic > House
 The Launch,DJ Jean,The Launch,NLB869900001,Electronic > House
 Magic Orgasm,Scorsi,Magic Orgasm,BXD302200004,Electronic > House
 Stereo Love,Edward Maya,Stereo Love Deluxe,ROCMA2413377,Electronic > House
+Don't Let Me Down,The Chainsmokers,Don't Let Me Down,USQX91600011,Electronic > House
 The Day Of The Greys,4hero,Creating Patterns,GBF080100192,Electronic > Drum And Bass
 Stompbox,The Qemists,Join The Q,GBCFB0700502,Electronic > Drum And Bass
 Why We Lose,Cartoon,Why We Lose,GB2LD0902007,Electronic > Drum And Bass

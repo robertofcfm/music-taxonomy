@@ -1,4 +1,13 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+QM6N21926339,80714383,Johnny B. Goode,,35741,Chuck Berry,Chuck Berry's Greatest Hits,Studio,,24,96.0,2,True
+SEAYD7901120,286763782,Gimme! Gimme! Gimme! (A Man After Midnight),,41260,ABBA,The Singles,Studio,The First Fifty Years,24,96.0,2,True
+USQX91600011,29905792,Don't Let Me Down,,1492809,The Chainsmokers,Don't Let Me Down,Studio,,16,44.1,2,True
+DEA621800676,57635342,Forever Young ,2019 Remaster,372772,Alphaville,Forever Young  ,Studio,Super Deluxe Edition; 2019 Remaster,24,44.1,2,True
+USC4R1902750,288262457,Mary On A Cross,,25274827,Ghost,Seven Inches of Satanic Panic,Studio,,24,48.0,2,True
+GBUM71507204,32351808,Love Me Like You Do,"From ""Fifty Shades Of Grey""",290661,Ellie Goulding,Delirium,Studio,Deluxe,24,44.1,2,True
+GBARL1300107,126254799,Another Love,,945398,Tom Odell,Long Way Down,Studio,Expanded Edition,16,44.1,2,True
+ITB001700846,45833737,Beggin',,3395893,Måneskin,Chosen,Studio,,16,44.1,2,True
+GBARL0601610,293785226,Careless Whisper,Remastered,43368,George Michael,Careless Whisper EP,Studio,,24,44.1,2,True
 USRE11300257,347901112,Feeling Good,,51248,Michael Bublé,It's Time ,Studio,20th Anniversary Deluxe Edition,24,44.1,2,True
 USAT21401614,18763259,Stand By Me,,76107,Ben E. King,Don't Play That Song ,Studio,Mono,24,192.0,2,True
 USDMG1260805,274138571,Ho Hey,,864325,The Lumineers,The Lumineers (Deluxe Edition),Studio,,16,44.1,2,True
@@ -527,7 +536,7 @@ MX2971400723,90330894,Hay Algo en ti,,1597784,La Leyenda,Algo en ti,Studio,,16,4
 QM6DC1673708,199149577,Sinceramente,,850623,Los Cadetes De Linares,15 Boleros de Oro,Studio,,16,44.1,2,True
 QM6DC1673713,199149582,Mi Amigo,,850623,Los Cadetes De Linares,15 Boleros de Oro,Studio,,16,44.1,2,True
 GBBBM8502013,117326536,You Spin Me Round (Like a Record),,148741,Dead Or Alive,Youthquake,Studio,,16,44.1,2,True
-GBAHT0003955,2975611,Lips Like Sugar,Album Version,322732,Echo And The Bunnymen,Echo & The Bunnymen  ,Studio,Expanded; 2008 Remaster,16,44.1,2,True
+GBAHT0003955,2975611,Lips Like Sugar,Album Version,322732,Echo And The Bunnymen,Echo & The Bunnymen (Expanded) [2008 Remaster],Studio,Expanded; 2008 Remaster,16,44.1,2,True
 GB7GZ1000033,345439626,Our House,,85999,Madness,The Rise & Fall,Studio,,16,44.1,2,True
 USUMC0000067,93470068,Elysium,"From ""Gladiator"" Soundtrack",46267,Gavin Greenaway,Gladiator: 20th Anniversary Edition,Studio,,16,44.1,2,True
 DEN120003765,4754912,Mutter,,129639,Rammstein,Mutter,Studio,,16,44.1,2,True
@@ -759,7 +768,7 @@ MXF068300012,148206588,Aunque Seas De Otro,,69586,Los Invasores de Nuevo León,A
 USASN0902295,86221873,Palabra de borracho,,1597795,Los Herederos De Nuevo Leon,En Manos Del Tiempo,Studio,,16,44.1,2,True
 MXF068300006,56490632,Castígame,,69586,Los Invasores de Nuevo León,Puros Éxitos,Studio,,16,44.1,2,True
 USEP41630013,77616403,Dance With Me,,2802990,Cameron Avery,"Ripe Dreams, Pipe Dreams",Studio,Deluxe Edition,24,44.1,2,True
-USSM18300449,91145116,Holding Out for a Hero ,"From ""Footloose"" Soundtrack",101953,Bonnie Tyler,Secret Dreams and Forbidden Fire,Studio,,16,44.1,2,True
+USSM18300449,91145116,Holding Out for a Hero,"From ""Footloose"" Soundtrack",101953,Bonnie Tyler,Secret Dreams and Forbidden Fire,Studio,,16,44.1,2,True
 USIR10001123,25847710,My Generation,,72882,Limp Bizkit,Chocolate Starfish And The Hot Dog Flavored Water,Studio,,16,44.1,2,True
 MXF140100380,13206782,Entra en Mi Vida,,192777,Sin Bandera,Sin Bandera,Studio,,16,44.1,2,True
 USSM17200399,28187766,Mr. Blue Sky,,122906,Electric Light Orchestra,Out of the Blue,Studio,,24,192.0,2,True

@@ -15,34 +15,34 @@ Music > Rhythmic > Funk,9
 Music > Rhythmic > Ska,9
 Music > Rock > Pop Punk,9
 Music > Electronic > Big Beat,10
-Music > Electronic > House,10
 Music > Jazz,10
 Music > Metal > Power Metal,10
 Music > Pop > Singer-Songwriter Pop,10
 Music > Rock > Progressive Rock,10
 Music > Roots > Bolero,10
 Music > Score,10
-Music > Pop > Pop (Standard),11
-Music > Rhythmic > Soul,11
+Music > Electronic > House,11
 Music > Roots > Cumbia > Cumbia Pop,11
+Music > Pop > Pop (Standard),12
+Music > Rhythmic > Soul,12
 Music > Electronic > Downtempo,13
 Music > Roots > Cumbia > Cumbia Vallenata,13
 Music > Hip Hop > Hip Hop (Standard),15
 Music > Pop > Psychedelic Pop,15
-Music > Rock > Roots Rock,15
 Music > Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter,15
 Music > Metal > Nu Metal,16
+Music > Rock > Roots Rock,16
 Music > Rock > Folk Rock,17
 Music > Hip Hop > Pop Rap,18
 Music > Metal > Industrial Metal,20
 Music > Rock > Blues Rock,20
-Music > Rhythmic > Disco,21
+Music > Rhythmic > Disco,22
 Music > Metal > Thrash Metal,28
 Music > Pop > Indie Pop,29
 Music > Rock > Soft Rock,31
-Music > Electronic > Synthpop,33
+Music > Electronic > Synthpop,34
 Music > Rock > Psychedelic Rock,50
-Music > Pop > Pop Ballad,51
+Music > Pop > Pop Ballad,52
 Music > Rock > Grunge,52
 Music > Metal > Heavy Metal,76
 Music > Rock > Hard Rock,90
@@ -50,5 +50,5 @@ Music > Roots > Regional Mexicano > Norteño,105
 Music > Rock > Post-Punk,108
 Music > Roots > Regional Mexicano > Texano,116
 Music > Rock > Indie Rock,124
-Music > Rock > Alternative Rock,139
+Music > Rock > Alternative Rock,141
 Music > Roots > Folk > Latin Folk > Vallenato,154

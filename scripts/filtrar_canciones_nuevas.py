@@ -38,14 +38,31 @@ def normaliza(texto):
         texto = texto.replace(c, '')
     return ' '.join(texto.split()).casefold()
 
+
+def normaliza_header(cabecera):
+    if cabecera is None:
+        return ''
+    cabecera = cabecera.lstrip('\ufeff').strip()
+    if cabecera.startswith('"') and cabecera.endswith('"'):
+        cabecera = cabecera[1:-1]
+    return cabecera.strip().casefold()
+
+
+def dict_reader_normalizado(path):
+    with open(path, encoding='utf-8', newline='') as f:
+        reader = csv.DictReader(f)
+        if reader.fieldnames:
+            reader.fieldnames = [normaliza_header(name) for name in reader.fieldnames]
+        for row in reader:
+            yield {normaliza_header(key): value for key, value in row.items()}
+
+
 try:
     # Leer canciones ya procesadas
     procesadas = set()
-    with open(songs_with_genres, encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            key = (normaliza(row['title']), normaliza(row['artist']))
-            procesadas.add(key)
+    for row in dict_reader_normalizado(songs_with_genres):
+        key = (normaliza(row['title']), normaliza(row['artist']))
+        procesadas.add(key)
     print(f"Canciones procesadas: {len(procesadas)}")
 
     # Leer todas las canciones y filtrar nuevas
@@ -54,18 +71,16 @@ try:
     claves_raw = set()
     duplicados_raw = 0
     registros_duplicados = []
-    with open(songs_raw, encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            total_raw += 1
-            key = (normaliza(row['title']), normaliza(row['artist']), normaliza(row.get('isrc','')))
-            if key in claves_raw:
-                duplicados_raw += 1
-                registros_duplicados.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
-            else:
-                claves_raw.add(key)
-            if (normaliza(row['title']), normaliza(row['artist'])) not in procesadas:
-                nuevas.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
+    for row in dict_reader_normalizado(songs_raw):
+        total_raw += 1
+        key = (normaliza(row['title']), normaliza(row['artist']), normaliza(row.get('isrc','')))
+        if key in claves_raw:
+            duplicados_raw += 1
+            registros_duplicados.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
+        else:
+            claves_raw.add(key)
+        if (normaliza(row['title']), normaliza(row['artist'])) not in procesadas:
+            nuevas.append({"title": row['title'], "artist": row['artist'], "isrc": row.get('isrc','')})
     print(f"Total canciones en favorites_qobuz.csv: {total_raw}")
     print(f"Canciones únicas en favorites_qobuz.csv: {len(claves_raw)}")
     print(f"Duplicados en favorites_qobuz.csv: {duplicados_raw}")
@@ -96,12 +111,10 @@ try:
     # Si hay diferencia, guardar los pares (title, artist) de favorites_qobuz.csv que no están en songs_with_genres.csv
     if len(claves_raw) != len(procesadas):
         faltantes = []
-        with open(songs_raw, encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                key = (normaliza(row['title']), normaliza(row['artist']))
-                if key not in procesadas:
-                    faltantes.append({'title': row['title'], 'artist': row['artist'], 'isrc': row.get('isrc','')})
+        for row in dict_reader_normalizado(songs_raw):
+            key = (normaliza(row['title']), normaliza(row['artist']))
+            if key not in procesadas:
+                faltantes.append({'title': row['title'], 'artist': row['artist'], 'isrc': row.get('isrc','')})
         faltantes_csv = 'reports/canciones_faltantes_title_artist.csv'
         with open(faltantes_csv, 'w', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=['title', 'artist', 'isrc'])

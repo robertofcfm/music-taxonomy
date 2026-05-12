@@ -1,12 +1,12 @@
 node_path,level,node_name,canciones_exactas,canciones_acumuladas
-Music,0,Music,0,1603
+Music,0,Music,0,1612
 Music > Classical,1,Classical,9,9
-Music > Electronic,1,Electronic,0,73
+Music > Electronic,1,Electronic,0,75
 Music > Electronic > Big Beat,2,Big Beat,10,10
 Music > Electronic > Downtempo,2,Downtempo,13,13
 Music > Electronic > Drum And Bass,2,Drum And Bass,7,7
-Music > Electronic > House,2,House,10,10
-Music > Electronic > Synthpop,2,Synthpop,33,33
+Music > Electronic > House,2,House,11,11
+Music > Electronic > Synthpop,2,Synthpop,34,34
 Music > Hip Hop,1,Hip Hop,0,55
 Music > Hip Hop > Boom Bap,2,Boom Bap,7,7
 Music > Hip Hop > Hip Hop (Standard),2,Hip Hop (Standard),15,15
@@ -21,20 +21,20 @@ Music > Metal > Industrial Metal,2,Industrial Metal,20,20
 Music > Metal > Nu Metal,2,Nu Metal,16,16
 Music > Metal > Power Metal,2,Power Metal,10,10
 Music > Metal > Thrash Metal,2,Thrash Metal,28,28
-Music > Pop,1,Pop,0,116
+Music > Pop,1,Pop,0,118
 Music > Pop > Indie Pop,2,Indie Pop,29,29
-Music > Pop > Pop (Standard),2,Pop (Standard),11,11
-Music > Pop > Pop Ballad,2,Pop Ballad,51,51
+Music > Pop > Pop (Standard),2,Pop (Standard),12,12
+Music > Pop > Pop Ballad,2,Pop Ballad,52,52
 Music > Pop > Psychedelic Pop,2,Psychedelic Pop,15,15
 Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,10,10
-Music > Rhythmic,1,Rhythmic,0,54
-Music > Rhythmic > Disco,2,Disco,21,21
+Music > Rhythmic,1,Rhythmic,0,56
+Music > Rhythmic > Disco,2,Disco,22,22
 Music > Rhythmic > Funk,2,Funk,9,9
 Music > Rhythmic > R&B,2,R&B,4,4
 Music > Rhythmic > Ska,2,Ska,9,9
-Music > Rhythmic > Soul,2,Soul,11,11
-Music > Rock,1,Rock,0,665
-Music > Rock > Alternative Rock,2,Alternative Rock,139,139
+Music > Rhythmic > Soul,2,Soul,12,12
+Music > Rock,1,Rock,0,668
+Music > Rock > Alternative Rock,2,Alternative Rock,141,141
 Music > Rock > Blues Rock,2,Blues Rock,20,20
 Music > Rock > Folk Rock,2,Folk Rock,17,17
 Music > Rock > Grunge,2,Grunge,52,52
@@ -44,7 +44,7 @@ Music > Rock > Pop Punk,2,Pop Punk,9,9
 Music > Rock > Post-Punk,2,Post-Punk,108,108
 Music > Rock > Progressive Rock,2,Progressive Rock,10,10
 Music > Rock > Psychedelic Rock,2,Psychedelic Rock,50,50
-Music > Rock > Roots Rock,2,Roots Rock,15,15
+Music > Rock > Roots Rock,2,Roots Rock,16,16
 Music > Rock > Soft Rock,2,Soft Rock,31,31
 Music > Roots,1,Roots,0,452
 Music > Roots > Bolero,2,Bolero,10,10
