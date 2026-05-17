@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "title": "La llorona ",
+    "artist": "Chavela Vargas",
+    "isrc": "ES6601801568"
+  },
+  {
+    "title": "Me Hace Llorar",
+    "artist": "Masizzo",
+    "isrc": "USPR60100001"
+  },
+  {
+    "title": "Lone Racer",
+    "artist": "Franc Valley",
+    "isrc": "QZFYY2581307"
+  },
+  {
+    "title": "Te Vas A Acordar",
+    "artist": "Gary Hobbs",
+    "isrc": "USEL19300694"
+  }
+]

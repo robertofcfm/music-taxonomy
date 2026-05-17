@@ -3,7 +3,6 @@ Lonely,Akon,Trouble,USUR10400235,Rhythmic > R&B
 Get You (feat. Kali Uchis),Daniel Caesar,Get You - Single,TCACR1690004,Rhythmic > R&B
 Kill Bill,SZA,SOS Deluxe: LANA,USRC12204584,Rhythmic > R&B
 After Hours,The Weeknd,After Hours (Explicit),USUG12000586,Rhythmic > R&B
-La Llorona,Natalia Lafourcade,"Un Canto por México, Vol. II",MXF012100059,Roots > Folk > Latin Folk > Latin Folk (Standard)
 Sshh!!,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100016,Roots > Cumbia > Cumbia Pop
 Fuiste Mala,A.B. Quintanilla III Y Los Kumbia Kings,"Amor, Familia Y Respeto",USEL19900118,Roots > Cumbia > Cumbia Pop
 Dime Porque,A.B. Quintanilla III Y Los Kumbia Kings,Shhh!,USEL10100021,Roots > Cumbia > Cumbia Pop
@@ -182,6 +181,8 @@ Cómo Duele,Negami,Yo Sé Que Te Acordarás Texano,USUM71406274,Roots > Regional
 Enséñame,Bobby Pulido,Enséñame,USEL19600374,Roots > Regional Mexicano > Texano
 La Rosa,Bobby Pulido,Enséñame,USEL19600373,Roots > Regional Mexicano > Texano
 Juntos,Emilio Navaira,Los Mejor De Los Mejor-12 Super Exitos,USEL19200164,Roots > Regional Mexicano > Texano
+Me Hace Llorar,Masizzo,Grande Éxitos,USPR60100001,Roots > Regional Mexicano > Texano
+Te Vas A Acordar,Gary Hobbs,15 De Coleccion,USEL19300694,Roots > Regional Mexicano > Texano
 Como Quien Pierde una Estrella,Alejandro Fernández,Esencial Diego El Cigala,MXF140500217,Roots > Regional Mexicano > Ranchera
 Amarte A La Antigua,Pedro Fernández,Amarte A La Antigua,MXUM70901509,Roots > Regional Mexicano > Ranchera
 Cien años,Pedro Infante,15 Inmortales de Pedro Infante,MXF160100062,Roots > Regional Mexicano > Ranchera
@@ -399,7 +400,6 @@ Tierra Mala,Los Chiches Vallenatos,Éxitos los Chiches Vallenatos,COF019400762,R
 Te Veré Llorar,Los Chiches Vallenatos,Éxitos los Chiches Vallenatos,COF019701619,Roots > Folk > Latin Folk > Vallenato
 Aqui Conmigo,Los Chiches del Vallenato,Los Mejores Vallenatos,DGA072133875,Roots > Folk > Latin Folk > Vallenato
 Tú Y Yo,La Combinación Vallenata,La Combinacion Vallenata Vol. 4,COC010024289,Roots > Folk > Latin Folk > Vallenato
-Te Tengo Que Olvidar,La Combinación Vallenata,La Combinacion Vallenata Vol. 6,COC010325687,Roots > Folk > Latin Folk > Vallenato
 Dime Dios,La Combinación Vallenata,La Combinacion Vallenata,COC019723065,Roots > Folk > Latin Folk > Vallenato
 Dime que me quieres,La Combinación Vallenata,La Combinacion Vallenata,COC019723062,Roots > Folk > Latin Folk > Vallenato
 Si No Estas Aquí,La Combinación Vallenata,La Combinacion Vallenata Elite Vol. 5,COC010124916,Roots > Folk > Latin Folk > Vallenato
@@ -478,6 +478,7 @@ Qué He Sacado Con Quererte,Natalia Lafourcade,"Musas (Un Homenaje al Folclore L
 Duda Morena,Churupaca,Churupaca,ARC571502633,Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter
 Anoche Soñé Contigo,Kevin Johansen,Logo,ARFSB0700709,Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter
 Cuando Se Prenden las Farolas,Canto Bajito,La Casa Abierta,QZHN82693842,Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter
+La llorona,Chavela Vargas,La Llorona,ES6601801568,Roots > Folk > Latin Folk > Latin Folk Singer-Songwriter
 Tú Sí Sabes Quererme,Natalia Lafourcade,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",MXF011600414,Roots > Folk > Latin Folk > Latin Folk Pop
 Nuestra Canción,Monsieur Periné,Caja de Música (Edición Especial),COSO11500079,Roots > Folk > Latin Folk > Latin Folk Pop
 "sueña lindo, corazón",Macario Martínez,"sueña lindo, corazón / nuestra casa en el mar",QZZEC2466600,Roots > Folk > Latin Folk > Latin Folk Pop
@@ -822,7 +823,6 @@ Groove Is in the Heart / California Girls,Crocodiles,Sleep Forever (Special Edit
 "Touch Me I'm Going To Scream, Pt. 2",My Morning Jacket,Evil Urges,USATO0800044,Rock > Indie Rock
 Color Me Once,Violent Femmes,The Crow Original Motion Picture Soundtrack,USAT20180659,Rock > Indie Rock
 Don't Dream It's Over,Crowded House,Crowded House,USCA28600048,Rock > Indie Rock
-It's Getting Boring By The Sea,Blood Red Shoes,Scott Pilgrim vs. the World (Original Motion Picture Soundtrack),GBBLK0700175,Rock > Indie Rock
 Florecita Rockera,Aterciopelados,El Dorado,USBL10100445,Rock > Indie Rock
 Bolero Falaz,Aterciopelados,El Dorado,USBL10100446,Rock > Indie Rock
 Black Sheep,Metric,Black Sheep,CARB70905801,Rock > Indie Rock
@@ -854,6 +854,7 @@ New Town Velocity,Johnny Marr,Spirit Power: The Best of Johnny Marr,GBUM81200011
 Monk,Mini Mansions,Mini Mansions,USA561057443,Rock > Indie Rock
 Glazin',Jacuzzi Boys,Glazin',USHF31103703,Rock > Indie Rock
 Keep Your Eyes Ahead,The Helio Sequence,Keep Your Eyes Ahead,USSUB1827306,Rock > Indie Rock
+Its Getting Boring By The Sea,Blood Red Shoes,Box Of Secrets,GBBLK0700175,Rock > Indie Rock
 The Seeker,The Who,Who’s Next : Life House,GBUM72204806,Rock > Hard Rock
 Iris,THE GOO GOO DOLLS,Dizzy up the Girl,USWB11507961,Rock > Hard Rock
 We Will Rock You,Queen,Greatest Hits,GBUM71029618,Rock > Hard Rock

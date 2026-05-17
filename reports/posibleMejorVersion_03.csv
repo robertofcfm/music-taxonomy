@@ -1,4 +1,9 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+GBBLK0700175,296349524,Its Getting Boring By The Sea,,189284,Blood Red Shoes,Box Of Secrets,Studio,,24,48.0,2,True
+ES6601801568,58558700,La llorona ,Remastered,61716,Chavela Vargas,La Llorona ,Studio,Remastered,16,44.1,2,True
+USPR60100001,62072148,Me Hace Llorar,,4547440,Masizzo,Grande Éxitos,Studio,,16,44.1,2,True
+QZFYY2581307,369361526,Lone Racer,,20542542,Franc Valley,Lone Racer,Studio,,16,44.1,2,True
+USEL19300694,4678534,Te Vas A Acordar,,298968,Gary Hobbs,15 De Coleccion,Studio,,16,44.1,2,True
 QM6N21926339,80714383,Johnny B. Goode,,35741,Chuck Berry,Chuck Berry's Greatest Hits,Studio,,24,96.0,2,True
 SEAYD7901120,286763782,Gimme! Gimme! Gimme! (A Man After Midnight),,41260,ABBA,The Singles,Studio,The First Fifty Years,24,96.0,2,True
 USQX91600011,29905792,Don't Let Me Down,,1492809,The Chainsmokers,Don't Let Me Down,Studio,,16,44.1,2,True
@@ -27,7 +32,6 @@ MXUM72301046,220350794,Wacha Checa,,1973882,Caloncho,Wacha Checa,Studio,,24,96.0
 QM7282446403,277916158,Una Playa En Nayarit,,1692950,Little Jesus,El Show Debe Continuar,Studio,,24,48.0,2,True
 ARC571502633,279243453,Duda Morena,,23243797,Churupaca,Churupaca,Studio,,16,44.1,2,True
 ARFSB0700709,44423081,Anoche Soñé Contigo,,255979,Kevin Johansen,Logo,Studio,,16,44.1,2,True
-MXF012100059,121480812,La Llorona,,148515,Natalia Lafourcade,"Un Canto por México, Vol. II",Studio,,24,48.0,2,True
 MXF011200092,6374319,La Fugitiva,,869136,Natalia Lafourcade a Dueto con Kevin Johansen,Mujer Divina - Homenaje a Agustín Lara,Studio,,16,44.1,2,True
 QZHN82693842,389694270,Cuando Se Prenden las Farolas,,30783949,Canto Bajito,La Casa Abierta,Studio,,16,44.1,2,True
 USSD12100862,205939192,Volverte a Ver,,1194968,Monsieur Periné,Bolero Apocalíptico,Studio,,24,44.1,2,True
@@ -860,7 +864,6 @@ GBBLY8200197,130883940,Eine Symphonie des Grauens,,761150,The Monochrome Set,Com
 USCA28600048,34280662,Don't Dream It's Over,,68248,Crowded House,Crowded House,Studio,,24,192.0,2,True
 GBAHT1100107,4293726,Happy When It Rains,,458148,The Jesus And Mary Chain,Darklands ,Studio,Expanded Version,16,44.1,2,True
 GBAHT0200220,4293668,Just Like Honey,,458148,The Jesus And Mary Chain,Psychocandy,Studio,Expanded Version,16,44.1,2,True
-GBBLK0700175,2286083,It's Getting Boring By The Sea,,189284,Blood Red Shoes,Scott Pilgrim vs. the World (Original Motion Picture Soundtrack),Studio,,16,44.1,2,True
 GBF087500001,767756,I'm Not In Love,,62453,10cc,The Original Soundtrack,Studio,,16,44.1,2,True
 USSM10000993,52605,(Rap) Superstar,LP Version,149154,Cypress Hill,Skull & Bones,Studio,,16,44.1,2,True
 MX2341300064,93820068,La Dosis Perfecta,,210757,Panteón Rococó,A la Izquierda de la Tierra,Studio,,16,44.1,2,True
@@ -1145,7 +1148,6 @@ COF019400762,318160093,Tierra Mala,,635114,Los Chiches Vallenatos,Éxitos los Ch
 COF019701619,318160095,Te Veré Llorar,,635114,Los Chiches Vallenatos,Éxitos los Chiches Vallenatos,Studio,,24,48.0,2,True
 DGA072133875,114555436,Aqui Conmigo,,5520588,Los Chiches del Vallenato,Los Mejores Vallenatos,Studio,,16,44.1,2,True
 COC010024289,252382822,Tú Y Yo,,2479555,La Combinación Vallenata,La Combinacion Vallenata Vol. 4,Studio,,16,44.1,2,True
-COC010325687,252405248,Te Tengo Que Olvidar,,2479555,La Combinación Vallenata,La Combinacion Vallenata Vol. 6,Studio,,16,44.1,2,True
 COC019723065,252383168,Dime Dios,,2479555,La Combinación Vallenata,La Combinacion Vallenata,Studio,,16,44.1,2,True
 COC019723062,252383160,Dime que me quieres,,2479555,La Combinación Vallenata,La Combinacion Vallenata,Studio,,16,44.1,2,True
 COC010124916,252381955,Si No Estas Aquí,,2479555,La Combinación Vallenata,La Combinacion Vallenata Elite Vol. 5,Studio,,16,44.1,2,True
