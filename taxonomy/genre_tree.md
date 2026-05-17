@@ -29,7 +29,7 @@ Music
   Rhythmic
     Disco
     Funk
-    R&B
+    Modern R&B
     Ska
     Soul
   Rock

@@ -37,7 +37,7 @@ Music
     Disco
       Hi-NRG
     Funk
-    R&B
+    Modern R&B
     Ska
     Soul
       Pop Soul
