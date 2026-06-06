@@ -1,4 +1,9 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+GBBLY9600015,233126262,Things We Never Did,,814381,Sad Lovers & Giants,Next Wave Acid Punx DEUX,Studio,,24,44.1,2,True
+USGF18819807,51041310,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,True
+GBCEJ0500194,368539298,In the Margins,,322732,Echo And The Bunnymen,Siberia,Studio,,16,44.1,2,True
+USEE10250233,2775332,Just the Two of Us,Album Version,53861,Grover Washington,Lean on Me: The Best of Bill Withers,Studio,,16,44.1,2,True
+USA370532331,144693334,What You Won't Do for Love,,71118,Bobby Caldwell,What You Won't Do for Love,Studio,,16,44.1,2,True
 USAR10100232,225239,U Got It Bad,,116108,Usher,8701,Studio,,16,44.1,2,True
 USSM19901056,398049,Say My Name,Album Version,159731,Destiny's Child,The Writing's On The Wall,Studio,,16,44.1,2,True
 USIR20500195,338023573,We Belong Together,,40492,Mariah Carey,The Emancipation Of Mimi,Studio,20th Anniversary Edition,16,44.1,2,True
@@ -66,7 +71,7 @@ GBBBA0441810,6825990,"Vivaldi: The Four Seasons: Winter, Violin Concerto in F Mi
 GBAYC1400135,372631922,"Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",,24128,Herbert von Karajan,Beethoven: The 9 Symphonies,Studio,,24,96.0,2,True
 GBAYC1103979,6415021,"Swan Lake, Op. 20, Act II: No. 10, Scene. Moderato",,,André Previn,Tchaikovsky: Swan Lake (2011 - Remaster),Studio,2011 Remastered Version,24,44.1,2,True
 FR0V61511601,28006341,Gymnopédie No. 1,,64599,Bruno Fontaine,Erik Satie (Deluxe),Studio,,24,96.0,2,True
-USBC19802655,22851993,"Nocturnes, Op. 9: No. 2 in E-Flat Major. Andante",,18240,Arthur Rubinstein,Chopin : Nocturnes (1999 remastered),Studio,,24,96.0,2,True
+USBC19802655,22851993,No. 2 in E-Flat Major. Andante,,18240,Arthur Rubinstein,Chopin : Nocturnes (1999 remastered),Studio,,24,96.0,2,True
 MXF600600022,74722334,Te Doy Una Cancion,,5565968,Silvio Rodriguez and Pablo Milanes,Silvio Rodriguez y Pablo Milanes,Studio,,16,44.1,2,True
 MXF600900407,170109308,No Me Pidas Ser Tu Amigo,,956357,Fernando Delgadillo,Primer Estrella de la Tarde,Studio,,16,44.1,2,True
 MXF110310026,124780227,El Amor De Mi Vida,,31522,Pablo Milanes,Vengo Naciendo,Studio,,16,44.1,2,True
@@ -411,7 +416,7 @@ USRH11605697,37709327,Break on Through (To the Other Side) ,2017 Remaster,41736,
 GBCRL2400057,303856993,Bizarre Love Triangle ,2024 Digital Master,53262,New Order,Brotherhood ,Studio,2024 Digital Master,24,96.0,2,True
 USRW29500002,180889665,Big Me,,148676,Foo Fighters,The Essential Foo Fighters,Studio,,24,44.1,2,True
 GBAYE1400840,19201295,Beetlebum,,38319,Blur,Blur,Studio,,24,96.0,2,True
-DEF057100470,53709080,"Ballade No. 1 in G Minor, Op. 23",,24233,Arturo Benedetti Michelangeli,Chopin: 10 Mazurkas,Studio,,24,96.0,2,True
+DEF057100470,53709080,"Chopin: Ballade No. 1 in G Minor, Op. 23",,24233,Arturo Benedetti Michelangeli,Chopin: 10 Mazurkas,Studio,,24,96.0,2,True
 USGF19141507,173779642,Bad Obsession,,54838,Guns N' Roses,Use Your Illusion I,Studio,,24,96.0,2,True
 USGF19141508,173779643,Back Off Bitch,,54838,Guns N' Roses,Use Your Illusion I,Studio,,24,96.0,2,True
 ES5152100208,120589277,Avalancha,,68389,Héroes del Silencio,Héroes: Silencio y Rock & Roll,Studio,,24,44.1,2,True
@@ -611,9 +616,9 @@ USGF19816406,756133,Malibu,Album Version,129814,Hole,Celebrity Skin,Studio,,16,4
 GBBTF9000051,249087626,"He Holds Her, He Needs Her",,1070637,Kitchens Of Distinction,Strange Free World,Studio,,16,44.1,2,True
 GBAYE9400055,33933962,High and Dry,,43840,Radiohead,The Bends,Studio,,16,44.1,2,True
 GBAYE9702284,169157377,Scooby Snacks,Schmoove Version,210351,Fun Lovin' Criminals,Mimosa,Studio,,16,44.1,2,True
-USRH11901675,76016032,Vasoline ,2019 Remaster,303102,Stone Temple Pilots,Purple ,Studio,2019 Remaster,24,96.0,2,True
-USRH11901677,76016034,Interstate Love Song ,2019 Remaster,303102,Stone Temple Pilots,Purple ,Studio,2019 Remaster,24,96.0,2,True
-USRH11901681,76016038,Big Empty ,2019 Remaster,303102,Stone Temple Pilots,Purple ,Studio,2019 Remaster,24,96.0,2,True
+USRH11901675,76016032,Vasoline,2019 Remaster,303102,Stone Temple Pilots,Purple,Studio,2019 Remaster,24,96.0,2,True
+USRH11901677,76016034,Interstate Love Song,2019 Remaster,303102,Stone Temple Pilots,Purple,Studio,2019 Remaster,24,96.0,2,True
+USRH11901681,76016038,Big Empty,2019 Remaster,303102,Stone Temple Pilots,Purple,Studio,2019 Remaster,24,96.0,2,True
 GBAYE0300722,33930471,"There, There",,43840,Radiohead,Hail To the Thief,Studio,,16,44.1,2,True
 USGF19682301,37457520,Devils Haircut,,37921,Beck,Odelay,Studio,,24,88.2,2,True
 GBUM70819381,747013,No Line On The Horizon,,35222,U2,No Line On The Horizon,Studio,,16,44.1,2,True
@@ -627,7 +632,7 @@ GBF080100192,195155068,The Day Of The Greys,,71400,4hero,Creating Patterns,Studi
 GBF089090155,2400252,Sit Down,Album Version,45297,James,Gold Mother,Studio,,16,44.1,2,True
 GBAFL9700103,2535044,Monkey Gone to Heaven,,384655,Pixies,Doolittle,Studio,,16,44.1,2,True
 USTG39208601,32672577,"Girl, You'll Be a Woman Soon",,71683,Urge Overkill,Stull,Studio,,16,44.1,2,True
-USSM10026643,18454055,Hallelujah,,35383,Leonard Cohen,Various Positions,Studio,,24,44.1,2,True
+USSM10026643,18454055,Hallelujah,,33054,Richard Crooks,Various Positions,Studio,,24,44.1,2,True
 USSM11100234,3426065,Corduroy (Remastered),2011 Remaster,130792,Pearl Jam,Vitalogy,Studio,,24,96.0,2,True
 USGF18714808,50895731,Think About You,,54838,Guns N' Roses,Appetite For Destruction,Studio,,24,192.0,2,True
 GBAAA9700049,5037375,Bitter Sweet Symphony,,38329,The Verve,Bitter Sweet Symphony,Studio,,16,44.1,2,True
@@ -658,7 +663,7 @@ USUM70734881,3940478,Make It Wit Chu,,148265,Queens Of The Stone Age,Era Vulgari
 GBAAN0201228,41935902,"Hold Me, Thrill Me, Kiss Me, Kill Me",From 'Batman Forever',35222,U2,The Best Of 1990-2000 & B-Sides,Studio,,16,44.1,2,True
 USA320620052,357136,Parachutes,,130792,Pearl Jam,Pearl Jam,Studio,,16,44.1,2,True
 USRC17201946,23265461,Perfect Day,,31779,Lou Reed,Transformer,Studio,,24,96.0,2,True
-USSM16401131,20534163,The Sound of Silence ,Electric Version,148602,Simon & Garfunkel,Sounds Of Silence,Studio,,24,192.0,2,True
+USSM16401131,20534163,The Sound of Silence,Electric Version,148602,Simon & Garfunkel,Sounds Of Silence,Studio,,24,192.0,2,True
 USSM19100675,4849195,Oceans,Album Version,130792,Pearl Jam,Ten,Studio,,24,44.1,2,True
 USRH10901865,2882625,Shitlist,,175141,L7,Bricks Are Heavy,Studio,,16,44.1,2,True
 GBDVX0600086,22064834,The Angry Mob,,53366,Kaiser Chiefs,"Yours Truly, Angry Mob",Studio,Deluxe,16,44.1,2,True
@@ -759,12 +764,13 @@ USSM19902989,7398,Thriller,Album Version,50195,Michael Jackson,Thriller,Studio,,
 USSM19902990,7399,Beat It,,50195,Michael Jackson,Thriller,Studio,,24,176.4,2,True
 GBALB8900003,3928736,Lovesong,,40524,The Cure,Disintegration,Studio,,16,44.1,2,True
 USNO10750702,2077675,California Girls,,330662,The Magnetic Fields,Distortion,Studio,,16,44.1,2,True
+USIR29300080,418750204,Dreams,Remastered 2026,40588,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",Studio,Remastered 2026,24,96.0,2,True
+USIR29300085,273573167,Linger,,40588,The Cranberries,Linger,Remix,Iain Cook Remix,24,96.0,2,True
 MXF069900023,1932861,La Costumbre,,69586,Los Invasores de Nuevo León,De Vida O Muerte,Studio,,16,44.1,2,True
 MXF068200004,56497331,Derrotado Corazón,,69586,Los Invasores de Nuevo León,15 Boleros De Oro,Studio,,16,44.1,2,True
 USPR36402498,13411160,Remember (Walkin' In The Sand),The Oh No Song,62490,The Shangri-Las,20th Century Masters: The Millennium Collection: Best of The Shangri-Las,Studio,,16,44.1,2,True
 USASN1300284,86231762,Ni Dada La Quiero,En Vivo,69586,Los Invasores de Nuevo León,"El Reencuentro En Vivo, Vol. 1",Live,En Vivo,16,44.1,2,True
 MXF159700061,2577297,Vida Loca,,44317,Francisco Céspedes,Vida Loca,Studio,,16,44.1,2,True
-USIR29300080,758272,Dreams,Album Version,40588,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",Studio,,16,44.1,2,True
 USSM18300650,14069866,Time After Time,,148428,Cyndi Lauper,She's So Unusual,Studio,,24,176.4,2,True
 GBAAA8400024,4706898,Too Late For Goodbyes,,62537,Julian Lennon,Valotte,Studio,,16,44.1,2,True
 COS019500013,15179750,Antología,,106694,Shakira,Pies Descalzos,Studio,,16,44.1,2,True
@@ -783,7 +789,6 @@ USSM17200399,28187766,Mr. Blue Sky,,122906,Electric Light Orchestra,Out of the B
 USEE19900312,97535470,Kiss Me,,151870,Sixpence None The Richer,Sixpence None The Richer,Studio,,16,44.1,2,True
 USBL10100287,210523,Azul,,205728,Cristian Castro,Grandes Hits,Studio,,16,44.1,2,True
 MXF140100230,13581966,Por El Amor De Una Mujer ,(La Firma A Duo Con Intocable),256838,La Firma,10 de Colección,Studio,,16,44.1,2,True
-USIR29300085,758277,Linger,Album Version,40588,The Cranberries,"Everybody Else Is Doing It, So Why Can't We?",Studio,,16,44.1,2,True
 USSM19922479,35560179,Falling Away from Me,,47618,Korn,Issues,Studio,,24,192.0,2,True
 MXF068200016,56497329,Para Que Te Explico,,69586,Los Invasores de Nuevo León,15 Boleros De Oro,Studio,,16,44.1,2,True
 MXF068200005,56490629,Mi Casa Nueva,,69586,Los Invasores de Nuevo León,Puros Éxitos,Studio,,16,44.1,2,True
@@ -819,7 +824,6 @@ GBBBN0102474,91687,Sister Europe,Remastered Album Version,148784,The Psychedelic
 TCACT1674472,125607735,Back into the Womb,,9634112,Moses Gunn Collective,Mercy Mountain,Studio,,16,44.1,2,True
 TCACT1674465,125607729,Hole in the Wall,,9634112,Moses Gunn Collective,Mercy Mountain,Studio,,16,44.1,2,True
 US5NR1345202,20791293,Star Crawl,,556116,Crystal Stilts,Nature Noir,Studio,,16,44.1,2,True
-GBCEJ0500194,37130383,In the Margins,,322732,Echo And The Bunnymen,Siberia,Studio,,16,44.1,2,True
 TCACT1674469,125607732,Shalala,,9634112,Moses Gunn Collective,Mercy Mountain,Studio,,16,44.1,2,True
 US5NR1394710,21005168,It's Dawning,,1655998,The Holydrug Couple,Noctuary,Studio,,16,44.1,2,True
 GBCEL0100488,2500746,Walking With Thee,,49965,Clinic,Walking With Thee,Studio,,16,44.1,2,True
@@ -848,7 +852,6 @@ GBARL7800021,376441,Adolescent Sex,,47134,Japan,Adolescent Sex,Studio,,16,44.1,2
 US4TA1000119,73680338,Shake the Shackles,,556116,Crystal Stilts,In Love with Oblivion,Studio,,16,44.1,2,True
 GBAKW9500318,19986292,Stargazer,,624049,Siouxsie & The Banshees,The Rapture,Studio,Remastered / Expanded,16,44.1,2,True
 GBAZP8900018,2340806,No Big Deal,,384568,Love and Rockets,Love And Rockets,Studio,,16,44.1,2,True
-GBBLY9600015,85826351,Things We Never Did,,814471,Sad Lovers and Giants,Epic Garden Music,Studio,,16,44.1,2,True
 GBBLY0604715,152580021,Somewhere,,830930,The Danse Society,Seduction (The Society Collection),Studio,,16,44.1,2,True
 USWB18000106,45241169,Private Idaho,,42682,The B-52's,Wild Planet,Studio,,16,44.1,2,True
 GBBLY0607563,142023572,Sunset Gun,,5661802,Danse Society,Looking Through,Studio,,16,44.1,2,True
@@ -986,7 +989,7 @@ COC010225263,252375741,Como Duele El Frio,,2479627,Jose Luis Carrascal,Corazon V
 USVI21200893,14580132,"Tonight, Tonight",Remastered 2012,365659,The Smashing Pumpkins,Mellon Collie And The Infinite Sadness,Studio,,24,96.0,2,True
 USSM10107254,12983953,Jet Pilot,,121231,System Of A Down,Toxicity,Studio,,16,44.1,2,True
 COF019700536,318162831,Mi Primer Amor,,635114,Los Chiches Vallenatos,Más Románticos,Studio,,24,48.0,2,True
-USSM19200881,13026791,Rooster (2022 Remaster),,151851,Alice In Chains,Dirt ,Studio,2022 Remaster,24,44.1,2,True
+USSM19200881,13026791,Rooster (2022 Remaster),,151851,Alice In Chains,Dirt,Studio,2022 Remaster,24,44.1,2,True
 USIR10211061,3879028,Sing For The Moment,Album Version,46971,Eminem,The Eminem Show,Studio,,16,44.1,2,True
 QM4TX1988074,98793555,Pertenece a Ti,,6073846,Los Valbuena,Solo Éxitos,Studio,,16,44.1,2,True
 USIR10211062,3879029,Superman,Album Version,46971,Eminem,The Eminem Show,Studio,,16,44.1,2,True
@@ -1257,7 +1260,7 @@ USDS10812846,6992814,Mi Mayor Anhelo,Album Version,899834,Banda Sinaloense MS de
 USWB11304213,15765443,A Horse with No Name,,72160,America,America,Studio,,24,192.0,2,True
 USIR10000430,15476132,Cryin',,47437,Aerosmith,Get A Grip,Studio,,24,192.0,2,True
 MXF011600414,39807315,Tú Sí Sabes Quererme,,148515,Natalia Lafourcade,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",Studio,,16,44.1,2,True
-MXF011600417,39807316,Soledad y el Mar,,148515,Natalia Lafourcade,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",Studio,,16,44.1,2,True
+MXF011600417,39807316,Soledad y el Mar,,1269280,Los Macorinos,"Musas (Un Homenaje al Folclore Latinoamericano en Manos de Los Macorinos, Vol. 1)",Studio,,16,44.1,2,True
 MXF061100015,4692090,Luna,En Vivo,23917102,Zoé,MTV Unplugged Música De Fondo,Live,Reissue/Live,16,44.1,2,True
 USUM50310887,6714079,Por Amarte Tanto,Album Version,925981,Duelo,Desde Hoy,Studio,,16,44.1,2,True
 USUM50310881,6714086,Desde Hoy,Album Version,925981,Duelo,Desde Hoy,Studio,,16,44.1,2,True
@@ -1415,7 +1418,7 @@ MXUM70800797,54356983,Soy Lo Peor,,888520,Los Cardenales de Nuevo León,Lo Mas R
 USWL10300007,2017935,Como olvidarte,,311726,Costumbre,Se repite la historia,Studio,,16,44.1,2,True
 USWL10300011,2017943,Cuanto te amo,,311726,Costumbre,Se repite la historia,Studio,,16,44.1,2,True
 AUAP09000014,19907859,Thunderstruck,,161143,AC/DC,The Razors Edge,Studio,,24,96.0,2,True
-USQX91300108,9140031,Get Lucky ,feat. Pharrell Williams and Nile Rodgers,1120652,Daft Punk feat. Pharrell Williams,Random Access Memories,Studio,,24,88.2,2,True
+USQX91300108,9140031,Get Lucky,feat. Pharrell Williams and Nile Rodgers,1120652,Daft Punk feat. Pharrell Williams,Random Access Memories,Studio,,24,88.2,2,True
 USUM50310884,6714067,Insomnio,Album Version,925981,Duelo,Desde Hoy,Studio,,16,44.1,2,True
 MXF160000274,3013707,Loco,,360376,Pesado,Todo tuyo,Studio,,16,44.1,2,True
 MXUM70801200,54920454,De Qué Sirvió,,296858,El Poder Del Norte,Con Ganas De Tí,Studio,,16,44.1,2,True
@@ -1582,7 +1585,6 @@ USUM71004198,6714775,Te Odio Y Te Amo,Album Version,925981,Duelo,Solamente Tú,S
 USEL19700217,5699682,Le Pediré,,296383,Bobby Pulido,Llegaste A Mi Vida,Studio,,16,44.1,2,True
 USGF18714803,50895726,Nightrain,,54838,Guns N' Roses,Appetite For Destruction,Studio,,24,192.0,2,True
 USGF18714805,50895728,Mr. Brownstone,,54838,Guns N' Roses,Appetite For Destruction,Studio,,24,192.0,2,True
-USGF18819807,755620,You're Crazy,,54838,Guns N' Roses,G N' R Lies,Studio,,16,44.1,2,True
 MXUM71601821,35659472,Mi Decisión,Versión Ranchera,296858,El Poder Del Norte,Mi Decisión,Studio,,16,44.1,2,True
 MXUM71001125,35659474,Cómo Te Extraño,Album Version,296858,El Poder Del Norte,Mi Decisión,Studio,,16,44.1,2,True
 MXUM71000326,42849039,En Tu Sonrisa,,296858,El Poder Del Norte,Como Llama,Studio,,16,44.1,2,True
@@ -1659,12 +1661,13 @@ MXF152100794,337821883,Mariposa Traicionera,,81833,Mana,Noches De Cantina,Studio
 MXF152100794,138713510,Mariposa Traicionera,,81833,Mana,Mariposa Traicionera,Studio,,24,48.0,2,False
 MXF012100061,121480814,Tú Sí Sabes Quererme,,148515,Natalia Lafourcade,"Un Canto por México, Vol. II",Studio,,24,48.0,2,False
 MXF012000302,112167335,Tú Sí Sabes Quererme ,TSSQ  - Michel Cleis RMX,148515,Natalia Lafourcade,Tú Sí Sabes Quererme ,Studio,TSSQ  - Michel Cleis RMX,24,48.0,2,False
+MXUM72601372,420616207,Luna,En Vivo,182270,Zoé,011025,Live,En Vivo,24,96.0,2,False
 QZMZ92148987,152096160,Amargo Adios,,2331925,Inspector,"A2Í 5Uena!, Vol 2",Studio,,24,48.0,2,False
 QZMZ92148876,152095794,Amargo Adios,,2331925,Inspector,Amargo Adios,Studio,,24,48.0,2,False
 MX5332500254,359774602,Amargo Adiós ,Sonando desde el Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
 QZMZ92148897,152442291,Amnesia,,2331925,Inspector,Amnesia,Studio,,24,48.0,2,False
-QZMZ92148985,152096156,Amnesia,,2331925,Inspector,"A2Í 5Uena!, Vol 2",Studio,,24,48.0,2,False
 MX5332500256,359774604,Amnesia ,Sonando desde el Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
+QZMZ92148985,152096156,Amnesia,,2331925,Inspector,"A2Í 5Uena!, Vol 2",Studio,,24,48.0,2,False
 MX5332500256,362636895,Amnesia ,Sonando desde el Auditorio Nacional,2331925,Inspector,Amnesia ,Studio,Sonando desde el Auditorio Nacional,24,48.0,2,False
 DELV42000635,387783621,Wind of Change,,62488,Scorpions,From The First Sting,Studio,,24,44.1,2,False
 FR2X42535318,354841993,Un Minuto Mas,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
@@ -1672,8 +1675,11 @@ USUM71310619,11801006,The Man Who Sold The World,Live & Loud,46708,Nirvana,In Ut
 USTC30737306,125432992,Nuestra Canción,,170804,La Mafia,Nuevamente,Studio,,24,44.1,2,False
 USTC30737281,125432997,Qué Haré Yo,,170804,La Mafia,Nuevamente,Studio,,24,44.1,2,False
 QZMEM2213306,166083641,Círculo de Amor,,210754,El Gran Silencio,Un Gran Homenaje,Studio,,24,48.0,2,False
+MXF012600210,421004187,Lamento Boliviano,,118453,Los Enanitos Verdes,EV+,Studio,,24,96.0,2,False
 ES5020600360,285848907,Lucha de Gigantes,,73030,Nacha Pop,La Edad De Oro Sinfónica,Studio,,24,96.0,2,False
 FR2X42535315,354841990,Amiga Soledad,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
+MXUM72601373,420616208,Soñé,En Vivo,182270,Zoé,011025,Live,En Vivo,24,96.0,2,False
+MXUM72601369,420616204,Labios Rotos,En Vivo,182270,Zoé,011025,Live,En Vivo,24,96.0,2,False
 QZHZ62176796,154009879,Es por Ti,,2331925,Inspector,Es por Ti,Studio,,24,48.0,2,False
 MX5332400170,275419860,Es Por Ti ,Sonando Desde El Auditorio Nacional,2331925,Inspector,Es Por Ti ,Studio,Sonando Desde El Auditorio Nacional,24,48.0,2,False
 MX5332400170,359774608,Es Por Ti ,Sonando Desde El Auditorio Nacional,2331925,Inspector,Sonando desde el Auditorio Nacional,Studio,,24,48.0,2,False
@@ -1686,7 +1692,3 @@ QZNJY2538984,348975307,Lo Que Queda de Ti,,832300,LMT,"Live Sessions, Vol. 1",St
 FR10S2221773,144098374,Sexo Pudor y Lagrimas,Banda Sonora De la Película,68081,Aleks Syntek,Sexo Pudor y Lagrimas,Studio,Banda Sonora De la Película,24,48.0,2,False
 FR2X42535316,354841991,Viviendo En Mi,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
 FR2X42535319,354841994,Un Beso,,925981,Duelo,Colección Acústica Vol.1,Studio,,24,48.0,2,False
-USGF18714810,51037038,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction,Studio,Deluxe Edition,24,192.0,2,False
-USGF18714810,51041299,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False
-USGF18819807,51041310,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False
-USUM71803907,51041320,You're Crazy,1986 Sound City Session,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,False

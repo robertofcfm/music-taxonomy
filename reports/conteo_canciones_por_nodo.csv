@@ -1,5 +1,5 @@
 node_path,level,node_name,canciones_exactas,canciones_acumuladas
-Music,0,Music,0,1618
+Music,0,Music,0,1619
 Music > Classical,1,Classical,9,9
 Music > Electronic,1,Electronic,0,75
 Music > Electronic > Big Beat,2,Big Beat,10,10
@@ -27,12 +27,12 @@ Music > Pop > Pop (Standard),2,Pop (Standard),12,12
 Music > Pop > Pop Ballad,2,Pop Ballad,52,52
 Music > Pop > Psychedelic Pop,2,Psychedelic Pop,15,15
 Music > Pop > Singer-Songwriter Pop,2,Singer-Songwriter Pop,10,10
-Music > Rhythmic,1,Rhythmic,0,61
+Music > Rhythmic,1,Rhythmic,0,62
 Music > Rhythmic > Disco,2,Disco,22,22
 Music > Rhythmic > Funk,2,Funk,9,9
 Music > Rhythmic > Modern R&B,2,Modern R&B,9,9
 Music > Rhythmic > Ska,2,Ska,9,9
-Music > Rhythmic > Soul,2,Soul,12,12
+Music > Rhythmic > Soul,2,Soul,13,13
 Music > Rock,1,Rock,0,668
 Music > Rock > Alternative Rock,2,Alternative Rock,141,141
 Music > Rock > Blues Rock,2,Blues Rock,20,20

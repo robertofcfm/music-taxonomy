@@ -33,7 +33,7 @@ def normaliza(texto):
     texto = unicodedata.normalize('NFC', str(texto))
     texto = elimina_tildes_ortograficas(texto)
     # Elimina cualquier tipo de comillas (rectas y tipográficas)
-    caracteres_a_eliminar = ['"', "'", '“', '”', '‘', '’', '«', '»', '`', '´', '\\', '/']
+    caracteres_a_eliminar = ['"', "'", '"', '"', ''', ''', '«', '»', '`', '´', '\\', '/']
     for c in caracteres_a_eliminar:
         texto = texto.replace(c, '')
     return ' '.join(texto.split()).casefold()
@@ -97,37 +97,9 @@ try:
     os.makedirs(os.path.dirname(output_json), exist_ok=True)
     with open(output_json, 'w', encoding='utf-8') as f:
         json.dump(lote, f, ensure_ascii=False, indent=2)
+    print(f"Reporte de canciones nuevas generado: {output_json} ({len(lote)} canciones)")
 
-
-    # Guardar el detalle completo de canciones nuevas en CSV
-    detalle_csv = 'reports/canciones_nuevas_detalle.csv'
-    with open(detalle_csv, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['title', 'artist', 'isrc'])
-        writer.writeheader()
-        for c in nuevas:
-            writer.writerow(c)
-    print(f"Reporte de canciones nuevas generado: {detalle_csv} ({len(nuevas)} canciones)")
-
-    # Si hay diferencia, guardar los pares (title, artist) de favorites_qobuz.csv que no están en songs_with_genres.csv
-    if len(claves_raw) != len(procesadas):
-        faltantes = []
-        for row in dict_reader_normalizado(songs_raw):
-            key = (normaliza(row['title']), normaliza(row['artist']))
-            if key not in procesadas:
-                faltantes.append({'title': row['title'], 'artist': row['artist'], 'isrc': row.get('isrc','')})
-        faltantes_csv = 'reports/canciones_faltantes_title_artist.csv'
-        with open(faltantes_csv, 'w', encoding='utf-8', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=['title', 'artist', 'isrc'])
-            writer.writeheader()
-            for c in faltantes:
-                writer.writerow(c)
-        print(f"Reporte de pares (title, artist) faltantes generado: {faltantes_csv} ({len(faltantes)} canciones)")
-
-    if lote:
-        print("Ejemplo de canciones nuevas (lote actual):")
-        for c in lote:
-            print(f"- {c['title']} / {c['artist']} / {c['isrc']}")
-    else:
-        print("No hay canciones nuevas para procesar.")
 except Exception as e:
-    print(f"Error durante la ejecución: {e}")
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
