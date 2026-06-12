@@ -1,8 +1,21 @@
 ISRC,Id Titulo,Título,Versión del título,Id Artista,Artista,Disco,Tipo Disco,Versión del disco,maximum_bit_depth,maximum_sampling_rate,maximum_channel_count,Es favorito
+USUM72402509,273574172,Automatic Sun,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72402505,273574171,Consume,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72402276,273574170,Hell You Call A Dream,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72402503,273574169,Sharks,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72306520,273574165,MORE,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72402274,273574164,Qué Más Quieres,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72400416,273574162,S!CK,,9507058,The Warning,Keep Me Fed,Studio,,24,48.0,2,True
+USUM72209685,162074439,ERROR,,9507058,The Warning,ERROR,Studio,,24,48.0,2,True
+USUM72209684,162074437,AMOUR,,9507058,The Warning,ERROR,Studio,,24,48.0,2,True
+USUM72203729,162074436,MONEY,,9507058,The Warning,ERROR,Studio,,24,48.0,2,True
+USUM72115883,162074433,DISCIPLE,,9507058,The Warning,ERROR,Studio,,24,48.0,2,True
+GBUM71303137,198428040,There Goes Our Love Again,,67078,White Lies,BIG TV,Studio,,24,44.1,2,True
+GBARL9600060,31075183,Atomic,,214652,Sleeper,Inbetweener - The Best of Sleeper,Studio,,16,44.1,2,True
+USMEX1000118,420469807,Love Fade,,384570,Tamaryn,The Waves,Studio,,16,44.1,2,True
 GBBLY9600015,233126262,Things We Never Did,,814381,Sad Lovers & Giants,Next Wave Acid Punx DEUX,Studio,,24,44.1,2,True
 USGF18819807,51041310,You're Crazy,,54838,Guns N' Roses,Appetite For Destruction (Super Deluxe) - 192 kHz,Studio,Super Deluxe,24,192.0,2,True
 GBCEJ0500194,368539298,In the Margins,,322732,Echo And The Bunnymen,Siberia,Studio,,16,44.1,2,True
-USEE10250233,2775332,Just the Two of Us,Album Version,53861,Grover Washington,Lean on Me: The Best of Bill Withers,Studio,,16,44.1,2,True
 USA370532331,144693334,What You Won't Do for Love,,71118,Bobby Caldwell,What You Won't Do for Love,Studio,,16,44.1,2,True
 USAR10100232,225239,U Got It Bad,,116108,Usher,8701,Studio,,16,44.1,2,True
 USSM19901056,398049,Say My Name,Album Version,159731,Destiny's Child,The Writing's On The Wall,Studio,,16,44.1,2,True
@@ -16,7 +29,7 @@ USEL19300694,4678534,Te Vas A Acordar,,298968,Gary Hobbs,15 De Coleccion,Studio,
 QM6N21926339,80714383,Johnny B. Goode,,35741,Chuck Berry,Chuck Berry's Greatest Hits,Studio,,24,96.0,2,True
 SEAYD7901120,286763782,Gimme! Gimme! Gimme! (A Man After Midnight),,41260,ABBA,The Singles,Studio,The First Fifty Years,24,96.0,2,True
 USQX91600011,29905792,Don't Let Me Down,,1492809,The Chainsmokers,Don't Let Me Down,Studio,,16,44.1,2,True
-DEA621800676,57635342,Forever Young ,2019 Remaster,372772,Alphaville,Forever Young  ,Studio,Super Deluxe Edition; 2019 Remaster,24,44.1,2,True
+DEA621800676,57635342,Forever Young (2019 Remaster),,372772,Alphaville,Forever Young (Super Deluxe Edition) [2019 Remaster],Studio,Super Deluxe Edition; 2019 Remaster,24,44.1,2,True
 USC4R1902750,288262457,Mary On A Cross,,25274827,Ghost,Seven Inches of Satanic Panic,Studio,,24,48.0,2,True
 GBUM71507204,32351808,Love Me Like You Do,"From ""Fifty Shades Of Grey""",290661,Ellie Goulding,Delirium,Studio,Deluxe,24,44.1,2,True
 GBARL1300107,126254799,Another Love,,945398,Tom Odell,Long Way Down,Studio,Expanded Edition,16,44.1,2,True
@@ -891,7 +904,6 @@ USUL19800297,91325611,Voto Latino,,71773,Molotov,¿Dónde Jugarán Las Niñas?,S
 GBUM71106175,3960709,I Want To Break Free,Remastered 2011,43821,Queen,The Works,Studio,2011 Remaster,16,44.1,2,True
 MXF069700465,4607839,Niño Bomba,,68537,Plastilina Mosh,Aquamosh,Studio,,16,44.1,2,True
 USBL10100445,220329,Florecita Rockera,,205226,Aterciopelados,El Dorado,Studio,,16,44.1,2,True
-USMEX1000118,126277655,Love Fade,,384570,Tamaryn,The Waves,Studio,,16,44.1,2,True
 MXF061100016,4692091,Nada,En Vivo,23917102,Zoé,MTV Unplugged Música De Fondo,Live,Reissue/Live,16,44.1,2,True
 GBCEL2000150,116965237,only shallow,,161115,My Bloody Valentine,loveless,Studio,,24,96.0,2,True
 USHM22005503,196974225,Por Mi México,,4404247,Lefty Sm,Necesidad,Studio,,16,44.1,2,True
@@ -1230,17 +1242,17 @@ USGF19960704,11395731,Rape Me,Album Version,46708,Nirvana,In Utero,Studio,,24,96
 USGF19960703,11395730,Heart-Shaped Box,Album Version,46708,Nirvana,In Utero,Studio,,24,96.0,2,True
 USGF19960702,11395729,Scentless Apprentice,Album Version,46708,Nirvana,In Utero,Studio,,24,96.0,2,True
 USGF19960701,11395728,Serve The Servants,Album Version,46708,Nirvana,In Utero,Studio,,24,96.0,2,True
-USGF19942512,133713102,Something In The Way,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942511,133713101,On A Plain,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942510,133713100,Stay Away,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942509,133713099,Lounge Act,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942508,133713098,Drain You,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942507,133713097,Territorial Pissings,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942506,133713096,Polly,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942505,133713095,Lithium,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942504,133713094,Breed,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942503,133713093,Come As You Are,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
-USGF19942502,133713092,In Bloom,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942512,133713102,Something In The Way,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942511,133713101,On A Plain,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942510,133713100,Stay Away,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942509,133713099,Lounge Act,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942508,133713098,Drain You,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942507,133713097,Territorial Pissings,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942506,133713096,Polly,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942505,133713095,Lithium,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942504,133713094,Breed,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942503,133713093,Come As You Are,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USGF19942502,133713092,In Bloom,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
 GBAYE1500862,27145855,Knights of Cydonia,,75739,Muse,Black Holes and Revelations,Studio,,24,96.0,2,True
 DGA072134174,114555541,Ayúdame a Olvidarla,,239331,Miguel Morales,Vallenato Hits,Studio,,16,44.1,2,True
 USSM19902991,7400,Billie Jean,Single Version,50195,Michael Jackson,Thriller,Studio,,24,176.4,2,True
@@ -1334,8 +1346,8 @@ MXF010000815,2192466,Kumbala,,206870,Maldita Vecindad Y Los Hijos Del Quinto Pat
 MXF019200147,321432,No Dejes Que...,,203874,Caifanes,El Silencio,Studio,,16,44.1,2,True
 USEL19500415,12560070,Desvelado,,296383,Bobby Pulido,Desvelado,Studio,,16,44.1,2,True
 QMKHM1700138,95785754,One,Remastered 2018,62542,Metallica,…And Justice for All,Studio,Remastered,24,96.0,2,True
-USSM10103196,40542,Dust in the Wind,Album Version,148597,Kansas,Point Of Know Return ,Studio,Expanded Edition,16,44.1,2,True
-USGF19942501,133713091,Smells Like Teen Spirit,,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
+USSM10103196,40542,Dust in the Wind,Album Version,148597,Kansas,Point Of Know Return,Studio,,16,44.1,2,True
+USGF19942501,133713091,Smells Like Teen Spirit,Remastered 2021,46708,Nirvana,Nevermind,Studio,Remastered 2021,24,192.0,2,True
 USGF19972704,755933,The Man Who Sold The World,MTV Unplugged,46708,Nirvana,MTV Unplugged In New York,Live,Live,16,44.1,2,True
 GBBBN8302012,91145244,Total Eclipse of the Heart,,101953,Bonnie Tyler,Faster Than the Speed of Night,Studio,,16,44.1,2,True
 USSD10005255,86007,Estas Tocando Fuego,Album Version,170804,La Mafia,Estas Tocando Fuego,Studio,,16,44.1,2,True
@@ -1649,6 +1661,7 @@ GX3EQ2000001,154370524,Just Like Honey,2021 EL Inocente version,458148,The Jesus
 USSM11704875,43314604,You Got It,,23781,Roy Orbison,A Love So Beautiful: Roy Orbison & The Royal Philharmonic Orchestra,Studio,,24,96.0,2,False
 USV128900001,34877009,You Got It,,23781,Roy Orbison,The Ultimate Collection,Studio,,24,44.1,2,False
 ES5021400618,20183847,Cantares ,Remasterizado,19195,Joan Manuel Serrat,Antología Desordenada,Studio,,24,96.0,2,False
+USSD12600032,420581761,Yo Te Amaré,30th Anniversary Remastered,170804,La Mafia,Un Millón de Rosas,Studio,30th Anniversary Remastered,24,96.0,2,False
 COF011600130,158346524,Ajena,,259797,Nelson Velasquez,Inolvidables,Studio,,24,44.1,2,False
 USEE10100339,95786995,Harvester Of Sorrow,Live In Mexico City/Mexico/1993,62542,Metallica,Live Sh*t: Binge & Purge,Live,Live In Mexico City,24,96.0,2,False
 GBCAD2300773,248761832,Hey,John Peel Session (3rd May 1988),384655,Pixies,"Pixies at the BBC, 1988-91",Studio,,24,96.0,2,False
