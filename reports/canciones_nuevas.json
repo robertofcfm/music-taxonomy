@@ -1,32 +1,27 @@
 [
   {
-    "title": "Azul",
-    "artist": "Macario Martínez",
-    "isrc": "USA2P2546664"
+    "title": "Lo Intentamos",
+    "artist": "Espinoza Paz",
+    "isrc": "TCADR1880137"
   },
   {
-    "title": "Mediocre",
-    "artist": "Ximena Sariñana",
-    "isrc": "MXF150700693"
+    "title": "Ebrio De Amor",
+    "artist": "Valentín Elizalde",
+    "isrc": "USA560835291"
   },
   {
-    "title": "Cuento",
-    "artist": "Ximena Sariñana",
-    "isrc": "MX1722501921"
+    "title": "San Lunes",
+    "artist": "Edwin Luna y La Trakalosa de Monterrey",
+    "isrc": "USASN1202340"
   },
   {
-    "title": "Normal",
-    "artist": "Ximena Sariñana",
-    "isrc": "MXF150700695"
+    "title": "Mi Olvido",
+    "artist": "Banda Sinaloense MS de Sergio Lizárraga",
+    "isrc": "USUM71100574"
   },
   {
-    "title": "Algo Está Cambiando",
-    "artist": "Julieta Venegas",
-    "isrc": "MXF010300340"
-  },
-  {
-    "title": "Maligno",
-    "artist": "Aterciopelados",
-    "isrc": "USBL10100430"
+    "title": "Para Que Regreses",
+    "artist": "El Chapo",
+    "isrc": "USDS10600066"
   }
 ]
